@@ -1,0 +1,149 @@
+[
+  {
+    "id": "NpcId.ENIOLA",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3014,
+    "y": 5625
+  },
+  {
+    "id": "NpcId.ZAMORAK_WARRIOR_85",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3015,
+    "y": 5603
+  },
+  {
+    "id": "NpcId.CAVE_LIZARD_37",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3011,
+    "y": 5601
+  },
+  {
+    "id": "NpcId.CAVE_LIZARD_37",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3017,
+    "y": 5595
+  },
+  {
+    "id": "NpcId.ZAMORAK_RANGER_81",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3013,
+    "y": 5591
+  },
+  {
+    "id": "NpcId.ZAMORAK_CRAFTER_19",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3012,
+    "y": 5596
+  },
+  {
+    "id": "NpcId.ZAMORAK_CRAFTER_19",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3016,
+    "y": 5587
+  },
+  {
+    "id": "NpcId.ZAMORAK_WARRIOR_84",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3012,
+    "y": 5585
+  },
+  {
+    "id": "NpcId.ZAMORAK_MAGE_84",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3018,
+    "y": 5578
+  },
+  {
+    "id": "NpcId.ZAMORAK_MAGE_84",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3011,
+    "y": 5573
+  },
+  {
+    "id": "NpcId.CAVE_LIZARD_37",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3013,
+    "y": 5578
+  },
+  {
+    "id": "NpcId.CAVE_LIZARD_37",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3017,
+    "y": 5573
+  },
+  {
+    "id": "NpcId.CAVE_LIZARD_37",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3018,
+    "y": 5583
+  },
+  {
+    "id": "NpcId.ZAMORAK_WARRIOR_84",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3027,
+    "y": 5572
+  },
+  {
+    "id": "NpcId.ZAMORAK_MAGE_84",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3032,
+    "y": 5580
+  },
+  {
+    "id": "NpcId.ZAMORAK_RANGER_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3034,
+    "y": 5573
+  },
+  {
+    "id": "NpcId.CAVE_LIZARD_37",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3029,
+    "y": 5577
+  },
+  {
+    "id": "NpcId.CAVE_LIZARD_37",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3031,
+    "y": 5572
+  },
+  {
+    "id": "NpcId.CAVE_LIZARD_37",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3033,
+    "y": 5576
+  },
+  {
+    "id": "NpcId.CAVE_LIZARD_37",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3043,
+    "y": 5580
+  },
+  {
+    "id": "NpcId.ZAMORAK_RANGER_81",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3047,
+    "y": 5577
+  }
+]

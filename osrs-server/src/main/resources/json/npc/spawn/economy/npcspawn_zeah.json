@@ -1,0 +1,399 @@
+[
+  {
+    "id": "NpcId.BANKER",
+    "direction": 4,
+    "x": 1755,
+    "y": 3849
+  },
+  {
+    "id": "NpcId.MARISI",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 1817,
+    "y": 3485
+  },
+  {
+    "id": "NpcId.TOOL_LEPRECHAUN",
+    "direction": 1,
+    "x": 1811,
+    "y": 3490
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1445,
+    "y": 3696
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1433,
+    "y": 3699
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1421,
+    "y": 3701
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1421,
+    "y": 3712
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1429,
+    "y": 3719
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1439,
+    "y": 3717
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1438,
+    "y": 3707
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1486,
+    "y": 3697
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1500,
+    "y": 3701
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1511,
+    "y": 3693
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1523,
+    "y": 3691
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1535,
+    "y": 3688
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1547,
+    "y": 3695
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1551,
+    "y": 3679
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1286,
+    "y": 9952
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1292,
+    "y": 9958
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1302,
+    "y": 9945
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1308,
+    "y": 9950
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1318,
+    "y": 9947
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1324,
+    "y": 9953
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1324,
+    "y": 9963
+  },
+  {
+    "id": "NpcId.LIZARDMAN_SHAMAN_150",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1331,
+    "y": 9969
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1740,
+    "y": 3471
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1745,
+    "y": 3476
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1749,
+    "y": 3471
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1759,
+    "y": 3470
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1757,
+    "y": 3478
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1766,
+    "y": 3467
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1768,
+    "y": 3473
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1774,
+    "y": 3464
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1780,
+    "y": 3469
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1773,
+    "y": 3469
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1789,
+    "y": 3462
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1791,
+    "y": 3471
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1798,
+    "y": 3463
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1802,
+    "y": 3468
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1805,
+    "y": 3458
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1805,
+    "y": 3449
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1802,
+    "y": 3443
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1809,
+    "y": 3443
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1806,
+    "y": 3440
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1813,
+    "y": 3448
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1810,
+    "y": 3455
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1819,
+    "y": 3451
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1818,
+    "y": 3457
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1826,
+    "y": 3447
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1832,
+    "y": 3449
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1828,
+    "y": 3453
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1827,
+    "y": 3459
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1837,
+    "y": 3451
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1834,
+    "y": 3456
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1838,
+    "y": 3461
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1844,
+    "y": 3459
+  },
+  {
+    "id": "NpcId.SAND_CRAB_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1843,
+    "y": 3466
+  }
+]

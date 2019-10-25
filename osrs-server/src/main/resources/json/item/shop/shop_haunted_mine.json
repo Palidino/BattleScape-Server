@@ -1,0 +1,7 @@
+{
+  "name": "Haunted Mine Shop",
+  "items": [
+    { "id": "ItemId.TARNS_DIARY", "price": 1000000 },
+    { "id": "ItemId.MAGIC_SECATEURS", "price": 100000 }
+  ]
+}

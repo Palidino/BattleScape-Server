@@ -1,0 +1,3 @@
+Join Discord Chat
+
+%url=discord%

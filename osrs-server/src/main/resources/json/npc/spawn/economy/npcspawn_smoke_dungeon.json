@@ -1,0 +1,422 @@
+[
+  {
+    "id": "NpcId.FIRE_ELEMENTAL_35",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3210,
+    "y": 9378
+  },
+  {
+    "id": "NpcId.FIRE_ELEMENTAL_35",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3206,
+    "y": 9368
+  },
+  {
+    "id": "NpcId.FIRE_ELEMENTAL_35",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3212,
+    "y": 9362
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3218,
+    "y": 9365
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3215,
+    "y": 9357
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3213,
+    "y": 9351
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3221,
+    "y": 9347
+  },
+  {
+    "id": "NpcId.FIRE_ELEMENTAL_35",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3226,
+    "y": 9353
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3234,
+    "y": 9356
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3235,
+    "y": 9362
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3230,
+    "y": 9367
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3235,
+    "y": 9368
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3245,
+    "y": 9370
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3251,
+    "y": 9369
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3243,
+    "y": 9360
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3252,
+    "y": 9358
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3250,
+    "y": 9364
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3239,
+    "y": 9381
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3241,
+    "y": 9386
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3237,
+    "y": 9390
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3225,
+    "y": 9377
+  },
+  {
+    "id": "NpcId.FIRE_ELEMENTAL_35",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3221,
+    "y": 9381
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3229,
+    "y": 9394
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3233,
+    "y": 9400
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3223,
+    "y": 9398
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3216,
+    "y": 9400
+  },
+  {
+    "id": "NpcId.FIRE_ELEMENTAL_35",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3208,
+    "y": 9400
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3247,
+    "y": 9400
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3258,
+    "y": 9399
+  },
+  {
+    "id": "NpcId.FIRE_ELEMENTAL_35",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3262,
+    "y": 9399
+  },
+  {
+    "id": "NpcId.FIRE_ELEMENTAL_35",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3257,
+    "y": 9392
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3258,
+    "y": 9385
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3260,
+    "y": 9379
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3259,
+    "y": 9371
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3261,
+    "y": 9363
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3259,
+    "y": 9356
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3258,
+    "y": 9350
+  },
+  {
+    "id": "NpcId.DUST_DEVIL_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3248,
+    "y": 9349
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3238,
+    "y": 9349
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3274,
+    "y": 9397
+  },
+  {
+    "id": "NpcId.FIRE_ELEMENTAL_35",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3271,
+    "y": 9386
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3272,
+    "y": 9379
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3286,
+    "y": 9384
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3287,
+    "y": 9392
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3286,
+    "y": 9398
+  },
+  {
+    "id": "NpcId.FIRE_ELEMENTAL_35",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3283,
+    "y": 9400
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3280,
+    "y": 9369
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3272,
+    "y": 9364
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3273,
+    "y": 9356
+  },
+  {
+    "id": "NpcId.FIRE_ELEMENTAL_35",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3279,
+    "y": 9352
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3285,
+    "y": 9357
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3291,
+    "y": 9364
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3294,
+    "y": 9374
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3301,
+    "y": 9389
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3302,
+    "y": 9398
+  },
+  {
+    "id": "NpcId.FIRE_ELEMENTAL_35",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3308,
+    "y": 9401
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3314,
+    "y": 9400
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3300,
+    "y": 9353
+  },
+  {
+    "id": "NpcId.PYREFIEND_43",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3311,
+    "y": 9351
+  },
+  {
+    "id": "NpcId.FIRE_ELEMENTAL_35",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3318,
+    "y": 9352
+  }
+]

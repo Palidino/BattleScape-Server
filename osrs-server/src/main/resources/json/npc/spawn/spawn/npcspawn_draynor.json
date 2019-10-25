@@ -1,0 +1,206 @@
+[
+  {
+    "id": "NpcId.MARTIN_THE_MASTER_GARDENER",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3079,
+    "y": 3256
+  },
+  {
+    "id": "NpcId.PIG_2812",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3075,
+    "y": 3259
+  },
+  {
+    "id": "NpcId.PIG",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3079,
+    "y": 3259
+  },
+  {
+    "id": "NpcId.PIGLET",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3078,
+    "y": 3261
+  },
+  {
+    "id": "NpcId.PIGLET_2814",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3076,
+    "y": 3261
+  },
+  {
+    "id": "NpcId.PIGLET_2815",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3077,
+    "y": 3260
+  },
+  {
+    "id": "NpcId.PIG",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3077,
+    "y": 3263
+  },
+  {
+    "id": "NpcId.PIG",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3072,
+    "y": 3260
+  },
+  {
+    "id": "NpcId.PIG",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3077,
+    "y": 3256
+  },
+  {
+    "id": "NpcId.TOWN_CRIER_277",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3078,
+    "y": 3250
+  },
+  {
+    "id": "NpcId.OLIVIA",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3077,
+    "y": 3252
+  },
+  {
+    "id": "NpcId.DIANGO",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3077,
+    "y": 3246
+  },
+  {
+    "id": "NpcId.FORTUNATO",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3085,
+    "y": 3250
+  },
+  {
+    "id": "NpcId.MASTER_FARMER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3086,
+    "y": 3245
+  },
+  {
+    "id": "NpcId.MARKET_GUARD_20",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3082,
+    "y": 3249
+  },
+  {
+    "id": "NpcId.BANK_GUARD",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3088,
+    "y": 3248
+  },
+  {
+    "id": "NpcId.AGGIE",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3086,
+    "y": 3258
+  },
+  {
+    "id": "NpcId.MARKET_GUARD_20",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3079,
+    "y": 3251
+  },
+  {
+    "id": "NpcId.WISE_OLD_MAN",
+    "direction": 1,
+    "x": 3088,
+    "y": 3255
+  },
+  {
+    "id": "NpcId.MISS_SCHISM",
+    "direction": 1,
+    "x": 3095,
+    "y": 3252
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 4,
+    "x": 3090,
+    "y": 3245
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 4,
+    "x": 3090,
+    "y": 3243
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 4,
+    "x": 3090,
+    "y": 3242
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "x": 3088,
+    "y": 3242
+  },
+  {
+    "id": "NpcId.NED",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3099,
+    "y": 3257
+  },
+  {
+    "id": "NpcId.TWIGGY_OKORN",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3096,
+    "y": 3227
+  },
+  {
+    "id": "NpcId.BLACK_KNIGHT_33",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3097,
+    "y": 3219
+  },
+  {
+    "id": "NpcId.SQUIRREL_1418",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3099,
+    "y": 3226
+  },
+  {
+    "id": "NpcId.DARK_WIZARD_7",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3090,
+    "y": 3232
+  },
+  {
+    "id": "NpcId.DARK_WIZARD_7",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3084,
+    "y": 3235
+  }
+]

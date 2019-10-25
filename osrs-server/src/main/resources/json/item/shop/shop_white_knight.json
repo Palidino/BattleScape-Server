@@ -1,0 +1,112 @@
+{
+  "name": "White Knight Shop",
+  "sellExchangeMultiplier": 1.0,
+  "ceilPrice": true,
+  "items": [
+    {
+      "id": "ItemId.WHITE_CHAINBODY",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 100
+    },
+    {
+      "id": "ItemId.WHITE_PLATELEGS",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 100
+    },
+    {
+      "id": "ItemId.WHITE_DAGGER",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 200
+    },
+    {
+      "id": "ItemId.WHITE_SWORD",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 200
+    },
+    {
+      "id": "ItemId.WHITE_MED_HELM",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 300
+    },
+    {
+      "id": "ItemId.WHITE_PLATESKIRT",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 300
+    },
+    {
+      "id": "ItemId.WHITE_SQ_SHIELD",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 300
+    },
+    {
+      "id": "ItemId.WHITE_MACE",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 500
+    },
+    {
+      "id": "ItemId.WHITE_MAGIC_STAFF",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 500
+    },
+    {
+      "id": "ItemId.WHITE_LONGSWORD",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 500
+    },
+    {
+      "id": "ItemId.WHITE_FULL_HELM",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 800
+    },
+    {
+      "id": "ItemId.WHITE_PLATEBODY",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 800
+    },
+    {
+      "id": "ItemId.WHITE_KITESHIELD",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 800
+    },
+    {
+      "id": "ItemId.WHITE_BOOTS",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 800
+    },
+    {
+      "id": "ItemId.WHITE_GLOVES",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 800
+    },
+    {
+      "id": "ItemId.WHITE_2H_SWORD",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 1300
+    },
+    {
+      "id": "ItemId.WHITE_HALBERD",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 1300
+    },
+    {
+      "id": "ItemId.WHITE_SCIMITAR",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 1300
+    },
+    {
+      "id": "ItemId.WHITE_WARHAMMER",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 1300
+    },
+    {
+      "id": "ItemId.WHITE_BATTLEAXE",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 1300
+    },
+    {
+      "id": "ItemId.WHITE_CLAWS",
+      "monsterName": "Black Knight",
+      "monsterKillCount": 1300
+    }
+  ]
+}

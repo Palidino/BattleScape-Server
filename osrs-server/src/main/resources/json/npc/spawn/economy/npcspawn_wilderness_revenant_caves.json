@@ -1,0 +1,683 @@
+[
+  {
+    "id": "NpcId.EMBLEM_TRADER_7942",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3180,
+    "y": 10204
+  },
+  {
+    "id": "NpcId.HELLHOUND_136",
+    "moveDistance": 2,
+    "x": 3201,
+    "y": 10063
+  },
+  {
+    "id": "NpcId.HELLHOUND_136",
+    "moveDistance": 2,
+    "x": 3199,
+    "y": 10067
+  },
+  {
+    "id": "NpcId.HELLHOUND_136",
+    "moveDistance": 2,
+    "x": 3195,
+    "y": 10069
+  },
+  {
+    "id": "NpcId.HELLHOUND_136",
+    "moveDistance": 2,
+    "x": 3194,
+    "y": 10073
+  },
+  {
+    "id": "NpcId.HELLHOUND_136",
+    "moveDistance": 2,
+    "x": 3199,
+    "y": 10075
+  },
+  {
+    "id": "NpcId.HELLHOUND_136",
+    "moveDistance": 2,
+    "x": 3204,
+    "y": 10074
+  },
+  {
+    "id": "NpcId.HELLHOUND_136",
+    "moveDistance": 2,
+    "x": 3203,
+    "y": 10069
+  },
+  {
+    "id": "NpcId.HELLHOUND_136",
+    "moveDistance": 2,
+    "x": 3197,
+    "y": 10072
+  },
+  {
+    "id": "NpcId.HELLHOUND_136",
+    "moveDistance": 2,
+    "x": 3201,
+    "y": 10072
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_88",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3218,
+    "y": 10062
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_88_7869",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3226,
+    "y": 10064
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_88_7870",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3220,
+    "y": 10075
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_88",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3207,
+    "y": 10092
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_88_7869",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3213,
+    "y": 10099
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_88_7870",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3218,
+    "y": 10092
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_88",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3224,
+    "y": 10098
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_88_7869",
+    "moveDistance": 2,
+    "x": 3229,
+    "y": 10072
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_104",
+    "moveDistance": 2,
+    "x": 3226,
+    "y": 10118
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_104_7872",
+    "moveDistance": 2,
+    "x": 3219,
+    "y": 10121
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_104_7873",
+    "moveDistance": 2,
+    "x": 3213,
+    "y": 10126
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_104",
+    "moveDistance": 2,
+    "x": 3208,
+    "y": 10131
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_104_7872",
+    "moveDistance": 2,
+    "x": 3215,
+    "y": 10135
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_104_7873",
+    "moveDistance": 2,
+    "x": 3218,
+    "y": 10142
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_104",
+    "moveDistance": 2,
+    "x": 3226,
+    "y": 10142
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_104_7872",
+    "moveDistance": 2,
+    "x": 3234,
+    "y": 10143
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_104_7873",
+    "moveDistance": 2,
+    "x": 3232,
+    "y": 10137
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_104",
+    "moveDistance": 2,
+    "x": 3236,
+    "y": 10131
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_104_7872",
+    "moveDistance": 2,
+    "x": 3233,
+    "y": 10121
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_104_7873",
+    "moveDistance": 2,
+    "x": 3227,
+    "y": 10126
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_104",
+    "moveDistance": 2,
+    "x": 3219,
+    "y": 10130
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_104_7872",
+    "moveDistance": 2,
+    "x": 3225,
+    "y": 10135
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_94_7865",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3172,
+    "y": 10119
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_94_7866",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3172,
+    "y": 10114
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_94_7867",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3167,
+    "y": 10109
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_94_7865",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3159,
+    "y": 10112
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_94_7866",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3164,
+    "y": 10117
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_94_7867",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3155,
+    "y": 10120
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_94_7865",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3150,
+    "y": 10115
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_94_7866",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3149,
+    "y": 10109
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_94_7867",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3155,
+    "y": 10108
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_94_7865",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3155,
+    "y": 10115
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_94_7866",
+    "moveDistance": 2,
+    "x": 3165,
+    "y": 10113
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_94_7867",
+    "moveDistance": 2,
+    "x": 3168,
+    "y": 10123
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_188",
+    "moveDistance": 2,
+    "x": 3163,
+    "y": 10166
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_188_7875",
+    "moveDistance": 2,
+    "x": 3168,
+    "y": 10162
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_188_7876",
+    "moveDistance": 2,
+    "x": 3160,
+    "y": 10151
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_188",
+    "moveDistance": 2,
+    "x": 3168,
+    "y": 10149
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_188_7875",
+    "moveDistance": 2,
+    "x": 3173,
+    "y": 10146
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_188_7876",
+    "moveDistance": 2,
+    "x": 3179,
+    "y": 10148
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_188",
+    "moveDistance": 2,
+    "x": 3189,
+    "y": 10149
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_188_7875",
+    "moveDistance": 2,
+    "x": 3183,
+    "y": 10153
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_188_7876",
+    "moveDistance": 2,
+    "x": 3181,
+    "y": 10166
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_188",
+    "moveDistance": 2,
+    "x": 3181,
+    "y": 10160
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_188_7875",
+    "moveDistance": 2,
+    "x": 3174,
+    "y": 10159
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_188_7876",
+    "moveDistance": 2,
+    "x": 3166,
+    "y": 10155
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_188",
+    "moveDistance": 2,
+    "x": 3173,
+    "y": 10153
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_188_7875",
+    "moveDistance": 2,
+    "x": 3178,
+    "y": 10155
+  },
+  {
+    "id": "NpcId.ICE_GIANT_67",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3199,
+    "y": 10169
+  },
+  {
+    "id": "NpcId.ICE_GIANT_67_7879",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3198,
+    "y": 10163
+  },
+  {
+    "id": "NpcId.ICE_GIANT_67_7880",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3204,
+    "y": 10160
+  },
+  {
+    "id": "NpcId.ICE_GIANT_67",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3211,
+    "y": 10162
+  },
+  {
+    "id": "NpcId.ICE_GIANT_67_7879",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3218,
+    "y": 10163
+  },
+  {
+    "id": "NpcId.ICE_GIANT_67_7880",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3217,
+    "y": 10169
+  },
+  {
+    "id": "NpcId.ICE_GIANT_67",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3204,
+    "y": 10166
+  },
+  {
+    "id": "NpcId.ICE_GIANT_67_7879",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3211,
+    "y": 10168
+  },
+  {
+    "id": "NpcId.ICE_GIANT_67_7880",
+    "moveDistance": 2,
+    "x": 3206,
+    "y": 10155
+  },
+  {
+    "id": "NpcId.ICE_GIANT_67",
+    "moveDistance": 2,
+    "x": 3210,
+    "y": 10157
+  },
+  {
+    "id": "NpcId.ICE_GIANT_67_7879",
+    "moveDistance": 2,
+    "x": 3195,
+    "y": 10159
+  },
+  {
+    "id": "NpcId.ICE_GIANT_67_7880",
+    "moveDistance": 2,
+    "x": 3204,
+    "y": 10172
+  },
+  {
+    "id": "NpcId.ANKOU_98",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3161,
+    "y": 10189
+  },
+  {
+    "id": "NpcId.ANKOU_98",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3168,
+    "y": 10187
+  },
+  {
+    "id": "NpcId.ANKOU_98",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3167,
+    "y": 10197
+  },
+  {
+    "id": "NpcId.ANKOU_98",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3173,
+    "y": 10199
+  },
+  {
+    "id": "NpcId.ANKOU_98",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3175,
+    "y": 10184
+  },
+  {
+    "id": "NpcId.ANKOU_98",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3173,
+    "y": 10192
+  },
+  {
+    "id": "NpcId.ANKOU_98",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3180,
+    "y": 10190
+  },
+  {
+    "id": "NpcId.ANKOU_98",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3180,
+    "y": 10197
+  },
+  {
+    "id": "NpcId.ANKOU_98",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3187,
+    "y": 10201
+  },
+  {
+    "id": "NpcId.ANKOU_98",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3187,
+    "y": 10192
+  },
+  {
+    "id": "NpcId.ANKOU_98",
+    "moveDistance": 2,
+    "x": 3180,
+    "y": 10185
+  },
+  {
+    "id": "NpcId.ANKOU_98",
+    "moveDistance": 2,
+    "x": 3163,
+    "y": 10201
+  },
+  {
+    "id": "NpcId.BLACK_DRAGON_247",
+    "moveDistance": 2,
+    "x": 3228,
+    "y": 10197
+  },
+  {
+    "id": "NpcId.BLACK_DRAGON_247_7862",
+    "moveDistance": 2,
+    "x": 3234,
+    "y": 10195
+  },
+  {
+    "id": "NpcId.BLACK_DRAGON_247_7863",
+    "moveDistance": 2,
+    "x": 3241,
+    "y": 10196
+  },
+  {
+    "id": "NpcId.BLACK_DRAGON_247",
+    "moveDistance": 2,
+    "x": 3247,
+    "y": 10200
+  },
+  {
+    "id": "NpcId.BLACK_DRAGON_247_7862",
+    "moveDistance": 2,
+    "x": 3244,
+    "y": 10206
+  },
+  {
+    "id": "NpcId.BLACK_DRAGON_247_7863",
+    "moveDistance": 2,
+    "x": 3238,
+    "y": 10212
+  },
+  {
+    "id": "NpcId.BLACK_DRAGON_247",
+    "moveDistance": 2,
+    "x": 3230,
+    "y": 10204
+  },
+  {
+    "id": "NpcId.BLACK_DRAGON_247_7862",
+    "moveDistance": 2,
+    "x": 3237,
+    "y": 10203
+  },
+  {
+    "id": "NpcId.REVENANT_IMP_7",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3254,
+    "y": 10184
+  },
+  {
+    "id": "NpcId.REVENANT_IMP_7",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3231,
+    "y": 10178
+  },
+  {
+    "id": "NpcId.REVENANT_GOBLIN_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3235,
+    "y": 10182
+  },
+  {
+    "id": "NpcId.REVENANT_PYREFIEND_52",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3234,
+    "y": 10171
+  },
+  {
+    "id": "NpcId.REVENANT_PYREFIEND_52",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3248,
+    "y": 10164
+  },
+  {
+    "id": "NpcId.REVENANT_HOBGOBLIN_60",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3252,
+    "y": 10156
+  },
+  {
+    "id": "NpcId.REVENANT_CYCLOPS_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3246,
+    "y": 10158
+  },
+  {
+    "id": "NpcId.REVENANT_HELLHOUND_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3251,
+    "y": 10168
+  },
+  {
+    "id": "NpcId.REVENANT_DEMON_98",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3247,
+    "y": 10179
+  },
+  {
+    "id": "NpcId.REVENANT_DEMON_98",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3236,
+    "y": 10161
+  },
+  {
+    "id": "NpcId.REVENANT_ORK_105",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3237,
+    "y": 10167
+  },
+  {
+    "id": "NpcId.REVENANT_ORK_105",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3247,
+    "y": 10151
+  },
+  {
+    "id": "NpcId.REVENANT_DARK_BEAST_120",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3251,
+    "y": 10142
+  },
+  {
+    "id": "NpcId.REVENANT_KNIGHT_126",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3244,
+    "y": 10170
+  },
+  {
+    "id": "NpcId.REVENANT_DRAGON_135",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3239,
+    "y": 10177
+  }
+]

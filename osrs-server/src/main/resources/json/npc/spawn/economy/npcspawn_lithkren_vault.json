@@ -1,0 +1,152 @@
+[
+  {
+    "id": "NpcId.ADAMANT_DRAGON_338",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1544,
+    "y": 5065
+  },
+  {
+    "id": "NpcId.ADAMANT_DRAGON_338",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1552,
+    "y": 5068
+  },
+  {
+    "id": "NpcId.ADAMANT_DRAGON_338",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1545,
+    "y": 5074
+  },
+  {
+    "id": "NpcId.ADAMANT_DRAGON_338",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1541,
+    "y": 5081
+  },
+  {
+    "id": "NpcId.ADAMANT_DRAGON_338",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1551,
+    "y": 5080
+  },
+  {
+    "id": "NpcId.RUNE_DRAGON_380_8031",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1583,
+    "y": 5066
+  },
+  {
+    "id": "NpcId.RUNE_DRAGON_380_8031",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1591,
+    "y": 5068
+  },
+  {
+    "id": "NpcId.RUNE_DRAGON_380_8031",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1578,
+    "y": 5072
+  },
+  {
+    "id": "NpcId.RUNE_DRAGON_380_8031",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1590,
+    "y": 5079
+  },
+  {
+    "id": "NpcId.RUNE_DRAGON_380_8031",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1582,
+    "y": 5081
+  },
+  {
+    "id": "NpcId.ADAMANT_DRAGON_338",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1544,
+    "y": 5065,
+    "height": 4
+  },
+  {
+    "id": "NpcId.ADAMANT_DRAGON_338",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1552,
+    "y": 5068,
+    "height": 4
+  },
+  {
+    "id": "NpcId.ADAMANT_DRAGON_338",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1545,
+    "y": 5074,
+    "height": 4
+  },
+  {
+    "id": "NpcId.ADAMANT_DRAGON_338",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1541,
+    "y": 5081,
+    "height": 4
+  },
+  {
+    "id": "NpcId.ADAMANT_DRAGON_338",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1551,
+    "y": 5080,
+    "height": 4
+  },
+  {
+    "id": "NpcId.RUNE_DRAGON_380_8031",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1583,
+    "y": 5066,
+    "height": 4
+  },
+  {
+    "id": "NpcId.RUNE_DRAGON_380_8031",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1591,
+    "y": 5068,
+    "height": 4
+  },
+  {
+    "id": "NpcId.RUNE_DRAGON_380_8031",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1578,
+    "y": 5072,
+    "height": 4
+  },
+  {
+    "id": "NpcId.RUNE_DRAGON_380_8031",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1590,
+    "y": 5079,
+    "height": 4
+  },
+  {
+    "id": "NpcId.RUNE_DRAGON_380_8031",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1582,
+    "y": 5081,
+    "height": 4
+  }
+]

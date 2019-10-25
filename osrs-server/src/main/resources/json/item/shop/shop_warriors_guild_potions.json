@@ -1,0 +1,10 @@
+{
+  "name": "Warrior Guild Potion Shop",
+  "sellExchangeMultiplier": 1.0,
+  "ceilPrice": true,
+  "items": [
+    { "id": "ItemId.STRENGTH_POTION_3" },
+    { "id": "ItemId.ATTACK_POTION_3" },
+    { "id": "ItemId.DEFENCE_POTION_3" }
+  ]
+}

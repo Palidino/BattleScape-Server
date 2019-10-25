@@ -1,0 +1,4580 @@
+[
+  {
+    "id": "NpcId.MAGE_OF_ZAMORAK_2581",
+    "x": 3102,
+    "y": 3556,
+    "moveDistance": 8
+  },
+  {
+    "id": "NpcId.ELDER_CHAOS_DRUID",
+    "x": 2955,
+    "y": 3816,
+    "moveDistance": 2
+  },
+  {
+    "id": "NpcId.MANDRITH",
+    "x": 3183,
+    "y": 3945,
+    "direction": 4
+  },
+  {
+    "id": "NpcId.PILES",
+    "x": 3185,
+    "y": 3934,
+    "direction": 4
+  },
+  {
+    "id": "NpcId.KOLODION",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2542,
+    "y": 4716
+  },
+  {
+    "id": "NpcId.GUNDAI",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2534,
+    "y": 4716
+  },
+  {
+    "id": "NpcId.LUNDAIL",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2537,
+    "y": 4716
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1536",
+    "direction": 1,
+    "x": 3181,
+    "y": 3926
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1536",
+    "direction": 1,
+    "x": 3183,
+    "y": 3926
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1536",
+    "direction": 1,
+    "x": 3185,
+    "y": 3926
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1536",
+    "direction": 1,
+    "x": 3187,
+    "y": 3927
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT_6825",
+    "direction": 1,
+    "x": 3182,
+    "y": 3926
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT_6825",
+    "direction": 1,
+    "x": 3184,
+    "y": 3926
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT_6825",
+    "direction": 1,
+    "x": 3186,
+    "y": 3926
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT_6825",
+    "direction": 1,
+    "x": 3184,
+    "y": 3930
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3141,
+    "y": 3772
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3139,
+    "y": 3773
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3143,
+    "y": 3770
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3145,
+    "y": 3768
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3146,
+    "y": 3770
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3148,
+    "y": 3772
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3145,
+    "y": 3773
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3143,
+    "y": 3774
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3143,
+    "y": 3772
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3149,
+    "y": 3774
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3151,
+    "y": 3773
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3146,
+    "y": 3775
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3137,
+    "y": 3774
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3147,
+    "y": 3773
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3138,
+    "y": 3782
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3136,
+    "y": 3781
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3139,
+    "y": 3780
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3140,
+    "y": 3782
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3139,
+    "y": 3784
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3137,
+    "y": 3784
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3135,
+    "y": 3784
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3134,
+    "y": 3782
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3136,
+    "y": 3786
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3138,
+    "y": 3786
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3140,
+    "y": 3786
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3141,
+    "y": 3780
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3134,
+    "y": 3779
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3135,
+    "y": 3777
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3135,
+    "y": 3788
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3139,
+    "y": 3788
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3137,
+    "y": 3788
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3156,
+    "y": 3775
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3158,
+    "y": 3775
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3160,
+    "y": 3773
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3158,
+    "y": 3772
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3156,
+    "y": 3772
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3154,
+    "y": 3771
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3154,
+    "y": 3774
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3156,
+    "y": 3770
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3155,
+    "y": 3768
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3153,
+    "y": 3768
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3151,
+    "y": 3770
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3153,
+    "y": 3770
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3147,
+    "y": 3767
+  },
+  {
+    "id": "NpcId.BLACK_CHINCHOMPA_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3146,
+    "y": 3778
+  },
+  {
+    "id": "NpcId.BLACK_SALAMANDER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3301,
+    "y": 3672
+  },
+  {
+    "id": "NpcId.BLACK_SALAMANDER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3299,
+    "y": 3667
+  },
+  {
+    "id": "NpcId.BLACK_SALAMANDER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3296,
+    "y": 3669
+  },
+  {
+    "id": "NpcId.BLACK_SALAMANDER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3298,
+    "y": 3664
+  },
+  {
+    "id": "NpcId.BLACK_SALAMANDER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3294,
+    "y": 3667
+  },
+  {
+    "id": "NpcId.BLACK_SALAMANDER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3292,
+    "y": 3674
+  },
+  {
+    "id": "NpcId.BLACK_SALAMANDER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3295,
+    "y": 3675
+  },
+  {
+    "id": "NpcId.BLACK_SALAMANDER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3297,
+    "y": 3671
+  },
+  {
+    "id": "NpcId.BLACK_SALAMANDER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3296,
+    "y": 3675
+  },
+  {
+    "id": "NpcId.BLACK_SALAMANDER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3294,
+    "y": 3679
+  },
+  {
+    "id": "NpcId.BLACK_SALAMANDER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3298,
+    "y": 3677
+  },
+  {
+    "id": "NpcId.BLACK_SALAMANDER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3301,
+    "y": 3668
+  },
+  {
+    "id": "NpcId.VETION_454",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3196,
+    "y": 3780
+  },
+  {
+    "id": "NpcId.VENENATIS_464",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3310,
+    "y": 3742
+  },
+  {
+    "id": "NpcId.CALLISTO_470",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3292,
+    "y": 3847
+  },
+  {
+    "id": "NpcId.CRAZY_ARCHAEOLOGIST_204",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2972,
+    "y": 3704
+  },
+  {
+    "id": "NpcId.CHAOS_FANATIC_202",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2980,
+    "y": 3846
+  },
+  {
+    "id": "NpcId.MINIATURE_CHAOTIC_CLOUDS",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2990,
+    "y": 3847
+  },
+  {
+    "id": "NpcId.MINIATURE_CHAOTIC_CLOUDS",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2987,
+    "y": 3839
+  },
+  {
+    "id": "NpcId.MINIATURE_CHAOTIC_CLOUDS",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2973,
+    "y": 3838
+  },
+  {
+    "id": "NpcId.MINIATURE_CHAOTIC_CLOUDS",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2971,
+    "y": 3852
+  },
+  {
+    "id": "NpcId.MINIATURE_CHAOTIC_CLOUDS",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2982,
+    "y": 3853
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3223,
+    "y": 10347
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3225,
+    "y": 10348
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3223,
+    "y": 10344
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3224,
+    "y": 10339
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3221,
+    "y": 10335
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3225,
+    "y": 10333
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3229,
+    "y": 10333
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3229,
+    "y": 10337
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3228,
+    "y": 10342
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3229,
+    "y": 10347
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3232,
+    "y": 10349
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3236,
+    "y": 10349
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3233,
+    "y": 10344
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3234,
+    "y": 10338
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3232,
+    "y": 10334
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3236,
+    "y": 10335
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3240,
+    "y": 10334
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3244,
+    "y": 10335
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3240,
+    "y": 10337
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3243,
+    "y": 10344
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3243,
+    "y": 10348
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3238,
+    "y": 10346
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3238,
+    "y": 10341
+  },
+  {
+    "id": "NpcId.SCORPIAS_OFFSPRING_15",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3243,
+    "y": 10339
+  },
+  {
+    "id": "NpcId.SCORPIA_225",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3231,
+    "y": 10340
+  },
+  {
+    "id": "NpcId.BATTLE_MAGE_54",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3099,
+    "y": 3941
+  },
+  {
+    "id": "NpcId.BATTLE_MAGE_54_1611",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3105,
+    "y": 3943
+  },
+  {
+    "id": "NpcId.BATTLE_MAGE_54_1612",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3110,
+    "y": 3938
+  },
+  {
+    "id": "NpcId.BATTLE_MAGE_54",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3107,
+    "y": 3933
+  },
+  {
+    "id": "NpcId.BATTLE_MAGE_54_1611",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3101,
+    "y": 3935
+  },
+  {
+    "id": "NpcId.BATTLE_MAGE_54_1612",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3096,
+    "y": 3930
+  },
+  {
+    "id": "NpcId.BATTLE_MAGE_54",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3100,
+    "y": 3926
+  },
+  {
+    "id": "NpcId.BATTLE_MAGE_54_1611",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3105,
+    "y": 3923
+  },
+  {
+    "id": "NpcId.BATTLE_MAGE_54_1612",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3103,
+    "y": 3928
+  },
+  {
+    "id": "NpcId.BATTLE_MAGE_54",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3110,
+    "y": 3925
+  },
+  {
+    "id": "NpcId.BATTLE_MAGE_54_1611",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3113,
+    "y": 3929
+  },
+  {
+    "id": "NpcId.BATTLE_MAGE_54_1612",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3113,
+    "y": 3934
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2006",
+    "moveDistance": 4,
+    "x": 3062,
+    "y": 3864
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2007",
+    "moveDistance": 4,
+    "x": 3067,
+    "y": 3865
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2008",
+    "moveDistance": 4,
+    "x": 3064,
+    "y": 3870
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2018",
+    "moveDistance": 4,
+    "x": 3068,
+    "y": 3874
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2006",
+    "moveDistance": 4,
+    "x": 3070,
+    "y": 3869
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2007",
+    "moveDistance": 4,
+    "x": 3075,
+    "y": 3869
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2008",
+    "moveDistance": 4,
+    "x": 3077,
+    "y": 3874
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2018",
+    "moveDistance": 4,
+    "x": 3081,
+    "y": 3869
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2006",
+    "moveDistance": 4,
+    "x": 3086,
+    "y": 3869
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2007",
+    "moveDistance": 4,
+    "x": 3087,
+    "y": 3875
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2008",
+    "moveDistance": 4,
+    "x": 3092,
+    "y": 3874
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2018",
+    "moveDistance": 4,
+    "x": 3096,
+    "y": 3878
+  },
+  {
+    "id": "NpcId.LAVA_DRAGON_252",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3180,
+    "y": 3815
+  },
+  {
+    "id": "NpcId.LAVA_DRAGON_252",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3179,
+    "y": 3807
+  },
+  {
+    "id": "NpcId.LAVA_DRAGON_252",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3190,
+    "y": 3804
+  },
+  {
+    "id": "NpcId.LAVA_DRAGON_252",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3194,
+    "y": 3816
+  },
+  {
+    "id": "NpcId.LAVA_DRAGON_252",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3212,
+    "y": 3818
+  },
+  {
+    "id": "NpcId.LAVA_DRAGON_252",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3220,
+    "y": 3826
+  },
+  {
+    "id": "NpcId.LAVA_DRAGON_252",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3201,
+    "y": 3825
+  },
+  {
+    "id": "NpcId.LAVA_DRAGON_252",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3187,
+    "y": 3833
+  },
+  {
+    "id": "NpcId.LAVA_DRAGON_252",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3194,
+    "y": 3826
+  },
+  {
+    "id": "NpcId.LAVA_DRAGON_252",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3208,
+    "y": 3834
+  },
+  {
+    "id": "NpcId.LAVA_DRAGON_252",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3201,
+    "y": 3842
+  },
+  {
+    "id": "NpcId.HELLHOUND_122",
+    "x": 3169,
+    "y": 3956,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HELLHOUND_122",
+    "x": 3172,
+    "y": 3944,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HELLHOUND_122",
+    "x": 3175,
+    "y": 3949,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HELLHOUND_122",
+    "x": 3181,
+    "y": 3907,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HELLHOUND_122",
+    "x": 3183,
+    "y": 3917,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAGIC_AXE_42",
+    "x": 3187,
+    "y": 3959,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAGIC_AXE_42",
+    "x": 3190,
+    "y": 3958,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAGIC_AXE_42",
+    "x": 3190,
+    "y": 3958,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAGIC_AXE_42",
+    "x": 3193,
+    "y": 3959,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HELLHOUND_122",
+    "x": 3189,
+    "y": 3915,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAGIC_AXE_42",
+    "x": 3193,
+    "y": 3958,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAGIC_AXE_42",
+    "x": 3190,
+    "y": 3960,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAGIC_AXE_42",
+    "x": 3191,
+    "y": 3960,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAGIC_AXE_42",
+    "x": 3189,
+    "y": 3959,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAGIC_AXE_42",
+    "x": 3194,
+    "y": 3960,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_27",
+    "x": 3164,
+    "y": 3887,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3161,
+    "y": 3889,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3160,
+    "y": 3882,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_27",
+    "x": 3165,
+    "y": 3894,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3163,
+    "y": 3889,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3168,
+    "y": 3887,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_27",
+    "x": 3165,
+    "y": 3887,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_27",
+    "x": 3161,
+    "y": 3890,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_27",
+    "x": 3167,
+    "y": 3887,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3163,
+    "y": 3889,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3167,
+    "y": 3889,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_27",
+    "x": 3172,
+    "y": 3886,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3167,
+    "y": 3887,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3166,
+    "y": 3893,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3170,
+    "y": 3886,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_27",
+    "x": 3174,
+    "y": 3888,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3173,
+    "y": 3883,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_27",
+    "x": 3171,
+    "y": 3888,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3176,
+    "y": 3887,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_27",
+    "x": 3173,
+    "y": 3896,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3170,
+    "y": 3884,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3179,
+    "y": 3889,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_27",
+    "x": 3173,
+    "y": 3891,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3171,
+    "y": 3882,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3178,
+    "y": 3888,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_27",
+    "x": 3171,
+    "y": 3874,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3177,
+    "y": 3890,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SPIDER_1",
+    "x": 3177,
+    "y": 3884,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_27",
+    "x": 3173,
+    "y": 3893,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22_71",
+    "x": 3013,
+    "y": 3595,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "x": 3009,
+    "y": 3589,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22_73",
+    "x": 3010,
+    "y": 3594,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22_72",
+    "x": 3012,
+    "y": 3585,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22_72",
+    "x": 3011,
+    "y": 3607,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "x": 3016,
+    "y": 3603,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22_71",
+    "x": 3019,
+    "y": 3589,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22_73",
+    "x": 3023,
+    "y": 3599,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22_73",
+    "x": 3018,
+    "y": 3600,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3024,
+    "y": 3625,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3022,
+    "y": 3639,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "x": 3028,
+    "y": 3591,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22_71",
+    "x": 3030,
+    "y": 3597,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_8",
+    "x": 3024,
+    "y": 3624,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3020,
+    "y": 3624,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_8",
+    "x": 3020,
+    "y": 3639,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3026,
+    "y": 3625,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3024,
+    "y": 3627,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2008",
+    "x": 3010,
+    "y": 3842,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3025,
+    "y": 3627,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2007",
+    "x": 3016,
+    "y": 3852,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3020,
+    "y": 3638,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2018",
+    "x": 3017,
+    "y": 3840,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22_73",
+    "x": 3024,
+    "y": 3586,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82_2006",
+    "x": 3012,
+    "y": 3854,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22_72",
+    "x": 3025,
+    "y": 3591,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_KNIGHT_33_2875",
+    "x": 3030,
+    "y": 3843,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3026,
+    "y": 3636,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_KNIGHT_33_2875",
+    "x": 3029,
+    "y": 3852,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3026,
+    "y": 3627,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_KNIGHT_33_2875",
+    "x": 3032,
+    "y": 3849,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_8",
+    "x": 3025,
+    "y": 3638,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_KNIGHT_33_2875",
+    "x": 3031,
+    "y": 3849,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_8",
+    "x": 3026,
+    "y": 3625,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_KNIGHT_33_2875",
+    "x": 3045,
+    "y": 3857,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3030,
+    "y": 3639,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DEADLY_RED_SPIDER_34",
+    "x": 3038,
+    "y": 3886,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3034,
+    "y": 3623,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DEADLY_RED_SPIDER_34",
+    "x": 3043,
+    "y": 3888,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3034,
+    "y": 3624,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DEADLY_RED_SPIDER_34",
+    "x": 3049,
+    "y": 3873,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3037,
+    "y": 3626,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DEADLY_RED_SPIDER_34",
+    "x": 3043,
+    "y": 3874,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3035,
+    "y": 3626,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DEADLY_RED_SPIDER_34",
+    "x": 3048,
+    "y": 3891,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_8",
+    "x": 3035,
+    "y": 3630,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DEADLY_RED_SPIDER_34",
+    "x": 3047,
+    "y": 3887,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3034,
+    "y": 3632,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DEADLY_RED_SPIDER_34",
+    "x": 3042,
+    "y": 3889,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_8",
+    "x": 3035,
+    "y": 3626,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_KNIGHT_33_2875",
+    "x": 3048,
+    "y": 3850,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_8",
+    "x": 3034,
+    "y": 3636,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DEADLY_RED_SPIDER_34",
+    "x": 3049,
+    "y": 3866,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3037,
+    "y": 3638,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DEADLY_RED_SPIDER_34",
+    "x": 3056,
+    "y": 3874,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WARRIOR_145",
+    "x": 3035,
+    "y": 3636,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DEADLY_RED_SPIDER_34",
+    "x": 3061,
+    "y": 3901,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_KNIGHT_33_2875",
+    "x": 3053,
+    "y": 3856,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_KNIGHT_33_2875",
+    "x": 3049,
+    "y": 3842,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_KNIGHT_33_2875",
+    "x": 3058,
+    "y": 3855,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92_2028",
+    "x": 3283,
+    "y": 3875,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DEADLY_RED_SPIDER_34",
+    "x": 3059,
+    "y": 3902,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92_2029",
+    "x": 3284,
+    "y": 3891,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DEADLY_RED_SPIDER_34",
+    "x": 3061,
+    "y": 3902,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DEADLY_RED_SPIDER_34",
+    "x": 3073,
+    "y": 3899,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_RAT_6_2864",
+    "x": 3226,
+    "y": 3538,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92_2027",
+    "x": 3294,
+    "y": 3871,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_RAT_6_2863",
+    "x": 3229,
+    "y": 3550,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92_2026",
+    "x": 3302,
+    "y": 3881,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DEADLY_RED_SPIDER_34",
+    "x": 3070,
+    "y": 3893,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_RAT_6_2864",
+    "x": 3234,
+    "y": 3548,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_RAT_6",
+    "x": 3246,
+    "y": 3526,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_RAT_6",
+    "x": 3243,
+    "y": 3553,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_RAT_6_2863",
+    "x": 3252,
+    "y": 3529,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_RAT_6",
+    "x": 3258,
+    "y": 3542,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GHOST_19_91",
+    "x": 3292,
+    "y": 3653,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GHOST_19_92",
+    "x": 3295,
+    "y": 3652,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAMMOTH_80",
+    "x": 3136,
+    "y": 3615,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAMMOTH_80",
+    "x": 3145,
+    "y": 3609,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAMMOTH_80",
+    "x": 3145,
+    "y": 3589,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAMMOTH_80",
+    "x": 3149,
+    "y": 3638,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAMMOTH_80",
+    "x": 3151,
+    "y": 3613,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAMMOTH_80",
+    "x": 3159,
+    "y": 3610,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.RAT_1_2854",
+    "x": 3161,
+    "y": 3631,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "x": 3299,
+    "y": 3648,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAMMOTH_80",
+    "x": 3158,
+    "y": 3589,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.RAT_1_2854",
+    "x": 3159,
+    "y": 3634,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28_2100",
+    "x": 3306,
+    "y": 3667,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAMMOTH_80",
+    "x": 3157,
+    "y": 3610,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.RAT_1_2854",
+    "x": 3160,
+    "y": 3633,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAMMOTH_80",
+    "x": 3167,
+    "y": 3613,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAMMOTH_80",
+    "x": 3160,
+    "y": 3596,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAMMOTH_80",
+    "x": 3161,
+    "y": 3600,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAMMOTH_80",
+    "x": 3158,
+    "y": 3607,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAMMOTH_80",
+    "x": 3163,
+    "y": 3612,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAMMOTH_80",
+    "x": 3160,
+    "y": 3591,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MAMMOTH_80",
+    "x": 3171,
+    "y": 3594,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_UNICORN_27",
+    "x": 3200,
+    "y": 3684,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_UNICORN_27",
+    "x": 3214,
+    "y": 3684,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_UNICORN_27",
+    "x": 3226,
+    "y": 3694,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_UNICORN_27",
+    "x": 3213,
+    "y": 3685,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_UNICORN_27",
+    "x": 3222,
+    "y": 3684,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_UNICORN_27",
+    "x": 3244,
+    "y": 3670,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_UNICORN_27",
+    "x": 3249,
+    "y": 3678,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.RAT_1_2854",
+    "x": 3255,
+    "y": 3670,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.RAT_1_2854",
+    "x": 3252,
+    "y": 3670,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.RAT_1_2854",
+    "x": 3258,
+    "y": 3670,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.RAT_1_2854",
+    "x": 3261,
+    "y": 3662,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.RAT_1_2854",
+    "x": 3260,
+    "y": 3658,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.RAT_1_2854",
+    "x": 3261,
+    "y": 3667,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25",
+    "x": 3210,
+    "y": 3734,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_78",
+    "x": 3215,
+    "y": 3743,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_79",
+    "x": 3223,
+    "y": 3743,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_81",
+    "x": 3227,
+    "y": 3752,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_80",
+    "x": 3224,
+    "y": 3743,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25",
+    "x": 3238,
+    "y": 3743,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_78",
+    "x": 3251,
+    "y": 3746,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_79",
+    "x": 3257,
+    "y": 3734,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_79",
+    "x": 3266,
+    "y": 3743,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79_264",
+    "x": 3076,
+    "y": 3808,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79_263",
+    "x": 3092,
+    "y": 3809,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79_262",
+    "x": 3099,
+    "y": 3816,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79_261",
+    "x": 3108,
+    "y": 3815,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79",
+    "x": 3117,
+    "y": 3818,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.CHAOS_DWARF_48",
+    "x": 3014,
+    "y": 3765,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.CHAOS_DWARF_48",
+    "x": 3011,
+    "y": 3763,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.CHAOS_DWARF_48",
+    "x": 3038,
+    "y": 3766,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.CHAOS_DWARF_48",
+    "x": 3029,
+    "y": 3768,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "x": 3002,
+    "y": 3676,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "x": 3075,
+    "y": 3961,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "x": 3067,
+    "y": 3950,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "x": 3067,
+    "y": 3953,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_15",
+    "x": 3076,
+    "y": 3913,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "x": 3076,
+    "y": 3956,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "x": 3073,
+    "y": 3944,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_15",
+    "x": 3082,
+    "y": 3911,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "x": 3075,
+    "y": 3961,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "x": 3086,
+    "y": 3957,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3020,
+    "y": 3574,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3025,
+    "y": 3585,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3025,
+    "y": 3570,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3037,
+    "y": 3583,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3037,
+    "y": 3571,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MOSS_GIANT_42_2091",
+    "x": 3140,
+    "y": 3818,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3045,
+    "y": 3566,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3054,
+    "y": 3570,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MOSS_GIANT_42_2091",
+    "x": 3143,
+    "y": 3805,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3053,
+    "y": 3567,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MOSS_GIANT_42_2093",
+    "x": 3140,
+    "y": 3827,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3050,
+    "y": 3563,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25",
+    "x": 3145,
+    "y": 3805,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3056,
+    "y": 3574,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MOSS_GIANT_42",
+    "x": 3142,
+    "y": 3824,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MOSS_GIANT_42_2093",
+    "x": 3146,
+    "y": 3810,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.MOSS_GIANT_42_2093",
+    "x": 3149,
+    "y": 3805,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_78",
+    "x": 3178,
+    "y": 3787,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.WOLF_64",
+    "x": 3209,
+    "y": 3922,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.WOLF_64",
+    "x": 3213,
+    "y": 3924,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3226,
+    "y": 3942,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.WOLF_64",
+    "x": 3225,
+    "y": 3916,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3235,
+    "y": 3939,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3227,
+    "y": 3946,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3233,
+    "y": 3941,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.WOLF_64",
+    "x": 3235,
+    "y": 3926,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3243,
+    "y": 3942,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3249,
+    "y": 3951,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "x": 3255,
+    "y": 3954,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28_2100",
+    "x": 3103,
+    "y": 3876,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.THUG_10",
+    "x": 3158,
+    "y": 3572,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.THUG_10",
+    "x": 3168,
+    "y": 3578,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.THUG_10",
+    "x": 3172,
+    "y": 3577,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.THUG_10",
+    "x": 3169,
+    "y": 3565,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.THUG_10",
+    "x": 3171,
+    "y": 3570,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.THUG_10",
+    "x": 3180,
+    "y": 3566,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.THUG_10",
+    "x": 3192,
+    "y": 3564,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.THUG_10",
+    "x": 3186,
+    "y": 3570,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79_264",
+    "x": 3333,
+    "y": 3674,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79_263",
+    "x": 3329,
+    "y": 3696,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79_261",
+    "x": 3331,
+    "y": 3683,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79_262",
+    "x": 3333,
+    "y": 3701,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79",
+    "x": 3339,
+    "y": 3676,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79_263",
+    "x": 3337,
+    "y": 3686,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79",
+    "x": 3343,
+    "y": 3703,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79_264",
+    "x": 3346,
+    "y": 3692,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WIZARD_7",
+    "x": 2974,
+    "y": 3570,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WIZARD_7",
+    "x": 2978,
+    "y": 3564,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WIZARD_7",
+    "x": 2981,
+    "y": 3575,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WIZARD_20",
+    "x": 2983,
+    "y": 3565,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WIZARD_7",
+    "x": 2987,
+    "y": 3569,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WIZARD_7",
+    "x": 2986,
+    "y": 3573,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WIZARD_20",
+    "x": 2990,
+    "y": 3569,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.DARK_WIZARD_20",
+    "x": 2988,
+    "y": 3564,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "x": 3104,
+    "y": 3599,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "x": 3093,
+    "y": 3601,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79",
+    "x": 3136,
+    "y": 3706,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79_264",
+    "x": 3138,
+    "y": 3701,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79_263",
+    "x": 3145,
+    "y": 3706,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79_262",
+    "x": 3149,
+    "y": 3695,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ZOMBIE_18_45",
+    "x": 3150,
+    "y": 3681,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ZOMBIE_24_60",
+    "x": 3154,
+    "y": 3675,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ZOMBIE_18_47",
+    "x": 3157,
+    "y": 3684,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ZOMBIE_18_46",
+    "x": 3156,
+    "y": 3679,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GREEN_DRAGON_79_261",
+    "x": 3157,
+    "y": 3707,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ZOMBIE_24_59",
+    "x": 3156,
+    "y": 3686,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ZOMBIE_18_48",
+    "x": 3166,
+    "y": 3685,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ZOMBIE_18_45",
+    "x": 3172,
+    "y": 3682,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ZOMBIE_18_45",
+    "x": 3182,
+    "y": 3679,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ZOMBIE_18_46",
+    "x": 3174,
+    "y": 3683,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ZOMBIE_24_61",
+    "x": 3175,
+    "y": 3685,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ZOMBIE_18_46",
+    "x": 3172,
+    "y": 3681,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ZOMBIE_18_47",
+    "x": 3178,
+    "y": 3682,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ZOMBIE_18_48",
+    "x": 3176,
+    "y": 3687,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.PIRATE_26",
+    "x": 3041,
+    "y": 3950,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.PIRATE_26",
+    "x": 3040,
+    "y": 3955,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.PIRATE_26",
+    "x": 3041,
+    "y": 3955,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.PIRATE_26",
+    "x": 3040,
+    "y": 3958,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.PIRATE_26",
+    "x": 3042,
+    "y": 3953,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.PIRATE_26",
+    "x": 3039,
+    "y": 3949,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.PIRATE_26",
+    "x": 3039,
+    "y": 3955,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.PIRATE_26",
+    "x": 3039,
+    "y": 3958,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.PIRATE_26",
+    "x": 3040,
+    "y": 3950,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.PIRATE_26",
+    "x": 3043,
+    "y": 3952,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.PIRATE_26",
+    "x": 3044,
+    "y": 3958,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.PIRATE_26",
+    "x": 3040,
+    "y": 3958,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BANDIT_130",
+    "x": 3022,
+    "y": 3699,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.NOTERAZZO",
+    "x": 3026,
+    "y": 3701,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BANDIT_22",
+    "x": 3028,
+    "y": 3699,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BANDIT_130",
+    "x": 3032,
+    "y": 3706,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BANDIT_22",
+    "x": 3032,
+    "y": 3687,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BANDIT_130",
+    "x": 3035,
+    "y": 3700,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BANDIT_22",
+    "x": 3032,
+    "y": 3694,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BANDIT_22",
+    "x": 3037,
+    "y": 3700,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BANDIT_130",
+    "x": 3036,
+    "y": 3704,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BANDIT_130",
+    "x": 3036,
+    "y": 3672,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GUARD_BANDIT_22",
+    "x": 3036,
+    "y": 3674,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.FAT_TONY",
+    "x": 3038,
+    "y": 3708,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BANDIT_130",
+    "x": 3039,
+    "y": 3659,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GUARD_BANDIT_22",
+    "x": 3037,
+    "y": 3662,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BANDIT_22",
+    "x": 3041,
+    "y": 3681,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BANDIT_130",
+    "x": 3037,
+    "y": 3663,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GUARD_BANDIT_22",
+    "x": 3038,
+    "y": 3667,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BANDIT_130",
+    "x": 3034,
+    "y": 3693,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_80",
+    "x": 3258,
+    "y": 3731,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GUARD_BANDIT_22",
+    "x": 3036,
+    "y": 3664,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_81",
+    "x": 3275,
+    "y": 3734,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25",
+    "x": 3269,
+    "y": 3730,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_78",
+    "x": 3276,
+    "y": 3728,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BANDIT_22",
+    "x": 3042,
+    "y": 3705,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_79",
+    "x": 3278,
+    "y": 3733,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BANDIT_130",
+    "x": 3048,
+    "y": 3707,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_KNIGHT_33_2875",
+    "x": 3318,
+    "y": 3773,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.BLACK_KNIGHT_33_2875",
+    "x": 3322,
+    "y": 3775,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GIANT_RAT_6_2864",
+    "x": 3046,
+    "y": 3697,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.WHITE_WOLF_38",
+    "x": 2989,
+    "y": 3923,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.WHITE_WOLF_38",
+    "x": 2991,
+    "y": 3924,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.WHITE_WOLF_38",
+    "x": 2993,
+    "y": 3914,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.WHITE_WOLF_38",
+    "x": 2995,
+    "y": 3922,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.WHITE_WOLF_38",
+    "x": 3002,
+    "y": 3921,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.WHITE_WOLF_38",
+    "x": 3004,
+    "y": 3916,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.WHITE_WOLF_38",
+    "x": 3006,
+    "y": 3924,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.WHITE_WOLF_38",
+    "x": 3004,
+    "y": 3920,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.CHAOS_DWARF_48",
+    "x": 3220,
+    "y": 3790,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.CHAOS_DWARF_48",
+    "x": 3246,
+    "y": 3773,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ELDER_CHAOS_DRUID_129",
+    "x": 3234,
+    "y": 3611,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ELDER_CHAOS_DRUID_129",
+    "x": 3227,
+    "y": 3604,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ELDER_CHAOS_DRUID_129",
+    "x": 3231,
+    "y": 3613,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ELDER_CHAOS_DRUID_129",
+    "x": 3239,
+    "y": 3622,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ELDER_CHAOS_DRUID_129",
+    "x": 3233,
+    "y": 3637,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ELDER_CHAOS_DRUID_129",
+    "x": 3236,
+    "y": 3602,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ELDER_CHAOS_DRUID_129",
+    "x": 3235,
+    "y": 3627,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ELDER_CHAOS_DRUID_129",
+    "x": 3246,
+    "y": 3605,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ELDER_CHAOS_DRUID_129",
+    "x": 3245,
+    "y": 3616,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ELDER_CHAOS_DRUID_129",
+    "x": 3244,
+    "y": 3617,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ELDER_CHAOS_DRUID_129",
+    "x": 3249,
+    "y": 3605,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ELDER_CHAOS_DRUID_129",
+    "x": 3252,
+    "y": 3609,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ELDER_CHAOS_DRUID_129",
+    "x": 3248,
+    "y": 3608,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.POISON_SPIDER_64",
+    "x": 3272,
+    "y": 3818,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.RAT_1_2854",
+    "x": 3186,
+    "y": 3729,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.POISON_SPIDER_64",
+    "x": 3273,
+    "y": 3803,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.RAT_1_2854",
+    "x": 3185,
+    "y": 3725,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GHOST_19",
+    "x": 3093,
+    "y": 3700,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GHOST_19_86",
+    "x": 3090,
+    "y": 3687,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.POISON_SPIDER_64",
+    "x": 3279,
+    "y": 3826,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GHOST_19_87",
+    "x": 3094,
+    "y": 3704,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.POISON_SPIDER_64",
+    "x": 3285,
+    "y": 3787,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GHOST_19_90",
+    "x": 3099,
+    "y": 3701,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "x": 3104,
+    "y": 3676,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.POISON_SPIDER_64",
+    "x": 3288,
+    "y": 3787,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "x": 3109,
+    "y": 3663,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "moveDistance": 4,
+    "x": 3118,
+    "y": 3671
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "moveDistance": 4,
+    "x": 3111,
+    "y": 3674
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "moveDistance": 4,
+    "x": 3098,
+    "y": 3685
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "moveDistance": 4,
+    "x": 3119,
+    "y": 3703
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "moveDistance": 4,
+    "x": 3099,
+    "y": 3669
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "moveDistance": 4,
+    "x": 3107,
+    "y": 3704
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "moveDistance": 4,
+    "x": 3104,
+    "y": 3694
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "moveDistance": 4,
+    "x": 3107,
+    "y": 3684
+  },
+  {
+    "id": "NpcId.POISON_SPIDER_64",
+    "x": 3276,
+    "y": 3794,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GHOST_19_92",
+    "x": 3115,
+    "y": 3685,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.POISON_SPIDER_64",
+    "x": 3283,
+    "y": 3826,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "x": 3119,
+    "y": 3682,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.POISON_SPIDER_64",
+    "x": 3288,
+    "y": 3785,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "x": 3127,
+    "y": 3656,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.GRIZZLY_BEAR_21",
+    "x": 3117,
+    "y": 3693,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.POISON_SPIDER_64",
+    "x": 3282,
+    "y": 3806,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_15",
+    "x": 3275,
+    "y": 3930,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_15",
+    "x": 3276,
+    "y": 3933,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_135",
+    "x": 3276,
+    "y": 3940,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_15",
+    "x": 3279,
+    "y": 3925,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.POISON_SPIDER_64",
+    "x": 3293,
+    "y": 3783,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_135",
+    "x": 3279,
+    "y": 3942,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.POISON_SPIDER_64",
+    "x": 3308,
+    "y": 3784,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_15",
+    "x": 3284,
+    "y": 3933,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_15",
+    "x": 3285,
+    "y": 3932,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.POISON_SPIDER_64",
+    "x": 3302,
+    "y": 3776,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_135",
+    "x": 3286,
+    "y": 3946,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_15",
+    "x": 3287,
+    "y": 3935,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_15",
+    "x": 3284,
+    "y": 3938,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_135",
+    "x": 3284,
+    "y": 3943,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_15",
+    "x": 3286,
+    "y": 3928,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_135",
+    "x": 3290,
+    "y": 3944,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_135",
+    "x": 3291,
+    "y": 3937,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_15",
+    "x": 3288,
+    "y": 3930,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_15",
+    "x": 3290,
+    "y": 3922,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_135",
+    "x": 3296,
+    "y": 3941,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ROGUE_135",
+    "x": 3296,
+    "y": 3941,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.POISON_SPIDER_64",
+    "x": 3328,
+    "y": 3785,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "x": 3065,
+    "y": 3532,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22_73",
+    "x": 3067,
+    "y": 3533,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25",
+    "x": 3078,
+    "y": 3554,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22_71",
+    "x": 3092,
+    "y": 3553,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_78",
+    "x": 3102,
+    "y": 3576,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_79",
+    "x": 3101,
+    "y": 3570,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_80",
+    "x": 3097,
+    "y": 3566,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22_72",
+    "x": 3104,
+    "y": 3554,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25_81",
+    "x": 3111,
+    "y": 3568,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_25",
+    "x": 3107,
+    "y": 3570,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.SKELETON_22_73",
+    "x": 3101,
+    "y": 3529,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ICE_SPIDER_61",
+    "x": 2959,
+    "y": 3921,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ICE_SPIDER_61",
+    "x": 2966,
+    "y": 3917,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ICE_SPIDER_61",
+    "x": 2968,
+    "y": 3923,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ICE_SPIDER_61",
+    "x": 2971,
+    "y": 3935,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ICE_SPIDER_61",
+    "x": 2955,
+    "y": 3933,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ICE_SPIDER_61",
+    "x": 2963,
+    "y": 3932,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ICE_SPIDER_61",
+    "x": 2960,
+    "y": 3926,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ICE_GIANT_53_2087",
+    "x": 2946,
+    "y": 3896,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ICE_GIANT_53",
+    "x": 2953,
+    "y": 3900,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ICE_GIANT_53",
+    "x": 2951,
+    "y": 3891,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ICE_GIANT_53_2086",
+    "x": 2956,
+    "y": 3893,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.ICE_GIANT_53_2087",
+    "x": 2960,
+    "y": 3899,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3096,
+    "y": 3747,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3101,
+    "y": 3752,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3099,
+    "y": 3759,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3103,
+    "y": 3773,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3097,
+    "y": 3774,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3108,
+    "y": 3765,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3089,
+    "y": 3757,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3092,
+    "y": 3758,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3086,
+    "y": 3756,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3082,
+    "y": 3752,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3080,
+    "y": 3749,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3083,
+    "y": 3756,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3084,
+    "y": 3760,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3083,
+    "y": 3761,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3088,
+    "y": 3764,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3091,
+    "y": 3767,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3082,
+    "y": 3764,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3077,
+    "y": 3762,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3074,
+    "y": 3761,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3076,
+    "y": 3767,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3082,
+    "y": 3769,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3088,
+    "y": 3772,
+    "moveDistance": 4
+  },
+  {
+    "id": "NpcId.AHRIM_THE_BLIGHTED_98",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2962,
+    "y": 3754
+  },
+  {
+    "id": "NpcId.DHAROK_THE_WRETCHED_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2970,
+    "y": 3754
+  },
+  {
+    "id": "NpcId.GUTHAN_THE_INFESTED_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2978,
+    "y": 3754
+  },
+  {
+    "id": "NpcId.KARIL_THE_TAINTED_98",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2984,
+    "y": 3754
+  },
+  {
+    "id": "NpcId.TORAG_THE_CORRUPTED_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2990,
+    "y": 3754
+  },
+  {
+    "id": "NpcId.VERAC_THE_DEFILED_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2990,
+    "y": 3747
+  },
+  {
+    "id": "NpcId.AHRIM_THE_BLIGHTED_98",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2984,
+    "y": 3747
+  },
+  {
+    "id": "NpcId.DHAROK_THE_WRETCHED_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2978,
+    "y": 3747
+  },
+  {
+    "id": "NpcId.GUTHAN_THE_INFESTED_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2970,
+    "y": 3747
+  },
+  {
+    "id": "NpcId.KARIL_THE_TAINTED_98",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2962,
+    "y": 3747
+  },
+  {
+    "id": "NpcId.TORAG_THE_CORRUPTED_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2970,
+    "y": 3741
+  },
+  {
+    "id": "NpcId.VERAC_THE_DEFILED_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2978,
+    "y": 3741
+  },
+  {
+    "id": "NpcId.VERAC_THE_DEFILED_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2962,
+    "y": 3760
+  },
+  {
+    "id": "NpcId.AHRIM_THE_BLIGHTED_98",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2990,
+    "y": 3760
+  },
+  {
+    "id": "NpcId.KARIL_THE_TAINTED_98",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2984,
+    "y": 3741
+  },
+  {
+    "id": "NpcId.GUTHAN_THE_INFESTED_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2990,
+    "y": 3741
+  },
+  {
+    "id": "NpcId.DHAROK_THE_WRETCHED_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2984,
+    "y": 3760
+  },
+  {
+    "id": "NpcId.TORAG_THE_CORRUPTED_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2970,
+    "y": 3760
+  },
+  {
+    "id": "NpcId.CURSED_HYDRA_400_16012",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3355,
+    "y": 3917
+  },
+  {
+    "id": "NpcId.CURSED_HYDRA_400_16012",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3365,
+    "y": 3916
+  },
+  {
+    "id": "NpcId.CURSED_HYDRA_400_16012",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3346,
+    "y": 3924
+  },
+  {
+    "id": "NpcId.CURSED_HYDRA_400_16012",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3341,
+    "y": 3932
+  },
+  {
+    "id": "NpcId.CURSED_HYDRA_400_16012",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3350,
+    "y": 3939
+  },
+  {
+    "id": "NpcId.CURSED_HYDRA_400_16012",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3348,
+    "y": 3952
+  },
+  {
+    "id": "NpcId.CURSED_HYDRA_400_16012",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3368,
+    "y": 3951
+  },
+  {
+    "id": "NpcId.CURSED_HYDRA_400_16012",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3376,
+    "y": 3956
+  },
+  {
+    "id": "NpcId.CURSED_HYDRA_400_16012",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3381,
+    "y": 3945
+  },
+  {
+    "id": "NpcId.CURSED_HYDRA_400_16012",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3385,
+    "y": 3933
+  },
+  {
+    "id": "NpcId.CURSED_HYDRA_400_16012",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3379,
+    "y": 3924
+  },
+  {
+    "id": "NpcId.CURSED_HYDRA_400_16012",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3374,
+    "y": 3912
+  },
+  {
+    "id": "NpcId.CURSED_KRAKEN_127_16013",
+    "direction": 1,
+    "x": 3352,
+    "y": 3875
+  },
+  {
+    "id": "NpcId.CURSED_KRAKEN_127_16013",
+    "direction": 1,
+    "x": 3350,
+    "y": 3879
+  },
+  {
+    "id": "NpcId.CURSED_KRAKEN_127_16013",
+    "direction": 1,
+    "x": 3351,
+    "y": 3889
+  },
+  {
+    "id": "NpcId.CURSED_KRAKEN_127_16013",
+    "direction": 1,
+    "x": 3351,
+    "y": 3898
+  },
+  {
+    "id": "NpcId.CURSED_KRAKEN_127_16013",
+    "direction": 1,
+    "x": 3352,
+    "y": 3869
+  },
+  {
+    "id": "NpcId.CURSED_KRAKEN_127_16013",
+    "direction": 1,
+    "x": 3360,
+    "y": 3869
+  },
+  {
+    "id": "NpcId.CURSED_KRAKEN_127_16013",
+    "direction": 1,
+    "x": 3366,
+    "y": 3870
+  },
+  {
+    "id": "NpcId.CURSED_KRAKEN_127_16013",
+    "direction": 1,
+    "x": 3375,
+    "y": 3871
+  },
+  {
+    "id": "NpcId.CURSED_KRAKEN_127_16013",
+    "direction": 1,
+    "x": 3381,
+    "y": 3887
+  },
+  {
+    "id": "NpcId.CURSED_KRAKEN_127_16013",
+    "direction": 1,
+    "x": 3385,
+    "y": 3874
+  },
+  {
+    "id": "NpcId.CURSED_KRAKEN_127_16013",
+    "direction": 1,
+    "x": 3385,
+    "y": 3897
+  },
+  {
+    "id": "NpcId.CURSED_KRAKEN_127_16013",
+    "direction": 1,
+    "x": 3388,
+    "y": 3891
+  },
+  {
+    "id": "NpcId.DEMONIC_GORILLA_275",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2951,
+    "y": 3909
+  },
+  {
+    "id": "NpcId.DEMONIC_GORILLA_275",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2946,
+    "y": 3920
+  },
+  {
+    "id": "NpcId.DEMONIC_GORILLA_275",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2950,
+    "y": 3932
+  },
+  {
+    "id": "NpcId.DEMONIC_GORILLA_275",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2955,
+    "y": 3943
+  },
+  {
+    "id": "NpcId.DEMONIC_GORILLA_275",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2960,
+    "y": 3916
+  },
+  {
+    "id": "NpcId.DEMONIC_GORILLA_275",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2969,
+    "y": 3946
+  },
+  {
+    "id": "NpcId.DEMONIC_GORILLA_275",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2978,
+    "y": 3952
+  },
+  {
+    "id": "NpcId.DEMONIC_GORILLA_275",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2983,
+    "y": 3940
+  },
+  {
+    "id": "NpcId.DEMONIC_GORILLA_275",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2984,
+    "y": 3961
+  },
+  {
+    "id": "NpcId.DEMONIC_GORILLA_275",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2975,
+    "y": 3924
+  },
+  {
+    "id": "NpcId.DEMONIC_GORILLA_275",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2970,
+    "y": 3915
+  },
+  {
+    "id": "NpcId.DEMONIC_GORILLA_275",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2975,
+    "y": 3907
+  },
+  {
+    "id": "NpcId.WYRM_99",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2979,
+    "y": 3608
+  },
+  {
+    "id": "NpcId.WYRM_99",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2970,
+    "y": 3610
+  },
+  {
+    "id": "NpcId.WYRM_99",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2972,
+    "y": 3618
+  },
+  {
+    "id": "NpcId.WYRM_99",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2986,
+    "y": 3613
+  },
+  {
+    "id": "NpcId.WYRM_99",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2981,
+    "y": 3619
+  },
+  {
+    "id": "NpcId.WYRM_99",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2976,
+    "y": 3613
+  },
+  {
+    "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
+    "direction": 1,
+    "x": 3029,
+    "y": 3907
+  },
+  {
+    "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
+    "direction": 1,
+    "x": 3031,
+    "y": 3913
+  },
+  {
+    "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
+    "direction": 1,
+    "x": 3039,
+    "y": 3909
+  },
+  {
+    "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
+    "direction": 1,
+    "x": 3047,
+    "y": 3906
+  },
+  {
+    "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
+    "direction": 1,
+    "x": 3053,
+    "y": 3910
+  },
+  {
+    "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
+    "direction": 1,
+    "x": 3054,
+    "y": 3917
+  },
+  {
+    "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
+    "direction": 1,
+    "x": 3044,
+    "y": 3917
+  },
+  {
+    "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
+    "direction": 1,
+    "x": 3046,
+    "y": 3911
+  },
+  {
+    "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
+    "direction": 1,
+    "x": 3037,
+    "y": 3916
+  },
+  {
+    "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
+    "direction": 1,
+    "x": 3061,
+    "y": 3918
+  },
+  {
+    "id": "NpcId.CURSED_CAVE_HORROR_206_16005",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2967,
+    "y": 3688
+  },
+  {
+    "id": "NpcId.CURSED_CAVE_HORROR_206_16005",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2974,
+    "y": 3690
+  },
+  {
+    "id": "NpcId.CURSED_CAVE_HORROR_206_16005",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2968,
+    "y": 3695
+  },
+  {
+    "id": "NpcId.CURSED_CAVE_HORROR_206_16005",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2958,
+    "y": 3694
+  },
+  {
+    "id": "NpcId.CURSED_CAVE_HORROR_206_16005",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2980,
+    "y": 3685
+  },
+  {
+    "id": "NpcId.CURSED_CAVE_HORROR_206_16005",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2986,
+    "y": 3692
+  },
+  {
+    "id": "NpcId.CURSED_CAVE_HORROR_206_16005",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2959,
+    "y": 3703
+  },
+  {
+    "id": "NpcId.CURSED_CAVE_HORROR_206_16005",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2990,
+    "y": 3700
+  },
+  {
+    "id": "NpcId.CURSED_CAVE_HORROR_206_16005",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2987,
+    "y": 3684
+  },
+  {
+    "id": "NpcId.CURSED_CAVE_HORROR_206_16005",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2970,
+    "y": 3681
+  },
+  {
+    "id": "NpcId.CURSED_CAVE_HORROR_206_16005",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2978,
+    "y": 3697
+  },
+  {
+    "id": "NpcId.CURSED_CAVE_HORROR_206_16005",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2952,
+    "y": 3698
+  },
+  {
+    "id": "NpcId.CURSED_LIZARDMAN_SHAMAN_150_16015",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3095,
+    "y": 3612
+  },
+  {
+    "id": "NpcId.CURSED_LIZARDMAN_SHAMAN_150_16015",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3103,
+    "y": 3613
+  },
+  {
+    "id": "NpcId.CURSED_LIZARDMAN_SHAMAN_150_16015",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3111,
+    "y": 3619
+  },
+  {
+    "id": "NpcId.CURSED_LIZARDMAN_SHAMAN_150_16015",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3110,
+    "y": 3626
+  },
+  {
+    "id": "NpcId.CURSED_LIZARDMAN_SHAMAN_150_16015",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3103,
+    "y": 3631
+  },
+  {
+    "id": "NpcId.CURSED_LIZARDMAN_SHAMAN_150_16015",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3091,
+    "y": 3630
+  },
+  {
+    "id": "NpcId.CURSED_LIZARDMAN_SHAMAN_150_16015",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3089,
+    "y": 3621
+  },
+  {
+    "id": "NpcId.CURSED_LIZARDMAN_SHAMAN_150_16015",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3097,
+    "y": 3619
+  },
+  {
+    "id": "NpcId.CURSED_LIZARDMAN_SHAMAN_150_16015",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3103,
+    "y": 3622
+  },
+  {
+    "id": "NpcId.CURSED_LIZARDMAN_SHAMAN_150_16015",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3096,
+    "y": 3634
+  },
+  {
+    "id": "NpcId.CURSED_SMOKE_DEVIL_280_16006",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3217,
+    "y": 3953
+  },
+  {
+    "id": "NpcId.CURSED_SMOKE_DEVIL_280_16006",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3221,
+    "y": 3959
+  },
+  {
+    "id": "NpcId.CURSED_SMOKE_DEVIL_280_16006",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3229,
+    "y": 3957
+  },
+  {
+    "id": "NpcId.CURSED_SMOKE_DEVIL_280_16006",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3234,
+    "y": 3961
+  },
+  {
+    "id": "NpcId.CURSED_SMOKE_DEVIL_280_16006",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3242,
+    "y": 3956
+  },
+  {
+    "id": "NpcId.CURSED_SMOKE_DEVIL_280_16006",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3245,
+    "y": 3962
+  },
+  {
+    "id": "NpcId.CURSED_SMOKE_DEVIL_280_16006",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3251,
+    "y": 3960
+  },
+  {
+    "id": "NpcId.CURSED_SMOKE_DEVIL_280_16006",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3257,
+    "y": 3963
+  },
+  {
+    "id": "NpcId.CURSED_SMOKE_DEVIL_280_16006",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3234,
+    "y": 3955
+  },
+  {
+    "id": "NpcId.CURSED_SMOKE_DEVIL_280_16006",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3214,
+    "y": 3961
+  },
+  {
+    "id": "NpcId.CURSED_SMOKE_DEVIL_280_16006",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3225,
+    "y": 3963
+  },
+  {
+    "id": "NpcId.CURSED_SMOKE_DEVIL_280_16006",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3239,
+    "y": 3963
+  },
+  {
+    "id": "NpcId.CURSED_HELLHOUND_260_16000",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3098,
+    "y": 3844
+  },
+  {
+    "id": "NpcId.CURSED_HELLHOUND_260_16000",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3086,
+    "y": 3838
+  },
+  {
+    "id": "NpcId.CURSED_HELLHOUND_260_16000",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3095,
+    "y": 3837
+  },
+  {
+    "id": "NpcId.CURSED_HELLHOUND_260_16000",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3103,
+    "y": 3836
+  },
+  {
+    "id": "NpcId.CURSED_HELLHOUND_260_16000",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3109,
+    "y": 3833
+  },
+  {
+    "id": "NpcId.CURSED_HELLHOUND_260_16000",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3111,
+    "y": 3840
+  },
+  {
+    "id": "NpcId.CURSED_HELLHOUND_260_16000",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3087,
+    "y": 3826
+  },
+  {
+    "id": "NpcId.CURSED_HELLHOUND_260_16000",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3085,
+    "y": 3832
+  },
+  {
+    "id": "NpcId.CURSED_HELLHOUND_260_16000",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3092,
+    "y": 3831
+  },
+  {
+    "id": "NpcId.CURSED_HELLHOUND_260_16000",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3110,
+    "y": 3847
+  },
+  {
+    "id": "NpcId.CURSED_HELLHOUND_260_16000",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3116,
+    "y": 3854
+  },
+  {
+    "id": "NpcId.CURSED_HELLHOUND_260_16000",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3109,
+    "y": 3853
+  },
+  {
+    "id": "NpcId.CURSED_GARGOYLE_349_16007",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3146,
+    "y": 3723
+  },
+  {
+    "id": "NpcId.CURSED_GARGOYLE_349_16007",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3161,
+    "y": 3724
+  },
+  {
+    "id": "NpcId.CURSED_GARGOYLE_349_16007",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3169,
+    "y": 3726
+  },
+  {
+    "id": "NpcId.CURSED_GARGOYLE_349_16007",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3174,
+    "y": 3723
+  },
+  {
+    "id": "NpcId.CURSED_GARGOYLE_349_16007",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3173,
+    "y": 3734
+  },
+  {
+    "id": "NpcId.CURSED_GARGOYLE_349_16007",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3161,
+    "y": 3742
+  },
+  {
+    "id": "NpcId.CURSED_GARGOYLE_349_16007",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3155,
+    "y": 3731
+  },
+  {
+    "id": "NpcId.CURSED_GARGOYLE_349_16007",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3149,
+    "y": 3734
+  },
+  {
+    "id": "NpcId.CURSED_GARGOYLE_349_16007",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3147,
+    "y": 3743
+  },
+  {
+    "id": "NpcId.CURSED_GARGOYLE_349_16007",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3177,
+    "y": 3731
+  },
+  {
+    "id": "NpcId.CURSED_GARGOYLE_349_16007",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3180,
+    "y": 3743
+  },
+  {
+    "id": "NpcId.CURSED_GARGOYLE_349_16007",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3169,
+    "y": 3742
+  },
+  {
+    "id": "NpcId.CURSED_ABYSSAL_DEMON_342_16010",
+    "moveDistance": 4,
+    "x": 3274,
+    "y": 3664
+  },
+  {
+    "id": "NpcId.CURSED_ABYSSAL_DEMON_342_16010",
+    "moveDistance": 4,
+    "x": 3271,
+    "y": 3659
+  },
+  {
+    "id": "NpcId.CURSED_ABYSSAL_DEMON_342_16010",
+    "moveDistance": 4,
+    "x": 3276,
+    "y": 3659
+  },
+  {
+    "id": "NpcId.CURSED_ABYSSAL_DEMON_342_16010",
+    "moveDistance": 4,
+    "x": 3279,
+    "y": 3652
+  },
+  {
+    "id": "NpcId.CURSED_ABYSSAL_DEMON_342_16010",
+    "moveDistance": 4,
+    "x": 3271,
+    "y": 3652
+  },
+  {
+    "id": "NpcId.CURSED_ABYSSAL_DEMON_342_16010",
+    "moveDistance": 4,
+    "x": 3284,
+    "y": 3662
+  },
+  {
+    "id": "NpcId.CURSED_ABYSSAL_DEMON_342_16010",
+    "moveDistance": 4,
+    "x": 3283,
+    "y": 3668
+  },
+  {
+    "id": "NpcId.CURSED_ABYSSAL_DEMON_342_16010",
+    "moveDistance": 4,
+    "x": 3279,
+    "y": 3673
+  },
+  {
+    "id": "NpcId.CURSED_ABYSSAL_DEMON_342_16010",
+    "moveDistance": 4,
+    "x": 3274,
+    "y": 3648
+  },
+  {
+    "id": "NpcId.CURSED_ABYSSAL_DEMON_342_16010",
+    "moveDistance": 4,
+    "x": 3268,
+    "y": 3664
+  },
+  {
+    "id": "NpcId.CURSED_ABYSSAL_DEMON_342_16010",
+    "moveDistance": 4,
+    "x": 3284,
+    "y": 3675
+  },
+  {
+    "id": "NpcId.CURSED_ABYSSAL_DEMON_342_16010",
+    "moveDistance": 4,
+    "x": 3267,
+    "y": 3655
+  },
+  {
+    "id": "NpcId.CURSED_WYVERN_210_16011",
+    "moveDistance": 4,
+    "x": 2948,
+    "y": 3843
+  },
+  {
+    "id": "NpcId.CURSED_WYVERN_210_16011",
+    "moveDistance": 4,
+    "x": 2957,
+    "y": 3846
+  },
+  {
+    "id": "NpcId.CURSED_WYVERN_210_16011",
+    "moveDistance": 4,
+    "x": 2958,
+    "y": 3855
+  },
+  {
+    "id": "NpcId.CURSED_WYVERN_210_16011",
+    "moveDistance": 4,
+    "x": 2945,
+    "y": 3857
+  },
+  {
+    "id": "NpcId.CURSED_WYVERN_210_16011",
+    "moveDistance": 4,
+    "x": 2952,
+    "y": 3860
+  },
+  {
+    "id": "NpcId.CURSED_WYVERN_210_16011",
+    "moveDistance": 4,
+    "x": 2958,
+    "y": 3867
+  },
+  {
+    "id": "NpcId.CURSED_WYVERN_210_16011",
+    "moveDistance": 4,
+    "x": 2946,
+    "y": 3870
+  },
+  {
+    "id": "NpcId.CURSED_WYVERN_210_16011",
+    "moveDistance": 4,
+    "x": 2951,
+    "y": 3876
+  },
+  {
+    "id": "NpcId.CURSED_WYVERN_210_16011",
+    "moveDistance": 4,
+    "x": 2960,
+    "y": 3875
+  },
+  {
+    "id": "NpcId.CURSED_WYVERN_210_16011",
+    "moveDistance": 4,
+    "x": 2966,
+    "y": 3881
+  },
+  {
+    "id": "NpcId.CURSED_WYVERN_210_16011",
+    "moveDistance": 4,
+    "x": 2949,
+    "y": 3884
+  },
+  {
+    "id": "NpcId.CURSED_WYVERN_210_16011",
+    "moveDistance": 4,
+    "x": 2958,
+    "y": 3884
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "moveDistance": 4,
+    "x": 3050,
+    "y": 3835
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "moveDistance": 4,
+    "x": 3057,
+    "y": 3839
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "moveDistance": 4,
+    "x": 3064,
+    "y": 3837
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "moveDistance": 4,
+    "x": 3056,
+    "y": 3849
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "moveDistance": 4,
+    "x": 3063,
+    "y": 3847
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "moveDistance": 4,
+    "x": 3069,
+    "y": 3849
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "moveDistance": 4,
+    "x": 3075,
+    "y": 3842
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "moveDistance": 4,
+    "x": 3081,
+    "y": 3846
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "moveDistance": 4,
+    "x": 3070,
+    "y": 3828
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "moveDistance": 4,
+    "x": 3076,
+    "y": 3825
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "moveDistance": 4,
+    "x": 3076,
+    "y": 3833
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "moveDistance": 4,
+    "x": 3048,
+    "y": 3829
+  }
+]

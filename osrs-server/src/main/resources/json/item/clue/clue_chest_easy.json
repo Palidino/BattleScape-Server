@@ -1,0 +1,232 @@
+{
+  "Black heraldic kiteshield 1": [
+    [ "BLACK_SHIELD_H1" ]
+  ],
+  "Black heraldic kiteshield 2": [
+    [ "BLACK_SHIELD_H2" ]
+  ],
+  "Black heraldic kiteshield 3": [
+    [ "BLACK_SHIELD_H3" ]
+  ],
+  "Black heraldic kiteshield 4": [
+    [ "BLACK_SHIELD_H4" ]
+  ],
+  "Black heraldic kiteshield 5": [
+    [ "BLACK_SHIELD_H5" ]
+  ],
+  "Gold-trimmed studded leather": [
+    [ "STUDDED_BODY_G" ],
+    [ "STUDDED_CHAPS_G" ]
+  ],
+  "Trimmed studded leather": [
+    [ "STUDDED_BODY_T" ],
+    [ "STUDDED_CHAPS_T" ]
+  ],
+  "Blue wizard (gold)": [
+    [ "BLUE_WIZARD_ROBE_G" ],
+    [ "BLUE_WIZARD_HAT_G" ],
+    [ "BLUE_SKIRT_G" ]
+  ],
+  "Blue wizard (trim)": [
+    [ "BLUE_WIZARD_ROBE_T" ],
+    [ "BLUE_WIZARD_HAT_T" ],
+    [ "BLUE_SKIRT_T" ]
+  ],
+  "Trimmed black armour": [
+    [ "BLACK_PLATEBODY_T" ],
+    [ "BLACK_FULL_HELM_T" ],
+    [ "BLACK_PLATELEGS_T", "BLACK_PLATESKIRT_T" ],
+    [ "BLACK_KITESHIELD_T" ]
+  ],
+  "Gold-trimmed black armour": [
+    [ "BLACK_PLATEBODY_G" ],
+    [ "BLACK_FULL_HELM_G" ],
+    [ "BLACK_PLATELEGS_G", "BLACK_PLATESKIRT_G" ],
+    [ "BLACK_KITESHIELD_G" ]
+  ],
+  "Highwayman mask": [
+    [ "HIGHWAYMAN_MASK" ]
+  ],
+  "Blue beret": [
+    [ "BLUE_BERET" ]
+  ],
+  "Black beret": [
+    [ "BLACK_BERET" ]
+  ],
+  "White beret": [
+    [ "WHITE_BERET" ]
+  ],
+  "Black heraldic helm 1": [
+    [ "BLACK_HELM_H1" ]
+  ],
+  "Black heraldic helm 2": [
+    [ "BLACK_HELM_H2" ]
+  ],
+  "Black heraldic helm 3": [
+    [ "BLACK_HELM_H3" ]
+  ],
+  "Black heraldic helm 4": [
+    [ "BLACK_HELM_H4" ]
+  ],
+  "Black heraldic helm 5": [
+    [ "BLACK_HELM_H5" ]
+  ],
+  "Trimmed amulet of magic": [
+    [ "AMULET_OF_MAGIC_T" ]
+  ],
+  "Pantaloons": [
+    [ "PANTALOONS" ]
+  ],
+  "Wig": [
+    [ "A_POWDERED_WIG" ]
+  ],
+  "Flared trousers": [
+    [ "FLARED_TROUSERS" ]
+  ],
+  "Sleeping cap": [
+    [ "SLEEPING_CAP" ]
+  ],
+  "Bob the Cat shirt (red)": [
+    [ "BOBS_RED_SHIRT" ]
+  ],
+  "Bob the Cat shirt (blue)": [
+    [ "BOBS_BLUE_SHIRT" ]
+  ],
+  "Bob the Cat shirt (green)": [
+    [ "BOBS_GREEN_SHIRT" ]
+  ],
+  "Bob the Cat shirt (black)": [
+    [ "BOBS_BLACK_SHIRT" ]
+  ],
+  "Bob the Cat shirt (purple)": [
+    [ "BOBS_PURPLE_SHIRT" ]
+  ],
+  "Elegant clothing (red)": [
+    [ "RED_ELEGANT_SHIRT", "RED_ELEGANT_BLOUSE" ],
+    [ "RED_ELEGANT_LEGS", "RED_ELEGANT_SKIRT" ]
+  ],
+  "Elegant clothing (green)": [
+    [ "GREEN_ELEGANT_SHIRT", "GREEN_ELEGANT_BLOUSE" ],
+    [ "GREEN_ELEGANT_LEGS", "GREEN_ELEGANT_SKIRT" ]
+  ],
+  "Elegant clothing (blue)": [
+    [ "BLUE_ELEGANT_SHIRT", "BLUE_ELEGANT_BLOUSE" ],
+    [ "BLUE_ELEGANT_LEGS", "BLUE_ELEGANT_SKIRT" ]
+  ],
+  "Beret mask": [
+    [ "BERET_MASK" ]
+  ],
+  "Bronze armour (trim)": [
+    [ "BRONZE_PLATEBODY_T" ],
+    [ "BRONZE_FULL_HELM_T" ],
+    [ "BRONZE_PLATELEGS_T", "BRONZE_PLATESKIRT_T" ],
+    [ "BRONZE_KITESHIELD_T" ]
+  ],
+  "Bronze armour (gold)": [
+    [ "BRONZE_PLATEBODY_G" ],
+    [ "BRONZE_FULL_HELM_G" ],
+    [ "BRONZE_PLATELEGS_G", "BRONZE_PLATESKIRT_G" ],
+    [ "BRONZE_KITESHIELD_G" ]
+  ],
+  "Iron armour (trim)": [
+    [ "IRON_PLATEBODY_T" ],
+    [ "IRON_FULL_HELM_T" ],
+    [ "IRON_PLATELEGS_T", "IRON_PLATESKIRT_T" ],
+    [ "IRON_KITESHIELD_T" ]
+  ],
+  "Iron armour (gold)": [
+    [ "IRON_PLATEBODY_G" ],
+    [ "IRON_FULL_HELM_G" ],
+    [ "IRON_PLATELEGS_G", "IRON_PLATESKIRT_G" ],
+    [ "IRON_KITESHIELD_G" ]
+  ],
+  "Steel armour (trim)": [
+    [ "STEEL_PLATEBODY_T" ],
+    [ "STEEL_FULL_HELM_T" ],
+    [ "STEEL_PLATELEGS_T", "STEEL_PLATESKIRT_T" ],
+    [ "STEEL_KITESHIELD_T" ]
+  ],
+  "Steel armour (gold)": [
+    [ "STEEL_PLATEBODY_G" ],
+    [ "STEEL_FULL_HELM_G" ],
+    [ "STEEL_PLATELEGS_G", "STEEL_PLATESKIRT_G" ],
+    [ "STEEL_KITESHIELD_G" ]
+  ],
+  "Beanie hat": [
+    [ "BEANIE" ]
+  ],
+  "Red beret": [
+    [ "RED_BERET" ]
+  ],
+  "Imp mask": [
+    [ "IMP_MASK" ]
+  ],
+  "Goblin mask": [
+    [ "GOBLIN_MASK" ]
+  ],
+  "Black cane": [
+    [ "BLACK_CANE" ]
+  ],
+  "Black wizard (gold)": [
+    [ "BLACK_WIZARD_ROBE_G" ],
+    [ "BLACK_WIZARD_HAT_G" ],
+    [ "BLACK_SKIRT_G" ]
+  ],
+  "Black wizard (trim)": [
+    [ "BLACK_WIZARD_ROBE_T" ],
+    [ "BLACK_WIZARD_HAT_T" ],
+    [ "BLACK_SKIRT_T" ]
+  ],
+  "Large spade": [
+    [ "LARGE_SPADE" ]
+  ],
+  "Wooden shield (g)": [
+    [ "WOODEN_SHIELD_G" ]
+  ],
+  "Golden chef's hat": [
+    [ "GOLDEN_CHEFS_HAT" ]
+  ],
+  "Golden apron": [
+    [ "GOLDEN_APRON" ]
+  ],
+  "Monk robes (gold)": [
+    [ "MONKS_ROBE_TOP_G" ],
+    [ "MONKS_ROBE_G" ]
+  ],
+  "Cape of skulls": [
+    [ "CAPE_OF_SKULLS" ]
+  ],
+  "Amulet of power (t)": [
+    [ "AMULET_OF_POWER_T" ]
+  ],
+  "Rain bow": [
+    [ "RAIN_BOW" ]
+  ],
+  "Ham joint": [
+    [ "HAM_JOINT" ]
+  ],
+  "Leather body (g)": [
+    [ "LEATHER_BODY_G" ]
+  ],
+  "Leather chaps (g)": [
+    [ "LEATHER_CHAPS_G" ]
+  ],
+  "Staff of bob the cat": [
+    [ "STAFF_OF_BOB_THE_CAT" ]
+  ],
+  "Black heraldic platebody 1": [
+    [ "BLACK_PLATEBODY_H1" ]
+  ],
+  "Black heraldic platebody 2": [
+    [ "BLACK_PLATEBODY_H2" ]
+  ],
+  "Black heraldic platebody 3": [
+    [ "BLACK_PLATEBODY_H3" ]
+  ],
+  "Black heraldic platebody 4": [
+    [ "BLACK_PLATEBODY_H4" ]
+  ],
+  "Black heraldic platebody 5": [
+    [ "BLACK_PLATEBODY_H5" ]
+  ]
+}

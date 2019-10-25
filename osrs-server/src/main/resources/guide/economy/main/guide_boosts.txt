@@ -1,0 +1,40 @@
+Drop and Experience Boosts
+
+<col=800000>Active Modifiers</col>
+<col=004080>Voted:</col> %hasvoted%
+<col=004080>Wishing well:</col> %wellactive%
+<col=004080>Premium membership:</col> %isgoldmember%
+<col=004080>Ring of wealth (i):</col> %hasrowi%
+<col=004080>Hard mode:</col> %hardgamemode%
+<col=004080>Total drop rate boost:</col> %droprateboost%
+
+<col=800000>Drop Rate Modifiers</col>
+<col=004080>Voted:</col> 10%
+<col=004080>Wishing well:</col> 10%
+<col=004080>Premium membership:</col> 10%
+<col=004080>Ring of wealth (i):</col> 10%
+<col=004080>Hard mode:</col> 20%
+
+<col=800000>Experience</col>
+<col=004080>Voted:</col> 10%
+<col=004080>Wishing well:</col> 10%
+<col=004080>Premium membership:</col> 10%
+<col=004080>Appropriate outfit:</col> 10%
+<col=004080>Wilderness resource area:</col> 10%
+
+<col=800000>Skilling Success</col>
+<col=004080>Voted:</col> 5%
+<col=004080>Premium membership:</col> 5%
+<col=004080>Skilling outfit/gauntlets:</col> 10%
+<col=004080>Wilderness:</col> 10%
+<col=004080>Cooking:</col> cooking cape: 100%
+<col=004080>Fishing:</col> dragon/infernal harpoon: 20%, guild: +7 levels
+<col=004080>Mining:</col> guild: +7 levels
+<col=004080>Woodcutting:</col> guild: +7 levels
+<col=004080>Hunter:</col> magic butterfly net: 10%
+<col=004080>Thieving:</col> thieving cape: 10%, Ardougne cloak: 10%
+
+<col=800000>Boss Instances</col>
+<col=004080>Accuracy:</col> 12.5%
+<col=004080>Strength:</col> 2.5%
+<col=004080>Defence:</col> 2.5%

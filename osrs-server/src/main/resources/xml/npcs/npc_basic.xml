@@ -1,0 +1,260 @@
+<list>
+	<npcdef>
+		<!-- Ferret -->
+		<id>1505</id>
+		<basicScripts>
+			<string>hunterchinchompa</string>
+		</basicScripts>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Baby impling -->
+		<id>1635</id>
+		<noclip>true</noclip>
+		<basicScripts>
+			<string>hunterimpling</string>
+		</basicScripts>
+		<canBeBound>true</canBeBound>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Young impling -->
+		<id>1636</id>
+		<noclip>true</noclip>
+		<basicScripts>
+			<string>hunterimpling</string>
+		</basicScripts>
+		<canBeBound>true</canBeBound>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Gourmet impling -->
+		<id>1637</id>
+		<noclip>true</noclip>
+		<basicScripts>
+			<string>hunterimpling</string>
+		</basicScripts>
+		<canBeBound>true</canBeBound>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Earth impling -->
+		<id>1638</id>
+		<noclip>true</noclip>
+		<basicScripts>
+			<string>hunterimpling</string>
+		</basicScripts>
+		<canBeBound>true</canBeBound>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Essence impling -->
+		<id>1639</id>
+		<noclip>true</noclip>
+		<basicScripts>
+			<string>hunterimpling</string>
+		</basicScripts>
+		<canBeBound>true</canBeBound>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Eclectic impling -->
+		<id>1640</id>
+		<noclip>true</noclip>
+		<basicScripts>
+			<string>hunterimpling</string>
+		</basicScripts>
+		<canBeBound>true</canBeBound>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Nature impling -->
+		<id>1641</id>
+		<noclip>true</noclip>
+		<basicScripts>
+			<string>hunterimpling</string>
+		</basicScripts>
+		<canBeBound>true</canBeBound>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Magpie impling -->
+		<id>1642</id>
+		<noclip>true</noclip>
+		<basicScripts>
+			<string>hunterimpling</string>
+		</basicScripts>
+		<canBeBound>true</canBeBound>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Ninja impling -->
+		<id>1643</id>
+		<noclip>true</noclip>
+		<basicScripts>
+			<string>hunterimpling</string>
+		</basicScripts>
+		<canBeBound>true</canBeBound>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Dragon impling -->
+		<id>1644</id>
+		<noclip>true</noclip>
+		<basicScripts>
+			<string>hunterimpling</string>
+		</basicScripts>
+		<canBeBound>true</canBeBound>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Orange salamander -->
+		<id>2903</id>
+		<basicScripts>
+			<string>hunterlizard</string>
+		</basicScripts>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Red salamander -->
+		<id>2904</id>
+		<basicScripts>
+			<string>hunterlizard</string>
+		</basicScripts>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Black salamander -->
+		<id>2905</id>
+		<basicScripts>
+			<string>hunterlizard</string>
+		</basicScripts>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Swamp lizard -->
+		<id>2906</id>
+		<basicScripts>
+			<string>hunterlizard</string>
+		</basicScripts>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Chinchompa -->
+		<id>2910</id>
+		<basicScripts>
+			<string>hunterchinchompa</string>
+		</basicScripts>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Carnivorous chinchompa -->
+		<id>2911</id>
+		<basicScripts>
+			<string>hunterchinchompa</string>
+		</basicScripts>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Black chinchompa -->
+		<id>2912</id>
+		<basicScripts>
+			<string>hunterchinchompa</string>
+		</basicScripts>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Mine cart -->
+		<id>3610</id>
+		<basicScripts>
+			<string>minecart</string>
+		</basicScripts>
+	</npcdef>
+	<npcdef>
+		<!-- Tropical wagtail -->
+		<id>5548</id>
+		<basicScripts>
+			<string>hunterbird</string>
+		</basicScripts>
+		<deathAnimation>6780</deathAnimation>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Crimson swift -->
+		<id>5549</id>
+		<basicScripts>
+			<string>hunterbird</string>
+		</basicScripts>
+		<deathAnimation>6780</deathAnimation>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Cerulean twitch -->
+		<id>5550</id>
+		<basicScripts>
+			<string>hunterbird</string>
+		</basicScripts>
+		<deathAnimation>6780</deathAnimation>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Golden warbler -->
+		<id>5551</id>
+		<basicScripts>
+			<string>hunterbird</string>
+		</basicScripts>
+		<deathAnimation>6780</deathAnimation>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Copper longtail -->
+		<id>5552</id>
+		<basicScripts>
+			<string>hunterbird</string>
+		</basicScripts>
+		<deathAnimation>6780</deathAnimation>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Spawn (Lizardman Shaman) -->
+		<id>6768</id>
+		<basicScripts>
+			<string>lizardmanshamanspawn</string>
+		</basicScripts>
+		<deathAnimation>7159</deathAnimation>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Lucky impling -->
+		<id>7233</id>
+		<noclip>true</noclip>
+		<basicScripts>
+			<string>hunterimpling</string>
+		</basicScripts>
+		<canBeBound>true</canBeBound>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Fishing spot -->
+		<id>7730</id>
+		<basicScripts>
+			<string>minnow</string>
+		</basicScripts>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Fishing spot -->
+		<id>7731</id>
+		<basicScripts>
+			<string>minnow</string>
+		</basicScripts>
+		<canBeAttacked>false</canBeAttacked>
+	</npcdef>
+	<npcdef>
+		<!-- Spawn (Rune dragon) -->
+		<id>8032</id>
+		<basicScripts>
+			<string>runedragonspawn</string>
+		</basicScripts>
+	</npcdef>
+</list>

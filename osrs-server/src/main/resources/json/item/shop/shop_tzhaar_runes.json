@@ -1,0 +1,21 @@
+{
+  "currency": 6529,
+  "name": "TzHaar-Mej-Roh's Rune Store",
+  "items": [
+    { "id": "ItemId.FIRE_RUNE", "price": 6 },
+    { "id": "ItemId.WATER_RUNE", "price": 6 },
+    { "id": "ItemId.AIR_RUNE", "price": 6 },
+    { "id": "ItemId.EARTH_RUNE", "price": 6 },
+    { "id": "ItemId.MIND_RUNE", "price": 4 },
+    {
+      "id": "ItemId.CHAOS_RUNE",
+      "price": 135,
+      "buyPrice": 9
+    },
+    {
+      "id": "ItemId.DEATH_RUNE",
+      "price": 270,
+      "buyPrice": 18
+    }
+  ]
+}

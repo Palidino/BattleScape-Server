@@ -1,0 +1,18 @@
+{
+  "currency": 13204,
+  "name": "Platinum Shop",
+  "items": [
+    {
+      "id": "ItemId.PLATINUM_TOKEN",
+      "price": 1000,
+      "buyPrice": 1000
+    },
+    { "id": "ItemId.SANTA_HAT", "price": 1000000 },
+    { "id": "ItemId.PURPLE_PARTYHAT", "price": 6000000 },
+    { "id": "ItemId.YELLOW_PARTYHAT", "price": 6500000 },
+    { "id": "ItemId.GREEN_PARTYHAT", "price": 7000000 },
+    { "id": "ItemId.RED_PARTYHAT", "price": 8000000 },
+    { "id": "ItemId.WHITE_PARTYHAT", "price": 11000000 },
+    { "id": "ItemId.BLUE_PARTYHAT", "price": 15000000 }
+  ]
+}

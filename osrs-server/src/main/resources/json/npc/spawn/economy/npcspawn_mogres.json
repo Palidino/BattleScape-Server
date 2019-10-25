@@ -1,0 +1,65 @@
+[
+  {
+    "id": "NpcId.MOGRE_60",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2515,
+    "y": 9291
+  },
+  {
+    "id": "NpcId.MOGRE_60",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2514,
+    "y": 9297
+  },
+  {
+    "id": "NpcId.MOGRE_60",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2515,
+    "y": 9302
+  },
+  {
+    "id": "NpcId.MOGRE_60",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2521,
+    "y": 9290
+  },
+  {
+    "id": "NpcId.MOGRE_60",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2520,
+    "y": 9296
+  },
+  {
+    "id": "NpcId.MOGRE_60",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2521,
+    "y": 9302
+  },
+  {
+    "id": "NpcId.MOGRE_60",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2526,
+    "y": 9300
+  },
+  {
+    "id": "NpcId.MOGRE_60",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2525,
+    "y": 9291
+  },
+  {
+    "id": "NpcId.MOGRE_60",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2525,
+    "y": 9295
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "name": "Culinaromancer Shop",
+  "items": [
+    { "id": "ItemId.HARDLEATHER_GLOVES", "price": 65 },
+    { "id": "ItemId.BRONZE_GLOVES", "price": 130 },
+    { "id": "ItemId.IRON_GLOVES", "price": 325 },
+    { "id": "ItemId.STEEL_GLOVES", "price": 650 },
+    { "id": "ItemId.BLACK_GLOVES", "price": 1300 },
+    { "id": "ItemId.MITHRIL_GLOVES", "price": 1950 }
+  ]
+}

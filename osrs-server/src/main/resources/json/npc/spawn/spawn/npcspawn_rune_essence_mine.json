@@ -1,0 +1,14 @@
+[
+  {
+    "id": "NpcId.BANKER",
+    "direction": 4,
+    "x": 2907,
+    "y": 4835
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 1,
+    "x": 2914,
+    "y": 4831
+  }
+]

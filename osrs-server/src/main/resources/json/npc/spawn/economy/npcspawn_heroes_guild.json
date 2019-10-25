@@ -1,0 +1,56 @@
+[
+  {
+    "id": "NpcId.BLUE_DRAGON_111",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2908,
+    "y": 9904
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2894,
+    "y": 9911
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2889,
+    "y": 9907
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2936,
+    "y": 9896
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2936,
+    "y": 9890
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2931,
+    "y": 9887
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 3,
+    "x": 2940,
+    "y": 9894
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 1,
+    "x": 2924,
+    "y": 9917
+  }
+]

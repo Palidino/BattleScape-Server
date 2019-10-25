@@ -1,0 +1,359 @@
+[
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3277,
+    "y": 9512
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3273,
+    "y": 9514
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3274,
+    "y": 9520
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3278,
+    "y": 9523
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3282,
+    "y": 9527
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3282,
+    "y": 9522
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3278,
+    "y": 9518
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3282,
+    "y": 9516
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3318,
+    "y": 9496
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3322,
+    "y": 9494
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3325,
+    "y": 9497
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3328,
+    "y": 9500
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3330,
+    "y": 9505
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3325,
+    "y": 9508
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3321,
+    "y": 9509
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3319,
+    "y": 9504
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3321,
+    "y": 9499
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3325,
+    "y": 9504
+  },
+  {
+    "id": "NpcId.KALPHITE_GUARDIAN_141",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3269,
+    "y": 9483
+  },
+  {
+    "id": "NpcId.KALPHITE_GUARDIAN_141",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3277,
+    "y": 9479
+  },
+  {
+    "id": "NpcId.KALPHITE_GUARDIAN_141",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3285,
+    "y": 9481
+  },
+  {
+    "id": "NpcId.KALPHITE_GUARDIAN_141",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3279,
+    "y": 9486
+  },
+  {
+    "id": "NpcId.KALPHITE_GUARDIAN_141",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3277,
+    "y": 9492
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3307,
+    "y": 9518
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3306,
+    "y": 9522
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3303,
+    "y": 9526
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3300,
+    "y": 9530
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3301,
+    "y": 9537
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3307,
+    "y": 9537
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3312,
+    "y": 9533
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3314,
+    "y": 9528
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3317,
+    "y": 9524
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3312,
+    "y": 9520
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3310,
+    "y": 9526
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3306,
+    "y": 9532
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3311,
+    "y": 9481
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3317,
+    "y": 9477
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3317,
+    "y": 9484
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3324,
+    "y": 9486
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3323,
+    "y": 9478
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3330,
+    "y": 9484
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3332,
+    "y": 9490
+  },
+  {
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3337,
+    "y": 9495
+  },
+  {
+    "id": "NpcId.KALPHITE_LARVA",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3297,
+    "y": 9494
+  },
+  {
+    "id": "NpcId.KALPHITE_LARVA",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3294,
+    "y": 9497
+  },
+  {
+    "id": "NpcId.KALPHITE_LARVA",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3294,
+    "y": 9502
+  },
+  {
+    "id": "NpcId.KALPHITE_LARVA",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3300,
+    "y": 9503
+  },
+  {
+    "id": "NpcId.KALPHITE_LARVA",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3301,
+    "y": 9499
+  },
+  {
+    "id": "NpcId.KALPHITE_LARVA",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3300,
+    "y": 9494
+  },
+  {
+    "id": "NpcId.KALPHITE_LARVA",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3296,
+    "y": 9507
+  },
+  {
+    "id": "NpcId.KALPHITE_LARVA",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3300,
+    "y": 9510
+  }
+]

@@ -1,0 +1,373 @@
+[
+  {
+    "id": "NpcId.BOULDER_6621",
+    "direction": 1,
+    "x": 3053,
+    "y": 10165,
+    "height": 3
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_120",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3022,
+    "y": 10126
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_120",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3020,
+    "y": 10121
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_120",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3026,
+    "y": 10117
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_120",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3032,
+    "y": 10123
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_120",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3026,
+    "y": 10124
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_120",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3030,
+    "y": 10129
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_120",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3027,
+    "y": 10134
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_121",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3059,
+    "y": 10120
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_121",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3062,
+    "y": 10124
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_121",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3054,
+    "y": 10124
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_121",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3051,
+    "y": 10128
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_121",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3058,
+    "y": 10128
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_121",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3052,
+    "y": 10134
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_121",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3047,
+    "y": 10122
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_121_3161",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3042,
+    "y": 10147
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_121_3161",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3041,
+    "y": 10142
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_121_3161",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3045,
+    "y": 10140
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_121_3161",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3049,
+    "y": 10144
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_121_3161",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3035,
+    "y": 10144
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_121_3161",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3039,
+    "y": 10136
+  },
+  {
+    "id": "NpcId.SPIRITUAL_MAGE_121_3161",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3038,
+    "y": 10151
+  },
+  {
+    "id": "NpcId.SARADOMIN_PRIEST_113",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3026,
+    "y": 10130
+  },
+  {
+    "id": "NpcId.KNIGHT_OF_SARADOMIN_103",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3031,
+    "y": 10126
+  },
+  {
+    "id": "NpcId.SARADOMIN_PRIEST_113",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3036,
+    "y": 10125
+  },
+  {
+    "id": "NpcId.KNIGHT_OF_SARADOMIN_103",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3037,
+    "y": 10130
+  },
+  {
+    "id": "NpcId.SARADOMIN_PRIEST_113",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3033,
+    "y": 10132
+  },
+  {
+    "id": "NpcId.KNIGHT_OF_SARADOMIN_103",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3023,
+    "y": 10119
+  },
+  {
+    "id": "NpcId.HELLHOUND_127",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3050,
+    "y": 10141
+  },
+  {
+    "id": "NpcId.WEREWOLF_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3043,
+    "y": 10134
+  },
+  {
+    "id": "NpcId.GORAK_149",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3036,
+    "y": 10139
+  },
+  {
+    "id": "NpcId.IMP_7",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3037,
+    "y": 10147
+  },
+  {
+    "id": "NpcId.WEREWOLF_93",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3046,
+    "y": 10148
+  },
+  {
+    "id": "NpcId.IMP_7",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3055,
+    "y": 10137
+  },
+  {
+    "id": "NpcId.CYCLOPS_81",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3042,
+    "y": 10124
+  },
+  {
+    "id": "NpcId.ORK_107",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3043,
+    "y": 10130
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_47",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3047,
+    "y": 10132
+  },
+  {
+    "id": "NpcId.JOGRE_58",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3047,
+    "y": 10136
+  },
+  {
+    "id": "NpcId.CYCLOPS_81",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3057,
+    "y": 10133
+  },
+  {
+    "id": "NpcId.ORK_107",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3057,
+    "y": 10124
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_47",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3063,
+    "y": 10121
+  },
+  {
+    "id": "NpcId.JOGRE_58",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3051,
+    "y": 10120
+  },
+  {
+    "id": "NpcId.AVIANSIE_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3034,
+    "y": 10152
+  },
+  {
+    "id": "NpcId.AVIANSIE_79",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3031,
+    "y": 10148
+  },
+  {
+    "id": "NpcId.AVIANSIE_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3027,
+    "y": 10144
+  },
+  {
+    "id": "NpcId.AVIANSIE_137",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3020,
+    "y": 10147
+  },
+  {
+    "id": "NpcId.AVIANSIE_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3018,
+    "y": 10154
+  },
+  {
+    "id": "NpcId.AVIANSIE_79",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3025,
+    "y": 10152
+  },
+  {
+    "id": "NpcId.AVIANSIE_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3023,
+    "y": 10157
+  },
+  {
+    "id": "NpcId.AVIANSIE_137",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3019,
+    "y": 10161
+  },
+  {
+    "id": "NpcId.AVIANSIE_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3030,
+    "y": 10156
+  },
+  {
+    "id": "NpcId.AVIANSIE_79",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3027,
+    "y": 10159
+  },
+  {
+    "id": "NpcId.AVIANSIE_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3024,
+    "y": 10164
+  }
+]

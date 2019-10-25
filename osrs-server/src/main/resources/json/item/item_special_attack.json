@@ -1,0 +1,412 @@
+[
+  {
+    "itemIds": [
+      "ItemId.DRAGON_SPEAR",
+      "ItemId.DRAGON_SPEAR_P",
+      "ItemId.DRAGON_SPEAR_KP",
+      "ItemId.DRAGON_SPEAR_P_PLUS",
+      "ItemId.DRAGON_SPEAR_P_PLUS_PLUS",
+      "ItemId.ZAMORAKIAN_SPEAR",
+      "ItemId.ZAMORAKIAN_HASTA"
+    ],
+    "drain": 25,
+    "animationId": 1064,
+    "castGraphic": { "id": 253, "height": 100 },
+    "targetGraphic": { "id": 80, "height": 100 }
+  },
+  {
+    "itemIds": [
+      "ItemId.DRAGON_DAGGER",
+      "ItemId.DRAGON_DAGGER_P",
+      "ItemId.DRAGON_DAGGER_P_PLUS",
+      "ItemId.DRAGON_DAGGER_P_PLUS_PLUS",
+      "ItemId.DRAGON_DAGGER_20407"
+    ],
+    "drain": 25,
+    "animationId": 1062,
+    "castGraphic": { "id": 252, "height": 100 },
+    "accuracyModifier": 1.25,
+    "damageModifier": 1.15,
+    "doubleHit": "true"
+  },
+  {
+    "itemIds": [ "ItemId.DRAGON_LONGSWORD" ],
+    "drain": 25,
+    "animationId": 1058,
+    "castGraphic": { "id": 248, "height": 100 },
+    "damageModifier": 1.15
+  },
+  {
+    "itemIds": [ "ItemId.DRAGON_MACE" ],
+    "drain": 25,
+    "animationId": 1060,
+    "castGraphic": { "id": 251, "height": 100 },
+    "accuracyModifier": 1.25,
+    "damageModifier": 1.50
+  },
+  {
+    "itemIds": [
+      "ItemId.DRAGON_CLAWS",
+      "ItemId.DRAGON_CLAWS_20784",
+      "ItemId.DRAGON_CLAWS_BEGINNER_32327"
+    ],
+    "drain": 50,
+    "animationId": 7514,
+    "castGraphic": { "id": 1171 }
+  },
+  {
+    "itemIds": [
+      "ItemId.DRAGON_SCIMITAR",
+      "ItemId.DRAGON_SCIMITAR_OR",
+      "ItemId.DRAGON_SCIMITAR_20406"
+    ],
+    "drain": 55,
+    "animationId": 1872,
+    "castGraphic": { "id": 347, "height": 100 },
+    "accuracyModifier": 1.25
+  },
+  {
+    "itemIds": [
+      "ItemId.DRAGON_SWORD",
+      "ItemId.DRAGON_SWORD_21206"
+    ],
+    "drain": 40,
+    "animationId": 7515,
+    "castGraphic": { "id": 1369, "height": 100 },
+    "accuracyModifier": 1.25,
+    "damageModifier": 1.25
+  },
+  {
+    "itemIds": [ "ItemId.DRAGON_HALBERD" ],
+    "drain": 30,
+    "animationId": 1203,
+    "targetGraphic": { "id": 1172, "height": 100 },
+    "damageModifier": 1.10
+  },
+  {
+    "itemIds": [
+      "ItemId.NEW_CRYSTAL_HALBERD_FULL_I",
+      "ItemId.CRYSTAL_HALBERD_FULL_I",
+      "ItemId.CRYSTAL_HALBERD_9_10_I",
+      "ItemId.CRYSTAL_HALBERD_8_10_I",
+      "ItemId.CRYSTAL_HALBERD_7_10_I",
+      "ItemId.CRYSTAL_HALBERD_6_10_I",
+      "ItemId.CRYSTAL_HALBERD_5_10_I",
+      "ItemId.CRYSTAL_HALBERD_4_10_I",
+      "ItemId.CRYSTAL_HALBERD_3_10_I",
+      "ItemId.CRYSTAL_HALBERD_2_10_I",
+      "ItemId.CRYSTAL_HALBERD_1_10_I",
+      "ItemId.NEW_CRYSTAL_HALBERD_FULL",
+      "ItemId.CRYSTAL_HALBERD_FULL",
+      "ItemId.CRYSTAL_HALBERD_9_10",
+      "ItemId.CRYSTAL_HALBERD_8_10",
+      "ItemId.CRYSTAL_HALBERD_7_10",
+      "ItemId.CRYSTAL_HALBERD_6_10",
+      "ItemId.CRYSTAL_HALBERD_5_10",
+      "ItemId.CRYSTAL_HALBERD_4_10",
+      "ItemId.CRYSTAL_HALBERD_3_10",
+      "ItemId.CRYSTAL_HALBERD_2_10",
+      "ItemId.CRYSTAL_HALBERD_1_10"
+    ],
+    "drain": 30,
+    "animationId": 1203,
+    "targetGraphic": { "id": 1232, "height": 100 },
+    "damageModifier": 1.10
+  },
+  {
+    "itemIds": [
+      "ItemId.DRAGON_WARHAMMER",
+      "ItemId.DRAGON_WARHAMMER_20785"
+    ],
+    "drain": 50,
+    "animationId": 1378,
+    "castGraphic": { "id": 1292 },
+    "damageModifier": 1.50
+  },
+  {
+    "itemIds": [ "ItemId.GRANITE_HAMMER" ],
+    "drain": 60,
+    "animationId": 1378,
+    "castGraphic": { "id": 1450 },
+    "accuracyModifier": 1.50
+  },
+  {
+    "itemIds": [
+      "ItemId.GRANITE_MAUL",
+      "ItemId.GRANITE_MAUL_12848",
+      "ItemId.GRANITE_MAUL_20557"
+    ],
+    "drain": 50,
+    "animationId": 1667,
+    "castGraphic": { "id": 340, "height": 100 }
+  },
+  {
+    "itemIds": [
+      "ItemId.ABYSSAL_WHIP",
+      "ItemId.VOLCANIC_ABYSSAL_WHIP",
+      "ItemId.FROZEN_ABYSSAL_WHIP",
+      "ItemId.ABYSSAL_WHIP_20405"
+    ],
+    "drain": 50,
+    "animationId": 1658,
+    "targetGraphic": { "id": 341, "height": 100 },
+    "accuracyModifier": 1.25
+  },
+  {
+    "itemIds": [ "ItemId.ABYSSAL_TENTACLE" ],
+    "drain": 50,
+    "animationId": 1658,
+    "targetGraphic": { "id": 341, "height": 100 }
+  },
+  {
+    "itemIds": [
+      "ItemId.ABYSSAL_DAGGER",
+      "ItemId.ABYSSAL_DAGGER_P",
+      "ItemId.ABYSSAL_DAGGER_P_PLUS",
+      "ItemId.ABYSSAL_DAGGER_P_PLUS_PLUS"
+    ],
+    "drain": 50,
+    "animationId": 3300,
+    "castGraphic": { "id": 1283 },
+    "accuracyModifier": 1.25,
+    "damageModifier": 0.85,
+    "doubleHit": "true"
+  },
+  {
+    "itemIds": [ "ItemId.ABYSSAL_BLUDGEON" ],
+    "drain": 50,
+    "animationId": 3299,
+    "targetGraphic": { "id": 1284 }
+  },
+  {
+    "itemIds": [ "ItemId.BARRELCHEST_ANCHOR" ],
+    "drain": 50,
+    "animationId": 5870,
+    "castGraphic": { "id": 1027 },
+    "accuracyModifier": 2,
+    "damageModifier": 1.10
+  },
+  {
+    "itemIds": [ "ItemId.ANCIENT_MACE" ],
+    "drain": 100,
+    "animationId": 6147,
+    "castGraphic": { "id": 1052 }
+  },
+  {
+    "itemIds": [ "ItemId.SARADOMIN_SWORD" ],
+    "drain": 100,
+    "animationId": 1132,
+    "castGraphic": { "id": 1213 },
+    "targetGraphic": { "id": 1196 },
+    "doubleHit": "true",
+    "damageModifier": 1.10
+  },
+  {
+    "itemIds": [
+      "ItemId.SARAS_BLESSED_SWORD_FULL",
+      "ItemId.SARADOMINS_BLESSED_SWORD"
+    ],
+    "drain": 65,
+    "animationId": 1133,
+    "castGraphic": { "id": 1213 },
+    "targetGraphic": { "id": 1196 },
+    "damageModifier": 1.25
+  },
+  {
+    "itemIds": [
+      "ItemId.ARMADYL_GODSWORD",
+      "ItemId.ARMADYL_GODSWORD_20593",
+      "ItemId.ARMADYL_GODSWORD_BEGINNER_32326"
+    ],
+    "drain": 50,
+    "animationId": 7644,
+    "castGraphic": { "id": 1211 },
+    "accuracyModifier": 2,
+    "damageModifier": 1.10
+  },
+  {
+    "itemIds": [ "ItemId.BANDOS_GODSWORD" ],
+    "drain": 50,
+    "animationId": 7642,
+    "castGraphic": { "id": 1212 },
+    "accuracyModifier": 2,
+    "damageModifier": 1.10
+  },
+  {
+    "itemIds": [ "ItemId.SARADOMIN_GODSWORD" ],
+    "drain": 50,
+    "animationId": 7640,
+    "castGraphic": { "id": 1209 },
+    "accuracyModifier": 2,
+    "damageModifier": 1.10
+  },
+  {
+    "itemIds": [ "ItemId.ZAMORAK_GODSWORD" ],
+    "drain": 50,
+    "animationId": 7638,
+    "castGraphic": { "id": 1210 },
+    "targetGraphic": { "id": 369 },
+    "accuracyModifier": 2,
+    "damageModifier": 1.10
+  },
+  {
+    "itemIds": [ "ItemId.ARMADYL_GODSWORD_OR" ],
+    "drain": 50,
+    "animationId": 7644,
+    "castGraphic": { "id": 1211 },
+    "accuracyModifier": 2,
+    "damageModifier": 1.10
+  },
+  {
+    "itemIds": [ "ItemId.BANDOS_GODSWORD_OR" ],
+    "drain": 50,
+    "animationId": 7642,
+    "castGraphic": { "id": 1212 },
+    "accuracyModifier": 2,
+    "damageModifier": 1.10
+  },
+  {
+    "itemIds": [ "ItemId.SARADOMIN_GODSWORD_OR" ],
+    "drain": 50,
+    "animationId": 7640,
+    "castGraphic": { "id": 1209 },
+    "accuracyModifier": 2,
+    "damageModifier": 1.10
+  },
+  {
+    "itemIds": [ "ItemId.ZAMORAK_GODSWORD_OR" ],
+    "drain": 50,
+    "animationId": 7638,
+    "castGraphic": { "id": 1210 },
+    "targetGraphic": { "id": 369 },
+    "accuracyModifier": 2,
+    "damageModifier": 1.10
+  },
+  {
+    "itemIds": [
+      "ItemId.DARKLIGHT",
+      "ItemId.ARCLIGHT"
+    ],
+    "drain": 50,
+    "animationId": 2890,
+    "targetGraphic": { "id": 483 }
+  },
+  {
+    "itemIds": [
+      "ItemId.VESTAS_LONGSWORD_CHARGED_32254"
+    ],
+    "drain": 25,
+    "animationId": "4198"
+  },
+  {
+    "itemIds": [
+      "ItemId.STATIUSS_WARHAMMER_CHARGED_32255"
+    ],
+    "drain": 35,
+    "animationId": 1378,
+    "castGraphic": { "id": 844 }
+  },
+  {
+    "itemIds": [
+      "ItemId.VESTAS_SPEAR_CHARGED_32256"
+    ],
+    "drain": 50,
+    "animationId": 2927,
+    "castGraphic": { "id": 1627 }
+  },
+  {
+    "itemIds": [
+      "ItemId.MAGIC_SHORTBOW",
+      "ItemId.MAGIC_SHORTBOW_20558"
+    ],
+    "drain": 55,
+    "animationId": 1074,
+    "doubleHit": "true"
+  },
+  {
+    "itemIds": [ "ItemId.MAGIC_SHORTBOW_I" ],
+    "drain": 50,
+    "animationId": 1074,
+    "doubleHit": "true"
+  },
+  {
+    "itemIds": [
+      "ItemId.DARK_BOW",
+      "ItemId.DARK_BOW_12765",
+      "ItemId.DARK_BOW_12766",
+      "ItemId.DARK_BOW_12767",
+      "ItemId.DARK_BOW_12768",
+      "ItemId.DARK_BOW_20408"
+    ],
+    "drain": 55,
+    "animationId": 426,
+    "targetGraphic": { "id": 1100, "height": 96 }
+  },
+  {
+    "itemIds": [ "ItemId.ARMADYL_CROSSBOW" ],
+    "drain": 40,
+    "animationId": 4230,
+    "accuracyModifier": 2
+  },
+  {
+    "itemIds": [ "ItemId.DRAGON_CROSSBOW" ],
+    "drain": 60,
+    "animationId": 4230,
+    "damageModifier": 1.2,
+    "targetGraphic": { "id": 157, "height": 96 }
+  },
+  {
+    "itemIds": [ "ItemId.TOXIC_BLOWPIPE" ],
+    "drain": 50,
+    "animationId": 5061,
+    "damageModifier": 1.5
+  },
+  {
+    "itemIds": [
+      "ItemId.LIGHT_BALLISTA",
+      "ItemId.HEAVY_BALLISTA",
+      "ItemId.HEAVY_BALLISTA_BEGINNER_32328"
+    ],
+    "drain": 65,
+    "animationId": 7222,
+    "accuracyModifier": 1.25,
+    "damageModifier": 1.25
+  },
+  {
+    "itemIds": [
+      "ItemId.DRAGON_THROWNAXE",
+      "ItemId.DRAGON_THROWNAXE_21207"
+    ],
+    "drain": 25,
+    "animationId": 7521,
+    "castGraphic": { "id": 1317, "height": 96 },
+    "accuracyModifier": 1.25
+  },
+  {
+    "itemIds": [
+      "ItemId.DRAGON_KNIFE",
+      "ItemId.DRAGON_KNIFE_P",
+      "ItemId.DRAGON_KNIFE_P_PLUS",
+      "ItemId.DRAGON_KNIFE_P_PLUS_PLUS"
+    ],
+    "drain": 25,
+    "animationId": 2068,
+    "doubleHit": true
+  },
+  {
+    "itemIds": [
+      "ItemId.MORRIGANS_JAVELIN"
+    ],
+    "drain": 50,
+    "animationId": 806,
+    "castGraphic": { "id": 1621, "height": 96 }
+  },
+  {
+    "itemIds": [
+      "ItemId.MORRIGANS_THROWING_AXE"
+    ],
+    "drain": 50,
+    "animationId": 806,
+    "castGraphic": { "id": 1626, "height": 96 }
+  }
+]

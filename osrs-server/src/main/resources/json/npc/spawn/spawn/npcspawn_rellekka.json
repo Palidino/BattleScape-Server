@@ -1,0 +1,448 @@
+[
+  {
+    "id": "NpcId.HUNTING_EXPERT_1504",
+    "direction": 1,
+    "x": 2644,
+    "y": 3662
+  },
+  {
+    "id": "NpcId.WIZARD_4399",
+    "direction": 6,
+    "x": 2648,
+    "y": 3657
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 3,
+    "x": 2649,
+    "y": 3661
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 6,
+    "x": 2621,
+    "y": 3658
+  },
+  {
+    "id": "NpcId.ROCK_CRAB_13",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2669,
+    "y": 3725
+  },
+  {
+    "id": "NpcId.ROCK_CRAB_13",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2672,
+    "y": 3728
+  },
+  {
+    "id": "NpcId.ROCK_CRAB_13",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2676,
+    "y": 3730
+  },
+  {
+    "id": "NpcId.ROCK_CRAB_13",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2681,
+    "y": 3731
+  },
+  {
+    "id": "NpcId.ROCK_CRAB_13",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2685,
+    "y": 3729
+  },
+  {
+    "id": "NpcId.ROCK_CRAB_13",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2681,
+    "y": 3725
+  },
+  {
+    "id": "NpcId.ROCK_CRAB_13",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2686,
+    "y": 3723
+  },
+  {
+    "id": "NpcId.ROCK_CRAB_13",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2686,
+    "y": 3719
+  },
+  {
+    "id": "NpcId.ROCK_CRAB_13",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2686,
+    "y": 3714
+  },
+  {
+    "id": "NpcId.ROCK_CRAB_13",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2679,
+    "y": 3714
+  },
+  {
+    "id": "NpcId.ROCK_CRAB_13",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2679,
+    "y": 3720
+  },
+  {
+    "id": "NpcId.ROCK_CRAB_13",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2673,
+    "y": 3718
+  },
+  {
+    "id": "NpcId.ROCK_CRAB_13",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2674,
+    "y": 3712
+  },
+  {
+    "id": "NpcId.ROCK_CRAB_13",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2667,
+    "y": 3711
+  },
+  {
+    "id": "NpcId.ROCK_CRAB_13",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2665,
+    "y": 3716
+  },
+  {
+    "id": "NpcId.TOWN_GUARD",
+    "direction": 1,
+    "x": 2660,
+    "y": 3646
+  },
+  {
+    "id": "NpcId.TOWN_GUARD",
+    "direction": 1,
+    "moveDistance": 3,
+    "x": 2664,
+    "y": 3646
+  },
+  {
+    "id": "NpcId.SIGLI_THE_HUNTSMAN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2661,
+    "y": 3653
+  },
+  {
+    "id": "NpcId.PONTAK_48",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2668,
+    "y": 3652
+  },
+  {
+    "id": "NpcId.LENSA_48",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2655,
+    "y": 3651
+  },
+  {
+    "id": "NpcId.GUARD_3928",
+    "direction": 1,
+    "x": 2657,
+    "y": 3663
+  },
+  {
+    "id": "NpcId.GUARD_3928",
+    "direction": 1,
+    "x": 2660,
+    "y": 3663
+  },
+  {
+    "id": "NpcId.ASKELADDEN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2658,
+    "y": 3660
+  },
+  {
+    "id": "NpcId.BRUNDT_THE_CHIEFTAIN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2659,
+    "y": 3669
+  },
+  {
+    "id": "NpcId.BJORN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2657,
+    "y": 3673
+  },
+  {
+    "id": "NpcId.MANNI_THE_REVELLER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2660,
+    "y": 3673
+  },
+  {
+    "id": "NpcId.THORA_THE_BARKEEP",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2662,
+    "y": 3672
+  },
+  {
+    "id": "NpcId.ELDGRIM",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2659,
+    "y": 3677
+  },
+  {
+    "id": "NpcId.STYRMIR",
+    "direction": 1,
+    "x": 2657,
+    "y": 3680
+  },
+  {
+    "id": "NpcId.OSPAK",
+    "direction": 1,
+    "x": 2660,
+    "y": 3680
+  },
+  {
+    "id": "NpcId.TORBRUND",
+    "direction": 1,
+    "x": 2658,
+    "y": 3679
+  },
+  {
+    "id": "NpcId.FRIDGEIR",
+    "direction": 1,
+    "x": 2659,
+    "y": 3678
+  },
+  {
+    "id": "NpcId.SWENSEN_THE_NAVIGATOR",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2647,
+    "y": 3659
+  },
+  {
+    "id": "NpcId.JENNELLA_48",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2642,
+    "y": 3651
+  },
+  {
+    "id": "NpcId.SASSILIK_48",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2629,
+    "y": 3653
+  },
+  {
+    "id": "NpcId.PEER_THE_SEER_8147",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2634,
+    "y": 3669
+  },
+  {
+    "id": "NpcId.YRSA",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2624,
+    "y": 3673
+  },
+  {
+    "id": "NpcId.AGNAR",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2643,
+    "y": 3675
+  },
+  {
+    "id": "NpcId.FISH_MONGER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2645,
+    "y": 3674
+  },
+  {
+    "id": "NpcId.FUR_TRADER_3948",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2641,
+    "y": 3678
+  },
+  {
+    "id": "NpcId.SIGMUND_THE_MERCHANT",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2644,
+    "y": 3680
+  },
+  {
+    "id": "NpcId.TORFINN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2640,
+    "y": 3697
+  },
+  {
+    "id": "NpcId.FISHERMAN",
+    "direction": 6,
+    "x": 2641,
+    "y": 3699
+  },
+  {
+    "id": "NpcId.SAILOR_3936",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2630,
+    "y": 3692
+  },
+  {
+    "id": "NpcId.LOKAR_SEARUNNER",
+    "direction": 1,
+    "x": 2621,
+    "y": 3688
+  },
+  {
+    "id": "NpcId.JARVALD_7205",
+    "direction": 1,
+    "x": 2620,
+    "y": 3684
+  },
+  {
+    "id": "NpcId.VOLF_OLAFSON",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2658,
+    "y": 3692
+  },
+  {
+    "id": "NpcId.SKULGRIMEN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2664,
+    "y": 3694
+  },
+  {
+    "id": "NpcId.THORVALD_THE_WARRIOR",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2665,
+    "y": 3691
+  },
+  {
+    "id": "NpcId.DRON",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2660,
+    "y": 3701
+  },
+  {
+    "id": "NpcId.FREYGERD_48",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2669,
+    "y": 3702
+  },
+  {
+    "id": "NpcId.REESO",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2663,
+    "y": 3708
+  },
+  {
+    "id": "NpcId.MORD_GUNNARS",
+    "direction": 4,
+    "x": 2644,
+    "y": 3709
+  },
+  {
+    "id": "NpcId.MARIA_GUNNARS_1883",
+    "direction": 3,
+    "x": 2644,
+    "y": 3710
+  },
+  {
+    "id": "NpcId.BORROKAR_48",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2680,
+    "y": 3690
+  },
+  {
+    "id": "NpcId.LONGHALL_BOUNCER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2669,
+    "y": 3684
+  },
+  {
+    "id": "NpcId.OLAF_THE_BARD",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2673,
+    "y": 3683
+  },
+  {
+    "id": "NpcId.FREIDIR_48",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2675,
+    "y": 3675
+  },
+  {
+    "id": "NpcId.INGA_48",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2676,
+    "y": 3677
+  },
+  {
+    "id": "NpcId.BLANIN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2673,
+    "y": 3670
+  },
+  {
+    "id": "NpcId.LANZIG_48",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2675,
+    "y": 3665
+  },
+  {
+    "id": "NpcId.INGRID_HRADSON",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2677,
+    "y": 3666
+  }
+]

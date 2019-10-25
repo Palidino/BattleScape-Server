@@ -1,0 +1,27 @@
+{
+  "sellsItems": false,
+  "buysUntradables": true,
+  "name": "Thieving Shop",
+  "items": [
+    {
+      "id": "ItemId.GOLDEN_NEEDLE",
+      "buyPrice": 200
+    },
+    {
+      "id": "ItemId.GOLDEN_POT",
+      "buyPrice": 375
+    },
+    {
+      "id": "ItemId.GOLDEN_TINDERBOX",
+      "buyPrice": 750
+    },
+    {
+      "id": "ItemId.GOLDEN_CANDLE",
+      "buyPrice": 1500
+    },
+    {
+      "id": "ItemId.GOLDEN_HAMMER",
+      "buyPrice": 3000
+    }
+  ]
+}

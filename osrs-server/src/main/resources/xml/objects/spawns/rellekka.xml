@@ -1,0 +1,10 @@
+<list>
+	<mapobject>
+		<!-- Bank booth -->
+		<id>25808</id>
+		<type>10</type>
+		<direction>1</direction>
+		<x>2648</x>
+		<y>3661</y>
+	</mapobject>
+</list>

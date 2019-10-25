@@ -1,0 +1,8 @@
+{
+  "name": "Hardcore Iron Man Shop",
+  "items": [
+    { "id": "ItemId.HARDCORE_IRONMAN_HELM" },
+    { "id": "ItemId.HARDCORE_IRONMAN_PLATEBODY" },
+    { "id": "ItemId.HARDCORE_IRONMAN_PLATELEGS" }
+  ]
+}

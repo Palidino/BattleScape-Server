@@ -1,0 +1,121 @@
+[
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2834,
+    "y": 9654
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2838,
+    "y": 9652
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2841,
+    "y": 9649
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2841,
+    "y": 9645
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2843,
+    "y": 9641
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2840,
+    "y": 9639
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2843,
+    "y": 9634
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2841,
+    "y": 9631
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2844,
+    "y": 9629
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2840,
+    "y": 9625
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2837,
+    "y": 9623
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2839,
+    "y": 9613
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2839,
+    "y": 9609
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2842,
+    "y": 9608
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2838,
+    "y": 9604
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2835,
+    "y": 9601
+  },
+  {
+    "id": "NpcId.ELVARG_83_6349",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2852,
+    "y": 9636
+  }
+]

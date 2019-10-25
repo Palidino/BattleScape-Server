@@ -1,0 +1,389 @@
+[
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "x": 2615,
+    "y": 3398,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 4,
+    "x": 2584,
+    "y": 3422
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 4,
+    "x": 2584,
+    "y": 3421
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 4,
+    "x": 2584,
+    "y": 3418
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 4,
+    "x": 2584,
+    "y": 3419
+  },
+  {
+    "id": "NpcId.ROACHEY",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2597,
+    "y": 3400
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1514",
+    "direction": 1,
+    "x": 2612,
+    "y": 3412
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1514",
+    "direction": 1,
+    "x": 2612,
+    "y": 3411
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1514",
+    "direction": 1,
+    "x": 2608,
+    "y": 3410
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1514",
+    "direction": 1,
+    "x": 2607,
+    "y": 3410
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1514",
+    "direction": 1,
+    "x": 2606,
+    "y": 3410
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1514",
+    "direction": 1,
+    "x": 2605,
+    "y": 3410
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT",
+    "direction": 1,
+    "x": 2602,
+    "y": 3411
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT",
+    "direction": 1,
+    "x": 2602,
+    "y": 3412
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT",
+    "direction": 1,
+    "x": 2602,
+    "y": 3413
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT",
+    "direction": 1,
+    "x": 2602,
+    "y": 3414
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT",
+    "direction": 1,
+    "x": 2602,
+    "y": 3415
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT",
+    "direction": 1,
+    "x": 2602,
+    "y": 3416
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1510",
+    "direction": 1,
+    "x": 2605,
+    "y": 3416
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1510",
+    "direction": 1,
+    "x": 2606,
+    "y": 3416
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1510",
+    "direction": 1,
+    "x": 2607,
+    "y": 3416
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1510",
+    "direction": 1,
+    "x": 2608,
+    "y": 3416
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1510",
+    "direction": 1,
+    "x": 2609,
+    "y": 3416
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1510",
+    "direction": 1,
+    "x": 2610,
+    "y": 3416
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1510",
+    "direction": 1,
+    "x": 2611,
+    "y": 3416
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1510",
+    "direction": 1,
+    "x": 2612,
+    "y": 3415
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1510",
+    "direction": 1,
+    "x": 2612,
+    "y": 3414
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT",
+    "direction": 1,
+    "x": 2603,
+    "y": 3417
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT",
+    "direction": 1,
+    "x": 2604,
+    "y": 3417
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT",
+    "direction": 1,
+    "x": 2605,
+    "y": 3413
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1510",
+    "direction": 1,
+    "x": 2611,
+    "y": 3413
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1514",
+    "direction": 1,
+    "x": 2610,
+    "y": 3413
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1514",
+    "direction": 1,
+    "x": 2609,
+    "y": 3413
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1510",
+    "direction": 1,
+    "x": 2608,
+    "y": 3413
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1510",
+    "direction": 1,
+    "x": 2607,
+    "y": 3413
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1514",
+    "direction": 1,
+    "x": 2606,
+    "y": 3413
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_4316",
+    "direction": 1,
+    "x": 2604,
+    "y": 3419
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_4316",
+    "direction": 1,
+    "x": 2603,
+    "y": 3419
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_4316",
+    "direction": 1,
+    "x": 2602,
+    "y": 3419
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_4316",
+    "direction": 1,
+    "x": 2605,
+    "y": 3420
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_4316",
+    "direction": 1,
+    "x": 2605,
+    "y": 3421
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_4316",
+    "direction": 1,
+    "x": 2604,
+    "y": 3422
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_4316",
+    "direction": 1,
+    "x": 2603,
+    "y": 3422
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_4316",
+    "direction": 1,
+    "x": 2602,
+    "y": 3422
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_4316",
+    "direction": 1,
+    "x": 2601,
+    "y": 3422
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_4712",
+    "direction": 1,
+    "x": 2600,
+    "y": 3419
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_4712",
+    "direction": 1,
+    "x": 2599,
+    "y": 3419
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_4712",
+    "direction": 1,
+    "x": 2598,
+    "y": 3419
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1511",
+    "direction": 1,
+    "x": 2601,
+    "y": 3423
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1511",
+    "direction": 1,
+    "x": 2602,
+    "y": 3423
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1511",
+    "direction": 1,
+    "x": 2603,
+    "y": 3423
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1511",
+    "direction": 1,
+    "x": 2604,
+    "y": 3423
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1511",
+    "direction": 1,
+    "x": 2605,
+    "y": 3424
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1511",
+    "direction": 1,
+    "x": 2605,
+    "y": 3425
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1511",
+    "direction": 1,
+    "x": 2604,
+    "y": 3426
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1511",
+    "direction": 1,
+    "x": 2603,
+    "y": 3426
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1511",
+    "direction": 1,
+    "x": 2602,
+    "y": 3426
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1510",
+    "direction": 1,
+    "x": 2598,
+    "y": 3423
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_1510",
+    "direction": 1,
+    "x": 2598,
+    "y": 3422
+  },
+  {
+    "id": "NpcId.KYLIE_MINNOW_7728",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2614,
+    "y": 3445
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_7730",
+    "direction": 1,
+    "x": 2610,
+    "y": 3443
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_7731",
+    "direction": 1,
+    "x": 2611,
+    "y": 3444
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_7730",
+    "direction": 1,
+    "x": 2618,
+    "y": 3443
+  },
+  {
+    "id": "NpcId.FISHING_SPOT_7731",
+    "direction": 1,
+    "x": 2619,
+    "y": 3444
+  }
+]

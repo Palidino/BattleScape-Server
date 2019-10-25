@@ -1,0 +1,16 @@
+{
+  "name": "Legends' Shop",
+  "sellExchangeMultiplier": 1.0,
+  "ceilPrice": true,
+  "items": [
+    { "id": "ItemId.CAPE_OF_LEGENDS", "price": 675 },
+    { "id": "ItemId.MYTHICAL_CAPE", "price": 100000 },
+    { "id": "ItemId.DRAGON_SQ_SHIELD" },
+    { "id": "ItemId.DRAGON_SPEAR_P_PLUS_PLUS" },
+    { "id": "ItemId.DRAGON_MED_HELM" },
+    { "id": "ItemId.DRAGON_HALBERD" },
+    { "id": "ItemId.ADAMANT_KNIFE" },
+    { "id": "ItemId.ADAMANT_DART" },
+    { "id": "ItemId.AVAS_ACCUMULATOR", "price": 10000 }
+  ]
+}

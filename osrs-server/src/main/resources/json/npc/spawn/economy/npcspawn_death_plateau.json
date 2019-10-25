@@ -1,0 +1,128 @@
+[
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2856,
+    "y": 3596
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2861,
+    "y": 3597
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2869,
+    "y": 3596
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2875,
+    "y": 3593
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2880,
+    "y": 3587
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2870,
+    "y": 3587
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2866,
+    "y": 3591
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2859,
+    "y": 3592
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2861,
+    "y": 3588
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2875,
+    "y": 3588
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2874,
+    "y": 3598
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69_937",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2865,
+    "y": 3595
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69_937",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2855,
+    "y": 3591
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69_937",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2866,
+    "y": 3587
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69_937",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2871,
+    "y": 3592
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69_937",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2853,
+    "y": 3586
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69_937",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2847,
+    "y": 3591
+  },
+  {
+    "id": "NpcId.MOUNTAIN_TROLL_69_937",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2881,
+    "y": 3591
+  }
+]

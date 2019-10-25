@@ -1,0 +1,54 @@
+<list>
+	<mapobject>
+		<!-- Tree -->
+		<id>-1</id>
+		<type>10</type>
+		<x>3093</x>
+		<y>3525</y>
+	</mapobject>
+	<mapobject>
+		<!-- Tree -->
+		<id>-1</id>
+		<type>10</type>
+		<x>3086</x>
+		<y>3526</y>
+	</mapobject>
+	<mapobject>
+		<!-- Rune rock -->
+		<id>7461</id>
+		<type>10</type>
+		<x>3175</x>
+		<y>3927</y>
+	</mapobject>
+	<mapobject>
+		<!-- Rune rock -->
+		<id>7461</id>
+		<type>10</type>
+		<direction>1</direction>
+		<x>3177</x>
+		<y>3927</y>
+	</mapobject>
+	<mapobject>
+		<!-- Rune rock -->
+		<id>7461</id>
+		<type>10</type>
+		<x>3175</x>
+		<y>3925</y>
+		<direction>2</direction>
+	</mapobject>
+	<mapobject>
+		<!-- Rune rock -->
+		<id>7461</id>
+		<type>10</type>
+		<direction>3</direction>
+		<x>3177</x>
+		<y>3925</y>
+	</mapobject>
+	<mapobject>
+		<!-- Rune rock -->
+		<id>7461</id>
+		<type>10</type>
+		<x>3176</x>
+		<y>3926</y>
+	</mapobject>
+</list>

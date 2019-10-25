@@ -1,0 +1,114 @@
+[
+  {
+    "id": "NpcId.BLACK_DRAGON_227",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3047,
+    "y": 10264
+  },
+  {
+    "id": "NpcId.BLACK_DRAGON_227",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3053,
+    "y": 10266
+  },
+  {
+    "id": "NpcId.BLACK_DRAGON_227",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3050,
+    "y": 10269
+  },
+  {
+    "id": "NpcId.BLACK_DRAGON_227",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3053,
+    "y": 10271
+  },
+  {
+    "id": "NpcId.BABY_DRAGON_83",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3051,
+    "y": 10277
+  },
+  {
+    "id": "NpcId.BABY_DRAGON_83",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3052,
+    "y": 10282
+  },
+  {
+    "id": "NpcId.BABY_DRAGON_83",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3054,
+    "y": 10286
+  },
+  {
+    "id": "NpcId.BABY_DRAGON_83",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3044,
+    "y": 10262
+  },
+  {
+    "id": "NpcId.BABY_DRAGON_83",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3050,
+    "y": 10260
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3028,
+    "y": 10250
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3032,
+    "y": 10245
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3039,
+    "y": 10256
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3036,
+    "y": 10260
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3030,
+    "y": 10259
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3032,
+    "y": 10255
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3048,
+    "y": 10254
+  }
+]

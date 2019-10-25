@@ -1,0 +1,119 @@
+{
+  "name": "Oziach's Exchange",
+  "items": [
+    {
+      "id": "ItemId.DRAGONFIRE_SHIELD_11284",
+      "price": 1250000,
+      "costItems": [
+        [ { "id": "ItemId.ANTI_DRAGON_SHIELD", "amount": 1 } ],
+        [ { "id": "ItemId.DRACONIC_VISAGE", "amount": 1 } ]
+      ]
+    },
+    {
+      "id": "ItemId.DRAGONFIRE_WARD_22003",
+      "price": 1250000,
+      "costItems": [
+        [ { "id": "ItemId.ANTI_DRAGON_SHIELD", "amount": 1 } ],
+        [ { "id": "ItemId.SKELETAL_VISAGE", "amount": 1 } ]
+      ]
+    },
+    {
+      "id": "ItemId.ANCIENT_WYVERN_SHIELD_21634",
+      "price": 1250000,
+      "costItems": [
+        [ { "id": "ItemId.ELEMENTAL_SHIELD", "amount": 1 } ],
+        [ { "id": "ItemId.WYVERN_VISAGE", "amount": 1 } ]
+      ]
+    },
+    {
+      "id": "ItemId.GODSWORD_BLADE",
+      "price": 1250000,
+      "costItems": [
+        [ { "id": "ItemId.GODSWORD_SHARD_1", "amount": 1 } ],
+        [ { "id": "ItemId.GODSWORD_SHARD_2", "amount": 1 } ],
+        [ { "id": "ItemId.GODSWORD_SHARD_3", "amount": 1 } ]
+      ]
+    },
+    {
+      "id": "ItemId.AMULET_OF_FURY",
+      "price": 1250000,
+      "costItems": [
+        [
+          { "id": "ItemId.UNCUT_ONYX", "amount": 1 },
+          { "id": "ItemId.ONYX", "amount": 1 }
+        ]
+      ]
+    },
+    {
+      "id": "ItemId.BERSERKER_NECKLACE",
+      "price": 1250000,
+      "costItems": [
+        [
+          { "id": "ItemId.UNCUT_ONYX", "amount": 1 },
+          { "id": "ItemId.ONYX", "amount": 1 }
+        ]
+      ]
+    },
+    {
+      "id": "ItemId.REGEN_BRACELET",
+      "price": 1250000,
+      "costItems": [
+        [
+          { "id": "ItemId.UNCUT_ONYX", "amount": 1 },
+          { "id": "ItemId.ONYX", "amount": 1 }
+        ]
+      ]
+    },
+    {
+      "id": "ItemId.UNCUT_ZENYTE",
+      "price": 1250000,
+      "costItems": [
+        [ { "id": "ItemId.ZENYTE_SHARD", "amount": 1 } ],
+        [
+          { "id": "ItemId.UNCUT_ONYX", "amount": 1 },
+          { "id": "ItemId.ONYX", "amount": 1 }
+        ]
+      ]
+    },
+    {
+      "id": "ItemId.TORMENTED_BRACELET",
+      "price": 1250000,
+      "costItems": [
+        [
+          { "id": "ItemId.UNCUT_ZENYTE", "amount": 1 },
+          { "id": "ItemId.ZENYTE", "amount": 1 }
+        ]
+      ]
+    },
+    {
+      "id": "ItemId.NECKLACE_OF_ANGUISH",
+      "price": 1250000,
+      "costItems": [
+        [
+          { "id": "ItemId.UNCUT_ZENYTE", "amount": 1 },
+          { "id": "ItemId.ZENYTE", "amount": 1 }
+        ]
+      ]
+    },
+    {
+      "id": "ItemId.RING_OF_SUFFERING",
+      "price": 1250000,
+      "costItems": [
+        [
+          { "id": "ItemId.UNCUT_ZENYTE", "amount": 1 },
+          { "id": "ItemId.ZENYTE", "amount": 1 }
+        ]
+      ]
+    },
+    {
+      "id": "ItemId.AMULET_OF_TORTURE",
+      "price": 1250000,
+      "costItems": [
+        [
+          { "id": "ItemId.UNCUT_ZENYTE", "amount": 1 },
+          { "id": "ItemId.ZENYTE", "amount": 1 }
+        ]
+      ]
+    }
+  ]
+}

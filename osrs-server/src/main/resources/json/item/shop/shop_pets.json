@@ -1,0 +1,11 @@
+{
+  "name": "Pets Shop",
+  "items": [
+    { "id": "ItemId.PET_CAT", "price": 10000000 },
+    { "id": "ItemId.PET_CAT_1562", "price": 10000000 },
+    { "id": "ItemId.PET_CAT_1563", "price": 10000000 },
+    { "id": "ItemId.PET_CAT_1564", "price": 10000000 },
+    { "id": "ItemId.PET_CAT_1565", "price": 10000000 },
+    { "id": "ItemId.PET_CAT_1566", "price": 10000000 }
+  ]
+}

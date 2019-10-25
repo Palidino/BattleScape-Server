@@ -1,0 +1,198 @@
+[
+  {
+    "id": "NpcId.TOOL_LEPRECHAUN",
+    "direction": 1,
+    "x": 2672,
+    "y": 3381
+  },
+  {
+    "id": "NpcId.MASTER_FARMER",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2637,
+    "y": 3363
+  },
+  {
+    "id": "NpcId.KRAGEN",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2663,
+    "y": 3375
+  },
+  {
+    "id": "NpcId.WIZARD_4399",
+    "direction": 6,
+    "x": 2651,
+    "y": 3280
+  },
+  {
+    "id": "NpcId.MILES",
+    "direction": 1,
+    "x": 2652,
+    "y": 3311
+  },
+  {
+    "id": "NpcId.MILES",
+    "direction": 3,
+    "x": 2672,
+    "y": 3301
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 3,
+    "x": 2657,
+    "y": 3286
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 3,
+    "x": 2657,
+    "y": 3283
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 3,
+    "x": 2657,
+    "y": 3280
+  },
+  {
+    "id": "NpcId.GUARD_20",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2653,
+    "y": 3307
+  },
+  {
+    "id": "NpcId.GUARD_20",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2654,
+    "y": 3316
+  },
+  {
+    "id": "NpcId.GUARD_20",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2659,
+    "y": 3311
+  },
+  {
+    "id": "NpcId.GUARD_20",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2659,
+    "y": 3305
+  },
+  {
+    "id": "NpcId.GUARD_20",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2664,
+    "y": 3302
+  },
+  {
+    "id": "NpcId.GUARD_20",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2660,
+    "y": 3301
+  },
+  {
+    "id": "NpcId.GUARD_20",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2665,
+    "y": 3309
+  },
+  {
+    "id": "NpcId.GUARD_20",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2668,
+    "y": 3314
+  },
+  {
+    "id": "NpcId.GUARD_20",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2669,
+    "y": 3298
+  },
+  {
+    "id": "NpcId.HERO_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2650,
+    "y": 3301
+  },
+  {
+    "id": "NpcId.PALADIN_62",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2661,
+    "y": 3307
+  },
+  {
+    "id": "NpcId.KNIGHT_OF_ARDOUGNE_46",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2658,
+    "y": 3300
+  },
+  {
+    "id": "NpcId.KNIGHT_OF_ARDOUGNE_46",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2650,
+    "y": 3307
+  },
+  {
+    "id": "NpcId.KNIGHT_OF_ARDOUGNE_46",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2665,
+    "y": 3299
+  },
+  {
+    "id": "NpcId.KNIGHT_OF_ARDOUGNE_46",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2656,
+    "y": 3321
+  },
+  {
+    "id": "NpcId.HERO_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2662,
+    "y": 3320
+  },
+  {
+    "id": "NpcId.GUARD_20",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2671,
+    "y": 3317
+  },
+  {
+    "id": "NpcId.PALADIN_62",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2667,
+    "y": 3291
+  },
+  {
+    "id": "NpcId.PALADIN_62",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2650,
+    "y": 3313
+  },
+  {
+    "id": "NpcId.HERO_69",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2671,
+    "y": 3305
+  }
+]

@@ -1,0 +1,23 @@
+<list>
+	<mapobject>
+		<!-- Door -->
+		<id>-1</id>
+		<type>10</type>
+		<x>2543</x>
+		<y>10143</y>
+	</mapobject>
+	<mapobject>
+		<!-- Door -->
+		<id>-1</id>
+		<type>10</type>
+		<x>2545</x>
+		<y>10145</y>
+	</mapobject>
+	<mapobject>
+		<!-- Door -->
+		<id>-1</id>
+		<type>10</type>
+		<x>2545</x>
+		<y>10141</y>
+	</mapobject>
+</list>

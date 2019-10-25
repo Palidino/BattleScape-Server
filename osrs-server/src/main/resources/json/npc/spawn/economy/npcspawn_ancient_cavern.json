@@ -1,0 +1,226 @@
+[
+  {
+    "id": "NpcId.MITHRIL_DRAGON_304",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1779,
+    "y": 5339,
+    "height": 1
+  },
+  {
+    "id": "NpcId.MITHRIL_DRAGON_304",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1780,
+    "y": 5355,
+    "height": 1
+  },
+  {
+    "id": "NpcId.MITHRIL_DRAGON_304",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1761,
+    "y": 5337,
+    "height": 1
+  },
+  {
+    "id": "NpcId.MITHRIL_DRAGON_304",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1766,
+    "y": 5342,
+    "height": 1
+  },
+  {
+    "id": "NpcId.MITHRIL_DRAGON_304",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1767,
+    "y": 5332,
+    "height": 1
+  },
+  {
+    "id": "NpcId.MITHRIL_DRAGON_304",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1755,
+    "y": 5325,
+    "height": 1
+  },
+  {
+    "id": "NpcId.MITHRIL_DRAGON_304",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1782,
+    "y": 5328,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BRUTAL_GREEN_DRAGON_227",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1774,
+    "y": 5359
+  },
+  {
+    "id": "NpcId.BRUTAL_GREEN_DRAGON_227",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1774,
+    "y": 5350
+  },
+  {
+    "id": "NpcId.BRUTAL_GREEN_DRAGON_227",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1771,
+    "y": 5336
+  },
+  {
+    "id": "NpcId.BRUTAL_GREEN_DRAGON_227",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1778,
+    "y": 5328
+  },
+  {
+    "id": "NpcId.BRUTAL_GREEN_DRAGON_227",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1764,
+    "y": 5325
+  },
+  {
+    "id": "NpcId.BRUTAL_GREEN_DRAGON_227",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1757,
+    "y": 5333
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1747,
+    "y": 5362
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1743,
+    "y": 5359
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1739,
+    "y": 5356
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1740,
+    "y": 5351
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1737,
+    "y": 5348
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1740,
+    "y": 5344
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1737,
+    "y": 5342
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1743,
+    "y": 5341
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1747,
+    "y": 5342
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1752,
+    "y": 5341
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1751,
+    "y": 5338
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1745,
+    "y": 5337
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1751,
+    "y": 5351
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1755,
+    "y": 5352
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1757,
+    "y": 5356
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1757,
+    "y": 5360
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1760,
+    "y": 5356
+  },
+  {
+    "id": "NpcId.WATERFIEND_115",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1762,
+    "y": 5359
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "NpcId.SURGEON_GENERAL_TAFANI",
+    "direction": 1,
+    "x": 3094,
+    "y": 3499,
+    "height": 20
+  },
+  {
+    "id": "NpcId.HEAD_CHEF",
+    "direction": 1,
+    "x": 3095,
+    "y": 3499,
+    "height": 20
+  },
+  {
+    "id": "NpcId.AJJAT",
+    "direction": 1,
+    "x": 3096,
+    "y": 3499,
+    "height": 20
+  },
+  {
+    "id": "NpcId.WIZARD_4399",
+    "direction": 1,
+    "x": 3097,
+    "y": 3499,
+    "height": 20
+  }
+]

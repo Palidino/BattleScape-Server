@@ -1,0 +1,9 @@
+{
+  "name": "Donator Shop",
+  "items": [
+    { "id": "ItemId.CHOMPY_BIRD_HAT_2992", "price": 50000 },
+    { "id": "ItemId.CHOMPY_BIRD_HAT_2995", "price": 50000 },
+    { "id": "ItemId.CHOMPY_BIRD_HAT_2993", "price": 50000 },
+    { "id": "ItemId.CHOMPY_BIRD_HAT_2991", "price": 50000 }
+  ]
+}

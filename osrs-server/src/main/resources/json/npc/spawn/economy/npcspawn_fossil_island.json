@@ -1,0 +1,219 @@
+[
+  {
+    "id": "NpcId.DERANGED_ARCHAEOLOGIST_276",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3680,
+    "y": 3722
+  },
+  {
+    "id": "NpcId.DERANGED_ARCHAEOLOGIST_276",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3682,
+    "y": 3755
+  },
+  {
+    "id": "NpcId.DERANGED_ARCHAEOLOGIST_276",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3685,
+    "y": 3767
+  },
+  {
+    "id": "NpcId.TALONED_WYVERN_147",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3605,
+    "y": 10215
+  },
+  {
+    "id": "NpcId.TALONED_WYVERN_147",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3613,
+    "y": 10214
+  },
+  {
+    "id": "NpcId.TALONED_WYVERN_147",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3612,
+    "y": 10205
+  },
+  {
+    "id": "NpcId.TALONED_WYVERN_147",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3604,
+    "y": 10202
+  },
+  {
+    "id": "NpcId.LONG_TAILED_WYVERN_152",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3598,
+    "y": 10186
+  },
+  {
+    "id": "NpcId.LONG_TAILED_WYVERN_152",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3604,
+    "y": 10191
+  },
+  {
+    "id": "NpcId.LONG_TAILED_WYVERN_152",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3597,
+    "y": 10196
+  },
+  {
+    "id": "NpcId.SPITTING_WYVERN_139",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3630,
+    "y": 10196
+  },
+  {
+    "id": "NpcId.SPITTING_WYVERN_139",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3627,
+    "y": 10187
+  },
+  {
+    "id": "NpcId.SPITTING_WYVERN_139",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3620,
+    "y": 10183
+  },
+  {
+    "id": "NpcId.SPITTING_WYVERN_139",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3621,
+    "y": 10193
+  },
+  {
+    "id": "NpcId.ANCIENT_WYVERN_210",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3633,
+    "y": 10212
+  },
+  {
+    "id": "NpcId.ANCIENT_WYVERN_210",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3635,
+    "y": 10206
+  },
+  {
+    "id": "NpcId.ANCIENT_WYVERN_210",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3626,
+    "y": 10246
+  },
+  {
+    "id": "NpcId.ANCIENT_WYVERN_210",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3636,
+    "y": 10246
+  },
+  {
+    "id": "NpcId.ANCIENT_WYVERN_210",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3632,
+    "y": 10253
+  },
+  {
+    "id": "NpcId.SPITTING_WYVERN_139",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3604,
+    "y": 10265
+  },
+  {
+    "id": "NpcId.SPITTING_WYVERN_139",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3602,
+    "y": 10273
+  },
+  {
+    "id": "NpcId.SPITTING_WYVERN_139",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3613,
+    "y": 10273
+  },
+  {
+    "id": "NpcId.SPITTING_WYVERN_139",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3611,
+    "y": 10281
+  },
+  {
+    "id": "NpcId.TALONED_WYVERN_147",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3622,
+    "y": 10291
+  },
+  {
+    "id": "NpcId.TALONED_WYVERN_147",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3626,
+    "y": 10285
+  },
+  {
+    "id": "NpcId.TALONED_WYVERN_147",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3634,
+    "y": 10276
+  },
+  {
+    "id": "NpcId.TALONED_WYVERN_147",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3636,
+    "y": 10283
+  },
+  {
+    "id": "NpcId.LONG_TAILED_WYVERN_152",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3596,
+    "y": 10249
+  },
+  {
+    "id": "NpcId.LONG_TAILED_WYVERN_152",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3603,
+    "y": 10251
+  },
+  {
+    "id": "NpcId.LONG_TAILED_WYVERN_152",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3614,
+    "y": 10249
+  },
+  {
+    "id": "NpcId.LONG_TAILED_WYVERN_152",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3609,
+    "y": 10252
+  }
+]

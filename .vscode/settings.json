@@ -1,0 +1,46 @@
+{
+    "files.insertFinalNewline": true,
+    "files.exclude": {
+        "**/.idea": true,
+        "**/.vscode": true,
+        "**/.apt_*": true,
+        "**/.git": true,
+        "**/.github": true,
+        "**/.gitmodules": true,
+        "**/.gitignore": true,
+        "**/.settings": true,
+        "**/.classpath": true,
+        "**/.factorypath": true,
+        "**/.project": true,
+        "**/.DS_Store": true,
+        "**/thumbs.db": true,
+        "**/Desktop.ini": true,
+        "**/desktop.ini": true,
+        "**/*.class": true,
+        "**/*.jar": true,
+        "**/*.zip": true,
+        "**/*.gz": true,
+        "**/*.log": true,
+        "**/log.txt": true,
+        "**/nohup*.out": true,
+        "**/target": true,
+        "**/repo": true,
+        "**/resources/cache": true
+    },
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+        "**/map/xtea.json": true,
+        "**/map/no_xtea.json": true
+    },
+    "editor.wrappingIndent": "deepIndent",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.format.onType.enabled": true,
+    "java.jdt.ls.vmargs": "-Xmx512M -Xverify:none -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:util/repo/lombok.jar -Djava.lsp.joinOnCompletion=true",
+    "maven.executable.path": "util/repo/apache-maven/bin/mvn",
+    "[java]": {
+        "editor.formatOnSave": true
+    },
+    "javascript.validate.enable": false
+}

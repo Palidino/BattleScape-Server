@@ -1,0 +1,410 @@
+[
+  {
+    "id": "NpcId.TOOL_LEPRECHAUN",
+    "direction": 6,
+    "x": 2348,
+    "y": 3159
+  },
+  {
+    "id": "NpcId.LILIWEN",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2344,
+    "y": 3164
+  },
+  {
+    "id": "NpcId.WIZARD_4399",
+    "direction": 3,
+    "x": 2353,
+    "y": 3159
+  },
+  {
+    "id": "NpcId.GOREU",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2345,
+    "y": 3167
+  },
+  {
+    "id": "NpcId.YSGAWYN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2353,
+    "y": 3180
+  },
+  {
+    "id": "NpcId.ARVEL",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2353,
+    "y": 3173
+  },
+  {
+    "id": "NpcId.MAWRTH",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2340,
+    "y": 3186
+  },
+  {
+    "id": "NpcId.KELYN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2324,
+    "y": 3179
+  },
+  {
+    "id": "NpcId.GOREU",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2327,
+    "y": 3168
+  },
+  {
+    "id": "NpcId.YSGAWYN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2333,
+    "y": 3160,
+    "height": 1
+  },
+  {
+    "id": "NpcId.ARVEL",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2336,
+    "y": 3184,
+    "height": 1
+  },
+  {
+    "id": "NpcId.MILES",
+    "direction": 3,
+    "x": 2356,
+    "y": 3175,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BANKER_1479",
+    "direction": 1,
+    "x": 2352,
+    "y": 3166
+  },
+  {
+    "id": "NpcId.BANKER_1480",
+    "direction": 1,
+    "x": 2354,
+    "y": 3166
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2331,
+    "y": 3168
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2333,
+    "y": 3172
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2335,
+    "y": 3178
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2340,
+    "y": 3180
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2346,
+    "y": 3176
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2343,
+    "y": 3171
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2340,
+    "y": 3165
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2335,
+    "y": 3162
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2337,
+    "y": 3158
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2344,
+    "y": 3157
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2351,
+    "y": 3157
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2328,
+    "y": 3162
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2320,
+    "y": 3162
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2322,
+    "y": 3167
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2329,
+    "y": 3182
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2323,
+    "y": 3183
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2320,
+    "y": 3178
+  },
+  {
+    "id": "NpcId.TYRAS_GUARD_110_3433",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2320,
+    "y": 3191
+  },
+  {
+    "id": "NpcId.TYRAS_GUARD_110_3433",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2324,
+    "y": 3189
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2346,
+    "y": 3186
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2352,
+    "y": 3184
+  },
+  {
+    "id": "NpcId.TYRAS_GUARD_110_3433",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2350,
+    "y": 3172
+  },
+  {
+    "id": "NpcId.TYRAS_GUARD_110_3433",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2353,
+    "y": 3176
+  },
+  {
+    "id": "NpcId.TYRAS_GUARD_110_3433",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2343,
+    "y": 3175,
+    "height": 1
+  },
+  {
+    "id": "NpcId.TYRAS_GUARD_110_3433",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2335,
+    "y": 3177,
+    "height": 1
+  },
+  {
+    "id": "NpcId.TYRAS_GUARD_110_3433",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2343,
+    "y": 3169,
+    "height": 1
+  },
+  {
+    "id": "NpcId.TYRAS_GUARD_110_3433",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2337,
+    "y": 3167,
+    "height": 1
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2350,
+    "y": 3169,
+    "height": 1
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2350,
+    "y": 3174,
+    "height": 1
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2353,
+    "y": 3179,
+    "height": 1
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2352,
+    "y": 3163,
+    "height": 1
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2352,
+    "y": 3157,
+    "height": 1
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2347,
+    "y": 3156,
+    "height": 1
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2339,
+    "y": 3159,
+    "height": 1
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2351,
+    "y": 3187,
+    "height": 1
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2343,
+    "y": 3185,
+    "height": 1
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2335,
+    "y": 3180,
+    "height": 1
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2325,
+    "y": 3177,
+    "height": 1
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_90",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2326,
+    "y": 3174,
+    "height": 2
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2326,
+    "y": 3167,
+    "height": 2
+  },
+  {
+    "id": "NpcId.ELF_WARRIOR_108",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2325,
+    "y": 3165,
+    "height": 1
+  },
+  {
+    "id": "NpcId.ILFEEN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2324,
+    "y": 3164
+  }
+]

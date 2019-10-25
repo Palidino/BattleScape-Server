@@ -1,0 +1,450 @@
+[
+  {
+    "id": "NpcId.MUGGER_6",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2993,
+    "y": 9546
+  },
+  {
+    "id": "NpcId.MUGGER_6",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2998,
+    "y": 9550
+  },
+  {
+    "id": "NpcId.MUGGER_6",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2994,
+    "y": 9550
+  },
+  {
+    "id": "NpcId.MUGGER_6",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2999,
+    "y": 9544
+  },
+  {
+    "id": "NpcId.MUGGER_6",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2996,
+    "y": 9546
+  },
+  {
+    "id": "NpcId.PIRATE_23_2880",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2992,
+    "y": 9573
+  },
+  {
+    "id": "NpcId.PIRATE_23_2880",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2986,
+    "y": 9577
+  },
+  {
+    "id": "NpcId.PIRATE_23_2880",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2989,
+    "y": 9582
+  },
+  {
+    "id": "NpcId.PIRATE_23_2880",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2994,
+    "y": 9583
+  },
+  {
+    "id": "NpcId.PIRATE_23_2880",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2999,
+    "y": 9578
+  },
+  {
+    "id": "NpcId.PIRATE_23_2880",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2995,
+    "y": 9576
+  },
+  {
+    "id": "NpcId.PIRATE_23_2880",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2995,
+    "y": 9570
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3019,
+    "y": 9582
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3024,
+    "y": 9582
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3019,
+    "y": 9577
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3023,
+    "y": 9578
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3025,
+    "y": 9573
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3021,
+    "y": 9581
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_42",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3023,
+    "y": 9589
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_42",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3023,
+    "y": 9593
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_42",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3018,
+    "y": 9593
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_42",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3014,
+    "y": 9594
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_42",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3026,
+    "y": 9592
+  },
+  {
+    "id": "NpcId.ICE_GIANT_53",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3063,
+    "y": 9582
+  },
+  {
+    "id": "NpcId.ICE_GIANT_53",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3059,
+    "y": 9586
+  },
+  {
+    "id": "NpcId.ICE_GIANT_53",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3063,
+    "y": 9576
+  },
+  {
+    "id": "NpcId.ICE_GIANT_53",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3058,
+    "y": 9576
+  },
+  {
+    "id": "NpcId.ICE_GIANT_53",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3064,
+    "y": 9571
+  },
+  {
+    "id": "NpcId.ICE_GIANT_53",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3057,
+    "y": 9571
+  },
+  {
+    "id": "NpcId.ICE_GIANT_53",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3054,
+    "y": 9585
+  },
+  {
+    "id": "NpcId.ICE_GIANT_53",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3055,
+    "y": 9578
+  },
+  {
+    "id": "NpcId.ICE_WARRIOR_57",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3039,
+    "y": 9582
+  },
+  {
+    "id": "NpcId.ICE_WARRIOR_57",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3041,
+    "y": 9586
+  },
+  {
+    "id": "NpcId.ICE_WARRIOR_57",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3044,
+    "y": 9588
+  },
+  {
+    "id": "NpcId.ICE_WARRIOR_57",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3043,
+    "y": 9582
+  },
+  {
+    "id": "NpcId.ICE_WARRIOR_57",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3047,
+    "y": 9581
+  },
+  {
+    "id": "NpcId.ICE_WARRIOR_57",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3050,
+    "y": 9584
+  },
+  {
+    "id": "NpcId.ICE_GIANT_53",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3052,
+    "y": 9590
+  },
+  {
+    "id": "NpcId.ICE_GIANT_53",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3047,
+    "y": 9589
+  },
+  {
+    "id": "NpcId.ICE_WARRIOR_57",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3051,
+    "y": 9578
+  },
+  {
+    "id": "NpcId.ICE_WARRIOR_57",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3042,
+    "y": 9576
+  },
+  {
+    "id": "NpcId.ICE_WARRIOR_57",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3046,
+    "y": 9574
+  },
+  {
+    "id": "NpcId.ICE_WARRIOR_57",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3050,
+    "y": 9573
+  },
+  {
+    "id": "NpcId.ICE_WARRIOR_57",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3059,
+    "y": 9568
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3047,
+    "y": 9552
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3062,
+    "y": 9551
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3065,
+    "y": 9543
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3058,
+    "y": 9540
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3049,
+    "y": 9544
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3041,
+    "y": 9542
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3027,
+    "y": 9543
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3034,
+    "y": 9553
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3026,
+    "y": 9552
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3034,
+    "y": 9539
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3039,
+    "y": 9568
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3042,
+    "y": 9560
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3050,
+    "y": 9559
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3072,
+    "y": 9552
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3077,
+    "y": 9559
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3068,
+    "y": 9562
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3076,
+    "y": 9567
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3072,
+    "y": 9576
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3078,
+    "y": 9583
+  },
+  {
+    "id": "NpcId.SKELETAL_WYVERN_140",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3070,
+    "y": 9584
+  }
+]

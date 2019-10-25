@@ -1,0 +1,50 @@
+[
+  {
+    "id": "NpcId.WIZARD_4399",
+    "direction": 1,
+    "x": 2448,
+    "y": 5181
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_KEH",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2495,
+    "y": 5106
+  },
+  {
+    "id": "NpcId.TZHAAR_MEJ_ROH",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2461,
+    "y": 5125
+  },
+  {
+    "id": "NpcId.TZHAAR_MEJ_JAL",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2439,
+    "y": 5169
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_TEL",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2477,
+    "y": 5146
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_LEK",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2463,
+    "y": 5149
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_ZUH",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2445,
+    "y": 5178
+  }
+]

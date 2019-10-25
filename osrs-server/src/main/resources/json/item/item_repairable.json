@@ -1,0 +1,107 @@
+[
+  {
+    "id": "ItemId.FIRE_CAPE_BROKEN",
+    "repairedId": "ItemId.FIRE_CAPE",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "0" } ]
+  },
+  {
+    "id": "ItemId.FIGHTER_TORSO_BROKEN",
+    "repairedId": "ItemId.FIGHTER_TORSO",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "0" } ]
+  },
+  {
+    "id": "ItemId.DRAGON_DEFENDER_BROKEN",
+    "repairedId": "ItemId.DRAGON_DEFENDER",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "40000" } ]
+  },
+  {
+    "id": "ItemId.VOID_KNIGHT_TOP_BROKEN",
+    "repairedId": "ItemId.VOID_KNIGHT_TOP",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "45000" } ]
+  },
+  {
+    "id": "ItemId.ELITE_VOID_TOP_BROKEN",
+    "repairedId": "ItemId.ELITE_VOID_TOP",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "45000" } ]
+  },
+  {
+    "id": "ItemId.VOID_KNIGHT_ROBE_BROKEN",
+    "repairedId": "ItemId.VOID_KNIGHT_ROBE",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "45000" } ]
+  },
+  {
+    "id": "ItemId.ELITE_VOID_ROBE_BROKEN",
+    "repairedId": "ItemId.ELITE_VOID_ROBE",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "45000" } ]
+  },
+  {
+    "id": "ItemId.VOID_KNIGHT_MACE_BROKEN",
+    "repairedId": "ItemId.VOID_KNIGHT_MACE",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "20000" } ]
+  },
+  {
+    "id": "ItemId.VOID_KNIGHT_GLOVES_BROKEN",
+    "repairedId": "ItemId.VOID_KNIGHT_GLOVES",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "30000" } ]
+  },
+  {
+    "id": "ItemId.VOID_MAGE_HELM_BROKEN",
+    "repairedId": "ItemId.VOID_MAGE_HELM",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "40000" } ]
+  },
+  {
+    "id": "ItemId.VOID_RANGER_HELM_BROKEN",
+    "repairedId": "ItemId.VOID_RANGER_HELM",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "40000" } ]
+  },
+  {
+    "id": "ItemId.VOID_MELEE_HELM_BROKEN",
+    "repairedId": "ItemId.VOID_MELEE_HELM",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "40000" } ]
+  },
+  {
+    "id": "ItemId.FIGHTER_HAT_BROKEN",
+    "repairedId": "ItemId.FIGHTER_HAT",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "45000" } ]
+  },
+  {
+    "id": "ItemId.RANGER_HAT_BROKEN",
+    "repairedId": "ItemId.RANGER_HAT",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "45000" } ]
+  },
+  {
+    "id": "ItemId.HEALER_HAT_BROKEN",
+    "repairedId": "ItemId.HEALER_HAT",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "45000" } ]
+  },
+  {
+    "id": "ItemId.PENANCE_SKIRT_BROKEN",
+    "repairedId": "ItemId.PENANCE_SKIRT",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "20000" } ]
+  },
+  {
+    "id": "ItemId.INFERNAL_CAPE_BROKEN",
+    "repairedId": "ItemId.INFERNAL_CAPE",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "50000" } ]
+  },
+  {
+    "id": "ItemId.INFERNAL_MAX_CAPE_BROKEN",
+    "repairedId": "ItemId.INFERNAL_MAX_CAPE",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "50000" } ]
+  },
+  {
+    "id": "ItemId.AVAS_ASSEMBLER_BROKEN",
+    "repairedId": "ItemId.AVAS_ASSEMBLER",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "75000" } ]
+  },
+  {
+    "id": "ItemId.ASSEMBLER_MAX_CAPE_BROKEN",
+    "repairedId": "ItemId.ASSEMBLER_MAX_CAPE",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "75000" } ]
+  },
+  {
+    "id": "ItemId.AVERNIC_DEFENDER_BROKEN",
+    "repairedId": "ItemId.AVERNIC_DEFENDER",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "1000000" } ]
+  }
+]

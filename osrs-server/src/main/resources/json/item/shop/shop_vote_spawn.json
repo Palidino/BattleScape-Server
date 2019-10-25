@@ -1,0 +1,135 @@
+{
+  "name": "Vote Shop",
+  "currency": "ItemId.VOTE_TICKET",
+  "items": [
+    { "id": "ItemId.COINS", "price": 4, "stack": 500000 },
+    { "id": "ItemId.BOUNTY_TELEPORT_SCROLL", "price": 150 },
+    { "id": "ItemId.FIRE_CAPE", "price": 10 },
+    { "id": "ItemId.INFERNAL_CAPE", "price": 1750 },
+    { "id": "ItemId.IMBUED_SARADOMIN_CAPE", "price": 10 },
+    { "id": "ItemId.IMBUED_GUTHIX_CAPE", "price": 10 },
+    { "id": "ItemId.IMBUED_ZAMORAK_CAPE", "price": 10 },
+    { "id": "ItemId.FIGHTER_TORSO", "price": 12 },
+    { "id": "ItemId.DRAGON_DEFENDER", "price": 14 },
+    { "id": "ItemId.DHAROKS_ARMOUR_SET", "price": 14 },
+    { "id": "ItemId.TORAGS_ARMOUR_SET", "price": 14 },
+    { "id": "ItemId.VERACS_ARMOUR_SET", "price": 14 },
+    { "id": "ItemId.GUTHANS_ARMOUR_SET", "price": 14 },
+    { "id": "ItemId.KARILS_ARMOUR_SET", "price": 14 },
+    { "id": "ItemId.AHRIMS_ARMOUR_SET", "price": 14 },
+    { "id": "ItemId.CLUE_SCROLL_EASY", "price": 3 },
+    { "id": "ItemId.CLUE_SCROLL_MEDIUM", "price": 6 },
+    { "id": "ItemId.CLUE_SCROLL_HARD", "price": 9 },
+    { "id": "ItemId.CLUE_SCROLL_ELITE", "price": 12 },
+    { "id": "ItemId.CLUE_SCROLL_MASTER", "price": 15 },
+    {
+      "id": "ItemId.WARRIOR_RING_I",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.WARRIOR_RING",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.BERSERKER_RING_I",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.BERSERKER_RING",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.ARCHERS_RING_I",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.ARCHERS_RING",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.SEERS_RING_I",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.SEERS_RING",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.TYRANNICAL_RING_I",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.TYRANNICAL_RING",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.TREASONOUS_RING_I",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.TREASONOUS_RING",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.RING_OF_THE_GODS_I",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.RING_OF_THE_GODS",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.RING_OF_SUFFERING_I",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.RING_OF_SUFFERING",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.ELITE_VOID_TOP",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.VOID_KNIGHT_TOP",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.ELITE_VOID_ROBE",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.VOID_KNIGHT_ROBE",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.BLACK_MASK_10_I",
+      "price": 8,
+      "costItems": [
+        [
+          { "id": "ItemId.BLACK_MASK_10",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_9",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_8",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_7",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_6",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_5",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_4",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_3",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_2",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_1",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK",  "amount": 1 }
+        ]
+      ]
+    },
+    {
+      "id": "ItemId.SLAYER_HELMET_I",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.SLAYER_HELMET",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.BLACK_SLAYER_HELMET_I",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.BLACK_SLAYER_HELMET",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.RED_SLAYER_HELMET_I",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.RED_SLAYER_HELMET",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.GREEN_SLAYER_HELMET_I",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.GREEN_SLAYER_HELMET",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.PURPLE_SLAYER_HELMET_I",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.PURPLE_SLAYER_HELMET",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.TURQUOISE_SLAYER_HELMET_I",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.TURQUOISE_SLAYER_HELMET",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.HYDRA_SLAYER_HELMET_I",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.HYDRA_SLAYER_HELMET",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.SALVE_AMULET_EI",
+      "price": 8,
+      "costItems": [ [ { "id": "ItemId.SALVE_AMULET_E",  "amount": 1 } ] ]
+    }
+  ]
+}

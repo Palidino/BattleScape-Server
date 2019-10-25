@@ -1,0 +1,209 @@
+[
+  {
+    "id": "NpcId.BANKER",
+    "direction": 3,
+    "x": 3096,
+    "y": 3489
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 3,
+    "x": 3096,
+    "y": 3491
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 6,
+    "x": 3096,
+    "y": 3492
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 6,
+    "x": 3098,
+    "y": 3492
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 4,
+    "x": 3081,
+    "y": 3510
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 3,
+    "x": 3079,
+    "y": 3510
+  },
+  {
+    "id": "NpcId.GRAND_EXCHANGE_CLERK",
+    "direction": 1,
+    "x": 3080,
+    "y": 3509
+  },
+  {
+    "id": "NpcId.GRAND_EXCHANGE_CLERK_2149",
+    "direction": 6,
+    "x": 3080,
+    "y": 3511
+  },
+  {
+    "id": "NpcId.BANKER_2898",
+    "direction": 4,
+    "x": 3081,
+    "y": 3510
+  },
+  {
+    "id": "NpcId.BANKER_2897",
+    "direction": 3,
+    "x": 3079,
+    "y": 3510
+  },
+  {
+    "id": "NpcId.BOB_BARTER_HERBS",
+    "direction": 4,
+    "x": 3076,
+    "y": 3507
+  },
+  {
+    "id": "NpcId.PERDU",
+    "direction": 6,
+    "x": 3093,
+    "y": 3507
+  },
+  {
+    "id": "NpcId.MAGE_OF_ZAMORAK_2582",
+    "direction": 6,
+    "x": 3091,
+    "y": 3507
+  },
+  {
+    "id": "NpcId.WIZARD_4399",
+    "direction": 1,
+    "moveDistance": 1,
+    "x": 3085,
+    "y": 3498
+  },
+  {
+    "id": "NpcId.EMBLEM_TRADER_316",
+    "direction": 1,
+    "moveDistance": 1,
+    "x": 3096,
+    "y": 3504
+  },
+  {
+    "id": "NpcId.MARTIN_THWAIT",
+    "direction": 6,
+    "x": 3110,
+    "y": 3496
+  },
+  {
+    "id": "NpcId.TANNER",
+    "direction": 3,
+    "x": 3110,
+    "y": 3500
+  },
+  {
+    "id": "NpcId.COMBAT_DUMMY",
+    "direction": 6,
+    "x": 3098,
+    "y": 3507
+  },
+  {
+    "id": "NpcId.COMBAT_DUMMY",
+    "direction": 3,
+    "x": 3100,
+    "y": 3508
+  },
+  {
+    "id": "NpcId.OZIACH",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3069,
+    "y": 3517
+  },
+  {
+    "id": "NpcId.KRYSTILIA",
+    "direction": 1,
+    "x": 3079,
+    "y": 3496
+  },
+  {
+    "id": "NpcId.CAPN_IZZY_NO_BEARD",
+    "direction": 6,
+    "x": 3080,
+    "y": 3489
+  },
+  {
+    "id": "NpcId.SKILLING_SELLER",
+    "direction": 6,
+    "x": 3079,
+    "y": 3489
+  },
+  {
+    "id": "NpcId.MAC_126",
+    "direction": 6,
+    "x": 3078,
+    "y": 3489
+  },
+  {
+    "id": "NpcId.TWIGGY_OKORN",
+    "direction": 4,
+    "x": 3077,
+    "y": 3490
+  },
+  {
+    "id": "NpcId.HEAD_CHEF",
+    "direction": 4,
+    "x": 3077,
+    "y": 3493
+  },
+  {
+    "id": "NpcId.AJJAT",
+    "direction": 4,
+    "x": 3077,
+    "y": 3492
+  },
+  {
+    "id": "NpcId.PROBITA",
+    "direction": 4,
+    "x": 3077,
+    "y": 3495
+  },
+  {
+    "id": "NpcId.LOYALTY_MANAGER",
+    "direction": 6,
+    "x": 3093,
+    "y": 3488
+  },
+  {
+    "id": "NpcId.GUIDE",
+    "direction": 1,
+    "x": 3094,
+    "y": 3499
+  },
+  {
+    "id": "NpcId.MAKE_OVER_MAGE",
+    "direction": 1,
+    "x": 3095,
+    "y": 3499
+  },
+  {
+    "id": "NpcId.VOTE_MANAGER",
+    "direction": 4,
+    "x": 3090,
+    "y": 3496
+  },
+  {
+    "id": "NpcId.CAPT_BOND_16018",
+    "direction": 4,
+    "x": 3090,
+    "y": 3494
+  },
+  {
+    "id": "NpcId.WISE_OLD_MAN",
+    "direction": 3,
+    "x": 3097,
+    "y": 3473
+  }
+]

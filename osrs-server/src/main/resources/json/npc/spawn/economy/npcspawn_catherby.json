@@ -1,0 +1,126 @@
+[
+  {
+    "id": "NpcId.DANTAERA",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2807,
+    "y": 3463
+  },
+  {
+    "id": "NpcId.ELLENA",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2859,
+    "y": 3431
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "x": 2807,
+    "y": 3443
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "x": 2810,
+    "y": 3443
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 1,
+    "x": 2811,
+    "y": 3443
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 1,
+    "x": 2809,
+    "y": 3443
+  },
+  {
+    "id": "NpcId.ARHEIN",
+    "direction": 4,
+    "x": 2803,
+    "y": 3430
+  },
+  {
+    "id": "NpcId.TRADER_CREWMEMBER_1331",
+    "direction": 1,
+    "x": 2797,
+    "y": 3415
+  },
+  {
+    "id": "NpcId.TRADER_CREWMEMBER_1334",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2799,
+    "y": 3414
+  },
+  {
+    "id": "NpcId.MAN_2_3078",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2804,
+    "y": 3425
+  },
+  {
+    "id": "NpcId.MAN_2_3078",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2805,
+    "y": 3433
+  },
+  {
+    "id": "NpcId.CANDLE_MAKER",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2799,
+    "y": 3439
+  },
+  {
+    "id": "NpcId.PERDU",
+    "direction": 1,
+    "x": 2808,
+    "y": 3454
+  },
+  {
+    "id": "NpcId.VANESSA",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2820,
+    "y": 3461
+  },
+  {
+    "id": "NpcId.CALEB",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2816,
+    "y": 3452
+  },
+  {
+    "id": "NpcId.WOMAN_2_3084",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2820,
+    "y": 3441
+  },
+  {
+    "id": "NpcId.HARRY",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2834,
+    "y": 3443
+  },
+  {
+    "id": "NpcId.TOOL_LEPRECHAUN",
+    "direction": 1,
+    "x": 2856,
+    "y": 3435
+  },
+  {
+    "id": "NpcId.TOOL_LEPRECHAUN",
+    "direction": 3,
+    "x": 2815,
+    "y": 3466
+  }
+]

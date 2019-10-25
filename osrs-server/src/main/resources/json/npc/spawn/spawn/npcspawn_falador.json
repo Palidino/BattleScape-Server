@@ -1,0 +1,659 @@
+[
+  {
+    "id": "NpcId.SIR_VYVIN",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2979,
+    "y": 3341
+  },
+  {
+    "id": "NpcId.DUCK_1",
+    "direction": 1,
+    "moveDistance": 1,
+    "x": 3016,
+    "y": 3379
+  },
+  {
+    "id": "NpcId.DUCK_1",
+    "direction": 1,
+    "moveDistance": 1,
+    "x": 3020,
+    "y": 3382
+  },
+  {
+    "id": "NpcId.DUCK_1",
+    "direction": 1,
+    "moveDistance": 1,
+    "x": 3019,
+    "y": 3379
+  },
+  {
+    "id": "NpcId.DUCK_1",
+    "direction": 1,
+    "moveDistance": 1,
+    "x": 2962,
+    "y": 3360
+  },
+  {
+    "id": "NpcId.DUCK_1",
+    "direction": 1,
+    "moveDistance": 1,
+    "x": 2959,
+    "y": 3359
+  },
+  {
+    "id": "NpcId.DUCK_1",
+    "direction": 1,
+    "moveDistance": 1,
+    "x": 2956,
+    "y": 3356
+  },
+  {
+    "id": "NpcId.DUCK_1",
+    "direction": 1,
+    "moveDistance": 1,
+    "x": 2954,
+    "y": 3352
+  },
+  {
+    "id": "NpcId.DUCK_1",
+    "direction": 1,
+    "moveDistance": 1,
+    "x": 2968,
+    "y": 3360
+  },
+  {
+    "id": "NpcId.DUCK_1",
+    "direction": 1,
+    "moveDistance": 1,
+    "x": 2972,
+    "y": 3359
+  },
+  {
+    "id": "NpcId.DUCK_1",
+    "direction": 1,
+    "moveDistance": 1,
+    "x": 2977,
+    "y": 3358
+  },
+  {
+    "id": "NpcId.HESKEL",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3008,
+    "y": 3373
+  },
+  {
+    "id": "NpcId.ELSTAN",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3052,
+    "y": 3304
+  },
+  {
+    "id": "NpcId.WYSON_THE_GARDENER",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3028,
+    "y": 3379
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 6,
+    "x": 2946,
+    "y": 3366
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 6,
+    "x": 2945,
+    "y": 3366
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 6,
+    "x": 2947,
+    "y": 3366
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 6,
+    "x": 2948,
+    "y": 3366
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 6,
+    "x": 2949,
+    "y": 3366
+  },
+  {
+    "id": "NpcId.GUARD_21_3269",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2951,
+    "y": 3355
+  },
+  {
+    "id": "NpcId.GUARD_22_3270",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2948,
+    "y": 3375
+  },
+  {
+    "id": "NpcId.GUARD_22_3272",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2952,
+    "y": 3378
+  },
+  {
+    "id": "NpcId.TOWN_CRIER_278",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2954,
+    "y": 3382
+  },
+  {
+    "id": "NpcId.GUARD_19",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2951,
+    "y": 3382
+  },
+  {
+    "id": "NpcId.GUARD_19",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2959,
+    "y": 3381
+  },
+  {
+    "id": "NpcId.HAIRDRESSER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2944,
+    "y": 3380
+  },
+  {
+    "id": "NpcId.FLYNN",
+    "direction": 1,
+    "moveDistance": 44,
+    "x": 2950,
+    "y": 3387
+  },
+  {
+    "id": "NpcId.SHOP_KEEPER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2956,
+    "y": 3389
+  },
+  {
+    "id": "NpcId.SHOP_KEEPER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2959,
+    "y": 3388
+  },
+  {
+    "id": "NpcId.EMILY",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2954,
+    "y": 3372
+  },
+  {
+    "id": "NpcId.KAYLEE",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2957,
+    "y": 3370
+  },
+  {
+    "id": "NpcId.GUARD_19",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2964,
+    "y": 3375
+  },
+  {
+    "id": "NpcId.GUARD_22_3274",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2967,
+    "y": 3378
+  },
+  {
+    "id": "NpcId.GUARD_21_3269",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2962,
+    "y": 3381
+  },
+  {
+    "id": "NpcId.GUARD_22_3272",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2967,
+    "y": 3384
+  },
+  {
+    "id": "NpcId.GUARD_21_3269",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2964,
+    "y": 3385
+  },
+  {
+    "id": "NpcId.GUARD_19",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2964,
+    "y": 3393
+  },
+  {
+    "id": "NpcId.GUARD_19",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2967,
+    "y": 3397
+  },
+  {
+    "id": "NpcId.GUARD_21_3269",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2964,
+    "y": 3396
+  },
+  {
+    "id": "NpcId.GUARD_21_3269",
+    "direction": 1,
+    "moveDistance": 44,
+    "x": 2967,
+    "y": 3393
+  },
+  {
+    "id": "NpcId.GUARD_21_3269",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2965,
+    "y": 3390
+  },
+  {
+    "id": "NpcId.CASSIE",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2975,
+    "y": 3383
+  },
+  {
+    "id": "NpcId.ESTATE_AGENT",
+    "direction": 1,
+    "moveDistance": 1,
+    "x": 2983,
+    "y": 3369
+  },
+  {
+    "id": "NpcId.MAN_2_3264",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2989,
+    "y": 3364
+  },
+  {
+    "id": "NpcId.WOMAN_2_3267",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2990,
+    "y": 3384
+  },
+  {
+    "id": "NpcId.SIR_TIFFY_CASHIEN",
+    "direction": 1,
+    "x": 2997,
+    "y": 3373
+  },
+  {
+    "id": "NpcId.GARDENER_4",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2997,
+    "y": 3380
+  },
+  {
+    "id": "NpcId.GARDENER_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3010,
+    "y": 3384
+  },
+  {
+    "id": "NpcId.TOOL_LEPRECHAUN",
+    "direction": 6,
+    "x": 3005,
+    "y": 3370
+  },
+  {
+    "id": "NpcId.GARDENER_4",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3015,
+    "y": 3369
+  },
+  {
+    "id": "NpcId.GARDEN_SUPPLIER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3016,
+    "y": 3373
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 6,
+    "x": 3010,
+    "y": 3353
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 6,
+    "x": 3011,
+    "y": 3353
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 6,
+    "x": 3012,
+    "y": 3353
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 6,
+    "x": 3013,
+    "y": 3353
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 6,
+    "x": 3014,
+    "y": 3353
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 6,
+    "x": 3015,
+    "y": 3353
+  },
+  {
+    "id": "NpcId.GUARD_21_3269",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3035,
+    "y": 3354
+  },
+  {
+    "id": "NpcId.GUARD_22_3270",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3041,
+    "y": 3352
+  },
+  {
+    "id": "NpcId.MAN_2_3265",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3047,
+    "y": 3364
+  },
+  {
+    "id": "NpcId.PARTY_PETE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3050,
+    "y": 3377
+  },
+  {
+    "id": "NpcId.GUARD_21_3269",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3006,
+    "y": 3321
+  },
+  {
+    "id": "NpcId.GUARD_21_3269",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3008,
+    "y": 3321
+  },
+  {
+    "id": "NpcId.GUARD_21_3269",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3007,
+    "y": 3324
+  },
+  {
+    "id": "NpcId.IMP_7",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3017,
+    "y": 3323
+  },
+  {
+    "id": "NpcId.WAYNE",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2971,
+    "y": 3312
+  },
+  {
+    "id": "NpcId.HERQUIN",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2945,
+    "y": 3334
+  },
+  {
+    "id": "NpcId.IMP_7",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3008,
+    "y": 3307
+  },
+  {
+    "id": "NpcId.PIG",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3015,
+    "y": 3310
+  },
+  {
+    "id": "NpcId.PIG_2812",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3019,
+    "y": 3309
+  },
+  {
+    "id": "NpcId.PIGLET",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3015,
+    "y": 3307
+  },
+  {
+    "id": "NpcId.PIGLET_2814",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3017,
+    "y": 3305
+  },
+  {
+    "id": "NpcId.PIGLET_2815",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3017,
+    "y": 3308
+  },
+  {
+    "id": "NpcId.COW_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3027,
+    "y": 3307
+  },
+  {
+    "id": "NpcId.COW_2_2806",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3039,
+    "y": 3307
+  },
+  {
+    "id": "NpcId.COW_2_2808",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3025,
+    "y": 3300
+  },
+  {
+    "id": "NpcId.COW_2_2810",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3034,
+    "y": 3301
+  },
+  {
+    "id": "NpcId.COW_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3033,
+    "y": 3306
+  },
+  {
+    "id": "NpcId.COW_2_2806",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3029,
+    "y": 3302
+  },
+  {
+    "id": "NpcId.COW_2_2808",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3024,
+    "y": 3306
+  },
+  {
+    "id": "NpcId.COW_2_2810",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3037,
+    "y": 3304
+  },
+  {
+    "id": "NpcId.COW_CALF_2",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3036,
+    "y": 3309
+  },
+  {
+    "id": "NpcId.COW_CALF_2_2809",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3030,
+    "y": 3310
+  },
+  {
+    "id": "NpcId.CHICKEN_1",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3015,
+    "y": 3288
+  },
+  {
+    "id": "NpcId.CHICKEN_1",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3018,
+    "y": 3288
+  },
+  {
+    "id": "NpcId.CHICKEN_1",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3019,
+    "y": 3293
+  },
+  {
+    "id": "NpcId.CHICKEN_1_2693",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3016,
+    "y": 3292
+  },
+  {
+    "id": "NpcId.CHICKEN_1_2693",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3017,
+    "y": 3290
+  },
+  {
+    "id": "NpcId.CHICKEN_1_2693",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3018,
+    "y": 3286
+  },
+  {
+    "id": "NpcId.CHICKEN_1",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3023,
+    "y": 3287
+  },
+  {
+    "id": "NpcId.CHICKEN_1",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3033,
+    "y": 3293
+  },
+  {
+    "id": "NpcId.SHEEPDOG",
+    "direction": 1,
+    "x": 3035,
+    "y": 3296
+  },
+  {
+    "id": "NpcId.SARAH",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3039,
+    "y": 3292
+  },
+  {
+    "id": "NpcId.CHICKEN_1",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3029,
+    "y": 3285
+  },
+  {
+    "id": "NpcId.CHICKEN_1_2693",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3035,
+    "y": 3287
+  },
+  {
+    "id": "NpcId.TOOL_LEPRECHAUN",
+    "direction": 1,
+    "x": 3053,
+    "y": 3305
+  }
+]

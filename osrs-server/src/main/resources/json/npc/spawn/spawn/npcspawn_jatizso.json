@@ -1,0 +1,119 @@
+[
+  {
+    "id": "NpcId.WIZARD_4399",
+    "direction": 1,
+    "x": 2418,
+    "y": 3803
+  },
+  {
+    "id": "NpcId.MINER_1993",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2413,
+    "y": 3805
+  },
+  {
+    "id": "NpcId.LENSA",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2411,
+    "y": 3807
+  },
+  {
+    "id": "NpcId.THORKEL_SILKBEARD",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2409,
+    "y": 3803
+  },
+  {
+    "id": "NpcId.KING_GJUKI_SORVOTT_IV",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2407,
+    "y": 3802
+  },
+  {
+    "id": "NpcId.HRH_HRAFN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2406,
+    "y": 3802
+  },
+  {
+    "id": "NpcId.ERIC_1997",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2405,
+    "y": 3808
+  },
+  {
+    "id": "NpcId.KEEPA_KETTILON",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2417,
+    "y": 3815
+  },
+  {
+    "id": "NpcId.FLOSI_DALKSSON",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2417,
+    "y": 3813
+  },
+  {
+    "id": "NpcId.BRENDT",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2409,
+    "y": 3814
+  },
+  {
+    "id": "NpcId.GRUNDT",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2406,
+    "y": 3815
+  },
+  {
+    "id": "NpcId.MINER_1993",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2414,
+    "y": 3820
+  },
+  {
+    "id": "NpcId.MAGNUS_GRAM",
+    "direction": 6,
+    "x": 2416,
+    "y": 3799
+  },
+  {
+    "id": "NpcId.RAUM_URDA_STEIN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2396,
+    "y": 3797
+  },
+  {
+    "id": "NpcId.HRING_HRING",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2398,
+    "y": 3804
+  },
+  {
+    "id": "NpcId.SKULI_MYRKA",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2398,
+    "y": 3797
+  },
+  {
+    "id": "NpcId.MINER_1993",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2392,
+    "y": 3801
+  }
+]

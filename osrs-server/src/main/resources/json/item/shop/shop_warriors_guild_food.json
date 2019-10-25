@@ -1,0 +1,12 @@
+{
+  "name": "Warrior Guild Food Shop",
+  "sellExchangeMultiplier": 1.0,
+  "ceilPrice": true,
+  "items": [
+    { "id": "ItemId.TROUT" },
+    { "id": "ItemId.BASS" },
+    { "id": "ItemId.PLAIN_PIZZA" },
+    { "id": "ItemId.POTATO_WITH_CHEESE" },
+    { "id": "ItemId.STEW" }
+  ]
+}

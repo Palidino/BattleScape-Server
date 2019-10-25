@@ -1,0 +1,22 @@
+{
+  "name": "Oneiromancer's Shop",
+  "sellExchangeMultiplier": 1.0,
+  "ceilPrice": true,
+  "items": [
+    { "id": "ItemId.ASTRAL_RUNE" },
+    { "id": "ItemId.LUNAR_STAFF", "price": 30000 },
+    { "id": "ItemId.LUNAR_HELM", "price": 15000 },
+    { "id": "ItemId.LUNAR_TORSO", "price": 120000 },
+    { "id": "ItemId.LUNAR_LEGS", "price": 80000 },
+    { "id": "ItemId.LUNAR_CAPE", "price": 12000 },
+    { "id": "ItemId.LUNAR_AMULET", "price": 4000 },
+    { "id": "ItemId.LUNAR_RING", "price": 2000 },
+    { "id": "ItemId.MOONCLAN_HELM", "price": 1000 },
+    { "id": "ItemId.MOONCLAN_HAT", "price": 1000 },
+    { "id": "ItemId.MOONCLAN_ARMOUR", "price": 1000 },
+    { "id": "ItemId.MOONCLAN_SKIRT", "price": 1000 },
+    { "id": "ItemId.MOONCLAN_GLOVES", "price": 900 },
+    { "id": "ItemId.MOONCLAN_BOOTS", "price": 900 },
+    { "id": "ItemId.MOONCLAN_CAPE", "price": 200 }
+  ]
+}

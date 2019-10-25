@@ -1,0 +1,105 @@
+[
+  {
+    "id": "NpcId.WIZARD_4399",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2566,
+    "y": 2859
+  },
+  {
+    "id": "NpcId.MADAME_CALDARIUM",
+    "direction": 1,
+    "x": 2553,
+    "y": 2868
+  },
+  {
+    "id": "NpcId.YUSUF_7982",
+    "direction": 1,
+    "x": 2569,
+    "y": 2866
+  },
+  {
+    "id": "NpcId.SEAGULL_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2547,
+    "y": 2856
+  },
+  {
+    "id": "NpcId.SEAGULL_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2561,
+    "y": 2864
+  },
+  {
+    "id": "NpcId.SEAGULL_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2562,
+    "y": 2853
+  },
+  {
+    "id": "NpcId.SEAGULL_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2564,
+    "y": 2857
+  },
+  {
+    "id": "NpcId.SEAGULL_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2578,
+    "y": 2862
+  },
+  {
+    "id": "NpcId.SEAGULL_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2581,
+    "y": 2862
+  },
+  {
+    "id": "NpcId.SEAGULL_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2575,
+    "y": 2852
+  },
+  {
+    "id": "NpcId.SEAGULL_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2571,
+    "y": 2852
+  },
+  {
+    "id": "NpcId.SEAGULL_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2579,
+    "y": 2846
+  },
+  {
+    "id": "NpcId.SEAGULL_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2580,
+    "y": 2850
+  },
+  {
+    "id": "NpcId.SEAGULL_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2578,
+    "y": 2853
+  },
+  {
+    "id": "NpcId.SEAGULL_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2577,
+    "y": 2856
+  }
+]

@@ -1,0 +1,32 @@
+Shops and Untradeables
+
+<col=800000>Shops</col>
+All shops are in the building west of the bank.
+
+<col=004080>Cap'n Izzy No-Beard:</col> Agility Shop
+<col=004080>Skilling Seller:</col> Skilling Supplies
+<col=004080>Mac:</col> Capes of Accomplishment
+<col=004080>Twiggy O'Korn:</col> Achievement Diary
+<col=004080><col=004080>Ajjat:</col> Equipment Shop
+<col=004080>Head Chef:</col> General Store
+<col=004080>Probita:</col> Pet Shop
+
+<col=800000>Untradeable Items</col>
+Some of these items can be purchased at their listed locations or with blood money.
+
+<col=004080>Armored gloves:</col> Recipe for Disaster Quest
+<col=004080>Ava's accumulator:</col> Pest Control
+<col=004080>Ava's attractor:</col> Ajjat (Equipment Store)
+<col=004080>Barbarian assault equipment:</col> Pest Control
+<col=004080>Castle Wars equipment:</col> Pest Control
+<col=004080>Defenders:</col> Warriors’ Guild
+<col=004080>Fire cape:</col> TzHaar Fight Cave
+<col=004080>God capes:</col> Mage Arena 1 & 2
+<col=004080>God staves:</col> Mage Arena 1
+<col=004080>Infernal cape:</col> TzHaar Inferno
+<col=004080>Ring of wealth:</col> purchased with a bond
+<col=004080>Rune pouch:</col> Boss Slayer
+<col=004080>Slayer helmet:</col> Slayer Points
+<col=004080>Void knight equipment:</col> Pest Control
+
+Perdu, located north of the Edgeville bank, is able to repair your untradeable items broken on death for a small fee.

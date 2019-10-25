@@ -1,0 +1,182 @@
+{
+  "Dragon cane": [
+    [ "DRAGON_CANE" ]
+  ],
+  "Briefcase": [
+    [ "BRIEFCASE" ]
+  ],
+  "Sagacious spectacles": [
+    [ "SAGACIOUS_SPECTACLES" ]
+  ],
+  "Royal outfit": [
+    [ "ROYAL_GOWN_TOP" ],
+    [ "ROYAL_CROWN" ],
+    [ "ROYAL_GOWN_BOTTOM" ],
+    [ "ROYAL_SCEPTRE" ]
+  ],
+  "Bronze dragon mask": [
+    [ "BRONZE_DRAGON_MASK" ]
+  ],
+  "Iron dragon mask": [
+    [ "IRON_DRAGON_MASK" ]
+  ],
+  "Steel dragon mask": [
+    [ "STEEL_DRAGON_MASK" ]
+  ],
+  "Mithril dragon mask": [
+    [ "MITHRIL_DRAGON_MASK" ]
+  ],
+  "Lava dragon mask": [
+    [ "LAVA_DRAGON_MASK" ]
+  ],
+  "Afro": [
+    [ "AFRO" ]
+  ],
+  "Katana": [
+    [ "KATANA" ]
+  ],
+  "Big pirate hat": [
+    [ "BIG_PIRATE_HAT" ]
+  ],
+  "Top hat": [
+    [ "TOP_HAT" ]
+  ],
+  "Monocle": [
+    [ "MONOCLE" ]
+  ],
+  "Black dragonhide (gold)": [
+    [ "BLACK_DHIDE_BODY_G" ],
+    [ "BLACK_DHIDE_CHAPS_G" ]
+  ],
+  "Black dragonhide (trim)": [
+    [ "BLACK_DHIDE_BODY_T" ],
+    [ "BLACK_DHIDE_CHAPS_T" ]
+  ],
+  "Musketeer outfit": [
+    [ "MUSKETEER_TABARD" ],
+    [ "MUSKETEER_HAT" ],
+    [ "MUSKETEER_PANTS" ]
+  ],
+  "Partyhat & specs": [
+    [ "PARTYHAT_SPECS" ]
+  ],
+  "Pirate hat & patch": [
+    [ "PIRATE_HAT_PATCH" ]
+  ],
+  "Top hat & monocle": [
+    [ "TOP_HAT_MONOCLE" ]
+  ],
+  "Deerstalker": [
+    [ "DEERSTALKER" ]
+  ],
+  "Heavy casket": [
+    [ "HEAVY_CASKET" ]
+  ],
+  "Arceuus scarf": [
+    [ "ARCEUUS_SCARF" ]
+  ],
+  "Hosidius scarf": [
+    [ "HOSIDIUS_SCARF" ]
+  ],
+  "Lovakengj scarf": [
+    [ "LOVAKENGJ_SCARF" ]
+  ],
+  "Piscarilius scarf": [
+    [ "PISCARILIUS_SCARF" ]
+  ],
+  "Shayzien scarf": [
+    [ "SHAYZIEN_SCARF" ]
+  ],
+  "Blacksmith's helm": [
+    [ "BLACKSMITHS_HELM" ]
+  ],
+  "Bucket helm": [
+    [ "BUCKET_HELM" ]
+  ],
+  "Ranger gloves": [
+    [ "RANGER_GLOVES" ]
+  ],
+  "Rangers' tunic": [
+    [ "RANGERS_TUNIC" ]
+  ],
+  "Holy wraps": [
+    [ "HOLY_WRAPS" ]
+  ],
+  "Ring of nature": [
+    [ "RING_OF_NATURE" ]
+  ],
+  "3rd age wand": [
+    [ "_3RD_AGE_WAND" ]
+  ],
+  "3rd age bow": [
+    [ "_3RD_AGE_BOW" ]
+  ],
+  "3rd age longsword": [
+    [ "_3RD_AGE_LONGSWORD" ]
+  ],
+  "3rd age cloak": [
+    [ "_3RD_AGE_CLOAK" ]
+  ],
+  "Dark tuxedo outfit": [
+    [ "DARK_TUXEDO_JACKET" ],
+    [ "DARK_TROUSERS" ],
+    [ "DARK_TUXEDO_CUFFS" ],
+    [ "DARK_TUXEDO_SHOES" ],
+    [ "DARK_BOW_TIE" ]
+  ],
+  "Light tuxedo outfit": [
+    [ "LIGHT_TUXEDO_JACKET" ],
+    [ "LIGHT_TROUSERS" ],
+    [ "LIGHT_TUXEDO_CUFFS" ],
+    [ "LIGHT_TUXEDO_SHOES" ],
+    [ "LIGHT_BOW_TIE" ]
+  ],
+  "Fremennik kilt": [
+    [ "FREMENNIK_KILT" ]
+  ],
+  "Adamant dragon mask": [
+    [ "ADAMANT_DRAGON_MASK" ]
+  ],
+  "Rune dragon mask": [
+    [ "RUNE_DRAGON_MASK" ]
+  ],
+  "Rangers' tights": [
+    [ "RANGERS_TIGHTS" ]
+  ],
+  "Gilded coif": [
+    [ "GILDED_COIF" ]
+  ],
+  "Gilded d'hide vambs": [
+    [ "GILDED_DHIDE_VAMBS" ]
+  ],
+  "Gilded d'hide body": [
+    [ "GILDED_DHIDE_BODY" ]
+  ],
+  "Gilded d'hide chaps": [
+    [ "GILDED_DHIDE_CHAPS" ]
+  ],
+  "Gilded boots": [
+    [ "GILDED_BOOTS" ]
+  ],
+  "Gilded scimitar": [
+    [ "GILDED_SCIMITAR" ]
+  ],
+  "Gilded pickaxe": [
+    [ "GILDED_PICKAXE" ]
+  ],
+  "Gilded axe": [
+    [ "GILDED_AXE" ]
+  ],
+  "Gilded spade": [
+    [ "GILDED_SPADE" ]
+  ],
+  "Uri's hat": [
+    [ "URIS_HAT" ]
+  ],
+  "Giant boot": [
+    [ "GIANT_BOOT" ]
+  ],
+  "Ring of 3rd age": [
+    [ "RING_OF_3RD_AGE" ]
+  ]
+}

@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "console": "internalConsole",
+            "projectName": "osrs-server",
+            "name": "OSRS Eco Server",
+            "request": "launch",
+            "vmArgs": "-Xmx768m -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=25 -XX:MaxGCPauseMillis=50",
+            "mainClass": "com.palidinodh.osrsserver.Main"
+        }
+    ]
+}

@@ -1,0 +1,326 @@
+{
+  "Rune heraldic kiteshield 1": [
+    [ "RUNE_SHIELD_H1" ]
+  ],
+  "Rune heraldic kiteshield 2": [
+    [ "RUNE_SHIELD_H2" ]
+  ],
+  "Rune heraldic kiteshield 3": [
+    [ "RUNE_SHIELD_H3" ]
+  ],
+  "Rune heraldic kiteshield 4": [
+    [ "RUNE_SHIELD_H4" ]
+  ],
+  "Rune heraldic kiteshield 5": [
+    [ "RUNE_SHIELD_H5" ]
+  ],
+  "Blue dragonhide (gold)": [
+    [ "BLUE_DHIDE_BODY_G" ],
+    [ "BLUE_DHIDE_CHAPS_G" ]
+  ],
+  "Blue dragonhide (trim)": [
+    [ "BLUE_DHIDE_BODY_T" ],
+    [ "BLUE_DHIDE_CHAPS_T" ]
+  ],
+  "Enchanted robes": [
+    [ "ENCHANTED_TOP" ],
+    [ "ENCHANTED_HAT" ],
+    [ "ENCHANTED_ROBE" ]
+  ],
+  "Robin hood hat": [
+    [ "ROBIN_HOOD_HAT" ]
+  ],
+  "Gold-trimmed rune armour": [
+    [ "RUNE_PLATEBODY_G" ],
+    [ "RUNE_FULL_HELM_G" ],
+    [ "RUNE_PLATELEGS_G", "RUNE_PLATESKIRT_G" ],
+    [ "RUNE_KITESHIELD_G" ]
+  ],
+  "Trimmed rune armour": [
+    [ "RUNE_PLATEBODY_T" ],
+    [ "RUNE_FULL_HELM_T" ],
+    [ "RUNE_PLATELEGS_T", "RUNE_PLATESKIRT_T" ],
+    [ "RUNE_KITESHIELD_T" ]
+  ],
+  "Tan cavalier": [
+    [ "TAN_CAVALIER" ]
+  ],
+  "Dark cavalier": [
+    [ "DARK_CAVALIER" ]
+  ],
+  "Black cavalier": [
+    [ "BLACK_CAVALIER" ]
+  ],
+  "Pirate's hat": [
+    [ "PIRATES_HAT" ]
+  ],
+  "Zamorak rune armour": [
+    [ "ZAMORAK_PLATEBODY" ],
+    [ "ZAMORAK_FULL_HELM" ],
+    [ "ZAMORAK_PLATELEGS", "ZAMORAK_PLATESKIRT" ],
+    [ "ZAMORAK_KITESHIELD" ]
+  ],
+  "Saradomin rune armour": [
+    [ "SARADOMIN_PLATEBODY" ],
+    [ "SARADOMIN_FULL_HELM" ],
+    [ "SARADOMIN_PLATELEGS", "SARADOMIN_PLATESKIRT" ],
+    [ "SARADOMIN_KITESHIELD" ]
+  ],
+  "Guthix rune armour": [
+    [ "GUTHIX_PLATEBODY" ],
+    [ "GUTHIX_FULL_HELM" ],
+    [ "GUTHIX_PLATELEGS", "GUTHIX_PLATESKIRT" ],
+    [ "GUTHIX_KITESHIELD" ]
+  ],
+  "Gilded rune armour": [
+    [ "GILDED_PLATEBODY" ],
+    [ "GILDED_FULL_HELM" ],
+    [ "GILDED_PLATELEGS", "GILDED_PLATESKIRT" ],
+    [ "GILDED_KITESHIELD" ]
+  ],
+  "Rune heraldic helm 1": [
+    [ "RUNE_HELM_H1" ]
+  ],
+  "Rune heraldic helm 2": [
+    [ "RUNE_HELM_H2" ]
+  ],
+  "Rune heraldic helm 3": [
+    [ "RUNE_HELM_H3" ]
+  ],
+  "Rune heraldic helm 4": [
+    [ "RUNE_HELM_H4" ]
+  ],
+  "Rune heraldic helm 5": [
+    [ "RUNE_HELM_H5" ]
+  ],
+  "Trimmed amulet of glory": [
+    [
+      "AMULET_OF_GLORY_T6",
+      "AMULET_OF_GLORY_T5",
+      "AMULET_OF_GLORY_T4",
+      "AMULET_OF_GLORY_T3",
+      "AMULET_OF_GLORY_T2",
+      "AMULET_OF_GLORY_T1",
+      "AMULET_OF_GLORY_T"
+    ]
+  ],
+  "Saradomin vestments": [
+    [ "SARADOMIN_ROBE_TOP" ],
+    [ "SARADOMIN_MITRE" ],
+    [ "SARADOMIN_ROBE_LEGS" ],
+    [ "SARADOMIN_CLOAK" ],
+    [ "SARADOMIN_CROZIER" ],
+    [ "SARADOMIN_STOLE" ]
+  ],
+  "Guthix vestments": [
+    [ "GUTHIX_ROBE_TOP" ],
+    [ "GUTHIX_MITRE" ],
+    [ "GUTHIX_ROBE_LEGS" ],
+    [ "GUTHIX_CLOAK" ],
+    [ "GUTHIX_CROZIER" ],
+    [ "GUTHIX_STOLE" ]
+  ],
+  "Zamorak vestments": [
+    [ "ZAMORAK_ROBE_TOP" ],
+    [ "ZAMORAK_MITRE" ],
+    [ "ZAMORAK_ROBE_LEGS" ],
+    [ "ZAMORAK_CLOAK" ],
+    [ "ZAMORAK_CROZIER" ],
+    [ "ZAMORAK_STOLE" ]
+  ],
+  "Saradomin blessed d'hide armour": [
+    [ "SARADOMIN_DHIDE" ],
+    [ "SARADOMIN_COIF" ],
+    [ "SARADOMIN_CHAPS" ],
+    [ "SARADOMIN_BRACERS" ]
+  ],
+  "Zamorak blessed d'hide armour": [
+    [ "ZAMORAK_DHIDE" ],
+    [ "ZAMORAK_COIF" ],
+    [ "ZAMORAK_CHAPS" ],
+    [ "ZAMORAK_BRACERS" ]
+  ],
+  "Guthix blessed d'hide armour": [
+    [ "GUTHIX_DHIDE" ],
+    [ "GUTHIX_COIF" ],
+    [ "GUTHIX_CHAPS" ],
+    [ "GUTHIX_BRACERS" ]
+  ],
+  "Cavalier mask": [
+    [ "CAVALIER_MASK" ]
+  ],
+  "Red dragonhide (gold)": [
+    [ "RED_DHIDE_BODY_G" ],
+    [ "RED_DHIDE_CHAPS_G" ]
+  ],
+  "Red dragonhide (trim)": [
+    [ "RED_DHIDE_BODY_T" ],
+    [ "RED_DHIDE_CHAPS_T" ]
+  ],
+  "Red cavalier": [
+    [ "RED_CAVALIER" ]
+  ],
+  "Navy cavalier": [
+    [ "NAVY_CAVALIER" ]
+  ],
+  "White cavalier": [
+    [ "WHITE_CAVALIER" ]
+  ],
+  "Pith helmet": [
+    [ "PITH_HELMET" ]
+  ],
+  "Explorer backpack": [
+    [ "EXPLORER_BACKPACK" ]
+  ],
+  "Armadyl rune armour": [
+    [ "ARMADYL_PLATEBODY" ],
+    [ "ARMADYL_FULL_HELM" ],
+    [ "ARMADYL_PLATELEGS", "ARMADYL_PLATESKIRT" ],
+    [ "ARMADYL_KITESHIELD" ]
+  ],
+  "Bandos rune armour": [
+    [ "BANDOS_PLATEBODY" ],
+    [ "BANDOS_FULL_HELM" ],
+    [ "BANDOS_PLATELEGS", "BANDOS_PLATESKIRT" ],
+    [ "BANDOS_KITESHIELD" ]
+  ],
+  "Ancient rune armour": [
+    [ "ANCIENT_PLATEBODY" ],
+    [ "ANCIENT_FULL_HELM" ],
+    [ "ANCIENT_PLATELEGS", "ANCIENT_PLATESKIRT" ],
+    [ "ANCIENT_KITESHIELD" ]
+  ],
+  "Armadyl blessed d'hide armour": [
+    [ "ARMADYL_DHIDE" ],
+    [ "ARMADYL_COIF" ],
+    [ "ARMADYL_CHAPS" ],
+    [ "ARMADYL_BRACERS" ]
+  ],
+  "Bandos blessed d'hide armour": [
+    [ "BANDOS_DHIDE" ],
+    [ "BANDOS_COIF" ],
+    [ "BANDOS_CHAPS" ],
+    [ "BANDOS_BRACERS" ]
+  ],
+  "Green dragon mask": [
+    [ "GREEN_DRAGON_MASK" ]
+  ],
+  "Blue dragon mask": [
+    [ "BLUE_DRAGON_MASK" ]
+  ],
+  "Red dragon mask": [
+    [ "RED_DRAGON_MASK" ]
+  ],
+  "Black dragon mask": [
+    [ "BLACK_DRAGON_MASK" ]
+  ],
+  "Rune cane": [
+    [ "RUNE_CANE" ]
+  ],
+  "Zombie head": [
+    [ "ZOMBIE_HEAD_19912" ]
+  ],
+  "Cyclops head": [
+    [ "CYCLOPS_HEAD" ]
+  ],
+  "Gilded rune med helm": [
+    [ "GILDED_MED_HELM" ]
+  ],
+  "Gilded rune chainbody": [
+    [ "GILDED_CHAINBODY" ]
+  ],
+  "Gilded rune sq shield": [
+    [ "GILDED_SQ_SHIELD" ]
+  ],
+  "Gilded rune 2h sword": [
+    [ "GILDED_2H_SWORD" ]
+  ],
+  "Gilded rune spear": [
+    [ "GILDED_SPEAR" ]
+  ],
+  "Gilded rune hasta": [
+    [ "GILDED_HASTA" ]
+  ],
+  "Nunchaku": [
+    [ "NUNCHAKU" ]
+  ],
+  "Saradomin d'hide boots": [
+    [ "SARADOMIN_DHIDE_BOOTS" ]
+  ],
+  "Bandos d'hide boots": [
+    [ "BANDOS_DHIDE_BOOTS" ]
+  ],
+  "Armadyl d'hide boots": [
+    [ "ARMADYL_DHIDE_BOOTS" ]
+  ],
+  "Guthix d'hide boots": [
+    [ "GUTHIX_DHIDE_BOOTS" ]
+  ],
+  "Zamorak d'hide boots": [
+    [ "ZAMORAK_DHIDE_BOOTS" ]
+  ],
+  "Ancient d'hide boots": [
+    [ "ANCIENT_DHIDE_BOOTS" ]
+  ],
+  "3rd age range equipment": [
+    [ "_3RD_AGE_RANGE_TOP" ],
+    [ "_3RD_AGE_RANGE_COIF" ],
+    [ "_3RD_AGE_RANGE_LEGS" ],
+    [ "_3RD_AGE_VAMBRACES" ]
+  ],
+  "3rd age mage equipment": [
+    [ "_3RD_AGE_ROBE_TOP" ],
+    [ "_3RD_AGE_MAGE_HAT" ],
+    [ "_3RD_AGE_ROBE" ],
+    [ "_3RD_AGE_AMULET" ]
+  ],
+  "3rd age melee equipment": [
+    [ "_3RD_AGE_PLATEBODY" ],
+    [ "_3RD_AGE_FULL_HELMET" ],
+    [ "_3RD_AGE_PLATELEGS" ],
+    [ "_3RD_AGE_PLATESKIRT" ],
+    [ "_3RD_AGE_KITESHIELD" ]
+  ],
+  "Guthix d'hide shield": [
+    [ "GUTHIX_DHIDE_SHIELD" ]
+  ],
+  "Saradomin d'hide shield": [
+    [ "SARADOMIN_DHIDE_SHIELD" ]
+  ],
+  "Zamorak d'hide shield": [
+    [ "ZAMORAK_DHIDE_SHIELD" ]
+  ],
+  "Ancient d'hide shield": [
+    [ "ANCIENT_DHIDE_SHIELD" ]
+  ],
+  "Armadyl d'hide shield": [
+    [ "ARMADYL_DHIDE_SHIELD" ]
+  ],
+  "Bandos d'hide shield": [
+    [ "BANDOS_DHIDE_SHIELD" ]
+  ],
+  "Rune heraldic platebody 1": [
+    [ "RUNE_PLATEBODY_H1" ]
+  ],
+  "Rune heraldic platebody 2": [
+    [ "RUNE_PLATEBODY_H2" ]
+  ],
+  "Rune heraldic platebody 3": [
+    [ "RUNE_PLATEBODY_H3" ]
+  ],
+  "Rune heraldic platebody 4": [
+    [ "RUNE_PLATEBODY_H4" ]
+  ],
+  "Rune heraldic platebody 5": [
+    [ "RUNE_PLATEBODY_H5" ]
+  ],
+  "Dual sai": [
+    [ "DUAL_SAI" ]
+  ],
+  "Thieving bag": [
+    [ "THIEVING_BAG" ]
+  ],
+  "3rd age plateskirt": [
+    [ "_3RD_AGE_PLATESKIRT" ]
+  ]
+}

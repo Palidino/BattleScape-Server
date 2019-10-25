@@ -1,0 +1,100 @@
+[
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2840,
+    "y": 9774
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2842,
+    "y": 9771
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2841,
+    "y": 9767
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2843,
+    "y": 9764
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2847,
+    "y": 9763
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2842,
+    "y": 9759
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2847,
+    "y": 9759
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2845,
+    "y": 9756
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2843,
+    "y": 9752
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2845,
+    "y": 9748
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2849,
+    "y": 9748
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2847,
+    "y": 9753
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2859,
+    "y": 9751
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2863,
+    "y": 9749
+  }
+]

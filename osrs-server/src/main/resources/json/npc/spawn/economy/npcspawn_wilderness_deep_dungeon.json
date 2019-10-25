@@ -1,0 +1,163 @@
+[
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3045,
+    "y": 10320
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3042,
+    "y": 10317
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3045,
+    "y": 10314
+  },
+  {
+    "id": "NpcId.CHAOS_DWARF_48",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3030,
+    "y": 10312
+  },
+  {
+    "id": "NpcId.CHAOS_DWARF_48",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3028,
+    "y": 10309
+  },
+  {
+    "id": "NpcId.CHAOS_DWARF_48",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3034,
+    "y": 10309
+  },
+  {
+    "id": "NpcId.SHADOW_SPIDER_52",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3018,
+    "y": 10313
+  },
+  {
+    "id": "NpcId.SHADOW_SPIDER_52",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3017,
+    "y": 10322
+  },
+  {
+    "id": "NpcId.SHADOW_SPIDER_52",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3024,
+    "y": 10326
+  },
+  {
+    "id": "NpcId.SHADOW_SPIDER_52",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3030,
+    "y": 10332
+  },
+  {
+    "id": "NpcId.SHADOW_SPIDER_52",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3024,
+    "y": 10334
+  },
+  {
+    "id": "NpcId.SHADOW_SPIDER_52",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3028,
+    "y": 10339
+  },
+  {
+    "id": "NpcId.SHADOW_SPIDER_52",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3033,
+    "y": 10344
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3051,
+    "y": 10347
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3047,
+    "y": 10344
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3046,
+    "y": 10339
+  },
+  {
+    "id": "NpcId.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3050,
+    "y": 10337
+  },
+  {
+    "id": "NpcId.CHAOS_DWARF_48",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3026,
+    "y": 10312
+  },
+  {
+    "id": "NpcId.CHAOS_DWARF_48",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3034,
+    "y": 10312
+  },
+  {
+    "id": "NpcId.SHADOW_SPIDER_52",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3016,
+    "y": 10317
+  },
+  {
+    "id": "NpcId.SHADOW_SPIDER_52",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3020,
+    "y": 10324
+  },
+  {
+    "id": "NpcId.SHADOW_SPIDER_52",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3027,
+    "y": 10329
+  },
+  {
+    "id": "NpcId.SHADOW_SPIDER_52",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3027,
+    "y": 10344
+  }
+]

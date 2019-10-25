@@ -1,0 +1,238 @@
+{
+  "name": "Bond Shop",
+  "variableCurrency": "bonds",
+  "items": [
+    { "id": "ItemId.MYSTERY_BOX", "price": 40 },
+    { "id": "ItemId.SUPER_MYSTERY_BOX_32286", "price": 80 },
+    { "id": "ItemId.PET_MYSTERY_BOX_32311", "price": 400 },
+    { "id": "ItemId._14_DAYS_PREMIUM_MEMBERSHIP_32303", "price": 40 },
+    { "id": "ItemId.BOSS_INSTANCE_SCROLL_32313", "price": 40, "stack": 10 },
+    { "id": "ItemId._50_DROP_BOOST_SCROLL_1_HOUR_32314", "price": 40 },
+    { "id": "ItemId._50_DROP_BOOST_SCROLL_4_HOURS_32315", "price": 130 },
+    { "id": "ItemId._50_DROP_BOOST_SCROLL_8_HOURS_32316", "price": 220 },
+    { "id": "ItemId._50_DROP_BOOST_SCROLL_16_HOURS_32317", "price": 410 },
+    { "id": "ItemId.PERMANENT_TZHAAR_WAVE_BOOST_32300", "price": 240 },
+    { "id": "ItemId.MITHRIL_SEEDS", "price": 20, "stack": 20 },
+    { "id": "ItemId.COMBAT_LAMP_LEVEL_99_32337", "price": 40 },
+    { "id": "ItemId.RING_OF_WEALTH_I", "price": 40 },
+    { "id": "ItemId.HERB_SACK", "price": 90 },
+    { "id": "ItemId.SEED_BOX", "price": 90 },
+    { "id": "ItemId.LUMBERJACK_OUTFIT_WOODCUTTING_32291", "price": 40 },
+    {
+      "id": "ItemId.LUMBERJACK_OUTFIT_WOODCUTTING_32291",
+      "costItems": [
+        [
+          { "id": "ItemId.LUMBERJACK_HAT",  "amount": 1 },
+          { "id": "ItemId.LUMBERJACK_TOP",  "amount": 1 },
+          { "id": "ItemId.LUMBERJACK_LEGS",  "amount": 1 },
+          { "id": "ItemId.LUMBERJACK_BOOTS",  "amount": 1 }
+        ]
+      ]
+    },
+    { "id": "ItemId.PROSPECTOR_OUTFIT_MINING_32292", "price": 40 },
+    {
+      "id": "ItemId.PROSPECTOR_OUTFIT_MINING_32292",
+      "costItems": [
+        [
+          { "id": "ItemId.PROSPECTOR_HELMET",  "amount": 1 },
+          { "id": "ItemId.PROSPECTOR_JACKET",  "amount": 1 },
+          { "id": "ItemId.PROSPECTOR_LEGS",  "amount": 1 },
+          { "id": "ItemId.PROSPECTOR_BOOTS",  "amount": 1 }
+        ]
+      ]
+    },
+    { "id": "ItemId.ANGLER_OUTFIT_FISHING_32293", "price": 40 },
+    {
+      "id": "ItemId.ANGLER_OUTFIT_FISHING_32293",
+      "costItems": [
+        [
+          { "id": "ItemId.ANGLER_HAT",  "amount": 1 },
+          { "id": "ItemId.ANGLER_TOP",  "amount": 1 },
+          { "id": "ItemId.ANGLER_WADERS",  "amount": 1 },
+          { "id": "ItemId.ANGLER_BOOTS",  "amount": 1 }
+        ]
+      ]
+    },
+    { "id": "ItemId.PYROMANCER_OUTFIT_FIREMAKING_32294", "price": 40 },
+    {
+      "id": "ItemId.PYROMANCER_OUTFIT_FIREMAKING_32294",
+      "costItems": [
+        [
+          { "id": "ItemId.PYROMANCER_HOOD",  "amount": 1 },
+          { "id": "ItemId.PYROMANCER_GARB",  "amount": 1 },
+          { "id": "ItemId.PYROMANCER_ROBE",  "amount": 1 },
+          { "id": "ItemId.PYROMANCER_BOOTS",  "amount": 1 },
+          { "id": "ItemId.WARM_GLOVES",  "amount": 1 }
+        ]
+      ]
+    },
+    { "id": "ItemId.ROGUE_OUTFIT_THIEVING_32295", "price": 40 },
+    {
+      "id": "ItemId.ROGUE_OUTFIT_THIEVING_32295",
+      "costItems": [
+        [
+          { "id": "ItemId.ROGUE_MASK",  "amount": 1 },
+          { "id": "ItemId.ROGUE_TOP",  "amount": 1 },
+          { "id": "ItemId.ROGUE_TROUSERS",  "amount": 1 },
+          { "id": "ItemId.ROGUE_BOOTS",  "amount": 1 },
+          { "id": "ItemId.ROGUE_GLOVES",  "amount": 1 }
+        ]
+      ]
+    },
+    { "id": "ItemId.LARUPIA_OUTFIT_HUNTER_32296", "price": 40 },
+    {
+      "id": "ItemId.LARUPIA_OUTFIT_HUNTER_32296",
+      "costItems": [
+        [
+          { "id": "ItemId.LARUPIA_HAT",  "amount": 1 },
+          { "id": "ItemId.LARUPIA_TOP",  "amount": 1 },
+          { "id": "ItemId.LARUPIA_LEGS",  "amount": 1 }
+        ]
+      ]
+    },
+    { "id": "ItemId.FARMERS_OUTFIT_FARMING_32297", "price": 40 },
+    {
+      "id": "ItemId.FARMERS_OUTFIT_FARMING_32297",
+      "costItems": [
+        [
+          { "id": "ItemId.FARMERS_STRAWHAT",  "amount": 1 },
+          { "id": "ItemId.FARMERS_JACKET",  "amount": 1 },
+          { "id": "ItemId.FARMERS_BORO_TROUSERS",  "amount": 1 },
+          { "id": "ItemId.FARMERS_BOOTS",  "amount": 1 }
+        ]
+      ]
+    },
+    { "id": "ItemId.GRACEFUL_OUTFIT_AGILITY_32298", "price": 40 },
+    {
+      "id": "ItemId.GRACEFUL_OUTFIT_AGILITY_32298",
+      "costItems": [
+        [
+          { "id": "ItemId.GRACEFUL_HOOD",  "amount": 1 },
+          { "id": "ItemId.GRACEFUL_TOP",  "amount": 1 },
+          { "id": "ItemId.GRACEFUL_LEGS",  "amount": 1 },
+          { "id": "ItemId.GRACEFUL_GLOVES",  "amount": 1 },
+          { "id": "ItemId.GRACEFUL_BOOTS",  "amount": 1 },
+          { "id": "ItemId.GRACEFUL_CAPE",  "amount": 1 }
+        ]
+      ]
+    },
+    { "id": "ItemId.ELIDINIS_OUTFIT_RUNECRAFTING_32299", "price": 40 },
+    {
+      "id": "ItemId.ELIDINIS_OUTFIT_RUNECRAFTING_32299",
+      "costItems": [
+        [
+          { "id": "ItemId.ROBE_OF_ELIDINIS",  "amount": 1 },
+          { "id": "ItemId.ROBE_OF_ELIDINIS_6787",  "amount": 1 }
+        ]
+      ]
+    },
+    { "id": "ItemId.COOKING_GAUNTLETS", "price": 40 },
+    { "id": "ItemId.GOLDSMITH_GAUNTLETS", "price": 40 },
+    { "id": "ItemId.RUBBER_CHICKEN", "price": 500 },
+    { "id": "ItemId.FIRE_CAPE", "price": 40 },
+    { "id": "ItemId.AVAS_ASSEMBLER", "price": 80 },
+    { "id": "ItemId.IMBUED_SARADOMIN_CAPE", "price": 40 },
+    { "id": "ItemId.IMBUED_GUTHIX_CAPE", "price": 40 },
+    { "id": "ItemId.IMBUED_ZAMORAK_CAPE", "price": 40 },
+    { "id": "ItemId.DRAGON_DEFENDER", "price": 20 },
+    { "id": "ItemId.FIGHTER_TORSO", "price": 20 },
+    { "id": "ItemId.BARROWS_GLOVES", "price": 10 },
+    { "id": "ItemId.DEXTEROUS_PRAYER_SCROLL", "price": 180 },
+    { "id": "ItemId.ARCANE_PRAYER_SCROLL", "price": 180 },
+    { "id": "ItemId.ABYSSAL_WHIP", "price": 20 },
+    { "id": "ItemId.ABYSSAL_TENTACLE", "price": 40 },
+    { "id": "ItemId.SARAS_BLESSED_SWORD_FULL", "price": 40 },
+    { "id": "ItemId.DRAGON_CLAWS", "price": 380 },
+    { "id": "ItemId.DRAGON_WARHAMMER", "price": 380 },
+    { "id": "ItemId.ABYSSAL_DAGGER_P_PLUS_PLUS", "price": 80 },
+    { "id": "ItemId.ABYSSAL_BLUDGEON", "price": 180 },
+    { "id": "ItemId.BANDOS_GODSWORD", "price": 80 },
+    { "id": "ItemId.ARMADYL_GODSWORD", "price": 120 },
+    { "id": "ItemId.ZAMORAKIAN_SPEAR", "price": 120 },
+    { "id": "ItemId.ZAMORAKIAN_HASTA", "price": 120 },
+    { "id": "ItemId.ELDER_MAUL", "price": 120 },
+    { "id": "ItemId.DRAGON_HUNTER_LANCE", "price": 800 },
+    { "id": "ItemId.BLADE_OF_SAELDOR_INACTIVE", "price": 800 },
+    { "id": "ItemId.DARK_BOW", "price": 20 },
+    { "id": "ItemId.DRAGON_ARROW", "stack": 400, "price": 20 },
+    { "id": "ItemId.DRAGON_DART", "stack": 400, "price": 20 },
+    { "id": "ItemId.DRAGON_KNIFE", "stack": 400, "price": 20 },
+    { "id": "ItemId.DRAGON_THROWNAXE", "stack": 400, "price": 20 },
+    { "id": "ItemId.DIAMOND_DRAGON_BOLTS_E", "stack": 400, "price": 20 },
+    { "id": "ItemId.DRAGONSTONE_DRAGON_BOLTS_E", "stack": 400, "price": 20 },
+    { "id": "ItemId.DRAGON_JAVELIN", "stack": 400, "price": 20 },
+    { "id": "ItemId.DRAGON_CROSSBOW", "price": 20 },
+    { "id": "ItemId.ARMADYL_CROSSBOW", "price": 180 },
+    { "id": "ItemId.DRAGON_HUNTER_CROSSBOW", "price": 1000 },
+    { "id": "ItemId.TOXIC_BLOWPIPE_EMPTY", "price": 180 },
+    { "id": "ItemId.LIGHT_BALLISTA", "price": 60 },
+    { "id": "ItemId.HEAVY_BALLISTA", "price": 120 },
+    { "id": "ItemId.TWISTED_BOW", "price": 5000 },
+    { "id": "ItemId.SMOKE_BATTLESTAFF", "price": 20 },
+    { "id": "ItemId.STAFF_OF_THE_DEAD", "price": 80 },
+    { "id": "ItemId.STAFF_OF_LIGHT", "price": 80 },
+    { "id": "ItemId.MASTER_WAND", "price": 40 },
+    { "id": "ItemId.KODAI_WAND", "price": 800 },
+    { "id": "ItemId.TRIDENT_OF_THE_SEAS_FULL", "price": 80 },
+    { "id": "ItemId.MAGIC_FANG", "price": 80 },
+    { "id": "ItemId.DRAGON_BOOTS", "price": 10 },
+    { "id": "ItemId.BANDOS_CHESTPLATE", "price": 180 },
+    { "id": "ItemId.BANDOS_TASSETS", "price": 180 },
+    { "id": "ItemId.SERPENTINE_HELM_UNCHARGED", "price": 180 },
+    { "id": "ItemId.DRAGONFIRE_SHIELD_11284", "price": 40 },
+    { "id": "ItemId.FEROCIOUS_GLOVES", "price": 80 },
+    { "id": "ItemId.ARMADYL_HELMET", "price": 50 },
+    { "id": "ItemId.ARMADYL_CHESTPLATE", "price": 320 },
+    { "id": "ItemId.ARMADYL_CHAINSKIRT", "price": 320 },
+    { "id": "ItemId.ODIUM_WARD", "price": 20 },
+    { "id": "ItemId.TWISTED_BUCKLER", "price": 40 },
+    { "id": "ItemId.DRAGONFIRE_WARD_22003", "price": 220 },
+    { "id": "ItemId.ELDER_CHAOS_HOOD", "price": 4 },
+    { "id": "ItemId.ELDER_CHAOS_TOP", "price": 4 },
+    { "id": "ItemId.ELDER_CHAOS_ROBE", "price": 4 },
+    { "id": "ItemId.INFINITY_HAT", "price": 30 },
+    { "id": "ItemId.INFINITY_TOP", "price": 30 },
+    { "id": "ItemId.INFINITY_BOTTOMS", "price": 30 },
+    { "id": "ItemId.INFINITY_BOOTS", "price": 10 },
+    { "id": "ItemId.ANCESTRAL_HAT", "price": 120 },
+    { "id": "ItemId.ANCESTRAL_ROBE_TOP", "price": 480 },
+    { "id": "ItemId.ANCESTRAL_ROBE_BOTTOM", "price": 480 },
+    { "id": "ItemId.TOME_OF_FIRE", "price": 6 },
+    { "id": "ItemId.MAGES_BOOK", "price": 40 },
+    { "id": "ItemId.MALEDICTION_WARD", "price": 20 },
+    { "id": "ItemId.ANCIENT_WYVERN_SHIELD_21634", "price": 160 },
+    { "id": "ItemId.OCCULT_NECKLACE", "price": 10 },
+    { "id": "ItemId.DHAROKS_ARMOUR_SET", "price": 40 },
+    { "id": "ItemId.VERACS_ARMOUR_SET", "price": 40 },
+    { "id": "ItemId.TORAGS_ARMOUR_SET", "price": 40 },
+    { "id": "ItemId.GUTHANS_ARMOUR_SET", "price": 40 },
+    { "id": "ItemId.KARILS_ARMOUR_SET", "price": 40 },
+    { "id": "ItemId.AHRIMS_ARMOUR_SET", "price": 40 },
+    { "id": "ItemId.PRIMORDIAL_BOOTS", "price": 240 },
+    { "id": "ItemId.PEGASIAN_BOOTS", "price": 240 },
+    { "id": "ItemId.ETERNAL_BOOTS", "price": 80 },
+    { "id": "ItemId.BERSERKER_RING_I", "price": 20 },
+    { "id": "ItemId.ARCHERS_RING_I", "price": 20 },
+    { "id": "ItemId.SEERS_RING_I", "price": 20 },
+    { "id": "ItemId.BLESSED_SPIRIT_SHIELD", "price": 10 },
+    { "id": "ItemId.SPECTRAL_SPIRIT_SHIELD", "price": 500 },
+    { "id": "ItemId.ARCANE_SPIRIT_SHIELD", "price": 1000 },
+    { "id": "ItemId.ELYSIAN_SPIRIT_SHIELD", "price": 3000 },
+    { "id": "ItemId.AMULET_OF_FURY", "price": 20 },
+    { "id": "ItemId.BERSERKER_NECKLACE", "price": 20 },
+    { "id": "ItemId.REGEN_BRACELET", "price": 20 },
+    { "id": "ItemId.TORMENTED_BRACELET", "price": 120 },
+    { "id": "ItemId.NECKLACE_OF_ANGUISH", "price": 120 },
+    { "id": "ItemId.AMULET_OF_TORTURE", "price": 120 },
+    { "id": "ItemId.VOID_KNIGHT_SET_32289", "price": 240 },
+    { "id": "ItemId.CLIMBING_BOOTS_G", "price": 2 },
+    { "id": "ItemId.SPIKED_MANACLES", "price": 10 },
+    { "id": "ItemId.WIZARD_BOOTS", "price": 2 },
+    { "id": "ItemId.ROBIN_HOOD_HAT", "price": 20 },
+    { "id": "ItemId.RANGERS_TUNIC", "price": 60 },
+    { "id": "ItemId.RANGERS_TIGHTS", "price": 10 },
+    { "id": "ItemId.RANGER_BOOTS", "price": 40 },
+    { "id": "ItemId.FREMENNIK_KILT", "price": 60 },
+    { "id": "ItemId.CRYSTAL_SHARD", "price": 20, "stack": 40 }
+  ]
+}

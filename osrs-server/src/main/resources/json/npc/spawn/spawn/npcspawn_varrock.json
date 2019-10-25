@@ -1,0 +1,15 @@
+[
+  {
+    "id": "NpcId.TOOL_LEPRECHAUN",
+    "direction": 6,
+    "x": 3229,
+    "y": 3454
+  },
+  {
+    "id": "NpcId.TREZNOR",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 3226,
+    "y": 3457
+  }
+]

@@ -1,0 +1,374 @@
+[
+  {
+    "id": "NpcId.WIZARD_4399",
+    "direction": 3,
+    "x": 3272,
+    "y": 3170
+  },
+  {
+    "id": "NpcId.GADRIN",
+    "direction": 3,
+    "x": 3272,
+    "y": 3164
+  },
+  {
+    "id": "NpcId.MILES",
+    "direction": 4,
+    "x": 3287,
+    "y": 3178
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3288,
+    "y": 3176
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3297,
+    "y": 3176
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3297,
+    "y": 3172
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3297,
+    "y": 3168
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3288,
+    "y": 3168
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3288,
+    "y": 3172
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3293,
+    "y": 3168
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3292,
+    "y": 3176
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3284,
+    "y": 3173
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3285,
+    "y": 3169
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3300,
+    "y": 3175
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3301,
+    "y": 3170
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3286,
+    "y": 3161
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3290,
+    "y": 3163
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3297,
+    "y": 3162
+  },
+  {
+    "id": "NpcId.AL_KHARID_WARRIOR_9",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3301,
+    "y": 3164
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3299,
+    "y": 3278
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3299,
+    "y": 3289
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3298,
+    "y": 3300
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3299,
+    "y": 3312
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "x": 3298,
+    "y": 3294
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 6,
+    "x": 3298,
+    "y": 3308
+  },
+  {
+    "id": "NpcId.ZEKE",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3288,
+    "y": 3190
+  },
+  {
+    "id": "NpcId.MAN_2_3078",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3294,
+    "y": 3194
+  },
+  {
+    "id": "NpcId.MAN_2_3078",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3303,
+    "y": 3199
+  },
+  {
+    "id": "NpcId.MAN_2_3078",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3298,
+    "y": 3200
+  },
+  {
+    "id": "NpcId.SILK_TRADER",
+    "direction": 1,
+    "x": 3300,
+    "y": 3203
+  },
+  {
+    "id": "NpcId.ELLY_THE_CAMEL",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3308,
+    "y": 3210
+  },
+  {
+    "id": "NpcId.AYESHA",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3315,
+    "y": 3205
+  },
+  {
+    "id": "NpcId.DOMMIK",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3321,
+    "y": 3193
+  },
+  {
+    "id": "NpcId.LOUIE_LEGS",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3316,
+    "y": 3175
+  },
+  {
+    "id": "NpcId.SHOP_KEEPER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3315,
+    "y": 3180
+  },
+  {
+    "id": "NpcId.RANAEL",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3314,
+    "y": 3162
+  },
+  {
+    "id": "NpcId.ALI_MORRISANE",
+    "direction": 4,
+    "x": 3304,
+    "y": 3211
+  },
+  {
+    "id": "NpcId.CAM_THE_CAMEL",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3298,
+    "y": 3227
+  },
+  {
+    "id": "NpcId.OLLIE_THE_CAMEL",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3290,
+    "y": 3208
+  },
+  {
+    "id": "NpcId.GEM_TRADER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3289,
+    "y": 3211
+  },
+  {
+    "id": "NpcId.CAPTAIN_DALBUR",
+    "direction": 1,
+    "x": 3284,
+    "y": 3212
+  },
+  {
+    "id": "NpcId.MAN_2_3078",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3287,
+    "y": 3204
+  },
+  {
+    "id": "NpcId.CAMEL",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3285,
+    "y": 3198
+  },
+  {
+    "id": "NpcId.MAN_2_3078",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3282,
+    "y": 3192
+  },
+  {
+    "id": "NpcId.MAN_2_3078",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3274,
+    "y": 3192
+  },
+  {
+    "id": "NpcId.ELLIS",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3273,
+    "y": 3190
+  },
+  {
+    "id": "NpcId.KARIM",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3273,
+    "y": 3180
+  },
+  {
+    "id": "NpcId.AL_THE_CAMEL",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3277,
+    "y": 3165
+  },
+  {
+    "id": "NpcId.PING_839",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3272,
+    "y": 3159
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3277,
+    "y": 3143
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 4,
+    "x": 3267,
+    "y": 3164
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 4,
+    "x": 3267,
+    "y": 3167
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 4,
+    "x": 3267,
+    "y": 3169
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 4,
+    "x": 3267,
+    "y": 3166
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 4,
+    "x": 3267,
+    "y": 3168
+  }
+]

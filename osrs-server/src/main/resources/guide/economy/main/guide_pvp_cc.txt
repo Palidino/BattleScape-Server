@@ -1,0 +1,3 @@
+Join PvP Clan Chat
+
+%clanchat=pvp%

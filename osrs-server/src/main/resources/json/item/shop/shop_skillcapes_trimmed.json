@@ -1,0 +1,28 @@
+{
+  "name": "Capes of Accomplishment Trimmed",
+  "items": [
+    { "id": "ItemId.MAX_CAPE", "price": 2277000 },
+    { "id": "ItemId.ATTACK_CAPE_T", "price": 99000 },
+    { "id": "ItemId.STRENGTH_CAPE_T", "price": 99000 },
+    { "id": "ItemId.DEFENCE_CAPE_T", "price": 99000 },
+    { "id": "ItemId.RANGING_CAPE_T", "price": 99000 },
+    { "id": "ItemId.PRAYER_CAPE_T", "price": 99000 },
+    { "id": "ItemId.MAGIC_CAPE_T", "price": 99000 },
+    { "id": "ItemId.HITPOINTS_CAPE_T", "price": 99000 },
+    { "id": "ItemId.AGILITY_CAPE_T", "price": 99000 },
+    { "id": "ItemId.HERBLORE_CAPE_T", "price": 99000 },
+    { "id": "ItemId.THIEVING_CAPE_T", "price": 99000 },
+    { "id": "ItemId.CRAFTING_CAPE_T", "price": 99000 },
+    { "id": "ItemId.SLAYER_CAPE_T", "price": 99000 },
+    { "id": "ItemId.FISHING_CAPE_T", "price": 99000 },
+    { "id": "ItemId.COOKING_CAPE_T", "price": 99000 },
+    { "id": "ItemId.FLETCHING_CAPE_T", "price": 99000 },
+    { "id": "ItemId.WOODCUT_CAPE_T", "price": 99000 },
+    { "id": "ItemId.FIREMAKING_CAPE_T", "price": 99000 },
+    { "id": "ItemId.MINING_CAPE_T", "price": 99000 },
+    { "id": "ItemId.SMITHING_CAPE_T", "price": 99000 },
+    { "id": "ItemId.HUNTER_CAPE_T", "price": 99000 },
+    { "id": "ItemId.RUNECRAFT_CAPE_T", "price": 99000 },
+    { "id": "ItemId.FARMING_CAPE_T", "price": 99000 }
+  ]
+}

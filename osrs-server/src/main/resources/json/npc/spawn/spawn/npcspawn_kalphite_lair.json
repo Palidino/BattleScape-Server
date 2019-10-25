@@ -1,0 +1,79 @@
+[
+  {
+    "id": "NpcId.KALPHITE_QUEEN_333",
+    "direction": 1,
+    "moveDistance": 16,
+    "x": 3476,
+    "y": 9492
+  },
+  {
+    "id": "NpcId.KALPHITE_GUARDIAN_141_960",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3496,
+    "y": 9500
+  },
+  {
+    "id": "NpcId.KALPHITE_GUARDIAN_141_960",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3494,
+    "y": 9489
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28_956",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3475,
+    "y": 9488
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28_956",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3483,
+    "y": 9486
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28_956",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3488,
+    "y": 9492
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28_956",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3495,
+    "y": 9496
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28_956",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3494,
+    "y": 9508
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28_956",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3485,
+    "y": 9513
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28_956",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3477,
+    "y": 9506
+  },
+  {
+    "id": "NpcId.KALPHITE_WORKER_28_956",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 3471,
+    "y": 9498
+  }
+]

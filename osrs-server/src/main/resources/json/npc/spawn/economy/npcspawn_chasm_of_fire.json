@@ -1,0 +1,346 @@
+[
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1435,
+    "y": 10080,
+    "height": 3
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1438,
+    "y": 10082,
+    "height": 3
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1435,
+    "y": 10085,
+    "height": 3
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1440,
+    "y": 10086,
+    "height": 3
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1433,
+    "y": 10091,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1438,
+    "y": 10088,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1443,
+    "y": 10093,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1431,
+    "y": 10078,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1427,
+    "y": 10082,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1427,
+    "y": 10077,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1428,
+    "y": 10073,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1420,
+    "y": 10087,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1431,
+    "y": 10060,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1438,
+    "y": 10061,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1441,
+    "y": 10075,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1445,
+    "y": 10078,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1449,
+    "y": 10072,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1450,
+    "y": 10081,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1447,
+    "y": 10086,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1453,
+    "y": 10090,
+    "height": 2
+  },
+  {
+    "id": "NpcId.GREATER_DEMON_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1450,
+    "y": 10091,
+    "height": 2
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1440,
+    "y": 10073,
+    "height": 3
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1442,
+    "y": 10076,
+    "height": 3
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1445,
+    "y": 10075,
+    "height": 3
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1444,
+    "y": 10079,
+    "height": 3
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1446,
+    "y": 10082,
+    "height": 3
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1448,
+    "y": 10061,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1442,
+    "y": 10063,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1447,
+    "y": 10067,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1436,
+    "y": 10068,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1428,
+    "y": 10065,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1422,
+    "y": 10062,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1420,
+    "y": 10071,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1426,
+    "y": 10075,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1427,
+    "y": 10082,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1423,
+    "y": 10091,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1432,
+    "y": 10088,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1429,
+    "y": 10096,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1443,
+    "y": 10086,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1449,
+    "y": 10094,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1452,
+    "y": 10083,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1447,
+    "y": 10077,
+    "height": 1
+  },
+  {
+    "id": "NpcId.BLACK_DEMON_172",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1452,
+    "y": 10073,
+    "height": 1
+  }
+]

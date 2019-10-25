@@ -1,0 +1,242 @@
+{
+  "Red straw boater": [
+    [ "RED_BOATER" ]
+  ],
+  "Orange straw boater": [
+    [ "ORANGE_BOATER" ]
+  ],
+  "Green straw boater": [
+    [ "GREEN_BOATER" ]
+  ],
+  "Blue straw boater": [
+    [ "BLUE_BOATER" ]
+  ],
+  "Black straw boater": [
+    [ "BLACK_BOATER" ]
+  ],
+  "Adamant heraldic kiteshield 1": [
+    [ "ADAMANT_SHIELD_H1" ]
+  ],
+  "Adamant heraldic kiteshield 2": [
+    [ "ADAMANT_SHIELD_H2" ]
+  ],
+  "Adamant heraldic kiteshield 3": [
+    [ "ADAMANT_SHIELD_H3" ]
+  ],
+  "Adamant heraldic kiteshield 4": [
+    [ "ADAMANT_SHIELD_H4" ]
+  ],
+  "Adamant heraldic kiteshield 5": [
+    [ "ADAMANT_SHIELD_H5" ]
+  ],
+  "Green dragonhide (gold)": [
+    [ "GREEN_DHIDE_BODY_G" ],
+    [ "GREEN_DHIDE_CHAPS_G" ]
+  ],
+  "Green dragonhide (trim)": [
+    [ "GREEN_DHIDE_BODY_T" ],
+    [ "GREEN_DHIDE_CHAPS_T" ]
+  ],
+  "Ranger boots": [
+    [ "RANGER_BOOTS" ]
+  ],
+  "Trimmed adamantite armour": [
+    [ "ADAMANT_PLATEBODY_T" ],
+    [ "ADAMANT_FULL_HELM_T" ],
+    [ "ADAMANT_PLATELEGS_T", "ADAMANT_PLATESKIRT_T" ],
+    [ "ADAMANT_KITESHIELD_T" ]
+  ],
+  "Gold-trimmed adamantite armour": [
+    [ "ADAMANT_PLATEBODY_G" ],
+    [ "ADAMANT_FULL_HELM_G" ],
+    [ "ADAMANT_PLATELEGS_G", "ADAMANT_PLATESKIRT_G" ],
+    [ "ADAMANT_KITESHIELD_G" ]
+  ],
+  "Red headband": [
+    [ "RED_HEADBAND" ]
+  ],
+  "Black headband": [
+    [ "BLACK_HEADBAND" ]
+  ],
+  "Brown headband": [
+    [ "BROWN_HEADBAND" ]
+  ],
+  "Adamant heraldic helm 1": [
+    [ "ADAMANT_HELM_H1" ]
+  ],
+  "Adamant heraldic helm 2": [
+    [ "ADAMANT_HELM_H2" ]
+  ],
+  "Adamant heraldic helm 3": [
+    [ "ADAMANT_HELM_H3" ]
+  ],
+  "Adamant heraldic helm 4": [
+    [ "ADAMANT_HELM_H4" ]
+  ],
+  "Adamant heraldic helm 5": [
+    [ "ADAMANT_HELM_H5" ]
+  ],
+  "Trimmed amulet of strength": [
+    [ "STRENGTH_AMULET_T" ]
+  ],
+  "Elegant clothing (black)/(white)": [
+    [ "BLACK_ELEGANT_SHIRT", "WHITE_ELEGANT_BLOUSE" ],
+    [ "BLACK_ELEGANT_LEGS", "WHITE_ELEGANT_SKIRT" ]
+  ],
+  "Elegant clothing (purple)": [
+    [ "PURPLE_ELEGANT_SHIRT", "PURPLE_ELEGANT_BLOUSE" ],
+    [ "PURPLE_ELEGANT_LEGS", "PURPLE_ELEGANT_SKIRT" ]
+  ],
+  "Elegant clothing (pink)": [
+    [ "PINK_ELEGANT_SHIRT", "PINK_ELEGANT_BLOUSE" ],
+    [ "PINK_ELEGANT_LEGS", "PINK_ELEGANT_SKIRT" ]
+  ],
+  "Elegant clothing (gold)": [
+    [ "GOLD_ELEGANT_SHIRT", "GOLD_ELEGANT_BLOUSE" ],
+    [ "GOLD_ELEGANT_LEGS", "GOLD_ELEGANT_SKIRT" ]
+  ],
+  "Wizard boots": [
+    [ "WIZARD_BOOTS" ]
+  ],
+  "Mithril armour (gold)": [
+    [ "MITHRIL_PLATEBODY_G" ],
+    [ "MITHRIL_FULL_HELM_G" ],
+    [ "MITHRIL_PLATELEGS_G", "MITHRIL_PLATESKIRT_G" ],
+    [ "MITHRIL_KITESHIELD_G" ]
+  ],
+  "Mithril armour (trim)": [
+    [ "MITHRIL_PLATEBODY_T" ],
+    [ "MITHRIL_FULL_HELM_T" ],
+    [ "MITHRIL_PLATELEGS_T", "MITHRIL_PLATESKIRT_T" ],
+    [ "MITHRIL_KITESHIELD_T" ]
+  ],
+  "Leprechaun hat": [
+    [ "LEPRECHAUN_HAT" ]
+  ],
+  "Black leprechaun hat": [
+    [ "BLACK_LEPRECHAUN_HAT" ]
+  ],
+  "White headband": [
+    [ "WHITE_HEADBAND" ]
+  ],
+  "Blue headband": [
+    [ "BLUE_HEADBAND" ]
+  ],
+  "Gold headband": [
+    [ "GOLD_HEADBAND" ]
+  ],
+  "Pink headband": [
+    [ "PINK_HEADBAND" ]
+  ],
+  "Green headband": [
+    [ "GREEN_HEADBAND" ]
+  ],
+  "Pink boater": [
+    [ "PINK_BOATER" ]
+  ],
+  "Purple boater": [
+    [ "PURPLE_BOATER" ]
+  ],
+  "White boater": [
+    [ "WHITE_BOATER" ]
+  ],
+  "Cat mask": [
+    [ "CAT_MASK" ]
+  ],
+  "Penguin mask": [
+    [ "PENGUIN_MASK" ]
+  ],
+  "Black unicorn mask": [
+    [ "BLACK_UNICORN_MASK" ]
+  ],
+  "White unicorn mask": [
+    [ "WHITE_UNICORN_MASK" ]
+  ],
+  "Armadyl vestments": [
+    [ "ARMADYL_ROBE_TOP" ],
+    [ "ARMADYL_MITRE" ],
+    [ "ARMADYL_ROBE_LEGS" ],
+    [ "ARMADYL_CLOAK" ],
+    [ "ARMADYL_CROZIER" ],
+    [ "ARMADYL_STOLE" ]
+  ],
+  "Ancient vestments": [
+    [ "ANCIENT_ROBE_TOP" ],
+    [ "ANCIENT_MITRE" ],
+    [ "ANCIENT_ROBE_LEGS" ],
+    [ "ANCIENT_CLOAK" ],
+    [ "ANCIENT_CROZIER" ],
+    [ "ANCIENT_STOLE" ]
+  ],
+  "Bandos vestments": [
+    [ "BANDOS_ROBE_TOP" ],
+    [ "BANDOS_MITRE" ],
+    [ "BANDOS_ROBE_LEGS" ],
+    [ "BANDOS_CLOAK" ],
+    [ "BANDOS_CROZIER" ],
+    [ "BANDOS_STOLE" ]
+  ],
+  "Town crier hat": [
+    [ "CRIER_HAT" ]
+  ],
+  "Town crier bell": [
+    [ "CRIER_BELL" ]
+  ],
+  "Town crier coat": [
+    [ "CRIER_COAT" ]
+  ],
+  "Adamant cane": [
+    [ "ADAMANT_CANE" ]
+  ],
+  "Holy sandals": [
+    [ "HOLY_SANDALS" ]
+  ],
+  "Clueless scroll": [
+    [ "CLUELESS_SCROLL" ]
+  ],
+  "Arceuus banner": [
+    [ "ARCEUUS_BANNER" ]
+  ],
+  "Hosidius banner": [
+    [ "HOSIDIUS_BANNER" ]
+  ],
+  "Lovakengj banner": [
+    [ "LOVAKENGJ_BANNER" ]
+  ],
+  "Piscarilius banner": [
+    [ "PISCARILIUS_BANNER" ]
+  ],
+  "Shayzien banner": [
+    [ "SHAYZIEN_BANNER" ]
+  ],
+  "Cabbage round shield": [
+    [ "CABBAGE_ROUND_SHIELD" ]
+  ],
+  "Spiked manacles": [
+    [ "SPIKED_MANACLES" ]
+  ],
+  "Adamant heraldic platebody 1": [
+    [ "ADAMANT_PLATEBODY_H1" ]
+  ],
+  "Adamant heraldic platebody 2": [
+    [ "ADAMANT_PLATEBODY_H2" ]
+  ],
+  "Adamant heraldic platebody 3": [
+    [ "ADAMANT_PLATEBODY_H3" ]
+  ],
+  "Adamant heraldic platebody 4": [
+    [ "ADAMANT_PLATEBODY_H4" ]
+  ],
+  "Adamant heraldic platebody 5": [
+    [ "ADAMANT_PLATEBODY_H5" ]
+  ],
+  "Wolf mask": [
+    [ "WOLF_MASK" ]
+  ],
+  "Wolf cloak": [
+    [ "WOLF_CLOAK" ]
+  ],
+  "Climbing boots (g)": [
+    [ "CLIMBING_BOOTS_G" ]
+  ]
+}

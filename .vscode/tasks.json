@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Empty OSRS Core",
+            "type": "shell",
+            "command": "java -cp util/repo/com/palidinodh/emptymethods/1.0/emptymethods-1.0.jar com.palidinodh.emptymethods.Main osrs-core/target/osrs-core.jar osrs-script/repo/com/palidinodh/osrs-core/1.0/osrs-core-1.0.jar",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

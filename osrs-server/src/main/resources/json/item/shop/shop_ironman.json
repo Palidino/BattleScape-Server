@@ -1,0 +1,8 @@
+{
+  "name": "Iron Man Shop",
+  "items": [
+    { "id": "ItemId.IRONMAN_HELM" },
+    { "id": "ItemId.IRONMAN_PLATEBODY" },
+    { "id": "ItemId.IRONMAN_PLATELEGS" }
+  ]
+}

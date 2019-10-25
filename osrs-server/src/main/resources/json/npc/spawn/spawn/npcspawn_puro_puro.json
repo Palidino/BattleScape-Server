@@ -1,0 +1,463 @@
+[
+  {
+    "id": "NpcId.ELNOCK_INQUISITOR",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2590,
+    "y": 4319
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "x": 2588,
+    "y": 4323
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2569,
+    "y": 4342
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2569,
+    "y": 4333
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2569,
+    "y": 4324
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2569,
+    "y": 4317
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2569,
+    "y": 4310
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2569,
+    "y": 4302
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2572,
+    "y": 4297
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2578,
+    "y": 4297
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2586,
+    "y": 4297
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2594,
+    "y": 4297
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2602,
+    "y": 4297
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2610,
+    "y": 4297
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2614,
+    "y": 4302
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2614,
+    "y": 4309
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2614,
+    "y": 4317
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2614,
+    "y": 4326
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2614,
+    "y": 4335
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2611,
+    "y": 4342
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2603,
+    "y": 4342
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2595,
+    "y": 4342
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2587,
+    "y": 4342
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2579,
+    "y": 4342
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2573,
+    "y": 4338
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2573,
+    "y": 4329
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2573,
+    "y": 4320
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2573,
+    "y": 4312
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2573,
+    "y": 4305
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2576,
+    "y": 4301
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2582,
+    "y": 4301
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2591,
+    "y": 4301
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2599,
+    "y": 4301
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2607,
+    "y": 4301
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2610,
+    "y": 4306
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2610,
+    "y": 4314
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2610,
+    "y": 4322
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2599,
+    "y": 4338
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2610,
+    "y": 4338
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2590,
+    "y": 4338
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 12,
+    "x": 2582,
+    "y": 4338
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 18,
+    "x": 2580,
+    "y": 4332
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 18,
+    "x": 2596,
+    "y": 4332
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 18,
+    "x": 2604,
+    "y": 4321
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 18,
+    "x": 2598,
+    "y": 4307
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 18,
+    "x": 2581,
+    "y": 4307
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 18,
+    "x": 2579,
+    "y": 4319
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 25,
+    "x": 2597,
+    "y": 4314
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 25,
+    "x": 2586,
+    "y": 4314
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 25,
+    "x": 2586,
+    "y": 4325
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 25,
+    "x": 2597,
+    "y": 4325
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 20,
+    "x": 2602,
+    "y": 4330
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 20,
+    "x": 2586,
+    "y": 4330
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 20,
+    "x": 2581,
+    "y": 4325
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 20,
+    "x": 2581,
+    "y": 4313
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 20,
+    "x": 2588,
+    "y": 4309
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 20,
+    "x": 2602,
+    "y": 4309
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 20,
+    "x": 2602,
+    "y": 4316
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 16,
+    "x": 2606,
+    "y": 4329
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 16,
+    "x": 2586,
+    "y": 4334
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 16,
+    "x": 2577,
+    "y": 4327
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 16,
+    "x": 2600,
+    "y": 4305
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 5,
+    "x": 2617,
+    "y": 4345
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 5,
+    "x": 2617,
+    "y": 4294
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 5,
+    "x": 2566,
+    "y": 4294
+  },
+  {
+    "id": "NpcId.BABY_IMPLING",
+    "direction": 1,
+    "moveDistance": 5,
+    "x": 2566,
+    "y": 4345
+  }
+]

@@ -1,0 +1,244 @@
+[
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3434,
+    "y": 9637
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3428,
+    "y": 9638
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3427,
+    "y": 9634
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3426,
+    "y": 9631
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3423,
+    "y": 9637
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3427,
+    "y": 9645
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3429,
+    "y": 9648
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3425,
+    "y": 9652
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3414,
+    "y": 9636
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3410,
+    "y": 9641
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3418,
+    "y": 9629
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3412,
+    "y": 9621
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3421,
+    "y": 9622
+  },
+  {
+    "id": "NpcId.MINE_CART",
+    "direction": 1,
+    "x": 2727,
+    "y": 4491
+  },
+  {
+    "id": "NpcId.HAZE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2798,
+    "y": 4571
+  },
+  {
+    "id": "NpcId.HAZE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2793,
+    "y": 4576
+  },
+  {
+    "id": "NpcId.HAZE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2807,
+    "y": 4570
+  },
+  {
+    "id": "NpcId.HAZE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2784,
+    "y": 4488
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2791,
+    "y": 4498
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2788,
+    "y": 4501
+  },
+  {
+    "id": "NpcId.GIANT_BAT_27",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2791,
+    "y": 4504
+  },
+  {
+    "id": "NpcId.HAZE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2785,
+    "y": 4569
+  },
+  {
+    "id": "NpcId.HAZE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2785,
+    "y": 4580
+  },
+  {
+    "id": "NpcId.HAZE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2793,
+    "y": 4584
+  },
+  {
+    "id": "NpcId.HAZE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2800,
+    "y": 4593
+  },
+  {
+    "id": "NpcId.HAZE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2808,
+    "y": 4599
+  },
+  {
+    "id": "NpcId.HAZE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2801,
+    "y": 4578
+  },
+  {
+    "id": "NpcId.MINE_CART",
+    "direction": 1,
+    "x": 2739,
+    "y": 4531
+  },
+  {
+    "id": "NpcId.MINE_CART",
+    "direction": 1,
+    "x": 2795,
+    "y": 4462
+  },
+  {
+    "id": "NpcId.MINE_CART",
+    "direction": 1,
+    "x": 2791,
+    "y": 4452
+  },
+  {
+    "id": "NpcId.MINE_CART",
+    "direction": 1,
+    "x": 2785,
+    "y": 4447
+  },
+  {
+    "id": "NpcId.LOADING_CRANE",
+    "direction": 1,
+    "x": 2787,
+    "y": 4451
+  },
+  {
+    "id": "NpcId.LOADING_CRANE",
+    "direction": 1,
+    "x": 2787,
+    "y": 4446
+  },
+  {
+    "id": "NpcId.INNOCENT_LOOKING_KEY",
+    "direction": 1,
+    "x": 2788,
+    "y": 4455
+  },
+  {
+    "id": "NpcId.LOADING_CRANE",
+    "direction": 1,
+    "x": 2782,
+    "y": 4458
+  },
+  {
+    "id": "NpcId.LOADING_CRANE",
+    "direction": 1,
+    "x": 2793,
+    "y": 4458
+  }
+]

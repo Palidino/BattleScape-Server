@@ -1,0 +1,16 @@
+{
+  "currency": 6529,
+  "name": "TzHaar-Hur-Lek's Ore and Gem Store",
+  "items": [
+    {
+      "id": "ItemId.UNCUT_ONYX",
+      "price": 300000,
+      "buyPrice": 30000
+    },
+    {
+      "id": "ItemId.ONYX_BOLTS_E",
+      "price": 1500,
+      "buyPrice": 150
+    }
+  ]
+}

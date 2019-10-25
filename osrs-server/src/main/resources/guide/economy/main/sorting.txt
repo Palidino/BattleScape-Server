@@ -1,0 +1,13 @@
+pvp
+pvm_loot
+home_cc
+pvp_cc
+discord
+rules
+staff
+faq
+voting
+bonds
+teles
+shops
+boosts

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "NpcId.WIZARD_4399",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2858,
+    "y": 2954
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 4,
+    "x": 2818,
+    "y": 2996
+  }
+]

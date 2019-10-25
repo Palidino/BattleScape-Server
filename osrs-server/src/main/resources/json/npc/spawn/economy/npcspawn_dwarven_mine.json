@@ -1,0 +1,42 @@
+[
+  {
+    "id": "NpcId.SCORPION_14",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3054,
+    "y": 9773
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3047,
+    "y": 9766
+  },
+  {
+    "id": "NpcId.SCORPION_14",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3041,
+    "y": 9779
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 6,
+    "x": 3047,
+    "y": 9757
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 1,
+    "x": 3047,
+    "y": 9756
+  },
+  {
+    "id": "NpcId.BELONA",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3019,
+    "y": 9726
+  }
+]

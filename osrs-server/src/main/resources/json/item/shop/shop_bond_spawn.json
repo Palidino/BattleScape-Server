@@ -1,0 +1,28 @@
+{
+  "name": "Bond Shop",
+  "variableCurrency": "bonds",
+  "items": [
+    { "id": "ItemId.MYSTERY_BOX", "price": 40 },
+    { "id": "ItemId.SUPER_MYSTERY_BOX_32286", "price": 80 },
+    { "id": "ItemId.PET_MYSTERY_BOX_32311", "price": 400 },
+    { "id": "ItemId.COINS", "price": 20, "stack": 5000000 },
+    { "id": "ItemId.IMBUED_HEART", "price": 40 },
+    { "id": "ItemId.WARRIOR_RING_I", "price": 40 },
+    { "id": "ItemId.BERSERKER_RING_I", "price": 40 },
+    { "id": "ItemId.TYRANNICAL_RING_I", "price": 40 },
+    { "id": "ItemId.TREASONOUS_RING_I", "price": 40 },
+    { "id": "ItemId.ARCHERS_RING_I", "price": 40 },
+    { "id": "ItemId.SEERS_RING_I", "price": 40 },
+    { "id": "ItemId.BOSS_INSTANCE_SCROLL_32313", "price": 50, "stack": 5 },
+    { "id": "ItemId._50_DROP_BOOST_SCROLL_1_HOUR_32314", "price": 50 },
+    { "id": "ItemId._50_DROP_BOOST_SCROLL_4_HOURS_32315", "price": 150 },
+    { "id": "ItemId._50_DROP_BOOST_SCROLL_8_HOURS_32316", "price": 250 },
+    { "id": "ItemId._50_DROP_BOOST_SCROLL_16_HOURS_32317", "price": 450 },
+    { "id": "ItemId.PERMANENT_TZHAAR_WAVE_BOOST_32300", "price": 250 },
+    { "id": "ItemId.INFERNAL_CAPE", "price": 500 },
+    { "id": "ItemId.ARMADYL_GODSWORD", "price": 80 },
+    { "id": "ItemId.DRAGON_CLAWS", "price": 250 },
+    { "id": "ItemId.ELDER_MAUL", "price": 100 },
+    { "id": "ItemId.KODAI_WAND", "price": 500 }
+  ]
+}

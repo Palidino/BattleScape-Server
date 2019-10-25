@@ -1,0 +1,87 @@
+[
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "x": 1796,
+    "y": 3792
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "x": 1800,
+    "y": 3792
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "x": 1804,
+    "y": 3792
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "x": 1808,
+    "y": 3792
+  },
+  {
+    "id": "NpcId.TYNAN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 1840,
+    "y": 3786
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT_6825",
+    "direction": 1,
+    "x": 1826,
+    "y": 3770
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT_6825",
+    "direction": 1,
+    "x": 1827,
+    "y": 3770
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT_6825",
+    "direction": 1,
+    "x": 1829,
+    "y": 3768
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT_6825",
+    "direction": 1,
+    "x": 1832,
+    "y": 3768
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT_6825",
+    "direction": 1,
+    "x": 1834,
+    "y": 3769
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT_6825",
+    "direction": 1,
+    "x": 1835,
+    "y": 3770
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT_6825",
+    "direction": 1,
+    "x": 1840,
+    "y": 3777
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT_6825",
+    "direction": 1,
+    "x": 1840,
+    "y": 3776
+  },
+  {
+    "id": "NpcId.ROD_FISHING_SPOT_6825",
+    "direction": 1,
+    "x": 1840,
+    "y": 3775
+  }
+]

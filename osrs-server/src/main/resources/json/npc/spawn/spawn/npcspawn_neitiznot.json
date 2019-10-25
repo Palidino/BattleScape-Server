@@ -1,0 +1,115 @@
+[
+  {
+    "id": "NpcId.WIZARD_4399",
+    "direction": 3,
+    "x": 2339,
+    "y": 3806
+  },
+  {
+    "id": "NpcId.YAK_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2318,
+    "y": 3791
+  },
+  {
+    "id": "NpcId.YAK_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2323,
+    "y": 3791
+  },
+  {
+    "id": "NpcId.YAK_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2327,
+    "y": 3793
+  },
+  {
+    "id": "NpcId.YAK_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2319,
+    "y": 3796
+  },
+  {
+    "id": "NpcId.YAK_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2325,
+    "y": 3798
+  },
+  {
+    "id": "NpcId.YAK_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2322,
+    "y": 3795
+  },
+  {
+    "id": "NpcId.MARIA_GUNNARS",
+    "direction": 1,
+    "x": 2311,
+    "y": 3781
+  },
+  {
+    "id": "NpcId.MORTEN_HOLDSTROM",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2331,
+    "y": 3803
+  },
+  {
+    "id": "NpcId.JOFRIDR_MORDSTATTER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2336,
+    "y": 3807
+  },
+  {
+    "id": "NpcId.MAWNIS_BUROWGAR",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2335,
+    "y": 3799
+  },
+  {
+    "id": "NpcId.KJEDELIG_UPPSEN",
+    "direction": 4,
+    "x": 2334,
+    "y": 3800
+  },
+  {
+    "id": "NpcId.TROGEN_KONUNGARDE",
+    "direction": 4,
+    "x": 2334,
+    "y": 3798
+  },
+  {
+    "id": "NpcId.FRIDLEIF_SHIELDSON",
+    "direction": 1,
+    "x": 2338,
+    "y": 3800
+  },
+  {
+    "id": "NpcId.THAKKRAD_SIGMUNDSON",
+    "direction": 6,
+    "x": 2339,
+    "y": 3798
+  },
+  {
+    "id": "NpcId.SLUG_HEMLIGSSEN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2337,
+    "y": 3810
+  },
+  {
+    "id": "NpcId.GUNNAR_HOLDSTROM",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2349,
+    "y": 3802
+  }
+]

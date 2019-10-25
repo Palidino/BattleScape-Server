@@ -1,0 +1,33 @@
+[
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "moveDistance": 1,
+    "x": 2375,
+    "y": 3856
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "x": 2412,
+    "y": 10193
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 4,
+    "x": 2375,
+    "y": 10197
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 3,
+    "x": 2404,
+    "y": 10224
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 1,
+    "x": 2417,
+    "y": 10216
+  }
+]

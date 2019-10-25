@@ -1,0 +1,11 @@
+{
+  "name": "Kolodion's Shop",
+  "items": [
+    { "id": "ItemId.SARADOMIN_STAFF", "price": 80000 },
+    { "id": "ItemId.GUTHIX_STAFF", "price": 80000 },
+    { "id": "ItemId.ZAMORAK_STAFF", "price": 80000 },
+    { "id": "ItemId.SARADOMIN_CAPE", "price": 20000 },
+    { "id": "ItemId.GUTHIX_CAPE", "price": 20000 },
+    { "id": "ItemId.ZAMORAK_CAPE", "price": 20000 }
+  ]
+}

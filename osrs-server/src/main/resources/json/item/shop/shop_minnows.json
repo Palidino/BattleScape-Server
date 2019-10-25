@@ -1,0 +1,7 @@
+{
+  "name": "Minnow Exchange",
+  "currency": 21356,
+  "items": [
+    { "id": "ItemId.RAW_SHARK", "price": 40 }
+  ]
+}

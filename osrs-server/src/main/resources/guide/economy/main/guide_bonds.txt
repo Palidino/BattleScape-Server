@@ -1,0 +1,44 @@
+Old School Bonds
+
+You are able to purchase bonds either on the website or in-game by clicking on Old School Bonds, located under game information. To view the items bonds can be spent on, go to your bond pouch and then select spend bonds.
+
+<col=800000>Premium Membership</col>
+<col=0000A0>*</col> A bond can be converted to 14 days of membership
+<col=0000A0>*</col> 25% boosted drop rates (including all pets)
+<col=0000A0>*</col> 25% more experience
+<col=0000A0>*</col> 25% more Slayer points and Pest Control points
+<col=0000A0>*</col> 25% more coins from monster drops
+<col=0000A0>*</col> 5% higher skilling success rates
+<col=0000A0>*</col> 25% lower item reclaim fee
+<col=0000A0>*</col> Skip early waves of the Fight Cave and the Inferno
+<col=0000A0>*</col> Doubled kill count at God Wars
+<col=0000A0>*</col> Noted key halves, herbs, and ensouled head drops
+<col=0000A0>*</col> Able to set your home location
+<col=0000A0>*</col> The General Store buys items for high alch price
+<col=0000A0>*</col> Slower run energy drain outside of the wilderness
+<col=0000A0>*</col> Increased marks of grace
+
+<col=800000>Mystery Box</col>
+Mystery boxes contain many different items! These items include clue scroll loot, Barrows gear, unique monster drops, unique boss drops, and holiday rares.
+
+<col=800000>Blood Money</col>
+A single bond is exchangeable for 100,000 blood money. To spend blood money, speak to the Emblem Trader north of the Edgeville bank.
+
+<col=800000>Ring of Wealth (i)</col>
+This ring has many features which include 10% boosted drop rates, automatically picking up herbs and bones, making non-aggressive monsters aggressive, and creating boss instances.
+
+The ring holds two types of charges, one for boss instance creation and the other for the other features. The first charge is filled with 2,000,000 coins and lasts for 800 kills. The second charge is filled with 20,000,000 and can create 50 boss instances, each lasting one hour. A bond can be used to charge them both fully. Boss instances provide players with 12.5% more accuracy and 2.5% more strength and defence.
+
+<col=800000>Skilling Outfits</col>
+When wearing a complete skilling outfit, the outfit will provide 10% more experience and increases your skilling success rate by 10%. Clue Scroll chances are increased by 5% as well where applicable. Some outfits provide additional boosts, outlined below.
+
+<col=0000A0>Graceful outfit:</col> run energy restored 30% faster
+<col=0000A0>Rougue outfit:</col> 10% chance to pickpocket twice
+<col=0000A0>Cooking gauntlets:</col> lowers to burn level of some fish
+<col=0000A0>Goldsmith gauntlets:</col> 2.5x more experience when smelting gold bars
+
+<col=800000>Herb Sack</col>
+Can store up to 30 of each herb (90 if the herbs are noted) and doubles the number of herbs monsters drop.
+
+<col=800000>Seed Box</col>
+Can store 6 types of seeds at a time.

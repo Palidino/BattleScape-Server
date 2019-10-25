@@ -1,0 +1,196 @@
+[
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "x": 2721,
+    "y": 3495
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "x": 2724,
+    "y": 3495
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "x": 2728,
+    "y": 3495
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 1,
+    "x": 2729,
+    "y": 3495
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 1,
+    "x": 2722,
+    "y": 3495
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 1,
+    "x": 2726,
+    "y": 3496
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 1,
+    "x": 2727,
+    "y": 3495
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 1,
+    "x": 2729,
+    "y": 3496
+  },
+  {
+    "id": "NpcId.SEER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2718,
+    "y": 3484
+  },
+  {
+    "id": "NpcId.SEER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2705,
+    "y": 3480
+  },
+  {
+    "id": "NpcId.PHANTUWTI_FANSTUWI_FARSIGHT",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2701,
+    "y": 3474
+  },
+  {
+    "id": "NpcId.MAN_2_3078",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2707,
+    "y": 3476
+  },
+  {
+    "id": "NpcId.SEER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2707,
+    "y": 3469
+  },
+  {
+    "id": "NpcId.SEER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2718,
+    "y": 3474
+  },
+  {
+    "id": "NpcId.IGNATIUS_VULCAN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2722,
+    "y": 3433
+  },
+  {
+    "id": "NpcId.FLAX_KEEPER",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2742,
+    "y": 3443
+  },
+  {
+    "id": "NpcId.TOWN_CRIER_280",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2739,
+    "y": 3480
+  },
+  {
+    "id": "NpcId.GUARD_4218",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2737,
+    "y": 3468
+  },
+  {
+    "id": "NpcId.THE_WEDGE",
+    "direction": 3,
+    "x": 2760,
+    "y": 3476
+  },
+  {
+    "id": "NpcId.ESTATE_AGENT",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2737,
+    "y": 3502
+  },
+  {
+    "id": "NpcId.TRAMP",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2683,
+    "y": 3486
+  },
+  {
+    "id": "NpcId.POISON_SALESMAN",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2696,
+    "y": 3496
+  },
+  {
+    "id": "NpcId.WOMAN_2_3083",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2694,
+    "y": 3497
+  },
+  {
+    "id": "NpcId.WOMAN_2_3083",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2696,
+    "y": 3494
+  },
+  {
+    "id": "NpcId.WOMAN_2_3083",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2694,
+    "y": 3492
+  },
+  {
+    "id": "NpcId.MAN_2_3078",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2691,
+    "y": 3489
+  },
+  {
+    "id": "NpcId.MAN_2_3078",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2696,
+    "y": 3490
+  },
+  {
+    "id": "NpcId.MAN_2_3078",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2694,
+    "y": 3495
+  },
+  {
+    "id": "NpcId.BARTENDER_1318",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2690,
+    "y": 3493
+  }
+]

@@ -1,0 +1,105 @@
+{
+  "Fancy tiara": [
+    [ "FANCY_TIARA" ]
+  ],
+  "3rd age axe": [
+    [ "_3RD_AGE_AXE" ]
+  ],
+  "3rd age pickaxe": [
+    [ "_3RD_AGE_PICKAXE" ]
+  ],
+  "Ring of coins": [
+    [ "RING_OF_COINS" ]
+  ],
+  "Lesser demon mask": [
+    [ "LESSER_DEMON_MASK" ]
+  ],
+  "Greater demon mask": [
+    [ "GREATER_DEMON_MASK" ]
+  ],
+  "Black demon mask": [
+    [ "BLACK_DEMON_MASK" ]
+  ],
+  "Old demon mask": [
+    [ "OLD_DEMON_MASK" ]
+  ],
+  "Jungle demon mask": [
+    [ "JUNGLE_DEMON_MASK" ]
+  ],
+  "Obsidian cape (r)": [
+    [ "OBSIDIAN_CAPE_R" ]
+  ],
+  "Half moon spectacles": [
+    [ "HALF_MOON_SPECTACLES" ]
+  ],
+  "Left eye patch": [
+    [ "LEFT_EYE_PATCH" ]
+  ],
+  "Ale of the gods": [
+    [ "ALE_OF_THE_GODS" ]
+  ],
+  "Bucket helm (g)": [
+    [ "BUCKET_HELM_G" ]
+  ],
+  "Bowl wig": [
+    [ "BOWL_WIG" ]
+  ],
+  "Shayzien hood": [
+    [ "SHAYZIEN_HOOD" ]
+  ],
+  "Hosidius hood": [
+    [ "HOSIDIUS_HOOD" ]
+  ],
+  "Arceuus hood": [
+    [ "ARCEUUS_HOOD" ]
+  ],
+  "Piscarilius hood": [
+    [ "PISCARILIUS_HOOD" ]
+  ],
+  "Lovakengj hood": [
+    [ "LOVAKENGJ_HOOD" ]
+  ],
+  "Samurai outfit": [
+    [ "SAMURAI_SHIRT" ],
+    [ "SAMURAI_KASA" ],
+    [ "SAMURAI_GREAVES" ],
+    [ "SAMURAI_GLOVES" ],
+    [ "SAMURAI_BOOTS" ]
+  ],
+  "Mummy outfit": [
+    [ "MUMMYS_BODY" ],
+    [ "MUMMYS_HEAD" ],
+    [ "MUMMYS_LEGS" ],
+    [ "MUMMYS_HANDS" ],
+    [ "MUMMYS_FEET" ]
+  ],
+  "Ankou outfit": [
+    [ "ANKOU_TOP" ],
+    [ "ANKOU_MASK" ],
+    [ "ANKOUS_LEGGINGS" ],
+    [ "ANKOU_GLOVES" ],
+    [ "ANKOU_SOCKS" ]
+  ],
+  "Robes of darkness": [
+    [ "ROBE_TOP_OF_DARKNESS" ],
+    [ "HOOD_OF_DARKNESS" ],
+    [ "ROBE_BOTTOM_OF_DARKNESS" ],
+    [ "GLOVES_OF_DARKNESS" ],
+    [ "BOOTS_OF_DARKNESS" ]
+  ],
+  "Scroll sack": [
+    [ "SCROLL_SACK" ]
+  ],
+  "3rd age druidic robe bottoms": [
+    [ "_3RD_AGE_DRUIDIC_ROBE_BOTTOMS" ]
+  ],
+  "3rd age druidic robe top": [
+    [ "_3RD_AGE_DRUIDIC_ROBE_TOP" ]
+  ],
+  "3rd age druidic staff": [
+    [ "_3RD_AGE_DRUIDIC_STAFF" ]
+  ],
+  "3rd age druidic cloak": [
+    [ "_3RD_AGE_DRUIDIC_CLOAK" ]
+  ]
+}

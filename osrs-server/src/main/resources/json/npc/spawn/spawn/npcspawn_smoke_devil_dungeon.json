@@ -1,0 +1,51 @@
+[
+  {
+    "id": "NpcId.THERMONUCLEAR_SMOKE_DEVIL_301",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2363,
+    "y": 9449
+  },
+  {
+    "id": "NpcId.SMOKE_DEVIL_160",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2371,
+    "y": 9452
+  },
+  {
+    "id": "NpcId.SMOKE_DEVIL_160",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2357,
+    "y": 9454
+  },
+  {
+    "id": "NpcId.SMOKE_DEVIL_160",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2356,
+    "y": 9445
+  },
+  {
+    "id": "NpcId.SMOKE_DEVIL_160",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2363,
+    "y": 9443
+  },
+  {
+    "id": "NpcId.SMOKE_DEVIL_160",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2370,
+    "y": 9444
+  },
+  {
+    "id": "NpcId.SMOKE_DEVIL_160",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2366,
+    "y": 9455
+  }
+]

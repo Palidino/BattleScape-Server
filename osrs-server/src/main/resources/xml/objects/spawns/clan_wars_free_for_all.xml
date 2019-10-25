@@ -1,0 +1,17 @@
+<list>
+	<mapobject>
+		<!-- Altar of the Occult -->
+		<id>29150</id>
+		<type>10</type>
+		<direction>2</direction>
+		<x>3338</x>
+		<y>4756</y>
+	</mapobject>
+	<mapobject>
+		<!-- Ornate rejuvenation pool -->
+		<id>29241</id>
+		<type>10</type>
+		<x>3336</x>
+		<y>4755</y>
+	</mapobject>
+</list>

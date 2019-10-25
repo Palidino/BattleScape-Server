@@ -1,0 +1,161 @@
+[
+  {
+    "id": "NpcId.SIEGFRIED_ERKLE",
+    "direction": 1,
+    "moveDistance": 6,
+    "x": 2727,
+    "y": 3379
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 3,
+    "x": 2733,
+    "y": 3374
+  },
+  {
+    "id": "NpcId.DEATH_WING_83",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2810,
+    "y": 9309
+  },
+  {
+    "id": "NpcId.DEATH_WING_83",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2812,
+    "y": 9299
+  },
+  {
+    "id": "NpcId.DEATH_WING_83",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2800,
+    "y": 9307
+  },
+  {
+    "id": "NpcId.DEATH_WING_83",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2800,
+    "y": 9301
+  },
+  {
+    "id": "NpcId.DEATH_WING_83",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2803,
+    "y": 9295
+  },
+  {
+    "id": "NpcId.DEATH_WING_83",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2810,
+    "y": 9294
+  },
+  {
+    "id": "NpcId.DEATH_WING_83",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2806,
+    "y": 9292
+  },
+  {
+    "id": "NpcId.UNGADULU_70",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2792,
+    "y": 9327
+  },
+  {
+    "id": "NpcId.SAN_TOJALON_106",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2393,
+    "y": 4712
+  },
+  {
+    "id": "NpcId.SAN_TOJALON_106",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2385,
+    "y": 4706
+  },
+  {
+    "id": "NpcId.SAN_TOJALON_106",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2403,
+    "y": 4711
+  },
+  {
+    "id": "NpcId.IRVIG_SENAY_100",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2406,
+    "y": 4703
+  },
+  {
+    "id": "NpcId.IRVIG_SENAY_100",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2416,
+    "y": 4703
+  },
+  {
+    "id": "NpcId.IRVIG_SENAY_100",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2413,
+    "y": 4710
+  },
+  {
+    "id": "NpcId.RANALPH_DEVERE_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2423,
+    "y": 4705
+  },
+  {
+    "id": "NpcId.RANALPH_DEVERE_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2421,
+    "y": 4713
+  },
+  {
+    "id": "NpcId.RANALPH_DEVERE_92",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2417,
+    "y": 4723
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2419,
+    "y": 4681
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2409,
+    "y": 4682
+  },
+  {
+    "id": "NpcId.LESSER_DEMON_82",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2412,
+    "y": 4677
+  },
+  {
+    "id": "NpcId.BOULDER_3967",
+    "direction": 1,
+    "x": 2391,
+    "y": 4677
+  }
+]

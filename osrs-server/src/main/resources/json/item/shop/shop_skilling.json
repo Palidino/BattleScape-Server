@@ -1,0 +1,153 @@
+{
+  "name": "Skilling Shop",
+  "sellExchangeMultiplier": 1.0,
+  "ceilPrice": true,
+  "items": [
+    { "id": "ItemId.BRONZE_AXE" },
+    { "id": "ItemId.IRON_AXE" },
+    { "id": "ItemId.STEEL_AXE" },
+    { "id": "ItemId.MITHRIL_AXE" },
+    { "id": "ItemId.ADAMANT_AXE" },
+    { "id": "ItemId.RUNE_AXE" },
+    { "id": "ItemId.BRONZE_PICKAXE" },
+    { "id": "ItemId.IRON_PICKAXE" },
+    { "id": "ItemId.STEEL_PICKAXE" },
+    { "id": "ItemId.MITHRIL_PICKAXE" },
+    { "id": "ItemId.ADAMANT_PICKAXE" },
+    { "id": "ItemId.RUNE_PICKAXE" },
+    {
+      "id": "ItemId.MINING_GLOVES", "price": 0,
+      "costItems": [ [ { "id": "ItemId.UNIDENTIFIED_MINERALS", "amount": 60 } ] ]
+    },
+    {
+      "id": "ItemId.SUPERIOR_MINING_GLOVES", "price": 0,
+      "costItems": [ [ { "id": "ItemId.UNIDENTIFIED_MINERALS", "amount": 120 } ] ]
+    },
+    {
+      "id": "ItemId.EXPERT_MINING_GLOVES", "price": 0,
+      "costItems": [
+        [ { "id": "ItemId.MINING_GLOVES", "amount": 1 } ],
+        [ { "id": "ItemId.SUPERIOR_MINING_GLOVES", "amount": 1 } ],
+        [ { "id": "ItemId.UNIDENTIFIED_MINERALS", "amount": 60 } ]
+      ]
+    },
+    { "id": "ItemId.ECTOPHIAL", "price": 50000 },
+    { "id": "ItemId.RAKE", "price": 5000 },
+    { "id": "ItemId.SPADE", "price": 5000 },
+    { "id": "ItemId.WATERING_CAN_8", "price": 5000 },
+    { "id": "ItemId.SEED_DIBBER", "price": 5000 },
+    { "id": "ItemId.GARDENING_TROWEL", "price": 5000 },
+    { "id": "ItemId.SECATEURS", "price": 5000 },
+    { "id": "ItemId.NEEDLE", "price": 5000 },
+    { "id": "ItemId.THREAD", "price": 100 },
+    { "id": "ItemId.CHISEL", "price": 5000 },
+    { "id": "ItemId.GLASSBLOWING_PIPE", "price": 5000 },
+    { "id": "ItemId.PESTLE_AND_MORTAR", "price": 5000 },
+    { "id": "ItemId.TINDERBOX", "price": 5000 },
+    { "id": "ItemId.KNIFE", "price": 5000 },
+    { "id": "ItemId.SMALL_FISHING_NET", "price": 5000 },
+    { "id": "ItemId.BIG_FISHING_NET", "price": 5000 },
+    { "id": "ItemId.FISHING_ROD", "price": 5000 },
+    { "id": "ItemId.FLY_FISHING_ROD", "price": 5000 },
+    { "id": "ItemId.OILY_FISHING_ROD", "price": 5000 },
+    { "id": "ItemId.BARBARIAN_ROD", "price": 5000 },
+    { "id": "ItemId.LOBSTER_POT", "price": 5000 },
+    { "id": "ItemId.HARPOON", "price": 5000 },
+    { "id": "ItemId.HAMMER", "price": 5000 },
+    { "id": "ItemId.ROPE", "price": 5000 },
+    { "id": "ItemId.BIRD_SNARE", "price": 5000 },
+    { "id": "ItemId.BOX_TRAP", "price": 5000 },
+    { "id": "ItemId.BUTTERFLY_NET", "price": 5000 },
+    { "id": "ItemId.BUTTERFLY_JAR", "price": 100 },
+    { "id": "ItemId.IMPLING_JAR", "price": 1000 },
+    {
+      "id": "ItemId.MAGIC_BUTTERFLY_NET", "price": 5000,
+      "costItems": [
+        [ { "id": "ItemId.GOURMET_IMPLING_JAR", "amount": 3 } ],
+        [ { "id": "ItemId.EARTH_IMPLING_JAR", "amount": 2 } ],
+        [ { "id": "ItemId.ESSENCE_IMPLING_JAR", "amount": 1 } ]
+      ]
+    },
+    { "id": "ItemId.RING_MOULD", "price": 5000 },
+    { "id": "ItemId.AMULET_MOULD", "price": 5000 },
+    { "id": "ItemId.NECKLACE_MOULD", "price": 5000 },
+    { "id": "ItemId.BRACELET_MOULD", "price": 5000 },
+    { "id": "ItemId.FILLED_PLANT_POT", "price": 100 },
+    { "id": "ItemId.BUCKET", "price": 100 },
+    { "id": "ItemId.COMPOST", "price": 100 },
+    { "id": "ItemId.BOW_STRING" },
+    { "id": "ItemId.CROSSBOW_STRING" },
+    { "id": "ItemId.PLANT_CURE" },
+    { "id": "ItemId.POTATO_SEED" },
+    { "id": "ItemId.ONION_SEED" },
+    { "id": "ItemId.CABBAGE_SEED" },
+    { "id": "ItemId.MARIGOLD_SEED" },
+    { "id": "ItemId.ROSEMARY_SEED" },
+    { "id": "ItemId.COWHIDE" },
+    { "id": "ItemId.BALL_OF_WOOL" },
+    { "id": "ItemId.UNCUT_OPAL" },
+    { "id": "ItemId.UNCUT_SAPPHIRE" },
+    { "id": "ItemId.UNCUT_EMERALD" },
+    { "id": "ItemId.UNCUT_RUBY" },
+    { "id": "ItemId.UNCUT_DIAMOND" },
+    { "id": "ItemId.GOLD_BAR" },
+    { "id": "ItemId.BATTLESTAFF" },
+    { "id": "ItemId.MOLTEN_GLASS", "price": 100 },
+    { "id": "ItemId.SWAMP_TAR", "price": 100 },
+    { "id": "ItemId.TIARA", "price": 100 },
+    { "id": "ItemId.VIAL_OF_WATER", "price": 100 },
+    { "id": "ItemId.COCONUT_MILK", "price": 100 },
+    { "id": "ItemId.JUG_OF_WATER", "price": 100 },
+    { "id": "ItemId.EYE_OF_NEWT" },
+    { "id": "ItemId.UNICORN_HORN_DUST" },
+    { "id": "ItemId.LIMPWURT_ROOT" },
+    { "id": "ItemId.RED_SPIDERS_EGGS" },
+    { "id": "ItemId.CHOCOLATE_DUST" },
+    { "id": "ItemId.WHITE_BERRIES" },
+    { "id": "ItemId.DESERT_GOAT_HORN" },
+    { "id": "ItemId.SNAPE_GRASS" },
+    { "id": "ItemId.MORT_MYRE_FUNGUS" },
+    { "id": "ItemId.DRAGON_SCALE_DUST" },
+    { "id": "ItemId.WINE_OF_ZAMORAK" },
+    { "id": "ItemId.POTATO_CACTUS" },
+    { "id": "ItemId.CRUSHED_NEST" },
+    { "id": "ItemId.MAGIC_ROOTS" },
+    { "id": "ItemId.SNAKE_WEED", "price": 500 },
+    { "id": "ItemId.FISHING_BAIT", "price": 100 },
+    { "id": "ItemId.FEATHER", "price": 100 },
+    { "id": "ItemId.DARK_FISHING_BAIT", "price": 200 },
+    { "id": "ItemId.SANDWORMS", "price": 400 },
+    {
+      "id": "ItemId.RAW_SHARK", "price": 0,
+      "costItems": [ [ { "id": "ItemId.MINNOW",  "amount": 40 } ] ]
+    },
+    {
+      "id": "ItemId.LOBSTER", "price": 100,
+      "costItems": [ [ { "id": "ItemId.RAW_LOBSTER",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.SWORDFISH", "price": 100,
+      "costItems": [ [ { "id": "ItemId.RAW_SWORDFISH",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.MONKFISH", "price": 100,
+      "costItems": [ [ { "id": "ItemId.RAW_MONKFISH",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.SHARK", "price": 100,
+      "costItems": [ [ { "id": "ItemId.RAW_SHARK",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.DARK_CRAB", "price": 100,
+      "costItems": [ [ { "id": "ItemId.RAW_DARK_CRAB",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.ANGLERFISH", "price": 100,
+      "costItems": [ [ { "id": "ItemId.RAW_ANGLERFISH",  "amount": 1 } ] ]
+    },
+    {
+      "id": "ItemId.COOKED_KARAMBWAN", "price": 100,
+      "costItems": [ [ { "id": "ItemId.RAW_KARAMBWAN",  "amount": 1 } ] ]
+    }
+  ]
+}

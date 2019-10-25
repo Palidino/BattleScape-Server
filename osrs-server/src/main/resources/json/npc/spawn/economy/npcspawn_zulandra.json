@@ -1,0 +1,35 @@
+[
+  {
+    "id": "NpcId.ZUL_ANIEL",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2196,
+    "y": 3057
+  },
+  {
+    "id": "NpcId.ZUL_ARETH",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2197,
+    "y": 3061
+  },
+  {
+    "id": "NpcId.ZUL_URGISH",
+    "direction": 1,
+    "x": 2200,
+    "y": 3054
+  },
+  {
+    "id": "NpcId.HIGH_PRIESTESS_ZUL_HARCINQA",
+    "direction": 1,
+    "x": 2192,
+    "y": 3055
+  },
+  {
+    "id": "NpcId.PRIESTESS_ZUL_GWENWYNIG_2033",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2211,
+    "y": 3056
+  }
+]

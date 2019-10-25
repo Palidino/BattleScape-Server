@@ -1,0 +1,61 @@
+{
+  "currency": 6529,
+  "name": "TzHaar-Hur-Tel's Equipment Store",
+  "items": [
+    {
+      "id": "ItemId.TOKTZ_XIL_UL",
+      "price": 375,
+      "buyPrice": 37
+    },
+    {
+      "id": "ItemId.TOKTZ_XIL_AK",
+      "price": 60000,
+      "buyPrice": 6000
+    },
+    {
+      "id": "ItemId.TOKTZ_KET_XIL",
+      "price": 67500,
+      "buyPrice": 6750
+    },
+    {
+      "id": "ItemId.TOKTZ_XIL_EK",
+      "price": 37500,
+      "buyPrice": 3750
+    },
+    {
+      "id": "ItemId.TOKTZ_MEJ_TAL",
+      "price": 52500,
+      "buyPrice": 5250
+    },
+    {
+      "id": "ItemId.TZHAAR_KET_EM",
+      "price": 45000,
+      "buyPrice": 4500
+    },
+    {
+      "id": "ItemId.TZHAAR_KET_OM",
+      "price": 75000,
+      "buyPrice": 7500
+    },
+    {
+      "id": "ItemId.OBSIDIAN_CAPE",
+      "price": 90000,
+      "buyPrice": 9000
+    },
+    {
+      "id": "ItemId.OBSIDIAN_HELMET",
+      "price": 84480,
+      "buyPrice": 8448
+    },
+    {
+      "id": "ItemId.OBSIDIAN_PLATEBODY",
+      "price": 126000,
+      "buyPrice": 12600
+    },
+    {
+      "id": "ItemId.OBSIDIAN_PLATELEGS",
+      "price": 100500,
+      "buyPrice": 10050
+    }
+  ]
+}

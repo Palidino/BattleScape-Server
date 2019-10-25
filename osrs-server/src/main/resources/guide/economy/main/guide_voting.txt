@@ -1,0 +1,8 @@
+Voting
+
+You are able to vote either on the website or in-game by clicking on Vote Boosts, located under game information. By voting, you receive vote tickets, which can be exchanged with the Vote Manager located inside the Edgeville bank.
+
+Your voting benefits last for 12 hours, and include the following:
+<col=0000A0>*</col> 10% boosted drop rates (including all pets)
+<col=0000A0>*</col> 10% more experience
+<col=0000A0>*</col> 5% higher skilling success rates

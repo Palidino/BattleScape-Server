@@ -1,0 +1,37 @@
+Frequently Asked Questions
+
+<col=0000A0>Q:</col> How do I claim my votes?
+<col=0000A0>A:</col> To claim your votes you need to relog. They will be placed inside of you bank in the form of vote tickets.
+
+<col=0000A0>Q:</col> Can I trade/sell my votes?
+<col=0000A0>A:</col> Yes, vote tickets are tradeable.
+
+<col=0000A0>Q:</col> Where do I use my votes, and what do I use them on?
+<col=0000A0>A:</col> Your votes can be used in the vote shop. To access this, speak to the Vote Manager within the Edgeville bank.
+
+<col=0000A0>Q:</col> How do I get to the training zones?
+<col=0000A0>A:</col> To get to the training zones speak to the blue wizard west of the Edgeville bank and go to monsters. Select where you'd like to go and train.
+
+<col=0000A0>Q:</col> After I purchase a bond, how long does it take to appear in my bond pouch?
+<col=0000A0>A:</col> After purchasing a bond, it takes about 10-15 minutes for the bond to appear within your pouch. You will need to relog.
+
+<col=0000A0>Q:</col> How long does it take for my membership to become effective?
+<col=0000A0>A:</col> After redeeming the bond, it takes about 10-15 minutes for your membership to become active. You will need to relog.
+
+<col=0000A0>Q:</col>  How do I start Slayer?
+<col=0000A0>A:</col> After you reach a combat level of 20, speak to Nieve in the building west of the Edgeville bank. The same applies for Wilderness Slayer, only you will speak to Krystilia for this task.
+
+<col=0000A0>Q:</col> Can I have both a Wilderness Slayer and normal Slayer task?
+<col=0000A0>A:</col> Yes, you can have both at the same time.
+
+<col=0000A0>Q:</col> Is there a gilded altar for bones?
+<col=0000A0>A:</col> Yes, there is an altar located east of the Edgeville bank.
+
+<col=0000A0>Q:</col></col> When making a tentacle whip, does my abyssal whip or does my kraken tentacle degrade?
+<col=0000A0>A:</col> Your abyssal tentacle will degrade. After your 10,000 charges are up, you will get your kraken tentacle back, but not your abyssal whip.
+
+<col=0000A0>Q:</col> How do I get an Arclight?
+<col=0000A0>A:</col> You need to complete a quest, which can be started by speaking to Evil Dave to get the Darklight. After you have the Darklight, you must gather 3 ancient shards from the Catacombs of Kourend. Once you have all of these items, use the Darklight on the well at the entrance of the Catacombs.
+
+<col=0000A0>Q:</col> What do I do if someone is bothering me?
+<col=0000A0>A:</col> If someone is bothering you, report them then add them to your ignore list.

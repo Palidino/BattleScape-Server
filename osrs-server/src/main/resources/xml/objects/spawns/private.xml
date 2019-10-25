@@ -1,0 +1,10 @@
+<list>
+	<mapobject>
+		<!-- Bank chest -->
+		<id>2693</id>
+		<type>10</type>
+		<direction>3</direction>
+		<x>2899</x>
+		<y>2726</y>
+	</mapobject>
+</list>

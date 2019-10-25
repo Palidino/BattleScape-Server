@@ -1,0 +1,44 @@
+<list>
+	<mapobject>
+		<!-- Rock -->
+		<id>-1</id>
+		<type>10</type>
+		<x>2575</x>
+		<y>2872</y>
+	</mapobject>
+	<mapobject>
+		<!-- Rock -->
+		<id>-1</id>
+		<type>10</type>
+		<x>2574</x>
+		<y>2873</y>
+	</mapobject>
+	<mapobject>
+		<!-- Rock -->
+		<id>-1</id>
+		<type>10</type>
+		<x>2575</x>
+		<y>2876</y>
+	</mapobject>
+	<mapobject>
+		<!-- Rock -->
+		<id>-1</id>
+		<type>10</type>
+		<x>2575</x>
+		<y>2877</y>
+	</mapobject>
+	<mapobject>
+		<!-- Rock -->
+		<id>-1</id>
+		<type>10</type>
+		<x>2574</x>
+		<y>2878</y>
+	</mapobject>
+	<mapobject>
+		<!-- Rockslide -->
+		<id>-1</id>
+		<type>10</type>
+		<x>2573</x>
+		<y>2880</y>
+	</mapobject>
+</list>

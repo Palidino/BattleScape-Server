@@ -1,0 +1,429 @@
+[
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3130,
+    "y": 9904
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3134,
+    "y": 9905
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3132,
+    "y": 9908
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3130,
+    "y": 9911
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3133,
+    "y": 9912
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3130,
+    "y": 9915
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3148,
+    "y": 9907
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3147,
+    "y": 9902
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3143,
+    "y": 9900
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3142,
+    "y": 9904
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3140,
+    "y": 9908
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3147,
+    "y": 9897
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3150,
+    "y": 9893
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3150,
+    "y": 9886
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3148,
+    "y": 9882
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3144,
+    "y": 9884
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3139,
+    "y": 9886
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3139,
+    "y": 9891
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3145,
+    "y": 9891
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3146,
+    "y": 9887
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3140,
+    "y": 9895
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3125,
+    "y": 9864
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3127,
+    "y": 9862
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3130,
+    "y": 9861
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3128,
+    "y": 9865
+  },
+  {
+    "id": "NpcId.ZOMBIE_24",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3124,
+    "y": 9861
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3116,
+    "y": 9870
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3119,
+    "y": 9872
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3122,
+    "y": 9874
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3123,
+    "y": 9878
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3125,
+    "y": 9874
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3118,
+    "y": 9867
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3128,
+    "y": 9874
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3118,
+    "y": 9849
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3121,
+    "y": 9844
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3117,
+    "y": 9840
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3114,
+    "y": 9836
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3119,
+    "y": 9833
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3112,
+    "y": 9831
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3107,
+    "y": 9827
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3106,
+    "y": 9832
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3107,
+    "y": 9838
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3100,
+    "y": 9835
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3098,
+    "y": 9829
+  },
+  {
+    "id": "NpcId.HILL_GIANT_28",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3110,
+    "y": 9844
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3097,
+    "y": 9910
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3099,
+    "y": 9913
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3101,
+    "y": 9908
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3099,
+    "y": 9905
+  },
+  {
+    "id": "NpcId.SKELETON_22",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3096,
+    "y": 9906
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_2",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3095,
+    "y": 9881
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_2",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3095,
+    "y": 9884
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_2",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3098,
+    "y": 9882
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_2",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3101,
+    "y": 9884
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_2",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3101,
+    "y": 9881
+  },
+  {
+    "id": "NpcId.GIANT_SPIDER_2",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3105,
+    "y": 9883
+  },
+  {
+    "id": "NpcId.GIANT_RAT_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3117,
+    "y": 9891
+  },
+  {
+    "id": "NpcId.GIANT_RAT_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3120,
+    "y": 9893
+  },
+  {
+    "id": "NpcId.GIANT_RAT_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3122,
+    "y": 9889
+  },
+  {
+    "id": "NpcId.GIANT_RAT_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3119,
+    "y": 9886
+  },
+  {
+    "id": "NpcId.GIANT_RAT_3",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 3120,
+    "y": 9890
+  }
+]

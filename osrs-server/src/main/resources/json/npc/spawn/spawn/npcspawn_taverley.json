@@ -1,0 +1,15 @@
+[
+  {
+    "id": "NpcId.ALAIN",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2932,
+    "y": 3435
+  },
+  {
+    "id": "NpcId.TOOL_LEPRECHAUN",
+    "direction": 3,
+    "x": 2941,
+    "y": 3441
+  }
+]

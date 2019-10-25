@@ -1,0 +1,15 @@
+[
+  {
+    "id": "NpcId.TOOL_LEPRECHAUN",
+    "direction": 1,
+    "x": 2492,
+    "y": 3184
+  },
+  {
+    "id": "NpcId.GILETH",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2488,
+    "y": 3176
+  }
+]

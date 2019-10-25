@@ -1,0 +1,28 @@
+{
+  "name": "Hoods of Accomplishment",
+  "items": [
+    { "id": "ItemId.MAX_HOOD", "price": 22770 },
+    { "id": "ItemId.ATTACK_HOOD", "price": 9900 },
+    { "id": "ItemId.STRENGTH_HOOD", "price": 9900 },
+    { "id": "ItemId.DEFENCE_HOOD", "price": 9900 },
+    { "id": "ItemId.RANGING_HOOD", "price": 9900 },
+    { "id": "ItemId.PRAYER_HOOD", "price": 9900 },
+    { "id": "ItemId.MAGIC_HOOD", "price": 9900 },
+    { "id": "ItemId.HITPOINTS_HOOD", "price": 9900 },
+    { "id": "ItemId.AGILITY_HOOD", "price": 9900 },
+    { "id": "ItemId.HERBLORE_HOOD", "price": 9900 },
+    { "id": "ItemId.THIEVING_HOOD", "price": 9900 },
+    { "id": "ItemId.CRAFTING_HOOD", "price": 9900 },
+    { "id": "ItemId.SLAYER_HOOD", "price": 9900 },
+    { "id": "ItemId.FISHING_HOOD", "price": 9900 },
+    { "id": "ItemId.COOKING_HOOD", "price": 9900 },
+    { "id": "ItemId.FLETCHING_HOOD", "price": 9900 },
+    { "id": "ItemId.WOODCUTTING_HOOD", "price": 9900 },
+    { "id": "ItemId.FIREMAKING_HOOD", "price": 9900 },
+    { "id": "ItemId.MINING_HOOD", "price": 9900 },
+    { "id": "ItemId.SMITHING_HOOD", "price": 9900 },
+    { "id": "ItemId.HUNTER_HOOD", "price": 9900 },
+    { "id": "ItemId.RUNECRAFTING_HOOD", "price": 9900 },
+    { "id": "ItemId.FARMING_HOOD", "price": 9900 }
+  ]
+}

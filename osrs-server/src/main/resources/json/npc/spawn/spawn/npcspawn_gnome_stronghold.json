@@ -1,0 +1,98 @@
+[
+  {
+    "id": "NpcId.TOOL_LEPRECHAUN",
+    "direction": 1,
+    "x": 2438,
+    "y": 3419
+  },
+  {
+    "id": "NpcId.GADRIN",
+    "direction": 3,
+    "x": 2446,
+    "y": 3426,
+    "height": 1
+  },
+  {
+    "id": "NpcId.PRISSY_SCILLA",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2435,
+    "y": 3411
+  },
+  {
+    "id": "NpcId.BOLONGO",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2473,
+    "y": 3446
+  },
+  {
+    "id": "NpcId.WIZARD_4399",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2446,
+    "y": 3432,
+    "height": 1
+  },
+  {
+    "id": "NpcId.GNOME_BANKER",
+    "direction": 4,
+    "x": 2443,
+    "y": 3425,
+    "height": 1
+  },
+  {
+    "id": "NpcId.GNOME_BANKER",
+    "direction": 4,
+    "x": 2443,
+    "y": 3424,
+    "height": 1
+  },
+  {
+    "id": "NpcId.GNOME_BANKER",
+    "direction": 3,
+    "x": 2448,
+    "y": 3427,
+    "height": 1
+  },
+  {
+    "id": "NpcId.GNOME_BANKER",
+    "direction": 3,
+    "x": 2448,
+    "y": 3424,
+    "height": 1
+  },
+  {
+    "id": "NpcId.GNOME",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2480,
+    "y": 3431
+  },
+  {
+    "id": "NpcId.GNOME",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2479,
+    "y": 3422
+  },
+  {
+    "id": "NpcId.GNOME",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2470,
+    "y": 3436
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 4,
+    "x": 2447,
+    "y": 9909
+  },
+  {
+    "id": "NpcId.BANKER_395",
+    "direction": 1,
+    "x": 2479,
+    "y": 9918
+  }
+]

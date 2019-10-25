@@ -1,0 +1,373 @@
+[
+  {
+    "id": "NpcId.GIANT_MOLE_230",
+    "direction": 1,
+    "moveDistance": 64,
+    "x": 1759,
+    "y": 5184
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1749,
+    "y": 5222
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1754,
+    "y": 5224
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1759,
+    "y": 5218
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1766,
+    "y": 5217
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1770,
+    "y": 5222
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1772,
+    "y": 5230
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1773,
+    "y": 5239
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1781,
+    "y": 5234
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1782,
+    "y": 5224
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1780,
+    "y": 5215
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1783,
+    "y": 5204
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1774,
+    "y": 5205
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1773,
+    "y": 5195
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1784,
+    "y": 5194
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1778,
+    "y": 5187
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1780,
+    "y": 5180
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1775,
+    "y": 5172
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1780,
+    "y": 5164
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1779,
+    "y": 5155
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1781,
+    "y": 5150
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1774,
+    "y": 5149
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1767,
+    "y": 5151
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1757,
+    "y": 5152
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1751,
+    "y": 5149
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1743,
+    "y": 5151
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1737,
+    "y": 5154
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1738,
+    "y": 5161
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1744,
+    "y": 5165
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1750,
+    "y": 5173
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1741,
+    "y": 5174
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1741,
+    "y": 5181
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1741,
+    "y": 5189
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1739,
+    "y": 5196
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1735,
+    "y": 5203
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1736,
+    "y": 5212
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1742,
+    "y": 5207
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1751,
+    "y": 5207
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1755,
+    "y": 5200
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1749,
+    "y": 5195
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1758,
+    "y": 5210
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1742,
+    "y": 5221
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1735,
+    "y": 5228
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1764,
+    "y": 5198
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1766,
+    "y": 5176
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1756,
+    "y": 5162
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1761,
+    "y": 5166
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1763,
+    "y": 5162
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1770,
+    "y": 5164
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1756,
+    "y": 5178
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1755,
+    "y": 5184
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1761,
+    "y": 5190
+  },
+  {
+    "id": "NpcId.BABY_MOLE",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 1766,
+    "y": 5184
+  }
+]

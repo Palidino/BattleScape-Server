@@ -1,0 +1,3 @@
+Join Home Clan Chat
+
+%clanchat=home%

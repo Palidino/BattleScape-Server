@@ -1,0 +1,79 @@
+[
+  {
+    "id": "NpcId.BLUE_DRAGON_111",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2592,
+    "y": 9461
+  },
+  {
+    "id": "NpcId.BLUE_DRAGON_111",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2607,
+    "y": 9459
+  },
+  {
+    "id": "NpcId.BLUE_DRAGON_111",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2607,
+    "y": 9434
+  },
+  {
+    "id": "NpcId.BLUE_DRAGON_111",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2594,
+    "y": 9431
+  },
+  {
+    "id": "NpcId.BLUE_DRAGON_111",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2587,
+    "y": 9424
+  },
+  {
+    "id": "NpcId.BLUE_DRAGON_111",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2581,
+    "y": 9435
+  },
+  {
+    "id": "NpcId.BLUE_DRAGON_111",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2569,
+    "y": 9435
+  },
+  {
+    "id": "NpcId.BLUE_DRAGON_111",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2572,
+    "y": 9447
+  },
+  {
+    "id": "NpcId.BLUE_DRAGON_111",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2582,
+    "y": 9459
+  },
+  {
+    "id": "NpcId.BLUE_DRAGON_111",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2613,
+    "y": 9444
+  },
+  {
+    "id": "NpcId.BLUE_DRAGON_111",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2614,
+    "y": 9421
+  }
+]

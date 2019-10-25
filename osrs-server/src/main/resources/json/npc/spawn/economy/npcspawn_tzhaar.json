@@ -1,0 +1,414 @@
+[
+  {
+    "id": "NpcId.WIZARD_4399",
+    "direction": 1,
+    "x": 2448,
+    "y": 5181
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_KEH",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2495,
+    "y": 5106
+  },
+  {
+    "id": "NpcId.TZHAAR_MEJ_ROH",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2461,
+    "y": 5125
+  },
+  {
+    "id": "NpcId.TZHAAR_MEJ_JAL",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2439,
+    "y": 5169
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_TEL",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2477,
+    "y": 5146
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_LEK",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2463,
+    "y": 5149
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_ZUH",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2445,
+    "y": 5178
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2481,
+    "y": 5167
+  },
+  {
+    "id": "NpcId.TZHAAR_XIL_133",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2484,
+    "y": 5168
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2488,
+    "y": 5170
+  },
+  {
+    "id": "NpcId.TZHAAR_XIL_133",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2490,
+    "y": 5175
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2491,
+    "y": 5176
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2491,
+    "y": 5172
+  },
+  {
+    "id": "NpcId.TZHAAR_MEJ_103",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2489,
+    "y": 5159
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2486,
+    "y": 5156
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2491,
+    "y": 5156
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_74",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2492,
+    "y": 5159
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_74",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2488,
+    "y": 5155
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_74",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2492,
+    "y": 5154
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_74",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2484,
+    "y": 5159
+  },
+  {
+    "id": "NpcId.TZHAAR_MEJ_103",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2481,
+    "y": 5154
+  },
+  {
+    "id": "NpcId.TZHAAR_XIL_133_2169",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2472,
+    "y": 5166
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2467,
+    "y": 5164
+  },
+  {
+    "id": "NpcId.TZHAAR_XIL_133_2169",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2481,
+    "y": 5162
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2476,
+    "y": 5166
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_74",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2479,
+    "y": 5156
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2478,
+    "y": 5151
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2474,
+    "y": 5153
+  },
+  {
+    "id": "NpcId.TZHAAR_MEJ_103",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2472,
+    "y": 5149
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2448,
+    "y": 5149
+  },
+  {
+    "id": "NpcId.TZHAAR_XIL_133",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2452,
+    "y": 5149
+  },
+  {
+    "id": "NpcId.TZHAAR_XIL_133",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2455,
+    "y": 5155
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2460,
+    "y": 5159
+  },
+  {
+    "id": "NpcId.TZHAAR_XIL_133",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2463,
+    "y": 5161
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_74",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2461,
+    "y": 5141
+  },
+  {
+    "id": "NpcId.TZHAAR_MEJ_103",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2468,
+    "y": 5141
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2455,
+    "y": 5140
+  },
+  {
+    "id": "NpcId.TZHAAR_XIL_133_2169",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2455,
+    "y": 5161
+  },
+  {
+    "id": "NpcId.TZHAAR_XIL_133",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2439,
+    "y": 5171
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2447,
+    "y": 5170
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2448,
+    "y": 5166
+  },
+  {
+    "id": "NpcId.TZHAAR_KET_149",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2442,
+    "y": 5169
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_74",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2465,
+    "y": 5145
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_74",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2471,
+    "y": 5143
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_74",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2465,
+    "y": 5169
+  },
+  {
+    "id": "NpcId.TZHAAR_XIL_133",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2452,
+    "y": 5168
+  },
+  {
+    "id": "NpcId.TZHAAR_MEJ_103",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2450,
+    "y": 5123
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_74",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2456,
+    "y": 5124
+  },
+  {
+    "id": "NpcId.TZHAAR_MEJ_103",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2458,
+    "y": 5129
+  },
+  {
+    "id": "NpcId.TZHAAR_MEJ_103",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2456,
+    "y": 5135
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_74",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2469,
+    "y": 5147
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_74",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2448,
+    "y": 5143
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_74",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2440,
+    "y": 5145
+  },
+  {
+    "id": "NpcId.TZHAAR_XIL_133",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2442,
+    "y": 5141
+  },
+  {
+    "id": "NpcId.TZHAAR_XIL_133_2169",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2440,
+    "y": 5137
+  },
+  {
+    "id": "NpcId.TZHAAR_XIL_133_2169",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2437,
+    "y": 5133
+  },
+  {
+    "id": "NpcId.TZHAAR_XIL_133",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2440,
+    "y": 5131
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_74",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2437,
+    "y": 5129
+  },
+  {
+    "id": "NpcId.TZHAAR_HUR_74",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2441,
+    "y": 5134
+  }
+]

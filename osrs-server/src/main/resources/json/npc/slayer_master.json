@@ -1,0 +1,2339 @@
+{
+  "Turael": {
+    "name": "Turael"
+  },
+  "Krystilia": {
+    "name": "Krystilia",
+    "combatLevel": 70,
+    "points": 25,
+    "tasks": [
+      {
+        "identifier": "ANKOU",
+        "location": "Revenant Caves",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "wilderness": true
+      },
+      {
+        "identifier": "AVIANSIE",
+        "location": "Wilderness God Wars Dungeon",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 7,
+        "wilderness": true,
+        "ids": [
+          "NpcId.SPIRITUAL_WARRIOR_123",
+          "NpcId.SPIRITUAL_RANGER_127",
+          "NpcId.SPIRITUAL_MAGE_122"
+        ]
+      },
+      {
+        "identifier": "BANDIT",
+        "location": "Bandit Camp",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 4,
+        "wilderness": true
+      },
+      {
+        "identifier": "BEAR",
+        "location": "West of the Graveyard of Shadows",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "wilderness": true,
+        "ids": [
+          "NpcId.CALLISTO_470",
+          "NpcId.CALLISTO_470_6609"
+        ]
+      },
+      {
+        "identifier": "BLACK_DEMON",
+        "location": "Edgeville Dungeon, Revenant Caves, and Frozen Waste Plateau",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 7,
+        "wilderness": true,
+        "ids": [
+          "NpcId.DEMONIC_GORILLA_275",
+          "NpcId.DEMONIC_GORILLA_275_7145",
+          "NpcId.DEMONIC_GORILLA_275_7146"
+        ]
+      },
+      {
+        "identifier": "BLACK_DRAGON",
+        "location": "Lava Maze Dungeon and Revenant Caves",
+        "minimumQuantity": 25,
+        "maximumQuantity": 50,
+        "weight": 7,
+        "wilderness": true,
+        "ids": [
+          "NpcId.BABY_DRAGON_83",
+          "NpcId.BABY_DRAGON_83_1872"
+        ]
+      },
+      {
+        "identifier": "CHAOS_DRUID",
+        "location": "Edgeville Dungeon and Chaos Temple",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 5,
+        "wilderness": true
+      },
+      {
+        "identifier": "DARK_WARRIOR",
+        "location": "Dark Warriors' Fortress",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 4,
+        "wilderness": true
+      },
+      {
+        "identifier": "EARTH_WARRIOR",
+        "location": "Edgeville Dungeon",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "wilderness": true
+      },
+      {
+        "identifier": "FIRE_GIANT",
+        "location": "Deep Wilderness Dungeon and Lava Maze",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 7,
+        "wilderness": true
+      },
+      {
+        "identifier": "GREATER_DEMON",
+        "location": "Lava Maze Dungeon, Demonic Ruins, and Revenant Caves",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 8,
+        "wilderness": true
+      },
+      {
+        "identifier": "GREEN_DRAGON",
+        "location": "North of Graveyard of Shadows, South of Lava Maze, South-West of Bone Yard, and Revenant Caves",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 4,
+        "wilderness": true,
+        "ids": [
+          "NpcId.BABY_DRAGON_48_5194"
+        ]
+      },
+      {
+        "identifier": "HELLHOUND",
+        "location": "North-East of Deserted Keep, Revenant Caves, and Laza Maze",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 7,
+        "wilderness": true
+      },
+      {
+        "identifier": "ICE_GIANT",
+        "location": "Revenant Caves",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "wilderness": true
+      },
+      {
+        "identifier": "LAVA_DRAGON",
+        "location": "Lava Dragon Isle",
+        "minimumQuantity": 25,
+        "maximumQuantity": 50,
+        "weight": 3,
+        "wilderness": true
+      },
+      {
+        "identifier": "LESSER_DEMON",
+        "location": "Lava Maze, King Black Dragon Lair, and Revenant Caves",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "wilderness": true
+      },
+      {
+        "identifier": "MAGIC_AXE",
+        "location": "Magic Axe Hut",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 7,
+        "wilderness": true
+      },
+      {
+        "identifier": "MAMMOTH",
+        "location": "South of the Graveyard of Shadows",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "wilderness": true
+      },
+      {
+        "identifier": "REVENANT",
+        "location": "Revenant Caves",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 5,
+        "wilderness": true
+      },
+      {
+        "identifier": "ROGUE",
+        "location": "Rogues' Castle",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 5,
+        "wilderness": true
+      },
+      {
+        "identifier": "SCORPION",
+        "location": "West of Air Obelisk and Scorpion Pit",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "wilderness": true,
+        "ids": [
+          "NpcId.SCORPIA_225",
+          "NpcId.SCORPIAS_OFFSPRING_15",
+          "NpcId.SCORPIAS_GUARDIAN_47"
+        ]
+      },
+      {
+        "identifier": "SKELETON",
+        "location": "Southern Mine, South-Western Mine, Bone Yard, and Edgeville Dungeon",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 5,
+        "wilderness": true,
+        "ids": [
+          "NpcId.SKELETAL_MINER_42",
+          "NpcId.VETION_454",
+          "NpcId.VETION_REBORN_454"
+        ]
+      },
+      {
+        "identifier": "SPIDER",
+        "location": "North-west of Lava Dragon Isle, North-East of Bone Garden, and Edgeville Dungeon",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "wilderness": true,
+        "ids": [
+          "NpcId.VENENATIS_464",
+          "NpcId.VENENATIS_464_6610"
+        ]
+      },
+      {
+        "identifier": "SPIRITUAL_CREATURE",
+        "location": "Wilderness God Wars Dungeon",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "slayerLevel": 83,
+        "wilderness": true,
+        "ids": [
+          "NpcId.SPIRITUAL_WARRIOR_125",
+          "NpcId.SPIRITUAL_RANGER_122",
+          "NpcId.SPIRITUAL_MAGE_120",
+          "NpcId.SPIRITUAL_RANGER_115",
+          "NpcId.SPIRITUAL_WARRIOR_134",
+          "NpcId.SPIRITUAL_MAGE_121",
+          "NpcId.SPIRITUAL_WARRIOR_115",
+          "NpcId.SPIRITUAL_RANGER_118",
+          "NpcId.SPIRITUAL_MAGE_121_3161",
+          "NpcId.SPIRITUAL_WARRIOR_123",
+          "NpcId.SPIRITUAL_RANGER_127",
+          "NpcId.SPIRITUAL_MAGE_122"
+        ]
+      },
+      {
+        "identifier": "BOSS",
+        "location": "Wilderness",
+        "minimumQuantity": 25,
+        "maximumQuantity": 50,
+        "weight": 8,
+        "wilderness": true,
+        "ids": [
+          "NpcId.CHAOS_FANATIC_202",
+          "NpcId.CRAZY_ARCHAEOLOGIST_204",
+          "NpcId.SCORPIA_225",
+          "NpcId.CHAOS_ELEMENTAL_305",
+          "NpcId.CHAOS_ELEMENTAL_305_6505",
+          "NpcId.CALLISTO_470",
+          "NpcId.CALLISTO_470_6609",
+          "NpcId.VENENATIS_464",
+          "NpcId.VENENATIS_464_6610",
+          "NpcId.VETION_454",
+          "NpcId.VETION_REBORN_454",
+          "NpcId.CHAOS_ELEMENTAL_610_16016",
+          "NpcId.SOTETSEG_995_16017"
+        ]
+      },
+      {
+        "identifier": "ABYSSAL_DEMON",
+        "location": "North East of Chaos Temple",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "slayerLevel": 85,
+        "wilderness": true
+      },
+      {
+        "name": "Barrows",
+        "location": "The Forgotten Cemetery",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "wilderness": true,
+        "ids": [
+          "NpcId.AHRIM_THE_BLIGHTED_98",
+          "NpcId.DHAROK_THE_WRETCHED_115",
+          "NpcId.GUTHAN_THE_INFESTED_115",
+          "NpcId.KARIL_THE_TAINTED_98",
+          "NpcId.TORAG_THE_CORRUPTED_115",
+          "NpcId.VERAC_THE_DEFILED_115"
+        ]
+      },
+      {
+        "name": "Battle Mage",
+        "location": "Mage Arena",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "wilderness": true
+      },
+      {
+        "identifier": "CAVE_HORROR",
+        "location": "West Ruins",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "slayerLevel": 58,
+        "wilderness": true,
+        "ids": [
+          "NpcId.CAVE_ABOMINATION_206"
+        ]
+      },
+      {
+        "identifier": "GARGOYLE",
+        "location": "East Ruins",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "slayerLevel": 75,
+        "wilderness": true
+      },
+      {
+        "identifier": "HYDRA",
+        "location": "Volcanic Forge",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "slayerLevel": 95,
+        "wilderness": true
+      },
+      {
+        "name": "Jewelled Crab",
+        "location": "South West of the Mage Arena",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "wilderness": true
+      },
+      {
+        "identifier": "CAVE_KRAKEN",
+        "location": "Fountain of Rune",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "slayerLevel": 87,
+        "wilderness": true,
+        "ids": [
+          "NpcId.WHIRLPOOL_127",
+          "NpcId.CURSED_KRAKEN_127_16013",
+          "NpcId.CURSED_WHIRLPOOL_127_16014"
+        ]
+      },
+      {
+        "identifier": "FOSSIL_ISLAND_WYVERN",
+        "location": "South of Frozen Waste Plateau",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "slayerLevel": 66,
+        "wilderness": true,
+        "ids": [
+          "NpcId.LONG_TAILED_WYVERN_152",
+          "NpcId.TALONED_WYVERN_147",
+          "NpcId.SPITTING_WYVERN_139",
+          "NpcId.ANCIENT_WYVERN_210",
+          "NpcId.CURSED_WYVERN_210_16011"
+        ]
+      },
+      {
+        "identifier": "LIZARDMAN",
+        "location": "East of Dark Knights' Fortress",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "wilderness": true
+      },
+      {
+        "identifier": "SMOKE_DEVIL",
+        "location": "North of Scorpion Pit",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "slayerLevel": 93,
+        "wilderness": true
+      }
+    ]
+  },
+  "Mazchna": {
+    "name": "Mazchna",
+    "combatLevel": 20,
+    "slayerLevel": 0,
+    "points": 2,
+    "tasks": [
+      {
+        "identifier": "BANSHEE",
+        "location": "Slayer Tower and Catacombs of Kourend",
+        "minimumQuantity": 20,
+        "maximumQuantity": 40,
+        "weight": 8,
+        "slayerLevel": 15,
+        "teleports": [
+          { "name": "Slayer Tower", "tile": { "x": 3434, "y": 3552 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1610, "y": 9997 } }
+        ]
+      },
+      {
+        "identifier": "BAT",
+        "location": "Taverley Dungeon",
+        "minimumQuantity": 20,
+        "maximumQuantity": 40,
+        "weight": 7,
+        "teleports": [
+          { "name": "Taverley Dungeon", "tile": { "x": 2913, "y": 9834 } }
+        ]
+      },
+      {
+        "identifier": "CAVE_CRAWLER",
+        "location": "Fremennik Slayer Dungeon",
+        "minimumQuantity": 20,
+        "maximumQuantity": 40,
+        "weight": 8,
+        "slayerLevel": 10,
+        "teleports": [
+          { "name": "Fremennik Slayer Dungeon", "tile": { "x": 2788, "y": 9996 } }
+        ]
+      },
+      {
+        "identifier": "COCKATRICE",
+        "location": "Fremennik Slayer Dungeon",
+        "minimumQuantity": 20,
+        "maximumQuantity": 40,
+        "weight": 8,
+        "slayerLevel": 25,
+        "teleports": [
+          { "name": "Fremennik Slayer Dungeon", "tile": { "x": 2791, "y": 10035 } }
+        ]
+      },
+      {
+        "identifier": "CRAWLING_HAND",
+        "location": "Slayer Tower",
+        "minimumQuantity": 20,
+        "maximumQuantity": 40,
+        "weight": 8,
+        "slayerLevel": 5,
+        "teleports": [
+          { "name": "Slayer Tower", "tile": { "x": 3427, "y": 3552 } }
+        ]
+      },
+      {
+        "identifier": "GHOST",
+        "location": "Taverley Dungeon",
+        "minimumQuantity": 20,
+        "maximumQuantity": 40,
+        "weight": 7,
+        "teleports": [
+          { "name": "Taverley Dungeon", "tile": { "x": 2897, "y": 9848 } }
+        ]
+      },
+      {
+        "identifier": "HILL_GIANT",
+        "location": "Taverley Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 20,
+        "maximumQuantity": 40,
+        "weight": 7,
+        "teleports": [
+          { "name": "Taverley Dungeon", "tile": { "x": 2907, "y": 9733 } },
+          {
+            "name": "Catacombs of Kourend #1",
+            "tile": { "x": 1664, "y": 10071 }
+          },
+          {
+            "name": "Catacombs of Kourend #2",
+            "tile": { "x": 1636, "y": 10014 }
+          }
+        ]
+      },
+      {
+        "identifier": "HOBGOBLIN",
+        "location": "Asgarnian Ice Dungeon and God Wars Dungeon",
+        "minimumQuantity": 20,
+        "maximumQuantity": 40,
+        "weight": 7,
+        "teleports": [
+          { "name": "Asgarnian Ice Dungeon", "tile": { "x": 3023, "y": 9581 } }
+        ]
+      },
+      {
+        "identifier": "ICE_WARRIOR",
+        "location": "Asgarnian Ice Dungeon",
+        "minimumQuantity": 20,
+        "maximumQuantity": 40,
+        "weight": 7,
+        "teleports": [
+          { "name": "Asgarnian Ice Dungeon", "tile": { "x": 3045, "y": 9580 } }
+        ]
+      },
+      {
+        "identifier": "KALPHITE",
+        "location": "Kalphite Hive",
+        "minimumQuantity": 20,
+        "maximumQuantity": 40,
+        "weight": 11,
+        "teleports": [
+          { "name": "Kalphite Hive", "tile": { "x": 3298, "y": 9503 } }
+        ]
+      },
+      {
+        "identifier": "PYREFIEND",
+        "location": "Fremennik Slayer Dungeon and Smoke Dungeon",
+        "minimumQuantity": 20,
+        "maximumQuantity": 40,
+        "weight": 6,
+        "slayerLevel": 30,
+        "teleports": [
+          { "name": "Fremennik Slayer Dungeon", "tile": { "x": 2761, "y": 10004 } }
+        ]
+      },
+      {
+        "identifier": "ROCKSLUG",
+        "location": "Fremennik Slayer Dungeon",
+        "minimumQuantity": 20,
+        "maximumQuantity": 40,
+        "weight": 5,
+        "slayerLevel": 20,
+        "teleports": [
+          { "name": "Fremennik Slayer Dungeon", "tile": { "x": 2800, "y": 10017 } }
+        ]
+      }
+    ]
+  },
+  "Vannaka": {
+    "name": "Vannaka"
+  },
+  "Chaeldar": {
+    "name": "Chaeldar",
+    "combatLevel": 70,
+    "slayerLevel": 0,
+    "points": 10,
+    "tasks": [
+      {
+        "identifier": "ABERRANT_SPECTRE",
+        "location": "Slayer Tower, Stronghold Slayer Cave, and Catacombs of Kourend",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 8,
+        "slayerLevel": 60,
+        "ids": [
+          "NpcId.DEVIANT_SPECTRE_169",
+          "NpcId.ABHORRENT_SPECTRE_253",
+          "NpcId.REPUGNANT_SPECTRE_335"
+        ],
+        "teleports": [
+          { "name": "Slayer Tower", "tile": { "x": 3438, "y": 3547, "height": 1 } },
+          { "name": "Stronghold Slayer Cave", "tile": { "x": 2458, "y": 9778 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1653, "y": 9989 } }
+        ]
+      },
+      {
+        "identifier": "ABYSSAL_DEMON",
+        "location": "Slayer Tower and Catacombs of Kourend",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 12,
+        "slayerLevel": 85,
+        "ids": [
+          "NpcId.ABYSSAL_SIRE_350",
+          "NpcId.ABYSSAL_SIRE_350_5887",
+          "NpcId.ABYSSAL_SIRE_350_5888",
+          "NpcId.ABYSSAL_SIRE_350_5889",
+          "NpcId.ABYSSAL_SIRE_350_5890",
+          "NpcId.ABYSSAL_SIRE_350_5891",
+          "NpcId.ABYSSAL_SIRE_350_5908",
+          "NpcId.RESPIRATORY_SYSTEM"
+        ],
+        "teleports": [
+          { "name": "Slayer Tower Top", "tile": { "x": 3418, "y": 3568, "height": 2 } },
+          { "name": "Slayer Tower Bottom", "tile": { "x": 3436, "y": 9964, "height": 3 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1675, "y": 10091 } }
+        ]
+      },
+      {
+        "identifier": "BANSHEE",
+        "location": "Slayer Tower and Catacombs of Kourend",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 5,
+        "slayerLevel": 15,
+        "teleports": [
+          { "name": "Slayer Tower", "tile": { "x": 3434, "y": 3552 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1610, "y": 9997 } }
+        ]
+      },
+      {
+        "identifier": "BANSHEE",
+        "location": "Fremennik Slayer Dungeon",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 7,
+        "slayerLevel": 40,
+        "ids": [
+          "NpcId.BASILISK_61",
+          "NpcId.BASILISK_61_418"
+        ],
+        "teleports": [
+          { "name": "Fremennik Slayer Dungeon", "tile": { "x": 2742, "y": 10009 } }
+        ]
+      },
+      {
+        "identifier": "BLACK_DEMON",
+        "location": "Taverley Dungeon, Brimhaven Dungeon, Chasm of Fire, and Catacombs of Kourend",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 10,
+        "ids": [
+          "NpcId.BALFRUG_KREEYATH_151",
+          "NpcId.DEMONIC_GORILLA_275",
+          "NpcId.DEMONIC_GORILLA_275_7145",
+          "NpcId.DEMONIC_GORILLA_275_7146",
+          "NpcId.SKOTIZO_321"
+        ],
+        "teleports": [
+          { "name": "Taverley Dungeon", "tile": { "x": 2853, "y": 9782 } },
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2710, "y": 9485 } },
+          { "name": "Chasm of Fire", "tile": { "x": 1439, "y": 10073, "height": 1 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1720, "y": 10086 } }
+        ]
+      },
+      {
+        "identifier": "BLOODVELD",
+        "location": "Slayer Tower, Stronghold Slayer Cave, and Catacombs of Kourend",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 8,
+        "slayerLevel": 50,
+        "teleports": [
+          { "name": "Slayer Tower", "tile": { "x": 3411, "y": 3565, "height": 1 } },
+          { "name": "Stronghold Slayer Cave", "tile": { "x": 2486, "y": 9822 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1677, "y": 10074 } }
+        ]
+      },
+      {
+        "identifier": "BLUE_DRAGON",
+        "location": "Taverley Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 10,
+        "maximumQuantity": 20,
+        "weight": 8,
+        "ids": [
+          "NpcId.BABY_DRAGON_48",
+          "NpcId.VORKATH_392",
+          "NpcId.VORKATH_732"
+        ],
+        "teleports": [
+          { "name": "Taverley Dungeon", "tile": { "x": 2910, "y": 9799 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1632, "y": 10075 } }
+        ]
+      },
+      {
+        "identifier": "CAVE_CRAWLER",
+        "location": "Fremennik Slayer Dungeon",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 5,
+        "slayerLevel": 10,
+        "teleports": [
+          { "name": "Fremennik Slayer Dungeon", "tile": { "x": 2788, "y": 9996 } }
+        ]
+      },
+      {
+        "identifier": "CAVE_HORROR",
+        "location": "Mos Le'Harmless Caves",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 10,
+        "slayerLevel": 58,
+        "ids": [
+          "NpcId.CAVE_ABOMINATION_206"
+        ],
+        "teleports": [
+          {
+            "name": "Mos Le'Harmless Caves",
+            "tile": { "x": 3744, "y": 9373 }
+          }
+        ]
+      },
+      {
+        "identifier": "CAVE_KRAKEN",
+        "location": "Kraken Cove",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 12,
+        "slayerLevel": 87,
+        "ids": [
+          "NpcId.WHIRLPOOL_127",
+          "NpcId.KRAKEN_291",
+          "NpcId.WHIRLPOOL"
+        ],
+        "teleports": [
+          { "name": "Kraken Cove", "tile": { "x": 2275, "y": 9990 } }
+        ]
+      },
+      {
+        "identifier": "COCKATRICE",
+        "location": "Fremennik Slayer Dungeon",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 6,
+        "slayerLevel": 25,
+        "teleports": [
+          { "name": "Fremennik Slayer Dungeon", "tile": { "x": 2791, "y": 10035 } }
+        ]
+      },
+      {
+        "identifier": "DAGANNOTH",
+        "location": "Waterbirth Isle Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 11,
+        "teleports": [
+          { "name": "Waterbirth Isle Dungeon", "tile": { "x": 2444, "y": 10146 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1667, "y": 9996 } }
+        ]
+      },
+      {
+        "identifier": "FIRE_GIANT",
+        "location": "Smoke Dungeon, Brimhaven Dungeon, Stronghold Slayer Cave, and Catacombs of Kourend",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 12,
+        "teleports": [
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2657, "y": 9491 } },
+          { "name": "Stronghold Slayer Cave", "tile": { "x": 2400, "y": 9776 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1627, "y": 10050 } }
+        ]
+      },
+      {
+        "identifier": "FOSSIL_ISLAND_WYVERN",
+        "location": "Fossil Island",
+        "minimumQuantity": 10,
+        "maximumQuantity": 20,
+        "weight": 7,
+        "slayerLevel": 66,
+        "ids": [
+          "NpcId.LONG_TAILED_WYVERN_152",
+          "NpcId.TALONED_WYVERN_147",
+          "NpcId.SPITTING_WYVERN_139",
+          "NpcId.ANCIENT_WYVERN_210"
+        ],
+        "teleports": [
+          {
+            "name": "Fossil Island - North Cave",
+            "tile": { "x": 3607, "y": 10290 }
+          },
+          {
+            "name": "Fossil Island - South Cave",
+            "tile": { "x": 3604, "y": 10231 }
+          }
+        ]
+      },
+      {
+        "identifier": "GARGOYLE",
+        "location": "Slayer Tower",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 11,
+        "slayerLevel": 75,
+        "ids": [
+          "NpcId.DUSK_248",
+          "NpcId.DUSK_248_7855",
+          "NpcId.DUSK_248_7882",
+          "NpcId.DUSK_328_7888",
+          "NpcId.DUSK_328_7889",
+          "NpcId.DAWN_266",
+          "NpcId.DAWN_228",
+          "NpcId.DAWN_228_7853",
+          "NpcId.DAWN_228_7884",
+          "NpcId.DAWN_228_7885"
+        ],
+        "teleports": [
+          { "name": "Slayer Tower Top", "tile": { "x": 3441, "y": 3543, "height": 2 } },
+          { "name": "Slayer Tower Bottom", "tile": { "x": 3433, "y": 9939, "height": 3 } }
+        ]
+      },
+      {
+        "identifier": "GREATER_DEMON",
+        "location": "Brimhaven Dungeon, Chasm of Fire, and Catacombs of Kourend",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 9,
+        "ids": [
+          "NpcId.KRIL_TSUTSAROTH_650",
+          "NpcId.TSTANON_KARLAK_145",
+          "NpcId.KRIL_TSUTSAROTH_650_6495"
+        ],
+        "teleports": [
+          { "name": "Chasm of Fire", "tile": { "x": 1436, "y": 10084, "height": 2 } },
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2634, "y": 9501, "height": 2 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1702, "y": 10099 } }
+        ]
+      },
+      {
+        "identifier": "INFERNAL_MAGE",
+        "location": "Slayer Tower",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 7,
+        "slayerLevel": 45,
+        "teleports": [
+          { "name": "Slayer Tower", "tile": { "x": 3436, "y": 3561, "height": 1 } }
+        ]
+      },
+      {
+        "identifier": "JELLY",
+        "location": "Fremennik Slayer Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 10,
+        "slayerLevel": 52,
+        "teleports": [
+          { "name": "Fremmennik Slayer Dungeon", "tile": { "x": 2705, "y": 10026 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1719, "y": 10049 } }
+        ]
+      },
+      {
+        "identifier": "KALPHITE",
+        "location": "Kalphite Hive",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 11,
+        "teleports": [
+          { "name": "Kalphite Hive", "tile": { "x": 3298, "y": 9503 } }
+        ]
+      },
+      {
+        "identifier": "KURASK",
+        "location": "Fremennik Slayer Dungeon",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 12,
+        "slayerLevel": 70,
+        "teleports": [
+          { "name": "Fremmenik Slayer Dungeon", "tile": { "x": 2699, "y": 9997 } }
+        ]
+      },
+      {
+        "identifier": "LESSER_DEMON",
+        "location": "Taverley Dungeon, Chasm of Fire, and Catacombs of Kourend",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 9,
+        "ids": [
+          "NpcId.ZAKLN_GRITCH_142"
+        ],
+        "teleports": [
+          { "name": "Chasm of Fire", "tile": { "x": 1437, "y": 10085 } },
+          { "name": "Taverley Dungeon", "tile": { "x": 2935, "y": 9792 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1714, "y": 10068 } }
+        ]
+      },
+      {
+        "identifier": "LIZARDMAN",
+        "location": "Zeah Lizardmen and Zeah Lizardmen Cave",
+        "minimumQuantity": 20,
+        "maximumQuantity": 40,
+        "weight": 5,
+        "teleports": [
+          { "name": "Zeah Lizardmen", "tile": { "x": 1465, "y": 3688 } },
+          { "name": "Zeah Lizardmen Cave", "tile": { "x": 1305, "y": 9972 } }
+        ]
+      },
+      {
+        "identifier": "ROCKSLUG",
+        "location": "Fremennik Slayer Dungeon",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 5,
+        "slayerLevel": 20,
+        "teleports": [
+          { "name": "Fremennik Slayer Dungeon", "tile": { "x": 2800, "y": 10017 } }
+        ]
+      },
+      {
+        "identifier": "TROLL",
+        "location": "Death Plateau",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 11,
+        "ids": [
+          "NpcId.STICK_104",
+          "NpcId.PEE_HAT_91",
+          "NpcId.KRAKA_91"
+        ],
+        "teleports": [
+          { "name": "Death Plateau", "tile": { "x": 2867, "y": 3590 } }
+        ]
+      },
+      {
+        "identifier": "TUROTH",
+        "location": "Fremennik Slayer Dungeon",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 10,
+        "slayerLevel": 55,
+        "teleports": [
+          { "name": "Fremmenik Slayer Dungeon", "tile": { "x": 2723, "y": 10003 } }
+        ]
+      },
+      {
+        "identifier": "DUST_DEVIL",
+        "location": "Smoke Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 9,
+        "slayerLevel": 65,
+        "ids": [
+          "NpcId.CHOKE_DEVIL_264"
+        ],
+        "teleports": [
+          { "name": "Smoke Dungeon", "tile": { "x": 3215, "y": 9359 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1715, "y": 10031 } }
+        ]
+      },
+      {
+        "identifier": "ELF",
+        "location": "Lletya",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 7,
+        "teleports": [
+          { "name": "Lletya", "tile": { "x": 2330, "y": 3171 } }
+        ]
+      },
+      {
+        "identifier": "HELLHOUND",
+        "location": "Taverley Dungeon, Stronghold Slayer Cave, and Catacombs of Kourend",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 9,
+        "ids": [
+          "NpcId.CERBERUS_318"
+        ],
+        "teleports": [
+          { "name": "Taverley Dungeon", "tile": { "x": 2860, "y": 9841 } },
+          { "name": "Stronghold Slayer Cave", "tile": { "x": 2413, "y": 9798 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1645, "y": 10064 } }
+        ]
+      },
+      {
+        "identifier": "BRONZE_DRAGON",
+        "location": "Brimhaven Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 10,
+        "maximumQuantity": 20,
+        "weight": 11,
+        "teleports": [
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2737, "y": 9487 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1650, "y": 10094 } }
+        ]
+      },
+      {
+        "identifier": "BRINE_RAT",
+        "location": "Brine Rat Cavern",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 7,
+        "slayerLevel": 47,
+        "teleports": [
+          { "name": "Brine Rat Cavern", "tile": { "x": 2694, "y": 10122 } }
+        ]
+      },
+      {
+        "identifier": "NECHRYAEL",
+        "location": "Slayer Tower and Catacombs of Kourend",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 12,
+        "slayerLevel": 80,
+        "ids": [
+          "NpcId.NECHRYARCH_300"
+        ],
+        "teleports": [
+          { "name": "Slayer Tower", "tile": { "x": 3441, "y": 3565, "height": 2 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1693, "y": 10080 } }
+        ]
+      },
+      {
+        "identifier": "IRON_DRAGON",
+        "location": "Brimhaven Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 10,
+        "maximumQuantity": 20,
+        "weight": 12,
+        "teleports": [
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2710, "y": 9466 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1657, "y": 10088 } }
+        ]
+      },
+      {
+        "identifier": "PYREFIEND",
+        "location": "Fremennik Slayer Dungeon and Smoke Dungeon",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 6,
+        "slayerLevel": 30,
+        "teleports": [
+          { "name": "Fremennik Slayer Dungeon", "tile": { "x": 2761, "y": 10004 } }
+        ]
+      },
+      {
+        "identifier": "SKELETAL_WYVERN",
+        "location": "Asgarnian Ice Dungeon",
+        "minimumQuantity": 10,
+        "maximumQuantity": 20,
+        "weight": 7,
+        "slayerLevel": 72,
+        "teleports": [
+          { "name": "Asgarnian Ice Dungeon", "tile": { "x": 3056, "y": 9553 } }
+        ]
+      },
+      {
+        "identifier": "STEEL_DRAGON",
+        "location": "Brimhaven Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 10,
+        "maximumQuantity": 20,
+        "weight": 9,
+        "teleports": [
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2710, "y": 9466 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1608, "y": 10053 } }
+        ]
+      },
+      {
+        "identifier": "AVIANSIE",
+        "location": "God Wars Dungeon",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 9,
+        "ids": [
+          "NpcId.KREEARRA_580",
+          "NpcId.WINGMAN_SKREE_143",
+          "NpcId.FLOCKLEADER_GEERIN_149",
+          "NpcId.FLIGHT_KILISA_159",
+          "NpcId.SPIRITUAL_WARRIOR_123",
+          "NpcId.SPIRITUAL_RANGER_127",
+          "NpcId.SPIRITUAL_MAGE_122"
+        ],
+        "teleports": [
+          { "name": "God Wars Dungeon", "tile": { "x": 2916, "y": 3746 } }
+        ]
+      },
+      {
+        "identifier": "WYRM",
+        "location": "Karuulm Slayer Dungeon",
+        "minimumQuantity": 40,
+        "maximumQuantity": 80,
+        "weight": 6,
+        "slayerLevel": 62,
+        "teleports": [
+          { "name": "Karuulm Slayer Dungeon", "tile": { "x": 1287, "y": 10199 } }
+        ]
+      }
+    ]
+  },
+  "Nieve": {
+    "name": "Nieve",
+    "combatLevel": 85,
+    "slayerLevel": 0,
+    "points": 12,
+    "tasks": [
+      {
+        "identifier": "ABERRANT_SPECTRE",
+        "location": "Slayer Tower, Stronghold Slayer Cave, and Catacombs of Kourend",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "slayerLevel": 60,
+        "ids": [
+          "NpcId.DEVIANT_SPECTRE_169",
+          "NpcId.ABHORRENT_SPECTRE_253",
+          "NpcId.REPUGNANT_SPECTRE_335"
+        ],
+        "teleports": [
+          { "name": "Slayer Tower", "tile": { "x": 3438, "y": 3547, "height": 1 } },
+          { "name": "Stronghold Slayer Cave", "tile": { "x": 2458, "y": 9778 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1653, "y": 9989 } }
+        ]
+      },
+      {
+        "identifier": "ABYSSAL_DEMON",
+        "location": "Slayer Tower and Catacombs of Kourend",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 9,
+        "slayerLevel": 85,
+        "ids": [
+          "NpcId.ABYSSAL_SIRE_350",
+          "NpcId.ABYSSAL_SIRE_350_5887",
+          "NpcId.ABYSSAL_SIRE_350_5888",
+          "NpcId.ABYSSAL_SIRE_350_5889",
+          "NpcId.ABYSSAL_SIRE_350_5890",
+          "NpcId.ABYSSAL_SIRE_350_5891",
+          "NpcId.ABYSSAL_SIRE_350_5908",
+          "NpcId.RESPIRATORY_SYSTEM"
+        ],
+        "teleports": [
+          { "name": "Slayer Tower Top", "tile": { "x": 3418, "y": 3568, "height": 2 } },
+          { "name": "Slayer Tower Bottom", "tile": { "x": 3436, "y": 9964, "height": 3 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1675, "y": 10091 } }
+        ]
+      },
+      {
+        "identifier": "ADAMANT_DRAGON",
+        "location": "Lithkren Vault",
+        "minimumQuantity": 3,
+        "maximumQuantity": 7,
+        "weight": 2,
+        "teleports": [
+          { "name": "Lithkren Vault", "tile": { "x": 1568, "y": 5061 } }
+        ]
+      },
+      {
+        "identifier": "ANKOU",
+        "location": "Stronghold Slayer Cave and Catacombs of Kourend",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 5,
+        "teleports": [
+          { "name": "Stronghold Slayer Cave", "tile": { "x": 2477, "y": 9804 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1641, "y": 9994 } }
+        ]
+      },
+      {
+        "identifier": "AVIANSIE",
+        "location": "God Wars Dungeon",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 8,
+        "ids": [
+          "NpcId.KREEARRA_580",
+          "NpcId.WINGMAN_SKREE_143",
+          "NpcId.FLOCKLEADER_GEERIN_149",
+          "NpcId.FLIGHT_KILISA_159",
+          "NpcId.SPIRITUAL_WARRIOR_123",
+          "NpcId.SPIRITUAL_RANGER_127",
+          "NpcId.SPIRITUAL_MAGE_122"
+        ],
+        "teleports": [
+          { "name": "God Wars Dungeon", "tile": { "x": 2916, "y": 3746 } }
+        ]
+      },
+      {
+        "identifier": "BLACK_DEMON",
+        "location": "Taverley Dungeon, Brimhaven Dungeon, Chasm of Fire, and Catacombs of Kourend",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 9,
+        "ids": [
+          "NpcId.BALFRUG_KREEYATH_151",
+          "NpcId.DEMONIC_GORILLA_275",
+          "NpcId.DEMONIC_GORILLA_275_7145",
+          "NpcId.DEMONIC_GORILLA_275_7146",
+          "NpcId.SKOTIZO_321"
+        ],
+        "teleports": [
+          { "name": "Taverley Dungeon", "tile": { "x": 2853, "y": 9782 } },
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2710, "y": 9485 } },
+          { "name": "Chasm of Fire", "tile": { "x": 1439, "y": 10073, "height": 1 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1720, "y": 10086 } }
+        ]
+      },
+      {
+        "identifier": "BLACK_DRAGON",
+        "location": "Taverley Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 12,
+        "maximumQuantity": 25,
+        "weight": 6,
+        "ids": [
+          "NpcId.BABY_DRAGON_83",
+          "NpcId.BABY_DRAGON_83_1872"
+        ],
+        "teleports": [
+          { "name": "Taverley Dungeon", "tile": { "x": 2813, "y": 9814, "height": 1 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1615, "y": 10095 } }
+        ]
+      },
+      {
+        "identifier": "BLOODVELD",
+        "location": "Slayer Tower, Stronghold Slayer Cave, and Catacombs of Kourend",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 9,
+        "slayerLevel": 50,
+        "teleports": [
+          { "name": "Slayer Tower", "tile": { "x": 3411, "y": 3565, "height": 1 } },
+          { "name": "Stronghold Slayer Cave", "tile": { "x": 2486, "y": 9822 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1677, "y": 10074 } }
+        ]
+      },
+      {
+        "identifier": "BLUE_DRAGON",
+        "location": "Taverley Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 4,
+        "ids": [
+          "NpcId.BABY_DRAGON_48",
+          "NpcId.VORKATH_392",
+          "NpcId.VORKATH_732"
+        ],
+        "teleports": [
+          { "name": "Taverley Dungeon", "tile": { "x": 2910, "y": 9799 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1632, "y": 10075 } }
+        ]
+      },
+      {
+        "identifier": "BRINE_RAT",
+        "location": "Brine Rat Cavern",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 3,
+        "slayerLevel": 47,
+        "teleports": [
+          { "name": "Brine Rat Cavern", "tile": { "x": 2694, "y": 10122 } }
+        ]
+      },
+      {
+        "identifier": "CAVE_HORROR",
+        "location": "Mos Le'Harmless Caves",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 5,
+        "slayerLevel": 58,
+        "ids": [
+          "NpcId.CAVE_ABOMINATION_206"
+        ],
+        "teleports": [
+          {
+            "name": "Mos Le'Harmless Caves",
+            "tile": { "x": 3744, "y": 9373 }
+          }
+        ]
+      },
+      {
+        "identifier": "CAVE_KRAKEN",
+        "location": "Kraken Cove",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "slayerLevel": 87,
+        "ids": [
+          "NpcId.WHIRLPOOL_127",
+          "NpcId.KRAKEN_291",
+          "NpcId.WHIRLPOOL"
+        ],
+        "teleports": [
+          { "name": "Kraken Cove", "tile": { "x": 2275, "y": 9990 } }
+        ]
+      },
+      {
+        "identifier": "DAGANNOTH",
+        "location": "Waterbirth Isle Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 8,
+        "teleports": [
+          { "name": "Waterbirth Isle Dungeon", "tile": { "x": 2444, "y": 10146 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1667, "y": 9996 } }
+        ]
+      },
+      {
+        "identifier": "DARK_BEAST",
+        "location": "Mourner Tunnels and Catacombs of Kourend",
+        "minimumQuantity": 12,
+        "maximumQuantity": 25,
+        "weight": 5,
+        "slayerLevel": 90,
+        "ids": [
+          "NpcId.NIGHT_BEAST_374"
+        ],
+        "teleports": [
+          { "name": "Mourner Tunnels", "tile": { "x": 2000, "y": 4644 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1627, "y": 10065 } }
+        ]
+      },
+      {
+        "identifier": "DUST_DEVIL",
+        "location": "Smoke Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "slayerLevel": 65,
+        "ids": [
+          "NpcId.CHOKE_DEVIL_264"
+        ],
+        "teleports": [
+          { "name": "Smoke Dungeon", "tile": { "x": 3215, "y": 9359 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1715, "y": 10031 } }
+        ]
+      },
+      {
+        "identifier": "ELF",
+        "location": "Lletya",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 4,
+        "teleports": [
+          { "name": "Lletya", "tile": { "x": 2330, "y": 3171 } }
+        ]
+      },
+      {
+        "identifier": "FIRE_GIANT",
+        "location": "Smoke Dungeon, Brimhaven Dungeon, Stronghold Slayer Cave, and Catacombs of Kourend",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 9,
+        "teleports": [
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2657, "y": 9491 } },
+          { "name": "Stronghold Slayer Cave", "tile": { "x": 2400, "y": 9776 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1627, "y": 10050 } }
+        ]
+      },
+      {
+        "identifier": "FOSSIL_ISLAND_WYVERN",
+        "location": "Fossil Island",
+        "minimumQuantity": 25,
+        "maximumQuantity": 50,
+        "weight": 5,
+        "slayerLevel": 66,
+        "ids": [
+          "NpcId.LONG_TAILED_WYVERN_152",
+          "NpcId.TALONED_WYVERN_147",
+          "NpcId.SPITTING_WYVERN_139",
+          "NpcId.ANCIENT_WYVERN_210"
+        ]
+      },
+      {
+        "identifier": "GARGOYLE",
+        "location": "Slayer Tower",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "slayerLevel": 75,
+        "ids": [
+          "NpcId.DUSK_248",
+          "NpcId.DUSK_248_7855",
+          "NpcId.DUSK_248_7882",
+          "NpcId.DUSK_328_7888",
+          "NpcId.DUSK_328_7889",
+          "NpcId.DAWN_266",
+          "NpcId.DAWN_228",
+          "NpcId.DAWN_228_7853",
+          "NpcId.DAWN_228_7884",
+          "NpcId.DAWN_228_7885"
+        ],
+        "teleports": [
+          { "name": "Slayer Tower Top", "tile": { "x": 3441, "y": 3543, "height": 2 } },
+          { "name": "Slayer Tower Bottom", "tile": { "x": 3433, "y": 9939, "height": 3 } }
+        ]
+      },
+      {
+        "identifier": "GREATER_DEMON",
+        "location": "Brimhaven Dungeon, Chasm of Fire, and Catacombs of Kourend",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 7,
+        "ids": [
+          "NpcId.KRIL_TSUTSAROTH_650",
+          "NpcId.TSTANON_KARLAK_145",
+          "NpcId.KRIL_TSUTSAROTH_650_6495"
+        ],
+        "teleports": [
+          { "name": "Chasm of Fire", "tile": { "x": 1436, "y": 10084, "height": 2 } },
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2634, "y": 9501, "height": 2 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1702, "y": 10099 } }
+        ]
+      },
+      {
+        "identifier": "HELLHOUND",
+        "location": "Taverley Dungeon, Stronghold Slayer Cave, and Catacombs of Kourend",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 8,
+        "ids": [
+          "NpcId.CERBERUS_318"
+        ],
+        "teleports": [
+          { "name": "Taverley Dungeon", "tile": { "x": 2860, "y": 9841 } },
+          { "name": "Stronghold Slayer Cave", "tile": { "x": 2413, "y": 9798 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1645, "y": 10064 } }
+        ]
+      },
+      {
+        "identifier": "IRON_DRAGON",
+        "location": "Brimhaven Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 12,
+        "maximumQuantity": 25,
+        "weight": 5,
+        "teleports": [
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2710, "y": 9466 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1657, "y": 10088 } }
+        ]
+      },
+      {
+        "identifier": "KALPHITE",
+        "location": "Kalphite Hive",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 9,
+        "teleports": [
+          { "name": "Kalphite Hive", "tile": { "x": 3298, "y": 9503 } }
+        ]
+      },
+      {
+        "identifier": "KURASK",
+        "location": "Fremennik Slayer Dungeon",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 3,
+        "slayerLevel": 70,
+        "teleports": [
+          { "name": "Fremmenik Slayer Dungeon", "tile": { "x": 2699, "y": 9997 } }
+        ]
+      },
+      {
+        "identifier": "LIZARDMAN",
+        "location": "Zeah Lizardmen and Zeah Lizardmen Cave",
+        "minimumQuantity": 25,
+        "maximumQuantity": 50,
+        "weight": 5,
+        "teleports": [
+          { "name": "Zeah Lizardmen", "tile": { "x": 1465, "y": 3688 } },
+          { "name": "Zeah Lizardmen Cave", "tile": { "x": 1305, "y": 9972 } }
+        ]
+      },
+      {
+        "identifier": "MITHRIL_DRAGON",
+        "location": "Ancient Cavern",
+        "minimumQuantity": 6,
+        "maximumQuantity": 12,
+        "weight": 5,
+        "teleports": [
+          { "name": "Ancient Cavern", "tile": { "x": 1778, "y": 5342, "height": 1 } }
+        ]
+      },
+      {
+        "identifier": "NECHRYAEL",
+        "location": "Slayer Tower and Catacombs of Kourend",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 7,
+        "slayerLevel": 80,
+        "ids": [
+          "NpcId.NECHRYARCH_300"
+        ],
+        "teleports": [
+          { "name": "Slayer Tower", "tile": { "x": 3441, "y": 3565, "height": 2 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1693, "y": 10080 } }
+        ]
+      },
+      {
+        "identifier": "RED_DRAGON",
+        "location": "Brimhaven Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 25,
+        "maximumQuantity": 50,
+        "weight": 5,
+        "teleports": [
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2696, "y": 9512 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1611, "y": 10078 } }
+        ]
+      },
+      {
+        "identifier": "RUNE_DRAGON",
+        "location": "Lithkren Vault",
+        "minimumQuantity": 3,
+        "maximumQuantity": 6,
+        "weight": 2,
+        "teleports": [
+          { "name": "Lithkren Vault", "tile": { "x": 1568, "y": 5061 } }
+        ]
+      },
+      {
+        "identifier": "SKELETAL_WYVERN",
+        "location": "Asgarnian Ice Dungeon",
+        "minimumQuantity": 25,
+        "maximumQuantity": 50,
+        "weight": 5,
+        "slayerLevel": 72,
+        "teleports": [
+          { "name": "Asgarnian Ice Dungeon", "tile": { "x": 3056, "y": 9553 } }
+        ]
+      },
+      {
+        "identifier": "SMOKE_DEVIL",
+        "location": "Smoke Devil Dungeon",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 7,
+        "slayerLevel": 93,
+        "teleports": [
+          { "name": "Smoke Devil Dungeon", "tile": { "x": 2404, "y": 9416 } }
+        ]
+      },
+      {
+        "identifier": "STEEL_DRAGON",
+        "location": "Brimhaven Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 12,
+        "maximumQuantity": 25,
+        "weight": 5,
+        "teleports": [
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2710, "y": 9466 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1608, "y": 10053 } }
+        ]
+      },
+      {
+        "identifier": "TROLL",
+        "location": "Death Plateau",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 6,
+        "ids": [
+          "NpcId.STICK_104",
+          "NpcId.PEE_HAT_91",
+          "NpcId.KRAKA_91"
+        ],
+        "teleports": [
+          { "name": "Death Plateau", "tile": { "x": 2867, "y": 3590 } }
+        ]
+      },
+      {
+        "identifier": "TUROTH",
+        "location": "Fremennik Slayer Dungeon",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 3,
+        "slayerLevel": 55,
+        "teleports": [
+          { "name": "Fremmenik Slayer Dungeon", "tile": { "x": 2723, "y": 10003 } }
+        ]
+      },
+      {
+        "identifier": "TZHAAR",
+        "location": "TzHaar",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 10,
+        "ids": [
+          "NpcId.TZ_KIH_22_3116",
+          "NpcId.TZ_KIH_22_3117",
+          "NpcId.TZ_KEK_45_3118",
+          "NpcId.TZ_KEK_45_3119",
+          "NpcId.TZ_KEK_22",
+          "NpcId.TOK_XIL_90_3121",
+          "NpcId.TOK_XIL_90_3122",
+          "NpcId.YT_MEJKOT_180",
+          "NpcId.YT_MEJKOT_180_3124",
+          "NpcId.KET_ZEK_360",
+          "NpcId.KET_ZEK_360_3126",
+          "NpcId.TZTOK_JAD_702",
+          "NpcId.YT_HURKOT_108"
+        ],
+        "teleports": [
+          { "name": "TzHaar", "tile": { "x": 2480, "y": 5171 } }
+        ]
+      },
+      {
+        "identifier": "WYRM",
+        "location": "Karuulm Slayer Dungeon",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 7,
+        "slayerLevel": 62,
+        "teleports": [
+          { "name": "Karuulm Slayer Dungeon", "tile": { "x": 1287, "y": 10199 } }
+        ]
+      },
+      {
+        "identifier": "DRAKE",
+        "location": "Karuulm Slayer Dungeon",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 7,
+        "slayerLevel": 84,
+        "teleports": [
+          { "name": "Karuulm Slayer Dungeon", "tile": { "x": 1311, "y": 10222, "height": 1 } }
+        ]
+      },
+      {
+        "identifier": "HYDRA",
+        "location": "Karuulm Slayer Dungeon",
+        "minimumQuantity": 50,
+        "maximumQuantity": 100,
+        "weight": 7,
+        "slayerLevel": 95,
+        "teleports": [
+          { "name": "Karuulm Slayer Dungeon", "tile": { "x": 1311, "y": 10222 } }
+        ]
+      }
+    ]
+  },
+  "Duradel": {
+    "name": "Duradel",
+    "combatLevel": 100,
+    "slayerLevel": 50,
+    "points": 15,
+    "tasks": [
+      {
+        "identifier": "ABERRANT_SPECTRE",
+        "location": "Slayer Tower, Stronghold Slayer Cave, and Catacombs of Kourend",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 7,
+        "slayerLevel": 60,
+        "ids": [
+          "NpcId.DEVIANT_SPECTRE_169",
+          "NpcId.ABHORRENT_SPECTRE_253",
+          "NpcId.REPUGNANT_SPECTRE_335"
+        ],
+        "teleports": [
+          { "name": "Slayer Tower", "tile": { "x": 3438, "y": 3547, "height": 1 } },
+          { "name": "Stronghold Slayer Cave", "tile": { "x": 2458, "y": 9778 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1653, "y": 9989 } }
+        ]
+      },
+      {
+        "identifier": "ABYSSAL_DEMON",
+        "location": "Slayer Tower and Catacombs of Kourend",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 12,
+        "slayerLevel": 85,
+        "ids": [
+          "NpcId.ABYSSAL_SIRE_350",
+          "NpcId.ABYSSAL_SIRE_350_5887",
+          "NpcId.ABYSSAL_SIRE_350_5888",
+          "NpcId.ABYSSAL_SIRE_350_5889",
+          "NpcId.ABYSSAL_SIRE_350_5890",
+          "NpcId.ABYSSAL_SIRE_350_5891",
+          "NpcId.ABYSSAL_SIRE_350_5908",
+          "NpcId.RESPIRATORY_SYSTEM"
+        ],
+        "teleports": [
+          { "name": "Slayer Tower Top", "tile": { "x": 3418, "y": 3568, "height": 2 } },
+          { "name": "Slayer Tower Bottom", "tile": { "x": 3436, "y": 9964, "height": 3 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1675, "y": 10091 } }
+        ]
+      },
+      {
+        "identifier": "ADAMANT_DRAGON",
+        "location": "Lithkren Vault",
+        "minimumQuantity": 4,
+        "maximumQuantity": 9,
+        "weight": 2,
+        "teleports": [
+          { "name": "Lithkren Vault", "tile": { "x": 1568, "y": 5061 } }
+        ]
+      },
+      {
+        "identifier": "ANKOU",
+        "location": "Stronghold Slayer Cave and Catacombs of Kourend",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 5,
+        "teleports": [
+          { "name": "Stronghold Slayer Cave", "tile": { "x": 2477, "y": 9804 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1641, "y": 9994 } }
+        ]
+      },
+      {
+        "identifier": "AVIANSIE",
+        "location": "God Wars Dungeon",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 8,
+        "ids": [
+          "NpcId.KREEARRA_580",
+          "NpcId.WINGMAN_SKREE_143",
+          "NpcId.FLOCKLEADER_GEERIN_149",
+          "NpcId.FLIGHT_KILISA_159",
+          "NpcId.SPIRITUAL_WARRIOR_123",
+          "NpcId.SPIRITUAL_RANGER_127",
+          "NpcId.SPIRITUAL_MAGE_122"
+        ],
+        "teleports": [
+          { "name": "God Wars Dungeon", "tile": { "x": 2916, "y": 3746 } }
+        ]
+      },
+      {
+        "identifier": "BLACK_DEMON",
+        "location": "Taverley Dungeon, Brimhaven Dungeon, Chasm of Fire, and Catacombs of Kourend",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 8,
+        "ids": [
+          "NpcId.BALFRUG_KREEYATH_151",
+          "NpcId.DEMONIC_GORILLA_275",
+          "NpcId.DEMONIC_GORILLA_275_7145",
+          "NpcId.DEMONIC_GORILLA_275_7146",
+          "NpcId.SKOTIZO_321"
+        ],
+        "teleports": [
+          { "name": "Taverley Dungeon", "tile": { "x": 2853, "y": 9782 } },
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2710, "y": 9485 } },
+          { "name": "Chasm of Fire", "tile": { "x": 1439, "y": 10073, "height": 1 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1720, "y": 10086 } }
+        ]
+      },
+      {
+        "identifier": "BLACK_DRAGON",
+        "location": "Taverley Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 15,
+        "maximumQuantity": 30,
+        "weight": 9,
+        "ids": [
+          "NpcId.BABY_DRAGON_83",
+          "NpcId.BABY_DRAGON_83_1872"
+        ],
+        "teleports": [
+          { "name": "Taverley Dungeon", "tile": { "x": 2813, "y": 9814, "height": 1 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1615, "y": 10095 } }
+        ]
+      },
+      {
+        "identifier": "BLOODVELD",
+        "location": "Slayer Tower, Stronghold Slayer Cave, and Catacombs of Kourend",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 8,
+        "slayerLevel": 50,
+        "teleports": [
+          { "name": "Slayer Tower", "tile": { "x": 3411, "y": 3565, "height": 1 } },
+          { "name": "Stronghold Slayer Cave", "tile": { "x": 2486, "y": 9822 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1677, "y": 10074 } }
+        ]
+      },
+      {
+        "identifier": "BLUE_DRAGON",
+        "location": "Taverley Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 4,
+        "ids": [
+          "NpcId.BABY_DRAGON_48",
+          "NpcId.VORKATH_392",
+          "NpcId.VORKATH_732"
+        ],
+        "teleports": [
+          { "name": "Taverley Dungeon", "tile": { "x": 2910, "y": 9799 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1632, "y": 10075 } }
+        ]
+      },
+      {
+        "identifier": "CAVE_HORROR",
+        "location": "Mos Le'Harmless Caves",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 4,
+        "slayerLevel": 58,
+        "ids": [
+          "NpcId.CAVE_ABOMINATION_206"
+        ],
+        "teleports": [
+          {
+            "name": "Mos Le'Harmless Caves",
+            "tile": { "x": 3744, "y": 9373 }
+          }
+        ]
+      },
+      {
+        "identifier": "CAVE_KRAKEN",
+        "location": "Kraken Cove",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 9,
+        "slayerLevel": 87,
+        "ids": [
+          "NpcId.WHIRLPOOL_127",
+          "NpcId.KRAKEN_291",
+          "NpcId.WHIRLPOOL"
+        ],
+        "teleports": [
+          { "name": "Kraken Cove", "tile": { "x": 2275, "y": 9990 } }
+        ]
+      },
+      {
+        "identifier": "DAGANNOTH",
+        "location": "Waterbirth Isle Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 9,
+        "teleports": [
+          { "name": "Waterbirth Isle Dungeon", "tile": { "x": 2444, "y": 10146 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1667, "y": 9996 } }
+        ]
+      },
+      {
+        "identifier": "DARK_BEAST",
+        "location": "Mourner Tunnels and Catacombs of Kourend",
+        "minimumQuantity": 15,
+        "maximumQuantity": 30,
+        "weight": 11,
+        "slayerLevel": 90,
+        "ids": [
+          "NpcId.NIGHT_BEAST_374"
+        ],
+        "teleports": [
+          { "name": "Mourner Tunnels", "tile": { "x": 2000, "y": 4644 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1627, "y": 10065 } }
+        ]
+      },
+      {
+        "identifier": "DUST_DEVIL",
+        "location": "Smoke Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 5,
+        "slayerLevel": 65,
+        "ids": [
+          "NpcId.CHOKE_DEVIL_264"
+        ],
+        "teleports": [
+          { "name": "Smoke Dungeon", "tile": { "x": 3215, "y": 9359 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1715, "y": 10031 } }
+        ]
+      },
+      {
+        "identifier": "ELF",
+        "location": "Lletya",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 4,
+        "teleports": [
+          { "name": "Lletya", "tile": { "x": 2330, "y": 3171 } }
+        ]
+      },
+      {
+        "identifier": "FIRE_GIANT",
+        "location": "Smoke Dungeon, Brimhaven Dungeon, Stronghold Slayer Cave, and Catacombs of Kourend",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 7,
+        "teleports": [
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2657, "y": 9491 } },
+          { "name": "Stronghold Slayer Cave", "tile": { "x": 2400, "y": 9776 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1627, "y": 10050 } }
+        ]
+      },
+      {
+        "identifier": "FOSSIL_ISLAND_WYVERN",
+        "location": "Fossil Island",
+        "minimumQuantity": 15,
+        "maximumQuantity": 30,
+        "weight": 5,
+        "slayerLevel": 66,
+        "ids": [
+          "NpcId.LONG_TAILED_WYVERN_152",
+          "NpcId.TALONED_WYVERN_147",
+          "NpcId.SPITTING_WYVERN_139",
+          "NpcId.ANCIENT_WYVERN_210"
+        ]
+      },
+      {
+        "identifier": "GARGOYLE",
+        "location": "Slayer Tower",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 8,
+        "slayerLevel": 75,
+        "ids": [
+          "NpcId.DUSK_248",
+          "NpcId.DUSK_248_7855",
+          "NpcId.DUSK_248_7882",
+          "NpcId.DUSK_328_7888",
+          "NpcId.DUSK_328_7889",
+          "NpcId.DAWN_266",
+          "NpcId.DAWN_228",
+          "NpcId.DAWN_228_7853",
+          "NpcId.DAWN_228_7884",
+          "NpcId.DAWN_228_7885"
+        ],
+        "teleports": [
+          { "name": "Slayer Tower Top", "tile": { "x": 3441, "y": 3543, "height": 2 } },
+          { "name": "Slayer Tower Bottom", "tile": { "x": 3433, "y": 9939, "height": 3 } }
+        ]
+      },
+      {
+        "identifier": "GREATER_DEMON",
+        "location": "Brimhaven Dungeon, Chasm of Fire, and Catacombs of Kourend",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 9,
+        "ids": [
+          "NpcId.KRIL_TSUTSAROTH_650",
+          "NpcId.TSTANON_KARLAK_145",
+          "NpcId.KRIL_TSUTSAROTH_650_6495"
+        ],
+        "teleports": [
+          { "name": "Chasm of Fire", "tile": { "x": 1436, "y": 10084, "height": 2 } },
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2634, "y": 9501, "height": 2 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1702, "y": 10099 } }
+        ]
+      },
+      {
+        "identifier": "HELLHOUND",
+        "location": "Taverley Dungeon, Stronghold Slayer Cave, and Catacombs of Kourend",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 11,
+        "ids": [
+          "NpcId.CERBERUS_318"
+        ],
+        "teleports": [
+          { "name": "Taverley Dungeon", "tile": { "x": 2860, "y": 9841 } },
+          { "name": "Stronghold Slayer Cave", "tile": { "x": 2413, "y": 9798 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1645, "y": 10064 } }
+        ]
+      },
+      {
+        "identifier": "IRON_DRAGON",
+        "location": "Brimhaven Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 30,
+        "maximumQuantity": 60,
+        "weight": 5,
+        "teleports": [
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2710, "y": 9466 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1657, "y": 10088 } }
+        ]
+      },
+      {
+        "identifier": "KALPHITE",
+        "location": "Kalphite Hive",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 9,
+        "teleports": [
+          { "name": "Kalphite Hive", "tile": { "x": 3298, "y": 9503 } }
+        ]
+      },
+      {
+        "identifier": "KURASK",
+        "location": "Fremennik Slayer Dungeon",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 4,
+        "slayerLevel": 70,
+        "teleports": [
+          { "name": "Fremmenik Slayer Dungeon", "tile": { "x": 2699, "y": 9997 } }
+        ]
+      },
+      {
+        "identifier": "LIZARDMAN",
+        "location": "Zeah Lizardmen and Zeah Lizardmen Cave",
+        "minimumQuantity": 30,
+        "maximumQuantity": 60,
+        "weight": 10,
+        "teleports": [
+          { "name": "Zeah Lizardmen", "tile": { "x": 1465, "y": 3688 } },
+          { "name": "Zeah Lizardmen Cave", "tile": { "x": 1305, "y": 9972 } }
+        ]
+      },
+      {
+        "identifier": "MITHRIL_DRAGON",
+        "location": "Ancient Cavern",
+        "minimumQuantity": 7,
+        "maximumQuantity": 15,
+        "weight": 10,
+        "teleports": [
+          { "name": "Ancient Cavern", "tile": { "x": 1778, "y": 5342, "height": 1 } }
+        ]
+      },
+      {
+        "identifier": "NECHRYAEL",
+        "location": "Slayer Tower and Catacombs of Kourend",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 9,
+        "slayerLevel": 80,
+        "ids": [
+          "NpcId.NECHRYARCH_300"
+        ],
+        "teleports": [
+          { "name": "Slayer Tower", "tile": { "x": 3441, "y": 3565, "height": 2 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1693, "y": 10080 } }
+        ]
+      },
+      {
+        "identifier": "RED_DRAGON",
+        "location": "Brimhaven Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 30,
+        "maximumQuantity": 60,
+        "weight": 8,
+        "teleports": [
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2696, "y": 9512 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1611, "y": 10078 } }
+        ]
+      },
+      {
+        "identifier": "RUNE_DRAGON",
+        "location": "Lithkren Vault",
+        "minimumQuantity": 3,
+        "maximumQuantity": 8,
+        "weight": 2,
+        "teleports": [
+          { "name": "Lithkren Vault", "tile": { "x": 1568, "y": 5061 } }
+        ]
+      },
+      {
+        "identifier": "SKELETAL_WYVERN",
+        "location": "Asgarnian Ice Dungeon",
+        "minimumQuantity": 15,
+        "maximumQuantity": 30,
+        "weight": 7,
+        "slayerLevel": 72,
+        "teleports": [
+          { "name": "Asgarnian Ice Dungeon", "tile": { "x": 3056, "y": 9553 } }
+        ]
+      },
+      {
+        "identifier": "SMOKE_DEVIL",
+        "location": "Smoke Devil Dungeon",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 9,
+        "slayerLevel": 93,
+        "teleports": [
+          { "name": "Smoke Devil Dungeon", "tile": { "x": 2404, "y": 9416 } }
+        ]
+      },
+      {
+        "identifier": "STEEL_DRAGON",
+        "location": "Brimhaven Dungeon and Catacombs of Kourend",
+        "minimumQuantity": 15,
+        "maximumQuantity": 30,
+        "weight": 7,
+        "teleports": [
+          { "name": "Brimhaven Dungeon", "tile": { "x": 2710, "y": 9466 } },
+          { "name": "Catacombs of Kourend", "tile": { "x": 1608, "y": 10053 } }
+        ]
+      },
+      {
+        "identifier": "TZHAAR",
+        "location": "TzHaar",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 10,
+        "ids": [
+          "NpcId.TZ_KIH_22_3116",
+          "NpcId.TZ_KIH_22_3117",
+          "NpcId.TZ_KEK_45_3118",
+          "NpcId.TZ_KEK_45_3119",
+          "NpcId.TZ_KEK_22",
+          "NpcId.TOK_XIL_90_3121",
+          "NpcId.TOK_XIL_90_3122",
+          "NpcId.YT_MEJKOT_180",
+          "NpcId.YT_MEJKOT_180_3124",
+          "NpcId.KET_ZEK_360",
+          "NpcId.KET_ZEK_360_3126",
+          "NpcId.TZTOK_JAD_702",
+          "NpcId.YT_HURKOT_108"
+        ],
+        "teleports": [
+          { "name": "TzHaar", "tile": { "x": 2480, "y": 5171 } }
+        ]
+      },
+      {
+        "identifier": "WYRM",
+        "location": "Karuulm Slayer Dungeon",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 8,
+        "slayerLevel": 62,
+        "teleports": [
+          { "name": "Karuulm Slayer Dungeon", "tile": { "x": 1287, "y": 10199 } }
+        ]
+      },
+      {
+        "identifier": "DRAKE",
+        "location": "Karuulm Slayer Dungeon",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 8,
+        "slayerLevel": 84,
+        "teleports": [
+          { "name": "Karuulm Slayer Dungeon", "tile": { "x": 1311, "y": 10222, "height": 1 } }
+        ]
+      },
+      {
+        "identifier": "HYDRA",
+        "location": "Karuulm Slayer Dungeon",
+        "minimumQuantity": 60,
+        "maximumQuantity": 120,
+        "weight": 8,
+        "slayerLevel": 95,
+        "teleports": [
+          { "name": "Karuulm Slayer Dungeon", "tile": { "x": 1311, "y": 10222 } }
+        ]
+      }
+    ]
+  },
+  "Boss Master": {
+    "name": "Boss Master",
+    "points": 100,
+    "tasks": [
+      {
+        "name": "Kree'arra",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "ids": [
+          "NpcId.WINGMAN_SKREE_143",
+          "NpcId.FLOCKLEADER_GEERIN_149",
+          "NpcId.FLIGHT_KILISA_159"
+        ]
+      },
+      {
+        "name": "Commander Zilyana",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "ids": [
+          "NpcId.STARLIGHT_149",
+          "NpcId.GROWLER_139",
+          "NpcId.BREE_146"
+        ]
+      },
+      {
+        "name": "General Graardor",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "ids": [
+          "NpcId.SERGEANT_STRONGSTACK_141",
+          "NpcId.SERGEANT_STEELWILL_142",
+          "NpcId.SERGEANT_GRIMSPIKE_142"
+        ]
+      },
+      {
+        "name": "K'ril Tsutsaroth",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "ids": [
+          "NpcId.TSTANON_KARLAK_145",
+          "NpcId.ZAKLN_GRITCH_142",
+          "NpcId.BALFRUG_KREEYATH_151"
+        ]
+      },
+      {
+        "name": "Dagannoth King",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "ids": [
+          "NpcId.DAGANNOTH_SUPREME_303",
+          "NpcId.DAGANNOTH_PRIME_303",
+          "NpcId.DAGANNOTH_REX_303"
+        ]
+      },
+      {
+        "name": "Giant Mole",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1
+      },
+      {
+        "name": "King Black Dragon",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1
+      },
+      {
+        "name": "Zulrah",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1
+      },
+      {
+        "name": "Vorkath",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1
+      },
+      {
+        "name": "Kalphite Queen",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1
+      },
+      {
+        "name": "Corporeal Beast",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1
+      },
+      {
+        "name": "Raids Boss",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "ids": [
+          "NpcId.VASA_NISTIRIO",
+          "NpcId.VASA_NISTIRIO_7567",
+          "NpcId.TEKTON",
+          "NpcId.TEKTON_7541",
+          "NpcId.TEKTON_7542",
+          "NpcId.TEKTON_ENRAGED",
+          "NpcId.TEKTON_ENRAGED_7544",
+          "NpcId.TEKTON_7545",
+          "NpcId.VANGUARD",
+          "NpcId.VANGUARD_7526",
+          "NpcId.VANGUARD_7527",
+          "NpcId.VANGUARD_7528",
+          "NpcId.VANGUARD_7529",
+          "NpcId.MUTTADILE",
+          "NpcId.MUTTADILE_7562",
+          "NpcId.MUTTADILE_7563",
+          "NpcId.GREAT_OLM_RIGHT_CLAW",
+          "NpcId.GREAT_OLM",
+          "NpcId.GREAT_OLM_LEFT_CLAW",
+          "NpcId.GREAT_OLM_RIGHT_CLAW_549",
+          "NpcId.GREAT_OLM_1043",
+          "NpcId.GREAT_OLM_LEFT_CLAW_750"
+        ]
+      },
+      {
+        "name": "Barrows",
+        "minimumQuantity": 10,
+        "maximumQuantity": 70,
+        "weight": 1,
+        "ids": [
+          "NpcId.AHRIM_THE_BLIGHTED_98",
+          "NpcId.DHAROK_THE_WRETCHED_115",
+          "NpcId.GUTHAN_THE_INFESTED_115",
+          "NpcId.KARIL_THE_TAINTED_98",
+          "NpcId.TORAG_THE_CORRUPTED_115",
+          "NpcId.VERAC_THE_DEFILED_115"
+        ]
+      },
+      {
+        "name": "Cerberus",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "slayerLevel": 91
+      },
+      {
+        "name": "Thermonuclear Smoke Devil",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "slayerLevel": 93
+      },
+      {
+        "name": "Abyssal Sire",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "slayerLevel": 85,
+        "ids": [
+          "NpcId.RESPIRATORY_SYSTEM"
+        ]
+      },
+      {
+        "name": "Grotesque Guardians",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "slayerLevel": 75,
+        "ids": [
+          "NpcId.DUSK_248",
+          "NpcId.DUSK_248_7855",
+          "NpcId.DUSK_248_7882",
+          "NpcId.DUSK_328_7888",
+          "NpcId.DUSK_328_7889",
+          "NpcId.DAWN_266",
+          "NpcId.DAWN_228",
+          "NpcId.DAWN_228_7853",
+          "NpcId.DAWN_228_7884",
+          "NpcId.DAWN_228_7885"
+        ],
+        "teleports": [
+          { "name": "Slayer Tower Top", "tile": { "x": 3441, "y": 3543, "height": 2 } },
+          { "name": "Slayer Tower Bottom", "tile": { "x": 3433, "y": 9939, "height": 3 } }
+        ]
+      },
+      {
+        "name": "Alchemical Hydra",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "slayerLevel": 95
+      },
+      {
+        "name": "Venenatis",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "wilderness": true
+      },
+      {
+        "name": "Callisto",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "wilderness": true
+      },
+      {
+        "name": "Vet'ion",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "wilderness": true
+      },
+      {
+        "name": "Scorpia",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "wilderness": true
+      },
+      {
+        "name": "Crazy Archaeologist",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "wilderness": true
+      },
+      {
+        "name": "Chaos Fanatic",
+        "minimumQuantity": 5,
+        "maximumQuantity": 35,
+        "weight": 1,
+        "wilderness": true
+      }
+    ]
+  }
+}

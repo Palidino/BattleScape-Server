@@ -1,0 +1,37 @@
+package com.palidinodh.osrsscript.npc.combatv0;
+
+import java.util.Arrays;
+import java.util.List;
+import com.palidinodh.osrscore.io.cache.NpcId;
+import com.palidinodh.osrscore.model.CombatBonus;
+import com.palidinodh.osrscore.model.npc.combat.NpcCombat;
+import com.palidinodh.osrscore.model.npc.combat.NpcCombatDefinition;
+import com.palidinodh.osrscore.model.npc.combat.NpcCombatHitpoints;
+import com.palidinodh.osrscore.model.npc.combat.NpcCombatStats;
+import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatDamage;
+import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatProjectile;
+import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
+import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
+import lombok.var;
+
+public class MossGiant84Combat extends NpcCombat {
+  @Override
+  public List<NpcCombatDefinition> getCombatDefinitions() {
+    var combat = NpcCombatDefinition.builder();
+    combat.id(NpcId.MOSS_GIANT_84);
+    combat.hitpoints(NpcCombatHitpoints.total(120));
+    combat.stats(NpcCombatStats.builder().attackLevel(60).defenceLevel(60)
+        .bonus(CombatBonus.MELEE_ATTACK, 66).build());
+    combat.deathAnimation(4659).blockAnimation(4657);
+
+    var style = NpcCombatStyle.builder();
+    style.type(NpcCombatStyleType.MELEE_CRUSH);
+    style.damage(NpcCombatDamage.maximum(14));
+    style.animation(4658).attackSpeed(6);
+    style.projectile(NpcCombatProjectile.id(335));
+    combat.style(style.build());
+
+
+    return Arrays.asList(combat.build());
+  }
+}
