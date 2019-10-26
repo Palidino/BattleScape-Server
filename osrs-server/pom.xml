@@ -23,7 +23,7 @@
 
 	<parent>
 		<groupId>com.palidinodh</groupId>
-		<artifactId>palidinodh-parent</artifactId>
+		<artifactId>BattleScape-Server</artifactId>
 		<version>1.0</version>
 	</parent>
 
