@@ -205,7 +205,6 @@ public class RequestServer implements Runnable {
       }
       requests.clear();
       requestsByKey.clear();
-      PLogger.log(SHUTDOWN_ERROR + "; hasLogouts=" + hasLogouts + ", size=" + remaining);
       PLogger.error(SHUTDOWN_ERROR + "; hasLogouts=" + hasLogouts + ", size=" + remaining);
     }
     try {

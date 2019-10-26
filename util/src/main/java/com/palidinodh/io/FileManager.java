@@ -48,7 +48,7 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.converters.reflection.PureJavaReflectionProvider;
 
 public class FileManager implements Runnable {
-  public static final String DYNAMIC_DIR = "resources/osrs";
+  public static final String DYNAMIC_DIR = "osrs-server/target/saves";
   public static final String PLAYER_DIR = DYNAMIC_DIR + "/player";
   public static final String PLAYER_MAP_DIR = PLAYER_DIR + "/map";
   public static final String PLAYER_MAP_ONLINE_DIR = PLAYER_DIR + "/maponline";
@@ -324,6 +324,9 @@ public class FileManager implements Runnable {
   }
 
   public static void writeLog(String directory1, String directory2, String line) {
+    if (settings.isLocal()) {
+      return;
+    }
     if (directory1 == null || directory1.length() == 0) {
       return;
     }

@@ -2787,7 +2787,6 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   public static void init(Settings _settings) {
     settings = _settings;
-    PLogger.setDirectory(FileManager.LOG_DIR);
     isLocal = settings.isLocal();
     if (!isLocal) {
       FileManager.loadSql(settings);
