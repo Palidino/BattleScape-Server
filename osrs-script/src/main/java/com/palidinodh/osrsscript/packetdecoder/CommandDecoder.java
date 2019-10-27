@@ -85,7 +85,7 @@ public class CommandDecoder extends PacketDecoder {
           FileManager.getClasses(Command.class, "com.palidinodh.osrsscript.packetdecoder.command");
       for (var clazz : classes) {
         var classInstance = (Command) clazz.newInstance();
-        commands.put(clazz.getSimpleName().replace("Command", ""), classInstance);
+        commands.put(clazz.getSimpleName().replace("Command", "").toLowerCase(), classInstance);
       }
     } catch (Exception e) {
       PLogger.error(e);
