@@ -1,4 +1,4 @@
-package com.palidinodh.osrsscript.world.pvptournament;
+package com.palidinodh.osrsscript.world.event.pvptournament;
 
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.model.item.ItemDef;

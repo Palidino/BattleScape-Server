@@ -36,6 +36,9 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.reflect.ClassPath;
+import com.google.common.reflect.ClassPath.ClassInfo;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -133,45 +136,6 @@ public class FileManager implements Runnable {
       e.printStackTrace();
     }
     return sqlConnection;
-  }
-
-  public static String[] getClassScripts(String packageName) {
-    if (packageName.startsWith("script.")) {
-      packageName = packageName.substring(7);
-    }
-    List<String> classes = new ArrayList<>();
-    String path = "./bin/script/" + packageName.replace(".", "/");
-    File[] files = new File(path).listFiles();
-    if (files == null) {
-      return new String[0];
-    }
-    for (File file : files) {
-      if (file.isHidden() || file.isDirectory() || !file.getName().endsWith(".class")
-          || file.getName().contains("$")) {
-        continue;
-      }
-      classes.add("script." + packageName + "." + file.getName().replace(".class", ""));
-    }
-    return classes.toArray(new String[classes.size()]);
-  }
-
-  public static String[] getPackageScripts(String subPackageName) {
-    if (subPackageName.startsWith("script.")) {
-      subPackageName = subPackageName.substring(7);
-    }
-    List<String> packages = new ArrayList<>();
-    String path = "./bin/script/" + subPackageName.replace(".", "/");
-    File[] files = new File(path).listFiles();
-    if (files == null) {
-      return new String[0];
-    }
-    for (File file : files) {
-      if (file.isHidden() || !file.isDirectory()) {
-        continue;
-      }
-      packages.add("script." + subPackageName + "." + file.getName());
-    }
-    return packages.toArray(new String[packages.size()]);
   }
 
   public static boolean fileExists(String file) {
@@ -654,6 +618,27 @@ public class FileManager implements Runnable {
     InputStream in = fromClass.getResourceAsStream(resource);
     return in == null ? FileManager.class.getResourceAsStream(resource) : in;
   }
+
+  @SuppressWarnings("unchecked")
+  public static <T> List<Class<T>> getClasses(Class<T> fromClass, String packageName) {
+    List<Class<T>> matchedClasses = new ArrayList<>();
+    try {
+      ClassPath classPath = ClassPath.from(fromClass.getClassLoader());
+      ImmutableSet<ClassInfo> classes = packageName == null ? classPath.getAllClasses()
+          : classPath.getTopLevelClassesRecursive(packageName);
+      for (ClassInfo classInfo : classes) {
+        Class<?> clazz = classInfo.load();
+        if (!fromClass.isAssignableFrom(clazz)) {
+          continue;
+        }
+        matchedClasses.add((Class<T>) clazz);
+      }
+    } catch (IOException ioe) {
+      ioe.printStackTrace();
+    }
+    return matchedClasses;
+  }
+
 
   public static byte[] readStream(InputStream in) {
     byte[] bytes = new byte[128];

@@ -111,18 +111,15 @@ public class WidgetDecoder extends PacketDecoder {
 
   static {
     try {
-      var classes = FileManager.getClassScripts("packetdecoder.widget");
-      for (var className : classes) {
-        var widgetClass = Class.forName(className);
-        if (!Widget.class.isAssignableFrom(widgetClass)) {
-          continue;
-        }
-        var widget = (Widget) widgetClass.newInstance();
-        for (var widgetId : widget.getIds()) {
+      var classes =
+          FileManager.getClasses(Widget.class, "com.palidinodh.osrsscript.packetdecoder.widget");
+      for (var clazz : classes) {
+        var classInstance = (Widget) clazz.newInstance();
+        for (var widgetId : classInstance.getIds()) {
           if (widgets.containsKey(widgetId)) {
-            throw new Exception(className + " - " + widgetId + ": widget id already used.");
+            throw new Exception(clazz.getName() + " - " + widgetId + ": widget id already used.");
           }
-          widgets.put(widgetId, widget);
+          widgets.put(widgetId, classInstance);
         }
       }
     } catch (Exception e) {

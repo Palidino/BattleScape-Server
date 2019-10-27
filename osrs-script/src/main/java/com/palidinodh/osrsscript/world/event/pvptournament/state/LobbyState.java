@@ -1,10 +1,10 @@
-package com.palidinodh.osrsscript.world.pvptournament.state;
+package com.palidinodh.osrsscript.world.event.pvptournament.state;
 
 import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrsscript.player.plugin.clanwars.ClanWarsPlugin;
-import com.palidinodh.osrsscript.world.pvptournament.Mode;
-import com.palidinodh.osrsscript.world.pvptournament.PvpTournament;
-import com.palidinodh.osrsscript.world.pvptournament.prize.DefaultPrize;
+import com.palidinodh.osrsscript.world.event.pvptournament.Mode;
+import com.palidinodh.osrsscript.world.event.pvptournament.PvpTournament;
+import com.palidinodh.osrsscript.world.event.pvptournament.prize.DefaultPrize;
 import com.palidinodh.random.PRandom;
 import com.palidinodh.util.PTime;
 import lombok.var;

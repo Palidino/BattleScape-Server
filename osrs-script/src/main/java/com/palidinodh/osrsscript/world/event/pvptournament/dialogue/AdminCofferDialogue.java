@@ -1,12 +1,12 @@
-package com.palidinodh.osrsscript.world.pvptournament.dialogue;
+package com.palidinodh.osrsscript.world.event.pvptournament.dialogue;
 
 import com.palidinodh.osrscore.io.ValueEnteredEvent;
 import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
 import com.palidinodh.osrscore.model.player.Player;
-import com.palidinodh.osrsscript.world.pvptournament.PvpTournament;
-import com.palidinodh.osrsscript.world.pvptournament.prize.DefaultPrize;
-import com.palidinodh.osrsscript.world.pvptournament.prize.OsrsPrize;
-import com.palidinodh.osrsscript.world.pvptournament.state.IdleState;
+import com.palidinodh.osrsscript.world.event.pvptournament.PvpTournament;
+import com.palidinodh.osrsscript.world.event.pvptournament.prize.DefaultPrize;
+import com.palidinodh.osrsscript.world.event.pvptournament.prize.OsrsPrize;
+import com.palidinodh.osrsscript.world.event.pvptournament.state.IdleState;
 import lombok.var;
 
 public class AdminCofferDialogue extends SelectionDialogue {

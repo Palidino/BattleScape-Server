@@ -81,22 +81,11 @@ public class CommandDecoder extends PacketDecoder {
 
   static {
     try {
-      var classes = FileManager.getClassScripts("packetdecoder.command");
-      for (var className : classes) {
-        var classReference = Class.forName(className);
-        if (!Command.class.isAssignableFrom(classReference)) {
-          continue;
-        }
-        if (!classReference.getName().endsWith("Command")) {
-          continue;
-        }
-        var commandName = classReference.getName();
-        var lastPeriodIndex = commandName.lastIndexOf(".");
-        if (lastPeriodIndex != -1) {
-          commandName = commandName.substring(lastPeriodIndex + 1);
-        }
-        commandName = commandName.substring(0, commandName.length() - 7).toLowerCase();
-        commands.put(commandName, (Command) classReference.newInstance());
+      var classes =
+          FileManager.getClasses(Command.class, "com.palidinodh.osrsscript.packetdecoder.command");
+      for (var clazz : classes) {
+        var classInstance = (Command) clazz.newInstance();
+        commands.put(clazz.getSimpleName().replace("Command", ""), classInstance);
       }
     } catch (Exception e) {
       PLogger.error(e);

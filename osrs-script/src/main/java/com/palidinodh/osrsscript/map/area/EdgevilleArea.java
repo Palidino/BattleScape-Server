@@ -18,7 +18,7 @@ import com.palidinodh.osrscore.model.player.PCombat;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Smithing;
 import com.palidinodh.osrscore.model.player.controller.ClanWarsFreeForAllPC;
-import com.palidinodh.osrsscript.world.pvptournament.PvpTournament;
+import com.palidinodh.osrsscript.world.event.pvptournament.PvpTournament;
 import com.palidinodh.random.PRandom;
 import com.palidinodh.rs.setting.Settings;
 import lombok.var;

@@ -69,7 +69,7 @@ instance = new DialogueScript() {
             if (player.getGameMode() != 0 || player.getSkills().getCombatLevel() != 3
                     || player.getPlayTime() >= 3000) {
                 if (player.getGameMode() == 0) {
-                    player.setGameMode(RSPlayer.GAME_MODE_NORMAL);
+                    player.setGameMode(RsGameMode.NORMAL.ordinal());
                     player.unlock();
                 }
                 return;
@@ -77,15 +77,15 @@ instance = new DialogueScript() {
             if (slot == 0) {
                 player.unlock();
                 if (index == 1) {
-                    player.setGameMode(RSPlayer.GAME_MODE_NORMAL);
+                    player.setGameMode(RsGameMode.NORMAL.ordinal());
                 } else if (index == 2) {
-                    player.setGameMode(RSPlayer.GAME_MODE_IRONMAN);
+                    player.setGameMode(RsGameMode.IRONMAN.ordinal());
                 } else if (index == 3) {
-                    player.setGameMode(RSPlayer.GAME_MODE_HARD);
+                    player.setGameMode(RsGameMode.HARD.ordinal());
                 } else if (index == 4) {
-                    player.setGameMode(RSPlayer.GAME_MODE_HARDCORE_IRONMAN);
+                    player.setGameMode(RsGameMode.HARDCORE_IRONMAN.ordinal());
                 } else if (index == 5) {
-                    player.setGameMode(RSPlayer.GAME_MODE_GROUP_IRONMAN);
+                    player.setGameMode(RsGameMode.GROUP_IRONMAN.ordinal());
                     player.getGameEncoder().sendMessage("<col=ff0000>Choose your group through your Clan Chat settings.");
                 }
                 player.getInventory().addItem(ItemId.COINS, 250000);

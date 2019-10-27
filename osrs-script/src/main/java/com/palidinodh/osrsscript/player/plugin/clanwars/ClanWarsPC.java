@@ -21,7 +21,7 @@ import com.palidinodh.osrsscript.player.plugin.clanwars.rule.Rule;
 import com.palidinodh.osrsscript.player.plugin.clanwars.rule.RuleOption;
 import com.palidinodh.osrsscript.player.plugin.clanwars.state.CompletedState;
 import com.palidinodh.osrsscript.player.plugin.clanwars.state.PlayerState;
-import com.palidinodh.osrsscript.world.pvptournament.PvpTournament;
+import com.palidinodh.osrsscript.world.event.pvptournament.PvpTournament;
 import com.palidinodh.rs.setting.Settings;
 
 public class ClanWarsPC extends PController {

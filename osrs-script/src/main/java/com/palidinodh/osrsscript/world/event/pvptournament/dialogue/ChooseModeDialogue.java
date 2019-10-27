@@ -1,8 +1,8 @@
-package com.palidinodh.osrsscript.world.pvptournament.dialogue;
+package com.palidinodh.osrsscript.world.event.pvptournament.dialogue;
 
 import com.palidinodh.osrscore.model.dialogue.LargeSelectionDialogue;
 import com.palidinodh.osrscore.model.player.Player;
-import com.palidinodh.osrsscript.world.pvptournament.PvpTournament;
+import com.palidinodh.osrsscript.world.event.pvptournament.PvpTournament;
 import lombok.var;
 
 public class ChooseModeDialogue extends LargeSelectionDialogue {

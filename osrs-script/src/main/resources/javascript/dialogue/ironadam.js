@@ -38,7 +38,7 @@ instance = new DialogueScript() {
                 } else if (player.getBank().needsPinInput(false)) {
                     return;
                 }
-                player.setGameMode(RSPlayer.GAME_MODE_NORMAL);
+                player.setGameMode(RsPlayer.GAME_MODE_NORMAL);
             }
         }
     },
