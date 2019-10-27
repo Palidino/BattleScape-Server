@@ -36,8 +36,8 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.npc.combat.style.special.NpcCombatTargetTile;
 import com.palidinodh.osrscore.model.player.Player;
-import com.palidinodh.util.PEvent;
 import com.palidinodh.random.PRandom;
+import com.palidinodh.util.PEvent;
 import lombok.var;
 
 public class VorkathCombat extends NpcCombat {

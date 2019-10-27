@@ -13,9 +13,9 @@ import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.osrscore.model.player.skill.SkillContainer;
 import com.palidinodh.osrscore.model.player.skill.SkillEntry;
 import com.palidinodh.osrscore.model.player.skill.SkillModel;
+import com.palidinodh.random.PRandom;
 import com.palidinodh.util.PEvent;
 import com.palidinodh.util.PNumber;
-import com.palidinodh.random.PRandom;
 import lombok.var;
 
 public class Cooking extends SkillContainer {

@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
-import com.palidinodh.osrscore.Main;
+import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.PacketDecoder;
 import com.palidinodh.osrscore.io.cache.NpcId;
 import com.palidinodh.osrscore.model.npc.Npc;
@@ -14,7 +14,7 @@ import com.palidinodh.osrscore.model.player.Hunter;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.skill.SkillContainer;
 import com.palidinodh.osrscore.util.RequestManager;
-import com.palidinodh.io.Stream;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
@@ -51,7 +51,7 @@ public class NpcOptionDecoder extends PacketDecoder {
     }
     var message = "[NpcOption(" + index + ")] index=" + id + "; moveType=" + moveType + "; id="
         + npc.getId() + "/" + NpcId.valueOf(npc.getId());
-    if (Main.isLocal()) {
+    if (Settings.getInstance().isLocal()) {
       PLogger.println(message);
     }
     if (player.getOptions().getPrintPackets()) {

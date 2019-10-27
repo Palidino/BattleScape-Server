@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.io.cache.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -36,6 +35,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
+import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
 public class CerberusCombat extends NpcCombat {
@@ -225,7 +225,7 @@ public class CerberusCombat extends NpcCombat {
       return false;
     }
     var player = (Player) opponent;
-    if (!Main.isSpawn() && !player.getSkills().isAnySlayerTask(npc)) {
+    if (!Settings.getInstance().isSpawn() && !player.getSkills().isAnySlayerTask(npc)) {
       if (sendMessage) {
         player.getGameEncoder()
             .sendMessage("This can only be attacked on an appropriate Slayer task.");

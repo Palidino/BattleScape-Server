@@ -1,7 +1,6 @@
 package com.palidinodh.osrsscript.player.plugin.clanwars;
 
 import java.util.List;
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.io.cache.WidgetId;
 import com.palidinodh.osrscore.model.Entity;
@@ -23,6 +22,7 @@ import com.palidinodh.osrsscript.player.plugin.clanwars.rule.RuleOption;
 import com.palidinodh.osrsscript.player.plugin.clanwars.state.CompletedState;
 import com.palidinodh.osrsscript.player.plugin.clanwars.state.PlayerState;
 import com.palidinodh.osrsscript.world.pvptournament.PvpTournament;
+import com.palidinodh.rs.setting.Settings;
 
 public class ClanWarsPC extends PController {
   public static final long serialVersionUID = 12022016L;
@@ -602,7 +602,7 @@ public class ClanWarsPC extends PController {
       }
       p2.getController().stop();
     }
-    if (Main.isBeta()) {
+    if (Settings.getInstance().isBeta()) {
       if (lostClanName != null) {
         myPlayer.getWorld().sendNews(myPlayer.getMessaging().getClanChatName() + " has defeated "
             + lostClanName + " in a clan war!");

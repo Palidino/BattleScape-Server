@@ -3,7 +3,6 @@ package com.palidinodh.osrsscript.npc.combat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.io.cache.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -30,6 +29,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.PCombat;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
 public class EventChaosElementalCombat extends NpcCombat {
@@ -185,7 +185,7 @@ public class EventChaosElementalCombat extends NpcCombat {
     } else {
       npc.getController().addMapItem(new Item(ItemId.BLOODY_KEY), dropTile, player);
     }
-    if (Main.isEconomy()) {
+    if (Settings.getInstance().isEconomy()) {
       player.getInventory().addOrDropItem(ItemId.BLOOD_MONEY, 50_000);
     }
   }

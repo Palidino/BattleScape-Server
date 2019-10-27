@@ -3,7 +3,6 @@ package com.palidinodh.osrsscript.player.plugin.slayer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.io.cache.NpcId;
 import com.palidinodh.osrscore.io.cache.VarbitId;
@@ -30,10 +29,11 @@ import com.palidinodh.osrsscript.player.plugin.slayer.dialogue.MasterMenuDialogu
 import com.palidinodh.osrsscript.player.plugin.slayer.dialogue.RewardsDialogue;
 import com.palidinodh.osrsscript.player.plugin.slayer.dialogue.SlayerRingDialogue;
 import com.palidinodh.osrsscript.player.plugin.slayer.dialogue.WildernessMasterMenuDialogue;
+import com.palidinodh.random.PRandom;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PCollection;
 import com.palidinodh.util.PNumber;
 import com.palidinodh.util.PTime;
-import com.palidinodh.random.PRandom;
 import lombok.Getter;
 import lombok.var;
 
@@ -105,7 +105,7 @@ public class SlayerPlugin extends PlayerPlugin {
       task = new AssignedSlayerTask((String) map.get("slayer.taskMaster"),
           SlayerTaskIdentifier.get((int) map.get("slayer.taskConfig")),
           (String) map.get("slayer.taskName"), (int) map.get("slayer.taskAmount"),
-          PTime.getSimpleDate());
+          PTime.getYearMonthDay());
     }
     if (map.containsKey("slayer.wildernessTaskAmount")) {
       wildernessTask = new AssignedSlayerTask((String) map.get("slayer.wildernessTaskMaster"),
@@ -578,7 +578,7 @@ public class SlayerPlugin extends PlayerPlugin {
         brimstoneKeys++;
         return true;
       case 535: // crevice
-        if (!Main.isSpawn() && !isAnyTask(NpcId.THERMONUCLEAR_SMOKE_DEVIL_301,
+        if (!Settings.getInstance().isSpawn() && !isAnyTask(NpcId.THERMONUCLEAR_SMOKE_DEVIL_301,
             NpcDef.getName(NpcId.THERMONUCLEAR_SMOKE_DEVIL_301))) {
           player.getGameEncoder().sendMessage("You need an appropriate task to enter.");
           return true;
@@ -586,7 +586,8 @@ public class SlayerPlugin extends PlayerPlugin {
         player.openDialogue("bossinstance", 5);
         return true;
       case 23104: // iron winch
-        if (!Main.isSpawn() && !isAnyTask(NpcId.CERBERUS_318, NpcDef.getName(NpcId.CERBERUS_318))) {
+        if (!Settings.getInstance().isSpawn()
+            && !isAnyTask(NpcId.CERBERUS_318, NpcDef.getName(NpcId.CERBERUS_318))) {
           player.getGameEncoder().sendMessage("You need an appropriate task to enter.");
           return true;
         }
@@ -599,7 +600,8 @@ public class SlayerPlugin extends PlayerPlugin {
         }
         return true;
       case 31669: // the cloister bell
-        if (!Main.isSpawn() && !isAnyTask(NpcId.DUSK_248, NpcDef.getName(NpcId.DUSK_248))) {
+        if (!Settings.getInstance().isSpawn()
+            && !isAnyTask(NpcId.DUSK_248, NpcDef.getName(NpcId.DUSK_248))) {
           player.getGameEncoder().sendMessage("You need an appropriate task to do this.");
           return true;
         }
@@ -620,7 +622,7 @@ public class SlayerPlugin extends PlayerPlugin {
         dawn.setLargeVisibility();
         return true;
       case 31681: // roof entrance
-        if (!Main.isSpawn() && !isUnlocked(SlayerUnlock.GROTESQUE_GUARDIANS)) {
+        if (!Settings.getInstance().isSpawn() && !isUnlocked(SlayerUnlock.GROTESQUE_GUARDIANS)) {
           if (!player.getInventory().hasItem(ItemId.BRITTLE_KEY)) {
             player.getGameEncoder().sendMessage("You need a brittle key to unlock this.");
             return true;
@@ -629,7 +631,8 @@ public class SlayerPlugin extends PlayerPlugin {
           unlock(SlayerUnlock.GROTESQUE_GUARDIANS);
           return true;
         }
-        if (!Main.isSpawn() && !isAnyTask(NpcId.DUSK_248, NpcDef.getName(NpcId.DUSK_248))) {
+        if (!Settings.getInstance().isSpawn()
+            && !isAnyTask(NpcId.DUSK_248, NpcDef.getName(NpcId.DUSK_248))) {
           player.getGameEncoder().sendMessage("You need an appropriate task to enter.");
           return true;
         }
@@ -704,7 +707,7 @@ public class SlayerPlugin extends PlayerPlugin {
       assignedTask = bossTask;
     }
     if (!assignedTask.isComplete()
-        && (!isBoss || PTime.getSimpleDate().equals(assignedTask.getDate()))) {
+        && (!isBoss || PTime.getYearMonthDay().equals(assignedTask.getDate()))) {
       player.getGameEncoder().sendMessage("You already have a task.");
       return;
     }
@@ -718,7 +721,7 @@ public class SlayerPlugin extends PlayerPlugin {
           "You need a Slayer level of " + master.getSlayerLevel() + " to get one of these tasks.");
       return;
     }
-    if (isBoss && !Main.isLocal() && !isUnlocked(SlayerUnlock.LIKE_A_BOSS)) {
+    if (isBoss && !Settings.getInstance().isLocal() && !isUnlocked(SlayerUnlock.LIKE_A_BOSS)) {
       player.getGameEncoder().sendMessage("You need to unlock this feature first.");
       return;
     }
@@ -842,7 +845,7 @@ public class SlayerPlugin extends PlayerPlugin {
       consecutiveTasks = 0;
     }
     assignedTask = new AssignedSlayerTask(master.getName(), selectedTask.getIdentifier(),
-        selectedTask.getName(), quantity, PTime.getSimpleDate());
+        selectedTask.getName(), quantity, PTime.getYearMonthDay());
     if (isWilderness) {
       wildernessTask = assignedTask;
     } else if (isBoss) {
@@ -930,7 +933,7 @@ public class SlayerPlugin extends PlayerPlugin {
     if (player.isPremiumMember()) {
       rewardPoints *= 1.25;
     }
-    if (slayerTask.isWilderness() && !Main.isSpawn()) {
+    if (slayerTask.isWilderness() && !Settings.getInstance().isSpawn()) {
       if (assignedTask == wildernessTask) {
         if (wildernessTaskEmblemUpgrade) {
           player.getCombat().getBountyHunter().upgradeEmblem();

@@ -34,7 +34,7 @@ instance = new DialogueScript() {
         if (player.isLocked()) {
             return;
         }
-        if (Main.isBeta()) {
+        if (Settings.getInstance().isBeta()) {
             player.getGameEncoder().sendMessage("You can't use this on beta worlds.");
             return;
         }

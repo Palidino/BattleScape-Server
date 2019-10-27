@@ -244,7 +244,7 @@ instance = new DialogueScript() {
                 player.getWorld().addEvent(event);
             }
         } else if (index == 7) {
-            if (!Main.isSpawn() && (slot == enterSlot || slot == startSlot)) {
+            if (!Settings.getInstance().isSpawn() && (slot == enterSlot || slot == startSlot)) {
                 var killcount = player.getArea().script("get_armadyl_killcount");
                 if (killcount == null) {
                     player.getGameEncoder().sendMessage("There was an error establishing your killcount.");
@@ -259,7 +259,7 @@ instance = new DialogueScript() {
             areaScript = "clear_armadyl_killcount";
             deleteItemId = 11942;
         } else if (index == 8) {
-            if (!Main.isSpawn() && (slot == enterSlot || slot == startSlot)) {
+            if (!Settings.getInstance().isSpawn() && (slot == enterSlot || slot == startSlot)) {
                 var killcount = player.getArea().script("get_bandos_killcount");
                 if (killcount == null) {
                     player.getGameEncoder().sendMessage("There was an error establishing your killcount.");
@@ -274,7 +274,7 @@ instance = new DialogueScript() {
             areaScript = "clear_bandos_killcount";
             deleteItemId = 11942;
         } else if (index == 9) {
-            if (!Main.isSpawn() && (slot == enterSlot || slot == startSlot)) {
+            if (!Settings.getInstance().isSpawn() && (slot == enterSlot || slot == startSlot)) {
                 var killcount = player.getArea().script("get_zamorak_killcount");
                 if (killcount == null) {
                     player.getGameEncoder().sendMessage("There was an error establishing your killcount.");
@@ -289,7 +289,7 @@ instance = new DialogueScript() {
             areaScript = "clear_zamorak_killcount";
             deleteItemId = 11942;
         } else if (index == 10) {
-            if (!Main.isSpawn() && (slot == enterSlot || slot == startSlot)) {
+            if (!Settings.getInstance().isSpawn() && (slot == enterSlot || slot == startSlot)) {
                 var killcount = player.getArea().script("get_saradomin_killcount");
                 if (killcount == null) {
                     player.getGameEncoder().sendMessage("There was an error establishing your killcount.");

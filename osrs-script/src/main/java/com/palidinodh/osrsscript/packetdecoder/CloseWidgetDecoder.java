@@ -1,8 +1,8 @@
 package com.palidinodh.osrsscript.packetdecoder;
 
+import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.PacketDecoder;
 import com.palidinodh.osrscore.model.player.Player;
-import com.palidinodh.io.Stream;
 
 public class CloseWidgetDecoder extends PacketDecoder {
   public CloseWidgetDecoder() {

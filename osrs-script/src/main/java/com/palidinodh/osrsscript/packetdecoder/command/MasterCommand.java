@@ -1,16 +1,17 @@
 package com.palidinodh.osrsscript.packetdecoder.command;
 
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.Command;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Skills;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
 public class MasterCommand implements Command {
   @Override
   public boolean canUse(Player player) {
-    return Main.isBeta() && !Main.isBetaSaving() || player.getRights() == Player.RIGHTS_ADMIN
+    return Settings.getInstance().isBeta() && !Settings.getInstance().isBetaSaving()
+        || player.getRights() == Player.RIGHTS_ADMIN
         || player.isUsergroup(SqlUserRank.COMMUNITY_MANAGER);
   }
 

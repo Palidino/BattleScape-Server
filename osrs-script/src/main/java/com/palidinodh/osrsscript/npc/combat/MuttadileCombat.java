@@ -24,8 +24,8 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatDamage;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatProjectile;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
-import com.palidinodh.util.PNumber;
 import com.palidinodh.random.PRandom;
+import com.palidinodh.util.PNumber;
 import lombok.var;
 
 public class MuttadileCombat extends NpcCombat {

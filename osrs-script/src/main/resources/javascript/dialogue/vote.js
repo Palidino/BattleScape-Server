@@ -41,7 +41,7 @@ instance = new DialogueScript() {
         }
         if (index == 0) {
             if (slot == 0) {
-                player.getGameEncoder().sendOpenURL(Main.getSettings().getVoteUrl());
+                player.getGameEncoder().sendOpenURL(Settings.getInstance().getVoteUrl());
             } else if (slot == 1) {
                 player.getGameEncoder().sendMessage("Please check the guide book in the quest tab for more information.");
             } else if (slot == 2) {
@@ -65,7 +65,7 @@ instance = new DialogueScript() {
                 player.getGameEncoder().sendMessage("Your Boss Slayer task has been cancelled.");
             }
         } else if (index == 2) {
-            player.getGameEncoder().sendOpenURL(Main.getSettings().getVoteUrl());
+            player.getGameEncoder().sendOpenURL(Settings.getInstance().getVoteUrl());
             if (slot == 1) {
                 player.getGameEncoder().sendMessage("Please check the guide book in the quest tab for more information.");
             }

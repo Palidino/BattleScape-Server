@@ -1,7 +1,6 @@
 package com.palidinodh.osrsscript.map.area;
 
 import java.util.List;
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.io.cache.NpcId;
 import com.palidinodh.osrscore.io.cache.WidgetId;
@@ -21,6 +20,7 @@ import com.palidinodh.osrscore.model.player.Smithing;
 import com.palidinodh.osrscore.model.player.controller.ClanWarsFreeForAllPC;
 import com.palidinodh.osrsscript.world.pvptournament.PvpTournament;
 import com.palidinodh.random.PRandom;
+import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
 public class EdgevilleArea extends Area {
@@ -229,7 +229,7 @@ public class EdgevilleArea extends Area {
         player.getMovement().ladderUpTeleport(new Tile(3096, 9867));
         return true;
       case 12309: // Chest: Recipe for Disaster
-        if (Main.isSpawn()) {
+        if (Settings.getInstance().isSpawn()) {
           return true;
         }
         player.openDialogue("recipefordisaster", 0);

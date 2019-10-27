@@ -1,6 +1,5 @@
 package com.palidinodh.osrsscript.npc.combat.hook;
 
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.model.Tile;
 import com.palidinodh.osrscore.model.item.Item;
@@ -9,6 +8,7 @@ import com.palidinodh.osrscore.model.npc.Npc;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatGlobalHooks;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
+import com.palidinodh.rs.setting.Settings;
 
 public class NpcCombatDeathDropItems implements NpcCombatGlobalHooks {
   public void deathDropItems(Npc npc, Player player, int index, boolean isSlayerTask,
@@ -21,7 +21,7 @@ public class NpcCombatDeathDropItems implements NpcCombatGlobalHooks {
         && !npc.getDef().getCombat().getKillCount().isSendMessage()) {
       coinRate = 32;
     }
-    if (!Main.isSpawn() && allowSpecialDrops && PRandom.randomE(coinRate) == 0) {
+    if (!Settings.getInstance().isSpawn() && allowSpecialDrops && PRandom.randomE(coinRate) == 0) {
       double value = Math.hypot(npc.getDef().getCombatLevel(),
           npc.getDef().getCombat().getHitpoints().getTotal());
       double multiplier = Math.min(16, Math.sqrt(value)) * 8 + PRandom.randomI(8);
@@ -42,7 +42,7 @@ public class NpcCombatDeathDropItems implements NpcCombatGlobalHooks {
         npc.getController().addMapItem(new Item(ItemId.COINS, coins), dropTile, player);
       }
     }
-    if (!Main.isSpawn() && allowSpecialDrops
+    if (!Settings.getInstance().isSpawn() && allowSpecialDrops
         && PRandom.randomE(npc.getController().inMultiCombat() ? 100 : 50) == 0) {
       int half1Count = (int) Math.min(player.getItemCount(ItemId.TOOTH_HALF_OF_KEY)
           + player.getItemCount(ItemId.TOOTH_HALF_OF_KEY_NOTED), Item.MAX_AMOUNT);
@@ -77,7 +77,7 @@ public class NpcCombatDeathDropItems implements NpcCombatGlobalHooks {
     }
     if (isWildernessSlayerTask || npc.getDef().getName().contains("Revenant")) {
       if (player.getCombat().getBountyHunter().hasEmblem()) {
-        if (Main.isEconomy()) {
+        if (Settings.getInstance().isEconomy()) {
           player.getInventory().addOrDropItem(ItemId.BLOOD_MONEY, npc.getDef().getCombatLevel());
         }
         if (PRandom.randomE(8) == 0) {

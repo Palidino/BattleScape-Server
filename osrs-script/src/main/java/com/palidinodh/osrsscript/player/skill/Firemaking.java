@@ -18,9 +18,9 @@ import com.palidinodh.osrscore.model.player.WidgetManager;
 import com.palidinodh.osrscore.model.player.skill.SkillContainer;
 import com.palidinodh.osrscore.model.player.skill.SkillEntry;
 import com.palidinodh.osrscore.model.player.skill.SkillPet;
+import com.palidinodh.random.PRandom;
 import com.palidinodh.util.PCollection;
 import com.palidinodh.util.PEvent;
-import com.palidinodh.random.PRandom;
 import lombok.var;
 
 public class Firemaking extends SkillContainer {

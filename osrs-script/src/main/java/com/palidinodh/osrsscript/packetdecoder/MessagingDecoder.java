@@ -1,5 +1,6 @@
 package com.palidinodh.osrsscript.packetdecoder;
 
+import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.PacketDecoder;
 import com.palidinodh.osrscore.io.cache.CacheManager;
 import com.palidinodh.osrscore.model.player.Player;
@@ -7,7 +8,6 @@ import com.palidinodh.osrscore.util.RequestManager;
 import com.palidinodh.osrsscript.world.pvptournament.PvpTournament;
 import com.palidinodh.rs.adaptive.Clan;
 import com.palidinodh.rs.adaptive.RsClanRank;
-import com.palidinodh.io.Stream;
 import lombok.var;
 
 public class MessagingDecoder extends PacketDecoder {

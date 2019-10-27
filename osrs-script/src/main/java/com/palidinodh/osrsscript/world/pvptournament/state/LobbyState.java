@@ -5,8 +5,8 @@ import com.palidinodh.osrsscript.player.plugin.clanwars.ClanWarsPlugin;
 import com.palidinodh.osrsscript.world.pvptournament.Mode;
 import com.palidinodh.osrsscript.world.pvptournament.PvpTournament;
 import com.palidinodh.osrsscript.world.pvptournament.prize.DefaultPrize;
-import com.palidinodh.util.PTime;
 import com.palidinodh.random.PRandom;
+import com.palidinodh.util.PTime;
 import lombok.var;
 
 public class LobbyState implements State {
