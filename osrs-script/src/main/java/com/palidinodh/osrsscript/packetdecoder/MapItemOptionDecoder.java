@@ -1,6 +1,6 @@
 package com.palidinodh.osrsscript.packetdecoder;
 
-import com.palidinodh.osrscore.Main;
+import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.PacketDecoder;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.model.Tile;
@@ -9,7 +9,7 @@ import com.palidinodh.osrscore.model.map.route.Route;
 import com.palidinodh.osrscore.model.player.PCombat;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.util.RequestManager;
-import com.palidinodh.io.Stream;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
@@ -32,7 +32,7 @@ public class MapItemOptionDecoder extends PacketDecoder {
     }
     var message = "[MapItemOption(" + index + ")] id=" + id + "/" + ItemId.valueOf(id) + "; x=" + x
         + "; y=" + y + "; moveType=" + moveType;
-    if (Main.isLocal()) {
+    if (Settings.getInstance().isLocal()) {
       PLogger.println(message);
     }
     if (player.getOptions().getPrintPackets()) {

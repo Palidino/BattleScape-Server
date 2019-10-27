@@ -42,7 +42,7 @@ instance = new DialogueScript() {
                     var inventoryAmount = player.getInventory().getAmount(i);
                     player.getInventory().deleteItem(itemId, inventoryAmount, i);
                     player.getInventory().addOrDropItem(ItemId.COINS, inventoryAmount * coinValue);
-                    if (Main.isEconomy()) {
+                    if (Settings.getInstance().isEconomy()) {
                         player.getInventory().addOrDropItem(ItemId.BLOOD_MONEY, inventoryAmount * bloodMoneyValue);
                     }
                     if (itemId == ItemId.MYSTERIOUS_EMBLEM_TIER_10) {

@@ -1,9 +1,9 @@
 package com.palidinodh.osrsscript.packetdecoder.widget;
 
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.Widget;
 import com.palidinodh.osrscore.io.cache.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.setting.Settings;
 
 public class OptionsWidget implements Widget {
   @Override
@@ -50,7 +50,7 @@ public class OptionsWidget implements Widget {
               .setLogNotificationTimeout(!player.getOptions().getLogNotificationTimeout());
           break;
         case 75:
-          player.getGameEncoder().sendOpenURL(Main.getSettings().getSupportUrl());
+          player.getGameEncoder().sendOpenURL(Settings.getInstance().getSupportUrl());
           break;
         case 77:
           player.getOptions().setOneMouseButton(!player.getOptions().getOneMouseButton());

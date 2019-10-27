@@ -1,5 +1,6 @@
 package com.palidinodh.osrsscript.packetdecoder.widget;
 
+import com.palidinodh.io.JavaCord;
 import com.palidinodh.osrscore.io.ValueEnteredEvent;
 import com.palidinodh.osrscore.io.Widget;
 import com.palidinodh.osrscore.io.cache.ItemId;
@@ -7,7 +8,6 @@ import com.palidinodh.osrscore.io.cache.WidgetChild;
 import com.palidinodh.osrscore.io.cache.WidgetId;
 import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
 import com.palidinodh.osrscore.model.player.Player;
-import com.palidinodh.osrscore.world.JavaCord;
 import com.palidinodh.rs.setting.DiscordChannel;
 import com.palidinodh.util.PTime;
 

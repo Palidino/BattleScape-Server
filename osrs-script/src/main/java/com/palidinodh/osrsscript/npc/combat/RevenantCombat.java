@@ -2,7 +2,6 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.io.cache.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -30,6 +29,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Equipment;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
+import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
 public class RevenantCombat extends NpcCombat {
@@ -562,7 +562,7 @@ public class RevenantCombat extends NpcCombat {
       var clampedLevel = Math.min(Math.max(1, npc.getDef().getCombatLevel()), 144);
       var chanceA = 2200.0 / Math.sqrt(clampedLevel);
       var chanceB = 15 + (Math.pow(npc.getDef().getCombatLevel() + 60, 2) / 200);
-      var multiplier = Main.isSpawn() ? 8.0 : 4.0;
+      var multiplier = Settings.getInstance().isSpawn() ? 8.0 : 4.0;
       var playerMultiplier = player.getCombat().getDropRateMultiplier(-1, npc.getDef());
       chanceA = chanceA / multiplier / playerMultiplier;
       var selectedChanceA = PRandom.randomE((int) chanceA);
@@ -595,7 +595,7 @@ public class RevenantCombat extends NpcCombat {
       } else if (selectedChanceA < 3000) {
         item = new Item(ItemId.COINS, 10000 + PRandom.randomI(90000));
       }
-      if (Main.isSpawn()) {
+      if (Settings.getInstance().isSpawn()) {
         if (PRandom.inRange(1, 108 * 50)) {
           npc.getController().addMapItem(new Item(ItemId.DIAMOND_KEY_32309), dropTile, player);
         } else if (PRandom.inRange(1, 36 * 50)) {

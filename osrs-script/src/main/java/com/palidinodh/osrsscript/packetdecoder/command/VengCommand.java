@@ -1,14 +1,15 @@
 package com.palidinodh.osrsscript.packetdecoder.command;
 
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.Command;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.setting.Settings;
 
 public class VengCommand implements Command {
   @Override
   public boolean canUse(Player player) {
-    return Main.isSpawn() && player.inEdgeville() && !player.getController().inPvPWorld();
+    return Settings.getInstance().isSpawn() && player.inEdgeville()
+        && !player.getController().inPvPWorld();
   }
 
   @Override

@@ -1,6 +1,5 @@
 package com.palidinodh.osrsscript.packetdecoder.widget;
 
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.ValueEnteredEvent;
 import com.palidinodh.osrscore.io.Widget;
 import com.palidinodh.osrscore.io.cache.ItemId;
@@ -8,6 +7,7 @@ import com.palidinodh.osrscore.io.cache.WidgetId;
 import com.palidinodh.osrscore.model.guide.Guide;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.setting.Settings;
 
 public class BondWidget implements Widget {
   @Override
@@ -89,10 +89,10 @@ public class BondWidget implements Widget {
         }
         break;
       case 69:
-        player.getGameEncoder().sendOpenURL(Main.getSettings().getStoreUrl());
+        player.getGameEncoder().sendOpenURL(Settings.getInstance().getStoreUrl());
         break;
       case 71:
-        if (Main.isBeta()) {
+        if (Settings.getInstance().isBeta()) {
           player.getGameEncoder().sendMessage("You can't do this right now.");
           break;
         }

@@ -1,13 +1,13 @@
 package com.palidinodh.osrsscript.packetdecoder;
 
-import com.palidinodh.osrscore.Main;
+import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.PacketDecoder;
 import com.palidinodh.osrscore.model.map.route.Route;
 import com.palidinodh.osrscore.model.player.Equipment;
 import com.palidinodh.osrscore.model.player.Messaging;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.util.RequestManager;
-import com.palidinodh.io.Stream;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
@@ -42,7 +42,7 @@ public class PlayerOptionDecoder extends PacketDecoder {
     }
     var message = "[PlayerOption(" + index + ")] index=" + id + "; moveType=" + moveType
         + "; username=" + player2.getUsername();
-    if (Main.isLocal()) {
+    if (Settings.getInstance().isLocal()) {
       PLogger.println(message);
     }
     if (player.getOptions().getPrintPackets()) {

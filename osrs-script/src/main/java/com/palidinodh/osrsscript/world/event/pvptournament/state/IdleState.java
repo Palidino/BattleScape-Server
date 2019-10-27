@@ -1,9 +1,9 @@
-package com.palidinodh.osrsscript.world.pvptournament.state;
+package com.palidinodh.osrsscript.world.event.pvptournament.state;
 
 import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.world.World;
-import com.palidinodh.osrsscript.world.pvptournament.PvpTournament;
-import com.palidinodh.osrsscript.world.pvptournament.prize.DefaultPrize;
+import com.palidinodh.osrsscript.world.event.pvptournament.PvpTournament;
+import com.palidinodh.osrsscript.world.event.pvptournament.prize.DefaultPrize;
 import com.palidinodh.util.PTime;
 import lombok.var;
 

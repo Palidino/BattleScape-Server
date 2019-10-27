@@ -1,4 +1,4 @@
-package com.palidinodh.osrsscript.world.pvptournament.state;
+package com.palidinodh.osrsscript.world.event.pvptournament.state;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -14,7 +14,7 @@ import com.palidinodh.osrscore.model.player.ItemCharges;
 import com.palidinodh.osrscore.model.player.PCombat;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrsscript.player.plugin.clanwars.ClanWarsPlugin;
-import com.palidinodh.osrsscript.world.pvptournament.PvpTournament;
+import com.palidinodh.osrsscript.world.event.pvptournament.PvpTournament;
 import com.palidinodh.util.PTime;
 import lombok.var;
 

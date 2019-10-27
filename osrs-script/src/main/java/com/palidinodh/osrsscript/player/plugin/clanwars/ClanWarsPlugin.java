@@ -19,7 +19,7 @@ import com.palidinodh.osrsscript.player.plugin.clanwars.rule.RuleOption;
 import com.palidinodh.osrsscript.player.plugin.clanwars.state.BarrierState;
 import com.palidinodh.osrsscript.player.plugin.clanwars.state.CompletedState;
 import com.palidinodh.osrsscript.player.plugin.clanwars.state.PlayerState;
-import com.palidinodh.osrsscript.world.pvptournament.PvpTournament;
+import com.palidinodh.osrsscript.world.event.pvptournament.PvpTournament;
 import com.palidinodh.util.PTime;
 import lombok.Getter;
 import lombok.Setter;

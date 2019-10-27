@@ -30,11 +30,11 @@ public class AchievementDiaryPlugin extends PlayerPlugin {
         case ItemId.FALADOR_SHIELD_1:
         case ItemId.FALADOR_SHIELD_2:
           if (isEquipment && index == 1 || !isEquipment && index == 2) {
-            if (PTime.getSimpleDate().equals(faladorShield1And2)) {
+            if (PTime.getYearMonthDay().equals(faladorShield1And2)) {
               player.getGameEncoder().sendMessage("You can only use this once a day.");
               return true;
             }
-            faladorShield1And2 = PTime.getSimpleDate();
+            faladorShield1And2 = PTime.getYearMonthDay();
             if (itemId == ItemId.FALADOR_SHIELD_1) {
               player.getPrayer().adjustPoints((int) (prayerLevel * 0.25));
             } else if (itemId == ItemId.FALADOR_SHIELD_2) {
@@ -47,12 +47,12 @@ public class AchievementDiaryPlugin extends PlayerPlugin {
         case ItemId.FALADOR_SHIELD_3:
         case ItemId.FALADOR_SHIELD_4:
           if (isEquipment && index == 1 || !isEquipment && index == 2) {
-            if (!PTime.getSimpleDate().equals(faladorShield3And4)) {
-              faladorShield3And4 = PTime.getSimpleDate();
+            if (!PTime.getYearMonthDay().equals(faladorShield3And4)) {
+              faladorShield3And4 = PTime.getYearMonthDay();
               player.getPrayer().adjustPoints(prayerLevel);
               player.getGameEncoder().sendMessage("Your prayer points have been restored.");
-            } else if (!PTime.getSimpleDate().equals(faladorShield1And2)) {
-              faladorShield1And2 = PTime.getSimpleDate();
+            } else if (!PTime.getYearMonthDay().equals(faladorShield1And2)) {
+              faladorShield1And2 = PTime.getYearMonthDay();
               if (itemId == ItemId.FALADOR_SHIELD_3) {
                 player.getPrayer().adjustPoints((int) (prayerLevel * 0.5));
               } else if (itemId == ItemId.FALADOR_SHIELD_4) {

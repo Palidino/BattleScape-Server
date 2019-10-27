@@ -1,10 +1,10 @@
 package com.palidinodh.osrsscript.packetdecoder.widget;
 
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.Widget;
 import com.palidinodh.osrscore.io.cache.WidgetChild;
 import com.palidinodh.osrscore.io.cache.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.setting.Settings;
 
 public class FriendsWidget implements Widget {
   @Override
@@ -28,13 +28,13 @@ public class FriendsWidget implements Widget {
       if (childId == 3 || childId == 8) {
         player.getBonds().sendPouch();
       } else if (childId == 15) {
-        player.getGameEncoder().sendOpenURL(Main.getSettings().getWebsiteUrl());
+        player.getGameEncoder().sendOpenURL(Settings.getInstance().getWebsiteUrl());
       } else if (childId == 22) {
-        player.getGameEncoder().sendOpenURL(Main.getSettings().getSupportUrl());
+        player.getGameEncoder().sendOpenURL(Settings.getInstance().getSupportUrl());
       } else if (childId == 29) {
-        player.getGameEncoder().sendOpenURL(Main.getSettings().getWebsiteUrl());
+        player.getGameEncoder().sendOpenURL(Settings.getInstance().getWebsiteUrl());
       } else if (childId == 32) {
-        player.getGameEncoder().sendOpenURL(Main.getSettings().getSupportUrl());
+        player.getGameEncoder().sendOpenURL(Settings.getInstance().getSupportUrl());
       }
     }
   }

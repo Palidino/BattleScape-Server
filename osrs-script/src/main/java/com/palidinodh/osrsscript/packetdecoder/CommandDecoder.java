@@ -3,14 +3,14 @@ package com.palidinodh.osrsscript.packetdecoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import com.palidinodh.osrscore.Main;
+import com.palidinodh.io.FileManager;
+import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.Command;
 import com.palidinodh.osrscore.io.PacketDecoder;
 import com.palidinodh.osrscore.model.dialogue.Scroll;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.util.RequestManager;
-import com.palidinodh.io.FileManager;
-import com.palidinodh.io.Stream;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
@@ -58,7 +58,7 @@ public class CommandDecoder extends PacketDecoder {
         command.execute(player, message);
       } catch (Exception e) {
         player.getGameEncoder().sendMessage(getExample(commandName, command));
-        if (Main.isLocal()) {
+        if (Settings.getInstance().isLocal()) {
           e.printStackTrace();
         }
       }
@@ -81,22 +81,11 @@ public class CommandDecoder extends PacketDecoder {
 
   static {
     try {
-      var classes = FileManager.getClassScripts("packetdecoder.command");
-      for (var className : classes) {
-        var classReference = Class.forName(className);
-        if (!Command.class.isAssignableFrom(classReference)) {
-          continue;
-        }
-        if (!classReference.getName().endsWith("Command")) {
-          continue;
-        }
-        var commandName = classReference.getName();
-        var lastPeriodIndex = commandName.lastIndexOf(".");
-        if (lastPeriodIndex != -1) {
-          commandName = commandName.substring(lastPeriodIndex + 1);
-        }
-        commandName = commandName.substring(0, commandName.length() - 7).toLowerCase();
-        commands.put(commandName, (Command) classReference.newInstance());
+      var classes =
+          FileManager.getClasses(Command.class, "com.palidinodh.osrsscript.packetdecoder.command");
+      for (var clazz : classes) {
+        var classInstance = (Command) clazz.newInstance();
+        commands.put(clazz.getSimpleName().replace("Command", "").toLowerCase(), classInstance);
       }
     } catch (Exception e) {
       PLogger.error(e);

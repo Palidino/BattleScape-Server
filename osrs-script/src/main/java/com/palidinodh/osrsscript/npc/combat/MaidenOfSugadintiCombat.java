@@ -27,9 +27,9 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatProjectile;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.npc.combat.style.special.NpcCombatTargetTile;
+import com.palidinodh.random.PRandom;
 import com.palidinodh.util.PCollection;
 import com.palidinodh.util.PEvent;
-import com.palidinodh.random.PRandom;
 import lombok.var;
 
 public class MaidenOfSugadintiCombat extends NpcCombat {

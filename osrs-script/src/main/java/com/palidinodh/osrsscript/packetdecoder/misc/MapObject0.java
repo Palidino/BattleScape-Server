@@ -19,9 +19,9 @@ import com.palidinodh.osrscore.model.player.Runecrafting;
 import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.osrscore.model.player.Smithing;
 import com.palidinodh.osrscore.model.player.controller.PestControlPC;
+import com.palidinodh.random.PRandom;
 import com.palidinodh.util.PEvent;
 import com.palidinodh.util.PTime;
-import com.palidinodh.random.PRandom;
 
 public class MapObject0 {
   // Rocks

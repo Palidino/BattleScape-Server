@@ -1,6 +1,5 @@
 package com.palidinodh.osrsscript.packetdecoder.widget;
 
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.Widget;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.io.cache.NpcId;
@@ -34,10 +33,11 @@ import com.palidinodh.osrscore.model.player.combat.DropRateBoost;
 import com.palidinodh.osrscore.util.RequestManager;
 import com.palidinodh.osrscore.world.WildernessEvent;
 import com.palidinodh.osrscore.world.World;
+import com.palidinodh.random.PRandom;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.rs.setting.SqlUserRank;
 import com.palidinodh.util.PNumber;
 import com.palidinodh.util.PTime;
-import com.palidinodh.random.PRandom;
 import lombok.var;
 
 // No longer JS woohoo! Need a better solution than a 2K line file and growing.
@@ -441,7 +441,7 @@ public class InventoryWidget implements Widget {
         player.openDialogue("spellbooks", 1);
         break;
       case ItemId.HYDRA_LEATHER:
-        if (Main.isSpawn()) {
+        if (Settings.getInstance().isSpawn()) {
           player.getInventory().deleteItem(itemId, 1, slot);
           player.getInventory().addItem(ItemId.FEROCIOUS_GLOVES, 1, slot);
         } else {

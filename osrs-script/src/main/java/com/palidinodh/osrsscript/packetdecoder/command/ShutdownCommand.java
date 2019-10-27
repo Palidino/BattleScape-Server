@@ -1,8 +1,8 @@
 package com.palidinodh.osrsscript.packetdecoder.command;
 
+import com.palidinodh.io.JavaCord;
 import com.palidinodh.osrscore.io.Command;
 import com.palidinodh.osrscore.model.player.Player;
-import com.palidinodh.osrscore.world.JavaCord;
 import com.palidinodh.rs.setting.DiscordChannel;
 import com.palidinodh.rs.setting.SqlUserRank;
 import com.palidinodh.util.PLogger;

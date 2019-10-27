@@ -2,7 +2,8 @@ package com.palidinodh.osrsscript.packetdecoder;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.palidinodh.osrscore.Main;
+import com.palidinodh.io.FileManager;
+import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.PacketDecoder;
 import com.palidinodh.osrscore.io.Widget;
 import com.palidinodh.osrscore.io.cache.ItemId;
@@ -12,8 +13,7 @@ import com.palidinodh.osrscore.model.player.Equipment;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.skill.SkillContainer;
 import com.palidinodh.osrscore.util.RequestManager;
-import com.palidinodh.io.FileManager;
-import com.palidinodh.io.Stream;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
@@ -55,7 +55,7 @@ public class WidgetDecoder extends PacketDecoder {
     var message = "[Widget(" + index + ")] widgetId=" + widgetId + "/" + WidgetId.valueOf(widgetId)
         + "; childId=" + childId + "; slot=" + slot + "; itemId=" + itemId + "/"
         + ItemId.valueOf(itemId);
-    if (Main.isLocal()) {
+    if (Settings.getInstance().isLocal()) {
       PLogger.println(message);
     }
     if (player.getOptions().getPrintPackets()) {
@@ -111,18 +111,15 @@ public class WidgetDecoder extends PacketDecoder {
 
   static {
     try {
-      var classes = FileManager.getClassScripts("packetdecoder.widget");
-      for (var className : classes) {
-        var widgetClass = Class.forName(className);
-        if (!Widget.class.isAssignableFrom(widgetClass)) {
-          continue;
-        }
-        var widget = (Widget) widgetClass.newInstance();
-        for (var widgetId : widget.getIds()) {
+      var classes =
+          FileManager.getClasses(Widget.class, "com.palidinodh.osrsscript.packetdecoder.widget");
+      for (var clazz : classes) {
+        var classInstance = (Widget) clazz.newInstance();
+        for (var widgetId : classInstance.getIds()) {
           if (widgets.containsKey(widgetId)) {
-            throw new Exception(className + " - " + widgetId + ": widget id already used.");
+            throw new Exception(clazz.getName() + " - " + widgetId + ": widget id already used.");
           }
-          widgets.put(widgetId, widget);
+          widgets.put(widgetId, classInstance);
         }
       }
     } catch (Exception e) {

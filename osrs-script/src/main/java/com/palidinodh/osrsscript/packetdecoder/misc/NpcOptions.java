@@ -12,9 +12,9 @@ import com.palidinodh.osrscore.model.player.Magic;
 import com.palidinodh.osrscore.model.player.PCombat;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Teleports;
+import com.palidinodh.random.PRandom;
 import com.palidinodh.rs.adaptive.GrandExchangeUser;
 import com.palidinodh.util.PTime;
-import com.palidinodh.random.PRandom;
 
 public class NpcOptions {
   // Piles

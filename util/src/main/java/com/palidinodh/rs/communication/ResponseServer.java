@@ -12,6 +12,12 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import com.palidinodh.encryption.MD5;
+import com.palidinodh.io.FileManager;
+import com.palidinodh.nio.NioServer;
+import com.palidinodh.nio.Session;
+import com.palidinodh.nio.SessionHandler;
+import com.palidinodh.nio.WriteEventHandler;
 import com.palidinodh.rs.adaptive.Clan;
 import com.palidinodh.rs.adaptive.GrandExchangeItem;
 import com.palidinodh.rs.adaptive.GrandExchangeUser;
@@ -50,7 +56,6 @@ import com.palidinodh.rs.communication.request.PrivateMessageRequest;
 import com.palidinodh.rs.communication.request.Request;
 import com.palidinodh.rs.communication.request.SQLUpdateRequest;
 import com.palidinodh.rs.communication.request.WorldsShutdownRequest;
-import com.palidinodh.io.FileManager;
 import com.palidinodh.rs.setting.Forum;
 import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.rs.setting.SqlUserField;
@@ -60,17 +65,11 @@ import com.palidinodh.util.PNumber;
 import com.palidinodh.util.PString;
 import com.palidinodh.util.PTime;
 import com.palidinodh.util.PUtil;
-import com.palidinodh.encryption.MD5;
-import com.palidinodh.nio.NioServer;
-import com.palidinodh.nio.Session;
-import com.palidinodh.nio.SessionHandler;
-import com.palidinodh.nio.WriteEventHandler;
 
 public class ResponseServer implements Runnable, SessionHandler {
   public static final boolean DEBUG = false;
   public static final int PRINT_STATS = 4 * 60 * 60 * 1000;
   public static final boolean COUNT_VOTED_BY_REGISTRATION_IP = true;
-  private static Settings settings;
 
   private static ResponseServer instance;
   private static boolean isLocal;
@@ -323,7 +322,7 @@ public class ResponseServer implements Runnable, SessionHandler {
           largestPacket = length;
         }
         if (length > 4194304) {
-          PLogger.println("[" + PTime.getDetailedDate() + "] Long length: " + opcode + ":" + length
+          PLogger.println("[" + PTime.getFullDate() + "] Long length: " + opcode + ":" + length
               + "; " + lastReadOpcode1 + ":" + lastReadSize1 + "; " + lastReadOpcode2 + ":"
               + lastReadSize2 + "; " + lastReadOpcode3 + ":" + lastReadSize3);
           session.getInput().clear();
@@ -334,7 +333,7 @@ public class ResponseServer implements Runnable, SessionHandler {
           break;
         }
         if (DEBUG) {
-          PLogger.println("[" + PTime.getDetailedDate() + "] Decode: " + opcode);
+          PLogger.println("[" + PTime.getFullDate() + "] Decode: " + opcode);
         }
         session.getInput().mark();
         int position = session.getInput().getPosition();
@@ -347,8 +346,8 @@ public class ResponseServer implements Runnable, SessionHandler {
             decodeVerify(session);
             break;
           case Opcodes.WORLD_SHUTDOWN:
-            PLogger.println("[" + PTime.getDetailedDate() + "] World shutdown, last opcode: "
-                + lastReadOpcode1);
+            PLogger.println(
+                "[" + PTime.getFullDate() + "] World shutdown, last opcode: " + lastReadOpcode1);
             decodeWorldShutdown(session);
             break;
           case Opcodes.WORLDS_SHUTDOWN:
@@ -442,16 +441,16 @@ public class ResponseServer implements Runnable, SessionHandler {
             decodeGEList(session);
             break;
           default:
-            PLogger.println("[" + PTime.getDetailedDate() + "] Invalid opcode: " + opcode + ":"
-                + length + "; " + lastReadOpcode1 + ":" + lastReadSize1 + "; " + lastReadOpcode2
-                + ":" + lastReadSize2 + "; " + lastReadOpcode3 + ":" + lastReadSize3);
+            PLogger.println("[" + PTime.getFullDate() + "] Invalid opcode: " + opcode + ":" + length
+                + "; " + lastReadOpcode1 + ":" + lastReadSize1 + "; " + lastReadOpcode2 + ":"
+                + lastReadSize2 + "; " + lastReadOpcode3 + ":" + lastReadSize3);
             PLogger.println("\"" + lastLog1 + "\"; \"" + lastLog2 + "\"; \"" + lastLog3 + "\"");
             PLogger.println("\"" + lastSQL1 + "\"; \"" + lastSQL2 + "\"; \"" + lastSQL3 + "\"");
             session.getInput().clear();
             return;
         }
         if (position + length != session.getInput().getPosition()) {
-          PLogger.println("[" + PTime.getDetailedDate() + "] Opcode " + opcode + " mismatched: "
+          PLogger.println("[" + PTime.getFullDate() + "] Opcode " + opcode + " mismatched: "
               + (session.getInput().getPosition() - position) + " but expected " + length + "; "
               + lastReadOpcode1 + ":" + lastReadSize1 + "; " + lastReadOpcode2 + ":" + lastReadSize2
               + "; " + lastReadOpcode3 + ":" + lastReadSize3);
@@ -513,12 +512,10 @@ public class ResponseServer implements Runnable, SessionHandler {
       sessions.remove(session.getWorldId());
       session.close();
       if (sessions.isEmpty()) {
-        File backup =
-            new File(FileManager.PLAYER_DIR + "/players-" + PTime.getSimpleDate() + ".zip");
-        if (backup.exists()) {
-          return;
-        }
-        FileManager.zip(backup.toString(), FileManager.PLAYER_MAP_DIR, FileManager.GE_DIR);
+        File backup = new File(Settings.getInstance().getPlayerDirectory(),
+            "/players-" + PTime.getFullDateFilename() + ".zip");
+        FileManager.zip(backup, Settings.getInstance().getPlayerMapDirectory(),
+            Settings.getInstance().getPlayerExchangeDirectory());
       }
     }
   }
@@ -534,7 +531,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeWorldsShutdown(WorldsShutdownRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.WORLDS_SHUTDOWN);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.WORLDS_SHUTDOWN);
     }
     synchronized (this) {
       for (ServerSession session : sessions.values()) {
@@ -568,7 +565,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodePing(PingRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.PING);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.PING);
     }
     ServerSession session = request.getSession();
     session.getOutput().addOpcodeVarInt(Opcodes.PING);
@@ -593,7 +590,7 @@ public class ResponseServer implements Runnable, SessionHandler {
   @SuppressWarnings("unused")
   private void encodePlayerLoginOld(PlayerLoginRequest request, boolean secondTry) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.PLAYER_LOGIN);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.PLAYER_LOGIN);
     }
     ServerSession session = request.getSession();
     String loginPassword = request.getPassword();
@@ -607,8 +604,8 @@ public class ResponseServer implements Runnable, SessionHandler {
       session.getOutput().addByte(5);
       session.getOutput().endOpcodeVarInt();
       session.write();
-      FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + request.getIP() + ".txt",
-          "[-1; " + request.getIP() + "] " + request.getUsername()
+      FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+          "ip/" + request.getIP() + ".txt", "[-1; " + request.getIP() + "] " + request.getUsername()
               + " from LoginServer: No SQL Connection");
       return;
     }
@@ -688,12 +685,12 @@ public class ResponseServer implements Runnable, SessionHandler {
         session.getOutput().addByte(4);
         session.getOutput().endOpcodeVarInt();
         session.write();
-        FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + userId + ".txt",
-            "[" + userId + "; " + request.getIP() + "] " + username.toLowerCase()
-                + " from LoginServer: Account Disabled");
-        FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + request.getIP() + ".txt",
-            "[" + userId + "; " + request.getIP() + "] " + username.toLowerCase()
-                + " from LoginServer: Account Disabled");
+        FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+            "ip/" + userId + ".txt", "[" + userId + "; " + request.getIP() + "] "
+                + username.toLowerCase() + " from LoginServer: Account Disabled");
+        FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+            "ip/" + request.getIP() + ".txt", "[" + userId + "; " + request.getIP() + "] "
+                + username.toLowerCase() + " from LoginServer: Account Disabled");
         return;
       }
       if (COUNT_VOTED_BY_REGISTRATION_IP) {
@@ -746,14 +743,14 @@ public class ResponseServer implements Runnable, SessionHandler {
           PLogger.println(username.toLowerCase() + ": " + request.getPassword());
           e.printStackTrace();
           session.getOutput().addByte(5);
-          FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + request.getIP() + ".txt",
-              "[-1; " + request.getIP() + "] " + username.toLowerCase()
-                  + " from LoginServer: Profile Load Error");
+          FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+              "ip/" + request.getIP() + ".txt", "[-1; " + request.getIP() + "] "
+                  + username.toLowerCase() + " from LoginServer: Profile Load Error");
         } else {
           session.getOutput().addByte(1);
-          FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + request.getIP() + ".txt",
-              "[-1; " + request.getIP() + "] " + username.toLowerCase()
-                  + " from LoginServer: No Profile");
+          FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+              "ip/" + request.getIP() + ".txt", "[-1; " + request.getIP() + "] "
+                  + username.toLowerCase() + " from LoginServer: No Profile");
         }
         session.getOutput().endOpcodeVarInt();
         session.write();
@@ -790,12 +787,12 @@ public class ResponseServer implements Runnable, SessionHandler {
       session.getOutput().addByte(2);
       session.getOutput().endOpcodeVarInt();
       session.write();
-      FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + userId + ".txt",
+      FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(), "ip/" + userId + ".txt",
           "[" + userId + "; " + request.getIP() + "] " + username.toLowerCase()
               + " from LoginServer: Already Logged In");
-      FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + request.getIP() + ".txt",
-          "[" + userId + "; " + request.getIP() + "] " + username.toLowerCase()
-              + " from LoginServer: Already Logged In");
+      FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+          "ip/" + request.getIP() + ".txt", "[" + userId + "; " + request.getIP() + "] "
+              + username.toLowerCase() + " from LoginServer: Already Logged In");
       return;
     }
     boolean passwordMatches = loginPassword.equals(password);
@@ -804,20 +801,20 @@ public class ResponseServer implements Runnable, SessionHandler {
       session.getOutput().addInt(request.getKey());
       session.getOutput().addByte(3);
       session.getOutput().endOpcodeVarInt();
-      FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + userId + ".txt",
+      FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(), "ip/" + userId + ".txt",
           "[" + userId + "; " + request.getIP() + "] " + username.toLowerCase()
               + " from LoginServer: Invalid Credentials");
-      FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + request.getIP() + ".txt",
-          "[" + userId + "; " + request.getIP() + "] " + username.toLowerCase()
-              + " from LoginServer: Invalid Credentials");
+      FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+          "ip/" + request.getIP() + ".txt", "[" + userId + "; " + request.getIP() + "] "
+              + username.toLowerCase() + " from LoginServer: Invalid Credentials");
       session.write();
       return;
     }
     player = new RsPlayer(userId, username, request.getPassword(), request.getIP(),
         request.getWorldId());
     player.setRights(rights);
-    byte[] charFile = FileManager.readFile(
-        FileManager.PLAYER_MAP_DIR + "/" + (isLocal ? username.toLowerCase() : userId) + ".dat");
+    byte[] charFile = FileManager.readFile(new File(Settings.getInstance().getPlayerMapDirectory(),
+        (isLocal ? username.toLowerCase() : userId) + ".dat"));
     session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
     session.getOutput().addInt(request.getKey());
     session.getOutput().addByte(0);
@@ -845,11 +842,12 @@ public class ResponseServer implements Runnable, SessionHandler {
       playersByUsername.put(username.toLowerCase(), player);
     }
     session.getOutput().endOpcodeVarInt();
-    FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + userId + ".txt", "[" + userId + "; "
-        + request.getIP() + "] " + username.toLowerCase() + " from LoginServer: Logged In");
-    FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + request.getIP() + ".txt",
+    FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(), "ip/" + userId + ".txt",
         "[" + userId + "; " + request.getIP() + "] " + username.toLowerCase()
             + " from LoginServer: Logged In");
+    FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+        "ip/" + request.getIP() + ".txt", "[" + userId + "; " + request.getIP() + "] "
+            + username.toLowerCase() + " from LoginServer: Logged In");
     synchronized (session.getSession()) {
       session.write(new WriteEventHandler(request) {
         @Override
@@ -870,13 +868,13 @@ public class ResponseServer implements Runnable, SessionHandler {
             playersById.remove(player.getId());
             playersByUsername.remove(plr.getUsername().toLowerCase());
           }
-          FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + player.getId() + ".txt",
-              "[" + player.getId() + "; " + player.getIp() + "] " + player.getUsername()
-                  + " from LoginServer: Packet Fail");
+          FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+              "ip/" + player.getId() + ".txt", "[" + player.getId() + "; " + player.getIp() + "] "
+                  + player.getUsername() + " from LoginServer: Packet Fail");
           if (player.getIp() != null && player.getIp().length() > 0) {
-            FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + player.getIp() + ".txt",
-                "[" + player.getId() + "; " + player.getIp() + "] " + player.getUsername()
-                    + " from LoginServer: Packet Fail");
+            FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+                "ip/" + player.getIp() + ".txt", "[" + player.getId() + "; " + player.getIp() + "] "
+                    + player.getUsername() + " from LoginServer: Packet Fail");
           }
         }
       });
@@ -885,7 +883,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodePlayerLogin(PlayerLoginRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.PLAYER_LOGIN);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.PLAYER_LOGIN);
     }
     final int SUCCESS = 0, NO_PROFILE = 1, ALREADY_LOGGED = 2, INVALID_CRED = 3, BANNED = 4,
         ERROR = 5;
@@ -901,15 +899,15 @@ public class ResponseServer implements Runnable, SessionHandler {
       session.getOutput().addByte(ERROR);
       session.getOutput().endOpcodeVarInt();
       session.write();
-      FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + request.getIP() + ".txt",
-          "[-1; " + request.getIP() + "] " + request.getUsername()
+      FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+          "ip/" + request.getIP() + ".txt", "[-1; " + request.getIP() + "] " + request.getUsername()
               + " from LoginServer: No SQL Connection");
       return;
     }
     int userId = -1;
     int rights = 0;
     String username = request.getUsername();
-    Forum forum = settings.getForum();
+    Forum forum = Settings.getInstance().getForum();
     Map<SqlUserField, String> sqlResults =
         forum != null ? forum.executeLoginQuery(connection, username) : null;
     if (sqlResults == null) {
@@ -938,9 +936,9 @@ public class ResponseServer implements Runnable, SessionHandler {
         session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
         session.getOutput().addInt(request.getKey());
         session.getOutput().addByte(BANNED);
-        FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + request.getIP() + ".txt",
-            "[-1; " + request.getIP() + "] " + username.toLowerCase()
-                + " from LoginServer: Account Disabled");
+        FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+            "ip/" + request.getIP() + ".txt", "[-1; " + request.getIP() + "] "
+                + username.toLowerCase() + " from LoginServer: Account Disabled");
         session.getOutput().endOpcodeVarInt();
         session.write();
         return;
@@ -972,9 +970,9 @@ public class ResponseServer implements Runnable, SessionHandler {
         session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
         session.getOutput().addInt(request.getKey());
         session.getOutput().addByte(NO_PROFILE);
-        FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + request.getIP() + ".txt",
-            "[-1; " + request.getIP() + "] " + username.toLowerCase()
-                + " from LoginServer: No Profile");
+        FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+            "ip/" + request.getIP() + ".txt", "[-1; " + request.getIP() + "] "
+                + username.toLowerCase() + " from LoginServer: No Profile");
         session.getOutput().endOpcodeVarInt();
         session.write();
         return;
@@ -994,12 +992,12 @@ public class ResponseServer implements Runnable, SessionHandler {
       session.getOutput().addByte(ALREADY_LOGGED);
       session.getOutput().endOpcodeVarInt();
       session.write();
-      FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + userId + ".txt",
+      FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(), "ip/" + userId + ".txt",
           "[" + userId + "; " + request.getIP() + "] " + username.toLowerCase()
               + " from LoginServer: Already Logged In");
-      FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + request.getIP() + ".txt",
-          "[" + userId + "; " + request.getIP() + "] " + username.toLowerCase()
-              + " from LoginServer: Already Logged In");
+      FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+          "ip/" + request.getIP() + ".txt", "[" + userId + "; " + request.getIP() + "] "
+              + username.toLowerCase() + " from LoginServer: Already Logged In");
       return;
     }
     if (!isLocal && !forum.verifyPassword(loginPassword, sqlResults.get(SqlUserField.PASSWORD),
@@ -1008,20 +1006,20 @@ public class ResponseServer implements Runnable, SessionHandler {
       session.getOutput().addInt(request.getKey());
       session.getOutput().addByte(INVALID_CRED);
       session.getOutput().endOpcodeVarInt();
-      FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + userId + ".txt",
+      FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(), "ip/" + userId + ".txt",
           "[" + userId + "; " + request.getIP() + "] " + username.toLowerCase()
               + " from LoginServer: Invalid Credentials");
-      FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + request.getIP() + ".txt",
-          "[" + userId + "; " + request.getIP() + "] " + username.toLowerCase()
-              + " from LoginServer: Invalid Credentials");
+      FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+          "ip/" + request.getIP() + ".txt", "[" + userId + "; " + request.getIP() + "] "
+              + username.toLowerCase() + " from LoginServer: Invalid Credentials");
       session.write();
       return;
     }
     player = new RsPlayer(userId, username, request.getPassword(), request.getIP(),
         request.getWorldId());
     player.setRights(rights);
-    byte[] charFile = FileManager.readFile(
-        FileManager.PLAYER_MAP_DIR + "/" + (isLocal ? username.toLowerCase() : userId) + ".dat");
+    byte[] charFile = FileManager.readFile(new File(Settings.getInstance().getPlayerMapDirectory(),
+        (isLocal ? username.toLowerCase() : userId) + ".dat"));
     session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
     session.getOutput().addInt(request.getKey());
     session.getOutput().addByte(SUCCESS);
@@ -1045,11 +1043,12 @@ public class ResponseServer implements Runnable, SessionHandler {
       playersByUsername.put(username.toLowerCase(), player);
     }
     session.getOutput().endOpcodeVarInt();
-    FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + userId + ".txt", "[" + userId + "; "
-        + request.getIP() + "] " + username.toLowerCase() + " from LoginServer: Logged In");
-    FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + request.getIP() + ".txt",
+    FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(), "ip/" + userId + ".txt",
         "[" + userId + "; " + request.getIP() + "] " + username.toLowerCase()
             + " from LoginServer: Logged In");
+    FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+        "ip/" + request.getIP() + ".txt", "[" + userId + "; " + request.getIP() + "] "
+            + username.toLowerCase() + " from LoginServer: Logged In");
     synchronized (session.getSession()) {
       session.write(new WriteEventHandler(request) {
         @Override
@@ -1070,13 +1069,13 @@ public class ResponseServer implements Runnable, SessionHandler {
             playersById.remove(player.getId());
             playersByUsername.remove(plr.getUsername().toLowerCase());
           }
-          FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + player.getId() + ".txt",
-              "[" + player.getId() + "; " + player.getIp() + "] " + player.getUsername()
-                  + " from LoginServer: Packet Fail");
+          FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+              "ip/" + player.getId() + ".txt", "[" + player.getId() + "; " + player.getIp() + "] "
+                  + player.getUsername() + " from LoginServer: Packet Fail");
           if (player.getIp() != null && player.getIp().length() > 0) {
-            FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + player.getIp() + ".txt",
-                "[" + player.getId() + "; " + player.getIp() + "] " + player.getUsername()
-                    + " from LoginServer: Packet Fail");
+            FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+                "ip/" + player.getIp() + ".txt", "[" + player.getId() + "; " + player.getIp() + "] "
+                    + player.getUsername() + " from LoginServer: Packet Fail");
           }
         }
       });
@@ -1096,8 +1095,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     }
     String packetVerification = session.getInput().getString();
     if (!packetVerification.equals(Opcodes.PACKET_END_VERIFICATION)) {
-      PLogger.println(
-          "[" + PTime.getDetailedDate() + "] Bad Logout Verification: " + packetVerification);
+      PLogger
+          .println("[" + PTime.getFullDate() + "] Bad Logout Verification: " + packetVerification);
       return;
     }
     synchronized (this) {
@@ -1108,7 +1107,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodePlayerLogout(PlayerLogoutRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.PLAYER_LOGOUT);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.PLAYER_LOGOUT);
     }
     ServerSession session = request.getSession();
     RsPlayer player;
@@ -1123,8 +1122,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (player != null) {
       if (request.getCharFile() != null && request.getCharFile().length > 0) {
         FileManager.writeFile(
-            FileManager.PLAYER_MAP_DIR + "/"
-                + (isLocal ? player.getUsername().toLowerCase() : player.getId()) + ".dat",
+            new File(Settings.getInstance().getPlayerMapDirectory(),
+                (isLocal ? player.getUsername().toLowerCase() : player.getId()) + ".dat"),
             request.getCharFile());
       }
       synchronized (this) {
@@ -1132,19 +1131,19 @@ public class ResponseServer implements Runnable, SessionHandler {
         playersByUsername.remove(player.getUsername().toLowerCase());
       }
       if (player.getId() > 0) {
-        FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + player.getId() + ".txt",
-            "[" + player.getId() + "; " + player.getIp() + "] " + player.getUsername()
-                + " from LoginServer: Logged Out");
+        FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+            "ip/" + player.getId() + ".txt", "[" + player.getId() + "; " + player.getIp() + "] "
+                + player.getUsername() + " from LoginServer: Logged Out");
       }
       if (player.getIp() != null && player.getIp().length() > 0) {
-        FileManager.writeLog(FileManager.getPlayerLogDir(), "ip/" + player.getIp() + ".txt",
-            "[" + player.getId() + "; " + player.getIp() + "] " + player.getUsername()
-                + " from LoginServer: Logged Out");
+        FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+            "ip/" + player.getIp() + ".txt", "[" + player.getId() + "; " + player.getIp() + "] "
+                + player.getUsername() + " from LoginServer: Logged Out");
       }
     } else {
       if (request.getCharFile() != null && request.getCharFile().length > 0) {
-        FileManager.writeFile(FileManager.PLAYER_MAP_ERROR_DIR + "/" + request.getUserId() + ".dat",
-            request.getCharFile());
+        FileManager.writeFile(new File(Settings.getInstance().getPlayerMapErrorDirectory(),
+            request.getUserId() + ".dat"), request.getCharFile());
       }
     }
     session.getOutput().addString(Opcodes.PACKET_END_VERIFICATION);
@@ -1178,7 +1177,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeLoadFriends(LoadFriendsRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.LOAD_FRIENDS);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.LOAD_FRIENDS);
     }
     ServerSession session = request.getSession();
     RsPlayer player;
@@ -1232,7 +1231,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeLoadFriend(LoadFriendRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.LOAD_FRIEND);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.LOAD_FRIEND);
     }
     ServerSession session = request.getSession();
     RsPlayer player;
@@ -1283,7 +1282,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeLoadIgnore(LoadIgnoreRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.LOAD_IGNORE);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.LOAD_IGNORE);
     }
     ServerSession session = request.getSession();
     RsPlayer player;
@@ -1313,7 +1312,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeFriendStatus(FriendStatusRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.FRIEND_STATUS);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.FRIEND_STATUS);
     }
     request.getSession().getOutput().addOpcodeVarInt(Opcodes.FRIEND_STATUS);
     request.getSession().getOutput().addInt(request.getKey());
@@ -1365,7 +1364,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeFriendStatusSingle(FriendStatusSingleRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.FRIEND_STATUS_SINGLE);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.FRIEND_STATUS_SINGLE);
     }
     request.getSession().getOutput().addOpcodeVarInt(Opcodes.FRIEND_STATUS_SINGLE);
     request.getSession().getOutput().addInt(request.getKey());
@@ -1420,7 +1419,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodePrivateMessage(PrivateMessageRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.PRIVATE_MESSAGE);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.PRIVATE_MESSAGE);
     }
     request.getSession().getOutput().addOpcodeVarInt(Opcodes.PRIVATE_MESSAGE);
     request.getSession().getOutput().addInt(request.getKey());
@@ -1468,7 +1467,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeLoadClan(LoadClanRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.LOAD_CLAN);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.LOAD_CLAN);
     }
     ServerSession session = request.getSession();
     RsPlayer player;
@@ -1513,7 +1512,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeClanSetting(ClanSettingRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.CLAN_SETTING);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.CLAN_SETTING);
     }
     request.getSession().getOutput().addOpcodeVarInt(Opcodes.CLAN_SETTING);
     request.getSession().getOutput().addInt(request.getKey());
@@ -1563,7 +1562,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeJoinClan(JoinClanRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.JOIN_CLAN);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.JOIN_CLAN);
     }
     ServerSession session = request.getSession();
     RsPlayer player;
@@ -1625,7 +1624,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeClanMessage(ClanMessageRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.CLAN_MESSAGE);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.CLAN_MESSAGE);
     }
     request.getSession().getOutput().addOpcodeVarInt(Opcodes.CLAN_MESSAGE);
     request.getSession().getOutput().addInt(request.getKey());
@@ -1677,7 +1676,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeKickClanUser(KickClanUserRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.KICK_CLAN_USER);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.KICK_CLAN_USER);
     }
     request.getSession().getOutput().addOpcodeVarInt(Opcodes.KICK_CLAN_USER);
     request.getSession().getOutput().addInt(request.getKey());
@@ -1735,7 +1734,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeLeaveClan(LeaveClanRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.LEAVE_CLAN);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.LEAVE_CLAN);
     }
     request.getSession().getOutput().addOpcodeVarInt(Opcodes.LEAVE_CLAN);
     request.getSession().getOutput().addInt(request.getKey());
@@ -1767,7 +1766,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   public void encodeClanUpdate(Clan clan) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.CLAN_UPDATE);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.CLAN_UPDATE);
     }
     synchronized (this) {
       for (ServerSession session : sessions.values()) {
@@ -1801,7 +1800,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeClanRank(ClanRankRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.CLAN_RANK);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.CLAN_RANK);
     }
     ServerSession session = request.getSession();
     RsPlayer player;
@@ -1852,7 +1851,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeSQLUpdate(SQLUpdateRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.SQL_UPDATE);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.SQL_UPDATE);
     }
     request.getSession().getOutput().addOpcodeVarInt(Opcodes.SQL_UPDATE);
     request.getSession().getOutput().addInt(request.getKey());
@@ -1893,7 +1892,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeGERefresh(GERefreshRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.GE_REFRESH);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_REFRESH);
     }
     ServerSession session = request.getSession();
     GrandExchangeUser user;
@@ -1938,7 +1937,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeGERefresh(GrandExchangeUser user) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.GE_REFRESH);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_REFRESH);
     }
     for (ServerSession session : sessions.values()) {
       session.getOutput().addOpcodeVarInt(Opcodes.GE_REFRESH);
@@ -1990,7 +1989,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeGEBuyOffer(GEBuyOfferRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.GE_BUY_OFFER);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_BUY_OFFER);
     }
     request.getSession().getOutput().addOpcodeVarInt(Opcodes.GE_BUY_OFFER);
     request.getSession().getOutput().addInt(request.getKey());
@@ -2035,7 +2034,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeGESellOffer(GESellOfferRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.GE_SELL_OFFER);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_SELL_OFFER);
     }
     request.getSession().getOutput().addOpcodeVarInt(Opcodes.GE_SELL_OFFER);
     request.getSession().getOutput().addInt(request.getKey());
@@ -2072,7 +2071,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeGEAbortOffer(GEAbortOfferRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.GE_ABORT_OFFER);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_ABORT_OFFER);
     }
     request.getSession().getOutput().addOpcodeVarInt(Opcodes.GE_ABORT_OFFER);
     request.getSession().getOutput().addInt(request.getKey());
@@ -2105,7 +2104,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeGECollectOffer(GECollectOfferRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.GE_COLLECT_OFFER);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_COLLECT_OFFER);
     }
     request.getSession().getOutput().addOpcodeVarInt(Opcodes.GE_COLLECT_OFFER);
     request.getSession().getOutput().addInt(request.getKey());
@@ -2136,7 +2135,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeGEPriceAverage(GEPriceAverageRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.GE_PRICE_AVERAGE);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_PRICE_AVERAGE);
     }
     int totalBuy = 0;
     int totalSell = 0;
@@ -2196,7 +2195,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeGEHistory(GEHistoryRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.GE_HISTORY);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_HISTORY);
     }
     request.getSession().getOutput().addOpcodeVarInt(Opcodes.GE_HISTORY);
     request.getSession().getOutput().addInt(request.getKey());
@@ -2287,9 +2286,10 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeLog(LogRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.LOG);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.LOG);
     }
-    FileManager.writeLog(request.getDirectory1(), request.getDirectory2(), request.getLine());
+    FileManager.writeLog(new File(request.getDirectory1()), request.getDirectory2(),
+        request.getLine());
   }
 
   private void decodeGEShop(ServerSession session) {
@@ -2303,7 +2303,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeGEShop(GEShopRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.GE_SHOP);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_SHOP);
     }
     ServerSession session = request.getSession();
     GrandExchangeUser user;
@@ -2369,7 +2369,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeGEShopOffer(GEShopOfferRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.GE_SHOP_OFFER);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_SHOP_OFFER);
     }
     request.getSession().getOutput().addOpcodeVarInt(Opcodes.GE_SHOP_OFFER);
     request.getSession().getOutput().addInt(request.getKey());
@@ -2413,10 +2413,10 @@ public class ResponseServer implements Runnable, SessionHandler {
       log2String = user2String + " bought " + itemString + " from " + user1String
           + " on the Grand Exchange.";
     }
-    FileManager.writeLog(FileManager.getPlayerLogDir(), "exchange/" + request.getUserId() + ".txt",
-        log1String);
-    FileManager.writeLog(FileManager.getPlayerLogDir(), "exchange/" + user.getUserId() + ".txt",
-        log2String);
+    FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+        "exchange/" + request.getUserId() + ".txt", log1String);
+    FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
+        "exchange/" + user.getUserId() + ".txt", log2String);
     item.increaseExchanged(request.getAmount(), request.getPrice());
     request.getSession().getOutput().addBoolean(true);
     request.getSession().getOutput().endOpcodeVarInt();
@@ -2439,7 +2439,7 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   private void encodeGEList(GEListRequest request) {
     if (DEBUG) {
-      PLogger.println("[" + PTime.getDetailedDate() + "] Encode: " + Opcodes.GE_LIST);
+      PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_LIST);
     }
     String title = "";
     List<String> list = new ArrayList<>();
@@ -2575,19 +2575,16 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private Clan loadClan(String username) {
-    return FileManager.fromJson(
-        new File(FileManager.CLAN_DIR + "/" + username.replace(" ", "_").toLowerCase() + ".json"),
-        Clan.class);
+    return FileManager.fromJson(new File(Settings.getInstance().getPlayerClanDirectory(),
+        username.replace(" ", "_").toLowerCase() + ".json"), Clan.class);
   }
 
   private void saveClan(Clan clan) {
     if (Clan.isGlobal(clan)) {
       return;
     }
-    FileManager.toJson(
-        new File(
-            FileManager.CLAN_DIR + "/" + clan.getOwner().replace(" ", "_").toLowerCase() + ".json"),
-        clan);
+    FileManager.toJson(new File(Settings.getInstance().getPlayerClanDirectory(),
+        clan.getOwner().replace(" ", "_").toLowerCase() + ".json"), clan);
   }
 
   private void checkGrandExchangeStatus(GrandExchangeUser user, List<GrandExchangeUser> users) {
@@ -2648,9 +2645,9 @@ public class ResponseServer implements Runnable, SessionHandler {
             log2String = user2String + " bought " + itemString + " from " + user1String
                 + " on the Grand Exchange.";
           }
-          FileManager.writeLog(FileManager.getPlayerLogDir(),
+          FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
               "exchange/" + user.getUserId() + ".txt", log1String);
-          FileManager.writeLog(FileManager.getPlayerLogDir(),
+          FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
               "exchange/" + user2.getUserId() + ".txt", log2String);
           item.increaseExchanged(amount, price);
           item2.increaseExchanged(amount, price);
@@ -2683,15 +2680,19 @@ public class ResponseServer implements Runnable, SessionHandler {
       }
     }
     if (!hasItems) {
-      new File(FileManager.GE_DIR + "/" + user.getUserId() + ".xml").delete();
-      new File(FileManager.GE_DIR + "/" + user.getUserId() + ".json").delete();
+      new File(Settings.getInstance().getPlayerExchangeDirectory(), user.getUserId() + ".xml")
+          .delete();
+      new File(Settings.getInstance().getPlayerExchangeDirectory(), user.getUserId() + ".json")
+          .delete();
       return;
     }
-    FileManager.toJson(new File(FileManager.GE_DIR + "/" + user.getUserId() + ".json"), user);
+    FileManager.toJson(
+        new File(Settings.getInstance().getPlayerExchangeDirectory(), user.getUserId() + ".json"),
+        user);
   }
 
   private void loadGrandExchangeUsers() {
-    File[] listFiles = new File(FileManager.GE_DIR).listFiles();
+    File[] listFiles = Settings.getInstance().getPlayerExchangeDirectory().listFiles();
     if (listFiles == null) {
       return;
     }
@@ -2785,23 +2786,23 @@ public class ResponseServer implements Runnable, SessionHandler {
     return instance;
   }
 
-  public static void init(Settings _settings) {
-    settings = _settings;
-    isLocal = settings.isLocal();
+  public static void init() {
+    isLocal = Settings.getInstance().isLocal();
     if (!isLocal) {
-      FileManager.loadSql(settings);
+      FileManager.loadSql();
     }
-    String ip = settings.getResponseIP().split(":")[0];
-    int port = Integer.parseInt(settings.getResponseIP().split(":")[1]);
-    if (!settings.isWithResponseServer()) {
-      ip = settings.getWorldIP();
+    String ip = Settings.getInstance().getResponseIP().split(":")[0];
+    int port = Integer.parseInt(Settings.getInstance().getResponseIP().split(":")[1]);
+    if (!Settings.getInstance().isWithResponseServer()) {
+      ip = Settings.getInstance().getWorldIP();
     }
     instance = new ResponseServer(ip, port);
   }
 
   public static void main(String[] args) {
     try {
-      init(FileManager.fromJson(new File(FileManager.DYNAMIC_DIR + "/" + args[0]), Settings.class));
+      Settings.setInstance(FileManager.fromJson(new File(args[0]), Settings.class));
+      init();
     } catch (Exception e) {
       e.printStackTrace();
     }

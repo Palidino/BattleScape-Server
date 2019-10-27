@@ -2,7 +2,6 @@ package com.palidinodh.osrsscript.player.skill;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.io.cache.NpcId;
 import com.palidinodh.osrscore.model.Hit;
@@ -18,9 +17,10 @@ import com.palidinodh.osrscore.model.player.skill.SkillModel;
 import com.palidinodh.osrscore.model.player.skill.SkillNpcProtector;
 import com.palidinodh.osrscore.model.player.skill.SkillPet;
 import com.palidinodh.osrscore.model.player.skill.SkillTemporaryMapObject;
+import com.palidinodh.random.PRandom;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PEvent;
 import com.palidinodh.util.PNumber;
-import com.palidinodh.random.PRandom;
 import lombok.var;
 
 public class Thieving extends SkillContainer {
@@ -226,7 +226,8 @@ public class Thieving extends SkillContainer {
         .pet(new SkillPet(ItemId.ROCKY, 127056)).build());
     entries.add(SkillEntry.builder().level(84).experience(100).animation(881).delay(6)
         .mapObject(new SkillModel(26757, 1))
-        .create(new RandomItem(Main.isSpawn() ? ItemId.COINS : ItemId.BLOOD_MONEY, 10, 50))
+        .create(new RandomItem(Settings.getInstance().isSpawn() ? ItemId.COINS : ItemId.BLOOD_MONEY,
+            10, 50))
         .randomCreate(new RandomItem(ItemId.DRAGONSTONE).weight(1))
         .randomCreate(new RandomItem(ItemId.RUNE_SCIMITAR).weight(31))
         .temporaryMapObject(new SkillTemporaryMapObject(26758, 50, 0))

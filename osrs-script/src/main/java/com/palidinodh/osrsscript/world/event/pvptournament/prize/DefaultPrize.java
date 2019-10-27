@@ -1,4 +1,4 @@
-package com.palidinodh.osrsscript.world.pvptournament.prize;
+package com.palidinodh.osrsscript.world.event.pvptournament.prize;
 
 import java.util.List;
 import com.palidinodh.osrscore.io.cache.ItemId;

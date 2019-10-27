@@ -2,7 +2,6 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.io.cache.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -31,6 +30,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
+import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
 public class DemonicGorillaCombat extends NpcCombat {
@@ -220,7 +220,7 @@ public class DemonicGorillaCombat extends NpcCombat {
 
   @Override
   public void deathDropItemsHook(Player player, int additionalPlayerLoopCount, Tile dropTile) {
-    if (Main.isSpawn()
+    if (Settings.getInstance().isSpawn()
         && PRandom.inRange(player.getCombat().getDropRate(ItemId.DRAGON_CLAWS, 0.04))) {
       npc.getController().addMapItem(new Item(ItemId.DRAGON_CLAWS), dropTile, player);
     }

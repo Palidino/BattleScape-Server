@@ -1,5 +1,6 @@
 package com.palidinodh.rs.communication;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -11,6 +12,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Vector;
+import com.palidinodh.io.FileManager;
+import com.palidinodh.io.Stream;
 import com.palidinodh.rs.adaptive.Clan;
 import com.palidinodh.rs.adaptive.GrandExchangeItem;
 import com.palidinodh.rs.adaptive.GrandExchangeUser;
@@ -63,8 +66,7 @@ import com.palidinodh.rs.communication.response.LoadClanResponse;
 import com.palidinodh.rs.communication.response.PlayerLoginResponse;
 import com.palidinodh.rs.communication.response.PrivateMessageResponse;
 import com.palidinodh.rs.communication.response.Response;
-import com.palidinodh.io.FileManager;
-import com.palidinodh.io.Stream;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import com.palidinodh.util.PString;
 import com.palidinodh.util.PTime;
@@ -226,7 +228,7 @@ public class RequestServer implements Runnable {
     }
     lastConnect = PTime.currentTimeMillis();
     disconnect();
-    PLogger.println("[" + PTime.getDetailedDate() + "-RequestServer] Connecting");
+    PLogger.println("Connecting communications...");
     outputStream.clear();
     outputStream.addOpcodeVarInt(Opcodes.VERIFY);
     outputStream.addShort(worldId);
@@ -256,7 +258,7 @@ public class RequestServer implements Runnable {
 
   private void disconnect() {
     if (socket != null) {
-      PLogger.println("[" + PTime.getDetailedDate() + "-RequestServer] Disconnecting");
+      PLogger.println("[" + PTime.getFullDate() + "-RequestServer] Disconnecting");
       printStats(null);
       try {
         socket.close();
@@ -372,7 +374,7 @@ public class RequestServer implements Runnable {
       }
     } while (read > 0 && inputStream.getLength() < 16000000);
     if (inputStream.getLength() >= 16000000) {
-      PLogger.println("[" + PTime.getDetailedDate() + "-RequestServer] Data exceeded 16MB");
+      PLogger.println("[" + PTime.getFullDate() + "-RequestServer] Data exceeded 16MB");
       printStats(null);
       inputStream.clear();
     }
@@ -381,7 +383,7 @@ public class RequestServer implements Runnable {
       int opcode = inputStream.getUByte();
       int length = inputStream.getInt();
       if (length < 0 || length >= 16000000) {
-        PLogger.println("[" + PTime.getDetailedDate() + "-RequestServer] Invalid length: " + opcode
+        PLogger.println("[" + PTime.getFullDate() + "-RequestServer] Invalid length: " + opcode
             + ", " + length);
         printStats(null);
         inputStream.clear();
@@ -515,14 +517,14 @@ public class RequestServer implements Runnable {
           decodeGEList((GEListRequest) request);
           break;
         default:
-          PLogger.println("[" + PTime.getDetailedDate() + "-RequestServer] Invalid opcode: "
-              + opcode + ":" + length);
+          PLogger.println("[" + PTime.getFullDate() + "-RequestServer] Invalid opcode: " + opcode
+              + ":" + length);
           printStats(request);
           inputStream.clear();
           return;
       }
       if (position + length != inputStream.getPosition()) {
-        PLogger.println("[" + PTime.getDetailedDate() + "-RequestServer] Opcode " + opcode
+        PLogger.println("[" + PTime.getFullDate() + "-RequestServer] Opcode " + opcode
             + " mismatched: " + (inputStream.getPosition() - position) + " but expected " + length);
         printStats(request);
         inputStream.clear();
@@ -554,7 +556,7 @@ public class RequestServer implements Runnable {
   private void decodePing(PingRequest request) {
     String pong = inputStream.getString();
     if (!pong.equals("pong")) {
-      PLogger.println("[" + PTime.getDetailedDate() + "-RequestServer] Pong actually " + pong);
+      PLogger.println("[" + PTime.getFullDate() + "-RequestServer] Pong actually " + pong);
       disconnect();
     }
     request.setState(Request.State.COMPLETE);
@@ -625,8 +627,8 @@ public class RequestServer implements Runnable {
     String packetVerification = inputStream.getString();
     if (!packetVerification.equals(Opcodes.PACKET_END_VERIFICATION)) {
       request.setState(Request.State.PENDING_SEND);
-      PLogger.println(
-          "[" + PTime.getDetailedDate() + "] Bad Logout Verification: " + packetVerification);
+      PLogger
+          .println("[" + PTime.getFullDate() + "] Bad Logout Verification: " + packetVerification);
       return;
     }
     usernameRequests.remove(request.getUsername().toLowerCase());
@@ -651,13 +653,14 @@ public class RequestServer implements Runnable {
     socket.write(ByteBuffer.wrap(outputStream.toByteArray()));
     request.setState(Request.State.PENDING_RECEIVE);
     if (request.getCharFile() != null) {
-      FileManager.writeFile(FileManager.PLAYER_MAP_BACKUP_DIR + "/" + request.getUserId() + ".dat",
-          request.getCharFile());
+      FileManager.writeFile(new File(Settings.getInstance().getPlayerMapBackupDirectory(),
+          request.getUserId() + ".dat"), request.getCharFile());
     }
   }
 
   private void internalPlayerLogout(PlayerLogoutRequest request) {
-    FileManager.writeFile(FileManager.PLAYER_MAP_DIR + "/" + request.getUserId() + ".dat",
+    FileManager.writeFile(
+        new File(Settings.getInstance().getPlayerMapDirectory(), request.getUserId() + ".dat"),
         request.getCharFile());
   }
 
@@ -1538,10 +1541,11 @@ public class RequestServer implements Runnable {
     return request;
   }
 
-  public Request addLog(String directory1, String directory2, String line) {
+  public Request addLog(File baseDirectory, String fileName, String line) {
     Request request;
     synchronized (this) {
-      newRequests.add(request = new LogRequest(null, getUniqueKey(), directory1, directory2, line));
+      newRequests.add(
+          request = new LogRequest(null, getUniqueKey(), baseDirectory.getPath(), fileName, line));
       notify();
     }
     return request;
@@ -1622,7 +1626,7 @@ public class RequestServer implements Runnable {
   }
 
   public void printStats(Request request) {
-    PLogger.println("[" + PTime.getDetailedDate() + "-RequestServer] requests: " + requests.size()
+    PLogger.println("[" + PTime.getFullDate() + "-RequestServer] requests: " + requests.size()
         + "; new: " + newRequests.size() + "; byKey: " + requestsByKey.size() + "; notifications: "
         + requestNotifications.size() + "; names: " + usernameRequests.size() + "; players: "
         + players.size() + "; in: " + inputStream.getPosition() + "; out: "

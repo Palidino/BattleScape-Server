@@ -1,13 +1,13 @@
 package com.palidinodh.osrsscript.packetdecoder.command;
 
 import java.util.ArrayList;
-import com.palidinodh.osrscore.Main;
+import com.palidinodh.io.FileManager;
 import com.palidinodh.osrscore.io.Command;
 import com.palidinodh.osrscore.io.cache.NpcId;
 import com.palidinodh.osrscore.model.Tile;
 import com.palidinodh.osrscore.model.npc.Npc;
 import com.palidinodh.osrscore.model.player.Player;
-import com.palidinodh.io.FileManager;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PString;
 import lombok.var;
 
@@ -19,7 +19,7 @@ public class SaveNpcCommand implements Command {
 
   @Override
   public boolean canUse(Player player) {
-    return Main.isLocal();
+    return Settings.getInstance().isLocal();
   }
 
   @Override

@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import com.palidinodh.util.PLogger;
 
 public class NioServer implements Runnable {
   private List<Session> sessions = new ArrayList<>();
@@ -49,7 +50,7 @@ public class NioServer implements Runnable {
     serverSocketChannel.socket().setReceiveBufferSize(socketBufferSize);
     serverSocketChannel.socket().bind(hostAddress);
     serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
-    System.out.println("Starting server on " + remoteAddress + ":" + port);
+    PLogger.println("Starting server on " + remoteAddress + ":" + port);
     new Thread(this, "NioServer").start();
   }
 
@@ -292,7 +293,7 @@ public class NioServer implements Runnable {
   }
 
   public void printStats() {
-    System.out.println("NioServer: sessions: " + sessions.size() + "; connectionCounts: "
+    PLogger.println("NioServer: sessions: " + sessions.size() + "; connectionCounts: "
         + connectionCounts.size());
   }
 }

@@ -1,10 +1,10 @@
 package com.palidinodh.osrsscript.packetdecoder;
 
-import com.palidinodh.osrscore.Main;
+import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.PacketDecoder;
 import com.palidinodh.osrscore.io.ValueEnteredEvent;
 import com.palidinodh.osrscore.model.player.Player;
-import com.palidinodh.io.Stream;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
@@ -18,7 +18,7 @@ public class ValueEnteredDecoder extends PacketDecoder {
     if (index == 0) {
       var value = stream.getInt();
       var message = "[ValueEnteredInt] value=" + value;
-      if (Main.isLocal()) {
+      if (Settings.getInstance().isLocal()) {
         PLogger.println(message);
       }
       if (player.getOptions().getPrintPackets()) {
@@ -38,7 +38,7 @@ public class ValueEnteredDecoder extends PacketDecoder {
     } else if (index == 1) {
       var value = stream.getString();
       var message = "[ValueEnteredString] value=" + value;
-      if (Main.isLocal()) {
+      if (Settings.getInstance().isLocal()) {
         PLogger.println(message);
       }
       if (player.getOptions().getPrintPackets()) {
@@ -60,7 +60,7 @@ public class ValueEnteredDecoder extends PacketDecoder {
         id = -1;
       }
       var message = "[ItemEntered] id=" + id;
-      if (Main.isLocal()) {
+      if (Settings.getInstance().isLocal()) {
         PLogger.println(message);
       }
       if (player.getOptions().getPrintPackets()) {

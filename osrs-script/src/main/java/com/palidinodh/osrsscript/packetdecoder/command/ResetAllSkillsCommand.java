@@ -1,15 +1,15 @@
 package com.palidinodh.osrsscript.packetdecoder.command;
 
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.Command;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Skills;
+import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
 public class ResetAllSkillsCommand implements Command {
   @Override
   public boolean canUse(Player player) {
-    return Main.isLocal();
+    return Settings.getInstance().isLocal();
   }
 
   @Override
