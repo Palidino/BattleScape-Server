@@ -39,8 +39,20 @@ public class DecompressibleInputStream extends ObjectInputStream {
                                                                            // descriptor
     Class<?> localClass; // the class in the local JVM that this descriptor represents.
     try {
-      localClass = Class.forName(resultClassDescriptor.getName());
-    } catch (ClassNotFoundException e) {
+      String name = resultClassDescriptor.getName();
+      String originalName = name;
+      name = name.replace("com.palidino.osrs", "com.palidinodh.osrscore");
+      name = name.replace("com.palidino.rs", "com.palidinodh.rs.adaptive");
+
+      if (!originalName.equals(name)) {
+        System.out.println(originalName + " -> " + name);
+        Field nameField = ObjectStreamClass.class.getDeclaredField("name");
+        nameField.setAccessible(true);
+        nameField.set(resultClassDescriptor, name);
+      }
+
+      localClass = Class.forName(name);
+    } catch (Exception e) {
       return resultClassDescriptor;
     }
     ObjectStreamClass localClassDescriptor = ObjectStreamClass.lookup(localClass);

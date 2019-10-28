@@ -154,6 +154,9 @@ cs = new NCombatScript() {
 
     /* @Override */
     damageReceivedHook: function(damage, entity, hitType, defenceType) {
+        if (npc.getId() == NPC_IDS[RIGHT_HAND] && hitType != HitType.MAGIC) {
+            damage = 0;
+        }
         if (npc.getId() == NPC_IDS[LEFT_HAND] && phase < 3 && !olm[LEFT_HAND].isLocked() && !olm[RIGHT_HAND].isLocked()
                 && !olm[RIGHT_HAND].isDead() && (npc.getHitpoints() * 0.8) <= olm[RIGHT_HAND].getHitpoints()
                 && damage > 0 && PRandom.randomE(16) == 0) {
@@ -384,6 +387,7 @@ cs = new NCombatScript() {
             }
         };
         npc.getWorld().addEvent(event);
+        npc.setHitpoints(npc.getMaxHitpoints());
     },
 
     crystalBurst: function() {
