@@ -90,7 +90,7 @@ cs = new NCombatScript() {
                 return;
             }
         }
-        var event = new Event(speed.eventDelay) {
+        var event = new PEvent(speed.eventDelay) {
             execute: function() {
                 if (event.getExecutions() == 0) {
                     event.setTick(0);

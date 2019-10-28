@@ -37,6 +37,7 @@ public class PLogger {
     synchronized (LOCK) {
       message = "[" + PTime.getFullDate() + "] " + message;
       println(message);
+      e.printStackTrace();
     }
   }
 }

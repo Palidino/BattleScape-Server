@@ -267,7 +267,7 @@ cs = new NCombatScript() {
                 initialSpeed.clientSpeed, 16, 64);
         var tile = null;
         var js = this;
-        lightningCastEvent = new Event(initialSpeed.eventDelay - 1) {
+        lightningCastEvent = new PEvent(initialSpeed.eventDelay - 1) {
             execute: function() {
                 if (tile != null) {
                     js.lightningAttack(tile);
@@ -295,7 +295,7 @@ cs = new NCombatScript() {
             return;
         }
         var damageEvent = null;
-        var event = new Event() {
+        var event = new PEvent() {
             execute: function() {
                 if (player.isLocked()) {
                     event.stop();
@@ -350,7 +350,7 @@ cs = new NCombatScript() {
         }
         npc.attackLock();
         var js = this;
-        var event = new Event() {
+        var event = new PEvent() {
             execute: function() {
                 if (player.isLocked()) {
                     event.stop();
@@ -385,7 +385,7 @@ cs = new NCombatScript() {
         followTiles.add(new FollowTile(new Tile(followTile), 0));
         var speed = cs.getSpeed(2);
         var hasCastFollow = false;
-        var eventFollow = new Event(1) {
+        var eventFollow = new PEvent(1) {
             execute: function() {
                 if (player.isLocked() || followTiles.isEmpty() || npc.isLocked()
                         || npc.getId() != NpcId.ALCHEMICAL_HYDRA_426_8620) {
@@ -479,7 +479,7 @@ cs = new NCombatScript() {
                 break;
             }
         }
-        var eventWall1 = new Event() {
+        var eventWall1 = new PEvent() {
             execute: function() {
                 if (player.isLocked()) {
                     eventWall1.stop();
@@ -500,7 +500,7 @@ cs = new NCombatScript() {
         }
         npc.getWorld().addEvent(eventWall1);
         var hasSecondAttacked = false;
-        var wallEvent2 = new Event(1) {
+        var wallEvent2 = new PEvent(1) {
             execute: function() {
                 wallEvent2.setTick(0);
                 if (player.isLocked()) {
@@ -566,7 +566,7 @@ cs = new NCombatScript() {
         if (player == null) {
             return;
         }
-        fireBleedEvent = new Event() {
+        fireBleedEvent = new PEvent() {
             execute: function() {
                 if (fireBleedEvent.getExecutions() == 4) {
                     fireBleedEvent.stop();
@@ -591,7 +591,7 @@ cs = new NCombatScript() {
         } else if (npc.getId() == NpcId.ALCHEMICAL_HYDRA_426_8620) {
             weakness = BLUE_VENT;
         }
-        var event = new Event() {
+        var event = new PEvent() {
             execute: function() {
                 if (player.isLocked()) {
                     event.stop();

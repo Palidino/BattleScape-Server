@@ -65,7 +65,7 @@ cs = new NCombatScript() {
                 npc.getCombat().sendMapProjectile(null, npc, tile, 1483, 43, 31, speed.clientDelay,
                         speed.clientSpeed, 48, 64);
             }
-            var event = new Event(speed.eventDelay) {
+            var event = new PEvent(speed.eventDelay) {
                 /* @Override */
                 execute: function() {
                     event.stop();
@@ -100,7 +100,7 @@ cs = new NCombatScript() {
             entity.getPrayer().deactivateAll();
             entity.getGameEncoder().sendMessage("<col=ff0000>Your prayers have been disabled!");
         } else if (combatStyle == FREEZE_FIREBALL) {
-            var event = new Event(hitEvent.getTick()) {
+            var event = new PEvent(hitEvent.getTick()) {
                 /* @Override */
                 execute: function() {
                     event.stop();

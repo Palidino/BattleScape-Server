@@ -166,7 +166,7 @@ cs = new NCombatScript() {
             }
             this.setAnimation(LEFT_HAND, 7360, false);
             var js = this;
-            var event = new Event(Event.MILLIS_600) {
+            var event = new PEvent(Event.MILLIS_600) {
                 execute: function() {
                     if (event.getExecutions() == Event.SEC_27 || !npc.isVisible()) {
                         event.stop();
@@ -251,7 +251,7 @@ cs = new NCombatScript() {
         if (time != 0) {
             this.setAnimation(index, DESPAWN_ANIMATIONS[index], false);
         }
-        var event = new Event(time) {
+        var event = new PEvent(time) {
             execute: function() {
                 event.stop();
                 var matchesEast = npc.matchesTile(EAST_NPC_TILES[index]);
@@ -316,7 +316,7 @@ cs = new NCombatScript() {
         npc.setVisible(false);
         npc.lock();
         var js = this;
-        var event = new Event(Event.MILLIS_1200) {
+        var event = new PEvent(Event.MILLIS_1200) {
             execute: function() {
                 if (event.getExecutions() == 0) {
                     return;
@@ -378,7 +378,7 @@ cs = new NCombatScript() {
                         objects[i]), SPAWN_ANIMATIONS[i]);
             }
         }
-        var event = new Event(Event.MILLIS_3000) {
+        var event = new PEvent(Event.MILLIS_3000) {
             execute: function() {
                 event.stop();
                 for each (var mapObject in objects) {
@@ -399,7 +399,7 @@ cs = new NCombatScript() {
             crystals.push(crystal);
             npc.getController().addMapObject(crystal);
         }
-        var event = new Event(Event.MILLIS_2400) {
+        var event = new PEvent(Event.MILLIS_2400) {
             execute: function() {
                 if (event.getExecutions() == 0) {
                     event.setTick(Event.MILLIS_1200);
@@ -446,7 +446,7 @@ cs = new NCombatScript() {
         for each (var tile in selectedTiles) {
             directions.push((tile.getY() > 5739) ? Tile.SOUTH : Tile.NORTH);
         }
-        var event = new Event(Event.MILLIS_600) {
+        var event = new PEvent(Event.MILLIS_600) {
             execute: function() {
                 var stillWorking = false;
                 var players = npc.getController().getPlayers();
@@ -514,7 +514,7 @@ cs = new NCombatScript() {
             }
         }
         var graphicIds = [ 1359, 1360, 1361, 1362 ];
-        var event = new Event(Event.MILLIS_600) {
+        var event = new PEvent(Event.MILLIS_600) {
             execute: function() {
                 if (event.getExecutions() == Event.MILLIS_5400) {
                     event.stop();
@@ -604,7 +604,7 @@ cs = new NCombatScript() {
                     projectile.clientSpeed, 16, 64);
             player.setGraphic(new Graphic(contactIds[index], 124, projectile.getContactDelay()));
         }
-        var event = new Event(projectile.eventDelay) {
+        var event = new PEvent(projectile.eventDelay) {
             execute: function() {
                 event.stop();
                 for (var i = 0; i < players.size(); i++) {
@@ -641,7 +641,7 @@ cs = new NCombatScript() {
             cs.sendMapProjectile(null, npc, tile, 1354, 43, 31, projectile.clientDelay, projectile.clientSpeed,
                     16, 64);
         }
-        var event = new Event(projectile.eventDelay) {
+        var event = new PEvent(projectile.eventDelay) {
             execute: function() {
                 if (event.getExecutions() == 0) {
                     event.setTick(0);
@@ -694,7 +694,7 @@ cs = new NCombatScript() {
         }
         var pools = [];
         var times = [];
-        var event = new Event(projectile.eventDelay) {
+        var event = new PEvent(projectile.eventDelay) {
             execute: function() {
                 event.setTick(Event.MILLIS_600);
                 var addedPool = null;
@@ -748,7 +748,7 @@ cs = new NCombatScript() {
 
     fallingCrystals: function() {
         var js = this;
-        var event = new Event(Event.MILLIS_1200) {
+        var event = new PEvent(Event.MILLIS_1200) {
             execute: function() {
                 if (olm[HEAD].isDead()) {
                     event.stop();

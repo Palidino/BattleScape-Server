@@ -78,7 +78,7 @@ cs = new NCombatScript() {
             }
         }
         var mapObject = new MapObject(32744, tileHitEvent.getTile(), 22, MapObject.getRandomDirection());
-        var event = new Event(speed.eventDelay) {
+        var event = new PEvent(speed.eventDelay) {
             execute: function() {
                 if (event.getExecutions() == 0) {
                     event.setTick(0);
@@ -167,7 +167,7 @@ cs = new NCombatScript() {
                 var mapObject = new MapObject(32743, tile, 22, 0);
                 var tempMapObject = new TempMapObject(16, npc.getController(), mapObject);
                 npc.getWorld().addEvent(tempMapObject);
-                var eventListener = new EventListener() {
+                var eventListener = new PEventListener() {
                     execute: function(event) {
                         var mapObject = event.getAttachment().getTempMapObject(0);
                         if (event.getExecutions() == 1) {

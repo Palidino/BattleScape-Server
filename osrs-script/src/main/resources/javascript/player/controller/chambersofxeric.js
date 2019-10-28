@@ -223,7 +223,7 @@ DRINKS.add(new Skills.Drink(20960, 20959, 20958, 20957, Java.to(REVIT_PLUS, "int
 var OVERLOAD_MINUS = new Skills.Drink(20988, 20987, 20986, 20985, null);
 OVERLOAD_MINUS.action = new Skills.ItemAction() {
     execute: function(player) {
-        var event = new Event(0) {
+        var event = new PEvent(0) {
             execute: function() {
                 if (!player.isVisible() || player.isDead()) {
                     event.stop();
@@ -260,7 +260,7 @@ DRINKS.add(OVERLOAD_MINUS);
 var OVERLOAD = new Skills.Drink(20992, 20991, 20990, 20989, null);
 OVERLOAD.action = new Skills.ItemAction() {
     execute: function(player) {
-        var event = new Event(0) {
+        var event = new PEvent(0) {
             execute: function() {
                 if (!player.isVisible() || player.isDead()) {
                     event.stop();
@@ -297,7 +297,7 @@ DRINKS.add(OVERLOAD);
 var OVERLOAD_PLUS = new Skills.Drink(20996, 20995, 20994, 20993, null);
 OVERLOAD_PLUS.action = new Skills.ItemAction() {
     execute: function(player) {
-        var event = new Event(0) {
+        var event = new PEvent(0) {
             execute: function() {
                 if (!player.isVisible() || player.isDead()) {
                     event.stop();
@@ -334,7 +334,7 @@ DRINKS.add(OVERLOAD_PLUS);
 var PRAYER_ENHANCE_MINUS = new Skills.Drink(20964, 20963, 20962, 20961, null);
 PRAYER_ENHANCE_MINUS.action = new Skills.ItemAction() {
     execute: function(player) {
-        var event = new Event(0) {
+        var event = new PEvent(0) {
             execute: function() {
                 if (!player.isVisible() || player.isDead()) {
                     event.stop();
@@ -360,7 +360,7 @@ DRINKS.add(PRAYER_ENHANCE_MINUS);
 var PRAYER_ENHANCE = new Skills.Drink(20968, 20967, 20966, 20965, null);
 PRAYER_ENHANCE.action = new Skills.ItemAction() {
     execute: function(player) {
-        var event = new Event(0) {
+        var event = new PEvent(0) {
             execute: function() {
                 if (!player.isVisible() || player.isDead()) {
                     event.stop();
@@ -386,7 +386,7 @@ DRINKS.add(PRAYER_ENHANCE);
 var PRAYER_ENHANCE_PLUS = new Skills.Drink(20972, 20971, 20970, 20969, null);
 PRAYER_ENHANCE_PLUS.action = new Skills.ItemAction() {
     execute: function(player) {
-        var event = new Event(0) {
+        var event = new PEvent(0) {
             execute: function() {
                 if (!player.isVisible() || player.isDead()) {
                     event.stop();
@@ -555,6 +555,7 @@ pc = new PController() {
             rooms.add(spawnRoom);
             if (name.equals("load_tob")) {
                 giveRewards = false;
+                rooms.add(ROOM_TEKTON);
                 rooms.add(ROOM_MAIDEN_SUGADINTI);
                 rooms.add(ROOM_PESTILENT_BLOAT);
                 rooms.add(ROOM_XARPUS);
@@ -867,7 +868,7 @@ pc = new PController() {
             sharedStorage.sendItems();
             return true;
         case 29889: // Bubbles
-            var event = new Event(1) {
+            var event = new PEvent(1) {
                 execute: function() {
                     if (!player.isVisible()) {
                         event.stop();
@@ -911,7 +912,7 @@ pc = new PController() {
             player.setAction(event);
             return true;
         case 29773: // Weeds
-            var event = new Event(1) {
+            var event = new PEvent(1) {
                 execute: function() {
                     if (!player.isVisible()) {
                         event.stop();
@@ -1066,7 +1067,7 @@ pc = new PController() {
         switch (mapObject.getId()) {
         case 29878: // Geyser
             if (itemId == 20800) { // Empty gourd vial
-                var event = new Event(0) {
+                var event = new PEvent(0) {
                     execute: function() {
                         if (!player.isVisible() || !player.getInventory().hasItem(itemId)) {
                             event.stop();
@@ -1087,7 +1088,7 @@ pc = new PController() {
                     return;
                 }
                 player.getInventory().deleteItem(itemId, 1);
-                var event = new Event(0) {
+                var event = new PEvent(0) {
                     execute: function() {
                         if (!player.isVisible()) {
                             event.stop();
