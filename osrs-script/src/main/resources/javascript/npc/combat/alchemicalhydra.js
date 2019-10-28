@@ -227,7 +227,7 @@ cs = new NCombatScript() {
     },
 
     canBeAttackedHook: function(player, sendMessage, hitType) {
-        if (!Main.isSpawn() && !player.getSkills().isAnySlayerTask(npc) && !Main.ownerPrivledges(player)
+        if (!Settings.getInstance().isSpawn() && !player.getSkills().isAnySlayerTask(npc) && !Main.ownerPrivledges(player)
                 && !player.isUsergroup(SqlUserRank.YOUTUBER)) {
             if (sendMessage) {
                 player.getGameEncoder().sendMessage("This can only be attacked on an appropriate Slayer task.");

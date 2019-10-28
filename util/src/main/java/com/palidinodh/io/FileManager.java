@@ -26,7 +26,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.ArrayList;
@@ -37,6 +36,9 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.reflect.ClassPath;
+import com.google.common.reflect.ClassPath.ClassInfo;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -48,26 +50,12 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.converters.reflection.PureJavaReflectionProvider;
 
 public class FileManager implements Runnable {
-  public static final String DYNAMIC_DIR = "osrs-server/target/saves";
-  public static final String PLAYER_DIR = DYNAMIC_DIR + "/player";
-  public static final String PLAYER_MAP_DIR = PLAYER_DIR + "/map";
-  public static final String PLAYER_MAP_ONLINE_DIR = PLAYER_DIR + "/maponline";
-  public static final String PLAYER_MAP_ERROR_DIR = PLAYER_DIR + "/maperror";
-  public static final String PLAYER_MAP_BACKUP_DIR = PLAYER_DIR + "/mapbackup";
   public static final String JSON_DIR = "/json";
   public static final String XML_DIR = "/xml";
-  public static final String CLAN_DIR = PLAYER_DIR + "/clan";
-  public static final String LOG_DIR = DYNAMIC_DIR + "/log";
   public static final String JS_DIR = "/javascript";
-  public static final String GE_DIR = PLAYER_DIR + "/exchange";
-  public static final String WORLD_DIR = DYNAMIC_DIR + "/world";
-  public static final String GUIDE_DIR = "/guide";
-  private static final String PLAYER_LOG_DIR = "./playerlog";
-  private static final String PLAYER_LOG_LOCAL_DIR = PLAYER_DIR + "/log";
   private static final XStream XSTREAM_IN, XSTREAM_OUT;
 
   private static FileManager instance = new FileManager();
-  private static Settings settings;
   private static Connection sqlConnection;
   private static Properties sqlProperties = new Properties();
   private static Gson gson = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
@@ -107,16 +95,16 @@ public class FileManager implements Runnable {
     }
   }
 
-  public void addSaveRequest(String fileName, byte[] fileBytes) {
+  public void addSaveRequest(File file, byte[] fileBytes) {
     synchronized (this) {
-      requests.add(new SaveRequest(fileName, fileBytes));
+      requests.add(new SaveRequest(file.getPath(), fileBytes));
       notify();
     }
   }
 
-  public void addDeleteRequest(String fileName) {
+  public void addDeleteRequest(File file) {
     synchronized (this) {
-      requests.add(new DeleteRequest(fileName));
+      requests.add(new DeleteRequest(file.getPath()));
       notify();
     }
   }
@@ -125,10 +113,9 @@ public class FileManager implements Runnable {
     PLogger.println("FileManager: requests: " + requests.size());
   }
 
-  public static void loadSql(Settings _settings) {
-    settings = _settings;
-    sqlProperties.setProperty("user", settings.getSqlConnection().getUsername());
-    sqlProperties.setProperty("password", settings.getSqlConnection().getPassword());
+  public static void loadSql() {
+    sqlProperties.setProperty("user", Settings.getInstance().getSqlConnection().getUsername());
+    sqlProperties.setProperty("password", Settings.getInstance().getSqlConnection().getPassword());
     sqlProperties.setProperty("connectTimeout", "5000");
     sqlProperties.setProperty("socketTimeout", "5000");
     getSqlConnection();
@@ -139,9 +126,9 @@ public class FileManager implements Runnable {
       DriverManager.setLoginTimeout(10);
       if (sqlConnection == null || !sqlConnection.isValid(10)) {
         sqlConnection = DriverManager.getConnection(
-            "jdbc:mysql://" + settings.getSqlConnection().getConnectionIP() + ":"
-                + settings.getSqlConnection().getConnectionPort() + "/"
-                + settings.getSqlConnection().getDatabaseName()
+            "jdbc:mysql://" + Settings.getInstance().getSqlConnection().getConnectionIP() + ":"
+                + Settings.getInstance().getSqlConnection().getConnectionPort() + "/"
+                + Settings.getInstance().getSqlConnection().getDatabaseName()
                 + "?zeroDateTimeBehavior=convertToNull&serverTimezone=America/New_York",
             sqlProperties);
       }
@@ -149,45 +136,6 @@ public class FileManager implements Runnable {
       e.printStackTrace();
     }
     return sqlConnection;
-  }
-
-  public static String[] getClassScripts(String packageName) {
-    if (packageName.startsWith("script.")) {
-      packageName = packageName.substring(7);
-    }
-    List<String> classes = new ArrayList<>();
-    String path = "./bin/script/" + packageName.replace(".", "/");
-    File[] files = new File(path).listFiles();
-    if (files == null) {
-      return new String[0];
-    }
-    for (File file : files) {
-      if (file.isHidden() || file.isDirectory() || !file.getName().endsWith(".class")
-          || file.getName().contains("$")) {
-        continue;
-      }
-      classes.add("script." + packageName + "." + file.getName().replace(".class", ""));
-    }
-    return classes.toArray(new String[classes.size()]);
-  }
-
-  public static String[] getPackageScripts(String subPackageName) {
-    if (subPackageName.startsWith("script.")) {
-      subPackageName = subPackageName.substring(7);
-    }
-    List<String> packages = new ArrayList<>();
-    String path = "./bin/script/" + subPackageName.replace(".", "/");
-    File[] files = new File(path).listFiles();
-    if (files == null) {
-      return new String[0];
-    }
-    for (File file : files) {
-      if (file.isHidden() || !file.isDirectory()) {
-        continue;
-      }
-      packages.add("script." + subPackageName + "." + file.getName());
-    }
-    return packages.toArray(new String[packages.size()]);
   }
 
   public static boolean fileExists(String file) {
@@ -323,33 +271,21 @@ public class FileManager implements Runnable {
     }
   }
 
-  public static void writeLog(String directory1, String directory2, String line) {
-    if (settings.isLocal()) {
+  public static void writeLog(File baseDirectory, String filename, String line) {
+    if (Settings.getInstance().isLocal()) {
       return;
     }
-    if (directory1 == null || directory1.length() == 0) {
+    if (baseDirectory == null || filename == null) {
       return;
     }
-    line = PTime.getDetailedDate() + " " + line + System.getProperty("line.separator");
+    line = PTime.getFullDate() + " " + line + System.getProperty("line.separator");
     RandomAccessFile out = null;
     try {
-      String fullPath;
-      if (directory2 != null && directory2.length() > 0) {
-        if (!directory1.endsWith("/")) {
-          directory1 += "/";
-        }
-        if (!directory2.startsWith("/")) {
-          directory2 = "/" + directory2;
-        }
-        fullPath = directory1 + PTime.getSimpleDate() + directory2;
-      } else {
-        fullPath = directory1;
+      File fullFile = new File(new File(baseDirectory, PTime.getYearMonthDay()), filename);
+      if (fullFile.getParentFile() != null) {
+        fullFile.getParentFile().mkdirs();
       }
-      File file = new File(fullPath);
-      if (file.getParentFile() != null) {
-        file.getParentFile().mkdirs();
-      }
-      out = new RandomAccessFile(file, "rw");
+      out = new RandomAccessFile(fullFile, "rw");
       out.seek(out.length());
       out.write(line.getBytes());
     } catch (IOException e) {
@@ -497,19 +433,19 @@ public class FileManager implements Runnable {
     return compressed;
   }
 
-  public static void zip(String zipFileName, String... files) {
+  public static void zip(File zipFile, File... files) {
     try {
-      Path zipFilePath = Paths.get(zipFileName);
+      Path zipFilePath = zipFile.toPath();
       if (Files.exists(zipFilePath)) {
         Files.delete(zipFilePath);
       }
       Path p = Files.createFile(zipFilePath);
       try (ZipOutputStream zs = new ZipOutputStream(Files.newOutputStream(p))) {
-        for (String file : files) {
-          if (!new File(file).exists()) {
+        for (File file : files) {
+          if (!file.exists()) {
             continue;
           }
-          Path pp = Paths.get(file);
+          Path pp = file.toPath();
           Files.walk(pp).filter(path -> !Files.isDirectory(path)).forEach(path -> {
             if (pp.relativize(path).toString().startsWith(".")) {
               return;
@@ -683,9 +619,26 @@ public class FileManager implements Runnable {
     return in == null ? FileManager.class.getResourceAsStream(resource) : in;
   }
 
-  public static String getPlayerLogDir() {
-    return settings.isLocal() ? FileManager.PLAYER_LOG_LOCAL_DIR : FileManager.PLAYER_LOG_DIR;
+  @SuppressWarnings("unchecked")
+  public static <T> List<Class<T>> getClasses(Class<T> fromClass, String packageName) {
+    List<Class<T>> matchedClasses = new ArrayList<>();
+    try {
+      ClassPath classPath = ClassPath.from(fromClass.getClassLoader());
+      ImmutableSet<ClassInfo> classes = packageName == null ? classPath.getAllClasses()
+          : classPath.getTopLevelClassesRecursive(packageName);
+      for (ClassInfo classInfo : classes) {
+        Class<?> clazz = classInfo.load();
+        if (!fromClass.isAssignableFrom(clazz)) {
+          continue;
+        }
+        matchedClasses.add((Class<T>) clazz);
+      }
+    } catch (IOException ioe) {
+      ioe.printStackTrace();
+    }
+    return matchedClasses;
   }
+
 
   public static byte[] readStream(InputStream in) {
     byte[] bytes = new byte[128];
@@ -719,10 +672,6 @@ public class FileManager implements Runnable {
 
   public static FileManager getInstance() {
     return instance;
-  }
-
-  public static void setSettings(Settings _settings) {
-    settings = _settings;
   }
 
   public static void setGson(Gson _gson) {

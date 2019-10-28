@@ -37,10 +37,11 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.npc.combat.style.special.NpcCombatTargetTile;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.random.PRandom;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PCollection;
 import com.palidinodh.util.PEvent;
 import com.palidinodh.util.PPolygon;
-import com.palidinodh.random.PRandom;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.var;
@@ -515,7 +516,7 @@ public class AlchemicalHydraCombat extends NpcCombat {
       return false;
     }
     var player = (Player) opponent;
-    if (!Main.isSpawn() && !player.getSkills().isAnySlayerTask(npc)
+    if (!Settings.getInstance().isSpawn() && !player.getSkills().isAnySlayerTask(npc)
         && !Main.ownerPrivledges(player)) {
       if (sendMessage) {
         player.getGameEncoder()

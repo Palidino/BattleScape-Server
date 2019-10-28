@@ -3,7 +3,6 @@
 .git
 .github
 .gitmodules
-.classpath
 .factorypath
 .project
 .DS_Store

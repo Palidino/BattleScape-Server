@@ -14,9 +14,9 @@ import com.palidinodh.osrscore.model.player.skill.SkillEntry;
 import com.palidinodh.osrscore.model.player.skill.SkillModel;
 import com.palidinodh.osrscore.model.player.skill.SkillPet;
 import com.palidinodh.osrscore.model.player.skill.SkillTemporaryMapObject;
+import com.palidinodh.random.PRandom;
 import com.palidinodh.util.PEvent;
 import com.palidinodh.util.PNumber;
-import com.palidinodh.random.PRandom;
 import lombok.Getter;
 import lombok.var;
 

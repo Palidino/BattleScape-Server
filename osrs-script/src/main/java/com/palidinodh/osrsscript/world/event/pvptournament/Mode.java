@@ -1,4 +1,4 @@
-package com.palidinodh.osrsscript.world.pvptournament;
+package com.palidinodh.osrsscript.world.event.pvptournament;
 
 import java.util.ArrayList;
 import java.util.Collections;

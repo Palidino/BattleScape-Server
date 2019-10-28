@@ -1,4 +1,4 @@
-package com.palidinodh.osrsscript.world.pvptournament.prize;
+package com.palidinodh.osrsscript.world.event.pvptournament.prize;
 
 import com.palidinodh.util.PNumber;
 

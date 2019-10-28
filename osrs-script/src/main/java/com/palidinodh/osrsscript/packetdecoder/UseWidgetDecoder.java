@@ -1,6 +1,6 @@
 package com.palidinodh.osrsscript.packetdecoder;
 
-import com.palidinodh.osrscore.Main;
+import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.PacketDecoder;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.io.cache.WidgetId;
@@ -12,7 +12,7 @@ import com.palidinodh.osrscore.model.player.skill.SkillContainer;
 import com.palidinodh.osrscore.util.RequestManager;
 import com.palidinodh.osrscore.world.WorldEventHooks;
 import com.palidinodh.osrsscript.packetdecoder.misc.UseWidgetAction;
-import com.palidinodh.io.Stream;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
@@ -111,7 +111,7 @@ public class UseWidgetDecoder extends PacketDecoder {
             + "; childId=" + childId + "; itemId=" + itemId + "/" + ItemId.valueOf(itemId)
             + "; slot=" + slot + "; id=" + id + "; moveType=" + moveType + "; entity="
             + (entity instanceof Player ? ((Player) entity).getUsername() : entity.getId());
-    if (Main.isLocal()) {
+    if (Settings.getInstance().isLocal()) {
       PLogger.println(message);
     }
     if (player.getOptions().getPrintPackets()) {
@@ -213,7 +213,7 @@ public class UseWidgetDecoder extends PacketDecoder {
         + onWidgetId + "/" + WidgetId.valueOf(onWidgetId) + "; onChildId=" + onChildId
         + "; useItemId=" + useItemId + "/" + ItemId.valueOf(useItemId) + "; onItemId=" + onItemId
         + "/" + ItemId.valueOf(onItemId) + "; onSlot=" + onSlot;
-    if (Main.isLocal()) {
+    if (Settings.getInstance().isLocal()) {
       PLogger.println(message);
     }
     if (player.getOptions().getPrintPackets()) {
@@ -322,7 +322,7 @@ public class UseWidgetDecoder extends PacketDecoder {
     var message = "[WidgetOnMapObject] widgetId=" + widgetId + "; childId=" + childId + "; slot="
         + slot + "; itemId=" + itemId + "; id=" + id + "; x=" + x + "; y=" + y + "; moveType="
         + moveType;
-    if (Main.isLocal()) {
+    if (Settings.getInstance().isLocal()) {
       PLogger.println(message);
     }
     if (player.getOptions().getPrintPackets()) {

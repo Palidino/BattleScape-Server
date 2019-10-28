@@ -13,13 +13,16 @@ public class PTime {
   public static final TimeZone DEFAULT_TIMEZONE = TimeZone.getTimeZone("America/New_York");
   public static final String[] CALENDAR_DAYS =
       {"", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-  public static final SimpleDateFormat DETAILED_DATE = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-  public static final SimpleDateFormat SIMPLE_DATE = new SimpleDateFormat("yyyy-MM-dd");
+  public static final SimpleDateFormat FULL_DATE = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+  public static final SimpleDateFormat FULL_DATE_FILENAME =
+      new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
+  public static final SimpleDateFormat YEAR_MONTH_DAY = new SimpleDateFormat("yyyy-MM-dd");
   public static final SimpleDateFormat TIME_OF_DAY = new SimpleDateFormat("hh:mm a");
   public static final Calendar CALENDAR = new GregorianCalendar(DEFAULT_TIMEZONE);
 
-  private static String detailedDate;
-  private static String simpleDate;
+  private static String fullDate;
+  private static String fullDateFilename;
+  private static String yearMonthDay;
   private static String timeOfDay;
   private static int month;
   private static int dayOfWeek;
@@ -30,8 +33,9 @@ public class PTime {
   public static synchronized void update() {
     CALENDAR.setTimeInMillis(currentTimeMillis());
     Date date = CALENDAR.getTime();
-    detailedDate = DETAILED_DATE.format(date);
-    simpleDate = SIMPLE_DATE.format(date);
+    fullDate = FULL_DATE.format(date);
+    fullDateFilename = FULL_DATE_FILENAME.format(date);
+    yearMonthDay = YEAR_MONTH_DAY.format(date);
     timeOfDay = TIME_OF_DAY.format(date);
     month = CALENDAR.get(Calendar.MONTH);
     dayOfWeek = CALENDAR.get(Calendar.DAY_OF_WEEK);
@@ -175,12 +179,16 @@ public class PTime {
     return toDayMinutes - fromDayMinutes;
   }
 
-  public static String getDetailedDate() {
-    return detailedDate;
+  public static String getFullDate() {
+    return fullDate;
   }
 
-  public static String getSimpleDate() {
-    return simpleDate;
+  public static String getFullDateFilename() {
+    return fullDateFilename;
+  }
+
+  public static String getYearMonthDay() {
+    return yearMonthDay;
   }
 
   public static String getTimeOfDay() {
@@ -264,8 +272,8 @@ public class PTime {
   }
 
   static {
-    DETAILED_DATE.setTimeZone(DEFAULT_TIMEZONE);
-    SIMPLE_DATE.setTimeZone(DEFAULT_TIMEZONE);
+    FULL_DATE.setTimeZone(DEFAULT_TIMEZONE);
+    YEAR_MONTH_DAY.setTimeZone(DEFAULT_TIMEZONE);
     TIME_OF_DAY.setTimeZone(DEFAULT_TIMEZONE);
     update();
   }

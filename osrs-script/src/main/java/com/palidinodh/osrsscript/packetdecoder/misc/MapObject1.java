@@ -22,10 +22,10 @@ import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.osrscore.model.player.Smithing;
 import com.palidinodh.osrscore.model.player.controller.BossInstancePC;
 import com.palidinodh.osrscore.model.player.controller.ClanWarsFreeForAllPC;
+import com.palidinodh.random.PRandom;
 import com.palidinodh.util.PEvent;
 import com.palidinodh.util.PNumber;
 import com.palidinodh.util.PTime;
-import com.palidinodh.random.PRandom;
 import lombok.var;
 
 public class MapObject1 {

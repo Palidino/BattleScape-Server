@@ -1,11 +1,11 @@
 package com.palidinodh.osrsscript.packetdecoder.widget;
 
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.Widget;
 import com.palidinodh.osrscore.io.cache.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.osrscore.model.player.WidgetManager;
+import com.palidinodh.rs.setting.Settings;
 
 public class SkillsWidget implements Widget {
   @Override
@@ -104,7 +104,7 @@ public class SkillsWidget implements Widget {
         player.getGameEncoder().setVarp(965, Skills.GUIDE_CONFIGS[guideId][0]);
         player.putAttribute("skill_guide_id", guideId);
         if (guideId < player.getSkills().getXPLocks().length) {
-          if (Main.isSpawn()) {
+          if (Settings.getInstance().isSpawn()) {
             player.openDialogue("xplock", guideId + 7);
           } else {
             player.openDialogue("xplock", guideId);

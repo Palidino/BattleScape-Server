@@ -47,7 +47,7 @@ instance = new DialogueScript() {
         }
         if (index == 0) {
             if (slot == 0) {
-                if (Main.isSpawn()) {
+                if (Settings.getInstance().isSpawn()) {
                     return;
                 }
                 if ( player.getInventory().getCount(ItemId._14_DAYS_PREMIUM_MEMBERSHIP_32303) == 0) {

@@ -3,7 +3,6 @@ package com.palidinodh.osrsscript.npc.combat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.io.cache.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -37,8 +36,9 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatProjectile;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Player;
-import com.palidinodh.rs.setting.SqlUserRank;
 import com.palidinodh.random.PRandom;
+import com.palidinodh.rs.setting.Settings;
+import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
 public class AbyssalSireCombat extends NpcCombat {
@@ -345,7 +345,7 @@ public class AbyssalSireCombat extends NpcCombat {
       return false;
     }
     var player = (Player) entity;
-    if (!Main.isSpawn() && !player.getSkills().isAnySlayerTask(npc)
+    if (!Settings.getInstance().isSpawn() && !player.getSkills().isAnySlayerTask(npc)
         && !player.isUsergroup(SqlUserRank.YOUTUBER)) {
       if (sendMessage) {
         player.getGameEncoder()

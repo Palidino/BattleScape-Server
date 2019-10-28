@@ -43,11 +43,11 @@ instance = new DialogueScript() {
         }
         if (index == 0) {
             if (slot == 0) {
-                player.getMessaging().joinClan(Main.getName().toLowerCase());
+                player.getMessaging().joinClan(Settings.getInstance().getName().toLowerCase());
             } else if (slot == 1) {
-                player.getGameEncoder().sendOpenURL(Main.getSettings().getDiscordUrl());
+                player.getGameEncoder().sendOpenURL(Settings.getInstance().getDiscordUrl());
             } else if (slot == 1) {
-                player.getGameEncoder().sendOpenURL(Main.getSettings().getRulesUrl());
+                player.getGameEncoder().sendOpenURL(Settings.getInstance().getRulesUrl());
             } else if (slot == 2) {
                 var lines = new ArrayList();
                 lines.add("You can set your combat levels by selecting them on the skills");
@@ -105,7 +105,7 @@ instance = new DialogueScript() {
                 Scroll.open(player, "Untradeable Items", PString.toStringArray(lines));
             } else if (slot == 6) {
                 var lines = new ArrayList();
-                lines.add("You can vote for " + Main.getName() + " which will reward you with Vote");
+                lines.add("You can vote for " + Settings.getInstance().getName() + " which will reward you with Vote");
                 lines.add("Tickets. You can exchange vote tickets with the Vote manager");
                 lines.add("located in the Edgeville bank for various items.");
                 lines.add("");
@@ -120,7 +120,7 @@ instance = new DialogueScript() {
                 lines.add("If you wish to vote, you can click on the Vote Button location");
                 lines.add("inside the main quest tab.");
                 lines.add("");
-                lines.add("Alternatively, please visit: " + Main.getSettings().getVoteUrl());
+                lines.add("Alternatively, please visit: " + Settings.getInstance().getVoteUrl());
                 Scroll.open(player, "Voting", PString.toStringArray(lines));
             } else if (slot == 8) {
                 var lines = new ArrayList();

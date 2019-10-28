@@ -19186,7 +19186,7 @@
     "combatScript": "muttadile",
     "hitpoints": 400,
     "aggressive": true,
-    "aggressiveRange": 16,
+    "aggressiveRange": 24,
     "forceAggression": "true",
     "attackLevel": 250,
     "rangedLevel": 250,
@@ -19210,7 +19210,7 @@
         "animation": -1,
         "maxHit": 30,
         "attackSpeed": 10,
-        "attackRange": "16",
+        "attackRange": 24,
         "projectileId": 393
       },
       {
@@ -19218,7 +19218,7 @@
         "animation": -1,
         "maxHit": 30,
         "attackSpeed": 10,
-        "attackRange": "16",
+        "attackRange": 24,
         "projectileId": 393,
         "multiTarget": true
       }
@@ -19278,7 +19278,7 @@
     "combatScript": "muttadile",
     "hitpoints": 400,
     "aggressive": true,
-    "aggressiveRange": 12,
+    "aggressiveRange": 16,
     "forceAggression": "true",
     "attackLevel": 150,
     "rangedLevel": 150,

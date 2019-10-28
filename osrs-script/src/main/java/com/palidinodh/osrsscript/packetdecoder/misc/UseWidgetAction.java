@@ -17,8 +17,8 @@ import com.palidinodh.osrscore.model.player.Smithing;
 import com.palidinodh.osrscore.model.player.WidgetManager;
 import com.palidinodh.osrscore.model.player.combat.WarriorsGuild;
 import com.palidinodh.osrscore.world.WishingWell;
-import com.palidinodh.util.PNumber;
 import com.palidinodh.random.PRandom;
+import com.palidinodh.util.PNumber;
 
 public class UseWidgetAction {
   public static void doActionNpc(Player player, int index, int widgetId, int childId, int slot,

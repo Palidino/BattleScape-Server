@@ -1,9 +1,9 @@
 package com.palidinodh.osrsscript.packetdecoder.widget;
 
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.Widget;
 import com.palidinodh.osrscore.io.cache.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.setting.Settings;
 
 public class ChatboxWidget implements Widget {
   @Override
@@ -15,7 +15,7 @@ public class ChatboxWidget implements Widget {
   public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
     switch (childId) {
       case 27:
-        player.getGameEncoder().sendOpenURL(Main.getSettings().getWebsiteUrl());
+        player.getGameEncoder().sendOpenURL(Settings.getInstance().getWebsiteUrl());
         break;
     }
   }

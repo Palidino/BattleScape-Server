@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
-import com.palidinodh.osrscore.Main;
+import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.PacketDecoder;
 import com.palidinodh.osrscore.model.map.MapObject;
 import com.palidinodh.osrscore.model.map.Region;
@@ -15,7 +15,7 @@ import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.osrscore.model.player.skill.SkillContainer;
 import com.palidinodh.osrscore.util.RequestManager;
 import com.palidinodh.osrscore.world.WorldEventHooks;
-import com.palidinodh.io.Stream;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
@@ -73,7 +73,7 @@ public class MapObjectOptionDecoder extends PacketDecoder {
     var message = "[MapObjectOption(" + index + ")] id=" + id + "/" + mapObject.getName() + "; x="
         + x + "; y=" + y + "; moveType=" + moveType + ", type=" + mapObject.getType()
         + ", direction=" + mapObject.getDirection();
-    if (Main.isLocal()) {
+    if (Settings.getInstance().isLocal()) {
       PLogger.println(message);
     }
     if (player.getOptions().getPrintPackets()) {

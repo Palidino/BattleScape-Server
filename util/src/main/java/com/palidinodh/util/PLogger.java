@@ -1,14 +1,28 @@
 package com.palidinodh.util;
 
 public class PLogger {
+  private static final Object LOCK = new Object();
+
+  private static boolean isPrinting;
+
   public static void print(Object message) {
-    message = "[" + PTime.getDetailedDate() + "] " + message;
-    System.out.print(message);
+    synchronized (LOCK) {
+      if (!isPrinting) {
+        message = "[" + PTime.getFullDate() + "] " + message;
+      }
+      System.out.print(message);
+      isPrinting = true;
+    }
   }
 
   public static void println(Object message) {
-    message = "[" + PTime.getDetailedDate() + "] " + message;
-    System.out.println(message);
+    synchronized (LOCK) {
+      if (!isPrinting) {
+        message = "[" + PTime.getFullDate() + "] " + message;
+      }
+      System.out.println(message);
+      isPrinting = false;
+    }
   }
 
   public static void error(String message) {
@@ -19,8 +33,10 @@ public class PLogger {
     error(e.getMessage(), e);
   }
 
-  public static synchronized void error(String message, Exception e) {
-    message = "[" + PTime.getDetailedDate() + "] " + message;
-    println(message);
+  public static void error(String message, Exception e) {
+    synchronized (LOCK) {
+      message = "[" + PTime.getFullDate() + "] " + message;
+      println(message);
+    }
   }
 }

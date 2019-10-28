@@ -1,12 +1,12 @@
 package com.palidinodh.osrsscript.packetdecoder;
 
-import com.palidinodh.osrscore.Main;
+import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.PacketDecoder;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.io.cache.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.util.RequestManager;
-import com.palidinodh.io.Stream;
+import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
@@ -60,7 +60,7 @@ public class RotateItemDecoder extends PacketDecoder {
         + toWidgetId + "/" + WidgetId.valueOf(toWidgetId) + "; toChildId=" + toChildId
         + "; fromSlot=" + fromSlot + "; toSlot=" + toSlot + "; fromItemId=" + fromItemId + "/"
         + ItemId.valueOf(fromItemId) + "; toItemId=" + toItemId + "/" + ItemId.valueOf(toItemId);
-    if (Main.isLocal()) {
+    if (Settings.getInstance().isLocal()) {
       PLogger.println(message);
     }
     if (player.getOptions().getPrintPackets()) {
