@@ -699,7 +699,7 @@ cs = new NCombatScript() {
                 event.setTick(Event.MILLIS_600);
                 var addedPool = null;
                 var addedPool2 = null;
-                if (event.getExecutions() < 18 && selectedPlayer.isVisible() && !selectedPlayer.isLocked()
+                if (event.getExecutions() < 22 && selectedPlayer.isVisible() && !selectedPlayer.isLocked()
                         && npc.withinDistance(selectedPlayer, 32) && selectedPlayer.getY() >= 5730
                         && npc.getController().getMapObjectByType(10, selectedPlayer) == null) {
                     addedPool = new MapObject(30032, selectedPlayer, 10, MapObject.getRandomDirection());
@@ -733,7 +733,7 @@ cs = new NCombatScript() {
                         player.setInCombatDelay(Entity.COMBAT_DELAY);
                     }
                 }
-                if (event.getExecutions() == 34) {
+                if (event.getExecutions() == 38) {
                     event.stop();
                     for each (var pool in pools) {
                         if (pool.isVisible()) {
