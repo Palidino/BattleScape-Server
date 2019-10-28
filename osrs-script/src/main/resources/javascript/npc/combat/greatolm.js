@@ -387,6 +387,7 @@ cs = new NCombatScript() {
             }
         };
         npc.getWorld().addEvent(event);
+        npc.setHitpoints(npc.getMaxHitpoints());
     },
 
     crystalBurst: function() {
