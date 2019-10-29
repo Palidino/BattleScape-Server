@@ -393,10 +393,21 @@ cs = new NCombatScript() {
     crystalBurst: function() {
         npc.setHitDelay(4);
         this.setAnimation(LEFT_HAND, 7356, true);
-        var crystals = [];
+        var crystals = new ArrayList();
         for each (var player in this.getAttackablePlayers()) {
             var crystal = new MapObject(30033, player, 10, MapObject.getRandomDirection());
-            crystals.push(crystal);
+            var hasTileMatch = false;
+            for each (var crystal in crystals) {
+                if (!crystal.matchesTile(crystal)) {
+                    continue;
+                }
+                hasTileMatch = true;
+                break;
+            }
+            if (hasTileMatch) {
+                continue;
+            }
+            crystals.add(crystal);
             npc.getController().addMapObject(crystal);
         }
         var event = new PEvent(Event.MILLIS_2400) {
