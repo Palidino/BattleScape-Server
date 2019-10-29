@@ -23,9 +23,14 @@ import java.io.Reader;
 import java.io.Writer;
 import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
+import java.net.URI;
 import java.net.URL;
+import java.nio.file.DirectoryStream;
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.ArrayList;
@@ -601,22 +606,50 @@ public class FileManager implements Runnable {
     return builder.toString();
   }
 
-  public static List<String> getResourceFiles(Class<?> fromClass, String path) {
+  public static List<String> getResourceFiles(Class<?> fromClass, String directory) {
     List<String> filenames = new ArrayList<>();
-    try (InputStream in = getResourceAsStream(fromClass, path);
-        BufferedReader br = new BufferedReader(new InputStreamReader(in))) {
-      String resource;
-      while ((resource = br.readLine()) != null) {
-        filenames.add(resource);
+    try {
+      URL url = fromClass.getResource(directory);
+      url = url == null ? FileManager.class.getResource(directory) : url;
+      URI uri = url.toURI();
+      if ("jar".equals(uri.getScheme())) {
+        URL jar = FileManager.class.getProtectionDomain().getCodeSource().getLocation();
+        Path jarFile = Paths.get(jar.toURI());
+        try (FileSystem fileSystem = FileSystems.newFileSystem(jarFile, null)) {
+          DirectoryStream<Path> directoryStream =
+              Files.newDirectoryStream(fileSystem.getPath(directory));
+          for (Path path : directoryStream) {
+            filenames.add(path.toString());
+          }
+        }
+      } else {
+        try (InputStream in = url.openStream();
+            BufferedReader br = new BufferedReader(new InputStreamReader(in))) {
+          String resource;
+          while ((resource = br.readLine()) != null) {
+            filenames.add(new File(directory, resource).getPath());
+          }
+        }
       }
     } catch (Exception e) {
     }
     return filenames;
   }
 
-  private static InputStream getResourceAsStream(Class<?> fromClass, String resource) {
-    InputStream in = fromClass.getResourceAsStream(resource);
-    return in == null ? FileManager.class.getResourceAsStream(resource) : in;
+  public static List<Class<?>> getClasses(String packageName) {
+    List<Class<?>> matchedClasses = new ArrayList<>();
+    try {
+      ClassPath classPath = ClassPath.from(FileManager.class.getClassLoader());
+      ImmutableSet<ClassInfo> classes = packageName == null ? classPath.getAllClasses()
+          : classPath.getTopLevelClassesRecursive(packageName);
+      for (ClassInfo classInfo : classes) {
+        Class<?> clazz = classInfo.load();
+        matchedClasses.add((Class<?>) clazz);
+      }
+    } catch (IOException ioe) {
+      ioe.printStackTrace();
+    }
+    return matchedClasses;
   }
 
   @SuppressWarnings("unchecked")
@@ -628,7 +661,7 @@ public class FileManager implements Runnable {
           : classPath.getTopLevelClassesRecursive(packageName);
       for (ClassInfo classInfo : classes) {
         Class<?> clazz = classInfo.load();
-        if (!fromClass.isAssignableFrom(clazz)) {
+        if (fromClass != Object.class && !fromClass.isAssignableFrom(clazz)) {
           continue;
         }
         matchedClasses.add((Class<T>) clazz);
@@ -638,7 +671,6 @@ public class FileManager implements Runnable {
     }
     return matchedClasses;
   }
-
 
   public static byte[] readStream(InputStream in) {
     byte[] bytes = new byte[128];

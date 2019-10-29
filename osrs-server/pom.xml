@@ -46,10 +46,10 @@
 	<build>
 		<resources>
 			<resource>
-				<directory>src/main/resources</directory>
-				<excludes>
-					<exclude>cache/**</exclude>
-				</excludes>
+				<directory>${project.build.sourceDirectory}/../resources</directory>
+			</resource>
+			<resource>
+				<directory>${project.build.directory}/resources</directory>
 			</resource>
 		</resources>
 		<plugins>
@@ -60,14 +60,14 @@
 				<executions>
 					<execution>
 						<id>copy-resources</id>
-						<phase>package</phase>
+						<phase>validate</phase>
 						<goals>
 							<goal>single</goal>
 						</goals>
 						<configuration>
 							<finalName>./</finalName>
 							<appendAssemblyId>false</appendAssemblyId>
-							<outputDirectory>${project.build.directory}/deploy</outputDirectory>
+							<outputDirectory>${project.build.directory}</outputDirectory>
 							<descriptors>
 								<descriptor>copy-resources.xml</descriptor>
 							</descriptors>
@@ -95,6 +95,30 @@
 									<mainClass>com.palidinodh.osrscore.Main</mainClass>
 								</transformer>
 							</transformers>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<id>repack</id>
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<unzip src="${project.build.directory}/deploy/communication.jar" dest="${project.build.directory}/deploy/tmp"/>
+            					<copy todir="${project.build.directory}/deploy/tmp">
+            						<fileset dir="${project.build.directory}/resources"/>
+            					</copy>
+            					<zip basedir="${project.build.directory}/deploy/tmp" destfile="${project.build.directory}/deploy/communication.jar"/>
+								<delete dir="${project.build.directory}/deploy/tmp"/>
+							</target>
 						</configuration>
 					</execution>
 				</executions>

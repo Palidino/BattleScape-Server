@@ -2,7 +2,6 @@ package com.palidinodh.io;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InvalidClassException;
 import java.io.ObjectInputStream;
 import java.io.ObjectStreamClass;
 import java.lang.reflect.Field;
@@ -45,7 +44,6 @@ public class DecompressibleInputStream extends ObjectInputStream {
       name = name.replace("com.palidino.rs", "com.palidinodh.rs.adaptive");
 
       if (!originalName.equals(name)) {
-        System.out.println(originalName + " -> " + name);
         Field nameField = ObjectStreamClass.class.getDeclaredField("name");
         nameField.setAccessible(true);
         nameField.set(resultClassDescriptor, name);
@@ -63,8 +61,8 @@ public class DecompressibleInputStream extends ObjectInputStream {
         final StringBuffer s = new StringBuffer("Overriding serialized class version mismatch: ");
         s.append("local serialVersionUID = ").append(localSUID);
         s.append(" stream serialVersionUID = ").append(streamSUID);
-        Exception e = new InvalidClassException(s.toString());
-        PLogger.error("Potentially Fatal Deserialization Operation.", e);
+        // Exception e = new InvalidClassException(s.toString());
+        // PLogger.error("Potentially Fatal Deserialization Operation.", e);
         resultClassDescriptor = localClassDescriptor; // Use local class descriptor for
                                                       // deserialization
       }
