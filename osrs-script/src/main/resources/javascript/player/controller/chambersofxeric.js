@@ -555,7 +555,7 @@ pc = new PController() {
             rooms.add(spawnRoom);
             if (name.equals("load_tob")) {
                 giveRewards = false;
-                rooms.add(ROOM_TEKTON);
+                rooms.add(ROOM_MUTTADILE);
                 rooms.add(ROOM_MAIDEN_SUGADINTI);
                 rooms.add(ROOM_PESTILENT_BLOAT);
                 rooms.add(ROOM_XARPUS);
@@ -664,6 +664,7 @@ pc = new PController() {
                             npc.setRespawns(true);
                         }
                         npc.getController().setMultiCombatFlag(true);
+                        npc.setLargeVisibility();
                     }
                 }
             }

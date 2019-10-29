@@ -242,6 +242,7 @@ pc = new PController() {
             }
             zapper = 100;
             zapperNPC = new Npc(pc, 6341, mapObject);
+            zapperNPC.setLargeVisibility();
             zapperNPC.getMovement().setIgnoreNPCs(true);
             zapperNPC.getController().setMultiCombatFlag(true);
             pc.addMapObject(new MapObject(-1, mapObject));
@@ -299,6 +300,7 @@ pc = new PController() {
         for (var i = 0; i < npcIds.length; i++) {
             var coords = this.getArena2Coords(npcIds[i]);
             var npc = new Npc(pc, npcIds[i], new Tile(coords[0], coords[1], player.getHeight()));
+            npc.setLargeVisibility();
             npc.getMovement().setClipNPCs(true);
             npc.getController().setMultiCombatFlag(true);
             npc.getCombat().setTarget(player);

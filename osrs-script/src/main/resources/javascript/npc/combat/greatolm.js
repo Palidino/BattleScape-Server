@@ -354,11 +354,11 @@ cs = new NCombatScript() {
             npc.getWorld().addNpc(olm[RIGHT_HAND]);
             olm[RIGHT_HAND].getMovement().teleport(npcTiles[RIGHT_HAND]);
         }
-        npc.setLock(5);
+        npc.setLock(6);
         npc.getMovement().teleport(npcTiles[HEAD]);
         var hands = [ olm[LEFT_HAND], olm[RIGHT_HAND] ];
         for each (var hand in hands) {
-            hand.setLock(5);
+            hand.setLock(6);
             hand.getController().setMultiCombatFlag(true);
             hand.setMaxHitpoints(handHitpoints);
             hand.setHitpoints(hand.getMaxHitpoints());
