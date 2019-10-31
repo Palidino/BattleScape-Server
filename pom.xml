@@ -26,7 +26,7 @@
 	<version>1.0</version>
 	<packaging>pom</packaging>
 
-	<name>BattleScape</name>
+	<name>BattleScape Server</name>
 	<description>BattleScape RSPS</description>
 	<url>https://www.battle-scape.com</url>
 
