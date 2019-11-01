@@ -2801,7 +2801,12 @@ public class ResponseServer implements Runnable, SessionHandler {
 
   public static void main(String[] args) {
     try {
-      Settings.setInstance(FileManager.fromJson(new File(args[0]), Settings.class));
+      try {
+        Settings.setInstance(FileManager.fromJson(ResponseServer.class.getResourceAsStream(args[0]),
+            Settings.class));
+      } catch (Exception resourceError) {
+        Settings.setInstance(FileManager.fromJson(new File(args[0]), Settings.class));
+      }
       init();
     } catch (Exception e) {
       e.printStackTrace();

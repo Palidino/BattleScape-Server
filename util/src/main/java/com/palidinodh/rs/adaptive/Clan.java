@@ -26,18 +26,15 @@ public class Clan implements Serializable {
   private transient List<RsClanActiveUser> activeUsers;
   private transient List<RsClanKickedUser> kickedUsers;
   private boolean disabled;
-  private RsClanRank enterLimit;
-  private RsClanRank talkLimit;
-  private RsClanRank kickLimit;
+  private RsClanRank enterLimit = RsClanRank.ANY_FRIENDS;
+  private RsClanRank talkLimit = RsClanRank.ANYONE;
+  private RsClanRank kickLimit = RsClanRank.ONLY_ME;
 
   public Clan() {
     lastUpdate = PTime.currentTimeMillis();
     name = "";
     activeUsers = new ArrayList<>();
     kickedUsers = new ArrayList<>();
-    enterLimit = RsClanRank.ANY_FRIENDS;
-    talkLimit = RsClanRank.ANYONE;
-    kickLimit = RsClanRank.ONLY_ME;
   }
 
   public Clan(String name, int userId) {
