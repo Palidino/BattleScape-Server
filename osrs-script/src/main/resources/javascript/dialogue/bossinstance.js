@@ -220,7 +220,7 @@ instance = new DialogueScript() {
             tile = new Tile(1752, 5236, 0);
             teleportType = LADDER_DOWN;
             if (player.getInventory().hasItem(13119) || player.getInventory().hasItem(13120)) {
-                var event = new Event(10) {
+                var event = new PEvent(10) {
                     execute: function() {
                         if (!player.isVisible()) {
                             event.stop();

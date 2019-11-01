@@ -27,18 +27,18 @@
 
 	<fileSets>
 		<fileSet>
-			<outputDirectory>cache</outputDirectory>
+			<outputDirectory>deploy/cache</outputDirectory>
 			<directory>../../Cache/data/osrs</directory>
 		</fileSet>
 		<fileSet>
-			<outputDirectory>settings</outputDirectory>
+			<outputDirectory>resources/settings</outputDirectory>
 			<directory>../osrs-core/src/main/settings</directory>
 		</fileSet>
 	</fileSets>
 	<files>
 		<file>
 			<source>../util/target/util-shaded.jar</source>
-			<outputDirectory></outputDirectory>
+			<outputDirectory>deploy</outputDirectory>
 			<destName>communication.jar</destName>
 		</file>
 	</files>

@@ -21,7 +21,7 @@ instance = new DialogueScript() {
                     return;
                 }
                 player.getWidgetManager().sendInteractiveOverlay(WidgetId.JOSSIKS_SALVAGED_PRAYERBOOKS);
-                var event = new Event(4) {
+                var event = new PEvent(4) {
                     execute: function() {
                         event.stop();
                         if (!player.isVisible()) {

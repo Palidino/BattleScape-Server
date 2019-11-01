@@ -19186,7 +19186,7 @@
     "combatScript": "muttadile",
     "hitpoints": 400,
     "aggressive": true,
-    "aggressiveRange": 24,
+    "aggressiveRange": 18,
     "forceAggression": "true",
     "attackLevel": 250,
     "rangedLevel": 250,
@@ -19204,13 +19204,14 @@
     "blockAnimation": -1,
     "noFollowing": true,
     "noEntityFacing": true,
+    "ignoreCanReach": true,
     "combatStyles": [
       {
         "type": "MAGIC",
         "animation": -1,
         "maxHit": 30,
         "attackSpeed": 10,
-        "attackRange": 24,
+        "attackRange": 18,
         "projectileId": 393
       },
       {
@@ -19218,7 +19219,7 @@
         "animation": -1,
         "maxHit": 30,
         "attackSpeed": 10,
-        "attackRange": 24,
+        "attackRange": 18,
         "projectileId": 393,
         "multiTarget": true
       }

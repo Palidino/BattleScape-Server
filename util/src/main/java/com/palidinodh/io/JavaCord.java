@@ -23,10 +23,12 @@ public class JavaCord {
         .thenAccept(api -> {
           JavaCord.api = api;
           // System.out.println("Invite Url: " + api.createBotInvite());
-          sendMessage(
-              Settings.getInstance().isLocal() ? DiscordChannel.LOCAL
-                  : DiscordChannel.ANNOUNCEMENTS,
-              Settings.getInstance().getName() + " is now online!");
+          if (Settings.getInstance().getId() == 1) {
+            sendMessage(
+                Settings.getInstance().isLocal() ? DiscordChannel.LOCAL
+                    : DiscordChannel.ANNOUNCEMENTS,
+                Settings.getInstance().getName() + " is now online!");
+          }
           api.addMessageCreateListener(event -> {
             if (!event.getMessageAuthor().isServerAdmin()) {
               return;

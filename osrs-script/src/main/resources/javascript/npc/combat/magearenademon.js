@@ -9,7 +9,7 @@ cs = new NCombatScript() {
     /* @Override */
     tileHitEventHook: function(combatStyle, tileHitEvent, speed) {
         if (npc.getId() == 7859) {
-            var event = new Event(tileHitEvent.getTick()) {
+            var event = new PEvent(tileHitEvent.getTick()) {
                 /* @Override */
                 execute: function() {
                     event.stop();

@@ -24,8 +24,7 @@
         "**/log.txt": true,
         "**/nohup*.out": true,
         "**/target": true,
-        "**/repo": true,
-        "**/resources/cache": true
+        "**/repo": true
     },
     "search.useIgnoreFiles": false,
     "search.exclude": {

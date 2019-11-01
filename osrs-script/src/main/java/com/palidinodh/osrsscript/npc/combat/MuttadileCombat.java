@@ -52,24 +52,24 @@ public class MuttadileCombat extends NpcCombat {
     bossCombat1.stats(NpcCombatStats.builder().attackLevel(250).magicLevel(250).rangedLevel(250)
         .defenceLevel(220).bonus(CombatBonus.MELEE_ATTACK, 88).bonus(CombatBonus.ATTACK_RANGED, 82)
         .bonus(CombatBonus.DEFENCE_MAGIC, 75).build());
-    bossCombat1.aggression(NpcCombatAggression.builder().range(16).always(true).build());
+    bossCombat1.aggression(NpcCombatAggression.builder().range(18).always(true).build());
     bossCombat1.immunity(NpcCombatImmunity.builder().poison(true).venom(true).build());
     bossCombat1.focus(NpcCombatFocus.builder().disableFacingOpponent(true)
-        .disableFollowingOpponent(true).build());
+        .disableFollowingOpponent(true).bypassMapObjects(true).build());
     bossCombat1.deathAnimation(7426);
     bossCombat1.drop(drop.build());
 
     var style = NpcCombatStyle.builder();
     style.type(NpcCombatStyleType.MAGIC);
     style.damage(NpcCombatDamage.maximum(30));
-    style.attackSpeed(10).attackRange(16);
+    style.attackSpeed(10).attackRange(18);
     style.projectile(NpcCombatProjectile.id(335));
     bossCombat1.style(style.build());
 
     style = NpcCombatStyle.builder();
     style.type(NpcCombatStyleType.MAGIC);
     style.damage(NpcCombatDamage.maximum(30));
-    style.attackSpeed(10).attackRange(16);
+    style.attackSpeed(10).attackRange(18);
     style.projectile(NpcCombatProjectile.id(335));
     style.multiTarget(true);
     bossCombat1.style(style.build());

@@ -1392,9 +1392,7 @@
         "maxHit": 6,
         "fullDamage": true,
         "attackSpeed": 6,
-        "targetGraphic": {
-          "id": 1556
-        },
+        "targetGraphic": { "id": 1556 },
         "projectileId": 1555,
         "poison": 3,
         "ignorePrayer": "true",
@@ -3352,6 +3350,97 @@
         "chance": 100,
         "items": [
           [ { "id": "ItemId.HYDRA_BONES", "amount": 2 } ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "NpcId.BASILISK_KNIGHT_204",
+    "hitpoints": 300,
+    "aggressive": true,
+    "slayerLevel": 60,
+    "attackLevel": 186,
+    "magicLevel": 186,
+    "defenceLevel": 186,
+    "meleeStabDefenceBonus": 30,
+    "meleeSlashDefenceBonus": 30,
+    "magicDefenceBonus": 30,
+    "poisonImmune": true,
+    "venomImmune": true,
+    "deathAnimation": 8501,
+    "blockAnimation": -1,
+    "combatStyles": [
+      {
+        "type": "MELEE",
+        "meleeAttackStyle": "ATTACK_CRUSH",
+        "animation": 8499,
+        "maxHit": 20,
+        "attackSpeed": 4
+      },
+      {
+        "type": "MAGIC",
+        "animation": 8500,
+        "maxHit": 20,
+        "attackSpeed": 4,
+        "projectileId": 1735,
+        "targetGraphic": { "id": 1736, "height": 124 }
+      }
+    ],
+    "rareDropTableRate": 0.4,
+    "saveKillCount": true,
+    "drops": [
+      {
+        "chance": 0.08,
+        "logLoot": true,
+        "items": [
+          [ { "id": "ItemId.BASILISK_JAW", "amount": 1 } ]
+        ]
+      },
+      {
+        "chance": 0.78,
+        "items": [
+          [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
+        ]
+      },
+      {
+        "chance": 5,
+        "items": [
+          [ { "id": "ItemId.MYSTIC_HAT_LIGHT", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_BATTLEAXE", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_MED_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_SNAPDRAGON_NOTED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_TORSTOL_NOTED", "amount": 1 } ],
+          [ { "id": "ItemId.ADAMANTITE_ORE_NOTED", "amount": 1, "maxAmount": 2 } ]
+        ]
+      },
+      {
+        "chance": 20,
+        "items": [
+          [ { "id": "ItemId.RUNE_SCIMITAR", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_AXE", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_SPEAR", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_DAGGER", "amount": 1 } ],
+          [ { "id": "ItemId.BLOOD_RUNE", "amount": 8, "maxAmount": 20 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED_NOTED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_AVANTOE_NOTED", "amount": 1 } ],
+          [ { "id": "ItemId.COINS", "amount": 500, "maxAmount": 2498 } ]
+        ]
+      },
+      {
+        "chance": 99,
+        "items": [
+          [ { "id": "ItemId.ADAMANT_PLATELEGS", "amount": 1 } ],
+          [ { "id": "ItemId.ADAMANT_KITE_SHIELD", "amount": 1 } ],
+          [ { "id": "ItemId.NATURE_RUNE", "amount": 15, "maxAmount": 30 } ],
+          [ { "id": "ItemId.DEATH_RUNE", "amount": 10, "maxAmount": 25 } ],
+          [ { "id": "ItemId.LAW_RUNE", "amount": 20, "maxAmount": 30 } ],
+          [ { "id": "ItemId.ASTRAL_RUNE", "amount": 16, "maxAmount": 35 } ]
+        ]
+      },
+      {
+        "chance": 100,
+        "items": [
+          [ { "id": "ItemId.BIG_BONES", "amount": 1 } ]
         ]
       }
     ]

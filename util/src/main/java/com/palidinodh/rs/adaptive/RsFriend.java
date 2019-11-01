@@ -1,11 +1,14 @@
 package com.palidinodh.rs.adaptive;
 
+import java.io.Serializable;
 import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-public class RsFriend {
+public class RsFriend implements Serializable {
+  private static final long serialVersionUID = 20191029L;
+
   private String username;
   @Setter
   private RsClanRank clanRank = RsClanRank.NOT_IN_CLAN;

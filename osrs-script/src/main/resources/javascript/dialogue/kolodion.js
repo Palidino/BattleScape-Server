@@ -43,7 +43,7 @@ instance = new DialogueScript() {
                 }
                 var height = player.getWorld().getUniqueHeight();
                 player.getMovement().teleport(3105, 3934, height);
-                var event = new Event(5) {
+                var event = new PEvent(5) {
                     execute: function() {
                         event.stop();
                         if (!player.isVisible()) {

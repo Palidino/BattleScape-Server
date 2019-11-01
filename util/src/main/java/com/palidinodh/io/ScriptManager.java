@@ -1,11 +1,9 @@
 package com.palidinodh.io;
 
 import java.io.File;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
@@ -180,7 +178,7 @@ public class ScriptManager {
 
   public static void importPackage(String name) {
     try {
-      List<Class<?>> classes = findPackageClasses(name);
+      List<Class<?>> classes = FileManager.getClasses(name);// findPackageClasses(name);
       for (Class<?> c : classes) {
         if (c.getSimpleName() == null) {
           PLogger.println(c.toString() + " is null");
@@ -195,64 +193,6 @@ public class ScriptManager {
       PLogger.println(name);
       e.printStackTrace();
     }
-  }
-
-  private static List<Class<?>> findPackageClasses(String name) {
-    try {
-      ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-      String path = name.replace('.', '/');
-      Enumeration<URL> resources = classLoader.getResources(path);
-      List<File> dirs = new ArrayList<>();
-      while (resources.hasMoreElements()) {
-        URL resource = resources.nextElement();
-        dirs.add(new File(resource.toURI()));
-      }
-      List<Class<?>> classes = new ArrayList<>();
-      for (File directory : dirs) {
-        List<Class<?>> foundClasses = findPackageClasses(directory, name, classLoader);
-        if (foundClasses == null) {
-          continue;
-        }
-        classes.addAll(foundClasses);
-      }
-      return classes;
-    } catch (Exception e) {
-      PLogger.println(name);
-      e.printStackTrace();
-    }
-    return null;
-  }
-
-  private static List<Class<?>> findPackageClasses(File directory, String name,
-      ClassLoader classLoader) {
-    try {
-      if (!directory.exists()) {
-        return null;
-      }
-      List<Class<?>> classes = new ArrayList<>();
-      File[] files = directory.listFiles();
-      for (File file : files) {
-        if (file.getName().endsWith(".class")) {
-          String className = file.getName().substring(0, file.getName().length() - 6);
-          classes.add(Class.forName(name + '.' + className, false, classLoader));
-          continue;
-        }
-        if (!file.isDirectory() || file.getName().contains(".")) {
-          continue;
-        }
-        List<Class<?>> foundClasses =
-            findPackageClasses(file, name + "." + file.getName(), classLoader);
-        if (foundClasses == null) {
-          continue;
-        }
-        classes.addAll(foundClasses);
-      }
-      return classes;
-    } catch (Exception e) {
-      PLogger.println(directory.toString() + ", " + name);
-      e.printStackTrace();
-    }
-    return null;
   }
 
   public static void printStats() {
