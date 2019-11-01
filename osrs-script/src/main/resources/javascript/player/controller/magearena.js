@@ -283,7 +283,7 @@ pc = new PController() {
 
     finishArena2: function() {
         pc.exitTileTeleport();
-        player.getGameEncoder().sendMessage("Duration: <col=ff0000>" + Time.ticksToDuration(time));
+        player.getGameEncoder().sendMessage("Duration: <col=ff0000>" + PTime.ticksToDuration(time));
         if (!player.getInventory().addItem(ItemId.IMBUED_SARADOMIN_CAPE, 1).success()) {
             player.getBank().add(new Item(ItemId.IMBUED_SARADOMIN_CAPE, 1));
         }
