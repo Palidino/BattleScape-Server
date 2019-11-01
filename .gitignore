@@ -5,6 +5,8 @@
 .gitmodules
 .factorypath
 .project
+.classpath
+org.eclipse.core.resources.prefs
 .DS_Store
 thumbs.db
 [Dd]esktop.ini
