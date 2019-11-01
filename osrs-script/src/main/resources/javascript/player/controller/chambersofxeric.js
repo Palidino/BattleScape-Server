@@ -1126,7 +1126,7 @@ pc = new PController() {
         var playerEntries = new ArrayList();
         for each (var player2 in players) {
             player2.getGameEncoder().sendMessage("<col=ef20ff>Congratulations - your raid is complete! Duration:</col> "
-                    + "<col=ff0000>" + Time.ticksToDuration(time) + "</col>", Messaging.CHAT_TYPE_CLAN_CHAT_INFO);
+                    + "<col=ff0000>" + PTime.ticksToDuration(time) + "</col>", Messaging.CHAT_TYPE_CLAN_CHAT_INFO);
             for (var i = player2.getController().getVariable("points"); i >= 0; i -= 8675) {
                 playerEntries.add(player2);
             }
