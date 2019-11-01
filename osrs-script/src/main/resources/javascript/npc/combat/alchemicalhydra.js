@@ -73,21 +73,21 @@ var FIRE_TILES_SOUTH_EAST = [
     new Tile(1370, 10264), new Tile(1370, 10265), new Tile(1370, 10266), new Tile(1369, 10264), new Tile(1368, 10264)
 ];
 
-var NORTH_FIRE = new FireAttack(new Polygon(),
+var NORTH_FIRE = new FireAttack(new PPolygon(),
         FIRE_TILES_NORTH_WEST, FIRE_TILES_NORTH_EAST, new Tile(1366, 10271));
-var EAST_FIRE = new FireAttack(new Polygon([ 1366, 1377, 1377 ], [ 10267, 10278, 10257 ]),
+var EAST_FIRE = new FireAttack(new PPolygon([ 1366, 1377, 1377 ], [ 10267, 10278, 10257 ]),
         FIRE_TILES_NORTH_EAST, FIRE_TILES_SOUTH_EAST, new Tile(1370, 10267));
-var SOUTH_FIRE = new FireAttack(new Polygon([ 1366, 1377, 1356 ], [ 10268, 10257, 10257 ]),
+var SOUTH_FIRE = new FireAttack(new PPolygon([ 1366, 1377, 1356 ], [ 10268, 10257, 10257 ]),
         FIRE_TILES_SOUTH_WEST, FIRE_TILES_SOUTH_EAST, new Tile(1366, 10264));
-var WEST_FIRE = new FireAttack(new Polygon([ 1367, 1356, 1356 ], [ 10267, 10257, 10278 ]),
+var WEST_FIRE = new FireAttack(new PPolygon([ 1367, 1356, 1356 ], [ 10267, 10257, 10278 ]),
         FIRE_TILES_NORTH_WEST, FIRE_TILES_SOUTH_WEST, new Tile(1363, 10267));
-var NORTH_EAST_FIRE = new FireAttack(new Polygon([ 1369, 1369, 1377, 1377 ], [ 10270, 10278, 10278, 10270 ]),
+var NORTH_EAST_FIRE = new FireAttack(new PPolygon([ 1369, 1369, 1377, 1377 ], [ 10270, 10278, 10278, 10270 ]),
         FIRE_TILES_NORTH, FIRE_TILES_EAST, new Tile(1370, 10271));
-var SOUTH_EAST_FIRE = new FireAttack(new Polygon([ 1369, 1377, 1377, 1369 ], [ 10265, 10265, 10257, 10257 ]),
+var SOUTH_EAST_FIRE = new FireAttack(new PPolygon([ 1369, 1377, 1377, 1369 ], [ 10265, 10265, 10257, 10257 ]),
         FIRE_TILES_EAST, FIRE_TILES_SOUTH, new Tile(1370, 10271));
-var SOUTH_WEST_FIRE = new FireAttack(new Polygon([ 1364, 1364, 1356, 1356 ], [ 10265, 10257, 10257, 10265 ]),
+var SOUTH_WEST_FIRE = new FireAttack(new PPolygon([ 1364, 1364, 1356, 1356 ], [ 10265, 10257, 10257, 10265 ]),
         FIRE_TILES_WEST, FIRE_TILES_SOUTH, new Tile(1363, 10264));
-var NORTH_WEST_FIRE = new FireAttack(new Polygon([ 1364, 1356, 1356, 1364 ], [ 10270, 10270, 10278, 10278 ]),
+var NORTH_WEST_FIRE = new FireAttack(new PPolygon([ 1364, 1356, 1356, 1364 ], [ 10270, 10270, 10278, 10278 ]),
         FIRE_TILES_NORTH, FIRE_TILES_WEST, new Tile(1363, 10271));
 var FIRE_ATTACKS = [
     NORTH_EAST_FIRE, SOUTH_EAST_FIRE, SOUTH_WEST_FIRE, NORTH_WEST_FIRE, EAST_FIRE, SOUTH_FIRE, WEST_FIRE
