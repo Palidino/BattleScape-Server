@@ -482,7 +482,7 @@ public class SpellbookWidget implements Widget {
           player.getMagic().setVengeanceCast(true);
           player.getMagic().setVengeanceDelay(Magic.VENGEANCE_DELAY);
           player.setGraphic(726, 100);
-          player.setAnimation(4410);
+          player.setAnimation(8316);
           AchievementDiary.castSpellUpdate(player, spellbookChild, null, null, null);
           break;
         case GEOMANCY:
