@@ -59,6 +59,6 @@ public class YellCommand implements Command {
         + player.getUsername() + ": " + message);
     player.getMessaging().setYellDelay((int) yellDelay);
     RequestManager.addPlayerLog("yell/" + player.getLogFilename(), "[" + player.getId() + "; "
-        + player.getIP() + "] " + player.getUsername() + ": " + message);
+        + player.getIP() + "] [Yell] " + player.getUsername() + ": " + message);
   }
 }
