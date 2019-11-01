@@ -42,6 +42,12 @@ public class LogoutWidget implements Widget {
                 new ValueEnteredEvent.StringEvent() {
                   @Override
                   public void execute(String value) {
+                    if (!player.canLogout() || player.carryingItem(ItemId.BLOODY_KEY)
+                        || player.carryingItem(ItemId.BLOODIER_KEY)) {
+                      player.getGameEncoder().sendMessage("You can't logout right now.");
+                      player.getCombat().getTzHaar().pause();
+                      return;
+                    }
                     JavaCord.sendMessage(DiscordChannel.FEEDBACK,
                         "[" + player.getId() + "] " + player.getUsername() + ": " + value);
                     player.getGameEncoder().sendLogout();
@@ -107,6 +113,12 @@ public class LogoutWidget implements Widget {
         player.getGameEncoder().sendEnterString("Feedback:", new ValueEnteredEvent.StringEvent() {
           @Override
           public void execute(String value) {
+            if (!player.canLogout() || player.carryingItem(ItemId.BLOODY_KEY)
+                || player.carryingItem(ItemId.BLOODIER_KEY)) {
+              player.getGameEncoder().sendMessage("You can't logout right now.");
+              player.getCombat().getTzHaar().pause();
+              return;
+            }
             JavaCord.sendMessage(DiscordChannel.FEEDBACK,
                 "[" + player.getId() + "] " + player.getUsername() + ": " + value);
             player.getGameEncoder().sendLogout();
