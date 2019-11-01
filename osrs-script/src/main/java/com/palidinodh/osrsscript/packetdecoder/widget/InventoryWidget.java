@@ -1924,6 +1924,9 @@ public class InventoryWidget implements Widget {
       case 19707: // Amulet of eternal glory
         player.openDialogue("amuletofglory", 0);
         break;
+        case ItemId.BASILISK_JAW: // Basilisk Jaw
+        player.getGameEncoder().sendMessage("It's the jaw of a Basilisk Knight. Perhaps I should try to use it on a Helm of Neitiznot.");
+        break;
       case 3853: // Games necklace
         player.openDialogue("gamesnecklace", 0);
         break;
@@ -1969,6 +1972,11 @@ public class InventoryWidget implements Widget {
       case 10148: // Black salamander
       case 10149: // Swamp lizard
         player.getInventory().deleteItem(itemId, 1, slot);
+        break;
+        case ItemId.NEITIZNOT_FACEGUARD: // Toxic blowpipe (empty)
+        player.getInventory().deleteItem(itemId, 1, slot);
+        player.getInventory().addOrDropItem(ItemId.BASILISK_JAW);
+        player.getInventory().addOrDropItem(ItemId.HELM_OF_NEITIZNOT);
         break;
       case ItemId.CLUE_SCROLL_EASY:
       case ItemId.CLUE_BOTTLE_EASY:

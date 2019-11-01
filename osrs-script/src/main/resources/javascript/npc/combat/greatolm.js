@@ -166,9 +166,9 @@ cs = new NCombatScript() {
             }
             this.setAnimation(LEFT_HAND, 7360, false);
             var js = this;
-            var event = new PEvent(Event.MILLIS_600) {
+            var event = new PEvent(PEvent.MILLIS_600) {
                 execute: function() {
-                    if (event.getExecutions() == Event.SEC_27 || !npc.isVisible()) {
+                    if (event.getExecutions() == PEvent.SEC_27 || !npc.isVisible()) {
                         event.stop();
                     }
                     if (event.getExecutions() == 1) {
@@ -316,7 +316,7 @@ cs = new NCombatScript() {
         npc.setVisible(false);
         npc.lock();
         var js = this;
-        var event = new PEvent(Event.MILLIS_1200) {
+        var event = new PEvent(PEvent.MILLIS_1200) {
             execute: function() {
                 if (event.getExecutions() == 0) {
                     return;
@@ -333,7 +333,7 @@ cs = new NCombatScript() {
                     cs.sendMapProjectile(null, (new Tile(tile)).moveY(1), tile, 1357, 255, 10, 0, 51 + 120, 0, 0);
                     npc.getController().sendMapGraphic(tile, 1358, 0, 51 + 100);
                     npc.getController().sendMapGraphic(tile, 1449, 0, 0);
-                    var the = new TileHitEvent(Event.MILLIS_3600, npc.getController(), tile, 20, HitType.TYPELESS);
+                    var the = new TileHitEvent(PEvent.MILLIS_3600, npc.getController(), tile, 20, HitType.TYPELESS);
                     the.setAdjacentHalfDamage(true);
                     npc.getWorld().addEvent(the);
                 }
@@ -378,7 +378,7 @@ cs = new NCombatScript() {
                         objects[i]), SPAWN_ANIMATIONS[i]);
             }
         }
-        var event = new PEvent(Event.MILLIS_3000) {
+        var event = new PEvent(PEvent.MILLIS_3000) {
             execute: function() {
                 event.stop();
                 for each (var mapObject in objects) {
@@ -410,10 +410,10 @@ cs = new NCombatScript() {
             crystals.add(crystal);
             npc.getController().addMapObject(crystal);
         }
-        var event = new PEvent(Event.MILLIS_2400) {
+        var event = new PEvent(PEvent.MILLIS_2400) {
             execute: function() {
                 if (event.getExecutions() == 0) {
-                    event.setTick(Event.MILLIS_1200);
+                    event.setTick(PEvent.MILLIS_1200);
                     var players = npc.getController().getPlayers();
                     for each (var crystal in crystals) {
                         for each (var player in players) {
@@ -457,7 +457,7 @@ cs = new NCombatScript() {
         for each (var tile in selectedTiles) {
             directions.push((tile.getY() > 5739) ? Tile.SOUTH : Tile.NORTH);
         }
-        var event = new PEvent(Event.MILLIS_600) {
+        var event = new PEvent(PEvent.MILLIS_600) {
             execute: function() {
                 var stillWorking = false;
                 var players = npc.getController().getPlayers();
@@ -525,9 +525,9 @@ cs = new NCombatScript() {
             }
         }
         var graphicIds = [ 1359, 1360, 1361, 1362 ];
-        var event = new PEvent(Event.MILLIS_600) {
+        var event = new PEvent(PEvent.MILLIS_600) {
             execute: function() {
-                if (event.getExecutions() == Event.MILLIS_5400) {
+                if (event.getExecutions() == PEvent.MILLIS_5400) {
                     event.stop();
                 }
                 var graphicIndex = -1;
@@ -539,7 +539,7 @@ cs = new NCombatScript() {
                             || !npc.withinDistance(value, 32) || key.getY() < 5730 || value.getY() < 5730) {
                         continue;
                     }
-                    if (event.getExecutions() == Event.MILLIS_5400) {
+                    if (event.getExecutions() == PEvent.MILLIS_5400) {
                         if (key.withinDistance(value, 0)) {
                             key.getGameEncoder().sendMessage("The teleport attack has no effect!");
                         } else {
@@ -707,7 +707,7 @@ cs = new NCombatScript() {
         var times = [];
         var event = new PEvent(projectile.eventDelay) {
             execute: function() {
-                event.setTick(Event.MILLIS_600);
+                event.setTick(PEvent.MILLIS_600);
                 var addedPool = null;
                 var addedPool2 = null;
                 if (event.getExecutions() < 22 && selectedPlayer.isVisible() && !selectedPlayer.isLocked()
@@ -759,7 +759,7 @@ cs = new NCombatScript() {
 
     fallingCrystals: function() {
         var js = this;
-        var event = new PEvent(Event.MILLIS_1200) {
+        var event = new PEvent(PEvent.MILLIS_1200) {
             execute: function() {
                 if (olm[HEAD].isDead()) {
                     event.stop();
@@ -773,7 +773,7 @@ cs = new NCombatScript() {
                             0, 51 + 120, 0, 0);
                     npc.getController().sendMapGraphic(tile, 1358, 0, 51 + 100);
                     npc.getController().sendMapGraphic(tile, 1449, 0, 0);
-                    var the = new TileHitEvent(Event.MILLIS_3600, npc.getController(), tile, 20, HitType.TYPELESS);
+                    var the = new TileHitEvent(PEvent.MILLIS_3600, npc.getController(), tile, 20, HitType.TYPELESS);
                     the.setAdjacentHalfDamage(true);
                     npc.getWorld().addEvent(the);
                 }

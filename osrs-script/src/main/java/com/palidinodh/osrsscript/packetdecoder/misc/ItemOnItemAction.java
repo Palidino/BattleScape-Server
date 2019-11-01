@@ -1240,6 +1240,11 @@ public class ItemOnItemAction {
         player.getInventory().deleteItem(ItemId.WEAPON_POISON_PLUS_PLUS);
 
         player.getInventory().addOrDropItem(ItemId.ABYSSAL_DAGGER_P_PLUS_PLUS);
+      } else if (used(useItemId, onItemId, ItemId.BASILISK_JAW, ItemId.HELM_OF_NEITIZNOT)) {
+        player.getInventory().deleteItem(ItemId.BASILISK_JAW);
+        player.getInventory().deleteItem(ItemId.HELM_OF_NEITIZNOT);
+
+        player.getInventory().addOrDropItem(ItemId.NEITIZNOT_FACEGUARD);
       }
     }
   }

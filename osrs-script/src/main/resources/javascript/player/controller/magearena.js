@@ -85,6 +85,7 @@ pc = new PController() {
             player.getInventory().deleteAll(specialId);
             player.getEquipment().deleteAll(specialId);
         }
+        player.getGameEncoder().sendPlayerOption("null", 2, false);
         player = null;
     },
 
