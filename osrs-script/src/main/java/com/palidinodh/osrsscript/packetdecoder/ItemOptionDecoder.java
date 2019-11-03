@@ -21,29 +21,29 @@ public class ItemOptionDecoder extends PacketDecoder {
     var slot = -1;
     var itemId = -1;
     if (index == 0) {
-      itemId = stream.getUShortLE();
-      widgetHash = stream.getIntV2();
-      slot = stream.getUShort();
+      itemId = stream.readUnsignedLEShort();
+      widgetHash = stream.readInt1();
+      slot = stream.readUnsignedShort();
     } else if (index == 1) {
-      itemId = stream.getUShort128();
-      widgetHash = stream.getIntV3();
-      slot = stream.getUShortLE128();
+      itemId = stream.readUnsignedShortA();
+      widgetHash = stream.readInt2();
+      slot = stream.readUnsignedLEShortA();
     } else if (index == 2) {
-      widgetHash = stream.getIntLE();
-      slot = stream.getUShortLE128();
-      itemId = stream.getUShortLE128();
+      widgetHash = stream.readLEInt();
+      slot = stream.readUnsignedLEShortA();
+      itemId = stream.readUnsignedLEShortA();
     } else if (index == 3) {
-      itemId = stream.getUShortLE128();
-      widgetHash = stream.getInt();
-      slot = stream.getUShortLE128();
+      itemId = stream.readUnsignedLEShortA();
+      widgetHash = stream.readInt();
+      slot = stream.readUnsignedLEShortA();
     } else if (index == 4) {
-      widgetHash = stream.getInt();
-      slot = stream.getUShort();
-      itemId = stream.getUShort();
+      widgetHash = stream.readInt();
+      slot = stream.readUnsignedShort();
+      itemId = stream.readUnsignedShort();
     } else if (index == 10) {
-      itemId = stream.getUShortLE128();
-      widgetHash = stream.getIntV3();
-      slot = stream.getUShortLE();
+      itemId = stream.readUnsignedLEShortA();
+      widgetHash = stream.readInt2();
+      slot = stream.readUnsignedLEShort();
     }
     var widgetId = widgetHash >> 16;
     var childId = widgetHash & 65535;

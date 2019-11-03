@@ -30,22 +30,22 @@ public class NpcOptionDecoder extends PacketDecoder {
     var id = -1;
     var moveType = 0;
     if (index == 0) {
-      moveType = stream.getUReversedByte();
-      id = stream.getUShortLE();
+      moveType = stream.readUnsignedByteC();
+      id = stream.readUnsignedLEShort();
     } else if (index == 1) {
-      id = stream.getUShort128();
-      moveType = stream.getUByte();
+      id = stream.readUnsignedShortA();
+      moveType = stream.readUnsignedByte();
     } else if (index == 2) {
-      id = stream.getUShortLE128();
-      moveType = stream.getUByte();
+      id = stream.readUnsignedLEShortA();
+      moveType = stream.readUnsignedByte();
     } else if (index == 3) {
-      id = stream.getUShort();
-      moveType = stream.getUByte128();
+      id = stream.readUnsignedShort();
+      moveType = stream.readUnsignedByteA();
     } else if (index == 4) {
-      moveType = stream.getUByte();
-      id = stream.getUShort128();
+      moveType = stream.readUnsignedByte();
+      id = stream.readUnsignedShortA();
     }
-    var npc = player.getWorld().getNPCByIndex(id);
+    var npc = player.getWorld().getNpcByIndex(id);
     if (npc == null) {
       return;
     }
@@ -96,7 +96,7 @@ public class NpcOptionDecoder extends PacketDecoder {
   public boolean complete(Player player) {
     var index = player.getAttributeInt("packet_decoder_index");
     var id = player.getAttributeInt("packet_decoder_npc_index");
-    var npc = player.getWorld().getNPCByIndex(id);
+    var npc = player.getWorld().getNpcByIndex(id);
     if (npc == null) {
       return true;
     }
@@ -148,7 +148,7 @@ public class NpcOptionDecoder extends PacketDecoder {
     if (!actionMethods.containsKey(npc.getId())) {
       try {
         var classReference =
-            Class.forName("com.palidinodh.osrsscript.packetdecoder.misc.NpcOptions");
+            Class.forName("com.palidinodh.osrsscript.incomingpacket.misc.NpcOptions");
         var methodName = "npc" + npc.getId();
         var actionMethod =
             classReference.getMethod(methodName, Player.class, Integer.TYPE, Npc.class);

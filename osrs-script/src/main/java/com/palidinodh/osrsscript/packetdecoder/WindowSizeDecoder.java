@@ -14,9 +14,9 @@ public class WindowSizeDecoder extends PacketDecoder {
   @Override
   @SuppressWarnings("unused")
   public void execute(Player player, int index, int size, Stream stream) {
-    var viewportType = WidgetManager.ViewportType.get(stream.getUByte());
-    var width = stream.getUShort();
-    var height = stream.getUShort();
+    var viewportType = WidgetManager.ViewportType.get(stream.readUnsignedByte());
+    var width = stream.readUnsignedShort();
+    var height = stream.readUnsignedShort();
     var currentViewportType = player.getWidgetManager().getViewportType();
     if (viewportType == null) {
       return;

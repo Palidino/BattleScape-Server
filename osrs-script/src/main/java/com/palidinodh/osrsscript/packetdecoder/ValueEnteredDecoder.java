@@ -16,7 +16,7 @@ public class ValueEnteredDecoder extends PacketDecoder {
   @Override
   public void execute(Player player, int index, int size, Stream stream) {
     if (index == 0) {
-      var value = stream.getInt();
+      var value = stream.readInt();
       var message = "[ValueEnteredInt] value=" + value;
       if (Settings.getInstance().isLocal()) {
         PLogger.println(message);
@@ -36,7 +36,7 @@ public class ValueEnteredDecoder extends PacketDecoder {
       event.execute(value);
       event.close();
     } else if (index == 1) {
-      var value = stream.getString();
+      var value = stream.readString();
       var message = "[ValueEnteredString] value=" + value;
       if (Settings.getInstance().isLocal()) {
         PLogger.println(message);
@@ -55,7 +55,7 @@ public class ValueEnteredDecoder extends PacketDecoder {
       event.execute(value);
       event.close();
     } else if (index == 2) {
-      var id = stream.getUShort();
+      var id = stream.readUnsignedShort();
       if (id == 65535) {
         id = -1;
       }

@@ -21,20 +21,20 @@ public class PlayerOptionDecoder extends PacketDecoder {
     var id = -1;
     var moveType = 0;
     if (index == 0) {
-      id = stream.getUShort();
-      moveType = stream.getUReversedByte();
+      id = stream.readUnsignedShort();
+      moveType = stream.readUnsignedByteC();
     } else if (index == 1) {
-      moveType = stream.getUByte128();
-      id = stream.getUShort128();
+      moveType = stream.readUnsignedByteA();
+      id = stream.readUnsignedShortA();
     } else if (index == 2) {
-      id = stream.getUShort128();
-      moveType = stream.getUByte();
+      id = stream.readUnsignedShortA();
+      moveType = stream.readUnsignedByte();
     } else if (index == 3) {
-      id = stream.getUShortLE128();
-      moveType = stream.getUReversedByte();
+      id = stream.readUnsignedLEShortA();
+      moveType = stream.readUnsignedByteC();
     } else if (index == 4) {
-      moveType = stream.getUByte128();
-      id = stream.getUShort128();
+      moveType = stream.readUnsignedByteA();
+      id = stream.readUnsignedShortA();
     }
     var player2 = player.getWorld().getPlayerByIndex(id);
     if (player2 == null) {

@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import com.palidinodh.io.FileManager;
 import com.palidinodh.io.Stream;
-import com.palidinodh.osrscore.io.Command;
+import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.io.PacketDecoder;
 import com.palidinodh.osrscore.model.dialogue.Scroll;
 import com.palidinodh.osrscore.model.player.Player;
@@ -15,7 +15,7 @@ import com.palidinodh.util.PLogger;
 import lombok.var;
 
 public class CommandDecoder extends PacketDecoder {
-  private static Map<String, Command> commands = new HashMap<>();
+  private static Map<String, CommandHandler> commands = new HashMap<>();
 
   public CommandDecoder() {
     super(60, 45);
@@ -24,7 +24,7 @@ public class CommandDecoder extends PacketDecoder {
   @Override
   public void execute(Player player, int index, int size, Stream stream) {
     if (index == 0) {
-      var commandName = stream.getString();
+      var commandName = stream.readString();
       RequestManager.addUserPacketLog(player, "[Command] commandName=" + commandName);
       if (commandName.equals("commands")) {
         var examples = new ArrayList<String>();
@@ -63,7 +63,7 @@ public class CommandDecoder extends PacketDecoder {
         }
       }
     } else if (index == 1) {
-      var tileHash = stream.getIntV2();
+      var tileHash = stream.readInt1();
       player.clearIdleTime();
       if (player.getRights() != 2) {
         return;
@@ -75,16 +75,16 @@ public class CommandDecoder extends PacketDecoder {
     }
   }
 
-  private String getExample(String commandName, Command command) {
+  private String getExample(String commandName, CommandHandler command) {
     return "::" + commandName.toLowerCase() + " " + command.getExample();
   }
 
   static {
     try {
-      var classes =
-          FileManager.getClasses(Command.class, "com.palidinodh.osrsscript.packetdecoder.command");
+      var classes = FileManager.getClasses(CommandHandler.class,
+          "com.palidinodh.osrsscript.incomingpacket.command");
       for (var clazz : classes) {
-        var classInstance = (Command) clazz.newInstance();
+        var classInstance = (CommandHandler) clazz.newInstance();
         commands.put(clazz.getSimpleName().replace("Command", "").toLowerCase(), classInstance);
       }
     } catch (Exception e) {

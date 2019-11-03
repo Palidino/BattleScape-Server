@@ -11,7 +11,7 @@ import com.palidinodh.osrscore.model.player.Runecrafting;
 import com.palidinodh.osrscore.model.player.skill.SkillContainer;
 import com.palidinodh.osrscore.util.RequestManager;
 import com.palidinodh.osrscore.world.WorldEventHooks;
-import com.palidinodh.osrsscript.packetdecoder.misc.UseWidgetAction;
+import com.palidinodh.osrsscript.incomingpacket.misc.UseWidgetAction;
 import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
@@ -74,34 +74,34 @@ public class UseWidgetDecoder extends PacketDecoder {
     var id = -1;
     var moveType = 0;
     if (index == 0) {
-      id = stream.getUShortLE128();
-      moveType = stream.getUReversedByte();
-      widgetHash = stream.getIntLE();
-      slot = stream.getUShort128();
+      id = stream.readUnsignedLEShortA();
+      moveType = stream.readUnsignedByteC();
+      widgetHash = stream.readLEInt();
+      slot = stream.readUnsignedShortA();
     } else if (index == 1) {
-      widgetHash = stream.getIntV3();
-      moveType = stream.getU128Byte();
-      slot = stream.getUShort128();
-      id = stream.getUShort();
+      widgetHash = stream.readInt2();
+      moveType = stream.readUnsignedByteS();
+      slot = stream.readUnsignedShortA();
+      id = stream.readUnsignedShort();
     } else if (index == 2) {
-      itemId = stream.getUShortLE128();
-      slot = stream.getUShort();
-      id = stream.getUShortLE128();
-      moveType = stream.getUReversedByte();
-      widgetHash = stream.getInt();
+      itemId = stream.readUnsignedLEShortA();
+      slot = stream.readUnsignedShort();
+      id = stream.readUnsignedLEShortA();
+      moveType = stream.readUnsignedByteC();
+      widgetHash = stream.readInt();
     } else if (index == 3) {
-      slot = stream.getUShortLE128();
-      moveType = stream.getU128Byte();
-      widgetHash = stream.getIntV2();
-      id = stream.getUShort();
-      itemId = stream.getUShort();
+      slot = stream.readUnsignedLEShortA();
+      moveType = stream.readUnsignedByteS();
+      widgetHash = stream.readInt1();
+      id = stream.readUnsignedShort();
+      itemId = stream.readUnsignedShort();
     }
     var widgetId = widgetHash >> 16;
     var childId = widgetHash & 65535;
     if (slot == 65535) {
       slot = -1;
     }
-    var entity = index == 0 || index == 2 ? player.getWorld().getNPCByIndex(id)
+    var entity = index == 0 || index == 2 ? player.getWorld().getNpcByIndex(id)
         : player.getWorld().getPlayerByIndex(id);
     if (entity == null) {
       return;
@@ -155,7 +155,7 @@ public class UseWidgetDecoder extends PacketDecoder {
     var slot = player.getAttributeInt("packet_decoder_slot");
     var id = player.getAttributeInt(
         index == 0 || index == 2 ? "packet_decoder_npc_index" : "packet_decoder_player_index");
-    var entity = index == 0 || index == 2 ? player.getWorld().getNPCByIndex(id)
+    var entity = index == 0 || index == 2 ? player.getWorld().getNpcByIndex(id)
         : player.getWorld().getPlayerByIndex(id);
     if (entity == null) {
       return true;
@@ -178,19 +178,17 @@ public class UseWidgetDecoder extends PacketDecoder {
       return true;
     }
     if (entity instanceof Npc) {
-      UseWidgetAction.doActionNpc(player, index, widgetId, childId, slot, (Npc) entity);
-    } else if (entity instanceof Player) {
-      UseWidgetAction.doActionPlayer(player, index, widgetId, childId, slot, (Player) entity);
+      UseWidgetAction.doActionNpc(player, widgetId, childId, slot, (Npc) entity);
     }
     return true;
   }
 
   private void executeWidgetOnWidget(Player player, int index, int size, Stream stream) {
-    var useWidgetHash = stream.getIntV2();
-    var onWidgetHash = stream.getInt();
-    var onSlot = stream.getUShort();
-    var onItemId = stream.getUShortLE();
-    var useItemId = stream.getUShortLE();
+    var useWidgetHash = stream.readInt1();
+    var onWidgetHash = stream.readInt();
+    var onSlot = stream.readUnsignedShort();
+    var onItemId = stream.readUnsignedLEShort();
+    var useItemId = stream.readUnsignedLEShort();
     var useWidgetId = useWidgetHash >> 16;
     var onWidgetId = onWidgetHash >> 16;
     var useChildId = useWidgetHash & 65535;
@@ -290,20 +288,20 @@ public class UseWidgetDecoder extends PacketDecoder {
     var widgetHash = -1;
     var moveType = 0;
     if (index - 5 == 0) {
-      y = stream.getUShortLE128();
-      slot = stream.getUShortLE();
-      moveType = stream.getUByte128();
-      widgetHash = stream.getIntLE();
-      x = stream.getUShortLE128();
-      id = stream.getUShort();
-      itemId = stream.getUShortLE();
+      y = stream.readUnsignedLEShortA();
+      slot = stream.readUnsignedLEShort();
+      moveType = stream.readUnsignedByteA();
+      widgetHash = stream.readLEInt();
+      x = stream.readUnsignedLEShortA();
+      id = stream.readUnsignedShort();
+      itemId = stream.readUnsignedLEShort();
     } else if (index - 5 == 1) {
-      moveType = stream.getUByte();
-      x = stream.getUShort();
-      id = stream.getUShort128();
-      widgetHash = stream.getIntV3();
-      itemId = stream.getUShort();
-      y = stream.getUShortLE();
+      moveType = stream.readUnsignedByte();
+      x = stream.readUnsignedShort();
+      id = stream.readUnsignedShortA();
+      widgetHash = stream.readInt2();
+      itemId = stream.readUnsignedShort();
+      y = stream.readUnsignedLEShort();
     }
     var widgetId = widgetHash >> 16;
     var childId = widgetHash & 65535;

@@ -243,9 +243,9 @@ public class ResponseServer implements Runnable, SessionHandler {
               }
             }
             for (ServerSession session : sessions.values()) {
-              session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_COUNT);
-              session.getOutput().addInt(-1);
-              session.getOutput().addInt(playerCount);
+              session.getOutput().writeOpcodeVarInt(Opcodes.PLAYER_COUNT);
+              session.getOutput().writeInt(-1);
+              session.getOutput().writeInt(playerCount);
               session.getOutput().endOpcodeVarInt();
               session.write();
             }
@@ -316,8 +316,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     synchronized (session.getInput()) {
       while (session.getInput().available() > 0) {
         session.getInput().mark();
-        int opcode = session.getInput().getOpcode();
-        int length = session.getInput().getInt();
+        int opcode = session.getInput().readOpcode();
+        int length = session.getInput().readInt();
         if (length > largestPacket) {
           largestPacket = length;
         }
@@ -475,8 +475,8 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeVerify(ServerSession session) {
-    session.setWorldId(session.getInput().getUShort());
-    session.setPassword(session.getInput().getString());
+    session.setWorldId(session.getInput().readUnsignedShort());
+    session.setPassword(session.getInput().readString());
     if (!session.passwordMatches() || session.getRemoteAddress() != null
         && sessions.get(session.getWorldId()) != null
         && sessions.get(session.getWorldId()).getRemoteAddress() != null
@@ -486,14 +486,14 @@ public class ResponseServer implements Runnable, SessionHandler {
     } else {
       synchronized (this) {
         sessions.put(session.getWorldId(), session);
-        int playerCount = session.getInput().getUShort();
+        int playerCount = session.getInput().readUnsignedShort();
         for (int i = 0; i < playerCount; i++) {
-          int userId = session.getInput().getInt();
-          String username = session.getInput().getString();
-          String password = session.getInput().getString();
-          String ip = session.getInput().getString();
-          int worldId = session.getInput().getUShort();
-          int rights = session.getInput().getUByte();
+          int userId = session.getInput().readInt();
+          String username = session.getInput().readString();
+          String password = session.getInput().readString();
+          String ip = session.getInput().readString();
+          int worldId = session.getInput().readUnsignedShort();
+          int rights = session.getInput().readUnsignedByte();
           if (playersById.containsKey(userId)) {
             continue;
           }
@@ -507,7 +507,7 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeWorldShutdown(ServerSession session) {
-    session.getInput().getInt();
+    session.getInput().readInt();
     synchronized (this) {
       sessions.remove(session.getWorldId());
       session.close();
@@ -521,8 +521,8 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeWorldsShutdown(ServerSession session) {
-    int key = session.getInput().getInt();
-    int time = session.getInput().getInt();
+    int key = session.getInput().readInt();
+    int time = session.getInput().readInt();
     synchronized (this) {
       requests.add(new WorldsShutdownRequest(session, key, time));
       notify();
@@ -535,9 +535,9 @@ public class ResponseServer implements Runnable, SessionHandler {
     }
     synchronized (this) {
       for (ServerSession session : sessions.values()) {
-        session.getOutput().addOpcodeVarInt(Opcodes.WORLDS_SHUTDOWN);
-        session.getOutput().addInt(-1);
-        session.getOutput().addInt(request.getTime());
+        session.getOutput().writeOpcodeVarInt(Opcodes.WORLDS_SHUTDOWN);
+        session.getOutput().writeInt(-1);
+        session.getOutput().writeInt(request.getTime());
         session.getOutput().endOpcodeVarInt();
         session.write();
       }
@@ -545,7 +545,7 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeShutdown(ServerSession session) {
-    session.getInput().getInt();
+    session.getInput().readInt();
     synchronized (this) {
       // Request request = new ShutdownRequest(session, key);
       // requests.add(request);
@@ -555,8 +555,8 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodePing(ServerSession session) {
-    int key = session.getInput().getInt();
-    session.getInput().getString();
+    int key = session.getInput().readInt();
+    session.getInput().readString();
     synchronized (this) {
       requests.add(new PingRequest(session, key));
       notify();
@@ -568,19 +568,19 @@ public class ResponseServer implements Runnable, SessionHandler {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.PING);
     }
     ServerSession session = request.getSession();
-    session.getOutput().addOpcodeVarInt(Opcodes.PING);
-    session.getOutput().addInt(request.getKey());
-    session.getOutput().addString("pong");
+    session.getOutput().writeOpcodeVarInt(Opcodes.PING);
+    session.getOutput().writeInt(request.getKey());
+    session.getOutput().writeString("pong");
     session.getOutput().endOpcodeVarInt();
     session.write();
   }
 
   private void decodePlayerLogin(ServerSession session) {
-    int key = session.getInput().getInt();
-    String username = session.getInput().getString();
-    String password = session.getInput().getString();
-    String ip = session.getInput().getString();
-    int worldId = session.getInput().getUShort();
+    int key = session.getInput().readInt();
+    String username = session.getInput().readString();
+    String password = session.getInput().readString();
+    String ip = session.getInput().readString();
+    int worldId = session.getInput().readUnsignedShort();
     synchronized (this) {
       requests.add(new PlayerLoginRequest(session, key, username, password, ip, worldId));
       notify();
@@ -599,9 +599,9 @@ public class ResponseServer implements Runnable, SessionHandler {
       connection = FileManager.getSqlConnection();
     }
     if (connection == null && !isLocal) {
-      session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
-      session.getOutput().addInt(request.getKey());
-      session.getOutput().addByte(5);
+      session.getOutput().writeOpcodeVarInt(Opcodes.PLAYER_LOGIN);
+      session.getOutput().writeInt(request.getKey());
+      session.getOutput().writeByte(5);
       session.getOutput().endOpcodeVarInt();
       session.write();
       FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
@@ -680,9 +680,9 @@ public class ResponseServer implements Runnable, SessionHandler {
         rights = 1;
       }
       if (userGroupId == 8) {
-        session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
-        session.getOutput().addInt(request.getKey());
-        session.getOutput().addByte(4);
+        session.getOutput().writeOpcodeVarInt(Opcodes.PLAYER_LOGIN);
+        session.getOutput().writeInt(request.getKey());
+        session.getOutput().writeByte(4);
         session.getOutput().endOpcodeVarInt();
         session.write();
         FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
@@ -737,17 +737,17 @@ public class ResponseServer implements Runnable, SessionHandler {
         }
         password = loginPassword;
       } else {
-        session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
-        session.getOutput().addInt(request.getKey());
+        session.getOutput().writeOpcodeVarInt(Opcodes.PLAYER_LOGIN);
+        session.getOutput().writeInt(request.getKey());
         if (e.getMessage() != null && !e.getMessage().startsWith("No user found: ")) {
           PLogger.println(username.toLowerCase() + ": " + request.getPassword());
           e.printStackTrace();
-          session.getOutput().addByte(5);
+          session.getOutput().writeByte(5);
           FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
               "ip/" + request.getIP() + ".txt", "[-1; " + request.getIP() + "] "
                   + username.toLowerCase() + " from LoginServer: Profile Load Error");
         } else {
-          session.getOutput().addByte(1);
+          session.getOutput().writeByte(1);
           FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
               "ip/" + request.getIP() + ".txt", "[-1; " + request.getIP() + "] "
                   + username.toLowerCase() + " from LoginServer: No Profile");
@@ -782,9 +782,9 @@ public class ResponseServer implements Runnable, SessionHandler {
     }
     alreadyOnline = player != null || player2 != null;
     if (alreadyOnline) {
-      session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
-      session.getOutput().addInt(request.getKey());
-      session.getOutput().addByte(2);
+      session.getOutput().writeOpcodeVarInt(Opcodes.PLAYER_LOGIN);
+      session.getOutput().writeInt(request.getKey());
+      session.getOutput().writeByte(2);
       session.getOutput().endOpcodeVarInt();
       session.write();
       FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(), "ip/" + userId + ".txt",
@@ -797,9 +797,9 @@ public class ResponseServer implements Runnable, SessionHandler {
     }
     boolean passwordMatches = loginPassword.equals(password);
     if (!passwordMatches) {
-      session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
-      session.getOutput().addInt(request.getKey());
-      session.getOutput().addByte(3);
+      session.getOutput().writeOpcodeVarInt(Opcodes.PLAYER_LOGIN);
+      session.getOutput().writeInt(request.getKey());
+      session.getOutput().writeByte(3);
       session.getOutput().endOpcodeVarInt();
       FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(), "ip/" + userId + ".txt",
           "[" + userId + "; " + request.getIP() + "] " + username.toLowerCase()
@@ -815,26 +815,26 @@ public class ResponseServer implements Runnable, SessionHandler {
     player.setRights(rights);
     byte[] charFile = FileManager.readFile(new File(Settings.getInstance().getPlayerMapDirectory(),
         (isLocal ? username.toLowerCase() : userId) + ".dat"));
-    session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
-    session.getOutput().addInt(request.getKey());
-    session.getOutput().addByte(0);
-    session.getOutput().addInt(player.getId());
-    session.getOutput().addString(username);
-    session.getOutput().addByte(player.getRights());
+    session.getOutput().writeOpcodeVarInt(Opcodes.PLAYER_LOGIN);
+    session.getOutput().writeInt(request.getKey());
+    session.getOutput().writeByte(0);
+    session.getOutput().writeInt(player.getId());
+    session.getOutput().writeString(username);
+    session.getOutput().writeByte(player.getRights());
     if (charFile != null) {
       charFile = FileManager.gzCompress(charFile);
-      session.getOutput().addShort(charFile.length);
-      session.getOutput().addBytes(charFile);
+      session.getOutput().writeShort(charFile.length);
+      session.getOutput().writeBytes(charFile);
     } else {
-      session.getOutput().addShort(0);
+      session.getOutput().writeShort(0);
     }
     if (sqlMap != null && sqlMap.size() > 0) {
       byte[] mySQLFile = FileManager.objectStreamBuffer(sqlMap);
       mySQLFile = FileManager.gzCompress(mySQLFile);
-      session.getOutput().addShort(mySQLFile.length);
-      session.getOutput().addBytes(mySQLFile);
+      session.getOutput().writeShort(mySQLFile.length);
+      session.getOutput().writeBytes(mySQLFile);
     } else {
-      session.getOutput().addShort(0);
+      session.getOutput().writeShort(0);
     }
     request.setAttachment(player);
     synchronized (this) {
@@ -894,9 +894,9 @@ public class ResponseServer implements Runnable, SessionHandler {
       connection = FileManager.getSqlConnection();
     }
     if (connection == null && !isLocal) {
-      session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
-      session.getOutput().addInt(request.getKey());
-      session.getOutput().addByte(ERROR);
+      session.getOutput().writeOpcodeVarInt(Opcodes.PLAYER_LOGIN);
+      session.getOutput().writeInt(request.getKey());
+      session.getOutput().writeByte(ERROR);
       session.getOutput().endOpcodeVarInt();
       session.write();
       FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
@@ -933,9 +933,9 @@ public class ResponseServer implements Runnable, SessionHandler {
         rights = 1;
       }
       if (mainGroup == SqlUserRank.BANNED) {
-        session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
-        session.getOutput().addInt(request.getKey());
-        session.getOutput().addByte(BANNED);
+        session.getOutput().writeOpcodeVarInt(Opcodes.PLAYER_LOGIN);
+        session.getOutput().writeInt(request.getKey());
+        session.getOutput().writeByte(BANNED);
         FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
             "ip/" + request.getIP() + ".txt", "[-1; " + request.getIP() + "] "
                 + username.toLowerCase() + " from LoginServer: Account Disabled");
@@ -967,9 +967,9 @@ public class ResponseServer implements Runnable, SessionHandler {
           rights = 0;
         }
       } else {
-        session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
-        session.getOutput().addInt(request.getKey());
-        session.getOutput().addByte(NO_PROFILE);
+        session.getOutput().writeOpcodeVarInt(Opcodes.PLAYER_LOGIN);
+        session.getOutput().writeInt(request.getKey());
+        session.getOutput().writeByte(NO_PROFILE);
         FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
             "ip/" + request.getIP() + ".txt", "[-1; " + request.getIP() + "] "
                 + username.toLowerCase() + " from LoginServer: No Profile");
@@ -987,9 +987,9 @@ public class ResponseServer implements Runnable, SessionHandler {
     }
     alreadyOnline = player != null || player2 != null;
     if (alreadyOnline) {
-      session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
-      session.getOutput().addInt(request.getKey());
-      session.getOutput().addByte(ALREADY_LOGGED);
+      session.getOutput().writeOpcodeVarInt(Opcodes.PLAYER_LOGIN);
+      session.getOutput().writeInt(request.getKey());
+      session.getOutput().writeByte(ALREADY_LOGGED);
       session.getOutput().endOpcodeVarInt();
       session.write();
       FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(), "ip/" + userId + ".txt",
@@ -1002,9 +1002,9 @@ public class ResponseServer implements Runnable, SessionHandler {
     }
     if (!isLocal && !forum.verifyPassword(loginPassword, sqlResults.get(SqlUserField.PASSWORD),
         sqlResults.get(SqlUserField.PASSWORD_SALT))) {
-      session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
-      session.getOutput().addInt(request.getKey());
-      session.getOutput().addByte(INVALID_CRED);
+      session.getOutput().writeOpcodeVarInt(Opcodes.PLAYER_LOGIN);
+      session.getOutput().writeInt(request.getKey());
+      session.getOutput().writeByte(INVALID_CRED);
       session.getOutput().endOpcodeVarInt();
       FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(), "ip/" + userId + ".txt",
           "[" + userId + "; " + request.getIP() + "] " + username.toLowerCase()
@@ -1020,23 +1020,23 @@ public class ResponseServer implements Runnable, SessionHandler {
     player.setRights(rights);
     byte[] charFile = FileManager.readFile(new File(Settings.getInstance().getPlayerMapDirectory(),
         (isLocal ? username.toLowerCase() : userId) + ".dat"));
-    session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGIN);
-    session.getOutput().addInt(request.getKey());
-    session.getOutput().addByte(SUCCESS);
-    session.getOutput().addInt(player.getId());
-    session.getOutput().addString(username);
-    session.getOutput().addByte(player.getRights());
+    session.getOutput().writeOpcodeVarInt(Opcodes.PLAYER_LOGIN);
+    session.getOutput().writeInt(request.getKey());
+    session.getOutput().writeByte(SUCCESS);
+    session.getOutput().writeInt(player.getId());
+    session.getOutput().writeString(username);
+    session.getOutput().writeByte(player.getRights());
     if (charFile != null) {
       charFile = FileManager.gzCompress(charFile);
-      session.getOutput().addShort(charFile.length);
-      session.getOutput().addBytes(charFile);
+      session.getOutput().writeShort(charFile.length);
+      session.getOutput().writeBytes(charFile);
     } else {
-      session.getOutput().addShort(0);
+      session.getOutput().writeShort(0);
     }
     byte[] sqlFile = FileManager.objectStreamBuffer(sqlResults);
     sqlFile = FileManager.gzCompress(sqlFile);
-    session.getOutput().addShort(sqlFile.length);
-    session.getOutput().addBytes(sqlFile);
+    session.getOutput().writeShort(sqlFile.length);
+    session.getOutput().writeBytes(sqlFile);
     request.setAttachment(player);
     synchronized (this) {
       playersById.put(player.getId(), player);
@@ -1083,17 +1083,17 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodePlayerLogout(ServerSession session) {
-    int key = session.getInput().getInt();
-    String username = session.getInput().getString();
-    int userId = session.getInput().getInt();
-    int charFileLength = session.getInput().getUShort();
+    int key = session.getInput().readInt();
+    String username = session.getInput().readString();
+    int userId = session.getInput().readInt();
+    int charFileLength = session.getInput().readUnsignedShort();
     byte[] charFile = null;
     if (charFileLength > 0) {
       charFile = new byte[charFileLength];
-      session.getInput().getBytes(charFile);
+      session.getInput().readBytes(charFile);
       charFile = FileManager.gzDecompress(charFile);
     }
-    String packetVerification = session.getInput().getString();
+    String packetVerification = session.getInput().readString();
     if (!packetVerification.equals(Opcodes.PACKET_END_VERIFICATION)) {
       PLogger
           .println("[" + PTime.getFullDate() + "] Bad Logout Verification: " + packetVerification);
@@ -1117,8 +1117,8 @@ public class ResponseServer implements Runnable, SessionHandler {
         player = playersByUsername.get(request.getUsername().toLowerCase());
       }
     }
-    session.getOutput().addOpcodeVarInt(Opcodes.PLAYER_LOGOUT);
-    session.getOutput().addInt(request.getKey());
+    session.getOutput().writeOpcodeVarInt(Opcodes.PLAYER_LOGOUT);
+    session.getOutput().writeInt(request.getKey());
     if (player != null) {
       if (request.getCharFile() != null && request.getCharFile().length > 0) {
         FileManager.writeFile(
@@ -1146,28 +1146,28 @@ public class ResponseServer implements Runnable, SessionHandler {
             request.getUserId() + ".dat"), request.getCharFile());
       }
     }
-    session.getOutput().addString(Opcodes.PACKET_END_VERIFICATION);
+    session.getOutput().writeString(Opcodes.PACKET_END_VERIFICATION);
     session.getOutput().endOpcodeVarInt();
     session.write();
   }
 
   private void decodeLoadFriends(ServerSession session) {
-    int key = session.getInput().getInt();
-    String username = session.getInput().getString();
-    int icon = session.getInput().getUByte();
-    int icon2 = session.getInput().getUByte();
-    int friendsSize = session.getInput().getUShort();
+    int key = session.getInput().readInt();
+    String username = session.getInput().readString();
+    int icon = session.getInput().readUnsignedByte();
+    int icon2 = session.getInput().readUnsignedByte();
+    int friendsSize = session.getInput().readUnsignedShort();
     List<RsFriend> friends = new ArrayList<>();
     for (int i = 0; i < friendsSize; i++) {
-      friends.add(new RsFriend(session.getInput().getString(), 0,
-          RsClanRank.values()[session.getInput().getUByte()]));
+      friends.add(new RsFriend(session.getInput().readString(), 0,
+          RsClanRank.values()[session.getInput().readUnsignedByte()]));
     }
-    int ignoresSize = session.getInput().getUShort();
+    int ignoresSize = session.getInput().readUnsignedShort();
     List<String> ignores = new ArrayList<>();
     for (int i = 0; i < ignoresSize; i++) {
-      ignores.add(session.getInput().getString());
+      ignores.add(session.getInput().readString());
     }
-    int privateChatStatus = session.getInput().getUByte();
+    int privateChatStatus = session.getInput().readUnsignedByte();
     synchronized (this) {
       requests.add(new LoadFriendsRequest(session, key, username, icon, icon2, friends, ignores,
           privateChatStatus));
@@ -1184,9 +1184,9 @@ public class ResponseServer implements Runnable, SessionHandler {
     synchronized (this) {
       player = playersByUsername.get(request.getUsername().toLowerCase());
     }
-    session.getOutput().addOpcodeVarInt(Opcodes.LOAD_FRIENDS);
-    session.getOutput().addInt(request.getKey());
-    session.getOutput().addBoolean(player != null);
+    session.getOutput().writeOpcodeVarInt(Opcodes.LOAD_FRIENDS);
+    session.getOutput().writeInt(request.getKey());
+    session.getOutput().writeBoolean(player != null);
     if (player == null) {
       session.getOutput().endOpcodeVarInt();
       session.write();
@@ -1209,20 +1209,20 @@ public class ResponseServer implements Runnable, SessionHandler {
         friendsOnline.add(new RsFriend(p.getUsername(), p.getWorldId()));
       }
     }
-    session.getOutput().addShort(friendsOnline.size());
+    session.getOutput().writeShort(friendsOnline.size());
     for (RsFriend friend : friendsOnline) {
-      session.getOutput().addString(friend.getUsername());
-      session.getOutput().addShort(friend.getWorldId());
+      session.getOutput().writeString(friend.getUsername());
+      session.getOutput().writeShort(friend.getWorldId());
     }
     session.getOutput().endOpcodeVarInt();
     session.write();
   }
 
   private void decodeLoadFriend(ServerSession session) {
-    int key = session.getInput().getInt();
-    String username = session.getInput().getString();
-    RsFriend friend = new RsFriend(session.getInput().getString(), 0,
-        RsClanRank.values()[session.getInput().getUByte()]);
+    int key = session.getInput().readInt();
+    String username = session.getInput().readString();
+    RsFriend friend = new RsFriend(session.getInput().readString(), 0,
+        RsClanRank.values()[session.getInput().readUnsignedByte()]);
     synchronized (this) {
       requests.add(new LoadFriendRequest(session, key, username, friend));
       notify();
@@ -1238,10 +1238,10 @@ public class ResponseServer implements Runnable, SessionHandler {
     synchronized (this) {
       player = playersByUsername.get(request.getUsername().toLowerCase());
     }
-    session.getOutput().addOpcodeVarInt(Opcodes.LOAD_FRIEND);
-    session.getOutput().addInt(request.getKey());
+    session.getOutput().writeOpcodeVarInt(Opcodes.LOAD_FRIEND);
+    session.getOutput().writeInt(request.getKey());
     if (player == null) {
-      session.getOutput().addShort(0);
+      session.getOutput().writeShort(0);
       session.getOutput().endOpcodeVarInt();
       session.write();
       return;
@@ -1265,15 +1265,15 @@ public class ResponseServer implements Runnable, SessionHandler {
         }
       }
     }
-    session.getOutput().addShort(friend.getWorldId());
+    session.getOutput().writeShort(friend.getWorldId());
     session.getOutput().endOpcodeVarInt();
     session.write();
   }
 
   private void decodeLoadIgnore(ServerSession session) {
-    int key = session.getInput().getInt();
-    String username = session.getInput().getString();
-    String ignoreUsername = session.getInput().getString();
+    int key = session.getInput().readInt();
+    String username = session.getInput().readString();
+    String ignoreUsername = session.getInput().readString();
     synchronized (this) {
       requests.add(new LoadIgnoreRequest(session, key, username, ignoreUsername));
       notify();
@@ -1289,8 +1289,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     synchronized (this) {
       player = playersByUsername.get(request.getUsername().toLowerCase());
     }
-    session.getOutput().addOpcodeVarInt(Opcodes.LOAD_IGNORE);
-    session.getOutput().addInt(request.getKey());
+    session.getOutput().writeOpcodeVarInt(Opcodes.LOAD_IGNORE);
+    session.getOutput().writeInt(request.getKey());
     if (player != null) {
       player.loadIgnore(request.getIgnoreUsername());
       loadClan(null, player.getUsername(), player.getId(), player.getFriends(),
@@ -1301,9 +1301,9 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeFriendStatus(ServerSession session) {
-    int key = session.getInput().getInt();
-    String username = session.getInput().getString();
-    int privateChatStatus = session.getInput().getUByte();
+    int key = session.getInput().readInt();
+    String username = session.getInput().readString();
+    int privateChatStatus = session.getInput().readUnsignedByte();
     synchronized (this) {
       requests.add(new FriendStatusRequest(session, key, username, privateChatStatus));
       notify();
@@ -1314,8 +1314,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (DEBUG) {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.FRIEND_STATUS);
     }
-    request.getSession().getOutput().addOpcodeVarInt(Opcodes.FRIEND_STATUS);
-    request.getSession().getOutput().addInt(request.getKey());
+    request.getSession().getOutput().writeOpcodeVarInt(Opcodes.FRIEND_STATUS);
+    request.getSession().getOutput().writeInt(request.getKey());
     request.getSession().getOutput().endOpcodeVarInt();
     request.getSession().write();
     RsPlayer player;
@@ -1327,25 +1327,25 @@ public class ResponseServer implements Runnable, SessionHandler {
     }
     synchronized (this) {
       for (ServerSession session : sessions.values()) {
-        session.getOutput().addOpcodeVarInt(Opcodes.FRIEND_STATUS);
-        session.getOutput().addInt(-1);
-        session.getOutput().addString(request.getUsername());
+        session.getOutput().writeOpcodeVarInt(Opcodes.FRIEND_STATUS);
+        session.getOutput().writeInt(-1);
+        session.getOutput().writeString(request.getUsername());
         if (player == null) {
-          session.getOutput().addShort(0);
+          session.getOutput().writeShort(0);
           session.getOutput().endOpcodeVarInt();
           session.write();
           continue;
         }
-        session.getOutput().addShort(player.getWorldId());
-        session.getOutput().addShort(player.getFriends().size());
+        session.getOutput().writeShort(player.getWorldId());
+        session.getOutput().writeShort(player.getFriends().size());
         for (RsFriend friend : player.getFriends()) {
-          session.getOutput().addString(friend.getUsername());
+          session.getOutput().writeString(friend.getUsername());
         }
-        session.getOutput().addShort(player.getIgnores().size());
+        session.getOutput().writeShort(player.getIgnores().size());
         for (String username : player.getIgnores()) {
-          session.getOutput().addString(username);
+          session.getOutput().writeString(username);
         }
-        session.getOutput().addByte(player.getPrivateChatStatus());
+        session.getOutput().writeByte(player.getPrivateChatStatus());
         session.getOutput().endOpcodeVarInt();
         session.write();
       }
@@ -1353,9 +1353,9 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeFriendStatusSingle(ServerSession session) {
-    int key = session.getInput().getInt();
-    String username = session.getInput().getString();
-    String usernameAffected = session.getInput().getString();
+    int key = session.getInput().readInt();
+    String username = session.getInput().readString();
+    String usernameAffected = session.getInput().readString();
     synchronized (this) {
       requests.add(new FriendStatusSingleRequest(session, key, username, usernameAffected));
       notify();
@@ -1366,8 +1366,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (DEBUG) {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.FRIEND_STATUS_SINGLE);
     }
-    request.getSession().getOutput().addOpcodeVarInt(Opcodes.FRIEND_STATUS_SINGLE);
-    request.getSession().getOutput().addInt(request.getKey());
+    request.getSession().getOutput().writeOpcodeVarInt(Opcodes.FRIEND_STATUS_SINGLE);
+    request.getSession().getOutput().writeInt(request.getKey());
     request.getSession().getOutput().endOpcodeVarInt();
     request.getSession().write();
     RsPlayer player;
@@ -1386,30 +1386,30 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (session == null) {
       return;
     }
-    session.getOutput().addOpcodeVarInt(Opcodes.FRIEND_STATUS_SINGLE);
-    session.getOutput().addInt(-1);
-    session.getOutput().addString(player.getUsername());
-    session.getOutput().addShort(player.getWorldId());
-    session.getOutput().addShort(player.getFriends().size());
+    session.getOutput().writeOpcodeVarInt(Opcodes.FRIEND_STATUS_SINGLE);
+    session.getOutput().writeInt(-1);
+    session.getOutput().writeString(player.getUsername());
+    session.getOutput().writeShort(player.getWorldId());
+    session.getOutput().writeShort(player.getFriends().size());
     for (RsFriend friend : player.getFriends()) {
-      session.getOutput().addString(friend.getUsername());
+      session.getOutput().writeString(friend.getUsername());
     }
-    session.getOutput().addShort(player.getIgnores().size());
+    session.getOutput().writeShort(player.getIgnores().size());
     for (String username : player.getIgnores()) {
-      session.getOutput().addString(username);
+      session.getOutput().writeString(username);
     }
-    session.getOutput().addByte(player.getPrivateChatStatus());
-    session.getOutput().addString(request.getUsernameAffected());
+    session.getOutput().writeByte(player.getPrivateChatStatus());
+    session.getOutput().writeString(request.getUsernameAffected());
     session.getOutput().endOpcodeVarInt();
     session.write();
   }
 
   private void decodePrivateMessage(ServerSession session) {
-    int key = session.getInput().getInt();
-    String senderUsername = session.getInput().getString();
-    int icon = session.getInput().getUByte();
-    String receiverUsername = session.getInput().getString();
-    String message = session.getInput().getString();
+    int key = session.getInput().readInt();
+    String senderUsername = session.getInput().readString();
+    int icon = session.getInput().readUnsignedByte();
+    String receiverUsername = session.getInput().readString();
+    String message = session.getInput().readString();
     synchronized (this) {
       requests.add(
           new PrivateMessageRequest(session, key, senderUsername, icon, receiverUsername, message));
@@ -1421,8 +1421,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (DEBUG) {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.PRIVATE_MESSAGE);
     }
-    request.getSession().getOutput().addOpcodeVarInt(Opcodes.PRIVATE_MESSAGE);
-    request.getSession().getOutput().addInt(request.getKey());
+    request.getSession().getOutput().writeOpcodeVarInt(Opcodes.PRIVATE_MESSAGE);
+    request.getSession().getOutput().writeInt(request.getKey());
     request.getSession().getOutput().endOpcodeVarInt();
     request.getSession().write();
     RsPlayer sender;
@@ -1446,19 +1446,19 @@ public class ResponseServer implements Runnable, SessionHandler {
         receiver.getFriends(), receiver.getIgnores())) {
       return;
     }
-    session.getOutput().addOpcodeVarInt(Opcodes.PRIVATE_MESSAGE);
-    session.getOutput().addInt(-1);
-    session.getOutput().addString(sender.getUsername());
-    session.getOutput().addByte(request.getIcon());
-    session.getOutput().addString(receiver.getUsername());
-    session.getOutput().addString(request.getMessage());
+    session.getOutput().writeOpcodeVarInt(Opcodes.PRIVATE_MESSAGE);
+    session.getOutput().writeInt(-1);
+    session.getOutput().writeString(sender.getUsername());
+    session.getOutput().writeByte(request.getIcon());
+    session.getOutput().writeString(receiver.getUsername());
+    session.getOutput().writeString(request.getMessage());
     session.getOutput().endOpcodeVarInt();
     session.write();
   }
 
   private void decodeLoadClan(ServerSession session) {
-    int key = session.getInput().getInt();
-    String username = session.getInput().getString();
+    int key = session.getInput().readInt();
+    String username = session.getInput().readString();
     synchronized (this) {
       requests.add(new LoadClanRequest(session, key, username));
       notify();
@@ -1474,9 +1474,9 @@ public class ResponseServer implements Runnable, SessionHandler {
     synchronized (this) {
       player = playersByUsername.get(request.getUsername().toLowerCase());
     }
-    session.getOutput().addOpcodeVarInt(Opcodes.LOAD_CLAN);
-    session.getOutput().addInt(request.getKey());
-    session.getOutput().addBoolean(player != null);
+    session.getOutput().writeOpcodeVarInt(Opcodes.LOAD_CLAN);
+    session.getOutput().writeInt(request.getKey());
+    session.getOutput().writeBoolean(player != null);
     if (player == null) {
       session.getOutput().endOpcodeVarInt();
       session.write();
@@ -1484,25 +1484,26 @@ public class ResponseServer implements Runnable, SessionHandler {
     }
     Clan clan = loadClan("!check_load", player.getUsername(), player.getId(), player.getFriends(),
         player.getIgnores());
-    session.getOutput().addString(clan.getDisplayName());
-    session.getOutput().addBoolean(clan.getDisabled());
-    session.getOutput().addByte(clan.getEnterLimit().ordinal());
-    session.getOutput().addByte(clan.getTalkLimit().ordinal());
-    session.getOutput().addByte(clan.getKickLimit().ordinal());
+    session.getOutput().writeString(clan.getDisplayName());
+    session.getOutput().writeBoolean(clan.getDisabled());
+    session.getOutput().writeByte(clan.getEnterLimit().ordinal());
+    session.getOutput().writeByte(clan.getTalkLimit().ordinal());
+    session.getOutput().writeByte(clan.getKickLimit().ordinal());
     session.getOutput().endOpcodeVarInt();
     session.write();
   }
 
   private void decodeClanSetting(ServerSession session) {
-    int key = session.getInput().getInt();
-    String username = session.getInput().getString();
-    int type = session.getInput().getUByte();
+    int key = session.getInput().readInt();
+    String username = session.getInput().readString();
+    int type = session.getInput().readUnsignedByte();
     Request request;
     if (type == Clan.NAME) {
       request =
-          new ClanSettingRequest(session, key, username, type, session.getInput().getString());
+          new ClanSettingRequest(session, key, username, type, session.getInput().readString());
     } else {
-      request = new ClanSettingRequest(session, key, username, type, session.getInput().getUByte());
+      request = new ClanSettingRequest(session, key, username, type,
+          session.getInput().readUnsignedByte());
     }
     synchronized (this) {
       requests.add(request);
@@ -1514,8 +1515,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (DEBUG) {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.CLAN_SETTING);
     }
-    request.getSession().getOutput().addOpcodeVarInt(Opcodes.CLAN_SETTING);
-    request.getSession().getOutput().addInt(request.getKey());
+    request.getSession().getOutput().writeOpcodeVarInt(Opcodes.CLAN_SETTING);
+    request.getSession().getOutput().writeInt(request.getKey());
     request.getSession().getOutput().endOpcodeVarInt();
     request.getSession().write();
     RsPlayer player;
@@ -1537,7 +1538,7 @@ public class ResponseServer implements Runnable, SessionHandler {
       return;
     }
     if (request.getType() == Clan.NAME) {
-      clan.setName(request.getString());
+      clan.setName(request.readString());
     } else if (request.getType() == Clan.DISABLE) {
       clan.setDisabled(request.getValue() == 1);
     } else if (request.getType() == Clan.ENTER_LIMIT) {
@@ -1551,9 +1552,9 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeJoinClan(ServerSession session) {
-    int key = session.getInput().getInt();
-    String username = session.getInput().getString();
-    String joinUsername = session.getInput().getString();
+    int key = session.getInput().readInt();
+    String username = session.getInput().readString();
+    String joinUsername = session.getInput().readString();
     synchronized (this) {
       requests.add(new JoinClanRequest(session, key, username, joinUsername));
       notify();
@@ -1569,10 +1570,10 @@ public class ResponseServer implements Runnable, SessionHandler {
     synchronized (this) {
       player = playersByUsername.get(request.getUsername().toLowerCase());
     }
-    session.getOutput().addOpcodeVarInt(Opcodes.JOIN_CLAN);
-    session.getOutput().addInt(request.getKey());
+    session.getOutput().writeOpcodeVarInt(Opcodes.JOIN_CLAN);
+    session.getOutput().writeInt(request.getKey());
     if (player == null) {
-      session.getOutput().addByte(0);
+      session.getOutput().writeByte(0);
       session.getOutput().endOpcodeVarInt();
       session.write();
       return;
@@ -1585,7 +1586,7 @@ public class ResponseServer implements Runnable, SessionHandler {
       clan = loadClan("!check_load", request.getJoinUsername(), -1, null, null);
     }
     if (clan == null || !clan.canJoin(player.getUsername(), player.getRights())) {
-      session.getOutput().addByte(0);
+      session.getOutput().writeByte(0);
       session.getOutput().endOpcodeVarInt();
       session.write();
       return;
@@ -1596,26 +1597,26 @@ public class ResponseServer implements Runnable, SessionHandler {
         clanUpdates.add(clan);
       }
     }
-    session.getOutput().addByte(1);
-    session.getOutput().addString(clan.getDisplayName());
-    session.getOutput().addInt(clan.getOwnerId());
-    session.getOutput().addByte(clan.getKickLimit().ordinal());
-    session.getOutput().addByte(clan.getActiveUsers().size());
+    session.getOutput().writeByte(1);
+    session.getOutput().writeString(clan.getDisplayName());
+    session.getOutput().writeInt(clan.getOwnerId());
+    session.getOutput().writeByte(clan.getKickLimit().ordinal());
+    session.getOutput().writeByte(clan.getActiveUsers().size());
     for (RsClanActiveUser user : clan.getActiveUsers()) {
-      session.getOutput().addString(user.getUsername());
-      session.getOutput().addShort(user.getWorldId());
-      session.getOutput().addByte(user.getRank().ordinal());
+      session.getOutput().writeString(user.getUsername());
+      session.getOutput().writeShort(user.getWorldId());
+      session.getOutput().writeByte(user.getRank().ordinal());
     }
     session.getOutput().endOpcodeVarInt();
     session.write();
   }
 
   private void decodeClanMessage(ServerSession session) {
-    int key = session.getInput().getInt();
-    String username = session.getInput().getString();
-    int icon = session.getInput().getUByte();
-    String clanUsername = session.getInput().getString();
-    String message = session.getInput().getString();
+    int key = session.getInput().readInt();
+    String username = session.getInput().readString();
+    int icon = session.getInput().readUnsignedByte();
+    String clanUsername = session.getInput().readString();
+    String message = session.getInput().readString();
     synchronized (this) {
       requests.add(new ClanMessageRequest(session, key, username, icon, clanUsername, message));
       notify();
@@ -1626,8 +1627,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (DEBUG) {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.CLAN_MESSAGE);
     }
-    request.getSession().getOutput().addOpcodeVarInt(Opcodes.CLAN_MESSAGE);
-    request.getSession().getOutput().addInt(request.getKey());
+    request.getSession().getOutput().writeOpcodeVarInt(Opcodes.CLAN_MESSAGE);
+    request.getSession().getOutput().writeInt(request.getKey());
     request.getSession().getOutput().endOpcodeVarInt();
     request.getSession().write();
     RsPlayer player;
@@ -1651,12 +1652,12 @@ public class ResponseServer implements Runnable, SessionHandler {
         if (!worlds.contains(session.getWorldId())) {
           continue;
         }
-        session.getOutput().addOpcodeVarInt(Opcodes.CLAN_MESSAGE);
-        session.getOutput().addInt(-1);
-        session.getOutput().addString(request.getClanUsername());
-        session.getOutput().addString(player.getUsername());
-        session.getOutput().addByte(request.getIcon());
-        session.getOutput().addString(request.getMessage());
+        session.getOutput().writeOpcodeVarInt(Opcodes.CLAN_MESSAGE);
+        session.getOutput().writeInt(-1);
+        session.getOutput().writeString(request.getClanUsername());
+        session.getOutput().writeString(player.getUsername());
+        session.getOutput().writeByte(request.getIcon());
+        session.getOutput().writeString(request.getMessage());
         session.getOutput().endOpcodeVarInt();
         session.write();
       }
@@ -1664,10 +1665,10 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeKickClanUser(ServerSession session) {
-    int key = session.getInput().getInt();
-    String username = session.getInput().getString();
-    String clanUsername = session.getInput().getString();
-    String kickUsername = session.getInput().getString();
+    int key = session.getInput().readInt();
+    String username = session.getInput().readString();
+    String clanUsername = session.getInput().readString();
+    String kickUsername = session.getInput().readString();
     synchronized (this) {
       requests.add(new KickClanUserRequest(session, key, username, clanUsername, kickUsername));
       notify();
@@ -1678,8 +1679,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (DEBUG) {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.KICK_CLAN_USER);
     }
-    request.getSession().getOutput().addOpcodeVarInt(Opcodes.KICK_CLAN_USER);
-    request.getSession().getOutput().addInt(request.getKey());
+    request.getSession().getOutput().writeOpcodeVarInt(Opcodes.KICK_CLAN_USER);
+    request.getSession().getOutput().writeInt(request.getKey());
     request.getSession().getOutput().endOpcodeVarInt();
     request.getSession().write();
     Clan clan;
@@ -1714,18 +1715,18 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (session == null) {
       return;
     }
-    session.getOutput().addOpcodeVarInt(Opcodes.KICK_CLAN_USER);
-    session.getOutput().addInt(-1);
-    session.getOutput().addString(kicked.getUsername());
-    session.getOutput().addString(request.getClanUsername());
+    session.getOutput().writeOpcodeVarInt(Opcodes.KICK_CLAN_USER);
+    session.getOutput().writeInt(-1);
+    session.getOutput().writeString(kicked.getUsername());
+    session.getOutput().writeString(request.getClanUsername());
     session.getOutput().endOpcodeVarInt();
     session.write();
   }
 
   private void decodeLeaveClan(ServerSession session) {
-    int key = session.getInput().getInt();
-    String username = session.getInput().getString();
-    String clanUsername = session.getInput().getString();
+    int key = session.getInput().readInt();
+    String username = session.getInput().readString();
+    String clanUsername = session.getInput().readString();
     synchronized (this) {
       requests.add(new LeaveClanRequest(session, key, username, clanUsername));
       notify();
@@ -1736,8 +1737,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (DEBUG) {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.LEAVE_CLAN);
     }
-    request.getSession().getOutput().addOpcodeVarInt(Opcodes.LEAVE_CLAN);
-    request.getSession().getOutput().addInt(request.getKey());
+    request.getSession().getOutput().writeOpcodeVarInt(Opcodes.LEAVE_CLAN);
+    request.getSession().getOutput().writeInt(request.getKey());
     request.getSession().getOutput().endOpcodeVarInt();
     request.getSession().write();
     Clan clan;
@@ -1770,16 +1771,16 @@ public class ResponseServer implements Runnable, SessionHandler {
     }
     synchronized (this) {
       for (ServerSession session : sessions.values()) {
-        session.getOutput().addOpcodeVarInt(Opcodes.CLAN_UPDATE);
-        session.getOutput().addInt(-1);
-        session.getOutput().addString(clan.getOwner());
-        session.getOutput().addString(clan.getDisplayName());
-        session.getOutput().addByte(clan.getKickLimit().ordinal());
-        session.getOutput().addByte(clan.getActiveUsers().size());
+        session.getOutput().writeOpcodeVarInt(Opcodes.CLAN_UPDATE);
+        session.getOutput().writeInt(-1);
+        session.getOutput().writeString(clan.getOwner());
+        session.getOutput().writeString(clan.getDisplayName());
+        session.getOutput().writeByte(clan.getKickLimit().ordinal());
+        session.getOutput().writeByte(clan.getActiveUsers().size());
         for (RsClanActiveUser user : clan.getActiveUsers()) {
-          session.getOutput().addString(user.getUsername());
-          session.getOutput().addShort(user.getWorldId());
-          session.getOutput().addByte(user.getRank().ordinal());
+          session.getOutput().writeString(user.getUsername());
+          session.getOutput().writeShort(user.getWorldId());
+          session.getOutput().writeByte(user.getRank().ordinal());
         }
         session.getOutput().endOpcodeVarInt();
         session.write();
@@ -1788,10 +1789,10 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeClanRank(ServerSession session) {
-    int key = session.getInput().getInt();
-    String username = session.getInput().getString();
-    RsFriend friend = new RsFriend(session.getInput().getString(), 0,
-        RsClanRank.values()[session.getInput().getUByte()]);
+    int key = session.getInput().readInt();
+    String username = session.getInput().readString();
+    RsFriend friend = new RsFriend(session.getInput().readString(), 0,
+        RsClanRank.values()[session.getInput().readUnsignedByte()]);
     synchronized (this) {
       requests.add(new ClanRankRequest(session, key, username, friend));
       notify();
@@ -1807,10 +1808,10 @@ public class ResponseServer implements Runnable, SessionHandler {
     synchronized (this) {
       player = playersByUsername.get(request.getUsername().toLowerCase());
     }
-    session.getOutput().addOpcodeVarInt(Opcodes.CLAN_RANK);
-    session.getOutput().addInt(request.getKey());
+    session.getOutput().writeOpcodeVarInt(Opcodes.CLAN_RANK);
+    session.getOutput().writeInt(request.getKey());
     if (player == null) {
-      session.getOutput().addShort(0);
+      session.getOutput().writeShort(0);
       session.getOutput().endOpcodeVarInt();
       session.write();
       return;
@@ -1834,14 +1835,14 @@ public class ResponseServer implements Runnable, SessionHandler {
         }
       }
     }
-    session.getOutput().addShort(friend.getWorldId());
+    session.getOutput().writeShort(friend.getWorldId());
     session.getOutput().endOpcodeVarInt();
     session.write();
   }
 
   private void decodeSQLUpdate(ServerSession session) {
-    int key = session.getInput().getInt();
-    String sql = session.getInput().getString();
+    int key = session.getInput().readInt();
+    String sql = session.getInput().readString();
     synchronized (this) {
       requests.add(new SQLUpdateRequest(session, key, sql));
       sqlRequests.add(new SQLUpdateRequest(session, key, sql));
@@ -1853,8 +1854,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (DEBUG) {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.SQL_UPDATE);
     }
-    request.getSession().getOutput().addOpcodeVarInt(Opcodes.SQL_UPDATE);
-    request.getSession().getOutput().addInt(request.getKey());
+    request.getSession().getOutput().writeOpcodeVarInt(Opcodes.SQL_UPDATE);
+    request.getSession().getOutput().writeInt(request.getKey());
     request.getSession().getOutput().endOpcodeVarInt();
     request.getSession().write();
   }
@@ -1880,10 +1881,10 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeGERefresh(ServerSession session) {
-    int key = session.getInput().getInt();
-    int userId = session.getInput().getInt();
-    String username = session.getInput().getString();
-    int gameMode = session.getInput().getUByte();
+    int key = session.getInput().readInt();
+    int userId = session.getInput().readInt();
+    String username = session.getInput().readString();
+    int gameMode = session.getInput().readUnsignedByte();
     synchronized (this) {
       requests.add(new GERefreshRequest(session, key, userId, username, gameMode, 0));
       notify();
@@ -1899,8 +1900,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     synchronized (this) {
       user = grandExchange.get(request.getUserId());
     }
-    session.getOutput().addOpcodeVarInt(Opcodes.GE_REFRESH);
-    session.getOutput().addInt(request.getKey());
+    session.getOutput().writeOpcodeVarInt(Opcodes.GE_REFRESH);
+    session.getOutput().writeInt(request.getKey());
     if (user != null) {
       user.setUsername(request.getUsername());
       if (request.getGameMode() != 0) {
@@ -1913,22 +1914,22 @@ public class ResponseServer implements Runnable, SessionHandler {
           item = null;
         }
         if (item == null || item.getId() == -1 || item.getAmount() <= 0) {
-          session.getOutput().addInt(-1);
+          session.getOutput().writeInt(-1);
           continue;
         }
-        session.getOutput().addInt(item.getId());
-        session.getOutput().addByte(item.getState());
-        session.getOutput().addInt(item.getAmount());
-        session.getOutput().addInt(item.getPrice());
-        session.getOutput().addInt(item.getExchangedAmount());
-        session.getOutput().addInt(item.getExchangedPrice());
-        session.getOutput().addInt(item.getCollectedAmount());
-        session.getOutput().addInt(item.getCollectedPrice());
-        session.getOutput().addBoolean(item.getAborted());
+        session.getOutput().writeInt(item.getId());
+        session.getOutput().writeByte(item.getState());
+        session.getOutput().writeInt(item.getAmount());
+        session.getOutput().writeInt(item.getPrice());
+        session.getOutput().writeInt(item.getExchangedAmount());
+        session.getOutput().writeInt(item.getExchangedPrice());
+        session.getOutput().writeInt(item.getCollectedAmount());
+        session.getOutput().writeInt(item.getCollectedPrice());
+        session.getOutput().writeBoolean(item.getAborted());
       }
     } else {
       for (int i = 0; i < GrandExchangeItem.MAX_P2P_ITEMS; i++) {
-        session.getOutput().addInt(-1);
+        session.getOutput().writeInt(-1);
       }
     }
     session.getOutput().endOpcodeVarInt();
@@ -1940,10 +1941,10 @@ public class ResponseServer implements Runnable, SessionHandler {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_REFRESH);
     }
     for (ServerSession session : sessions.values()) {
-      session.getOutput().addOpcodeVarInt(Opcodes.GE_REFRESH);
-      session.getOutput().addInt(-1);
-      session.getOutput().addInt(user.getUserId());
-      session.getOutput().addByte(user.getGameMode());
+      session.getOutput().writeOpcodeVarInt(Opcodes.GE_REFRESH);
+      session.getOutput().writeInt(-1);
+      session.getOutput().writeInt(user.getUserId());
+      session.getOutput().writeByte(user.getGameMode());
       for (int i = 0; i < GrandExchangeItem.MAX_P2P_ITEMS; i++) {
         GrandExchangeItem item = user.getItem(i);
         if (item != null && item.canRemove()) {
@@ -1951,18 +1952,18 @@ public class ResponseServer implements Runnable, SessionHandler {
           item = null;
         }
         if (item == null || item.getId() == -1 || item.getAmount() <= 0) {
-          session.getOutput().addInt(-1);
+          session.getOutput().writeInt(-1);
           continue;
         }
-        session.getOutput().addInt(item.getId());
-        session.getOutput().addByte(item.getState());
-        session.getOutput().addInt(item.getAmount());
-        session.getOutput().addInt(item.getPrice());
-        session.getOutput().addInt(item.getExchangedAmount());
-        session.getOutput().addInt(item.getExchangedPrice());
-        session.getOutput().addInt(item.getCollectedAmount());
-        session.getOutput().addInt(item.getCollectedPrice());
-        session.getOutput().addBoolean(item.getAborted());
+        session.getOutput().writeInt(item.getId());
+        session.getOutput().writeByte(item.getState());
+        session.getOutput().writeInt(item.getAmount());
+        session.getOutput().writeInt(item.getPrice());
+        session.getOutput().writeInt(item.getExchangedAmount());
+        session.getOutput().writeInt(item.getExchangedPrice());
+        session.getOutput().writeInt(item.getCollectedAmount());
+        session.getOutput().writeInt(item.getCollectedPrice());
+        session.getOutput().writeBoolean(item.getAborted());
       }
       session.getOutput().endOpcodeVarInt();
       session.write();
@@ -1970,16 +1971,16 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeGEBuyOffer(ServerSession session) {
-    int key = session.getInput().getInt();
-    int userId = session.getInput().getInt();
-    String username = session.getInput().getString();
-    String ip = session.getInput().getString();
-    int gameMode = session.getInput().getUByte();
-    int slot = session.getInput().getUByte();
-    int id = session.getInput().getInt();
-    String itemName = session.getInput().getString();
-    int amount = session.getInput().getInt();
-    int price = session.getInput().getInt();
+    int key = session.getInput().readInt();
+    int userId = session.getInput().readInt();
+    String username = session.getInput().readString();
+    String ip = session.getInput().readString();
+    int gameMode = session.getInput().readUnsignedByte();
+    int slot = session.getInput().readUnsignedByte();
+    int id = session.getInput().readInt();
+    String itemName = session.getInput().readString();
+    int amount = session.getInput().readInt();
+    int price = session.getInput().readInt();
     synchronized (this) {
       requests.add(new GEBuyOfferRequest(session, key, userId, username, ip, gameMode, slot, id,
           itemName, amount, price));
@@ -1991,8 +1992,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (DEBUG) {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_BUY_OFFER);
     }
-    request.getSession().getOutput().addOpcodeVarInt(Opcodes.GE_BUY_OFFER);
-    request.getSession().getOutput().addInt(request.getKey());
+    request.getSession().getOutput().writeOpcodeVarInt(Opcodes.GE_BUY_OFFER);
+    request.getSession().getOutput().writeInt(request.getKey());
     request.getSession().getOutput().endOpcodeVarInt();
     request.getSession().write();
     GrandExchangeUser user;
@@ -2015,16 +2016,16 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeGESellOffer(ServerSession session) {
-    int key = session.getInput().getInt();
-    int userId = session.getInput().getInt();
-    String username = session.getInput().getString();
-    String userIP = session.getInput().getString();
-    int gameMode = session.getInput().getUByte();
-    int slot = session.getInput().getUByte();
-    int id = session.getInput().getInt();
-    String name = session.getInput().getString();
-    int amount = session.getInput().getInt();
-    int price = session.getInput().getInt();
+    int key = session.getInput().readInt();
+    int userId = session.getInput().readInt();
+    String username = session.getInput().readString();
+    String userIP = session.getInput().readString();
+    int gameMode = session.getInput().readUnsignedByte();
+    int slot = session.getInput().readUnsignedByte();
+    int id = session.getInput().readInt();
+    String name = session.getInput().readString();
+    int amount = session.getInput().readInt();
+    int price = session.getInput().readInt();
     synchronized (this) {
       requests.add(new GESellOfferRequest(session, key, userId, username, userIP, gameMode, slot,
           id, name, amount, price));
@@ -2036,8 +2037,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (DEBUG) {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_SELL_OFFER);
     }
-    request.getSession().getOutput().addOpcodeVarInt(Opcodes.GE_SELL_OFFER);
-    request.getSession().getOutput().addInt(request.getKey());
+    request.getSession().getOutput().writeOpcodeVarInt(Opcodes.GE_SELL_OFFER);
+    request.getSession().getOutput().writeInt(request.getKey());
     request.getSession().getOutput().endOpcodeVarInt();
     request.getSession().write();
     GrandExchangeUser user;
@@ -2060,9 +2061,9 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeGEAbortOffer(ServerSession session) {
-    int key = session.getInput().getInt();
-    int userId = session.getInput().getInt();
-    int slot = session.getInput().getUByte();
+    int key = session.getInput().readInt();
+    int userId = session.getInput().readInt();
+    int slot = session.getInput().readUnsignedByte();
     synchronized (this) {
       requests.add(new GEAbortOfferRequest(session, key, userId, slot));
       notify();
@@ -2073,8 +2074,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (DEBUG) {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_ABORT_OFFER);
     }
-    request.getSession().getOutput().addOpcodeVarInt(Opcodes.GE_ABORT_OFFER);
-    request.getSession().getOutput().addInt(request.getKey());
+    request.getSession().getOutput().writeOpcodeVarInt(Opcodes.GE_ABORT_OFFER);
+    request.getSession().getOutput().writeInt(request.getKey());
     request.getSession().getOutput().endOpcodeVarInt();
     request.getSession().write();
     GrandExchangeUser user;
@@ -2090,11 +2091,11 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeGECollectOffer(ServerSession session) {
-    int key = session.getInput().getInt();
-    int userId = session.getInput().getInt();
-    int slot = session.getInput().getUByte();
-    int collectedAmount = session.getInput().getInt();
-    int collectedPrice = session.getInput().getInt();
+    int key = session.getInput().readInt();
+    int userId = session.getInput().readInt();
+    int slot = session.getInput().readUnsignedByte();
+    int collectedAmount = session.getInput().readInt();
+    int collectedPrice = session.getInput().readInt();
     synchronized (this) {
       requests.add(
           new GECollectOfferRequest(session, key, userId, slot, collectedAmount, collectedPrice));
@@ -2106,8 +2107,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (DEBUG) {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_COLLECT_OFFER);
     }
-    request.getSession().getOutput().addOpcodeVarInt(Opcodes.GE_COLLECT_OFFER);
-    request.getSession().getOutput().addInt(request.getKey());
+    request.getSession().getOutput().writeOpcodeVarInt(Opcodes.GE_COLLECT_OFFER);
+    request.getSession().getOutput().writeInt(request.getKey());
     request.getSession().getOutput().endOpcodeVarInt();
     request.getSession().write();
     GrandExchangeUser user;
@@ -2123,10 +2124,10 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeGEPriceAverage(ServerSession session) {
-    int key = session.getInput().getInt();
-    int userId = session.getInput().getInt();
-    int gameMode = session.getInput().getUByte();
-    int itemId = session.getInput().getInt();
+    int key = session.getInput().readInt();
+    int userId = session.getInput().readInt();
+    int gameMode = session.getInput().readUnsignedByte();
+    int itemId = session.getInput().readInt();
     synchronized (this) {
       requests.add(new GEPriceAverageRequest(session, key, userId, gameMode, itemId));
       notify();
@@ -2172,21 +2173,21 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (totalSell > 0) {
       averageSell = (int) (totalSellPrice / totalSell);
     }
-    request.getSession().getOutput().addOpcodeVarInt(Opcodes.GE_PRICE_AVERAGE);
-    request.getSession().getOutput().addInt(request.getKey());
-    request.getSession().getOutput().addInt(totalBuy);
-    request.getSession().getOutput().addInt(averageBuy);
-    request.getSession().getOutput().addInt(totalSell);
-    request.getSession().getOutput().addInt(averageSell);
-    request.getSession().getOutput().addInt(cheapestSell);
+    request.getSession().getOutput().writeOpcodeVarInt(Opcodes.GE_PRICE_AVERAGE);
+    request.getSession().getOutput().writeInt(request.getKey());
+    request.getSession().getOutput().writeInt(totalBuy);
+    request.getSession().getOutput().writeInt(averageBuy);
+    request.getSession().getOutput().writeInt(totalSell);
+    request.getSession().getOutput().writeInt(averageSell);
+    request.getSession().getOutput().writeInt(cheapestSell);
     request.getSession().getOutput().endOpcodeVarInt();
     request.getSession().write();
   }
 
   private void decodeGEHistory(ServerSession session) {
-    int key = session.getInput().getInt();
-    int userId = session.getInput().getInt();
-    int type = session.getInput().getUByte();
+    int key = session.getInput().readInt();
+    int userId = session.getInput().readInt();
+    int type = session.getInput().readUnsignedByte();
     synchronized (this) {
       requests.add(new GEHistoryRequest(session, key, userId, type));
       notify();
@@ -2197,8 +2198,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (DEBUG) {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_HISTORY);
     }
-    request.getSession().getOutput().addOpcodeVarInt(Opcodes.GE_HISTORY);
-    request.getSession().getOutput().addInt(request.getKey());
+    request.getSession().getOutput().writeOpcodeVarInt(Opcodes.GE_HISTORY);
+    request.getSession().getOutput().writeInt(request.getKey());
     int total = 0;
     if (request.getType() == GrandExchangeUser.HISTORY_RECENT
         || request.getType() == GrandExchangeUser.HISTORY_RECENT_BUY
@@ -2249,10 +2250,10 @@ public class ResponseServer implements Runnable, SessionHandler {
                   || item.getState() == state2) {
                 continue;
               }
-              request.getSession().getOutput().addInt(item.getId());
-              request.getSession().getOutput().addByte(item.getState());
-              request.getSession().getOutput().addInt(item.getAmount());
-              request.getSession().getOutput().addInt(item.getPrice());
+              request.getSession().getOutput().writeInt(item.getId());
+              request.getSession().getOutput().writeByte(item.getState());
+              request.getSession().getOutput().writeInt(item.getAmount());
+              request.getSession().getOutput().writeInt(item.getPrice());
               total++;
               break;
             }
@@ -2261,20 +2262,20 @@ public class ResponseServer implements Runnable, SessionHandler {
       }
     }
     while (total++ < GrandExchangeUser.HISTORY_SIZE) {
-      request.getSession().getOutput().addInt(-1);
-      request.getSession().getOutput().addByte(0);
-      request.getSession().getOutput().addInt(0);
-      request.getSession().getOutput().addInt(0);
+      request.getSession().getOutput().writeInt(-1);
+      request.getSession().getOutput().writeByte(0);
+      request.getSession().getOutput().writeInt(0);
+      request.getSession().getOutput().writeInt(0);
     }
     request.getSession().getOutput().endOpcodeVarInt();
     request.getSession().write();
   }
 
   private void decodeLog(ServerSession session, int length) {
-    int key = session.getInput().getInt();
-    String directory1 = session.getInput().getString();
-    String directory2 = session.getInput().getString();
-    String line = session.getInput().getString();
+    int key = session.getInput().readInt();
+    String directory1 = session.getInput().readString();
+    String directory2 = session.getInput().readString();
+    String line = session.getInput().readString();
     lastLog3 = lastLog2;
     lastLog2 = lastLog1;
     lastLog1 = "[" + directory1 + ", " + directory2 + ", " + length + "] " + line;
@@ -2293,8 +2294,8 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeGEShop(ServerSession session) {
-    int key = session.getInput().getInt();
-    String username = session.getInput().getString();
+    int key = session.getInput().readInt();
+    String username = session.getInput().readString();
     synchronized (this) {
       requests.add(new GEShopRequest(session, key, username));
       notify();
@@ -2310,12 +2311,12 @@ public class ResponseServer implements Runnable, SessionHandler {
     synchronized (this) {
       user = getGrandExchangeUser(request.getUsername());
     }
-    session.getOutput().addOpcodeVarInt(Opcodes.GE_SHOP);
-    session.getOutput().addInt(request.getKey());
+    session.getOutput().writeOpcodeVarInt(Opcodes.GE_SHOP);
+    session.getOutput().writeInt(request.getKey());
     if (user != null) {
-      session.getOutput().addInt(user.getUserId());
-      session.getOutput().addString(user.getUsername());
-      session.getOutput().addByte(user.getGameMode());
+      session.getOutput().writeInt(user.getUserId());
+      session.getOutput().writeString(user.getUsername());
+      session.getOutput().writeByte(user.getGameMode());
       for (int i = 0; i < GrandExchangeItem.MAX_P2P_ITEMS; i++) {
         GrandExchangeItem item = user.getItem(i);
         if (item != null && item.canRemove()) {
@@ -2323,25 +2324,25 @@ public class ResponseServer implements Runnable, SessionHandler {
           item = null;
         }
         if (item == null || item.getId() == -1 || item.getAmount() <= 0) {
-          session.getOutput().addInt(-1);
+          session.getOutput().writeInt(-1);
           continue;
         }
-        session.getOutput().addInt(item.getId());
-        session.getOutput().addByte(item.getState());
-        session.getOutput().addInt(item.getAmount());
-        session.getOutput().addInt(item.getPrice());
-        session.getOutput().addInt(item.getExchangedAmount());
-        session.getOutput().addInt(item.getExchangedPrice());
-        session.getOutput().addInt(item.getCollectedAmount());
-        session.getOutput().addInt(item.getCollectedPrice());
-        session.getOutput().addBoolean(item.getAborted());
+        session.getOutput().writeInt(item.getId());
+        session.getOutput().writeByte(item.getState());
+        session.getOutput().writeInt(item.getAmount());
+        session.getOutput().writeInt(item.getPrice());
+        session.getOutput().writeInt(item.getExchangedAmount());
+        session.getOutput().writeInt(item.getExchangedPrice());
+        session.getOutput().writeInt(item.getCollectedAmount());
+        session.getOutput().writeInt(item.getCollectedPrice());
+        session.getOutput().writeBoolean(item.getAborted());
       }
     } else {
-      session.getOutput().addInt(-1);
-      session.getOutput().addString("");
-      session.getOutput().addByte(0);
+      session.getOutput().writeInt(-1);
+      session.getOutput().writeString("");
+      session.getOutput().writeByte(0);
       for (int i = 0; i < GrandExchangeItem.MAX_P2P_ITEMS; i++) {
-        session.getOutput().addInt(-1);
+        session.getOutput().writeInt(-1);
       }
     }
     session.getOutput().endOpcodeVarInt();
@@ -2349,17 +2350,17 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeGEShopOffer(ServerSession session) {
-    int key = session.getInput().getInt();
-    int userId = session.getInput().getInt();
-    String username = session.getInput().getString();
-    String ip = session.getInput().getString();
-    int gameMode = session.getInput().getUByte();
-    int shopUserId = session.getInput().getInt();
-    int slot = session.getInput().getUByte();
-    int id = session.getInput().getInt();
-    int amount = session.getInput().getInt();
-    int price = session.getInput().getInt();
-    int state = session.getInput().getUByte();
+    int key = session.getInput().readInt();
+    int userId = session.getInput().readInt();
+    String username = session.getInput().readString();
+    String ip = session.getInput().readString();
+    int gameMode = session.getInput().readUnsignedByte();
+    int shopUserId = session.getInput().readInt();
+    int slot = session.getInput().readUnsignedByte();
+    int id = session.getInput().readInt();
+    int amount = session.getInput().readInt();
+    int price = session.getInput().readInt();
+    int state = session.getInput().readUnsignedByte();
     synchronized (this) {
       requests.add(new GEShopOfferRequest(session, key, userId, username, ip, gameMode, shopUserId,
           slot, id, amount, price, state));
@@ -2371,8 +2372,8 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (DEBUG) {
       PLogger.println("[" + PTime.getFullDate() + "] Encode: " + Opcodes.GE_SHOP_OFFER);
     }
-    request.getSession().getOutput().addOpcodeVarInt(Opcodes.GE_SHOP_OFFER);
-    request.getSession().getOutput().addInt(request.getKey());
+    request.getSession().getOutput().writeOpcodeVarInt(Opcodes.GE_SHOP_OFFER);
+    request.getSession().getOutput().writeInt(request.getKey());
     GrandExchangeUser user;
     synchronized (this) {
       user = grandExchange.get(request.getShopUserId());
@@ -2389,7 +2390,7 @@ public class ResponseServer implements Runnable, SessionHandler {
         || (request.isGameModeHard() && !user.isGameModeHard()
             || !request.isGameModeHard() && user.isGameModeHard())
             && GrandExchangeItem.isBlockedHardModeItem(item.getId())) {
-      request.getSession().getOutput().addBoolean(false);
+      request.getSession().getOutput().writeBoolean(false);
       request.getSession().getOutput().endOpcodeVarInt();
       request.getSession().write();
       return;
@@ -2418,7 +2419,7 @@ public class ResponseServer implements Runnable, SessionHandler {
     FileManager.writeLog(Settings.getInstance().getPlayerLogsDirectory(),
         "exchange/" + user.getUserId() + ".txt", log2String);
     item.increaseExchanged(request.getAmount(), request.getPrice());
-    request.getSession().getOutput().addBoolean(true);
+    request.getSession().getOutput().writeBoolean(true);
     request.getSession().getOutput().endOpcodeVarInt();
     request.getSession().write();
     encodeGERefresh(user);
@@ -2426,11 +2427,11 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private void decodeGEList(ServerSession session) {
-    int key = session.getInput().getInt();
-    int userId = session.getInput().getInt();
-    int type = session.getInput().getUByte();
-    int searchId = session.getInput().getInt();
-    String searchString = session.getInput().getString();
+    int key = session.getInput().readInt();
+    int userId = session.getInput().readInt();
+    int type = session.getInput().readUnsignedByte();
+    int searchId = session.getInput().readInt();
+    String searchString = session.getInput().readString();
     synchronized (this) {
       requests.add(new GEListRequest(session, key, userId, type, searchId, searchString));
       notify();
@@ -2523,12 +2524,12 @@ public class ResponseServer implements Runnable, SessionHandler {
       }
     }
     ServerSession session = request.getSession();
-    session.getOutput().addOpcodeVarInt(Opcodes.GE_LIST);
-    session.getOutput().addInt(request.getKey());
-    session.getOutput().addString(title);
-    session.getOutput().addByte(list.size());
+    session.getOutput().writeOpcodeVarInt(Opcodes.GE_LIST);
+    session.getOutput().writeInt(request.getKey());
+    session.getOutput().writeString(title);
+    session.getOutput().writeByte(list.size());
     for (String s : list) {
-      session.getOutput().addString(s);
+      session.getOutput().writeString(s);
     }
     session.getOutput().endOpcodeVarInt();
     session.write();

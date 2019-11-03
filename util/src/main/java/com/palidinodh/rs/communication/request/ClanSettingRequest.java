@@ -31,7 +31,7 @@ public class ClanSettingRequest extends Request {
     return type;
   }
 
-  public String getString() {
+  public String readString() {
     return string;
   }
 

@@ -5,7 +5,7 @@ import java.util.Map;
 import com.palidinodh.io.FileManager;
 import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.PacketDecoder;
-import com.palidinodh.osrscore.io.Widget;
+import com.palidinodh.osrscore.io.incomingpacket.WidgetHandler;
 import com.palidinodh.osrscore.io.cache.ItemId;
 import com.palidinodh.osrscore.io.cache.WidgetId;
 import com.palidinodh.osrscore.model.player.AchievementDiary;
@@ -18,7 +18,7 @@ import com.palidinodh.util.PLogger;
 import lombok.var;
 
 public class WidgetDecoder extends PacketDecoder {
-  private static Map<Integer, Widget> widgets = new HashMap<>();
+  private static Map<Integer, WidgetHandler> widgets = new HashMap<>();
 
   /*
    * 0-9: normal widget option; 10: old widget option; 11: dialogue option
@@ -33,15 +33,15 @@ public class WidgetDecoder extends PacketDecoder {
     var slot = -1;
     var itemId = -1;
     if (index == 11) {
-      widgetHash = stream.getIntV3();
-      slot = stream.getUShort128();
+      widgetHash = stream.readInt2();
+      slot = stream.readUnsignedShortA();
     } else {
-      widgetHash = stream.getInt();
+      widgetHash = stream.readInt();
       slot = -1;
       itemId = -1;
       if (size == 8) {
-        slot = stream.getUShort();
-        itemId = stream.getUShort();
+        slot = stream.readUnsignedShort();
+        itemId = stream.readUnsignedShort();
       }
     }
     var widgetId = widgetHash >> 16;
@@ -111,10 +111,10 @@ public class WidgetDecoder extends PacketDecoder {
 
   static {
     try {
-      var classes =
-          FileManager.getClasses(Widget.class, "com.palidinodh.osrsscript.packetdecoder.widget");
+      var classes = FileManager.getClasses(WidgetHandler.class,
+          "com.palidinodh.osrsscript.incomingpacket.widget");
       for (var clazz : classes) {
-        var classInstance = (Widget) clazz.newInstance();
+        var classInstance = (WidgetHandler) clazz.newInstance();
         for (var widgetId : classInstance.getIds()) {
           if (widgets.containsKey(widgetId)) {
             throw new Exception(clazz.getName() + " - " + widgetId + ": widget id already used.");

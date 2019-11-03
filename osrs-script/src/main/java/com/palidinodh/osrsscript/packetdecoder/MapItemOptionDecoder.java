@@ -25,10 +25,10 @@ public class MapItemOptionDecoder extends PacketDecoder {
     var y = -1;
     var moveType = 0;
     if (index == 2) {
-      y = stream.getUShortLE();
-      moveType = stream.getU128Byte();
-      x = stream.getUShortLE();
-      id = stream.getUShortLE();
+      y = stream.readUnsignedLEShort();
+      moveType = stream.readUnsignedByteS();
+      x = stream.readUnsignedLEShort();
+      id = stream.readUnsignedLEShort();
     }
     var message = "[MapItemOption(" + index + ")] id=" + id + "/" + ItemId.valueOf(id) + "; x=" + x
         + "; y=" + y + "; moveType=" + moveType;

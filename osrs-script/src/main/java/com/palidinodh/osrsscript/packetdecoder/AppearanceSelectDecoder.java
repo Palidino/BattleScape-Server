@@ -15,13 +15,13 @@ public class AppearanceSelectDecoder extends PacketDecoder {
 
   @Override
   public void execute(Player player, int index, int size, Stream stream) {
-    var gender = stream.getUByte();
+    var gender = stream.readUnsignedByte();
     if (gender != Appearance.MALE && gender != Appearance.FEMALE) {
       return;
     }
     var styles = new int[player.getAppearance().getStyles().length];
     for (var i = 0; i < styles.length; i++) {
-      var id = stream.getUByte();
+      var id = stream.readUnsignedByte();
       if (gender == Appearance.FEMALE && Style.get(i) == Style.BEARD) {
         styles[i] = -1;
         continue;
@@ -33,7 +33,7 @@ public class AppearanceSelectDecoder extends PacketDecoder {
     }
     var colors = new int[player.getAppearance().getColors().length];
     for (var i = 0; i < colors.length; i++) {
-      var id = stream.getUByte();
+      var id = stream.readUnsignedByte();
       colors[i] = id < IdentityKit.COLORS[i].length ? id : 0;
     }
     player.clearIdleTime();

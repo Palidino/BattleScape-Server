@@ -33,30 +33,30 @@ public class MapObjectOptionDecoder extends PacketDecoder {
     var y = -1;
     var moveType = 0;
     if (index == 0) {
-      y = stream.getUShort();
-      moveType = stream.getU128Byte();
-      id = stream.getUShort128();
-      x = stream.getUShortLE128();
+      y = stream.readUnsignedShort();
+      moveType = stream.readUnsignedByteS();
+      id = stream.readUnsignedShortA();
+      x = stream.readUnsignedLEShortA();
     } else if (index == 1) {
-      moveType = stream.getUByte128();
-      id = stream.getUShort();
-      y = stream.getUShort();
-      x = stream.getUShort();
+      moveType = stream.readUnsignedByteA();
+      id = stream.readUnsignedShort();
+      y = stream.readUnsignedShort();
+      x = stream.readUnsignedShort();
     } else if (index == 2) {
-      x = stream.getUShortLE128();
-      id = stream.getUShort128();
-      y = stream.getUShortLE128();
-      moveType = stream.getUByte128();
+      x = stream.readUnsignedLEShortA();
+      id = stream.readUnsignedShortA();
+      y = stream.readUnsignedLEShortA();
+      moveType = stream.readUnsignedByteA();
     } else if (index == 3) {
-      moveType = stream.getUByte128();
-      y = stream.getUShort128();
-      x = stream.getUShort128();
-      id = stream.getUShortLE();
+      moveType = stream.readUnsignedByteA();
+      y = stream.readUnsignedShortA();
+      x = stream.readUnsignedShortA();
+      id = stream.readUnsignedLEShort();
     } else if (index == 4) {
-      id = stream.getUShort();
-      moveType = stream.getUByte128();
-      x = stream.getUShort128();
-      y = stream.getUShortLE128();
+      id = stream.readUnsignedShort();
+      moveType = stream.readUnsignedByteA();
+      x = stream.readUnsignedShortA();
+      y = stream.readUnsignedLEShortA();
     }
     var mapObject = player.getController().getMapObject(id, x, y, player.getClientHeight());
     if (mapObject == null) {
@@ -162,7 +162,7 @@ public class MapObjectOptionDecoder extends PacketDecoder {
     if (!actionMethods.containsKey(mapObject.getId())) {
       try {
         var className =
-            "com.palidinodh.osrsscript.packetdecoder.misc.MapObject" + mapObject.getId() / 16384;
+            "com.palidinodh.osrsscript.incomingpacket.misc.MapObject" + mapObject.getId() / 16384;
         var classReference = Class.forName(className);
         var methodName = "mapObject" + mapObject.getId();
         var actionMethod =

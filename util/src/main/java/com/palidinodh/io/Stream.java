@@ -28,45 +28,12 @@ public class Stream {
     length = buffer.length;
   }
 
-  public void mark() {
-    mark = position;
-  }
-
   public int getMark() {
     return mark;
   }
 
-  public void reset() {
-    position = mark;
-  }
-
-  public void checkCapacity(int length) {
-    if (length >= buffer.length) {
-      byte[] newBuffer = new byte[length * 2];
-      System.arraycopy(buffer, 0, newBuffer, 0, buffer.length);
-      buffer = newBuffer;
-    }
-  }
-
-  public void skip(int length) {
-    position += length;
-  }
-
-  public byte[] toByteArray() {
-    byte[] bytes = new byte[position];
-    System.arraycopy(buffer, 0, bytes, 0, position);
-    return bytes;
-  }
-
   public int getPosition() {
     return position;
-  }
-
-  public void setPosition(int position) {
-    if (position < mark) {
-      mark = 0;
-    }
-    this.position = position;
   }
 
   public int getBitPosition() {
@@ -77,6 +44,17 @@ public class Stream {
     return length;
   }
 
+  public byte[] getArray() {
+    return buffer;
+  }
+
+  public void setPosition(int position) {
+    if (position < mark) {
+      mark = 0;
+    }
+    this.position = position;
+  }
+
   public void setLength(int length) {
     if (length < mark) {
       mark = 0;
@@ -84,13 +62,71 @@ public class Stream {
     this.length = length;
   }
 
-  public byte[] getArray() {
-    return buffer;
+  public int available() {
+    return position < length && position < buffer.length ? length - position : 0;
   }
 
-  public Stream addByte(int i) {
-    setByte(position++, i);
-    return this;
+  public byte[] toByteArray() {
+    byte[] bytes = new byte[position];
+    System.arraycopy(buffer, 0, bytes, 0, position);
+    return bytes;
+  }
+
+  public void clear() {
+    position = 0;
+    length = 0;
+    mark = 0;
+  }
+
+  public void mark() {
+    mark = position;
+  }
+
+  public void reset() {
+    position = mark;
+  }
+
+  public void skip(int length) {
+    position += length;
+  }
+
+  public void checkCapacity(int length) {
+    if (length >= buffer.length) {
+      byte[] newBuffer = new byte[length * 2];
+      System.arraycopy(buffer, 0, newBuffer, 0, buffer.length);
+      buffer = newBuffer;
+    }
+  }
+
+  public void appendBytes(byte[] b) {
+    appendBytes(b, 0, b.length);
+  }
+
+  public void appendBytes(byte[] b, int position, int count) {
+    checkCapacity(length + count);
+    System.arraycopy(b, position, buffer, length, count);
+    length += count;
+  }
+
+  public void appendBytes(int index, byte[] b) {
+    appendBytes(index, b, 0, b.length);
+  }
+
+  public void appendBytes(int index, byte[] b, int position, int count) {
+    if (index < 0 || index > length) {
+      return;
+    }
+    checkCapacity(length + count);
+    int numMoved = length - index;
+    if (numMoved > 0) {
+      System.arraycopy(buffer, index, buffer, index + count, numMoved);
+    }
+    System.arraycopy(b, position, buffer, index, count);
+    length += count;
+  }
+
+  public byte getByte(int position) {
+    return position >= 0 && position < length ? buffer[position] : 0;
   }
 
   public Stream setByte(int position, int i) {
@@ -99,245 +135,268 @@ public class Stream {
     return this;
   }
 
-  public Stream addByte128(int i) {
-    addByte(i + 128);
+  public int getBitsAvailable(int length) {
+    return length * 8 - position;
+  }
+
+  public Stream writeByte(int i) {
+    setByte(position++, i);
     return this;
   }
 
-  public Stream add128Byte(int i) {
-    addByte(128 - i);
+  public Stream writeByteA(int i) {
+    writeByte(i + 128);
     return this;
   }
 
-  public Stream addReversedByte(int i) {
-    addByte(-i);
+  public Stream writeByteS(int i) {
+    writeByte(128 - i);
     return this;
   }
 
-  public Stream addBoolean(boolean bool) {
-    addByte(bool ? 1 : 0);
+  public Stream writeByteC(int i) {
+    writeByte(-i);
     return this;
   }
 
-  public Stream addBytes(byte[] b) {
-    addBytes(b, 0, b.length);
+  public Stream writeBoolean(boolean bool) {
+    writeByte(bool ? 1 : 0);
     return this;
   }
 
-  public Stream addBytes(byte[] b, int position, int count) {
+  public Stream writeBytes(byte[] b) {
+    writeBytes(b, 0, b.length);
+    return this;
+  }
+
+  public Stream writeBytes(byte[] b, int position, int count) {
     checkCapacity(this.position + count);
     System.arraycopy(b, position, buffer, this.position, count);
     this.position += count;
     return this;
   }
 
-  public Stream addReversedBytes(byte[] b) {
-    addReversedBytes(b, 0, b.length);
+  public Stream writeBytesReversed(byte[] b) {
+    writeBytesReversed(b, 0, b.length);
     return this;
   }
 
-  public Stream addReversedBytes(byte[] b, int position, int count) {
+  public Stream writeBytesReversed(byte[] b, int position, int count) {
     for (int i = count + position - 1; i >= position; i--) {
-      addByte(b[i]);
+      writeByte(b[i]);
     }
     return this;
   }
 
-  public Stream addReversedBytes128(byte[] b) {
-    addReversedBytes128(b, 0, b.length);
+  public Stream writeBytesReversedA(byte[] b) {
+    writeBytesReversedA(b, 0, b.length);
     return this;
   }
 
-  public Stream addReversedBytes128(byte[] b, int position, int count) {
+  public Stream writeBytesReversedA(byte[] b, int position, int count) {
     for (int i = count + position - 1; i >= position; i--) {
-      addByte(b[i] + 128);
+      writeByte(b[i] + 128);
     }
     return this;
   }
 
-  public Stream addBytes128(byte[] b) {
-    addBytes128(b, 0, b.length);
+  public Stream writeBytesA(byte[] b) {
+    writeBytesA(b, 0, b.length);
     return this;
   }
 
-  public Stream addBytes128(byte[] b, int position, int count) {
+  public Stream writeBytesA(byte[] b, int position, int count) {
     for (int i = position; i < count + position; i++) {
-      addByte128(b[i]);
+      writeByteA(b[i]);
     }
     return this;
   }
 
-  public Stream addShort(int i) {
-    addByte(i >> 8);
-    addByte(i);
+  public Stream writeShort(int i) {
+    writeByte(i >> 8);
+    writeByte(i);
     return this;
   }
 
-  public Stream addShortLE(int i) {
-    addByte(i);
-    addByte(i >> 8);
+  public Stream writeLEShort(int i) {
+    writeByte(i);
+    writeByte(i >> 8);
     return this;
   }
 
-  public Stream addShort128(int i) {
-    addByte(i >> 8);
-    addByte(i + 128);
+  public Stream writeShortA(int i) {
+    writeByte(i >> 8);
+    writeByte(i + 128);
     return this;
   }
 
-  public Stream addShortLE128(int i) {
-    addByte(i + 128);
-    addByte(i >> 8);
+  public Stream writeLEShortA(int i) {
+    writeByte(i + 128);
+    writeByte(i >> 8);
     return this;
   }
 
-  public Stream addSmart(int i) {
+  public Stream writeSmart(int i) {
     if (i >= 0 && i < 128) {
-      addByte(i);
+      writeByte(i);
     } else if (i >= 0 && i < 32768) {
-      addShort(i + 32768);
+      writeShort(i + 32768);
     } else {
       throw new IllegalArgumentException();
     }
     return this;
   }
 
-  public Stream addBigSmart(int i) {
+  public Stream writeBigSmart(int i) {
     if (i >= Short.MAX_VALUE) {
-      addInt(i - Integer.MAX_VALUE - 1);
+      writeInt(i - Integer.MAX_VALUE - 1);
     } else {
-      addShort(i >= 0 ? i : 32767);
+      writeShort(i >= 0 ? i : 32767);
     }
     return this;
   }
 
-  public Stream addHugeSmart(int i) {
+  public Stream writeHugeSmart(int i) {
     if (i < 32767) {
-      addSmart(i);
+      writeSmart(i);
     } else {
       int divisions = i / 32767;
       for (int i2 = 0; i2 < divisions; i2++) {
-        addSmart(32767);
+        writeSmart(32767);
       }
-      addSmart(i - 32767 * divisions);
+      writeSmart(i - 32767 * divisions);
     }
     return this;
   }
 
-  public Stream add24Int(int i) {
-    addByte(i >> 16);
-    addByte(i >> 8);
-    addByte(i);
+  public Stream writeTriByte(int i) {
+    writeByte(i >> 16);
+    writeByte(i >> 8);
+    writeByte(i);
     return this;
   }
 
-  public Stream addInt(int i) {
-    addByte(i >> 24);
-    addByte(i >> 16);
-    addByte(i >> 8);
-    addByte(i);
+  public Stream writeLETriByte(int i) {
+    writeByte(i);
+    writeByte(i >> 8);
+    writeByte(i >> 16);
     return this;
   }
 
-  public Stream addIntLE(int i) {
-    addByte(i);
-    addByte(i >> 8);
-    addByte(i >> 16);
-    addByte(i >> 24);
+  public Stream writeTriByte1(int i) {
+    writeByte(i >> 8);
+    writeByte(i >> 16);
+    writeByte(i);
     return this;
   }
 
-  public Stream addIntV2(int i) {
-    addByte(i >> 8);
-    addByte(i);
-    addByte(i >> 24);
-    addByte(i >> 16);
+  public Stream writeInt(int i) {
+    writeByte(i >> 24);
+    writeByte(i >> 16);
+    writeByte(i >> 8);
+    writeByte(i);
     return this;
   }
 
-  public Stream addIntV3(int i) {
-    addByte(i >> 16);
-    addByte(i >> 24);
-    addByte(i);
-    addByte(i >> 8);
+  public Stream writeLEInt(int i) {
+    writeByte(i);
+    writeByte(i >> 8);
+    writeByte(i >> 16);
+    writeByte(i >> 24);
     return this;
   }
 
-  public Stream add40Int(int i) {
-    addByte(i >> 32);
-    addByte(i >> 24);
-    addByte(i >> 16);
-    addByte(i >> 8);
-    addByte(i);
+  public Stream writeInt1(int i) {
+    writeByte(i >> 8);
+    writeByte(i);
+    writeByte(i >> 24);
+    writeByte(i >> 16);
     return this;
   }
 
-  public Stream add48Int(int i) {
-    addByte(i >> 40);
-    addByte(i >> 32);
-    addByte(i >> 24);
-    addByte(i >> 16);
-    addByte(i >> 8);
-    addByte(i);
+  public Stream writeInt2(int i) {
+    writeByte(i >> 16);
+    writeByte(i >> 24);
+    writeByte(i);
+    writeByte(i >> 8);
     return this;
   }
 
-  public Stream addDouble(Double d) {
-    addLong(Double.doubleToLongBits(d));
+  public Stream writePentaByte(int i) {
+    writeByte(i >> 32);
+    writeByte(i >> 24);
+    writeByte(i >> 16);
+    writeByte(i >> 8);
+    writeByte(i);
     return this;
   }
 
-  public Stream addLong(long l) {
-    addByte((int) (l >> 56));
-    addByte((int) (l >> 48));
-    addByte((int) (l >> 40));
-    addByte((int) (l >> 32));
-    addByte((int) (l >> 24));
-    addByte((int) (l >> 16));
-    addByte((int) (l >> 8));
-    addByte((int) l);
+  public Stream writeHexaByte(int i) {
+    writeByte(i >> 40);
+    writeByte(i >> 32);
+    writeByte(i >> 24);
+    writeByte(i >> 16);
+    writeByte(i >> 8);
+    writeByte(i);
     return this;
   }
 
-  public Stream addString(String s) {
+  public Stream writeDouble(Double d) {
+    writeLong(Double.doubleToLongBits(d));
+    return this;
+  }
+
+  public Stream writeLong(long l) {
+    writeByte((int) (l >> 56));
+    writeByte((int) (l >> 48));
+    writeByte((int) (l >> 40));
+    writeByte((int) (l >> 32));
+    writeByte((int) (l >> 24));
+    writeByte((int) (l >> 16));
+    writeByte((int) (l >> 8));
+    writeByte((int) l);
+    return this;
+  }
+
+  public Stream writeString(String s) {
     if (s.length() > MAX_STRING_LENGTH) {
       s = s.substring(0, MAX_STRING_LENGTH);
     }
     checkCapacity(position + s.length() + 1);
     System.arraycopy(s.getBytes(), 0, buffer, position, s.length());
     position += s.length();
-    addByte(0);
+    writeByte(0);
     return this;
   }
 
-  public Stream addJString(String s) {
-    addByte(0);
-    addString(s);
+  public Stream WriteJString(String s) {
+    writeByte(0);
+    writeString(s);
     return this;
   }
 
-  public Stream addOpcode(int id) {
-    addEncryptedByte(id);
+  public Stream writeOpcode(int id) {
+    writeEncryptedByte(id);
     return this;
   }
 
-  public Stream addOpcodeVarByte(int id) {
-    addOpcode(id);
-    addByte(0);
+  public Stream writeOpcodeVarByte(int id) {
+    writeOpcode(id);
+    writeByte(0);
     opcodeStart = position - 1;
     return this;
   }
 
-  public Stream addOpcodeVarShort(int id) {
-    addOpcode(id);
-    addShort(0);
+  public Stream writeOpcodeVarShort(int id) {
+    writeOpcode(id);
+    writeShort(0);
     opcodeStart = position - 2;
     return this;
   }
 
-  public Stream addOpcodeVarInt(int id) {
-    addOpcode(id);
-    addInt(0);
+  public Stream writeOpcodeVarInt(int id) {
+    writeOpcode(id);
+    writeInt(0);
     opcodeStart = position - 4;
     return this;
   }
@@ -373,20 +432,20 @@ public class Stream {
     return this;
   }
 
-  public Stream addEncryptedByte(int id) {
-    addByte(id);
+  public Stream writeEncryptedByte(int id) {
+    writeByte(id);
     return this;
   }
 
-  public Stream addEncryptedBytes(byte[] b) {
-    addEncryptedBytes(b, 0, b.length);
+  public Stream writeEncryptedBytes(byte[] b) {
+    writeEncryptedBytes(b, 0, b.length);
     return this;
   }
 
-  public Stream addEncryptedBytes(byte[] b, int position, int count) {
+  public Stream writeEncryptedBytes(byte[] b, int position, int count) {
     checkCapacity(this.position + count);
     for (byte aByte : b) {
-      addEncryptedByte(aByte);
+      writeEncryptedByte(aByte);
     }
     return this;
   }
@@ -401,7 +460,7 @@ public class Stream {
     return this;
   }
 
-  public Stream addBits(int numBits, int value) {
+  public Stream writeBits(int numBits, int value) {
     int bytePos = bitPosition >> 3;
     int bitposition = 8 - (bitPosition & 7);
     bitPosition += numBits;
@@ -422,279 +481,235 @@ public class Stream {
     return this;
   }
 
-  public Stream addScript(Map<Integer, Object> script) {
-    addByte(script.size());
+  public Stream writeScript(Map<Integer, Object> script) {
+    writeByte(script.size());
     for (Map.Entry<Integer, Object> entry : script.entrySet()) {
-      addByte(entry.getValue() instanceof String ? 1 : 0);
-      add24Int(entry.getKey());
+      writeByte(entry.getValue() instanceof String ? 1 : 0);
+      writeTriByte(entry.getKey());
       if (entry.getValue() instanceof String) {
-        addString((String) entry.getValue());
+        writeString((String) entry.getValue());
       } else {
-        addInt(entry.getValue() instanceof Integer ? (int) entry.getValue() : 0);
+        writeInt(entry.getValue() instanceof Integer ? (int) entry.getValue() : 0);
       }
     }
     return this;
   }
 
-  public int available() {
-    return position < length && position < buffer.length ? length - position : 0;
+  public void readBytes(byte[] b) {
+    readBytes(b, 0, b.length);
   }
 
-  public void clear() {
-    position = 0;
-    length = 0;
-    mark = 0;
-  }
-
-  public void appendBytes(byte[] b) {
-    appendBytes(b, 0, b.length);
-  }
-
-  public void appendBytes(byte[] b, int position, int count) {
-    checkCapacity(length + count);
-    System.arraycopy(b, position, buffer, length, count);
-    length += count;
-  }
-
-  public void appendBytes(int index, byte[] b) {
-    appendBytes(index, b, 0, b.length);
-  }
-
-  public void appendBytes(int index, byte[] b, int position, int count) {
-    if (index < 0 || index > length) {
-      return;
-    }
-    checkCapacity(length + count);
-    int numMoved = length - index;
-    if (numMoved > 0) {
-      System.arraycopy(buffer, index, buffer, index + count, numMoved);
-    }
-    System.arraycopy(b, position, buffer, index, count);
-    length += count;
-  }
-
-
-  public void getBytes(byte[] b) {
-    getBytes(b, 0, b.length);
-  }
-
-  public void getBytes(byte[] b, int position, int count) {
+  public void readBytes(byte[] b, int position, int count) {
     System.arraycopy(buffer, this.position, b, position, count);
     this.position += count;
   }
 
-  public void getReversedBytes(byte[] b, int position, int count) {
-    for (int i = count + position - 1; i >= position; i--) {
-      b[i] = getByte();
-    }
-  }
-
-  public void getReversedBytes128(byte[] b, int position, int count) {
-    for (int i = count + position - 1; i >= position; i--) {
-      b[i] = getByte128();
-    }
-  }
-
-  public void getBytes128(byte[] b, int position, int count) {
+  public void readBytesA(byte[] b, int position, int count) {
     for (int i = position; i < count + position; i++) {
-      b[i] = getByte128();
+      b[i] = readByteA();
     }
   }
 
-  public byte getByte(int position) {
-    return position >= 0 && position < length ? buffer[position] : 0;
+  public void readBytesReversed(byte[] b, int position, int count) {
+    for (int i = count + position - 1; i >= position; i--) {
+      b[i] = readByte();
+    }
   }
 
-  public byte getByte() {
+  public void readBytesReversedA(byte[] b, int position, int count) {
+    for (int i = count + position - 1; i >= position; i--) {
+      b[i] = readByteA();
+    }
+  }
+
+  public byte readByte() {
     return getByte(position++);
   }
 
-  public int getUByte() {
-    return getByte() & 255;
+  public int readUnsignedByte() {
+    return readByte() & 255;
   }
 
-  public byte getByte128() {
-    return (byte) (getByte() - 128);
+  public byte readByteA() {
+    return (byte) (readByte() - 128);
   }
 
-  public int getUByte128() {
-    return getUByte() - 128 & 255;
+  public int readUnsignedByteA() {
+    return readUnsignedByte() - 128 & 255;
   }
 
-  public byte getReversedByte() {
-    return (byte) -getByte();
+  public byte readByteC() {
+    return (byte) -readByte();
   }
 
-  public int getUReversedByte() {
-    return -getUByte() & 255;
+  public int readUnsignedByteC() {
+    return -readUnsignedByte() & 255;
   }
 
-  public byte get128Byte() {
-    return (byte) (128 - getByte());
+  public byte readByteS() {
+    return (byte) (128 - readByte());
   }
 
-  public int getU128Byte() {
-    return 128 - getUByte() & 255;
+  public int readUnsignedByteS() {
+    return 128 - readUnsignedByte() & 255;
   }
 
-  public boolean getBoolean() {
-    return (getUByte() & 1) == 1;
+  public boolean readBoolean() {
+    return (readUnsignedByte() & 1) == 1;
   }
 
-  public short getShort() {
-    int i = (getUByte() << 8) + getUByte();
+  public short readShort() {
+    int i = (readUnsignedByte() << 8) + readUnsignedByte();
     if (i > 32767) {
       i -= 65536;
     }
     return (short) i;
   }
 
-  public int getUShort() {
-    return (getUByte() << 8) + getUByte();
+  public int readUnsignedShort() {
+    return (readUnsignedByte() << 8) + readUnsignedByte();
   }
 
-  public short getShortLE() {
-    int i = getUByte() + (getUByte() << 8);
+  public short readLEShort() {
+    int i = readUnsignedByte() + (readUnsignedByte() << 8);
     if (i > 32767) {
       i -= 65536;
     }
     return (short) i;
   }
 
-  public int getUShortLE() {
-    return getUByte() + (getUByte() << 8);
+  public int readUnsignedLEShort() {
+    return readUnsignedByte() + (readUnsignedByte() << 8);
   }
 
-  public short getShort128() {
-    int i = (getUByte() << 8) + (getByte() - 128 & 255);
+  public short readShortA() {
+    int i = (readUnsignedByte() << 8) + (readByte() - 128 & 255);
     if (i > 32767) {
       i -= 65536;
     }
     return (short) i;
   }
 
-  public int getUShort128() {
-    return (getUByte() << 8) + (getByte() - 128 & 255);
+  public int readUnsignedShortA() {
+    return (readUnsignedByte() << 8) + (readByte() - 128 & 255);
   }
 
-  public short getShortLE128() {
-    int i = (getByte() - 128 & 255) + (getUByte() << 8);
+  public short readLEShortA() {
+    int i = (readByte() - 128 & 255) + (readUnsignedByte() << 8);
     if (i > 32767) {
       i -= 65536;
     }
     return (short) i;
   }
 
-  public int getUShortLE128() {
-    return (getByte() - 128 & 255) + (getUByte() << 8);
+  public int readUnsignedLEShortA() {
+    return (readByte() - 128 & 255) + (readUnsignedByte() << 8);
   }
 
-  public int getSmart() {
+  public int readSmart() {
     int i = available() > 0 ? buffer[position] & 255 : 0;
-    if (i < 128) {
-      return getUByte() - 64;
-    }
-    return getUShort() - 49152;
+    return i < 128 ? readUnsignedByte() - 64 : readUnsignedShort() - 49152;
   }
 
-  public int getUSmart() {
+  public int readUnsignedSmart() {
     int i = available() > 0 ? buffer[position] & 255 : 0;
-    if (i < 128) {
-      return getUByte();
-    } else {
-      return getUShort() - 32768;
-    }
+    return i < 128 ? readUnsignedByte() : readUnsignedShort() - 32768;
   }
 
-  public int getBigSmart() {
+  public int readBigSmart() {
     int i = available() > 0 ? buffer[position] : 0;
     if (i < 0) {
-      return getInt() & 0x7fffffff;
+      return readInt() & Integer.MAX_VALUE;
     }
-    i = getUShort();
-    if (i == 32767) {
-      return -1;
-    }
-    return i;
+    i = readUnsignedShort();
+    return i == 32767 ? -1 : i;
   }
 
-  public int getUBigSmart() {
-    return (available() > 0 ? buffer[position] : 0) < 0 ? getInt() & Integer.MAX_VALUE
-        : getUShort();
+  public int readUnsignedBigSmart() {
+    return (available() > 0 ? buffer[position] : 0) < 0 ? readInt() & Integer.MAX_VALUE
+        : readUnsignedShort();
   }
 
-  public int getHugeSmart() {
+  public int readHugeSmart() {
     int baseVal = 0;
     int lastVal = 0;
-    while ((lastVal = getUSmart()) == 32767) {
+    while ((lastVal = readUnsignedSmart()) == 32767) {
       baseVal += 32767;
     }
     return baseVal + lastVal;
   }
 
-  public int get24Int() {
-    return (getUByte() << 16) + (getUByte() << 8) + getUByte();
+  public int readTriByte() {
+    return (readUnsignedByte() << 16) + (readUnsignedByte() << 8) + readUnsignedByte();
   }
 
-  public int get24IntLE() {
-    return getUByte() + (getUByte() << 8) + (getUByte() << 16);
+  public int readLETriByte() {
+    return readUnsignedByte() + (readUnsignedByte() << 8) + (readUnsignedByte() << 16);
   }
 
-  public int getInt() {
-    return (getUByte() << 24) + (getUByte() << 16) + (getUByte() << 8) + getUByte();
+  public int readTriByte1() {
+    return (readUnsignedByte() << 8) + (readUnsignedByte() << 16) + readUnsignedByte();
   }
 
-  public int getIntLE() {
-    return getUByte() + (getUByte() << 8) + (getUByte() << 16) + (getUByte() << 24);
+  public int readInt() {
+    return (readUnsignedByte() << 24) + (readUnsignedByte() << 16) + (readUnsignedByte() << 8)
+        + readUnsignedByte();
   }
 
-  public int getIntV2() {
-    return (getUByte() << 8) + getUByte() + (getUByte() << 24) + (getUByte() << 16);
+  public int readLEInt() {
+    return readUnsignedByte() + (readUnsignedByte() << 8) + (readUnsignedByte() << 16)
+        + (readUnsignedByte() << 24);
   }
 
-  public int getIntV3() {
-    return (getUByte() << 16) + (getUByte() << 24) + getUByte() + (getUByte() << 8);
+  public int readInt1() {
+    return (readUnsignedByte() << 8) + readUnsignedByte() + (readUnsignedByte() << 24)
+        + (readUnsignedByte() << 16);
   }
 
-  public int get40Int() {
-    return (getUByte() << 32) + (getUByte() << 24) + (getUByte() << 16) + (getUByte() << 8)
-        + getUByte();
+  public int readInt2() {
+    return (readUnsignedByte() << 16) + (readUnsignedByte() << 24) + readUnsignedByte()
+        + (readUnsignedByte() << 8);
   }
 
-  public int get48Int() {
-    return (getUByte() << 40) + (getUByte() << 32) + (getUByte() << 24) + (getUByte() << 16)
-        + (getUByte() << 8) + getUByte();
+  public int readPentaByte() {
+    return (readUnsignedByte() << 32) + (readUnsignedByte() << 24) + (readUnsignedByte() << 16)
+        + (readUnsignedByte() << 8) + readUnsignedByte();
   }
 
-  public long getLong() {
-    long l = getInt() & 0xffffffffL;
-    long l1 = getInt() & 0xffffffffL;
+  public int readHexaByte() {
+    return (readUnsignedByte() << 40) + (readUnsignedByte() << 32) + (readUnsignedByte() << 24)
+        + (readUnsignedByte() << 16) + (readUnsignedByte() << 8) + readUnsignedByte();
+  }
+
+  public long readLong() {
+    long l = readInt() & 0xffffffffL;
+    long l1 = readInt() & 0xffffffffL;
     return (l << 32) + l1;
   }
 
-  public String getString() {
+  public String readString() {
     int aChar;
     StringBuilder stringBuilder = new StringBuilder();
-    while ((aChar = getByte()) != 0 && stringBuilder.length() < MAX_STRING_LENGTH) {
+    while ((aChar = readByte()) != 0 && stringBuilder.length() < MAX_STRING_LENGTH) {
       stringBuilder.append((char) aChar);
     }
     return stringBuilder.toString();
   }
 
-  public String getJString() {
-    getByte();
+  public String readJString() {
+    readByte();
     int aChar;
     StringBuilder stringBuilder = new StringBuilder();
-    while ((aChar = getByte()) != 0 && stringBuilder.length() < MAX_STRING_LENGTH) {
+    while ((aChar = readByte()) != 0 && stringBuilder.length() < MAX_STRING_LENGTH) {
       stringBuilder.append((char) aChar);
     }
     return stringBuilder.toString();
   }
 
-  public String getSpecialString() {
+  public String readSpecialString() {
     int start = position;
     int length = 0;
-    while (getByte() != 0 && length < MAX_STRING_LENGTH) {
+    while (readByte() != 0 && length < MAX_STRING_LENGTH) {
       length++;
     }
     if (length == 0) {
@@ -718,15 +733,11 @@ public class Stream {
     return new String(chars, 0, charPos);
   }
 
-  public int getOpcode() {
-    return getUByte();
+  public int readOpcode() {
+    return readUnsignedByte();
   }
 
-  public int getBitsAvailable(int length) {
-    return length * 8 - position;
-  }
-
-  public int getBits(int size) {
+  public int readBits(int size) {
     int bytePos = position >> 3;
     int bitposition = 8 - (position & 7);
     int value = 0;
@@ -742,22 +753,22 @@ public class Stream {
     return value;
   }
 
-  public byte[] decodeRSA(BigInteger exponent, BigInteger modulus) {
-    byte[] data = new byte[getShort()];
-    getBytes(data);
+  public byte[] decodeRsa(BigInteger exponent, BigInteger modulus) {
+    byte[] data = new byte[readShort()];
+    readBytes(data);
     if (exponent == null || modulus == null) {
       return new BigInteger(data).toByteArray();
     }
     return new BigInteger(data).modPow(exponent, modulus).toByteArray();
   }
 
-  public void decodeXTEA(int[] keys, int start, int end) {
+  public void decodeXtea(int[] keys, int start, int end) {
     int l = position;
     position = start;
     int i1 = (end - start) / 8;
     for (int j1 = 0; j1 < i1; j1++) {
-      int k1 = getInt();
-      int l1 = getInt();
+      int k1 = readInt();
+      int l1 = readInt();
       int sum = 0xc6ef3720;
       int delta = 0x9e3779b9;
       for (int k2 = 32; k2-- > 0;) {
@@ -766,19 +777,40 @@ public class Stream {
         k1 -= (l1 >>> 5 ^ l1 << 4) + l1 ^ keys[sum & 3] + sum;
       }
       position -= 8;
-      addInt(k1);
-      addInt(l1);
+      writeInt(k1);
+      writeInt(l1);
     }
     position = l;
   }
 
-  public Map<Integer, Object> getScript() {
-    int size = getUByte();
+  public void encodeXtea(int[] keys, int start, int end) {
+    int o = position;
+    int j = (end - start) / 8;
+    position = start;
+    for (int k = 0; k < j; k++) {
+      int l = readInt();
+      int i1 = readInt();
+      int sum = 0;
+      int delta = 0x9e3779b9;
+      for (int l1 = 32; l1-- > 0;) {
+        l += sum + keys[3 & sum] ^ i1 + (i1 >>> 5 ^ i1 << 4);
+        sum += delta;
+        i1 += l + (l >>> 5 ^ l << 4) ^ keys[(0x1eec & sum) >>> 11] + sum;
+      }
+      position -= 8;
+      writeInt(l);
+      writeInt(i1);
+    }
+    position = o;
+  }
+
+  public Map<Integer, Object> readScript() {
+    int size = readUnsignedByte();
     Map<Integer, Object> script = new HashMap<>();
     for (int i = 0; i < size; i++) {
-      boolean bool = getUByte() == 1;
-      int key = get24Int();
-      Object value = bool ? getString() : getInt();
+      boolean bool = readUnsignedByte() == 1;
+      int key = readTriByte();
+      Object value = bool ? readString() : readInt();
       script.put(key, value);
     }
     return script;

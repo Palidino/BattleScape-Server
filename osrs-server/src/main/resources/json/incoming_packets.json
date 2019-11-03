@@ -1,0 +1,782 @@
+[
+  {
+    "decoderName": "AppearanceSelectDecoder",
+    "options": [
+      {
+        "opcode": 12
+      }
+    ]
+  },
+  {
+    "decoderName": "CameraDecoder",
+    "ignore": true,
+    "options": [
+      {
+        "opcode": 39
+      }
+    ]
+  },
+  {
+    "decoderName": "ChatDecoder.PublicChatDecoder",
+    "options": [
+      {
+        "opcode": 97
+      }
+    ]
+  },
+  {
+    "decoderName": "ChatDecoder.PublicPrivateTradeDecoder",
+    "options": [
+      {
+        "opcode": 15,
+        "data": {
+          "PUBLIC": "UNSIGNED_BYTE",
+          "PRIVATE": "UNSIGNED_BYTE",
+          "TRADE": "UNSIGNED_BYTE"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "ChatDecoder.AddFriendDecoder",
+    "options": [
+      {
+        "opcode": 88,
+        "data": {
+          "STRING_INPUT": "STRING"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "ChatDecoder.RemoveFriendDecoder",
+    "options": [
+      {
+        "opcode": 54,
+        "data": {
+          "STRING_INPUT": "STRING"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "ChatDecoder.MessageFriendDecoder",
+    "options": [
+      {
+        "opcode": 25
+      }
+    ]
+  },
+  {
+    "decoderName": "ChatDecoder.AddIgnoreDecoder",
+    "options": [
+      {
+        "opcode": 90,
+        "data": {
+          "STRING_INPUT": "STRING"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "ChatDecoder.RemoveIgnoreDecoder",
+    "options": [
+      {
+        "opcode": 28,
+        "data": {
+          "STRING_INPUT": "STRING"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "ChatDecoder.JoinClanDecoder",
+    "options": [
+      {
+        "opcode": 78,
+        "data": {
+          "STRING_INPUT": "STRING"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "ChatDecoder.ClanRankDecoder",
+    "options": [
+      {
+        "opcode": 77,
+        "data": {
+          "STRING_INPUT": "STRING",
+          "RANK": "UNSIGNED_BYTE"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "ChatDecoder.KickClanUserDecoder",
+    "options": [
+      {
+        "opcode": 13,
+        "data": {
+          "STRING_INPUT": "STRING"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "ChatDecoder.UsernameListDecoder",
+    "options": [
+      {
+        "opcode": 95,
+        "data": {
+          "STRING_INPUT": "STRING"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "CloseWidgetDecoder",
+    "options": [
+      {
+        "opcode": 60
+      }
+    ]
+  },
+  {
+    "decoderName": "CommandDecoder",
+    "options": [
+      {
+        "opcode": 60,
+        "data": {
+          "STRING_INPUT": "STRING"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "DialogueDecoder",
+    "options": [
+      {
+        "opcode": 70,
+        "data": {
+          "WIDGET_HASH": "INT_2",
+          "WIDGET_SLOT": "UNSIGNED_SHORT_A"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "IdleDecoder",
+    "ignore": true,
+    "options": [
+      {
+        "opcode": 49
+      }
+    ]
+  },
+  {
+    "decoderName": "ItemOnItemDecoder",
+    "options": [
+      {
+        "opcode": 63,
+        "data": {
+          "USE_WIDGET_HASH": "INT_1",
+          "ON_WIDGET_HASH": "INT_2",
+          "USE_WIDGET_SLOT": "UNSIGNED_LE_SHORT_A",
+          "USE_ITEM_ID": "UNSIGNED_LE_SHORT",
+          "ON_WIDGET_SLOT": "UNSIGNED_LE_SHORT",
+          "ON_ITEM_ID": "UNSIGNED_LE_SHORT_A"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "ItemOptionDecoder",
+    "options": [
+      {
+        "opcode": 87,
+        "data": {
+          "ITEM_ID": "UNSIGNED_LE_SHORT",
+          "WIDGET_HASH": "INT_1",
+          "WIDGET_SLOT": "UNSIGNED_SHORT"
+        }
+      },
+      {
+        "opcode": 98,
+        "data": {
+          "ITEM_ID": "UNSIGNED_SHORT_A",
+          "WIDGET_HASH": "INT_2",
+          "WIDGET_SLOT": "UNSIGNED_LE_SHORT_A"
+        }
+      },
+      {
+        "opcode": 72,
+        "data": {
+          "WIDGET_HASH": "LE_INT",
+          "WIDGET_SLOT": "UNSIGNED_LE_SHORT_A",
+          "ITEM_ID": "UNSIGNED_LE_SHORT_A"
+        }
+      },
+      {
+        "opcode": 7,
+        "data": {
+          "ITEM_ID": "UNSIGNED_LE_SHORT_A",
+          "WIDGET_HASH": "INT",
+          "WIDGET_SLOT": "UNSIGNED_LE_SHORT_A"
+        }
+      },
+      {
+        "opcode": 58,
+        "data": {
+          "WIDGET_HASH": "INT",
+          "WIDGET_SLOT": "UNSIGNED_SHORT",
+          "ITEM_ID": "UNSIGNED_SHORT"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "KeyboardDecoder",
+    "ignore": true,
+    "options": [
+      {
+        "opcode": 67
+      }
+    ]
+  },
+  {
+    "decoderName": "MapLoadedDecoder",
+    "ignore": true,
+    "options": [
+      {
+        "opcode": 76
+      }
+    ]
+  },
+  {
+    "decoderName": "MapItemOptionDecoder",
+    "options": [
+      {
+        "opcode": 5,
+        "data": {
+          "TILE_Y": "UNSIGNED_LE_SHORT_A",
+          "ITEM_ID": "UNSIGNED_LE_SHORT",
+          "TILE_X": "UNSIGNED_LE_SHORT",
+          "CTRL_RUN": "UNSIGNED_BYTE"
+        }
+      },
+      {
+        "opcode": 74,
+        "data": {
+          "ITEM_ID": "UNSIGNED_LE_SHORT_A",
+          "TILE_X": "UNSIGNED_SHORT_A",
+          "TILE_Y": "UNSIGNED_SHORT",
+          "CTRL_RUN": "UNSIGNED_BYTE"
+        }
+      },
+      {
+        "opcode": 6,
+        "data": {
+          "TILE_Y": "UNSIGNED_LE_SHORT",
+          "CTRL_RUN": "UNSIGNED_BYTE_S",
+          "TILE_X": "UNSIGNED_LE_SHORT",
+          "ITEM_ID": "UNSIGNED_LE_SHORT"
+        }
+      },
+      {
+        "opcode": 29,
+        "data": {
+          "TILE_Y": "UNSIGNED_SHORT_A",
+          "ITEM_ID": "UNSIGNED_LE_SHORT",
+          "TILE_X": "UNSIGNED_SHORT",
+          "CTRL_RUN": "UNSIGNED_BYTE_S"
+        }
+      },
+      {
+        "opcode": 51,
+        "data": {
+          "CTRL_RUN": "UNSIGNED_BYTE",
+          "ITEM_ID": "UNSIGNED_LE_SHORT_A",
+          "TILE_Y": "UNSIGNED_SHORT_A",
+          "TILE_X": "UNSIGNED_SHORT"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "MapObjectOptionDecoder",
+    "options": [
+      {
+        "opcode": 10,
+        "data": {
+          "TILE_Y": "UNSIGNED_SHORT",
+          "CTRL_RUN": "UNSIGNED_BYTE_S",
+          "MAP_OBJECT_ID": "UNSIGNED_SHORT_A",
+          "TILE_X": "UNSIGNED_LE_SHORT_A"
+        }
+      },
+      {
+        "opcode": 79,
+        "data": {
+          "CTRL_RUN": "UNSIGNED_BYTE_A",
+          "MAP_OBJECT_ID": "UNSIGNED_SHORT",
+          "TILE_Y": "UNSIGNED_SHORT",
+          "TILE_X": "UNSIGNED_SHORT"
+        }
+      },
+      {
+        "opcode": 89,
+        "data": {
+          "TILE_X": "UNSIGNED_LE_SHORT_A",
+          "MAP_OBJECT_ID": "UNSIGNED_SHORT_A",
+          "TILE_Y": "UNSIGNED_LE_SHORT_A",
+          "CTRL_RUN": "UNSIGNED_BYTE_A"
+        }
+      },
+      {
+        "opcode": 3,
+        "data": {
+          "CTRL_RUN": "UNSIGNED_BYTE_A",
+          "TILE_Y": "UNSIGNED_SHORT_A",
+          "TILE_X": "UNSIGNED_SHORT_A",
+          "MAP_OBJECT_ID": "UNSIGNED_LE_SHORT"
+        }
+      },
+      {
+        "opcode": 94,
+        "data": {
+          "MAP_OBJECT_ID": "UNSIGNED_SHORT",
+          "CTRL_RUN": "UNSIGNED_BYTE_A",
+          "TILE_X": "UNSIGNED_SHORT_A",
+          "TILE_Y": "UNSIGNED_LE_SHORT_A"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "MouseClickDecoder",
+    "ignore": true,
+    "options": [
+      {
+        "opcode": 41
+      }
+    ]
+  },
+  {
+    "decoderName": "MouseMoveDecoder",
+    "ignore": true,
+    "options": [
+      {
+        "opcode": 34
+      }
+    ]
+  },
+  {
+    "decoderName": "MovementDecoder",
+    "options": [
+      {
+        "opcode": 96,
+        "data": {
+          "TILE_Y": "UNSIGNED_SHORT_A",
+          "TILE_X": "UNSIGNED_SHORT_A",
+          "CTRL_RUN": "UNSIGNED_BYTE_A"
+        }
+      },
+      {
+        "opcode": 52,
+        "data": {
+          "TILE_Y": "UNSIGNED_SHORT_A",
+          "TILE_X": "UNSIGNED_SHORT_A",
+          "CTRL_RUN": "UNSIGNED_BYTE_A"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "NpcOptionDecoder",
+    "options": [
+      {
+        "opcode": 71,
+        "data": {
+          "CTRL_RUN": "UNSIGNED_BYTE_C",
+          "TARGET_INDEX": "UNSIGNED_LE_SHORT"
+        }
+      },
+      {
+        "opcode": 1,
+        "data": {
+          "TARGET_INDEX": "UNSIGNED_SHORT_A",
+          "CTRL_RUN": "UNSIGNED_BYTE"
+        }
+      },
+      {
+        "opcode": 33,
+        "data": {
+          "TARGET_INDEX": "UNSIGNED_LE_SHORT_A",
+          "CTRL_RUN": "UNSIGNED_BYTE"
+        }
+      },
+      {
+        "opcode": 59,
+        "data": {
+          "TARGET_INDEX": "UNSIGNED_SHORT",
+          "CTRL_RUN": "UNSIGNED_BYTE_A"
+        }
+      },
+      {
+        "opcode": 31,
+        "data": {
+          "CTRL_RUN": "UNSIGNED_BYTE",
+          "TARGET_INDEX": "UNSIGNED_SHORT_A"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "PlayerOptionDecoder",
+    "options": [
+      {
+        "opcode": 47,
+        "data": {
+          "TARGET_INDEX": "UNSIGNED_SHORT",
+          "CTRL_RUN": "UNSIGNED_BYTE_C"
+        }
+      },
+      {
+        "opcode": 56,
+        "data": {
+          "CTRL_RUN": "UNSIGNED_BYTE_A",
+          "TARGET_INDEX": "UNSIGNED_SHORT_A"
+        }
+      },
+      {
+        "opcode": 62,
+        "data": {
+          "TARGET_INDEX": "UNSIGNED_SHORT_A",
+          "CTRL_RUN": "UNSIGNED_BYTE"
+        }
+      },
+      {
+        "opcode": 27,
+        "data": {
+          "TARGET_INDEX": "UNSIGNED_LE_SHORT_A",
+          "CTRL_RUN": "UNSIGNED_BYTE_C"
+        }
+      },
+      {
+        "opcode": 83,
+        "data": {
+          "CTRL_RUN": "UNSIGNED_BYTE_A",
+          "TARGET_INDEX": "UNSIGNED_SHORT_A"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "RotateWidgetDecoder$RotateSingleWidgetDecoder",
+    "options": [
+      {
+        "opcode": 80,
+        "data": {
+          "ON_WIDGET_SLOT": "UNSIGNED_SHORT",
+          "USE_WIDGET_SLOT": "UNSIGNED_LE_SHORT",
+          "WIDGET_HASH": "INT",
+          "UNKNOWN_NUMBER_1": "UNSIGNED_BYTE_C"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "RotateWidgetDecoder$RotateTwoWidgetsDecoder",
+    "options": [
+      {
+        "opcode": 57,
+        "data": {
+          "USE_WIDGET_SLOT": "UNSIGNED_SHORT_A",
+          "USE_ITEM_ID": "UNSIGNED_SHORT_A",
+          "ON_WIDGET_SLOT": "UNSIGNED_SHORT",
+          "USE_WDIGET_HASH": "LE_INT",
+          "ON_WIDGET_HASH": "INT_1",
+          "ON_ITEM_ID": "UNSIGNED_SHORT"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "SocketWriteDecoder",
+    "ignore": true,
+    "options": [
+      {
+        "opcode": 22
+      }
+    ]
+  },
+  {
+    "decoderName": "TextInputDecoder$ItemInputDecoder",
+    "options": [
+      {
+        "opcode": 42,
+        "data": {
+          "ITEM_ID": "UNSIGNED_SHORT"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "TextInputDecoder$NumberInputDecoder",
+    "options": [
+      {
+        "opcode": 17,
+        "data": {
+          "NUMBER_INPUT": "INT"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "TextInputDecoder$StringInputDecoder",
+    "options": [
+      {
+        "opcode": 8,
+        "data": {
+          "STRING_INPUT": "STRING"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "UseItemDecoder$ItemOnNpcDecoder",
+    "options": [
+      {
+        "opcode": 23,
+        "data": {
+          "ITEM_ID": "UNSIGNED_LE_SHORT_A",
+          "WIDGET_SLOT": "UNSIGNED_SHORT",
+          "TARGET_INDEX": "UNSIGNED_LE_SHORT_A",
+          "CTRL_RUN": "UNSIGNED_BYTE_C",
+          "WIDGET_HASH": "INT"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "UseItemDecoder$ItemOnMapObjectDecoder",
+    "options": [
+      {
+        "opcode": 92,
+        "data": {
+          "CTRL_RUN": "UNSIGNED_BYTE",
+          "TILE_X": "UNSIGNED_SHORT",
+          "MAP_OBJECT_ID": "UNSIGNED_SHORT_A",
+          "WIDGET_HASH": "INT_2",
+          "ITEM_ID": "UNSIGNED_SHORT",
+          "TILE_Y": "UNSIGNED_LE_SHORT"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "UseItemDecoder$ItemOnPlayerDecoder",
+    "options": [
+      {
+        "opcode": 81,
+        "data": {
+          "WIDGET_SLOT": "UNSIGNED_LE_SHORT_A",
+          "CTRL_RUN": "UNSIGNED_BYTE_S",
+          "WIDGET_HASH": "INT_1",
+          "TARGET_INDEX": "UNSIGNED_SHORT",
+          "ITEM_ID": "UNSIGNED_SHORT"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "UseWidgetDecoder$WidgetOnNpcDecoder",
+    "options": [
+      {
+        "opcode": 86,
+        "data": {
+          "TARGET_INDEX": "UNSIGNED_LE_SHORT_A",
+          "CTRL_RUN": "UNSIGNED_BYTE_C",
+          "WIDGET_HASH": "LE_INT",
+          "WIDGET_SLOT": "UNSIGNED_SHORT_A"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "UseWidgetDecoder$WidgetOnMapObjectDecoder",
+    "options": [
+      {
+        "opcode": 44,
+        "data": {
+          "TILE_Y": "UNSIGNED_LE_SHORT_A",
+          "WIDGET_SLOT": "UNSIGNED_LE_SHORT",
+          "CTRL_RUN": "UNSIGNED_BYTE_A",
+          "WIDGET_HASH": "LE_INT",
+          "TILE_X": "UNSIGNED_LE_SHORT_A",
+          "MAP_OBJECT_ID": "UNSIGNED_SHORT",
+          "ITEM_ID": "UNSIGNED_LE_SHORT"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "UseWidgetDecoder$WidgetOnPlayerDecoder",
+    "options": [
+      {
+        "opcode": 55,
+        "data": {
+          "WIDGET_HASH": "INT_2",
+          "CTRL_RUN": "UNSIGNED_BYTE_S",
+          "WIDGET_SLOT": "UNSIGNED_SHORT_A",
+          "TARGET_INDEX": "UNSIGNED_SHORT"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "UseWidgetDecoder$WidgetOnWidgetDecoder",
+    "options": [
+      {
+        "opcode": 2,
+        "data": {
+          "USE_WIDGET_HASH": "INT_1",
+          "ON_WIDGET_HASH": "INT",
+          "ON_WIDGET_SLOT": "UNSIGNED_SHORT",
+          "ON_ITEM_ID": "UNSIGNED_LE_SHORT",
+          "USE_ITEM_ID": "UNSIGNED_LE_SHORT"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "WidgetDecoder",
+    "options": [
+      {
+        "opcode": 68,
+        "data": {
+          "WIDGET_HASH": "INT",
+          "WIDGET_SLOT": "UNSIGNED_SHORT",
+          "ITEM_ID": "UNSIGNED_SHORT"
+        }
+      },
+      {
+        "opcode": 21,
+        "data": {
+          "WIDGET_HASH": "INT",
+          "WIDGET_SLOT": "UNSIGNED_SHORT",
+          "ITEM_ID": "UNSIGNED_SHORT"
+        }
+      },
+      {
+        "opcode": 48,
+        "data": {
+          "WIDGET_HASH": "INT",
+          "WIDGET_SLOT": "UNSIGNED_SHORT",
+          "ITEM_ID": "UNSIGNED_SHORT"
+        }
+      },
+      {
+        "opcode": 19,
+        "data": {
+          "WIDGET_HASH": "INT",
+          "WIDGET_SLOT": "UNSIGNED_SHORT",
+          "ITEM_ID": "UNSIGNED_SHORT"
+        }
+      },
+      {
+        "opcode": 40,
+        "data": {
+          "WIDGET_HASH": "INT",
+          "WIDGET_SLOT": "UNSIGNED_SHORT",
+          "ITEM_ID": "UNSIGNED_SHORT"
+        }
+      },
+      {
+        "opcode": 66,
+        "data": {
+          "WIDGET_HASH": "INT",
+          "WIDGET_SLOT": "UNSIGNED_SHORT",
+          "ITEM_ID": "UNSIGNED_SHORT"
+        }
+      },
+      {
+        "opcode": 85,
+        "data": {
+          "WIDGET_HASH": "INT",
+          "WIDGET_SLOT": "UNSIGNED_SHORT",
+          "ITEM_ID": "UNSIGNED_SHORT"
+        }
+      },
+      {
+        "opcode": 14,
+        "data": {
+          "WIDGET_HASH": "INT",
+          "WIDGET_SLOT": "UNSIGNED_SHORT",
+          "ITEM_ID": "UNSIGNED_SHORT"
+        }
+      },
+      {
+        "opcode": 84,
+        "data": {
+          "WIDGET_HASH": "INT",
+          "WIDGET_SLOT": "UNSIGNED_SHORT",
+          "ITEM_ID": "UNSIGNED_SHORT"
+        }
+      },
+      {
+        "opcode": 0,
+        "data": {
+          "WIDGET_HASH": "INT",
+          "WIDGET_SLOT": "UNSIGNED_SHORT",
+          "ITEM_ID": "UNSIGNED_SHORT"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "WidgetDecoder",
+    "options": [
+      {
+        "opcode": 69,
+        "data": {
+          "WIDGET_HASH": "INT"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "WindowFocusDecoder",
+    "ignore": true,
+    "options": [
+      {
+        "opcode": 73
+      }
+    ]
+  },
+  {
+    "decoderName": "WindowSizeDecoder",
+    "options": [
+      {
+        "opcode": 35,
+        "data": {
+          "VIEWPORT": "UNSIGNED_BYTE",
+          "WIDTH": "UNSIGNED_SHORT",
+          "HEIGHT": "UNSIGNED_SHORT"
+        }
+      }
+    ]
+  },
+  {
+    "decoderName": "WorldMapTeleportDecoder",
+    "options": [
+      {
+        "opcode": 45,
+        "data": {
+          "TILE_HASH": "INT_1"
+        }
+      }
+    ]
+  }
+]

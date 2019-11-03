@@ -14,9 +14,9 @@ public class MovementDecoder extends PacketDecoder {
 
   @Override
   public void execute(Player player, int index, int size, Stream stream) {
-    var y = stream.getUShort128();
-    var x = stream.getUShort128();
-    var moveType = stream.getUByte128();
+    var y = stream.readUnsignedShortA();
+    var x = stream.readUnsignedShortA();
+    var moveType = stream.readUnsignedByteA();
     var message = "[Movement(" + index + ")] x=" + x + "; y=" + y + "; moveType=" + moveType;
     RequestManager.addUserPacketLog(player, message);
     if (player.getGameMode() == 0 || player.isDead()) {

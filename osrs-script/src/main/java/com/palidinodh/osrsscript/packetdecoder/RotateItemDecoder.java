@@ -24,17 +24,17 @@ public class RotateItemDecoder extends PacketDecoder {
     var toSlot = 0;
     var toItemId = -1;
     if (index == 0) {
-      fromSlot = stream.getUShort128();
-      fromItemId = stream.getUShort128();
-      toSlot = stream.getUShort();
-      fromWidgetHash = stream.getIntLE();
-      toWidgetHash = stream.getIntV2();
-      toItemId = stream.getUShort();
+      fromSlot = stream.readUnsignedShortA();
+      fromItemId = stream.readUnsignedShortA();
+      toSlot = stream.readUnsignedShort();
+      fromWidgetHash = stream.readLEInt();
+      toWidgetHash = stream.readInt1();
+      toItemId = stream.readUnsignedShort();
     } else if (index == 1) {
-      toSlot = stream.getUShort();
-      fromSlot = stream.getUShortLE();
-      fromWidgetHash = toWidgetHash = stream.getInt();
-      stream.getUReversedByte();
+      toSlot = stream.readUnsignedShort();
+      fromSlot = stream.readUnsignedLEShort();
+      fromWidgetHash = toWidgetHash = stream.readInt();
+      stream.readUnsignedByteC();
     }
     if (fromItemId == 65535) {
       fromItemId = -1;

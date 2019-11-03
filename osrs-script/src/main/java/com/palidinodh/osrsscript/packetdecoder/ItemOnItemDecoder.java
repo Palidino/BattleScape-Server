@@ -7,7 +7,7 @@ import com.palidinodh.osrscore.io.cache.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.skill.SkillContainer;
 import com.palidinodh.osrscore.util.RequestManager;
-import com.palidinodh.osrsscript.packetdecoder.misc.ItemOnItemAction;
+import com.palidinodh.osrsscript.incomingpacket.misc.ItemOnItemAction;
 import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
@@ -19,12 +19,12 @@ public class ItemOnItemDecoder extends PacketDecoder {
 
   @Override
   public void execute(Player player, int index, int size, Stream stream) {
-    var useWidgetHash = stream.getIntV2();
-    var onWidgetHash = stream.getIntV3();
-    var useSlot = stream.getUShortLE128();
-    var useItemId = stream.getUShortLE();
-    var onSlot = stream.getUShortLE();
-    var onItemId = stream.getUShortLE128();
+    var useWidgetHash = stream.readInt1();
+    var onWidgetHash = stream.readInt2();
+    var useSlot = stream.readUnsignedLEShortA();
+    var useItemId = stream.readUnsignedLEShort();
+    var onSlot = stream.readUnsignedLEShort();
+    var onItemId = stream.readUnsignedLEShortA();
     var useWidgetId = useWidgetHash >> 16;
     var useChildId = useWidgetHash & 65535;
     var onWidgetId = onWidgetHash >> 16;
