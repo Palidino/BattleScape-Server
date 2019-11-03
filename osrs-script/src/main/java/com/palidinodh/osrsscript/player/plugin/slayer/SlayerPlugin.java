@@ -24,7 +24,7 @@ import com.palidinodh.osrscore.model.player.slayer.SlayerMaster;
 import com.palidinodh.osrscore.model.player.slayer.SlayerTask;
 import com.palidinodh.osrscore.model.player.slayer.SlayerTaskIdentifier;
 import com.palidinodh.osrscore.model.player.slayer.SlayerUnlock;
-import com.palidinodh.osrsscript.packetdecoder.UseWidgetDecoder;
+import com.palidinodh.osrsscript.incomingpacket.UseWidgetDecoder;
 import com.palidinodh.osrsscript.player.plugin.slayer.dialogue.MasterMenuDialogue;
 import com.palidinodh.osrsscript.player.plugin.slayer.dialogue.RewardsDialogue;
 import com.palidinodh.osrsscript.player.plugin.slayer.dialogue.SlayerRingDialogue;

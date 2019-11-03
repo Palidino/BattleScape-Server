@@ -133,7 +133,7 @@ public class MapObjectOptionDecoder extends IncomingPacketDecoder {
     if (!actionMethods.containsKey(mapObject.getId())) {
       try {
         var className =
-            "com.palidinodh.osrsscript.packetdecoder.misc.MapObject" + mapObject.getId() / 16384;
+            "com.palidinodh.osrsscript.incomingpacket.misc.MapObject" + mapObject.getId() / 16384;
         var classReference = Class.forName(className);
         var methodName = "mapObject" + mapObject.getId();
         var actionMethod =

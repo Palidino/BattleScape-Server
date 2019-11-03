@@ -11,7 +11,7 @@ import com.palidinodh.osrscore.model.item.ItemList;
 import com.palidinodh.osrscore.model.map.MapItem;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.PlayerPlugin;
-import com.palidinodh.osrsscript.packetdecoder.UseWidgetDecoder;
+import com.palidinodh.osrsscript.incomingpacket.UseWidgetDecoder;
 import com.palidinodh.osrsscript.player.plugin.lootingbag.dialogue.StoreAskDialogue;
 import com.palidinodh.osrsscript.player.plugin.lootingbag.dialogue.StoreTypeDialogue;
 import lombok.Setter;
