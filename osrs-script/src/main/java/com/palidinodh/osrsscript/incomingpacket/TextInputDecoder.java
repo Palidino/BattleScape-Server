@@ -10,7 +10,7 @@ import com.palidinodh.util.PLogger;
 import lombok.var;
 
 public class TextInputDecoder {
-  public class NumberInputDecoder extends IncomingPacketDecoder {
+  public static class NumberInputDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var value = getInt(InStreamKey.NUMBER_INPUT);
@@ -36,7 +36,7 @@ public class TextInputDecoder {
     }
   }
 
-  public class StringInputDecoder extends IncomingPacketDecoder {
+  public static class StringInputDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var value = getString(InStreamKey.STRING_INPUT);
@@ -62,7 +62,7 @@ public class TextInputDecoder {
     }
   }
 
-  public class ItemInputDecoder extends IncomingPacketDecoder {
+  public static class ItemInputDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var itemId = getInt(InStreamKey.ITEM_ID);

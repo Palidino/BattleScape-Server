@@ -17,7 +17,7 @@
     ]
   },
   {
-    "decoderName": "ChatDecoder.PublicChatDecoder",
+    "decoderName": "ChatDecoder$PublicChatDecoder",
     "options": [
       {
         "opcode": 97
@@ -25,7 +25,7 @@
     ]
   },
   {
-    "decoderName": "ChatDecoder.PublicPrivateTradeDecoder",
+    "decoderName": "ChatDecoder$PublicPrivateTradeDecoder",
     "options": [
       {
         "opcode": 15,
@@ -38,7 +38,7 @@
     ]
   },
   {
-    "decoderName": "ChatDecoder.AddFriendDecoder",
+    "decoderName": "ChatDecoder$AddFriendDecoder",
     "options": [
       {
         "opcode": 88,
@@ -49,7 +49,7 @@
     ]
   },
   {
-    "decoderName": "ChatDecoder.RemoveFriendDecoder",
+    "decoderName": "ChatDecoder$RemoveFriendDecoder",
     "options": [
       {
         "opcode": 54,
@@ -60,7 +60,7 @@
     ]
   },
   {
-    "decoderName": "ChatDecoder.MessageFriendDecoder",
+    "decoderName": "ChatDecoder$MessageFriendDecoder",
     "options": [
       {
         "opcode": 25
@@ -68,7 +68,7 @@
     ]
   },
   {
-    "decoderName": "ChatDecoder.AddIgnoreDecoder",
+    "decoderName": "ChatDecoder$AddIgnoreDecoder",
     "options": [
       {
         "opcode": 90,
@@ -79,7 +79,7 @@
     ]
   },
   {
-    "decoderName": "ChatDecoder.RemoveIgnoreDecoder",
+    "decoderName": "ChatDecoder$RemoveIgnoreDecoder",
     "options": [
       {
         "opcode": 28,
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "decoderName": "ChatDecoder.JoinClanDecoder",
+    "decoderName": "ChatDecoder$JoinClanDecoder",
     "options": [
       {
         "opcode": 78,
@@ -101,7 +101,7 @@
     ]
   },
   {
-    "decoderName": "ChatDecoder.ClanRankDecoder",
+    "decoderName": "ChatDecoder$ClanRankDecoder",
     "options": [
       {
         "opcode": 77,
@@ -113,7 +113,7 @@
     ]
   },
   {
-    "decoderName": "ChatDecoder.KickClanUserDecoder",
+    "decoderName": "ChatDecoder$KickClanUserDecoder",
     "options": [
       {
         "opcode": 13,
@@ -124,7 +124,7 @@
     ]
   },
   {
-    "decoderName": "ChatDecoder.UsernameListDecoder",
+    "decoderName": "ChatDecoder$UsernameListDecoder",
     "options": [
       {
         "opcode": 95,

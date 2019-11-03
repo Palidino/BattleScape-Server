@@ -107,7 +107,7 @@ public class LogoutWidget implements WidgetHandler {
     }
   }
 
-  public class FeedbackDialogue extends SelectionDialogue {
+  public static class FeedbackDialogue extends SelectionDialogue {
     public FeedbackDialogue(Player player) {
       addOption("Leave feedback and logout.", (childId, slot) -> {
         player.getGameEncoder().sendEnterString("Feedback:", new ValueEnteredEvent.StringEvent() {

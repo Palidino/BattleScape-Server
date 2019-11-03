@@ -2334,7 +2334,7 @@ public class InventoryWidget implements WidgetHandler {
     }
   }
 
-  public class MaxCapeDialogue extends SelectionDialogue {
+  public static class MaxCapeDialogue extends SelectionDialogue {
     public MaxCapeDialogue(Player player) {
       DialogueAction action = (childId, slot) -> {
         Tile maxCapeTele = null;
