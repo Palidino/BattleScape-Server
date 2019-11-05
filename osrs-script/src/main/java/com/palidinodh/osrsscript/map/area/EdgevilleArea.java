@@ -73,6 +73,9 @@ public class EdgevilleArea extends Area {
   public boolean npcOptionHook(int index, Npc npc) {
     var player = getPlayer();
     switch (npc.getId()) {
+      case NpcId.KILLER:
+        player.openShop("halloween");
+        return true;
       case NpcId.WISE_OLD_MAN:
         player.openShop("platinum_tokens");
         return true;
