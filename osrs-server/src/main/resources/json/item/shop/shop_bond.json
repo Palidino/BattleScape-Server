@@ -2,6 +2,7 @@
   "name": "Bond Shop",
   "variableCurrency": "bonds",
   "items": [
+    { "id": "ItemId.PUMPKIN_TOKEN_32338", "price": 2 },
     { "id": "ItemId.MYSTERY_BOX", "price": 40 },
     { "id": "ItemId.SUPER_MYSTERY_BOX_32286", "price": 80 },
     { "id": "ItemId.PET_MYSTERY_BOX_32311", "price": 400 },
@@ -20,110 +21,101 @@
     { "id": "ItemId.LUMBERJACK_OUTFIT_WOODCUTTING_32291", "price": 40 },
     {
       "id": "ItemId.LUMBERJACK_OUTFIT_WOODCUTTING_32291",
+      "price": 0,
       "costItems": [
-        [
-          { "id": "ItemId.LUMBERJACK_HAT",  "amount": 1 },
-          { "id": "ItemId.LUMBERJACK_TOP",  "amount": 1 },
-          { "id": "ItemId.LUMBERJACK_LEGS",  "amount": 1 },
-          { "id": "ItemId.LUMBERJACK_BOOTS",  "amount": 1 }
-        ]
+        [ { "id": "ItemId.LUMBERJACK_HAT",  "amount": 1 } ],
+        [ { "id": "ItemId.LUMBERJACK_TOP",  "amount": 1 } ],
+        [ { "id": "ItemId.LUMBERJACK_LEGS",  "amount": 1 } ],
+        [ { "id": "ItemId.LUMBERJACK_BOOTS",  "amount": 1 } ]
       ]
     },
     { "id": "ItemId.PROSPECTOR_OUTFIT_MINING_32292", "price": 40 },
     {
       "id": "ItemId.PROSPECTOR_OUTFIT_MINING_32292",
+      "price": 0,
       "costItems": [
-        [
-          { "id": "ItemId.PROSPECTOR_HELMET",  "amount": 1 },
-          { "id": "ItemId.PROSPECTOR_JACKET",  "amount": 1 },
-          { "id": "ItemId.PROSPECTOR_LEGS",  "amount": 1 },
-          { "id": "ItemId.PROSPECTOR_BOOTS",  "amount": 1 }
-        ]
+        [ { "id": "ItemId.PROSPECTOR_HELMET",  "amount": 1 } ],
+        [ { "id": "ItemId.PROSPECTOR_JACKET",  "amount": 1 } ],
+        [ { "id": "ItemId.PROSPECTOR_LEGS",  "amount": 1 } ],
+        [ { "id": "ItemId.PROSPECTOR_BOOTS",  "amount": 1 } ]
       ]
     },
     { "id": "ItemId.ANGLER_OUTFIT_FISHING_32293", "price": 40 },
     {
       "id": "ItemId.ANGLER_OUTFIT_FISHING_32293",
+      "price": 0,
       "costItems": [
-        [
-          { "id": "ItemId.ANGLER_HAT",  "amount": 1 },
-          { "id": "ItemId.ANGLER_TOP",  "amount": 1 },
-          { "id": "ItemId.ANGLER_WADERS",  "amount": 1 },
-          { "id": "ItemId.ANGLER_BOOTS",  "amount": 1 }
-        ]
+        [ { "id": "ItemId.ANGLER_HAT",  "amount": 1 } ],
+        [ { "id": "ItemId.ANGLER_TOP",  "amount": 1 } ],
+        [ { "id": "ItemId.ANGLER_WADERS",  "amount": 1 } ],
+        [ { "id": "ItemId.ANGLER_BOOTS",  "amount": 1 } ]
       ]
     },
     { "id": "ItemId.PYROMANCER_OUTFIT_FIREMAKING_32294", "price": 40 },
     {
       "id": "ItemId.PYROMANCER_OUTFIT_FIREMAKING_32294",
+      "price": 0,
       "costItems": [
-        [
-          { "id": "ItemId.PYROMANCER_HOOD",  "amount": 1 },
-          { "id": "ItemId.PYROMANCER_GARB",  "amount": 1 },
-          { "id": "ItemId.PYROMANCER_ROBE",  "amount": 1 },
-          { "id": "ItemId.PYROMANCER_BOOTS",  "amount": 1 },
-          { "id": "ItemId.WARM_GLOVES",  "amount": 1 }
-        ]
+        [ { "id": "ItemId.PYROMANCER_HOOD",  "amount": 1 } ],
+        [ { "id": "ItemId.PYROMANCER_GARB",  "amount": 1 } ],
+        [ { "id": "ItemId.PYROMANCER_ROBE",  "amount": 1 } ],
+        [ { "id": "ItemId.PYROMANCER_BOOTS",  "amount": 1 } ],
+        [ { "id": "ItemId.WARM_GLOVES",  "amount": 1 } ]
       ]
     },
     { "id": "ItemId.ROGUE_OUTFIT_THIEVING_32295", "price": 40 },
     {
       "id": "ItemId.ROGUE_OUTFIT_THIEVING_32295",
+      "price": 0,
       "costItems": [
-        [
-          { "id": "ItemId.ROGUE_MASK",  "amount": 1 },
-          { "id": "ItemId.ROGUE_TOP",  "amount": 1 },
-          { "id": "ItemId.ROGUE_TROUSERS",  "amount": 1 },
-          { "id": "ItemId.ROGUE_BOOTS",  "amount": 1 },
-          { "id": "ItemId.ROGUE_GLOVES",  "amount": 1 }
-        ]
+        [ { "id": "ItemId.ROGUE_MASK",  "amount": 1 } ],
+        [ { "id": "ItemId.ROGUE_TOP",  "amount": 1 } ],
+        [ { "id": "ItemId.ROGUE_TROUSERS",  "amount": 1 } ],
+        [ { "id": "ItemId.ROGUE_BOOTS",  "amount": 1 } ],
+        [ { "id": "ItemId.ROGUE_GLOVES",  "amount": 1 } ]
       ]
     },
     { "id": "ItemId.LARUPIA_OUTFIT_HUNTER_32296", "price": 40 },
     {
       "id": "ItemId.LARUPIA_OUTFIT_HUNTER_32296",
+      "price": 0,
       "costItems": [
-        [
-          { "id": "ItemId.LARUPIA_HAT",  "amount": 1 },
-          { "id": "ItemId.LARUPIA_TOP",  "amount": 1 },
-          { "id": "ItemId.LARUPIA_LEGS",  "amount": 1 }
-        ]
+        [ { "id": "ItemId.LARUPIA_HAT",  "amount": 1 } ],
+        [ { "id": "ItemId.LARUPIA_TOP",  "amount": 1 } ],
+        [ { "id": "ItemId.LARUPIA_LEGS",  "amount": 1 } ]
       ]
     },
     { "id": "ItemId.FARMERS_OUTFIT_FARMING_32297", "price": 40 },
     {
       "id": "ItemId.FARMERS_OUTFIT_FARMING_32297",
+      "price": 0,
       "costItems": [
-        [
-          { "id": "ItemId.FARMERS_STRAWHAT",  "amount": 1 },
-          { "id": "ItemId.FARMERS_JACKET",  "amount": 1 },
-          { "id": "ItemId.FARMERS_BORO_TROUSERS",  "amount": 1 },
-          { "id": "ItemId.FARMERS_BOOTS",  "amount": 1 }
-        ]
+        [ { "id": "ItemId.FARMERS_STRAWHAT",  "amount": 1 } ],
+        [ { "id": "ItemId.FARMERS_JACKET",  "amount": 1 } ],
+        [ { "id": "ItemId.FARMERS_BORO_TROUSERS",  "amount": 1 } ],
+        [ { "id": "ItemId.FARMERS_BOOTS",  "amount": 1 } ]
       ]
     },
     { "id": "ItemId.GRACEFUL_OUTFIT_AGILITY_32298", "price": 40 },
     {
       "id": "ItemId.GRACEFUL_OUTFIT_AGILITY_32298",
+      "price": 0,
       "costItems": [
-        [
-          { "id": "ItemId.GRACEFUL_HOOD",  "amount": 1 },
-          { "id": "ItemId.GRACEFUL_TOP",  "amount": 1 },
-          { "id": "ItemId.GRACEFUL_LEGS",  "amount": 1 },
-          { "id": "ItemId.GRACEFUL_GLOVES",  "amount": 1 },
-          { "id": "ItemId.GRACEFUL_BOOTS",  "amount": 1 },
-          { "id": "ItemId.GRACEFUL_CAPE",  "amount": 1 }
-        ]
+        [ { "id": "ItemId.GRACEFUL_HOOD",  "amount": 1 } ],
+        [ { "id": "ItemId.GRACEFUL_TOP",  "amount": 1 } ],
+        [ { "id": "ItemId.GRACEFUL_LEGS",  "amount": 1 } ],
+        [ { "id": "ItemId.GRACEFUL_GLOVES",  "amount": 1 } ],
+        [ { "id": "ItemId.GRACEFUL_BOOTS",  "amount": 1 } ],
+        [ { "id": "ItemId.GRACEFUL_CAPE",  "amount": 1 } ]
       ]
     },
     { "id": "ItemId.ELIDINIS_OUTFIT_RUNECRAFTING_32299", "price": 40 },
     {
       "id": "ItemId.ELIDINIS_OUTFIT_RUNECRAFTING_32299",
+      "price": 0,
       "costItems": [
-        [
-          { "id": "ItemId.ROBE_OF_ELIDINIS",  "amount": 1 },
-          { "id": "ItemId.ROBE_OF_ELIDINIS_6787",  "amount": 1 }
-        ]
+        [ { "id": "ItemId.ROBE_OF_ELIDINIS",  "amount": 1 } ],
+        [ { "id": "ItemId.ROBE_OF_ELIDINIS_6787",  "amount": 1 } ]
       ]
     },
     { "id": "ItemId.COOKING_GAUNTLETS", "price": 40 },

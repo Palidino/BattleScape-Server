@@ -20,9 +20,9 @@
         { "id": "ItemId.JACK_LANTERN_MASK", "price": 150 },
         { "id": "ItemId.JONAS_MASK", "price": 150 },
         { "id": "ItemId.GRIM_REAPER_HOOD", "price": 100 },
-        { "id": "ItemId.GREEN_HALLOWEEN_MASK", "price": 500 },
-        { "id": "ItemId.BLUE_HALLOWEEN_MASK", "price": 500 },
-        { "id": "ItemId.RED_HALLOWEEN_MASK", "price": 500 },
+        { "id": "ItemId.GREEN_HALLOWEEN_MASK", "price": 600 },
+        { "id": "ItemId.BLUE_HALLOWEEN_MASK", "price": 600 },
+        { "id": "ItemId.RED_HALLOWEEN_MASK", "price": 600 },
         { "id": "ItemId.BLACK_HWEEN_MASK", "price": 500 }
     ]
 }
