@@ -83,7 +83,7 @@ public class WidgetDecoder extends IncomingPacketDecoder {
   static {
     try {
       var classes = FileManager.getClasses(WidgetHandler.class,
-          "com.palidinodh.osrsscript.incomingpacket.widget");
+          Settings.getInstance().getScriptPackage() + ".incomingpacket.widget");
       for (var clazz : classes) {
         var classInstance = (WidgetHandler) clazz.newInstance();
         for (var widgetId : classInstance.getIds()) {

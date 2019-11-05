@@ -68,7 +68,7 @@ public class CommandDecoder extends IncomingPacketDecoder {
   static {
     try {
       var classes = FileManager.getClasses(CommandHandler.class,
-          "com.palidinodh.osrsscript.incomingpacket.command");
+          Settings.getInstance().getScriptPackage() + ".incomingpacket.command");
       for (var clazz : classes) {
         var classInstance = (CommandHandler) clazz.newInstance();
         commands.put(clazz.getSimpleName().replace("Command", "").toLowerCase(), classInstance);

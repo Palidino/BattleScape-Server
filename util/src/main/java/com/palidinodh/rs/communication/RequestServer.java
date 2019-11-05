@@ -232,7 +232,7 @@ public class RequestServer implements Runnable {
     outputStream.clear();
     outputStream.writeOpcodeVarInt(Opcodes.VERIFY);
     outputStream.writeShort(worldId);
-    outputStream.writeString(Opcodes.PASSWORD);
+    outputStream.writeString(Settings.getInstance().getPassword());
     synchronized (this) {
       outputStream.writeShort(players.size());
       for (RsPlayer player : players) {

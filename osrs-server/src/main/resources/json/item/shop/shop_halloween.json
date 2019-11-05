@@ -18,7 +18,7 @@
         { "id": "ItemId.SCYTHE", "price": 200 },
         { "id": "ItemId.HUNTING_KNIFE", "price": 100 },
         { "id": "ItemId.JACK_LANTERN_MASK", "price": 150 },
-        { "id": "ItemId.JONAS_MASK", "price": 150 },
+        { "id": "ItemId.JONAS_MASK_21720", "price": 150 },
         { "id": "ItemId.GRIM_REAPER_HOOD", "price": 100 },
         { "id": "ItemId.GREEN_HALLOWEEN_MASK", "price": 600 },
         { "id": "ItemId.BLUE_HALLOWEEN_MASK", "price": 600 },

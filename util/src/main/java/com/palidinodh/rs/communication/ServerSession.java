@@ -3,6 +3,7 @@ package com.palidinodh.rs.communication;
 import com.palidinodh.io.Stream;
 import com.palidinodh.nio.Session;
 import com.palidinodh.nio.WriteEventHandler;
+import com.palidinodh.rs.setting.Settings;
 
 public class ServerSession {
   private Session session;
@@ -29,7 +30,7 @@ public class ServerSession {
   }
 
   public boolean passwordMatches() {
-    return Opcodes.PASSWORD.equals(password);
+    return Settings.getInstance().getPassword().equals(password);
   }
 
   public void close() {

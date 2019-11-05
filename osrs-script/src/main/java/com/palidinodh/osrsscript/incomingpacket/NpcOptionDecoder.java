@@ -123,8 +123,8 @@ public class NpcOptionDecoder extends IncomingPacketDecoder {
     }
     if (!actionMethods.containsKey(npc.getId())) {
       try {
-        var classReference =
-            Class.forName("com.palidinodh.osrsscript.incomingpacket.misc.NpcOptions");
+        var classReference = Class
+            .forName(Settings.getInstance().getScriptPackage() + ".incomingpacket.misc.NpcOptions");
         var methodName = "npc" + npc.getId();
         var actionMethod =
             classReference.getMethod(methodName, Player.class, Integer.TYPE, Npc.class);

@@ -1,7 +1,6 @@
 package com.palidinodh.rs.communication;
 
 public class Opcodes {
-  public static final String PASSWORD = "Gk)E}6x{7s5`9g_Z";
   public static final String PACKET_END_VERIFICATION = "@<W'G(&u2e[w9,fP";
   public static final int PING_DELAY = 10000;
   public static final int VERIFY = 1;

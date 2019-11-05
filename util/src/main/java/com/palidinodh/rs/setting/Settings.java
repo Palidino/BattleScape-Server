@@ -18,6 +18,8 @@ public class Settings {
   private String cacheDirectory;
   private String savesDirectory;
   private String logsDirectory;
+  private String scriptPackage;
+  private String password;
   private WorldStyle worldStyle;
   private boolean staffOnly;
   private boolean beta;

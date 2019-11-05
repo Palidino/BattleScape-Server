@@ -27867,9 +27867,7 @@
   },
   {
     "id": "ItemId.GRIM_REAPER_HOOD",
-    "equipSlot": "HEAD",
-    "showHair": true,
-    "showBeard": true
+    "equipSlot": "HEAD"
   },
   {
     "id": "ItemId.GRANITE_MAUL_12848",
