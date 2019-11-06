@@ -1,4 +1,5 @@
 {
+    "files.encoding": "utf8",
     "files.insertFinalNewline": true,
     "files.exclude": {
         "**/.idea": true,
@@ -8,6 +9,9 @@
         "**/.github": true,
         "**/.gitmodules": true,
         "**/.gitignore": true,
+        "**/.mvn": true,
+        "**/mvnw": true,
+        "**/mvnw.cmd": true,
         "**/.settings": true,
         "**/.classpath": true,
         "**/.factorypath": true,
@@ -36,8 +40,6 @@
     "editor.wordWrapColumn": 100,
     "java.configuration.updateBuildConfiguration": "interactive",
     "java.format.onType.enabled": true,
-    "java.jdt.ls.vmargs": "-Xmx512M -Xverify:none -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:util/repo/lombok.jar -Djava.lsp.joinOnCompletion=true",
-    "maven.executable.path": "util/repo/apache-maven/bin/mvn",
     "[java]": {
         "editor.formatOnSave": true
     },
