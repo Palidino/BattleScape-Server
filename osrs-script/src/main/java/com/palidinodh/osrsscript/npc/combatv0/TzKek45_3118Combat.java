@@ -2,7 +2,7 @@ package com.palidinodh.osrsscript.npc.combatv0;
 
 import java.util.Arrays;
 import java.util.List;
-import com.palidinodh.osrscore.io.cache.NpcId;
+import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombat;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatAggression;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatDefinition;

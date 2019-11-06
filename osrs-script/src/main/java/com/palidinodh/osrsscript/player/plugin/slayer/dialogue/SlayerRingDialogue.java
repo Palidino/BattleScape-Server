@@ -1,7 +1,7 @@
 package com.palidinodh.osrsscript.player.plugin.slayer.dialogue;
 
 import java.util.ArrayList;
-import com.palidinodh.osrscore.io.cache.ItemId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.player.Player;

@@ -5,8 +5,8 @@ import static com.palidinodh.osrscore.model.player.AchievementDiaryTask.Difficul
 import static com.palidinodh.osrscore.model.player.AchievementDiaryTask.Difficulty.HARD;
 import static com.palidinodh.osrscore.model.player.AchievementDiaryTask.Difficulty.MEDIUM;
 import java.util.Arrays;
-import com.palidinodh.osrscore.io.cache.ItemId;
-import com.palidinodh.osrscore.io.cache.NpcId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
+import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.io.cache.WidgetChild;
 import com.palidinodh.osrscore.model.Entity;
 import com.palidinodh.osrscore.model.Tile;

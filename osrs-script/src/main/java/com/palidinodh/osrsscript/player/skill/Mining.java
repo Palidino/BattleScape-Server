@@ -2,7 +2,7 @@ package com.palidinodh.osrsscript.player.skill;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.palidinodh.osrscore.io.cache.ItemId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.item.RandomItem;
 import com.palidinodh.osrscore.model.map.MapObject;

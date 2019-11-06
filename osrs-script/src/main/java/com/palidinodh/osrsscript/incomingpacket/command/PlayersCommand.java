@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
-import com.palidinodh.osrscore.io.cache.WidgetId;
+import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.Tile;
 import com.palidinodh.osrscore.model.dialogue.old.DialogueEntry;
 import com.palidinodh.osrscore.model.dialogue.old.DialogueOld;

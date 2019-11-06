@@ -2,8 +2,8 @@ package com.palidinodh.osrsscript.player.skill;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.palidinodh.osrscore.io.cache.ItemId;
-import com.palidinodh.osrscore.io.cache.NpcId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
+import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.Hit;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.item.RandomItem;
@@ -129,7 +129,7 @@ public class Thieving extends SkillContainer {
         .npc(new SkillModel(NpcId.MAN_2_3082, 2)).npc(new SkillModel(NpcId.WOMAN_2_3083, 2))
         .npc(new SkillModel(NpcId.WOMAN_2_3084, 2)).npc(new SkillModel(NpcId.WOMAN_2_3085, 2))
         .npc(new SkillModel(NpcId.MAN_2_3264, 2)).npc(new SkillModel(NpcId.MAN_2_3265, 2))
-        .npc(new SkillModel(NpcId.MAN_2_3266, 2)).npc(new SkillModel(NpcId.WOMAN_2_3267, 2))
+        .npc(new SkillModel(NpcId.MAN_2_3266, 2))
         .npc(new SkillModel(NpcId.WOMAN_2_3268, 2)).create(new RandomItem(ItemId.BRONZE_SCIMITAR))
         .pet(new SkillPet(ItemId.ROCKY, 257211)).failedHit(new Hit(1)).build());
     entries.add(SkillEntry.builder().level(25).experience(26).animation(881).delay(2)

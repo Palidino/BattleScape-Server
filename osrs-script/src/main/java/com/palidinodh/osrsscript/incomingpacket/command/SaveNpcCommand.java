@@ -3,7 +3,7 @@ package com.palidinodh.osrsscript.incomingpacket.command;
 import java.util.ArrayList;
 import com.palidinodh.io.FileManager;
 import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
-import com.palidinodh.osrscore.io.cache.NpcId;
+import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.Tile;
 import com.palidinodh.osrscore.model.npc.Npc;
 import com.palidinodh.osrscore.model.player.Player;

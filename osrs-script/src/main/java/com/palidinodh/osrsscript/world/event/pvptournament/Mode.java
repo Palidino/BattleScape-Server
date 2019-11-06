@@ -3,7 +3,7 @@ package com.palidinodh.osrsscript.world.event.pvptournament;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import com.palidinodh.osrscore.io.cache.ItemId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.player.Loadout;
 import com.palidinodh.osrscore.model.player.Magic;

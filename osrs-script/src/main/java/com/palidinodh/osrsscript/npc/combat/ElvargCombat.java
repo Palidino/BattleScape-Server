@@ -2,8 +2,8 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
-import com.palidinodh.osrscore.io.cache.ItemId;
-import com.palidinodh.osrscore.io.cache.NpcId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
+import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
 import com.palidinodh.osrscore.model.Graphic;
 import com.palidinodh.osrscore.model.Tile;

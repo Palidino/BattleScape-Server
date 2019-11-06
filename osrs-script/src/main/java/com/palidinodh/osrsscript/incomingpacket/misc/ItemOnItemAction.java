@@ -1,7 +1,7 @@
 package com.palidinodh.osrsscript.incomingpacket.misc;
 
-import com.palidinodh.osrscore.io.cache.ItemId;
-import com.palidinodh.osrscore.io.cache.WidgetId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
+import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.item.ItemDef;
 import com.palidinodh.osrscore.model.player.Fletching;

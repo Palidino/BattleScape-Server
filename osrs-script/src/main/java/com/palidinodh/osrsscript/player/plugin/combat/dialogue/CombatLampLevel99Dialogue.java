@@ -1,6 +1,6 @@
 package com.palidinodh.osrsscript.player.plugin.combat.dialogue;
 
-import com.palidinodh.osrscore.io.cache.ItemId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.model.dialogue.LargeSelectionDialogue;
 import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
 import com.palidinodh.osrscore.model.player.Player;

@@ -1,6 +1,6 @@
 package com.palidinodh.osrsscript.player.plugin.slayer;
 
-import com.palidinodh.osrscore.io.cache.ItemId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.model.player.slayer.SlayerUnlock;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,7 +1,7 @@
 package com.palidinodh.osrsscript.player.plugin.clanwars;
 
-import com.palidinodh.osrscore.io.cache.ScriptId;
-import com.palidinodh.osrscore.io.cache.WidgetId;
+import com.palidinodh.osrscore.io.cache.id.ScriptId;
+import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.osrscore.model.player.WidgetManager;

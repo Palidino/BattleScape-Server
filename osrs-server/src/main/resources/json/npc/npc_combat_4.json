@@ -3430,7 +3430,7 @@
         "chance": 99,
         "items": [
           [ { "id": "ItemId.ADAMANT_PLATELEGS", "amount": 1 } ],
-          [ { "id": "ItemId.ADAMANT_KITE_SHIELD", "amount": 1 } ],
+          [ { "id": "ItemId.ADAMANT_KITESHIELD", "amount": 1 } ],
           [ { "id": "ItemId.NATURE_RUNE", "amount": 15, "maxAmount": 30 } ],
           [ { "id": "ItemId.DEATH_RUNE", "amount": 10, "maxAmount": 25 } ],
           [ { "id": "ItemId.LAW_RUNE", "amount": 20, "maxAmount": 30 } ],

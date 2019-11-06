@@ -27622,38 +27622,6 @@
     ]
   },
   {
-    "id": "NpcId.ANGRY_GIANT_RAT_45_1063",
-    "hitpoints": 200,
-    "aggressive": true,
-    "deathAnimation": -1,
-    "blockAnimation": -1,
-    "combatStyles": [
-      {
-        "type": "MELEE",
-        "meleeAttackStyle": "null",
-        "animation": -1,
-        "maxHit": 0,
-        "attackSpeed": -1
-      }
-    ]
-  },
-  {
-    "id": "NpcId.ANGRY_GIANT_RAT_45_1064",
-    "hitpoints": 200,
-    "aggressive": true,
-    "deathAnimation": -1,
-    "blockAnimation": -1,
-    "combatStyles": [
-      {
-        "type": "MELEE",
-        "meleeAttackStyle": "null",
-        "animation": -1,
-        "maxHit": 0,
-        "attackSpeed": -1
-      }
-    ]
-  },
-  {
     "id": "NpcId.SEA_SNAKE_YOUNG_90",
     "hitpoints": 85,
     "slayerLevel": 40,

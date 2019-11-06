@@ -3,7 +3,7 @@ package com.palidinodh.osrsscript.incomingpacket.misc;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import com.palidinodh.osrscore.io.cache.NpcId;
+import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.ForceMovement;
 import com.palidinodh.osrscore.model.Movement;
 import com.palidinodh.osrscore.model.Tile;

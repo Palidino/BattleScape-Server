@@ -1,6 +1,6 @@
 package com.palidinodh.osrsscript.incomingpacket.misc;
 
-import com.palidinodh.osrscore.io.cache.ItemId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.model.ForceMovement;
 import com.palidinodh.osrscore.model.Movement;
 import com.palidinodh.osrscore.model.Tile;

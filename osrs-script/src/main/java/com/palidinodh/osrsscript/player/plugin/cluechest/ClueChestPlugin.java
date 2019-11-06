@@ -3,7 +3,7 @@ package com.palidinodh.osrsscript.player.plugin.cluechest;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import com.palidinodh.osrscore.io.cache.WidgetId;
+import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.dialogue.Scroll;
 import com.palidinodh.osrscore.model.item.clue.ClueChestSet;
 import com.palidinodh.osrscore.model.item.clue.ClueChestSetEntry;

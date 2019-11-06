@@ -1,8 +1,8 @@
 package com.palidinodh.osrsscript.incomingpacket.widget;
 
 import com.palidinodh.osrscore.io.incomingpacket.WidgetHandler;
-import com.palidinodh.osrscore.io.cache.ItemId;
-import com.palidinodh.osrscore.io.cache.WidgetId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
+import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.Tile;
 import com.palidinodh.osrscore.model.dialogue.DialogueAction;
 import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;

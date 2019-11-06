@@ -1,6 +1,6 @@
 package com.palidinodh.osrsscript.player.plugin.combat;
 
-import com.palidinodh.osrscore.io.cache.WidgetId;
+import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.PlayerPlugin;
 import lombok.var;

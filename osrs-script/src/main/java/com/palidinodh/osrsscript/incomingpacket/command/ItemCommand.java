@@ -2,7 +2,7 @@ package com.palidinodh.osrsscript.incomingpacket.command;
 
 import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
-import com.palidinodh.osrscore.io.cache.ItemId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 

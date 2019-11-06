@@ -1,9 +1,9 @@
 package com.palidinodh.osrsscript.map.area;
 
 import java.util.List;
-import com.palidinodh.osrscore.io.cache.ItemId;
-import com.palidinodh.osrscore.io.cache.NpcId;
-import com.palidinodh.osrscore.io.cache.WidgetId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
+import com.palidinodh.osrscore.io.cache.id.NpcId;
+import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.Tile;
 import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
 import com.palidinodh.osrscore.model.guide.Guide;

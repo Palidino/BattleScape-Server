@@ -1,8 +1,8 @@
 package com.palidinodh.osrsscript.incomingpacket.widget;
 
 import com.palidinodh.osrscore.io.incomingpacket.WidgetHandler;
-import com.palidinodh.osrscore.io.cache.VarpId;
-import com.palidinodh.osrscore.io.cache.WidgetId;
+import com.palidinodh.osrscore.io.cache.id.VarpId;
+import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.util.PNumber;

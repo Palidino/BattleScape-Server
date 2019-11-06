@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.palidinodh.osrscore.io.cache.VarbitId;
+import com.palidinodh.osrscore.io.cache.id.VarbitId;
 import com.palidinodh.util.PCollection;
 import lombok.Getter;
 import lombok.var;

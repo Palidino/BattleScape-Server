@@ -1,8 +1,8 @@
 package com.palidinodh.osrsscript.player.plugin.skillmagic;
 
-import com.palidinodh.osrscore.io.cache.ItemId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.WidgetChild;
-import com.palidinodh.osrscore.io.cache.WidgetId;
+import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.item.ItemDef;
 import com.palidinodh.osrscore.model.map.MapObject;
 import com.palidinodh.osrscore.model.player.Player;

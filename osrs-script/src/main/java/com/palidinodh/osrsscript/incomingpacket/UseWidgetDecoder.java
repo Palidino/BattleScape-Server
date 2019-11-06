@@ -1,9 +1,9 @@
 package com.palidinodh.osrsscript.incomingpacket;
 
 import com.palidinodh.io.Stream;
-import com.palidinodh.osrscore.io.cache.ItemId;
-import com.palidinodh.osrscore.io.cache.NpcId;
-import com.palidinodh.osrscore.io.cache.WidgetId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
+import com.palidinodh.osrscore.io.cache.id.NpcId;
+import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.io.incomingpacket.InStreamKey;
 import com.palidinodh.osrscore.io.incomingpacket.IncomingPacketDecoder;
 import com.palidinodh.osrscore.io.incomingpacket.WidgetHandler;

@@ -2,9 +2,9 @@ package com.palidinodh.osrsscript.player.achievementdiary;
 
 import static com.palidinodh.osrscore.model.player.AchievementDiaryTask.Difficulty.EASY;
 import java.util.Arrays;
-import com.palidinodh.osrscore.io.cache.ItemId;
-import com.palidinodh.osrscore.io.cache.NpcId;
-import com.palidinodh.osrscore.io.cache.WidgetId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
+import com.palidinodh.osrscore.io.cache.id.NpcId;
+import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.item.Shop;
 import com.palidinodh.osrscore.model.item.ShopItem;

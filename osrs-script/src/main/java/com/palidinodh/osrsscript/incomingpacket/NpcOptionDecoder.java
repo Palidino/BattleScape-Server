@@ -5,7 +5,7 @@ import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
 import com.palidinodh.io.Stream;
-import com.palidinodh.osrscore.io.cache.NpcId;
+import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.io.incomingpacket.InStreamKey;
 import com.palidinodh.osrscore.io.incomingpacket.IncomingPacketDecoder;
 import com.palidinodh.osrscore.model.npc.Npc;
@@ -32,8 +32,8 @@ public class NpcOptionDecoder extends IncomingPacketDecoder {
     if (npc == null) {
       return false;
     }
-    var message = "[NpcOption(" + option + ")] option=" + npcIndex + "; ctrlRun=" + ctrlRun
-        + "; npcIndex=" + npc.getId() + "/" + NpcId.valueOf(npc.getId());
+    var message = "[NpcOption(" + option + ")] index=" + npcIndex + "; ctrlRun=" + ctrlRun
+        + "; id=" + npc.getId() + "/" + NpcId.valueOf(npc.getId());
     if (Settings.getInstance().isLocal()) {
       PLogger.println(message);
     }

@@ -2,9 +2,9 @@ package com.palidinodh.osrsscript.player.plugin.lootingbag;
 
 import java.util.Map;
 import com.palidinodh.osrscore.io.ValueEnteredEvent;
-import com.palidinodh.osrscore.io.cache.ItemId;
-import com.palidinodh.osrscore.io.cache.ScriptId;
-import com.palidinodh.osrscore.io.cache.WidgetId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
+import com.palidinodh.osrscore.io.cache.id.ScriptId;
+import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.item.ItemDef;
 import com.palidinodh.osrscore.model.item.ItemList;

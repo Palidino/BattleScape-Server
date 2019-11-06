@@ -32896,21 +32896,6 @@
     }
   },
   {
-    "id": "ItemId.ELDER_WAND",
-    "equipSlot": "WEAPON",
-    "weaponType": "TYPE_18",
-    "attackSpeed": 4,
-    "stanceAnimations": [ 813, 1209, 1205, 1206, 1207, 1208, 1210 ],
-    "levels": "Magic=75",
-    "bonuses": {
-      "ATTACK_MAGIC": 28,
-      "DEFENCE_SLASH": 3,
-      "DEFENCE_CRUSH": 3,
-      "DEFENCE_MAGIC": 20,
-      "MAGIC_DAMAGE": 5
-    }
-  },
-  {
     "id": "ItemId.RING_OF_SUFFERING_R",
     "equipSlot": "RING",
     "levels": "Hitpoints=75",

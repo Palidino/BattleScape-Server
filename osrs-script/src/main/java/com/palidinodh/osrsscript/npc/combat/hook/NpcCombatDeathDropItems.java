@@ -1,6 +1,6 @@
 package com.palidinodh.osrsscript.npc.combat.hook;
 
-import com.palidinodh.osrscore.io.cache.ItemId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.model.Tile;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.item.ItemDef;

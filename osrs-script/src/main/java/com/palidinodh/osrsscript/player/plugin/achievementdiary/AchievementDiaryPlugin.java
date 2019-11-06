@@ -1,8 +1,8 @@
 package com.palidinodh.osrsscript.player.plugin.achievementdiary;
 
-import com.palidinodh.osrscore.io.cache.ItemId;
-import com.palidinodh.osrscore.io.cache.NpcId;
-import com.palidinodh.osrscore.io.cache.WidgetId;
+import com.palidinodh.osrscore.io.cache.id.ItemId;
+import com.palidinodh.osrscore.io.cache.id.NpcId;
+import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.PlayerPlugin;
 import com.palidinodh.osrscore.model.player.Skills;
