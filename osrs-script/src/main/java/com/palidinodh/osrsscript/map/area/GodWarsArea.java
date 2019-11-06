@@ -162,15 +162,19 @@ public class GodWarsArea extends Area {
           switch (mapObject.getId()) {
             case 26363: // Zamorak altar
               player.getMagic().standardTeleport(new Tile(2925, 5333, 2));
+              player.getController().stopWithTeleport();
               break;
             case 26364: // Saradomin altar
               player.getMagic().standardTeleport(new Tile(2909, 5265));
+              player.getController().stopWithTeleport();
               break;
             case 26365: // Armadyl altar
               player.getMagic().standardTeleport(new Tile(2839, 5294, 2));
+              player.getController().stopWithTeleport();
               break;
             case 26366: // Bandos altar
               player.getMagic().standardTeleport(new Tile(2862, 5354, 2));
+              player.getController().stopWithTeleport();
               break;
           }
         }
