@@ -489,7 +489,7 @@ public class FileManager implements Runnable {
   }
 
   public static <T> T fromJson(InputStream in, Class<T> type) {
-    try (InputStreamReader reader = new InputStreamReader(in)) {
+    try (InputStreamReader reader = new InputStreamReader(in, "UTF-8")) {
       return fromJson(reader, type);
     } catch (IOException e) {
       return null;
@@ -497,7 +497,7 @@ public class FileManager implements Runnable {
   }
 
   public static <T> T fromJson(InputStream in, TypeToken<T> type) {
-    try (InputStreamReader reader = new InputStreamReader(in)) {
+    try (InputStreamReader reader = new InputStreamReader(in, "UTF-8")) {
       return fromJson(reader, type);
     } catch (IOException e) {
       return null;
@@ -624,7 +624,7 @@ public class FileManager implements Runnable {
         }
       } else {
         try (InputStream in = url.openStream();
-            BufferedReader br = new BufferedReader(new InputStreamReader(in))) {
+            BufferedReader br = new BufferedReader(new InputStreamReader(in, "UTF-8"))) {
           String resource;
           while ((resource = br.readLine()) != null) {
             filenames.add(new File(directory, resource).getPath());
