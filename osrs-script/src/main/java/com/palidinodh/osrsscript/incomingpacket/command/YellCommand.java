@@ -55,8 +55,8 @@ public class YellCommand implements CommandHandler {
     } else if (player.isUsergroup(SqlUserRank.DONATOR)) {
       yellDelay = PTime.secToTick(60);
     }
-    player.getWorld().sendMessage("[<col=ff0000>Yell</col>] " + player.getMessaging().getIconImage()
-        + player.getUsername() + ": " + message);
+    player.getWorld().sendMessage(player, "[<col=ff0000>Yell</col>] "
+        + player.getMessaging().getIconImage() + player.getUsername() + ": " + message);
     player.getMessaging().setYellDelay((int) yellDelay);
     RequestManager.addPlayerLog("yell/" + player.getLogFilename(), "[" + player.getId() + "; "
         + player.getIP() + "] [Yell] " + player.getUsername() + ": " + message);
