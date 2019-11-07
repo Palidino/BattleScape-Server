@@ -3,7 +3,6 @@ package com.palidinodh.osrsscript.npc.combat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -38,7 +37,6 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.npc.combat.style.special.NpcCombatTargetTile;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
-import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PCollection;
 import com.palidinodh.util.PEvent;
 import com.palidinodh.util.PPolygon;
@@ -239,7 +237,7 @@ public class AlchemicalHydraCombat extends NpcCombat {
         .bonus(CombatBonus.DEFENCE_STAB, 75).bonus(CombatBonus.DEFENCE_SLASH, 150)
         .bonus(CombatBonus.DEFENCE_CRUSH, 150).bonus(CombatBonus.DEFENCE_MAGIC, 150)
         .bonus(CombatBonus.DEFENCE_RANGED, 45).build());
-    combat.slayer(NpcCombatSlayer.builder().level(95).build());
+    combat.slayer(NpcCombatSlayer.builder().level(95).taskOnly(true).build());
     combat.aggression(NpcCombatAggression.builder().range(12).build());
     combat.immunity(NpcCombatImmunity.builder().poison(true).venom(true).bind(true).build());
     combat.focus(NpcCombatFocus.builder().keepWithinDistance(3).build());
@@ -269,7 +267,7 @@ public class AlchemicalHydraCombat extends NpcCombat {
     combat2.spawn(NpcCombatSpawn.builder().respawnDelay(42).build());
     combat2.stats(NpcCombatStats.builder().attackLevel(100).magicLevel(260).rangedLevel(260)
         .defenceLevel(100).build());
-    combat2.slayer(NpcCombatSlayer.builder().level(95).build());
+    combat2.slayer(NpcCombatSlayer.builder().level(95).taskOnly(true).build());
 
 
     var combat3 = NpcCombatDefinition.builder();
@@ -282,7 +280,7 @@ public class AlchemicalHydraCombat extends NpcCombat {
         .bonus(CombatBonus.DEFENCE_STAB, 75).bonus(CombatBonus.DEFENCE_SLASH, 150)
         .bonus(CombatBonus.DEFENCE_CRUSH, 150).bonus(CombatBonus.DEFENCE_MAGIC, 150)
         .bonus(CombatBonus.DEFENCE_RANGED, 45).build());
-    combat3.slayer(NpcCombatSlayer.builder().level(95).build());
+    combat3.slayer(NpcCombatSlayer.builder().level(95).taskOnly(true).build());
     combat3.aggression(NpcCombatAggression.builder().range(12).build());
     combat3.immunity(NpcCombatImmunity.builder().poison(true).venom(true).bind(true).build());
     combat3.focus(NpcCombatFocus.builder().keepWithinDistance(3).build());
@@ -315,7 +313,7 @@ public class AlchemicalHydraCombat extends NpcCombat {
         .bonus(CombatBonus.DEFENCE_STAB, 75).bonus(CombatBonus.DEFENCE_SLASH, 150)
         .bonus(CombatBonus.DEFENCE_CRUSH, 150).bonus(CombatBonus.DEFENCE_MAGIC, 150)
         .bonus(CombatBonus.DEFENCE_RANGED, 45).build());
-    combat4.slayer(NpcCombatSlayer.builder().level(95).build());
+    combat4.slayer(NpcCombatSlayer.builder().level(95).taskOnly(true).build());
     combat4.aggression(NpcCombatAggression.builder().range(12).build());
     combat4.immunity(NpcCombatImmunity.builder().poison(true).venom(true).bind(true).build());
     combat4.focus(NpcCombatFocus.builder().keepWithinDistance(3).build());
@@ -347,7 +345,7 @@ public class AlchemicalHydraCombat extends NpcCombat {
         .bonus(CombatBonus.DEFENCE_STAB, 75).bonus(CombatBonus.DEFENCE_SLASH, 150)
         .bonus(CombatBonus.DEFENCE_CRUSH, 150).bonus(CombatBonus.DEFENCE_MAGIC, 150)
         .bonus(CombatBonus.DEFENCE_RANGED, 45).build());
-    combat5.slayer(NpcCombatSlayer.builder().level(95).build());
+    combat5.slayer(NpcCombatSlayer.builder().level(95).taskOnly(true).build());
     combat5.aggression(NpcCombatAggression.builder().range(12).build());
     combat5.immunity(NpcCombatImmunity.builder().poison(true).venom(true).bind(true).build());
     combat5.focus(NpcCombatFocus.builder().keepWithinDistance(3).build());
@@ -516,14 +514,6 @@ public class AlchemicalHydraCombat extends NpcCombat {
       return false;
     }
     var player = (Player) opponent;
-    if (!Settings.getInstance().isSpawn() && !player.getSkills().isAnySlayerTask(npc)
-        && !Main.ownerPrivledges(player)) {
-      if (sendMessage) {
-        player.getGameEncoder()
-            .sendMessage("This can only be attacked on an appropriate Slayer task.");
-      }
-      return false;
-    }
     if (npc.isAttacking() && (npc.getAttackingEntity() != null && npc.getAttackingEntity() != player
         || npc.getLastHitByEntity() != null && player != npc.getLastHitByEntity())) {
       if (sendMessage) {

@@ -5,9 +5,7 @@ import java.util.List;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
-import com.palidinodh.osrscore.model.Entity;
 import com.palidinodh.osrscore.model.Graphic;
-import com.palidinodh.osrscore.model.HitType;
 import com.palidinodh.osrscore.model.item.RandomItem;
 import com.palidinodh.osrscore.model.npc.Npc;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombat;
@@ -17,6 +15,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatDropTable;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatDropTableDrop;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatFocus;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatHitpoints;
+import com.palidinodh.osrscore.model.npc.combat.NpcCombatImmunity;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatSlayer;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatStats;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatDamage;
@@ -24,7 +23,6 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatProjectile;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Player;
-import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
 public class CaveKrakenCombat extends NpcCombat {
@@ -114,7 +112,8 @@ public class CaveKrakenCombat extends NpcCombat {
     combat.hitpoints(NpcCombatHitpoints.total(125));
     combat.stats(NpcCombatStats.builder().magicLevel(120).defenceLevel(150)
         .bonus(CombatBonus.DEFENCE_MAGIC, -63).bonus(CombatBonus.DEFENCE_RANGED, 100).build());
-    combat.slayer(NpcCombatSlayer.builder().level(87).build());
+    combat.slayer(NpcCombatSlayer.builder().level(87).taskOnly(true).build());
+    combat.immunity(NpcCombatImmunity.builder().melee(true).ranged(true).build());
     combat.focus(NpcCombatFocus.builder().bypassMapObjects(true).build());
     combat.deathAnimation(3993).blockAnimation(3990);
     combat.drop(drop.build());
@@ -135,6 +134,7 @@ public class CaveKrakenCombat extends NpcCombat {
     cursedCombat.stats(NpcCombatStats.builder().magicLevel(120).defenceLevel(150)
         .bonus(CombatBonus.DEFENCE_MAGIC, -63).bonus(CombatBonus.DEFENCE_RANGED, 100).build());
     cursedCombat.slayer(NpcCombatSlayer.builder().level(87).build());
+    combat.immunity(NpcCombatImmunity.builder().melee(true).ranged(true).build());
     cursedCombat.focus(NpcCombatFocus.builder().bypassMapObjects(true).build());
     cursedCombat.deathAnimation(3993).blockAnimation(3990);
     cursedCombat.drop(drop.build());
@@ -186,28 +186,6 @@ public class CaveKrakenCombat extends NpcCombat {
         }
       }
     }
-  }
-
-  @Override
-  public boolean canBeAttackedHook(Entity opponent, boolean sendMessage, HitType hitType) {
-    if (!(opponent instanceof Player)) {
-      return false;
-    }
-    var player = (Player) opponent;
-    if (!Settings.getInstance().isSpawn() && !player.getSkills().isAnySlayerTask(npc)) {
-      if (sendMessage) {
-        player.getGameEncoder()
-            .sendMessage("This can only be attacked on an appropriate Slayer task.");
-      }
-      return false;
-    }
-    if (hitType == HitType.MELEE || hitType == HitType.RANGED) {
-      if (sendMessage) {
-        player.getGameEncoder().sendMessage("Only magic seems effective against these...");
-      }
-      return false;
-    }
-    return true;
   }
 
   @Override

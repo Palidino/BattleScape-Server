@@ -35,7 +35,6 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
-import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
 public class CerberusCombat extends NpcCombat {
@@ -123,7 +122,7 @@ public class CerberusCombat extends NpcCombat {
         .bonus(CombatBonus.ATTACK_RANGED, 50).bonus(CombatBonus.DEFENCE_STAB, 50)
         .bonus(CombatBonus.DEFENCE_SLASH, 100).bonus(CombatBonus.DEFENCE_CRUSH, 25)
         .bonus(CombatBonus.DEFENCE_MAGIC, 100).bonus(CombatBonus.DEFENCE_RANGED, 100).build());
-    combat.slayer(NpcCombatSlayer.builder().level(91).build());
+    combat.slayer(NpcCombatSlayer.builder().level(91).taskOnly(true).build());
     combat.aggression(NpcCombatAggression.PLAYERS);
     combat.immunity(NpcCombatImmunity.builder().poison(true).venom(true).build());
     combat.killCount(NpcCombatKillCount.builder().sendMessage(true).build());
@@ -225,13 +224,6 @@ public class CerberusCombat extends NpcCombat {
       return false;
     }
     var player = (Player) opponent;
-    if (!Settings.getInstance().isSpawn() && !player.getSkills().isAnySlayerTask(npc)) {
-      if (sendMessage) {
-        player.getGameEncoder()
-            .sendMessage("This can only be attacked on an appropriate Slayer task.");
-      }
-      return false;
-    }
     if (npc.isAttacking() && npc.getLastHitByEntity() != null
         && player != npc.getLastHitByEntity()) {
       if (sendMessage) {

@@ -5,7 +5,6 @@ import java.util.List;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
-import com.palidinodh.osrscore.model.Entity;
 import com.palidinodh.osrscore.model.HitType;
 import com.palidinodh.osrscore.model.HitpointsBar;
 import com.palidinodh.osrscore.model.item.RandomItem;
@@ -25,7 +24,6 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatProjectile;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Player;
-import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
 public class SmokeDevilCombat extends NpcCombat {
@@ -106,8 +104,8 @@ public class SmokeDevilCombat extends NpcCombat {
     combat.hitpoints(NpcCombatHitpoints.total(185));
     combat.stats(NpcCombatStats.builder().attackLevel(140).rangedLevel(195).defenceLevel(275)
         .bonus(CombatBonus.DEFENCE_MAGIC, 600).bonus(CombatBonus.DEFENCE_RANGED, 44).build());
-    combat.slayer(
-        NpcCombatSlayer.builder().level(93).superiorId(NpcId.NUCLEAR_SMOKE_DEVIL_280).build());
+    combat.slayer(NpcCombatSlayer.builder().level(93).taskOnly(true)
+        .superiorId(NpcId.NUCLEAR_SMOKE_DEVIL_280).build());
     combat.immunity(NpcCombatImmunity.builder().poison(true).venom(true).build());
     combat.deathAnimation(3849).blockAnimation(3848);
     combat.drop(drop.build());
@@ -148,7 +146,8 @@ public class SmokeDevilCombat extends NpcCombat {
     superiorCombat
         .stats(NpcCombatStats.builder().attackLevel(240).rangedLevel(295).defenceLevel(375)
             .bonus(CombatBonus.DEFENCE_MAGIC, 1200).bonus(CombatBonus.DEFENCE_RANGED, 88).build());
-    superiorCombat.slayer(NpcCombatSlayer.builder().level(93).experience(2400).build());
+    superiorCombat
+        .slayer(NpcCombatSlayer.builder().level(93).taskOnly(true).experience(2400).build());
     superiorCombat.immunity(NpcCombatImmunity.builder().poison(true).venom(true).build());
     superiorCombat
         .killCount(NpcCombatKillCount.builder().asName("Superior Slayer Creature").build());
@@ -170,22 +169,6 @@ public class SmokeDevilCombat extends NpcCombat {
   @Override
   public void spawnHook() {
     npc = getNpc();
-  }
-
-  @Override
-  public boolean canBeAttackedHook(Entity opponent, boolean sendMessage, HitType hitType) {
-    if (!(opponent instanceof Player)) {
-      return false;
-    }
-    var player = (Player) opponent;
-    if (!Settings.getInstance().isSpawn() && !player.getSkills().isAnySlayerTask(npc)) {
-      if (sendMessage) {
-        player.getGameEncoder()
-            .sendMessage("This can only be attacked on an appropriate Slayer task.");
-      }
-      return false;
-    }
-    return true;
   }
 
   @Override

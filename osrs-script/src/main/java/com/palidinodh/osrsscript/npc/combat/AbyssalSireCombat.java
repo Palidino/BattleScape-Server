@@ -37,8 +37,6 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
-import com.palidinodh.rs.setting.Settings;
-import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
 public class AbyssalSireCombat extends NpcCombat {
@@ -139,7 +137,7 @@ public class AbyssalSireCombat extends NpcCombat {
         .bonus(CombatBonus.MELEE_ATTACK, 65).bonus(CombatBonus.DEFENCE_STAB, 40)
         .bonus(CombatBonus.DEFENCE_SLASH, 60).bonus(CombatBonus.DEFENCE_CRUSH, 50)
         .bonus(CombatBonus.DEFENCE_MAGIC, 20).bonus(CombatBonus.DEFENCE_RANGED, 60).build());
-    combat1.slayer(NpcCombatSlayer.builder().level(85).build());
+    combat1.slayer(NpcCombatSlayer.builder().level(85).taskOnly(true).build());
     combat1.immunity(NpcCombatImmunity.builder().poison(true).venom(true).bind(true).build());
     combat1
         .focus(NpcCombatFocus.builder().retaliationDisabled(true).bypassMapObjects(true).build());
@@ -154,7 +152,7 @@ public class AbyssalSireCombat extends NpcCombat {
         .bonus(CombatBonus.MELEE_ATTACK, 65).bonus(CombatBonus.DEFENCE_STAB, 40)
         .bonus(CombatBonus.DEFENCE_SLASH, 60).bonus(CombatBonus.DEFENCE_CRUSH, 50)
         .bonus(CombatBonus.DEFENCE_MAGIC, 20).bonus(CombatBonus.DEFENCE_RANGED, 60).build());
-    combat2.slayer(NpcCombatSlayer.builder().level(85).build());
+    combat2.slayer(NpcCombatSlayer.builder().level(85).taskOnly(true).build());
     combat2.aggression(NpcCombatAggression.PLAYERS);
     combat2.immunity(NpcCombatImmunity.builder().poison(true).venom(true).bind(true).build());
     combat2.focus(
@@ -194,7 +192,7 @@ public class AbyssalSireCombat extends NpcCombat {
         .bonus(CombatBonus.MELEE_ATTACK, 65).bonus(CombatBonus.DEFENCE_STAB, 40)
         .bonus(CombatBonus.DEFENCE_SLASH, 60).bonus(CombatBonus.DEFENCE_CRUSH, 50)
         .bonus(CombatBonus.DEFENCE_MAGIC, 20).bonus(CombatBonus.DEFENCE_RANGED, 60).build());
-    combat3.slayer(NpcCombatSlayer.builder().level(85).build());
+    combat3.slayer(NpcCombatSlayer.builder().level(85).taskOnly(true).build());
     combat3.aggression(NpcCombatAggression.PLAYERS);
     combat3.immunity(NpcCombatImmunity.builder().poison(true).venom(true).build());
     combat3.focus(NpcCombatFocus.builder().retaliationDisabled(true).bypassMapObjects(true)
@@ -345,14 +343,6 @@ public class AbyssalSireCombat extends NpcCombat {
       return false;
     }
     var player = (Player) entity;
-    if (!Settings.getInstance().isSpawn() && !player.getSkills().isAnySlayerTask(npc)
-        && !player.isUsergroup(SqlUserRank.YOUTUBER)) {
-      if (sendMessage) {
-        player.getGameEncoder()
-            .sendMessage("This can only be attacked on an appropriate Slayer task.");
-      }
-      return false;
-    }
     if (combatWith != null && player != combatWith) {
       if (sendMessage) {
         player.getGameEncoder().sendMessage("Abyssal Sire is busy with someone else.");

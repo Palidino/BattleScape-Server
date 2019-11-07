@@ -1,4 +1,4 @@
-package com.palidinodh.osrsscript.npc.combatv0;
+package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
@@ -6,7 +6,9 @@ import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
 import com.palidinodh.osrscore.model.Graphic;
+import com.palidinodh.osrscore.model.Tile;
 import com.palidinodh.osrscore.model.item.RandomItem;
+import com.palidinodh.osrscore.model.npc.Npc;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombat;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatAggression;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatDefinition;
@@ -23,9 +25,12 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatDamage;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatProjectile;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
+import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class GeneralGraardor624Combat extends NpcCombat {
+public class BandosGodWarsChamberCombat extends NpcCombat {
+  private Npc npc;
+
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var graardorDrop = NpcCombatDrop.builder().rareDropTableRate(NpcCombatDropTable.CHANCE_1_IN_256)
@@ -102,7 +107,7 @@ public class GeneralGraardor624Combat extends NpcCombat {
 
     style = NpcCombatStyle.builder();
     style.type(NpcCombatStyleType.RANGED);
-    style.damage(NpcCombatDamage.maximum(35));
+    style.damage(NpcCombatDamage.builder().minimum(15).maximum(35).build());
     style.animation(7021).attackSpeed(6).attackRange(1);
     style.projectile(NpcCombatProjectile.id(335));
     style.multiTarget(true);
@@ -124,6 +129,7 @@ public class GeneralGraardor624Combat extends NpcCombat {
     dropTable
         .drop(NpcCombatDropTableDrop.builder().item(new RandomItem(ItemId.COINS, 1000, 5000, 120))
             .log(NpcCombatDropTableDrop.Log.NO).build());
+    grimspikeDrop.table(dropTable.build());
     dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_COMMON);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.STEEL_DART, 95, 100)));
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.COSMIC_RUNE, 25, 30)));
@@ -163,19 +169,21 @@ public class GeneralGraardor624Combat extends NpcCombat {
 
 
     var steelwillDrop =
-        NpcCombatDrop.builder().rareDropTableRate(NpcCombatDropTable.CHANCE_1_IN_256);
-    dropTable = NpcCombatDropTable.builder().chance(0.02).log(true);
-    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.BANDOS_CHESTPLATE)));
-    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.BANDOS_TASSETS)));
-    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.BANDOS_BOOTS)));
-    steelwillDrop.table(dropTable.build());
-    dropTable = NpcCombatDropTable.builder().chance(0.29).log(true);
+        NpcCombatDrop.builder().rareDropTableRate(NpcCombatDropTable.CHANCE_1_IN_256)
+            .clue(NpcCombatDrop.ClueScroll.HARD, NpcCombatDropTable.CHANCE_1_IN_128);
+    dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_508).log(true);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.GODSWORD_SHARD_1)));
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.GODSWORD_SHARD_2)));
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.GODSWORD_SHARD_3)));
     steelwillDrop.table(dropTable.build());
-    dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_128);
-    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.CLUE_SCROLL_HARD)));
+    dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_127).log(true);
+    dropTable
+        .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.BANDOS_CHESTPLATE).weight(1)));
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.BANDOS_TASSETS).weight(1)));
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.BANDOS_BOOTS).weight(1)));
+    dropTable
+        .drop(NpcCombatDropTableDrop.builder().item(new RandomItem(ItemId.COINS, 1000, 5000, 120))
+            .log(NpcCombatDropTableDrop.Log.NO).build());
     steelwillDrop.table(dropTable.build());
     dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_COMMON);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.STEEL_DART, 95, 100)));
@@ -195,18 +203,19 @@ public class GeneralGraardor624Combat extends NpcCombat {
     steelwillDrop.table(dropTable.build());
 
 
-    var combat = NpcCombatDefinition.builder();
-    combat.id(NpcId.SERGEANT_STEELWILL_142);
-    combat.spawn(NpcCombatSpawn.builder().respawnDelay(50).respawnWithId(NpcId.GENERAL_GRAARDOR_624)
-        .respawnWithId(NpcId.SERGEANT_STRONGSTACK_141).respawnWithId(NpcId.SERGEANT_GRIMSPIKE_142)
-        .build());
-    combat.hitpoints(NpcCombatHitpoints.total(127));
-    combat
+    var steelwillCombat = NpcCombatDefinition.builder();
+    steelwillCombat.id(NpcId.SERGEANT_STEELWILL_142);
+    steelwillCombat.spawn(NpcCombatSpawn.builder().respawnDelay(50)
+        .respawnWithId(NpcId.GENERAL_GRAARDOR_624).respawnWithId(NpcId.SERGEANT_STRONGSTACK_141)
+        .respawnWithId(NpcId.SERGEANT_GRIMSPIKE_142).build());
+    steelwillCombat.hitpoints(NpcCombatHitpoints.total(127));
+    steelwillCombat
         .stats(NpcCombatStats.builder().attackLevel(80).magicLevel(150).defenceLevel(150).build());
-    combat.aggression(NpcCombatAggression.builder().range(16).build());
-    combat.killCount(NpcCombatKillCount.builder().asName("General Graardor's bodyguard").build());
-    combat.deathAnimation(6156).blockAnimation(6155);
-    combat.drop(steelwillDrop.build());
+    steelwillCombat.aggression(NpcCombatAggression.builder().range(16).build());
+    steelwillCombat
+        .killCount(NpcCombatKillCount.builder().asName("General Graardor's bodyguard").build());
+    steelwillCombat.deathAnimation(6156).blockAnimation(6155);
+    steelwillCombat.drop(steelwillDrop.build());
 
     style = NpcCombatStyle.builder();
     style.type(NpcCombatStyleType.MAGIC);
@@ -214,9 +223,89 @@ public class GeneralGraardor624Combat extends NpcCombat {
     style.animation(6154).attackSpeed(5);
     style.castGraphic(new Graphic(1216)).targetGraphic(new Graphic(166, 124));
     style.projectile(NpcCombatProjectile.id(335));
-    combat.style(style.build());
+    steelwillCombat.style(style.build());
 
 
-    return Arrays.asList(graardorCombat.build(), grimspikeCombat.build());
+    var strongstackDrop = NpcCombatDrop.builder().clue(NpcCombatDrop.ClueScroll.HARD,
+        NpcCombatDropTable.CHANCE_1_IN_128);
+    dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_508).log(true);
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.GODSWORD_SHARD_1)));
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.GODSWORD_SHARD_2)));
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.GODSWORD_SHARD_3)));
+    strongstackDrop.table(dropTable.build());
+    dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_127).log(true);
+    dropTable
+        .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.BANDOS_CHESTPLATE).weight(1)));
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.BANDOS_TASSETS).weight(1)));
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.BANDOS_BOOTS).weight(1)));
+    dropTable
+        .drop(NpcCombatDropTableDrop.builder().item(new RandomItem(ItemId.COINS, 1000, 5000, 120))
+            .log(NpcCombatDropTableDrop.Log.NO).build());
+    strongstackDrop.table(dropTable.build());
+    dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_COMMON);
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.STEEL_DART, 95, 100)));
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.COSMIC_RUNE, 25, 30)));
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.NATURE_RUNE, 19, 28)));
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.STEEL_ARROW, 95, 100)));
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.COINS, 1300, 1450)));
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.COMBAT_POTION_3)));
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.RIGHT_EYE_PATCH)));
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.SHARK, 2)));
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.CHILLI_POTATO, 3)));
+    strongstackDrop.table(dropTable.build());
+    dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_ALWAYS);
+    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.BONES)));
+    strongstackDrop.table(dropTable.build());
+
+
+    var strongstackCombat = NpcCombatDefinition.builder();
+    strongstackCombat.id(NpcId.SERGEANT_STRONGSTACK_141);
+    strongstackCombat.spawn(NpcCombatSpawn.builder().respawnDelay(50)
+        .respawnWithId(NpcId.GENERAL_GRAARDOR_624).respawnWithId(NpcId.SERGEANT_STEELWILL_142)
+        .respawnWithId(NpcId.SERGEANT_GRIMSPIKE_142).build());
+    strongstackCombat.hitpoints(NpcCombatHitpoints.total(128));
+    strongstackCombat.stats(NpcCombatStats.builder().attackLevel(124).magicLevel(50).rangedLevel(50)
+        .defenceLevel(125).build());
+    strongstackCombat.aggression(NpcCombatAggression.builder().range(16).build());
+    strongstackCombat
+        .killCount(NpcCombatKillCount.builder().asName("General Graardor's bodyguard").build());
+    strongstackCombat.deathAnimation(6156).blockAnimation(6155);
+    strongstackCombat.drop(strongstackDrop.build());
+
+    style = NpcCombatStyle.builder();
+    style.type(NpcCombatStyleType.MELEE_CRUSH);
+    style.damage(NpcCombatDamage.maximum(15));
+    style.animation(6154).attackSpeed(5);
+    style.projectile(NpcCombatProjectile.id(335));
+    strongstackCombat.style(style.build());
+
+
+    return Arrays.asList(graardorCombat.build(), grimspikeCombat.build(), steelwillCombat.build(),
+        strongstackCombat.build());
+  }
+
+  @Override
+  public void spawnHook() {
+    npc = getNpc();
+  }
+
+  @Override
+  public void restoreHook() {
+    if (npc.getId() != NpcId.GENERAL_GRAARDOR_624) {
+      return;
+    }
+    var respawns = new int[] {NpcId.SERGEANT_GRIMSPIKE_142, NpcId.SERGEANT_STEELWILL_142,
+        NpcId.SERGEANT_STRONGSTACK_141};
+    for (var id : respawns) {
+      var respawningNpc = npc.getController().getNpc(id);
+      if (respawningNpc != null && !respawningNpc.isVisible() && respawningNpc.getRespawns()) {
+        respawningNpc.restore();
+      }
+    }
+  }
+
+  @Override
+  public void deathDropItemsHook(Player player, int additionalPlayerLoopCount, Tile dropTile) {
+    player.getArea().script("increase_bandos_killcount");
   }
 }

@@ -1,11 +1,17 @@
-package com.palidinodh.osrsscript.npc.combatv0;
+package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
+import com.palidinodh.osrscore.model.Entity;
+import com.palidinodh.osrscore.model.Graphic;
+import com.palidinodh.osrscore.model.HitType;
+import com.palidinodh.osrscore.model.Tile;
+import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.item.RandomItem;
+import com.palidinodh.osrscore.model.npc.Npc;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombat;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatDefinition;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatDrop;
@@ -20,17 +26,27 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatDamage;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatProjectile;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
+import com.palidinodh.osrscore.model.player.AchievementDiary;
+import com.palidinodh.osrscore.model.player.AchievementDiaryTask;
+import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class GiantMole230Combat extends NpcCombat {
+public class GiantMoleCombat extends NpcCombat {
+  public static final Tile[] BURROWS =
+      {new Tile(1736, 5227), new Tile(1776, 5236), new Tile(1752, 5204), new Tile(1769, 5199),
+          new Tile(1778, 5207), new Tile(1740, 5187), new Tile(1745, 5170), new Tile(1774, 5173),
+          new Tile(1759, 5162), new Tile(1739, 5150), new Tile(1752, 5149)};
+
+  private Npc npc;
+
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
-    var drop = NpcCombatDrop.builder().rareDropTableRate(NpcCombatDropTable.CHANCE_1_IN_256);
-    var dropTable = NpcCombatDropTable.builder().chance(0.034).broadcast(true).log(true);
+    var drop = NpcCombatDrop.builder().rareDropTableRate(NpcCombatDropTable.CHANCE_1_IN_256)
+        .clue(NpcCombatDrop.ClueScroll.ELITE, NpcCombatDropTable.CHANCE_1_IN_500);
+    var dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_3000)
+        .broadcast(true).log(true);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.BABY_MOLE)));
-    drop.table(dropTable.build());
-    dropTable = NpcCombatDropTable.builder().chance(0.2);
-    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.CLUE_SCROLL_ELITE)));
     drop.table(dropTable.build());
     dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_RARE);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.MITHRIL_BAR)));
@@ -73,7 +89,7 @@ public class GiantMole230Combat extends NpcCombat {
         .bonus(CombatBonus.DEFENCE_RANGED, 60).build());
     combat.immunity(NpcCombatImmunity.builder().venom(true).build());
     combat.killCount(NpcCombatKillCount.builder().sendMessage(true).build());
-    combat.combatScript("GiantMoleCS").deathAnimation(3310).blockAnimation(3311);
+    combat.deathAnimation(3310).blockAnimation(3311);
     combat.drop(drop.build());
 
     var style = NpcCombatStyle.builder();
@@ -85,5 +101,49 @@ public class GiantMole230Combat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
+  }
+
+  @Override
+  public void spawnHook() {
+    npc = getNpc();
+  }
+
+  @Override
+  public double damageReceivedHook(Entity opponent, double damage, HitType hitType,
+      HitType defenceType) {
+    if (npc.getHitpoints() <= npc.getMaxHitpoints() / 2 && npc.getHitpoints() > 10 && damage > 0
+        && PRandom.randomE(4) == 0) {
+      opponent.setAttacking(false);
+      burrow();
+    }
+    return damage;
+  }
+
+  @Override
+  public Item dropTableDropGetItemHook(Player player, Tile tile, int dropRateDivider, int roll,
+      NpcCombatDropTable table, NpcCombatDropTableDrop drop, Item item) {
+    if ((item.getId() == ItemId.MOLE_CLAW || item.getId() == ItemId.MOLE_SKIN)
+        && player.getWidgetManager().isDiaryComplete(AchievementDiary.Name.FALADOR,
+            AchievementDiaryTask.Difficulty.HARD)) {
+      item = new Item(item.getNotedId(), item);
+    }
+    return item;
+  }
+
+  public void burrow() {
+    var tile = new Tile(npc.getX() + 1, npc.getY() + 1, npc.getHeight());
+    npc.getController().sendMapGraphic(tile, 572, 0, 0);
+    var graphic = new Graphic(571);
+    npc.getController().sendMapGraphic(new Tile(tile).moveTile(0, -1), graphic);
+    npc.getController().sendMapGraphic(new Tile(tile).moveTile(0, 1), graphic);
+    npc.getController().sendMapGraphic(new Tile(tile).moveTile(-1, -1), graphic);
+    npc.getController().sendMapGraphic(new Tile(tile).moveTile(-1, 1), graphic);
+    npc.getController().sendMapGraphic(new Tile(tile).moveTile(1, -1), graphic);
+    npc.getController().sendMapGraphic(new Tile(tile).moveTile(1, 1), graphic);
+    npc.getController().sendMapGraphic(new Tile(tile).moveTile(-1, 0), graphic);
+    npc.getController().sendMapGraphic(new Tile(tile).moveTile(1, 0), graphic);
+    var teleportTile = new Tile(BURROWS[PRandom.randomE(BURROWS.length)]);
+    teleportTile.setHeight(npc.getHeight());
+    npc.getMovement().animatedTeleport(teleportTile, 3314, null, 2);
   }
 }
