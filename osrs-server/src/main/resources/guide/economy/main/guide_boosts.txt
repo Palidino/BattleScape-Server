@@ -6,6 +6,7 @@ Drop and Experience Boosts
 <col=004080>Premium membership:</col> %isgoldmember%
 <col=004080>Ring of wealth (i):</col> %hasrowi%
 <col=004080>Hard mode:</col> %hardgamemode%
+<col=004080>50% drop rate boost scroll :</col> %droprateboostscroll%
 <col=004080>Total drop rate boost:</col> %droprateboost%
 
 <col=800000>Drop Rate Modifiers</col>
