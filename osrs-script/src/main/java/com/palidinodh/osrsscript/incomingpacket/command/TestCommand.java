@@ -3,12 +3,12 @@ package com.palidinodh.osrsscript.incomingpacket.command;
 import com.palidinodh.osrscore.io.cache.id.DialogueAnimationId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
-import com.palidinodh.osrscore.model.dialogue.ChatDialogue;
 import com.palidinodh.osrscore.model.dialogue.DialogueChain;
 import com.palidinodh.osrscore.model.dialogue.DialogueOption;
 import com.palidinodh.osrscore.model.dialogue.MessageDialogue;
-import com.palidinodh.osrscore.model.dialogue.NormalChatDialogue;
 import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
+import com.palidinodh.osrscore.model.dialogue.chat.ChatDialogue;
+import com.palidinodh.osrscore.model.dialogue.chat.NormalChatDialogue;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
@@ -48,7 +48,7 @@ public class TestCommand implements CommandHandler {
         new NormalChatDialogue(
             "123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789"),
         new NormalChatDialogue(NpcId.BOB,
-            "THIS IS A LONG LINE TEST I DON'T KNOW WHAT ELSE TO SAY SO I'M JUST GOING TO KEEP TYPING WORDS UNTIL I CAN'T THINK OF ANYTHING ELSE."),
+            "THIS IS A LONG LINE TEST I DON'T KNOW WHAT ELSE TO SAY SO I'M JUST GOING TO KEEP TYPING WORDS. AMORPHIS BE LOOKIN LIKE A FISH."),
         new MessageDialogue("* Bob begins walking away from you. *"));
   }
 }
