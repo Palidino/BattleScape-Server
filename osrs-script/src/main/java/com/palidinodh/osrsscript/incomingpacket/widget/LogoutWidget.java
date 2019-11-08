@@ -6,7 +6,7 @@ import com.palidinodh.osrscore.io.incomingpacket.WidgetHandler;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.WidgetChild;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
-import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
+import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.DiscordChannel;
 import com.palidinodh.util.PTime;
@@ -107,7 +107,7 @@ public class LogoutWidget implements WidgetHandler {
     }
   }
 
-  public static class FeedbackDialogue extends SelectionDialogue {
+  public static class FeedbackDialogue extends OptionsDialogue {
     public FeedbackDialogue(Player player) {
       addOption("Leave feedback and logout.", (childId, slot) -> {
         player.getGameEncoder().sendEnterString("Feedback:", new ValueEnteredEvent.StringEvent() {

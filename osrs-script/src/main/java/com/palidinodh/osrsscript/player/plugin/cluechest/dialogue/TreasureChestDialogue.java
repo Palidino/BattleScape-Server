@@ -1,11 +1,11 @@
 package com.palidinodh.osrsscript.player.plugin.cluechest.dialogue;
 
-import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
+import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.item.clue.ClueChestType;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrsscript.player.plugin.cluechest.ClueChestPlugin;
 
-public class TreasureChestDialogue extends SelectionDialogue {
+public class TreasureChestDialogue extends OptionsDialogue {
   public TreasureChestDialogue(Player player, ClueChestPlugin plugin) {
     addOption("Easy", (childId, slot) -> {
       plugin.open(ClueChestType.EASY);

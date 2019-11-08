@@ -7,7 +7,7 @@ import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.Graphic;
 import com.palidinodh.osrscore.model.Tile;
 import com.palidinodh.osrscore.model.dialogue.DialogueAction;
-import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
+import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.dialogue.old.DialogueOld;
 import com.palidinodh.osrscore.model.guide.Guide;
 import com.palidinodh.osrscore.model.item.Item;
@@ -2334,7 +2334,7 @@ public class InventoryWidget implements WidgetHandler {
     }
   }
 
-  public static class MaxCapeDialogue extends SelectionDialogue {
+  public static class MaxCapeDialogue extends OptionsDialogue {
     public MaxCapeDialogue(Player player) {
       DialogueAction action = (childId, slot) -> {
         Tile maxCapeTele = null;

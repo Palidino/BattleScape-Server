@@ -7,7 +7,7 @@ import com.palidinodh.osrscore.io.cache.id.ObjectId;
 import com.palidinodh.osrscore.io.cache.id.ScriptId;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.Tile;
-import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
+import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.guide.Guide;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.item.MysteryBox;
@@ -381,7 +381,7 @@ public class EdgevilleArea extends Area {
     }
   }
 
-  public class ExchangeSpecialSkillItemsDialogue extends SelectionDialogue {
+  public class ExchangeSpecialSkillItemsDialogue extends OptionsDialogue {
     public ExchangeSpecialSkillItemsDialogue(Player player) {
       addOption("View shop", (childId, slot) -> {
         player.openShop("skilling");
@@ -449,7 +449,7 @@ public class EdgevilleArea extends Area {
     }
   }
 
-  private class FreeForAllPortalDialogue extends SelectionDialogue {
+  private class FreeForAllPortalDialogue extends OptionsDialogue {
     private FreeForAllPortalDialogue(Player player) {
       addOption("Safe Free-For-All", (childId, slot) -> {
         player.getMovement().teleport(3327, 4752);

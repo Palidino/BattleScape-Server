@@ -1,14 +1,14 @@
 package com.palidinodh.osrsscript.incomingpacket.command;
 
-import com.palidinodh.osrscore.io.cache.id.HumanAnimationId;
+import com.palidinodh.osrscore.io.cache.id.DialogueAnimationId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
+import com.palidinodh.osrscore.model.dialogue.ChatDialogue;
 import com.palidinodh.osrscore.model.dialogue.DialogueChain;
 import com.palidinodh.osrscore.model.dialogue.DialogueOption;
 import com.palidinodh.osrscore.model.dialogue.MessageDialogue;
-import com.palidinodh.osrscore.model.dialogue.NpcDialogue;
-import com.palidinodh.osrscore.model.dialogue.PlayerDialogue;
-import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
+import com.palidinodh.osrscore.model.dialogue.NormalChatDialogue;
+import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
@@ -34,13 +34,16 @@ public class TestCommand implements CommandHandler {
     // player.getGameEncoder().setVarbit(5317, 8);
     // 562-564: sad
     // 567-569: general chatting?
-    player.openDialogue(new DialogueChain(new PlayerDialogue("Hello, I'm looking for Miika."),
-        new NpcDialogue(NpcId.BOB, HumanAnimationId.DIALOGUE_SCEPTICAL_1, "Who?"),
-        new SelectionDialogue(new DialogueOption("You know who!", DialogueChain.ACTION_NEXT),
+    var animationId = Integer.parseInt(message);
+    player.openDialogue(new ChatDialogue(-1, animationId, "Hello, I'm looking for Miika.", null),
+        new NormalChatDialogue("Hello, I'm looking for Miika."),
+        new NormalChatDialogue(NpcId.BOB, "Who?"),
+        new OptionsDialogue(new DialogueOption("You know who!", DialogueChain.ACTION_NEXT),
             new DialogueOption("Nevermind", (childId, slot) -> {
-              player.openDialogue(new PlayerDialogue("Nevermind, I'll go."));
+              player.openDialogue(new NormalChatDialogue("Nevermind, I'll go."));
             })),
-        new PlayerDialogue("You know who!"), new NpcDialogue(NpcId.BOB, "OH, YOU MEAN MIKASA!"),
-        new MessageDialogue("* Bob begins walking away from you. *")));
+        new NormalChatDialogue("You know who!"),
+        new NormalChatDialogue(NpcId.BOB, "OH, YOU MEAN MIKASA!"),
+        new MessageDialogue("* Bob begins walking away from you. *"));
   }
 }

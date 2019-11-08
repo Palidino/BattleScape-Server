@@ -1,14 +1,14 @@
 package com.palidinodh.osrsscript.world.event.pvptournament.dialogue;
 
 import com.palidinodh.osrscore.model.dialogue.DialogueAction;
-import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
+import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrsscript.world.event.pvptournament.PvpTournament;
 import com.palidinodh.util.PNumber;
 import lombok.var;
 
-public class DonateItemDialogue extends SelectionDialogue {
+public class DonateItemDialogue extends OptionsDialogue {
   private Item item;
 
   public DonateItemDialogue(Player player, Item item) {

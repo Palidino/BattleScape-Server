@@ -6,8 +6,7 @@ import java.util.Comparator;
 import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.Tile;
-import com.palidinodh.osrscore.model.dialogue.old.DialogueEntry;
-import com.palidinodh.osrscore.model.dialogue.old.DialogueOld;
+import com.palidinodh.osrscore.model.dialogue.LargeOptionsDialogue;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.SqlUserRank;
 import com.palidinodh.util.PTime;
@@ -30,20 +29,8 @@ public class PlayersCommand implements CommandHandler {
         return Integer.compare(p1.getIdleTime(), p2.getIdleTime());
       }
     });
-    var playerNames = new ArrayList<String>();
-    for (var player2 : players) {
-      var icon = player2.getMessaging().getIconImage();
-      var username = player2.getUsername();
-      var location = getLocation(player2);
-      playerNames
-          .add(icon + username + ": on: " + PTime.ticksToLongDuration(player2.getTotalTicks())
-              + ", map: " + PTime.ticksToLongDuration(player2.getLastMapUpdate()) + ", idle: "
-              + PTime.ticksToLongDuration(player2.getIdleTime()) + ", loc: " + location);
-    }
-    var dialogue = new DialogueEntry();
-    dialogue.setLargeSelection("Players", playerNames.toArray(new String[playerNames.size()]));
-    dialogue.setScript((myPlayer, index, childId, slot) -> {
-      if (myPlayer.isDead() || myPlayer.getInCombatDelay() > 0) {
+    var dialogue = new LargeOptionsDialogue("Players").action((childId, slot) -> {
+      if (player.isDead() || player.getInCombatDelay() > 0) {
         return;
       }
       if (slot < 0 || slot >= players.size()) {
@@ -70,7 +57,16 @@ public class PlayersCommand implements CommandHandler {
       player.getMovement().setViewing(viewTile);
       player.getWidgetManager().sendInventoryOverlay(WidgetId.UNMORPH);
     });
-    DialogueOld.open(player, dialogue);
+    for (var player2 : players) {
+      var icon = player2.getMessaging().getIconImage();
+      var username = player2.getUsername();
+      var location = getLocation(player2);
+      dialogue
+          .addOption(icon + username + ": on: " + PTime.ticksToLongDuration(player2.getTotalTicks())
+              + ", map: " + PTime.ticksToLongDuration(player2.getLastMapUpdate()) + ", idle: "
+              + PTime.ticksToLongDuration(player2.getIdleTime()) + ", loc: " + location);
+    }
+    player.openDialogue(dialogue);
     player.getGameEncoder().sendMessage(
         "There are currently " + player.getWorld().getPlayerCount() + " players online, with "
             + player.getWorld().getWildernessPlayerCount() + " in the wilderness.");

@@ -1,12 +1,12 @@
 package com.palidinodh.osrsscript.player.plugin.slayer.dialogue;
 
 import com.palidinodh.osrscore.io.cache.id.ItemId;
-import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
+import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.slayer.SlayerMaster;
 import com.palidinodh.osrsscript.player.plugin.slayer.SlayerPlugin;
 
-public class MasterMenuDialogue extends SelectionDialogue {
+public class MasterMenuDialogue extends OptionsDialogue {
   public MasterMenuDialogue(Player player, SlayerPlugin plugin) {
     addOption("Get task", (childId, slot) -> {
       new ChooseMasterDialogue(player, plugin);

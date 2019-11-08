@@ -1,7 +1,7 @@
 package com.palidinodh.osrsscript.world.event.pvptournament.dialogue;
 
 import com.palidinodh.osrscore.io.ValueEnteredEvent;
-import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
+import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrsscript.world.event.pvptournament.PvpTournament;
 import com.palidinodh.osrsscript.world.event.pvptournament.prize.DefaultPrize;
@@ -9,7 +9,7 @@ import com.palidinodh.osrsscript.world.event.pvptournament.prize.OsrsPrize;
 import com.palidinodh.osrsscript.world.event.pvptournament.state.IdleState;
 import lombok.var;
 
-public class AdminCofferDialogue extends SelectionDialogue {
+public class AdminCofferDialogue extends OptionsDialogue {
   public AdminCofferDialogue(Player player) {
     var tournament = player.getWorld().getWorldEvent(PvpTournament.class);
     addOption("View prizes", (childId, slot) -> {

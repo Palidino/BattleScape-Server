@@ -6,6 +6,9 @@
 .project
 .classpath
 org.eclipse.core.resources.prefs
+org.eclipse.jdt.apt.core.prefs
+org.eclipse.jdt.ui.prefs
+org.eclipse.m2e.core.prefs
 .DS_Store
 thumbs.db
 [Dd]esktop.ini

@@ -1,10 +1,10 @@
 package com.palidinodh.osrsscript.player.plugin.slayer.dialogue;
 
-import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
+import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrsscript.player.plugin.slayer.SlayerPlugin;
 
-public class ChooseMasterDialogue extends SelectionDialogue {
+public class ChooseMasterDialogue extends OptionsDialogue {
   public ChooseMasterDialogue(Player player, SlayerPlugin plugin) {
     addOption("Mazchna - level 20", (childId, slot) -> {
       plugin.getAssignment("Mazchna");

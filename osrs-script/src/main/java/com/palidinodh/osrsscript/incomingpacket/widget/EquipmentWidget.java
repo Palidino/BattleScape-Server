@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.Tile;
 import com.palidinodh.osrscore.model.dialogue.DialogueAction;
-import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
+import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.player.Equipment;
 import com.palidinodh.osrscore.model.player.Magic;
 import com.palidinodh.osrscore.model.player.Player;
@@ -227,7 +227,7 @@ public class EquipmentWidget implements WidgetHandler {
   }
 
   public static class MaxCapeDialogue {
-    public static class FishDialogue extends SelectionDialogue {
+    public static class FishDialogue extends OptionsDialogue {
       public FishDialogue(Player player) {
         DialogueAction action = (childId, slot) -> {
           Tile maxCapeTele = null;
@@ -256,7 +256,7 @@ public class EquipmentWidget implements WidgetHandler {
       }
     }
 
-    public static class OtherDialogue extends SelectionDialogue {
+    public static class OtherDialogue extends OptionsDialogue {
       public OtherDialogue(Player player) {
         DialogueAction action = (childId, slot) -> {
           Tile maxCapeTele = null;
@@ -285,7 +285,7 @@ public class EquipmentWidget implements WidgetHandler {
       }
     }
 
-    public static class PortalsDialogue extends SelectionDialogue {
+    public static class PortalsDialogue extends OptionsDialogue {
       public PortalsDialogue(Player player) {
         DialogueAction action = (childId, slot) -> {
           Tile maxCapeTele = null;
@@ -314,7 +314,7 @@ public class EquipmentWidget implements WidgetHandler {
       }
     }
 
-    public static class TeleportsDialogue extends SelectionDialogue {
+    public static class TeleportsDialogue extends OptionsDialogue {
       public TeleportsDialogue(Player player) {
         DialogueAction action = (childId, slot) -> {
           Tile maxCapeTele = null;
@@ -343,7 +343,7 @@ public class EquipmentWidget implements WidgetHandler {
       }
     }
 
-    public static class FeaturesDialogue extends SelectionDialogue {
+    public static class FeaturesDialogue extends OptionsDialogue {
       public FeaturesDialogue(Player player) {
         DialogueAction action = (childId, slot) -> {
           Tile maxCapeTele = null;

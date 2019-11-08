@@ -1,9 +1,8 @@
 package com.palidinodh.osrsscript.incomingpacket.command;
 
 import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
-import com.palidinodh.osrscore.model.dialogue.old.DialogueEntry;
-import com.palidinodh.osrscore.model.dialogue.old.DialogueOld;
-import com.palidinodh.osrscore.model.dialogue.old.DialogueScript;
+import com.palidinodh.osrscore.model.dialogue.DialogueOption;
+import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.player.Player;
 
 public class ChinsCommand implements CommandHandler {
@@ -14,24 +13,16 @@ public class ChinsCommand implements CommandHandler {
 
   @Override
   public void execute(Player player, String message) {
-    if (player.getController().canTeleport(true)) {
-      DialogueEntry entry = new DialogueEntry();
-      entry.setSelection("Are you sure you want to teleport to the wilderness?",
-          "Yes, teleport me to the wilderness!", "No!");
-      DialogueScript script = (p, index, childId, slot) -> {
-        if (slot == 0) {
-
-          player.getMagic().standardTeleport(3137, 3784, 0);
-          player.getGameEncoder().sendMessage("You teleport to Chinchompas..");
-          player.getController().stopWithTeleport();
-
-        } else {
-          return;
-        }
-      };
-      DialogueOld.open(player, entry, script);
-    } else {
+    if (!player.getController().canTeleport(true)) {
       return;
     }
+    player.openDialogue(new OptionsDialogue("Are you sure you want to teleport to the wilderness?",
+        new DialogueOption("Are you sure you want to teleport to the wilderness?",
+            (childId, slot) -> {
+              player.getMagic().standardTeleport(3137, 3784, 0);
+              player.getGameEncoder().sendMessage("You teleport to Chinchompas..");
+              player.getController().stopWithTeleport();
+            }),
+        new DialogueOption("No!")));
   }
 }

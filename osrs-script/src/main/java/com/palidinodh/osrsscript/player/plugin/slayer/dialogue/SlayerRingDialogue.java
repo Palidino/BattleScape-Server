@@ -2,13 +2,13 @@ package com.palidinodh.osrsscript.player.plugin.slayer.dialogue;
 
 import java.util.ArrayList;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
-import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
+import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrsscript.player.plugin.slayer.SlayerPlugin;
 import lombok.var;
 
-public class SlayerRingDialogue extends SelectionDialogue {
+public class SlayerRingDialogue extends OptionsDialogue {
   public SlayerRingDialogue(Player player, SlayerPlugin plugin) {
     addOption("Option", (childId, slot) -> {
       if (plugin.getTask().isComplete()) {

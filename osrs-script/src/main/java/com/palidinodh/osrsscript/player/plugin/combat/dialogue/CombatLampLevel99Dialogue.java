@@ -1,15 +1,15 @@
 package com.palidinodh.osrsscript.player.plugin.combat.dialogue;
 
 import com.palidinodh.osrscore.io.cache.id.ItemId;
-import com.palidinodh.osrscore.model.dialogue.LargeSelectionDialogue;
-import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
+import com.palidinodh.osrscore.model.dialogue.LargeOptionsDialogue;
+import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Skills;
 import lombok.var;
 
-public class CombatLampLevel99Dialogue extends LargeSelectionDialogue {
+public class CombatLampLevel99Dialogue extends LargeOptionsDialogue {
   public CombatLampLevel99Dialogue(Player player) {
-    class ConfirmationDialogue extends SelectionDialogue {
+    class ConfirmationDialogue extends OptionsDialogue {
       ConfirmationDialogue(int skillId) {
         addOption("Confirm selection.", (childId, slot) -> {
           maxLevel(player, skillId);

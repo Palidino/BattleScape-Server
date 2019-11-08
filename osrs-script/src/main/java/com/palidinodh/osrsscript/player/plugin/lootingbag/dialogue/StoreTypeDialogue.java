@@ -1,11 +1,11 @@
 package com.palidinodh.osrsscript.player.plugin.lootingbag.dialogue;
 
-import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
+import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrsscript.player.plugin.lootingbag.LootingBagPlugin;
 import com.palidinodh.osrsscript.player.plugin.lootingbag.StoreType;
 
-public class StoreTypeDialogue extends SelectionDialogue {
+public class StoreTypeDialogue extends OptionsDialogue {
   public StoreTypeDialogue(Player player, LootingBagPlugin plugin) {
     addOption("Always Ask", (childId, slot) -> {
       plugin.setStoreType(StoreType.ASK);
