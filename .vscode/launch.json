@@ -3,25 +3,26 @@
         {
             "type": "java",
             "console": "internalConsole",
-            "projectName": "osrs-server",
+            "projectName": "osrs-script",
             "name": "OSRS Eco Server",
             "request": "launch",
             "vmArgs": "-Xmx768m -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=25 -XX:MaxGCPauseMillis=50",
-            "mainClass": "com.palidinodh.osrsserver.Main",
-            "args": "osrs-core/src/main/settings/economy_local.json"
+            "mainClass": "com.palidinodh.osrscore.Main",
+            "args": "/settings/economy_local.json"
         },
         {
             "type": "java",
             "console": "internalConsole",
-            "projectName": "osrs-server",
+            "projectName": "osrs-script",
             "name": "Test World Jar",
             "request": "launch",
             "vmArgs": "-Xmx768m -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=25 -XX:MaxGCPauseMillis=50",
             "classPaths": [
-                "osrs-server/target/deploy/world.jar"
+                "target/osrs/deploy/world-core.jar",
+                "target/osrs/deploy/world-script.jar"
             ],
-            "mainClass": "com.palidinodh.osrsserver.Main",
-            "args": "osrs-core/src/main/settings/economy_local.json"
+            "mainClass": "com.palidinodh.osrscore.Main",
+            "args": "/settings/economy_local.json"
         }
     ]
 }
