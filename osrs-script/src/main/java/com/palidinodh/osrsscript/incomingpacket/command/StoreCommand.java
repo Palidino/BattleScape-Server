@@ -13,6 +13,6 @@ public class StoreCommand implements CommandHandler {
 
   @Override
   public void execute(Player player, String message) {
-    player.getGameEncoder().sendOpenURL(Settings.getInstance().getStoreUrl());
+    player.getGameEncoder().sendOpenUrl(Settings.getInstance().getStoreUrl());
   }
 }

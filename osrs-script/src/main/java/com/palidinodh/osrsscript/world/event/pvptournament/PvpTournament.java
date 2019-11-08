@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import com.palidinodh.osrscore.Main;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
+import com.palidinodh.osrscore.io.cache.id.ObjectId;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.Controller;
 import com.palidinodh.osrscore.model.Tile;
@@ -88,7 +89,7 @@ public class PvpTournament extends PEvent implements WorldEventHooks {
       int itemId, MapObject mapObject) {
     if (widgetId == WidgetId.INVENTORY) {
       switch (mapObject.getId()) {
-        case 29087: // Coffer
+        case ObjectId.COFFER:
           if (!DonatableItems.isDonatable(itemId)) {
             player.getGameEncoder().sendMessage("The coffer won't take this item.");
             break;
@@ -103,7 +104,7 @@ public class PvpTournament extends PEvent implements WorldEventHooks {
   @Override
   public boolean mapObjectOptionHook(Player player, int index, MapObject mapObject) {
     switch (mapObject.getId()) {
-      case 29087: // Coffer
+      case ObjectId.COFFER:
         if (player.getRights() == Player.RIGHTS_ADMIN
             || player.isUsergroup(SqlUserRank.SENIOR_MODERATOR)
             || player.isUsergroup(SqlUserRank.COMMUNITY_MANAGER)) {
@@ -112,8 +113,8 @@ public class PvpTournament extends PEvent implements WorldEventHooks {
           new CofferDialogue(player);
         }
         return true;
-      case 26081: // Gate
-      case 26082: // Gate
+      case ObjectId.GATE_26081:
+      case ObjectId.GATE_26082:
         addPlayer(player);
         return true;
     }

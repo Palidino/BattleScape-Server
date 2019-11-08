@@ -9,7 +9,7 @@ import com.palidinodh.rs.setting.Settings;
 public class FriendsWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.FRIENDS, WidgetId.IGNORES, WidgetId.ACCOUNT_MANAGEMENT};
+    return new int[] { WidgetId.FRIENDS, WidgetId.IGNORES, WidgetId.ACCOUNT_MANAGEMENT };
   }
 
   @Override
@@ -28,13 +28,13 @@ public class FriendsWidget implements WidgetHandler {
       if (childId == 3 || childId == 8) {
         player.getBonds().sendPouch();
       } else if (childId == 15) {
-        player.getGameEncoder().sendOpenURL(Settings.getInstance().getWebsiteUrl());
+        player.getGameEncoder().sendOpenUrl(Settings.getInstance().getWebsiteUrl());
       } else if (childId == 22) {
-        player.getGameEncoder().sendOpenURL(Settings.getInstance().getSupportUrl());
+        player.getGameEncoder().sendOpenUrl(Settings.getInstance().getSupportUrl());
       } else if (childId == 29) {
-        player.getGameEncoder().sendOpenURL(Settings.getInstance().getWebsiteUrl());
+        player.getGameEncoder().sendOpenUrl(Settings.getInstance().getWebsiteUrl());
       } else if (childId == 32) {
-        player.getGameEncoder().sendOpenURL(Settings.getInstance().getSupportUrl());
+        player.getGameEncoder().sendOpenUrl(Settings.getInstance().getSupportUrl());
       }
     }
   }

@@ -8,14 +8,14 @@ import com.palidinodh.rs.setting.Settings;
 public class ChatboxWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.CHATBOX};
+    return new int[] { WidgetId.CHATBOX };
   }
 
   @Override
   public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
     switch (childId) {
       case 27:
-        player.getGameEncoder().sendOpenURL(Settings.getInstance().getWebsiteUrl());
+        player.getGameEncoder().sendOpenUrl(Settings.getInstance().getWebsiteUrl());
         break;
     }
   }

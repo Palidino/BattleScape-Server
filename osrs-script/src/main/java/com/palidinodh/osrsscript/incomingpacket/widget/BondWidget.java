@@ -89,7 +89,7 @@ public class BondWidget implements WidgetHandler {
         }
         break;
       case 69:
-        player.getGameEncoder().sendOpenURL(Settings.getInstance().getStoreUrl());
+        player.getGameEncoder().sendOpenUrl(Settings.getInstance().getStoreUrl());
         break;
       case 71:
         if (Settings.getInstance().isBeta()) {

@@ -12,6 +12,6 @@ public class ThreadCommand implements CommandHandler {
 
   @Override
   public void execute(Player player, String id) {
-    player.getGameEncoder().sendOpenURL(Settings.getInstance().getThreadUrl() + id);
+    player.getGameEncoder().sendOpenUrl(Settings.getInstance().getThreadUrl() + id);
   }
 }

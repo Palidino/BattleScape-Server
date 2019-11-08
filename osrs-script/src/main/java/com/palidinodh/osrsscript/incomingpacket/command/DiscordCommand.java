@@ -12,6 +12,6 @@ public class DiscordCommand implements CommandHandler {
 
   @Override
   public void execute(Player player, String message) {
-    player.getGameEncoder().sendOpenURL(Settings.getInstance().getDiscordUrl());
+    player.getGameEncoder().sendOpenUrl(Settings.getInstance().getDiscordUrl());
   }
 }

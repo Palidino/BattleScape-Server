@@ -12,6 +12,6 @@ public class VoteCommand implements CommandHandler {
 
   @Override
   public void execute(Player player, String message) {
-    player.getGameEncoder().sendOpenURL(Settings.getInstance().getVoteUrl());
+    player.getGameEncoder().sendOpenUrl(Settings.getInstance().getVoteUrl());
   }
 }

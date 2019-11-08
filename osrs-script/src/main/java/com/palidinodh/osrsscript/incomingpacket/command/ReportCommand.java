@@ -12,6 +12,6 @@ public class ReportCommand implements CommandHandler {
 
   @Override
   public void execute(Player player, String message) {
-    player.getGameEncoder().sendOpenURL(Settings.getInstance().getReportPlayerUrl());
+    player.getGameEncoder().sendOpenUrl(Settings.getInstance().getReportPlayerUrl());
   }
 }

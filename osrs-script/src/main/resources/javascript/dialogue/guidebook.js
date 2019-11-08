@@ -45,9 +45,9 @@ instance = new DialogueScript() {
             if (slot == 0) {
                 player.getMessaging().joinClan(Settings.getInstance().getName().toLowerCase());
             } else if (slot == 1) {
-                player.getGameEncoder().sendOpenURL(Settings.getInstance().getDiscordUrl());
+                player.getGameEncoder().sendOpenUrl(Settings.getInstance().getDiscordUrl());
             } else if (slot == 1) {
-                player.getGameEncoder().sendOpenURL(Settings.getInstance().getRulesUrl());
+                player.getGameEncoder().sendOpenUrl(Settings.getInstance().getRulesUrl());
             } else if (slot == 2) {
                 var lines = new ArrayList();
                 lines.add("You can set your combat levels by selecting them on the skills");

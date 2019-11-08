@@ -3,6 +3,8 @@ package com.palidinodh.osrsscript.map.area;
 import java.util.List;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
+import com.palidinodh.osrscore.io.cache.id.ObjectId;
+import com.palidinodh.osrscore.io.cache.id.ScriptId;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.Tile;
 import com.palidinodh.osrscore.model.dialogue.SelectionDialogue;
@@ -16,7 +18,6 @@ import com.palidinodh.osrscore.model.npc.Npc;
 import com.palidinodh.osrscore.model.player.Magic;
 import com.palidinodh.osrscore.model.player.PCombat;
 import com.palidinodh.osrscore.model.player.Player;
-import com.palidinodh.osrscore.model.player.Smithing;
 import com.palidinodh.osrscore.model.player.controller.ClanWarsFreeForAllPC;
 import com.palidinodh.osrsscript.world.event.pvptournament.PvpTournament;
 import com.palidinodh.random.PRandom;
@@ -219,28 +220,25 @@ public class EdgevilleArea extends Area {
   public boolean mapObjectOptionHook(int index, MapObject mapObject) {
     var player = getPlayer();
     switch (mapObject.getId()) {
-      case 16469: // Furnace
-        Smithing.openSmelt(player);
-        break;
-      case 172: // Closed chest: crystal chest
+      case ObjectId.CLOSED_CHEST_172:
         openCrystalChest(player);
         return true;
-      case 884: // Wishing well
+      case ObjectId.WISHING_WELL:
         player.openDialogue("wishingwell", 0);
         return true;
-      case 1581: // Trapdoor: Edgeville dungeon entrance
+      case ObjectId.TRAPDOOR_1581: // Edgeville dungeon entrance
         player.getMovement().ladderUpTeleport(new Tile(3096, 9867));
         return true;
-      case 12309: // Chest: Recipe for Disaster
+      case ObjectId.CHEST_12309: // Recipe for Disaster
         if (Settings.getInstance().isSpawn()) {
           return true;
         }
         player.openDialogue("recipefordisaster", 0);
         return true;
-      case 17385: // Ladder: Edgeville dungeon exit
+      case ObjectId.LADDER_17385: // Edgeville dungeon exit
         player.getMovement().ladderUpTeleport(new Tile(3097, 3486));
         return true;
-      case 23709: // Box of Health
+      case ObjectId.BOX_OF_HEALTH:
         if (player.getController().inPvPWorldCombat()) {
           player.getGameEncoder().sendMessage("You can't use this here.");
           return true;
@@ -249,10 +247,10 @@ public class EdgevilleArea extends Area {
         player.getGameEncoder().sendMessage("The pool restores you.");
         player.rejuvenate();
         return true;
-      case 26645: // Free-for-all portal
+      case ObjectId.FREE_FOR_ALL_PORTAL:
         new FreeForAllPortalDialogue(player);
         return true;
-      case 26761: // Lever
+      case ObjectId.LEVER_26761:
         if (player.getMovement().getTeleportBlock() > 0) {
           player.getGameEncoder()
               .sendMessage("A teleport block has been cast on you. It should wear off in "
@@ -269,7 +267,7 @@ public class EdgevilleArea extends Area {
         player.getMagic().standardTeleport(tile);
         player.clearHits();
         return true;
-      case 27269: // Deadman chest
+      case ObjectId.DEADMAN_CHEST:
         if (player.getInventory().hasItem(ItemId.SINISTER_KEY)) {
           player.getCombat().getBarrows()
               .openChest(mapObject.getX() != 3551 || mapObject.getY() != 9695);
@@ -295,7 +293,7 @@ public class EdgevilleArea extends Area {
           player.getGameEncoder().sendMessage("You need a key to open this chest.");
         }
         return true;
-      case 29150: // Altar of the Occult
+      case ObjectId.ALTAR_OF_THE_OCCULT:
         if (player.getController().inPvPWorldCombat()) {
           player.getGameEncoder().sendMessage("You can't use this here.");
           return true;
@@ -322,19 +320,19 @@ public class EdgevilleArea extends Area {
           }
         }
         return true;
-      case 29156: // Ornate Jewellery Box
-        player.getWidgetManager().sendInteractiveOverlay(WidgetId.JEWELRY_BOX);
-        player.getGameEncoder().sendScript(1685, 15, "Ornate Jewellery Box", 3);
-        player.getGameEncoder().sendWidgetSettings(WidgetId.JEWELRY_BOX, 0, 0, 24, 1);
+      case ObjectId.ORNATE_JEWELLERY_BOX:
+        player.getWidgetManager().sendInteractiveOverlay(WidgetId.JEWELLERY_BOX);
+        player.getGameEncoder().sendScript(ScriptId.JEWELLERY_BOX, 15, "Ornate Jewellery Box", 3);
+        player.getGameEncoder().sendWidgetSettings(WidgetId.JEWELLERY_BOX, 0, 0, 24, 1);
         return true;
-      case 29229: // Spiritual Fairy Tree
+      case ObjectId.SPIRITUAL_FAIRY_TREE:
         if (index == 0) {
           player.openDialogue("spirittree", 0);
         } else if (index == 1) {
           player.openDialogue("fairyring", 0);
         }
         return true;
-      case 29241: // Ornate rejuvenation pool
+      case ObjectId.ORNATE_REJUVENATION_POOL:
         if (player.getController().inPvPWorldCombat()) {
           player.getGameEncoder().sendMessage("You can't use this here.");
           return true;
@@ -343,10 +341,10 @@ public class EdgevilleArea extends Area {
         player.getGameEncoder().sendMessage("The pool restores you.");
         player.rejuvenate();
         return true;
-      case 28857: // Rope ladder
+      case ObjectId.ROPE_LADDER_28857:
         player.getMovement().ladderUpTeleport(new Tile(3127, 3468, 3));
         return true;
-      case 28858: // Rope ladder
+      case ObjectId.ROPE_LADDER_28858:
         player.getMovement().ladderDownTeleport(new Tile(3127, 3469));
         return true;
     }
@@ -451,8 +449,8 @@ public class EdgevilleArea extends Area {
     }
   }
 
-  public class FreeForAllPortalDialogue extends SelectionDialogue {
-    public FreeForAllPortalDialogue(Player player) {
+  private class FreeForAllPortalDialogue extends SelectionDialogue {
+    private FreeForAllPortalDialogue(Player player) {
       addOption("Safe Free-For-All", (childId, slot) -> {
         player.getMovement().teleport(3327, 4752);
         player.setController(new ClanWarsFreeForAllPC());

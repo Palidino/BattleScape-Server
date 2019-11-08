@@ -1,6 +1,7 @@
 package com.palidinodh.osrsscript.map.area;
 
 import com.palidinodh.osrscore.io.cache.id.ItemId;
+import com.palidinodh.osrscore.io.cache.id.ObjectId;
 import com.palidinodh.osrscore.model.map.Area;
 import com.palidinodh.osrscore.model.map.MapObject;
 import lombok.var;
@@ -14,7 +15,7 @@ public class PortPhasmatysArea extends Area {
   public boolean mapObjectOptionHook(int index, MapObject mapObject) {
     var player = getPlayer();
     switch (mapObject.getId()) {
-      case 16648:
+      case ObjectId.ECTOFUNTUS:
         if (!player.getInventory().hasItem(ItemId.ECTOPHIAL_4252)) {
           player.getGameEncoder().sendMessage("Nothing interesting happens...");
           return true;

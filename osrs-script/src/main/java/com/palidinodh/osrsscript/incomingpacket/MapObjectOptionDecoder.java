@@ -5,6 +5,7 @@ import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
 import com.palidinodh.io.Stream;
+import com.palidinodh.osrscore.io.cache.id.ObjectId;
 import com.palidinodh.osrscore.io.incomingpacket.InStreamKey;
 import com.palidinodh.osrscore.io.incomingpacket.IncomingPacketDecoder;
 import com.palidinodh.osrscore.model.map.MapObject;
@@ -13,6 +14,7 @@ import com.palidinodh.osrscore.model.player.AchievementDiary;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Prayer;
 import com.palidinodh.osrscore.model.player.Skills;
+import com.palidinodh.osrscore.model.player.Smithing;
 import com.palidinodh.osrscore.model.player.skill.SkillContainer;
 import com.palidinodh.osrscore.util.RequestManager;
 import com.palidinodh.osrscore.world.WorldEventHooks;
@@ -85,9 +87,9 @@ public class MapObjectOptionDecoder extends IncomingPacketDecoder {
     if (mapObject.getType() >= 4 && mapObject.getType() <= 8) {
       range = 0;
     }
-    if (mapObject.getId() == 30352) { // The Inferno Entrance
+    if (mapObject.getId() == ObjectId.THE_INFERNO_30352) { // Entrance
       range = 5;
-    } else if (mapObject.getId() == 31561) { // Revenant Pillar
+    } else if (mapObject.getId() == ObjectId.PILLAR_31561) { // Revenants
       range = 2;
     }
     if (player.isLocked()) {
@@ -208,6 +210,9 @@ public class MapObjectOptionDecoder extends IncomingPacketDecoder {
         }
         player.getPrayer().adjustPoints(player.getController().getLevelForXP(Skills.PRAYER));
         player.setAnimation(Prayer.PRAY_ANIMATION);
+        return true;
+      case "furnace":
+        Smithing.openSmelt(player);
         return true;
     }
     return false;

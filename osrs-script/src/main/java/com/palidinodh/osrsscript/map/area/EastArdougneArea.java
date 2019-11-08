@@ -1,5 +1,6 @@
 package com.palidinodh.osrsscript.map.area;
 
+import com.palidinodh.osrscore.io.cache.id.ObjectId;
 import com.palidinodh.osrscore.model.Tile;
 import com.palidinodh.osrscore.model.map.Area;
 import com.palidinodh.osrscore.model.map.MapObject;
@@ -18,7 +19,7 @@ public class EastArdougneArea extends Area {
     var player = getPlayer();
     AgilityObstacle obstacle = null;
     switch (mapObject.getId()) {
-      case 11405: // Wooden Beams
+      case ObjectId.WOODEN_BEAMS:
         obstacle = new AgilityObstacle(player, 90, 43);
         player.setFaceTile(new Tile(2673, 3299));
         obstacle.add(TeleportAgilityEvent.builder().tile(new Tile(2673, 3298, 1)).completeDelay(1)
@@ -29,7 +30,7 @@ public class EastArdougneArea extends Area {
             .startAnimation(2588).build());
         obstacle.start(mapObject);
         return true;
-      case 11406: // Gap
+      case ObjectId.GAP_11406:
         obstacle = new AgilityObstacle(player, 90, 65);
         obstacle.add(TeleportAgilityEvent.builder().tile(new Tile(2667, 3311, 1)).completeDelay(1)
             .startAnimation(2586).endAnimation(2588).build());
@@ -39,31 +40,31 @@ public class EastArdougneArea extends Area {
             .startAnimation(2586).endAnimation(2588).build());
         obstacle.start(mapObject);
         return true;
-      case 11631: // Plank
+      case ObjectId.PLANK_11631:
         obstacle = new AgilityObstacle(player, 90, 50);
         obstacle.add(MoveAgilityEvent.builder().tile(new Tile(2656, 3318, 3)).noclip(true)
             .animation(762).build());
         obstacle.start(mapObject);
         return true;
-      case 11429: // Gap
+      case ObjectId.GAP_11429:
         obstacle = new AgilityObstacle(player, 90, 21);
         obstacle.add(TeleportAgilityEvent.builder().tile(new Tile(2653, 3314, 3)).completeDelay(1)
             .startAnimation(2586).endAnimation(2588).build());
         obstacle.start(mapObject);
         return true;
-      case 11430: // Gap
+      case ObjectId.GAP_11430:
         obstacle = new AgilityObstacle(player, 90, 28);
         obstacle.add(TeleportAgilityEvent.builder().tile(new Tile(2651, 3309, 3)).completeDelay(1)
             .startAnimation(2586).endAnimation(2588).build());
         obstacle.start(mapObject);
         return true;
-      case 11633: // Steep roof
+      case ObjectId.STEEP_ROOF:
         obstacle = new AgilityObstacle(player, 90, 57);
         obstacle.add(MoveAgilityEvent.builder().tile(new Tile(2656, 3297, 3)).noclip(true)
             .animation(756).build());
         obstacle.start(mapObject);
         return true;
-      case 11630: // Gap
+      case ObjectId.GAP_11630:
         obstacle = new AgilityObstacle(player, 90, 529);
         obstacle.add(TeleportAgilityEvent.builder().tile(new Tile(2658, 3298, 1)).completeDelay(1)
             .startAnimation(2586).endAnimation(2588).build());

@@ -9,7 +9,7 @@ import com.palidinodh.osrscore.model.player.Player;
 public class JewelryBoxWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.JEWELRY_BOX};
+    return new int[] {WidgetId.JEWELLERY_BOX};
   }
 
   @Override

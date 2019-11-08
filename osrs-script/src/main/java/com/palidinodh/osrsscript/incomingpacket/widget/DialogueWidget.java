@@ -9,16 +9,17 @@ import com.palidinodh.osrscore.model.player.Player;
 public class DialogueWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.CHATBOX_SELECTION, WidgetId.SCREEN_SELECTION,
-        WidgetId.CHATBOX_CONTINUE, WidgetId.MAKE_X};
+    return new int[] { WidgetId.CHATBOX_PLAYER, WidgetId.CHATBOX_NPC, WidgetId.CHATBOX_MESSAGE,
+        WidgetId.CHATBOX_SELECTION, WidgetId.SCREEN_SELECTION, WidgetId.MAKE_X };
   }
 
   @Override
   public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
-    if (widgetId == WidgetId.CHATBOX_SELECTION) {
-      slot--;
-    } else if (widgetId == WidgetId.CHATBOX_CONTINUE) {
+    if (widgetId == WidgetId.CHATBOX_PLAYER || widgetId == WidgetId.CHATBOX_NPC
+        || widgetId == WidgetId.CHATBOX_MESSAGE) {
       slot = 0;
+    } else if (widgetId == WidgetId.CHATBOX_SELECTION) {
+      slot--;
     } else if (widgetId == WidgetId.MAKE_X) {
       childId -= 14;
     }

@@ -50,7 +50,7 @@ public class OptionsWidget implements WidgetHandler {
               .setLogNotificationTimeout(!player.getOptions().getLogNotificationTimeout());
           break;
         case 75:
-          player.getGameEncoder().sendOpenURL(Settings.getInstance().getSupportUrl());
+          player.getGameEncoder().sendOpenUrl(Settings.getInstance().getSupportUrl());
           break;
         case 77:
           player.getOptions().setOneMouseButton(!player.getOptions().getOneMouseButton());

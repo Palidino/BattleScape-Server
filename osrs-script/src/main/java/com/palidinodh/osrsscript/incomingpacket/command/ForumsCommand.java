@@ -12,6 +12,6 @@ public class ForumsCommand implements CommandHandler {
 
   @Override
   public void execute(Player player, String message) {
-    player.getGameEncoder().sendOpenURL(Settings.getInstance().getWebsiteUrl());
+    player.getGameEncoder().sendOpenUrl(Settings.getInstance().getWebsiteUrl());
   }
 }

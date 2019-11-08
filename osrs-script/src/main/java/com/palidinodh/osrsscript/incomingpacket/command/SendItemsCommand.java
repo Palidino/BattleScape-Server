@@ -32,6 +32,6 @@ public class SendItemsCommand implements CommandHandler {
     for (var i = 0; i < itemCount; i++) {
       items.add(new Item(randomIds ? PRandom.randomE(8192) : i, 1));
     }
-    player.getGameEncoder().sendItems(widgetId, childId, 0, items);
+    player.getGameEncoder().sendItems(widgetId, childId, 0, items.toArray(new Item[items.size()]));
   }
 }

@@ -16,7 +16,7 @@ import lombok.var;
 public class MysteryBoxWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.CUSTOM_MYSTERY_BOX};
+    return new int[] { WidgetId.CUSTOM_MYSTERY_BOX };
   }
 
   @Override

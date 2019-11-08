@@ -14,6 +14,6 @@ public class RulesCommand implements CommandHandler {
 
   @Override
   public void execute(Player player, String message) {
-    player.getGameEncoder().sendOpenURL(Settings.getInstance().getRulesUrl());
+    player.getGameEncoder().sendOpenUrl(Settings.getInstance().getRulesUrl());
   }
 }

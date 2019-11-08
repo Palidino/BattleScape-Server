@@ -1,6 +1,7 @@
 package com.palidinodh.osrsscript.map.area;
 
 import com.palidinodh.osrscore.io.cache.id.ItemId;
+import com.palidinodh.osrscore.io.cache.id.ObjectId;
 import com.palidinodh.osrscore.io.cache.id.VarbitId;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.Tile;
@@ -98,49 +99,49 @@ public class GodWarsArea extends Area {
   public boolean mapObjectOptionHook(int index, MapObject mapObject) {
     var player = getPlayer();
     switch (mapObject.getId()) {
-      case 26419: // Hole: entrance
+      case ObjectId.HOLE_26419: // Entrance
         player.getMovement().ladderDownTeleport(new Tile(2882, 5311, 2));
         return true;
-      case 26370: // Rope: exit
+      case ObjectId.ROPE_26370: // Exit
         player.getMovement().ladderUpTeleport(new Tile(2916, 3746, 0));
         return true;
-      case 26371: // Rope: Saradomin
+      case ObjectId.ROPE_26371: // Saradomin
         player.getMovement().ladderUpTeleport(new Tile(2912, 5300, 2));
         return true;
-      case 26375: // Rope: Saradomin
+      case ObjectId.ROPE_26375: // Saradomin
         player.getMovement().ladderUpTeleport(new Tile(2920, 5276, 1));
         return true;
-      case 26380: // Pillar: Armadyl
+      case ObjectId.PILLAR_26380: // Armadyl
         if (player.getY() >= 5279) {
           player.getMovement().teleport(new Tile(2872, 5269, 2));
         } else {
           player.getMovement().teleport(new Tile(2872, 5279, 2));
         }
         return true;
-      case 26461: // Big door: Bandos
+      case ObjectId.BIG_DOOR: // Bandos
         if (player.getX() >= 2851) {
           player.getMovement().teleport(new Tile(2850, 5333, 2));
         } else {
           player.getMovement().teleport(new Tile(2851, 5333, 2));
         }
         return true;
-      case 26518: // Ice bridge: Zamorak
+      case ObjectId.ICE_BRIDGE: // Zamorak
         if (player.getY() <= 5333) {
           player.getMovement().teleport(new Tile(2885, 5345, 2));
         } else {
           player.getMovement().teleport(new Tile(2885, 5332, 2));
         }
         return true;
-      case 26561: // Rock: Saradomin
+      case ObjectId.ROCK_26561: // Saradomin
         player.getMovement().ladderDownTeleport(new Tile(2915, 5300, 1));
         return true;
-      case 26562: // Rock: Saradomin
+      case ObjectId.ROCK_26562: // Saradomin
         player.getMovement().ladderDownTeleport(new Tile(2919, 5274, 0));
         return true;
-      case 26363: // Zamorak altar
-      case 26364: // Saradomin altar
-      case 26365: // Armadyl altar
-      case 26366: // Bandos altar
+      case ObjectId.ZAMORAK_ALTAR:
+      case ObjectId.SARADOMIN_ALTAR:
+      case ObjectId.ARMADYL_ALTAR:
+      case ObjectId.BANDOS_ALTAR:
         if (index == 0) {
           if (altarDelay > 0) {
             var message =
@@ -160,47 +161,47 @@ public class GodWarsArea extends Area {
           altarDelay = (int) PTime.minToTick(10);
         } else if (index == 1) {
           switch (mapObject.getId()) {
-            case 26363: // Zamorak altar
+            case ObjectId.ZAMORAK_ALTAR:
               player.getMagic().standardTeleport(new Tile(2925, 5333, 2));
               player.getController().stopWithTeleport();
               break;
-            case 26364: // Saradomin altar
+            case ObjectId.SARADOMIN_ALTAR:
               player.getMagic().standardTeleport(new Tile(2909, 5265));
               player.getController().stopWithTeleport();
               break;
-            case 26365: // Armadyl altar
+            case ObjectId.ARMADYL_ALTAR:
               player.getMagic().standardTeleport(new Tile(2839, 5294, 2));
               player.getController().stopWithTeleport();
               break;
-            case 26366: // Bandos altar
+            case ObjectId.BANDOS_ALTAR:
               player.getMagic().standardTeleport(new Tile(2862, 5354, 2));
               player.getController().stopWithTeleport();
               break;
           }
         }
         return true;
-      case 26502: // Big door: Armadyl
+      case ObjectId.BIG_DOOR_26502: // Armadyl
         if (player.getY() > 5294) {
           player.getGameEncoder().sendMessage("You must use the altar to leave.");
           return true;
         }
         player.openDialogue("bossinstance", 7);
         return true;
-      case 26503: // Big door: Bandos
+      case ObjectId.BIG_DOOR_26503: // Bandos
         if (player.getX() > 2862) {
           player.getGameEncoder().sendMessage("You must use the altar to leave.");
           return true;
         }
         player.openDialogue("bossinstance", 8);
         return true;
-      case 26504: // Big door: Saradomin
+      case ObjectId.BIG_DOOR_26504: // Saradomin
         if (player.getX() < 2909) {
           player.getGameEncoder().sendMessage("You must use the altar to leave.");
           return true;
         }
         player.openDialogue("bossinstance", 10);
         return true;
-      case 26505: // Big door: Zamorak
+      case ObjectId.BIG_DOOR_26505: // Zamorak
         if (player.getY() < 5333) {
           player.getGameEncoder().sendMessage("You must use the altar to leave.");
           return true;
