@@ -20,7 +20,12 @@
     "decoderName": "ChatDecoder$PublicChatDecoder",
     "options": [
       {
-        "opcode": 97
+        "opcode": 97,
+        "data": {
+          "SECONDARY_EFFECT": "UNSIGNED_BYTE",
+          "EFFECTS": "UNSIGNED_SHORT",
+          "LENGTH": "UNSIGNED_BYTE"
+        }
       }
     ]
   },

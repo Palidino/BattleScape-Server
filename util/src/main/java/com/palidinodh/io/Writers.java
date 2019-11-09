@@ -28,6 +28,7 @@ public class Writers {
     try (DataOutputStream out =
         new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)))) {
       out.write(bytes);
+      out.flush();
     } catch (Exception e) {
       PLogger.error(e);
     }
@@ -45,6 +46,7 @@ public class Writers {
         out.write(line);
         out.newLine();
       }
+      out.flush();
     } catch (Exception e) {
       PLogger.error(e);
     }
@@ -74,6 +76,7 @@ public class Writers {
     try (ByteArrayOutputStream out = new ByteArrayOutputStream();
         ObjectOutputStream out2 = new ObjectOutputStream(out)) {
       out2.writeObject(object);
+      out2.flush();
       return out.toByteArray();
 
     } catch (Exception e) {
@@ -115,7 +118,8 @@ public class Writers {
   public static byte[] gzCompress(byte[] bytes) {
     try (ByteArrayOutputStream out = new ByteArrayOutputStream();
         GZIPOutputStream gOut = new GZIPOutputStream(out)) {
-      out.write(bytes);
+      gOut.write(bytes);
+      gOut.finish();
       return out.toByteArray();
     } catch (Exception e) {
       PLogger.error(e);

@@ -15,9 +15,9 @@ public class ChatDecoder {
   public static class PublicChatDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
-      var secondaryEffect = stream.readUnsignedByte();
-      var effects = stream.readUnsignedByte() << 8 | stream.readUnsignedByte() & 255;
-      var length = stream.readUnsignedByte();
+      var effects = getInt(InStreamKey.EFFECTS);
+      var secondaryEffect = getInt(InStreamKey.SECONDARY_EFFECT);
+      var length = getInt(InStreamKey.LENGTH);
       var message = CacheManager.getHuffman().readEncryptedMessage(stream, length);
       RequestManager.addUserPacketLog(player, "[Messaging-Public Chat] message=" + message
           + "; effects=" + effects + "; length=" + length);

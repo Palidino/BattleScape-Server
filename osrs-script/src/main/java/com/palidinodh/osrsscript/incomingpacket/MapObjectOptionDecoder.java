@@ -205,7 +205,7 @@ public class MapObjectOptionDecoder extends IncomingPacketDecoder {
         return true;
       case "altar":
       case "chaos altar":
-        if (!mapObject.getDef().hasOption("pray")) {
+        if (!mapObject.getDef().hasOption("pray") && !mapObject.getDef().hasOption("pray-at")) {
           break;
         }
         player.getPrayer().adjustPoints(player.getController().getLevelForXP(Skills.PRAYER));

@@ -31,6 +31,9 @@ import com.palidinodh.util.PLogger;
 
 public class Readers {
   public static byte[] readFile(File file) {
+    if (!file.exists()) {
+      return null;
+    }
     byte[] bytes = null;
     try (DataInputStream in =
         new DataInputStream(new BufferedInputStream(new FileInputStream(file)))) {
@@ -72,19 +75,19 @@ public class Readers {
   }
 
   public static byte[] gzDecompress(byte[] bytes) {
-    byte[] decompressed = null;
-    try (GZIPInputStream in = new GZIPInputStream(new ByteArrayInputStream(bytes));
+    try (GZIPInputStream gIn = new GZIPInputStream(new ByteArrayInputStream(bytes));
         ByteArrayOutputStream out = new ByteArrayOutputStream()) {
       byte[] buffer = new byte[1024];
       int length;
-      while ((length = in.read(buffer)) != -1) {
+      while ((length = gIn.read(buffer)) != -1) {
         out.write(buffer, 0, length);
       }
-      decompressed = out.toByteArray();
+      out.flush();
+      return out.toByteArray();
     } catch (Exception e) {
       PLogger.error(e);
     }
-    return decompressed;
+    return null;
   }
 
   public static byte[] readStream(InputStream fromStream) {
@@ -95,6 +98,7 @@ public class Readers {
       while ((length = in.read(buffer)) != -1) {
         out.write(buffer, 0, length);
       }
+      out.flush();
       return out.toByteArray();
     } catch (Exception e) {
       PLogger.error(e);

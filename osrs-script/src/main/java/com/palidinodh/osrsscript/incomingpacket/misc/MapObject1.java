@@ -652,48 +652,6 @@ public class MapObject1 {
     player.getController().stopWithTeleport();
   }
 
-  // Marv (ghastly!)
-  public static void mapObject22499(Player player, int index, MapObject mapObject) {}
-
-  // Marv (ghastly!)
-  public static void mapObject22502(Player player, int index, MapObject mapObject) {}
-
-  // Hank (ghastly!)
-  public static void mapObject22506(Player player, int index, MapObject mapObject) {}
-
-  // Hank (ghastly!)
-  public static void mapObject22509(Player player, int index, MapObject mapObject) {}
-
-  // Wilf (ghastly!)
-  public static void mapObject22513(Player player, int index, MapObject mapObject) {}
-
-  // Wilf (ghastly!)
-  public static void mapObject22516(Player player, int index, MapObject mapObject) {}
-
-  // Sarah (sick!)
-  public static void mapObject22518(Player player, int index, MapObject mapObject) {}
-
-  // Sarah (very sick!)
-  public static void mapObject22519(Player player, int index, MapObject mapObject) {}
-
-  // Sarah (ghastly!)
-  public static void mapObject22520(Player player, int index, MapObject mapObject) {}
-
-  // Sarah (sick!)
-  public static void mapObject22521(Player player, int index, MapObject mapObject) {}
-
-  // Sarah (very sick!)
-  public static void mapObject22522(Player player, int index, MapObject mapObject) {}
-
-  // Sarah (ghastly!)
-  public static void mapObject22523(Player player, int index, MapObject mapObject) {}
-
-  // Rachel (ghastly!)
-  public static void mapObject22527(Player player, int index, MapObject mapObject) {}
-
-  // Rachel (ghastly!)
-  public static void mapObject22530(Player player, int index, MapObject mapObject) {}
-
   // Bone door
   public static void mapObject22945(Player player, int index, MapObject mapObject) {
     int entryRequirement = 0;
