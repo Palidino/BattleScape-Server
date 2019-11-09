@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -53,6 +54,7 @@ public class AbyssalDemonCombat extends NpcCombat {
           .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.ABYSSAL_BLUDGEON).weight(8)))
           .build();
 
+  @Inject
   private Npc npc;
   private boolean usingSpecialAttack;
   private int specialAttackCount;
@@ -191,11 +193,6 @@ public class AbyssalDemonCombat extends NpcCombat {
 
     return Arrays.asList(normalCombat.build(), catacombsCombat.build(), cursedCombat.build(),
         superiorCombat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

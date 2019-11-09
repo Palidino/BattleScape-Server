@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -29,6 +30,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
 public class BandosGodWarsChamberCombat extends NpcCombat {
+  @Inject
   private Npc npc;
 
   @Override
@@ -285,17 +287,12 @@ public class BandosGodWarsChamberCombat extends NpcCombat {
   }
 
   @Override
-  public void spawnHook() {
-    npc = getNpc();
-  }
-
-  @Override
   public void restoreHook() {
     if (npc.getId() != NpcId.GENERAL_GRAARDOR_624) {
       return;
     }
-    var respawns = new int[] {NpcId.SERGEANT_GRIMSPIKE_142, NpcId.SERGEANT_STEELWILL_142,
-        NpcId.SERGEANT_STRONGSTACK_141};
+    var respawns = new int[] { NpcId.SERGEANT_GRIMSPIKE_142, NpcId.SERGEANT_STEELWILL_142,
+        NpcId.SERGEANT_STRONGSTACK_141 };
     for (var id : respawns) {
       var respawningNpc = npc.getController().getNpc(id);
       if (respawningNpc != null && !respawningNpc.isVisible() && respawningNpc.getRespawns()) {

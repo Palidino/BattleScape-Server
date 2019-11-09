@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -54,6 +55,7 @@ public class GargoyleCombat extends NpcCombat {
       .effect(NpcCombatEffect.builder().magicBind(6).build())
       .specialAttack(NpcCombatTargetTile.builder().build()).build();
 
+  @Inject
   private Npc npc;
 
   @Override
@@ -169,11 +171,6 @@ public class GargoyleCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build(), cursedCombat.build(), superiorCombat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

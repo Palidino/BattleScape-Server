@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -50,6 +51,7 @@ public class BarrowsCombat extends NpcCombat {
       .animation(729).attackSpeed(5).castGraphic(new Graphic(167, 92))
       .targetGraphic(new Graphic(169, 124)).projectile(NpcCombatProjectile.id(168)).build();
 
+  @Inject
   private Npc npc;
 
   @Override
@@ -237,11 +239,6 @@ public class BarrowsCombat extends NpcCombat {
 
     return Arrays.asList(ahrim.build(), dharok.build(), guthan.build(), karil.build(),
         torag.build(), verac.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

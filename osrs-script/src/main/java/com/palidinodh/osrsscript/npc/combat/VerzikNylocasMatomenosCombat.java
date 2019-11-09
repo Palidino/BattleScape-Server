@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.npc.Npc;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombat;
@@ -13,6 +14,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatStats;
 import lombok.var;
 
 public class VerzikNylocasMatomenosCombat extends NpcCombat {
+  @Inject
   private Npc npc;
 
   @Override
@@ -28,11 +30,6 @@ public class VerzikNylocasMatomenosCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

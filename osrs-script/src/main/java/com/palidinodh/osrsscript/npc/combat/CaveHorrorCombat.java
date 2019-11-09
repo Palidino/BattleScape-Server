@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.HitType;
@@ -33,6 +34,7 @@ public class CaveHorrorCombat extends NpcCombat {
       .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.DUST_BATTLESTAFF, 1, 1, 3)))
       .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.MIST_BATTLESTAFF, 1, 1, 3))).build();
 
+  @Inject
   private Npc npc;
 
   @Override
@@ -157,11 +159,6 @@ public class CaveHorrorCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build(), cursedCombat.build(), superiorCombat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

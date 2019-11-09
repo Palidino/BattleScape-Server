@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -55,6 +56,7 @@ public class DarkBeastCombat extends NpcCombat {
           .specialAttack(NpcCombatTargetTile.builder().radius(1).radiusProjectiles(true).build())
           .build();
 
+  @Inject
   private Npc npc;
   private boolean usingSpecialAttack;
   private int specialAttackCount;
@@ -245,11 +247,6 @@ public class DarkBeastCombat extends NpcCombat {
 
     return Arrays.asList(combat.build(), combat2.build(), cursedCombat.build(),
         superiorCombat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

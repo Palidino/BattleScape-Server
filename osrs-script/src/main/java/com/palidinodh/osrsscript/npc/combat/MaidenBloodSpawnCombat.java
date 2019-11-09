@@ -3,6 +3,7 @@ package com.palidinodh.osrsscript.npc.combat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.map.MapObject;
 import com.palidinodh.osrscore.model.map.TempMapObject;
@@ -16,6 +17,7 @@ import com.palidinodh.random.PRandom;
 import lombok.var;
 
 public class MaidenBloodSpawnCombat extends NpcCombat {
+  @Inject
   private Npc npc;
   private List<TempMapObject> tempMapObjects = new ArrayList<>();
 
@@ -30,11 +32,6 @@ public class MaidenBloodSpawnCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

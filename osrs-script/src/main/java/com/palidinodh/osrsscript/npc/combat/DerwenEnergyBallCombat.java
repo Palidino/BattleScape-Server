@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.Graphic;
 import com.palidinodh.osrscore.model.Hit;
@@ -15,6 +16,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatHitpoints;
 import lombok.var;
 
 public class DerwenEnergyBallCombat extends NpcCombat {
+  @Inject
   private Npc npc;
   private Npc derwen;
   private int healDelay;
@@ -28,11 +30,6 @@ public class DerwenEnergyBallCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

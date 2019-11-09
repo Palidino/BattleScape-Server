@@ -9,6 +9,7 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.lang.reflect.Field;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.Map;
 import java.util.zip.GZIPOutputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
+import com.google.inject.Inject;
 import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import com.palidinodh.util.PTime;
@@ -154,6 +156,30 @@ public class Writers {
               PLogger.error(e2);
             }
           });
+        }
+      }
+    } catch (Exception e) {
+      PLogger.error(e);
+    }
+  }
+
+  public static void injectField(Object injectingObject, Object... injectingWithObjects) {
+    // How the fuck does Google field injection work so that I don't have to use this...
+    try {
+      Class<?> clazz = injectingObject.getClass();
+      Field[] fields = clazz.getDeclaredFields();
+      for (Field field : fields) {
+        if (!field.isAnnotationPresent(Inject.class)) {
+          continue;
+        }
+        for (Object injectingWithObject : injectingWithObjects) {
+          if (!field.getType().isAssignableFrom(injectingWithObject.getClass())) {
+            continue;
+          }
+          boolean isAccessible = field.isAccessible();
+          field.setAccessible(true);
+          field.set(injectingObject, injectingWithObject);
+          field.setAccessible(isAccessible);
         }
       }
     } catch (Exception e) {

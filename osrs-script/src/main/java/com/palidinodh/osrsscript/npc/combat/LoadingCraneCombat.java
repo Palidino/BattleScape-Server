@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.Entity;
 import com.palidinodh.osrscore.model.npc.Npc;
@@ -19,6 +20,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import lombok.var;
 
 public class LoadingCraneCombat extends NpcCombat {
+  @Inject
   private Npc npc;
 
   @Override
@@ -41,11 +43,6 @@ public class LoadingCraneCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

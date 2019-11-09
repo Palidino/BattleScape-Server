@@ -3,6 +3,7 @@ package com.palidinodh.osrsscript.npc.combat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -40,6 +41,7 @@ import com.palidinodh.random.PRandom;
 import lombok.var;
 
 public class AbyssalSireCombat extends NpcCombat {
+  @Inject
   private Npc npc;
   private int phase;
   private Npc[] respiratorySystems;
@@ -232,11 +234,6 @@ public class AbyssalSireCombat extends NpcCombat {
       return disorientingDelay;
     }
     return null;
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

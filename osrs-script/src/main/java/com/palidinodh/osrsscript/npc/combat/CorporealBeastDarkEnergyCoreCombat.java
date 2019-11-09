@@ -3,6 +3,7 @@ package com.palidinodh.osrsscript.npc.combat;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -25,6 +26,7 @@ import com.palidinodh.random.PRandom;
 import lombok.var;
 
 public class CorporealBeastDarkEnergyCoreCombat extends NpcCombat {
+  @Inject
   private Npc npc;
   private int jumpTime;
   private Tile jumpTile;
@@ -105,7 +107,7 @@ public class CorporealBeastDarkEnergyCoreCombat extends NpcCombat {
       stunned = false;
       npc.setAttacking(false);
       npc.setEngagingEntity(null);
-      npc.getCombat().checkPlayerAggression();
+      npc.getCombat2().checkPlayerAggression();
       if (npc.getEngagingEntity() != null) {
         npc.lock();
         npc.setAnimation(1689);

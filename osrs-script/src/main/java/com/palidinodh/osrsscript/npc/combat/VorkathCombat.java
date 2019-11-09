@@ -3,6 +3,7 @@ package com.palidinodh.osrsscript.npc.combat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -57,6 +58,7 @@ public class VorkathCombat extends NpcCombat {
       .targetGraphic(new Graphic(369)).effect(NpcCombatEffect.builder().magicBind(15).build())
       .build();
 
+  @Inject
   private Npc npc;
   private NpcCombatStyle lastCombatStyle;
   private int autoAttacks;
@@ -239,11 +241,6 @@ public class VorkathCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

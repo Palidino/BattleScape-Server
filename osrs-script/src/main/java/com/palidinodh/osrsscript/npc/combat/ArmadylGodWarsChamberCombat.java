@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -33,6 +34,7 @@ import com.palidinodh.random.PRandom;
 import lombok.var;
 
 public class ArmadylGodWarsChamberCombat extends NpcCombat {
+  @Inject
   private Npc npc;
 
   @Override
@@ -283,17 +285,12 @@ public class ArmadylGodWarsChamberCombat extends NpcCombat {
   }
 
   @Override
-  public void spawnHook() {
-    npc = getNpc();
-  }
-
-  @Override
   public void restoreHook() {
     if (npc.getId() != NpcId.KREEARRA_580) {
       return;
     }
-    var respawns =
-        new int[] {NpcId.WINGMAN_SKREE_143, NpcId.FLOCKLEADER_GEERIN_149, NpcId.FLIGHT_KILISA_159};
+    var respawns = new int[] { NpcId.WINGMAN_SKREE_143, NpcId.FLOCKLEADER_GEERIN_149,
+        NpcId.FLIGHT_KILISA_159 };
     for (var id : respawns) {
       var respawningNpc = npc.getController().getNpc(id);
       if (respawningNpc != null && !respawningNpc.isVisible() && respawningNpc.getRespawns()) {

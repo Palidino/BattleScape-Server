@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -49,6 +50,7 @@ public class HellhoundCombat extends NpcCombat {
           .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.ETERNAL_CRYSTAL)))
           .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.SMOULDERING_STONE))).build();
 
+  @Inject
   private Npc npc;
 
   @Override
@@ -117,11 +119,6 @@ public class HellhoundCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build(), cursedCombat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

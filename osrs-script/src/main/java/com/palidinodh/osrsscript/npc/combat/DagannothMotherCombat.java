@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -24,6 +25,7 @@ import com.palidinodh.random.PRandom;
 import lombok.var;
 
 public class DagannothMotherCombat extends NpcCombat {
+  @Inject
   private Npc npc;
   private int changeDelay;
 
@@ -58,11 +60,6 @@ public class DagannothMotherCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

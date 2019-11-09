@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -38,6 +39,7 @@ public class SmokeDevilCombat extends NpcCombat {
           .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.MYSTIC_SMOKE_STAFF)))
           .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.TOME_OF_FIRE_EMPTY))).build();
 
+  @Inject
   private Npc npc;
 
   @Override
@@ -164,11 +166,6 @@ public class SmokeDevilCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build(), cursedCombat.build(), superiorCombat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

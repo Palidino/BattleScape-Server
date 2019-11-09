@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -45,6 +46,7 @@ public class AberrantSpectreCombat extends NpcCombat {
       NpcCombatDropTable.builder().chance(0.49)
           .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.ANCIENT_SHARD))).build();
 
+  @Inject
   private Npc npc;
 
   @Override
@@ -155,11 +157,6 @@ public class AberrantSpectreCombat extends NpcCombat {
 
 
     return Arrays.asList(normalCombat.build(), catacombsCombat.build(), superiorCombat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

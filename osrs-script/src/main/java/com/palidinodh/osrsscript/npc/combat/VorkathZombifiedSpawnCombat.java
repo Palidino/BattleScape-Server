@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
 import com.palidinodh.osrscore.model.Entity;
@@ -20,6 +21,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
 public class VorkathZombifiedSpawnCombat extends NpcCombat {
+  @Inject
   private Npc npc;
   private int countdown1;
   private int countdown2;
@@ -45,11 +47,6 @@ public class VorkathZombifiedSpawnCombat extends NpcCombat {
   }
 
   @Override
-  public void spawnHook() {
-    npc = getNpc();
-  }
-
-  @Override
   public void restoreHook() {
     countdown1 = 2;
     countdown2 = 2;
@@ -63,7 +60,7 @@ public class VorkathZombifiedSpawnCombat extends NpcCombat {
       following = npc.getMovement().getFollowing();
     }
     if (!npc.isLocked() && !npc.withinMapDistance(following)) {
-      npc.getCombat().timedDeath();
+      npc.getCombat2().timedDeath();
       return;
     }
     if (!npc.withinDistance(following, 1)) {
@@ -75,7 +72,7 @@ public class VorkathZombifiedSpawnCombat extends NpcCombat {
         npc.getMovement().clear();
       } else if (countdown1 == 0) {
         explosionDamage = (int) (npc.getHitpoints() * 1.4);
-        npc.getCombat().timedDeath(countdown2);
+        npc.getCombat2().timedDeath(countdown2);
       }
     } else if (--countdown2 >= 0) {
       if (countdown2 == 0) {

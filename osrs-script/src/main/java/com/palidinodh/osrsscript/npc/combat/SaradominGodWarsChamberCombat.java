@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -29,6 +30,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
 public class SaradominGodWarsChamberCombat extends NpcCombat {
+  @Inject
   private Npc npc;
 
   @Override
@@ -288,16 +290,11 @@ public class SaradominGodWarsChamberCombat extends NpcCombat {
   }
 
   @Override
-  public void spawnHook() {
-    npc = getNpc();
-  }
-
-  @Override
   public void restoreHook() {
     if (npc.getId() != NpcId.COMMANDER_ZILYANA_596) {
       return;
     }
-    var respawns = new int[] {NpcId.STARLIGHT_149, NpcId.GROWLER_139, NpcId.BREE_146};
+    var respawns = new int[] { NpcId.STARLIGHT_149, NpcId.GROWLER_139, NpcId.BREE_146 };
     for (var id : respawns) {
       var respawningNpc = npc.getController().getNpc(id);
       if (respawningNpc != null && !respawningNpc.isVisible() && respawningNpc.getRespawns()) {

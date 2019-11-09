@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
 import com.palidinodh.osrscore.model.Entity;
@@ -26,6 +27,7 @@ import com.palidinodh.util.PEvent;
 import lombok.var;
 
 public class MageArena2DemonCombat extends NpcCombat {
+  @Inject
   private Npc npc;
 
   @Override
@@ -134,11 +136,6 @@ public class MageArena2DemonCombat extends NpcCombat {
 
 
     return Arrays.asList(justiciarCombat.build(), derwenCombat.build(), porazdirCombat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

@@ -36,13 +36,13 @@ public class TestCommand implements CommandHandler {
     // 567-569: general chatting?
     var animationId = Integer.parseInt(message);
     player.openDialogue(
-        new ChatDialogue(-1, animationId, "Hello, I'm looking for Miika.",
-            new DialogueOption("wat")),
+        new ChatDialogue(
+            -1, animationId, "Hello, I'm looking for Miika.", new DialogueOption("wat")),
         new NormalChatDialogue(NpcId.BOB, "Who?"),
         new OptionsDialogue(new DialogueOption("You know who!", DialogueChain.ACTION_NEXT),
-            new DialogueOption("Nevermind", (childId, slot) -> {
-              player.openDialogue(new NormalChatDialogue("Nevermind, I'll go."));
-            })),
+            new DialogueOption("Nevermind",
+                (childId, slot) -> player
+                    .openDialogue(new NormalChatDialogue("Nevermind, I'll go.")))),
         new NormalChatDialogue("You know who!"),
         new NormalChatDialogue(NpcId.BOB, "OH, YOU MEAN MIKASA!"),
         new NormalChatDialogue(

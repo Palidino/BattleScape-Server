@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -34,10 +35,11 @@ import lombok.var;
 
 public class GiantMoleCombat extends NpcCombat {
   public static final Tile[] BURROWS =
-      {new Tile(1736, 5227), new Tile(1776, 5236), new Tile(1752, 5204), new Tile(1769, 5199),
+      { new Tile(1736, 5227), new Tile(1776, 5236), new Tile(1752, 5204), new Tile(1769, 5199),
           new Tile(1778, 5207), new Tile(1740, 5187), new Tile(1745, 5170), new Tile(1774, 5173),
-          new Tile(1759, 5162), new Tile(1739, 5150), new Tile(1752, 5149)};
+          new Tile(1759, 5162), new Tile(1739, 5150), new Tile(1752, 5149) };
 
+  @Inject
   private Npc npc;
 
   @Override
@@ -101,11 +103,6 @@ public class GiantMoleCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

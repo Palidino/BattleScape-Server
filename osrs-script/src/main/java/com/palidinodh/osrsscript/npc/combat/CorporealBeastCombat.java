@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -36,6 +37,7 @@ import com.palidinodh.random.PRandom;
 import lombok.var;
 
 public class CorporealBeastCombat extends NpcCombat {
+  @Inject
   private Npc npc;
   private Npc darkCore;
 
@@ -178,11 +180,6 @@ public class CorporealBeastCombat extends NpcCombat {
   }
 
   @Override
-  public void spawnHook() {
-    npc = getNpc();
-  }
-
-  @Override
   public void restoreHook() {
     npc.getWorld().removeNpc(darkCore);
     darkCore = null;
@@ -237,11 +234,11 @@ public class CorporealBeastCombat extends NpcCombat {
       }
     }
     if (damage > 32) {
-      if (npc.getCombat().getPlayerAggressionDelay() == 0) {
+      if (npc.getCombat2().getPlayerAggressionDelay() == 0) {
         npc.setFaceEntity(opponent);
         npc.setEngagingEntity(opponent);
-        npc.getCombat().setFollowing(opponent, 0);
-        npc.getCombat().setPlayerAggressionDelay(2);
+        npc.getCombat2().setFollowing(opponent, 0);
+        npc.getCombat2().setPlayerAggressionDelay(2);
       }
       if (darkCore == null && PRandom.randomE(8) == 0) {
         if (Route.canMove(npc, npc.getX() - 1, npc.getY())) {
