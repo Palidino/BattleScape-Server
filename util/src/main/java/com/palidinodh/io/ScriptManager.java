@@ -42,8 +42,7 @@ public class ScriptManager {
         for (String polyfill : POLYFILLS) {
           contents += polyfill;
         }
-        contents +=
-            new String(FileManager.readStream(ScriptManager.class.getResourceAsStream(file)));
+        contents += new String(Readers.readStream(ScriptManager.class.getResourceAsStream(file)));
         script = COMPILABLE.compile(contents);
         SCRIPTS.put(file, script);
       }
@@ -99,7 +98,7 @@ public class ScriptManager {
 
   public static void loadScript(File file) {
     try {
-      ENGINE.eval(FileManager.readTextFile(file));
+      ENGINE.eval(Readers.readTextFile(file));
     } catch (Exception e) {
       PLogger.println(file.toString());
       e.printStackTrace();
@@ -128,7 +127,7 @@ public class ScriptManager {
       if (!child.isFile() || !child.getName().endsWith(FILE_EXTENSION)) {
         continue;
       }
-      String[] lines = FileManager.readTextFileArray(child);
+      String[] lines = Readers.readTextFileArray(child);
       StringBuilder fileText = new StringBuilder();
       for (String line : lines) {
         if (line.contains("prototype") && line.contains("function")
@@ -147,16 +146,16 @@ public class ScriptManager {
   }
 
   public static void importJavaTypes() {
-    String[] langClasses = new String[] {"Boolean", "Byte", "Character", "Double", "Float",
-        "Integer", "Long", "Short", "String", "Math", "System", "StringBuilder"};
+    String[] langClasses = new String[] { "Boolean", "Byte", "Character", "Double", "Float",
+        "Integer", "Long", "Short", "String", "Math", "System", "StringBuilder" };
     for (String s : langClasses) {
       importClass("java.lang." + s);
     }
   }
 
   public static void importJavaUtils() {
-    String[] utilClasses = new String[] {"Comparator", "ArrayList", "Arrays", "Collections",
-        "HashMap", "LinkedList", "Objects", "TreeMap"};
+    String[] utilClasses = new String[] { "Comparator", "ArrayList", "Arrays", "Collections",
+        "HashMap", "LinkedList", "Objects", "TreeMap" };
     for (String s : utilClasses) {
       importClass("java.util." + s);
     }
@@ -178,8 +177,8 @@ public class ScriptManager {
 
   public static void importPackage(String name) {
     try {
-      List<Class<?>> classes = FileManager.getClasses(name);// findPackageClasses(name);
-      for (Class<?> c : classes) {
+      List<Class<Object>> classes = Readers.getClasses(name);// findPackageClasses(name);
+      for (Class<Object> c : classes) {
         if (c.getSimpleName() == null) {
           PLogger.println(c.toString() + " is null");
           continue;

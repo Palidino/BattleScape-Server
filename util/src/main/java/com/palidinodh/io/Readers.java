@@ -1,0 +1,206 @@
+package com.palidinodh.io;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URL;
+import java.nio.file.DirectoryStream;
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.zip.GZIPInputStream;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.reflect.ClassPath;
+import com.google.common.reflect.ClassPath.ClassInfo;
+import com.palidinodh.rs.setting.Settings;
+import com.palidinodh.util.PCollection;
+import com.palidinodh.util.PLogger;
+
+public class Readers {
+  public static byte[] readFile(File file) {
+    byte[] bytes = null;
+    try (DataInputStream in =
+        new DataInputStream(new BufferedInputStream(new FileInputStream(file)))) {
+      bytes = new byte[(int) file.length()];
+      in.readFully(bytes);
+    } catch (Exception e) {
+      PLogger.error(e);
+    }
+    return bytes;
+  }
+
+  public static String readTextFile(File file) {
+    byte[] bytes = readFile(file);
+    return bytes != null ? new String(bytes) : null;
+  }
+
+  public static String[] readTextFileArray(File file) {
+    List<String> list = readTextFileList(file);
+    return list != null ? list.toArray(new String[0]) : null;
+  }
+
+  public static List<String> readTextFileList(File file) {
+    String text = readTextFile(file);
+    return text != null ? PCollection.toList(text.replace("\r", "").split("\n")) : null;
+  }
+
+  public static Object readObject(byte[] bytes) {
+    if (bytes == null) {
+      return null;
+    }
+    Object object = null;
+    try (DecompressibleInputStream in =
+        new DecompressibleInputStream(new ByteArrayInputStream(bytes))) {
+      object = in.readObject();
+    } catch (Exception e) {
+      PLogger.error(e);
+    }
+    return object;
+  }
+
+  public static byte[] gzDecompress(byte[] bytes) {
+    byte[] decompressed = null;
+    try (GZIPInputStream in = new GZIPInputStream(new ByteArrayInputStream(bytes));
+        ByteArrayOutputStream out = new ByteArrayOutputStream()) {
+      byte[] buffer = new byte[1024];
+      int length;
+      while ((length = in.read(buffer)) != -1) {
+        out.write(buffer, 0, length);
+      }
+      decompressed = out.toByteArray();
+    } catch (Exception e) {
+      PLogger.error(e);
+    }
+    return decompressed;
+  }
+
+  public static byte[] readStream(InputStream fromStream) {
+    try (InputStream in = new BufferedInputStream(fromStream);
+        ByteArrayOutputStream out = new ByteArrayOutputStream()) {
+      byte[] buffer = new byte[1024];
+      int length;
+      while ((length = in.read(buffer)) != -1) {
+        out.write(buffer, 0, length);
+      }
+      return out.toByteArray();
+    } catch (Exception e) {
+      PLogger.error(e);
+    }
+    return null;
+  }
+
+  public static String readUrl(String string) {
+    HttpURLConnection urlConnection;
+    try {
+      urlConnection = (HttpURLConnection) new URL(string).openConnection();
+      urlConnection.setRequestMethod("GET");
+      urlConnection.setRequestProperty("Connection", "close");
+      urlConnection.setConnectTimeout(10000);
+      urlConnection.setReadTimeout(10000);
+      urlConnection.addRequestProperty("User-Agent",
+          "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0");
+      urlConnection.connect();
+    } catch (Exception e) {
+      PLogger.error(e);
+      return null;
+    }
+    try (BufferedReader reader =
+        new BufferedReader(new InputStreamReader(urlConnection.getInputStream()))) {
+      String line = null;
+      StringBuilder builder = new StringBuilder();
+      while ((line = reader.readLine()) != null) {
+        builder.append(line + "\\n");
+      }
+      return builder.toString();
+    } catch (Exception e) {
+      PLogger.error(e);
+    }
+    return null;
+  }
+
+  public static List<String> getResourceList(Class<?> fromClass, String pathName) {
+    List<String> filenames = new ArrayList<>();
+    try {
+      URL url = fromClass.getResource(pathName);
+      url = url == null ? FileManager.class.getResource(pathName) : url;
+      URI uri = url.toURI();
+      if ("jar".equals(uri.getScheme())) {
+        URL jar = FileManager.class.getProtectionDomain().getCodeSource().getLocation();
+        Path jarFile = Paths.get(jar.toURI());
+        try (FileSystem fileSystem = FileSystems.newFileSystem(jarFile, null)) {
+          DirectoryStream<Path> directoryStream =
+              Files.newDirectoryStream(fileSystem.getPath(pathName));
+          for (Path path : directoryStream) {
+            filenames.add(path.toString());
+          }
+        }
+      } else {
+        try (InputStream in = url.openStream();
+            BufferedReader br = new BufferedReader(new InputStreamReader(in, "UTF-8"))) {
+          String resource;
+          while ((resource = br.readLine()) != null) {
+            filenames.add(new File(pathName, resource).getPath());
+          }
+        }
+      }
+    } catch (Exception e) {
+      PLogger.error(e);
+    }
+    return filenames;
+  }
+
+  public static Class<?> getClass(String className) {
+    try {
+      return Class.forName(className);
+    } catch (Exception e) {
+      PLogger.error(e);
+    }
+    return null;
+  }
+
+  public static Class<?> getScriptClass(String className) {
+    return getClass(Settings.getInstance().getScriptPackage() + "." + className);
+  }
+
+  @SuppressWarnings("unchecked")
+  public static <T> List<Class<T>> getClasses(Class<T> fromClass, String packageName) {
+    List<Class<T>> matchedClasses = new ArrayList<>();
+    try {
+      ClassPath classPath = ClassPath.from(
+          fromClass == Object.class ? Readers.class.getClassLoader() : fromClass.getClassLoader());
+      ImmutableSet<ClassInfo> classes = packageName == null ? classPath.getAllClasses()
+          : classPath.getTopLevelClassesRecursive(packageName);
+      for (ClassInfo classInfo : classes) {
+        Class<?> clazz = classInfo.load();
+        if (fromClass != Object.class && !fromClass.isAssignableFrom(clazz)) {
+          continue;
+        }
+        matchedClasses.add((Class<T>) clazz);
+      }
+    } catch (IOException ioe) {
+      ioe.printStackTrace();
+    }
+    return matchedClasses;
+  }
+
+  public static List<Class<Object>> getClasses(String packageName) {
+    return getClasses(Object.class, packageName);
+  }
+
+  public static <T> List<Class<T>> getScriptClasses(Class<T> fromClass, String packageName) {
+    return getClasses(fromClass, Settings.getInstance().getScriptPackage() + "." + packageName);
+  }
+}

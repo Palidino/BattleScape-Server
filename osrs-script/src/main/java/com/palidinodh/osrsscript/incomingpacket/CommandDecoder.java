@@ -3,7 +3,7 @@ package com.palidinodh.osrsscript.incomingpacket;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import com.palidinodh.io.FileManager;
+import com.palidinodh.io.Readers;
 import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.io.incomingpacket.InStreamKey;
@@ -67,8 +67,7 @@ public class CommandDecoder extends IncomingPacketDecoder {
 
   static {
     try {
-      var classes = FileManager.getClasses(CommandHandler.class,
-          Settings.getInstance().getScriptPackage() + ".incomingpacket.command");
+      var classes = Readers.getScriptClasses(CommandHandler.class, "incomingpacket.command");
       for (var clazz : classes) {
         var classInstance = (CommandHandler) clazz.newInstance();
         commands.put(clazz.getSimpleName().replace("Command", "").toLowerCase(), classInstance);

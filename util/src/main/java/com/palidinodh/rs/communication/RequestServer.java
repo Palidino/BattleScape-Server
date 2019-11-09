@@ -12,8 +12,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Vector;
-import com.palidinodh.io.FileManager;
+import com.palidinodh.io.Readers;
 import com.palidinodh.io.Stream;
+import com.palidinodh.io.Writers;
 import com.palidinodh.rs.adaptive.Clan;
 import com.palidinodh.rs.adaptive.GrandExchangeItem;
 import com.palidinodh.rs.adaptive.GrandExchangeUser;
@@ -597,13 +598,13 @@ public class RequestServer implements Runnable {
       if (charFileLength > 0) {
         charFile = new byte[charFileLength];
         inputStream.readBytes(charFile);
-        charFile = FileManager.gzDecompress(charFile);
+        charFile = Readers.gzDecompress(charFile);
       }
       int sqlFileLength = inputStream.readUnsignedShort();
       if (sqlFileLength > 0) {
         sqlFile = new byte[sqlFileLength];
         inputStream.readBytes(sqlFile);
-        sqlFile = FileManager.gzDecompress(sqlFile);
+        sqlFile = Readers.gzDecompress(sqlFile);
       }
     }
     PlayerLoginResponse response =
@@ -642,7 +643,7 @@ public class RequestServer implements Runnable {
     outputStream.writeInt(request.getUserId());
     byte[] charFile = request.getCharFile();
     if (charFile != null) {
-      charFile = FileManager.gzCompress(charFile);
+      charFile = Writers.gzCompress(charFile);
       outputStream.writeShort(charFile.length);
       outputStream.writeBytes(charFile);
     } else {
@@ -653,13 +654,13 @@ public class RequestServer implements Runnable {
     socket.write(ByteBuffer.wrap(outputStream.toByteArray()));
     request.setState(Request.State.PENDING_RECEIVE);
     if (request.getCharFile() != null) {
-      FileManager.writeFile(new File(Settings.getInstance().getPlayerMapBackupDirectory(),
+      Writers.writeFile(new File(Settings.getInstance().getPlayerMapBackupDirectory(),
           request.getUserId() + ".dat"), request.getCharFile());
     }
   }
 
   private void internalPlayerLogout(PlayerLogoutRequest request) {
-    FileManager.writeFile(
+    Writers.writeFile(
         new File(Settings.getInstance().getPlayerMapDirectory(), request.getUserId() + ".dat"),
         request.getCharFile());
   }

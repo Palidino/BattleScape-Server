@@ -2,7 +2,7 @@ package com.palidinodh.osrsscript.incomingpacket;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.palidinodh.io.FileManager;
+import com.palidinodh.io.Readers;
 import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.incomingpacket.WidgetHandler;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
@@ -82,8 +82,7 @@ public class WidgetDecoder extends IncomingPacketDecoder {
 
   static {
     try {
-      var classes = FileManager.getClasses(WidgetHandler.class,
-          Settings.getInstance().getScriptPackage() + ".incomingpacket.widget");
+      var classes = Readers.getScriptClasses(WidgetHandler.class, "incomingpacket.widget");
       for (var clazz : classes) {
         var classInstance = (WidgetHandler) clazz.newInstance();
         for (var widgetId : classInstance.getIds()) {

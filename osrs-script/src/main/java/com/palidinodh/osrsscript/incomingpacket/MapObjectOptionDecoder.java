@@ -4,6 +4,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
+import com.palidinodh.io.Readers;
 import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.cache.id.ObjectId;
 import com.palidinodh.osrscore.io.incomingpacket.InStreamKey;
@@ -134,9 +135,8 @@ public class MapObjectOptionDecoder extends IncomingPacketDecoder {
     }
     if (!actionMethods.containsKey(mapObject.getId())) {
       try {
-        var className = Settings.getInstance().getScriptPackage() + ".incomingpacket.misc.MapObject"
-            + mapObject.getId() / 16384;
-        var classReference = Class.forName(className);
+        var classReference =
+            Readers.getScriptClass("incomingpacket.misc.MapObject" + mapObject.getId() / 16384);
         var methodName = "mapObject" + mapObject.getId();
         var actionMethod =
             classReference.getMethod(methodName, Player.class, Integer.TYPE, MapObject.class);

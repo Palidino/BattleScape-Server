@@ -1,7 +1,8 @@
 package com.palidinodh.osrsscript.incomingpacket.command;
 
+import java.io.File;
 import java.util.ArrayList;
-import com.palidinodh.io.FileManager;
+import com.palidinodh.io.Writers;
 import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.Tile;
@@ -58,7 +59,7 @@ public class SaveNpcCommand implements CommandHandler {
     }
     var npc = new Npc(player.getController(), id, player.getX(), player.getY(), player.getHeight());
     var lines = new ArrayList<String>();
-    if (!FileManager.fileExists("./npcs.json")) {
+    if (!new File("./npcs.json").exists()) {
       lines.add("[");
     }
     lines.add("  {");
@@ -76,7 +77,7 @@ public class SaveNpcCommand implements CommandHandler {
       lines.add("    \"y\": " + player.getY());
     }
     lines.add("  },");
-    FileManager.appendTextFile("./npcs.json", PString.toStringArray(lines));
+    Writers.appendTextFile(new File("./npcs.json"), PString.toStringArray(lines));
     player.getGameEncoder().sendMessage("Spawned & saved " + npc.getDef().getName());
   }
 }
