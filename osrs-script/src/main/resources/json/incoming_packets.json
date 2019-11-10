@@ -485,7 +485,7 @@
         "data": {
           "ON_WIDGET_SLOT": "UNSIGNED_SHORT",
           "USE_WIDGET_SLOT": "UNSIGNED_LE_SHORT",
-          "WIDGET_HASH": "INT",
+          "USE_WIDGET_HASH": "INT",
           "UNKNOWN_NUMBER_1": "UNSIGNED_BYTE_C"
         }
       }
@@ -500,7 +500,7 @@
           "USE_WIDGET_SLOT": "UNSIGNED_SHORT_A",
           "USE_ITEM_ID": "UNSIGNED_SHORT_A",
           "ON_WIDGET_SLOT": "UNSIGNED_SHORT",
-          "USE_WDIGET_HASH": "LE_INT",
+          "USE_WIDGET_HASH": "LE_INT",
           "ON_WIDGET_HASH": "INT_1",
           "ON_ITEM_ID": "UNSIGNED_SHORT"
         }
