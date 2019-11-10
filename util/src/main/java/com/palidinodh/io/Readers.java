@@ -139,10 +139,12 @@ public class Readers {
     List<String> filenames = new ArrayList<>();
     try {
       URL url = fromClass.getResource(pathName);
-      url = url == null ? FileManager.class.getResource(pathName) : url;
+      url = url == null ? Readers.class.getClassLoader().getResource(pathName) : url;
       URI uri = url.toURI();
       if ("jar".equals(uri.getScheme())) {
-        URL jar = FileManager.class.getProtectionDomain().getCodeSource().getLocation();
+        String jarUrlString = url.toString().replace("jar:", "");
+        jarUrlString = jarUrlString.substring(0, jarUrlString.indexOf("!"));
+        URL jar = new URL(jarUrlString);
         Path jarFile = Paths.get(jar.toURI());
         try (FileSystem fileSystem = FileSystems.newFileSystem(jarFile, null)) {
           DirectoryStream<Path> directoryStream =
