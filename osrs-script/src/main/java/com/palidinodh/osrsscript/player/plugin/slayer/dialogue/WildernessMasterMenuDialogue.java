@@ -16,6 +16,5 @@ public class WildernessMasterMenuDialogue extends OptionsDialogue {
     addOption("Cancel task (30 points)", (childId, slot) -> {
       plugin.cancelWildernessTask();
     });
-    open(player);
   }
 }

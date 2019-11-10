@@ -21,6 +21,5 @@ public class ChooseMasterDialogue extends OptionsDialogue {
     addOption("Krystilia - wilderness", (childId, slot) -> {
       player.getGameEncoder().sendMessage("Please speak to krystilia for a wilderness task.");
     });
-    open(player);
   }
 }

@@ -12,6 +12,5 @@ public class RewardsDialogue extends OptionsDialogue {
     addOption("Boss Slayer rewards", (childId, slot) -> {
       player.openShop("boss_slayer");
     });
-    open(player);
   }
 }

@@ -59,7 +59,6 @@ public class SlayerRingDialogue extends OptionsDialogue {
       player.getController().stopWithTeleport();
       player.clearHits();
     });
-    open(player);
   }
 
   @Override

@@ -94,7 +94,7 @@ public class PvpTournament extends PEvent implements WorldEventHooks {
             player.getGameEncoder().sendMessage("The coffer won't take this item.");
             break;
           }
-          new DonateItemDialogue(player, player.getInventory().getItem(slot));
+          player.openDialogue(new DonateItemDialogue(player, player.getInventory().getItem(slot)));
           break;
       }
     }
@@ -108,9 +108,9 @@ public class PvpTournament extends PEvent implements WorldEventHooks {
         if (player.getRights() == Player.RIGHTS_ADMIN
             || player.isUsergroup(SqlUserRank.SENIOR_MODERATOR)
             || player.isUsergroup(SqlUserRank.COMMUNITY_MANAGER)) {
-          new AdminCofferDialogue(player);
+          player.openDialogue(new AdminCofferDialogue(player));
         } else {
-          new CofferDialogue(player);
+          player.openDialogue(new CofferDialogue(player));
         }
         return true;
       case ObjectId.GATE_26081:

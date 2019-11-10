@@ -9,7 +9,7 @@ import com.palidinodh.osrsscript.player.plugin.slayer.SlayerPlugin;
 public class MasterMenuDialogue extends OptionsDialogue {
   public MasterMenuDialogue(Player player, SlayerPlugin plugin) {
     addOption("Get task", (childId, slot) -> {
-      new ChooseMasterDialogue(player, plugin);
+      player.openDialogue(new ChooseMasterDialogue(player, plugin));
     });
     addOption("Current task", (childId, slot) -> {
       plugin.sendTask();
@@ -35,6 +35,5 @@ public class MasterMenuDialogue extends OptionsDialogue {
       player.getInventory().deleteItem(ItemId.VOTE_TICKET, 2);
       player.getGameEncoder().sendMessage("Your boss task has been cancelled.");
     });
-    open(player);
   }
 }

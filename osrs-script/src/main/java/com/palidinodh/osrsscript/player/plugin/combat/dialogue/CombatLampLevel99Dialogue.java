@@ -18,25 +18,25 @@ public class CombatLampLevel99Dialogue extends LargeOptionsDialogue {
       }
     }
     addOption("Attack", (childId, slot) -> {
-      new ConfirmationDialogue(Skills.ATTACK);
+      player.openDialogue(new ConfirmationDialogue(Skills.ATTACK));
     });
     addOption("Strength", (childId, slot) -> {
-      new ConfirmationDialogue(Skills.STRENGTH);
+      player.openDialogue(new ConfirmationDialogue(Skills.STRENGTH));
     });
     addOption("Ranged", (childId, slot) -> {
-      new ConfirmationDialogue(Skills.RANGED);
+      player.openDialogue(new ConfirmationDialogue(Skills.RANGED));
     });
     addOption("Magic", (childId, slot) -> {
-      new ConfirmationDialogue(Skills.MAGIC);
+      player.openDialogue(new ConfirmationDialogue(Skills.MAGIC));
     });
     addOption("Defence", (childId, slot) -> {
-      new ConfirmationDialogue(Skills.DEFENCE);
+      player.openDialogue(new ConfirmationDialogue(Skills.DEFENCE));
     });
     addOption("Prayer", (childId, slot) -> {
-      new ConfirmationDialogue(Skills.PRAYER);
+      player.openDialogue(new ConfirmationDialogue(Skills.PRAYER));
     });
     addOption("Hitpoints", (childId, slot) -> {
-      new ConfirmationDialogue(Skills.HITPOINTS);
+      player.openDialogue(new ConfirmationDialogue(Skills.HITPOINTS));
     });
     open(player);
   }

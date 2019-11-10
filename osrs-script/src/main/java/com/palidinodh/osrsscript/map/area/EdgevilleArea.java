@@ -131,7 +131,7 @@ public class EdgevilleArea extends Area {
         return true;
       case NpcId.SKILLING_SELLER:
         if (index == 0) {
-          new ExchangeSpecialSkillItemsDialogue(player);
+          player.openDialogue(new ExchangeSpecialSkillItemsDialogue(player));
         } else if (index == 2) {
           player.openShop("skilling");
         }
@@ -248,7 +248,7 @@ public class EdgevilleArea extends Area {
         player.rejuvenate();
         return true;
       case ObjectId.FREE_FOR_ALL_PORTAL:
-        new FreeForAllPortalDialogue(player);
+        player.openDialogue(new FreeForAllPortalDialogue(player));
         return true;
       case ObjectId.LEVER_26761:
         if (player.getMovement().getTeleportBlock() > 0) {
@@ -445,7 +445,6 @@ public class EdgevilleArea extends Area {
         }
       });
       addOption("Nevermind");
-      open(player);
     }
   }
 
@@ -458,7 +457,6 @@ public class EdgevilleArea extends Area {
       addOption("Risk Zone", (childId, slot) -> {
         player.getMovement().teleport(2655, 5471);
       });
-      open(player);
     }
   }
 }

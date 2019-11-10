@@ -22,6 +22,5 @@ public class StoreTypeDialogue extends OptionsDialogue {
     addOption("Always Store-X", (childId, slot) -> {
       plugin.setStoreType(StoreType.STORE_X);
     });
-    open(player);
   }
 }
