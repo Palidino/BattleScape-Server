@@ -28,7 +28,6 @@ public class DonateItemDialogue extends OptionsDialogue {
     addOption("Give to place #2", action);
     addOption("Give to place #3", action);
     addOption("Give to place #4", action);
-    open(player);
   }
 
   @Override

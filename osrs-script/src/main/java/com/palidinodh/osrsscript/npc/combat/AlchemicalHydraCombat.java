@@ -3,6 +3,7 @@ package com.palidinodh.osrsscript.npc.combat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -60,54 +61,55 @@ public class AlchemicalHydraCombat extends NpcCombat {
   private static final NpcCombatStyle POISON_ATTACK_2 =
       POISON_ATTACK_BUILDER.animation(8255).build();
   private static final Graphic[] POISON_TILE_GRAPHICS =
-      {new Graphic(1654), new Graphic(1655), new Graphic(1656), new Graphic(1657),
-          new Graphic(1658), new Graphic(1659), new Graphic(1660), new Graphic(1661)};
+      { new Graphic(1654), new Graphic(1655), new Graphic(1656), new Graphic(1657),
+          new Graphic(1658), new Graphic(1659), new Graphic(1660), new Graphic(1661) };
   private static final MapObject BLUE_VENT = new MapObject(34570, new Tile(1362, 10272, 0), 10, 0);
   private static final MapObject GREEN_VENT = new MapObject(34569, new Tile(1371, 10272, 0), 10, 0);
   private static final MapObject RED_VENT = new MapObject(34568, new Tile(1371, 10263, 0), 10, 0);
-  private static final MapObject[] VENTS = {BLUE_VENT, GREEN_VENT, RED_VENT};
-  private static final Tile[] FIRE_TILES_NORTH = {new Tile(0, 1), new Tile(1365, 10271),
-      new Tile(1366, 10271), new Tile(1367, 10271), new Tile(1368, 10271)};
-  private static final Tile[] FIRE_TILES_EAST = {new Tile(1, 0), new Tile(1370, 10269),
-      new Tile(1370, 10268), new Tile(1370, 10267), new Tile(1370, 10266)};
-  private static final Tile[] FIRE_TILES_SOUTH = {new Tile(0, -1), new Tile(1365, 10264),
-      new Tile(1366, 10264), new Tile(1367, 10264), new Tile(1368, 10264)};
-  private static final Tile[] FIRE_TILES_WEST = {new Tile(-1, 0), new Tile(1363, 10269),
-      new Tile(1363, 10268), new Tile(1363, 10267), new Tile(1363, 10266)};
-  private static final Tile[] FIRE_TILES_NORTH_WEST = {new Tile(-1, 1), new Tile(1363, 10271),
-      new Tile(1363, 10269), new Tile(1363, 10270), new Tile(1364, 10271), new Tile(1365, 10271)};
-  private static final Tile[] FIRE_TILES_SOUTH_WEST = {new Tile(-1, -1), new Tile(1363, 10264),
-      new Tile(1365, 10264), new Tile(1364, 10264), new Tile(1363, 10265), new Tile(1363, 10266)};
-  private static final Tile[] FIRE_TILES_NORTH_EAST = {new Tile(1, 1), new Tile(1370, 10271),
-      new Tile(1369, 10271), new Tile(1368, 10271), new Tile(1370, 10270), new Tile(1370, 10269)};
-  private static final Tile[] FIRE_TILES_SOUTH_EAST = {new Tile(-1, 1), new Tile(1370, 10264),
-      new Tile(1370, 10265), new Tile(1370, 10266), new Tile(1369, 10264), new Tile(1368, 10264)};
+  private static final MapObject[] VENTS = { BLUE_VENT, GREEN_VENT, RED_VENT };
+  private static final Tile[] FIRE_TILES_NORTH = { new Tile(0, 1), new Tile(1365, 10271),
+      new Tile(1366, 10271), new Tile(1367, 10271), new Tile(1368, 10271) };
+  private static final Tile[] FIRE_TILES_EAST = { new Tile(1, 0), new Tile(1370, 10269),
+      new Tile(1370, 10268), new Tile(1370, 10267), new Tile(1370, 10266) };
+  private static final Tile[] FIRE_TILES_SOUTH = { new Tile(0, -1), new Tile(1365, 10264),
+      new Tile(1366, 10264), new Tile(1367, 10264), new Tile(1368, 10264) };
+  private static final Tile[] FIRE_TILES_WEST = { new Tile(-1, 0), new Tile(1363, 10269),
+      new Tile(1363, 10268), new Tile(1363, 10267), new Tile(1363, 10266) };
+  private static final Tile[] FIRE_TILES_NORTH_WEST = { new Tile(-1, 1), new Tile(1363, 10271),
+      new Tile(1363, 10269), new Tile(1363, 10270), new Tile(1364, 10271), new Tile(1365, 10271) };
+  private static final Tile[] FIRE_TILES_SOUTH_WEST = { new Tile(-1, -1), new Tile(1363, 10264),
+      new Tile(1365, 10264), new Tile(1364, 10264), new Tile(1363, 10265), new Tile(1363, 10266) };
+  private static final Tile[] FIRE_TILES_NORTH_EAST = { new Tile(1, 1), new Tile(1370, 10271),
+      new Tile(1369, 10271), new Tile(1368, 10271), new Tile(1370, 10270), new Tile(1370, 10269) };
+  private static final Tile[] FIRE_TILES_SOUTH_EAST = { new Tile(-1, 1), new Tile(1370, 10264),
+      new Tile(1370, 10265), new Tile(1370, 10266), new Tile(1369, 10264), new Tile(1368, 10264) };
   private static final FireAttack NORTH_FIRE = new FireAttack(new PPolygon(), FIRE_TILES_NORTH_WEST,
       FIRE_TILES_NORTH_EAST, new Tile(1366, 10271));
-  private static final FireAttack EAST_FIRE =
-      new FireAttack(new PPolygon(new int[] {1366, 1377, 1377}, new int[] {10267, 10278, 10257}),
-          FIRE_TILES_NORTH_EAST, FIRE_TILES_SOUTH_EAST, new Tile(1370, 10267));
-  private static final FireAttack SOUTH_FIRE =
-      new FireAttack(new PPolygon(new int[] {1366, 1377, 1356}, new int[] {10268, 10257, 10257}),
-          FIRE_TILES_SOUTH_WEST, FIRE_TILES_SOUTH_EAST, new Tile(1366, 10264));
-  private static final FireAttack WEST_FIRE =
-      new FireAttack(new PPolygon(new int[] {1367, 1356, 1356}, new int[] {10267, 10257, 10278}),
-          FIRE_TILES_NORTH_WEST, FIRE_TILES_SOUTH_WEST, new Tile(1363, 10267));
+  private static final FireAttack EAST_FIRE = new FireAttack(
+      new PPolygon(new int[] { 1366, 1377, 1377 }, new int[] { 10267, 10278, 10257 }),
+      FIRE_TILES_NORTH_EAST, FIRE_TILES_SOUTH_EAST, new Tile(1370, 10267));
+  private static final FireAttack SOUTH_FIRE = new FireAttack(
+      new PPolygon(new int[] { 1366, 1377, 1356 }, new int[] { 10268, 10257, 10257 }),
+      FIRE_TILES_SOUTH_WEST, FIRE_TILES_SOUTH_EAST, new Tile(1366, 10264));
+  private static final FireAttack WEST_FIRE = new FireAttack(
+      new PPolygon(new int[] { 1367, 1356, 1356 }, new int[] { 10267, 10257, 10278 }),
+      FIRE_TILES_NORTH_WEST, FIRE_TILES_SOUTH_WEST, new Tile(1363, 10267));
   private static final FireAttack NORTH_EAST_FIRE = new FireAttack(
-      new PPolygon(new int[] {1369, 1369, 1377, 1377}, new int[] {10270, 10278, 10278, 10270}),
+      new PPolygon(new int[] { 1369, 1369, 1377, 1377 }, new int[] { 10270, 10278, 10278, 10270 }),
       FIRE_TILES_NORTH, FIRE_TILES_EAST, new Tile(1370, 10271));
   private static final FireAttack SOUTH_EAST_FIRE = new FireAttack(
-      new PPolygon(new int[] {1369, 1377, 1377, 1369}, new int[] {10265, 10265, 10257, 10257}),
+      new PPolygon(new int[] { 1369, 1377, 1377, 1369 }, new int[] { 10265, 10265, 10257, 10257 }),
       FIRE_TILES_EAST, FIRE_TILES_SOUTH, new Tile(1370, 10271));
   private static final FireAttack SOUTH_WEST_FIRE = new FireAttack(
-      new PPolygon(new int[] {1364, 1364, 1356, 1356}, new int[] {10265, 10257, 10257, 10265}),
+      new PPolygon(new int[] { 1364, 1364, 1356, 1356 }, new int[] { 10265, 10257, 10257, 10265 }),
       FIRE_TILES_WEST, FIRE_TILES_SOUTH, new Tile(1363, 10264));
   private static final FireAttack NORTH_WEST_FIRE = new FireAttack(
-      new PPolygon(new int[] {1364, 1356, 1356, 1364}, new int[] {10270, 10270, 10278, 10278}),
+      new PPolygon(new int[] { 1364, 1356, 1356, 1364 }, new int[] { 10270, 10270, 10278, 10278 }),
       FIRE_TILES_NORTH, FIRE_TILES_WEST, new Tile(1363, 10271));
-  private static final FireAttack[] FIRE_ATTACKS = {NORTH_EAST_FIRE, SOUTH_EAST_FIRE,
-      SOUTH_WEST_FIRE, NORTH_WEST_FIRE, EAST_FIRE, SOUTH_FIRE, WEST_FIRE};
+  private static final FireAttack[] FIRE_ATTACKS = { NORTH_EAST_FIRE, SOUTH_EAST_FIRE,
+      SOUTH_WEST_FIRE, NORTH_WEST_FIRE, EAST_FIRE, SOUTH_FIRE, WEST_FIRE };
 
+  @Inject
   private Npc npc;
   private HitType hitStyle;
   private NpcCombatStyle currentCombatStyle;
@@ -370,11 +372,6 @@ public class AlchemicalHydraCombat extends NpcCombat {
 
     return Arrays.asList(combat.build(), combat2.build(), combat3.build(), combat4.build(),
         combat5.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override
@@ -810,8 +807,9 @@ public class AlchemicalHydraCombat extends NpcCombat {
               isFirst = false;
               continue;
             }
-            npc.getCombat().sendMapProjectile(null, npc, tile, 1667, 43, 0, speed.getClientDelay(),
-                speed.getClientSpeed(), 16, 64);
+            var projectile = Graphic.Projectile.builder().id(1667).startTile(npc).endTile(tile)
+                .endHeight(0).projectileSpeed(speed).build();
+            sendMapProjectile(projectile);
           }
           for (var i = 0; i < 16; i++) {
             var noTilesFound = true;

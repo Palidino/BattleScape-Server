@@ -55,7 +55,7 @@ public class LogoutWidget implements WidgetHandler {
                   }
                 });
           } else if (PTime.milliToHour(player.getCreationTime()) < 4) {
-            new FeedbackDialogue(player);
+            player.openDialogue(new FeedbackDialogue(player));
           } else {
             player.getGameEncoder().sendLogout();
             player.setVisible(false);
@@ -130,7 +130,6 @@ public class LogoutWidget implements WidgetHandler {
         player.getGameEncoder().sendLogout();
         player.setVisible(false);
       });
-      open(player);
     }
   }
 }

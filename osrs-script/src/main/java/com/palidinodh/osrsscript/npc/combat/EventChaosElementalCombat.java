@@ -3,6 +3,7 @@ package com.palidinodh.osrsscript.npc.combat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -33,6 +34,7 @@ import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
 public class EventChaosElementalCombat extends NpcCombat {
+  @Inject
   private Npc npc;
   private List<Npc> fanatics = new ArrayList<>();
   private boolean summonedFanatics;
@@ -84,11 +86,6 @@ public class EventChaosElementalCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

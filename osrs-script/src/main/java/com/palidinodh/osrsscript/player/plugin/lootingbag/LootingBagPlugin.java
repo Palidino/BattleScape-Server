@@ -99,7 +99,7 @@ public class LootingBagPlugin extends PlayerPlugin {
                 player.getInventory().capacity() - 1, 1086);
             player.getInventory().setUpdate(true);
           } else if (index == 3) {
-            new StoreTypeDialogue(player, this);
+            player.openDialogue(new StoreTypeDialogue(player, this));
           }
           return true;
       }
@@ -131,7 +131,7 @@ public class LootingBagPlugin extends PlayerPlugin {
       if (UseWidgetDecoder.hasMatch(useItemId, onItemId, ItemId.LOOTING_BAG, -1)) {
         var itemSlot = useItemId != ItemId.LOOTING_BAG ? useSlot : onSlot;
         if (storeType == StoreType.ASK) {
-          new StoreAskDialogue(player, this);
+          player.openDialogue(new StoreAskDialogue(player, this));
           player.putAttribute("looting_bag_item_slot", itemSlot);
           return true;
         } else if (storeType == StoreType.STORE_1) {

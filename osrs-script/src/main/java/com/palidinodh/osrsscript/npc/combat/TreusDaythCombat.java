@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
 import com.palidinodh.osrscore.model.Tile;
@@ -21,9 +22,10 @@ import com.palidinodh.random.PRandom;
 import lombok.var;
 
 public class TreusDaythCombat extends NpcCombat {
-  private static final Tile[] MOVE_PATHS = {new Tile(2781, 4459), new Tile(2787, 4444),
-      new Tile(2788, 4463), new Tile(2794, 4451), new Tile(2781, 4454)};
+  private static final Tile[] MOVE_PATHS = { new Tile(2781, 4459), new Tile(2787, 4444),
+      new Tile(2788, 4463), new Tile(2794, 4451), new Tile(2781, 4454) };
 
+  @Inject
   private Npc npc;
   private boolean hasMoved;
   private int moveDelay;
@@ -58,18 +60,13 @@ public class TreusDaythCombat extends NpcCombat {
   }
 
   @Override
-  public void spawnHook() {
-    npc = getNpc();
-  }
-
-  @Override
   public void tickStartHook() {
     if (npc.isLocked() || hasMoved && npc.getLastHitByDelay() > 10 || moveDelay-- > 0
         || npc.getMovement().isRouting()) {
       return;
     }
     hasMoved = true;
-    npc.getCombat().clear();
+    npc.getCombat2().clear();
     npc.getMovement().clear();
     npc.getMovement().addMovement(MOVE_PATHS[PRandom.randomE(MOVE_PATHS.length)]);
     npc.setLock(npc.getMovement().getMoveListSize());

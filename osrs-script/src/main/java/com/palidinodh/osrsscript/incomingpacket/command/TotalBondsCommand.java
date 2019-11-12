@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.incomingpacket.command;
 
 import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
 public class TotalBondsCommand implements CommandHandler {
@@ -12,7 +13,8 @@ public class TotalBondsCommand implements CommandHandler {
 
   @Override
   public boolean canUse(Player player) {
-    return player.getRights() == Player.RIGHTS_ADMIN;
+    return player.isUsergroup(SqlUserRank.COMMUNITY_MANAGER)
+        || player.getRights() == Player.RIGHTS_ADMIN;
   }
 
   @Override

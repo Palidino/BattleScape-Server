@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -34,6 +35,7 @@ import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
 public class DemonicGorillaCombat extends NpcCombat {
+  @Inject
   private Npc npc;
   private HitType attackStyle;
   private int lastStyleChange;
@@ -143,11 +145,6 @@ public class DemonicGorillaCombat extends NpcCombat {
   }
 
   @Override
-  public void spawnHook() {
-    npc = getNpc();
-  }
-
-  @Override
   public void restoreHook() {
     lastStyleChange = 0;
     misses = 0;
@@ -162,7 +159,8 @@ public class DemonicGorillaCombat extends NpcCombat {
       chooseAttackStyle();
     }
     if (npc.getHitDelay() == 0 && npc.isAttacking() && attackStyle != HitType.MELEE
-        && PRandom.randomE(5) == 0 && npc.getCombat().canAttackEntity(npc.getEngagingEntity(), null)
+        && PRandom.randomE(5) == 0
+        && npc.getCombat2().canAttackEntity(npc.getEngagingEntity(), null)
         && npc.withinDistance(npc.getEngagingEntity(), 10)) {
       npc.getWorld().addEvent(
           new TileHitEvent(4, npc.getController(), npc.getEngagingEntity(), 30, HitType.TYPELESS));

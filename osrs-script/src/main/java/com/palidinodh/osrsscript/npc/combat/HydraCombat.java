@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -58,6 +59,7 @@ public class HydraCombat extends NpcCombat {
           .breakOff(NpcCombatTargetTile.BreakOff.builder().count(2).distance(3).build()).build())
       .build();
 
+  @Inject
   private Npc npc;
   private HitType hitType;
   private int hitCount;
@@ -183,11 +185,6 @@ public class HydraCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build(), cursedCombat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

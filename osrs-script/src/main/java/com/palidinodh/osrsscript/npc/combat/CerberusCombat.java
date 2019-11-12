@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -46,6 +47,7 @@ public class CerberusCombat extends NpcCombat {
   private static final int AOE_DELAY = 25;
   private static final int AOE_LENGTH = 14;
 
+  @Inject
   private Npc npc;
   private int tripleDelay;
   private int soulsDelay;
@@ -154,11 +156,6 @@ public class CerberusCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override
@@ -344,11 +341,11 @@ public class CerberusCombat extends NpcCombat {
     souls.clear();
     Tile[] tiles = null;
     if (npc.getRegionId() == 4883) {
-      tiles = new Tile[] {new Tile(1239, 1265), new Tile(1240, 1265), new Tile(1241, 1265)};
+      tiles = new Tile[] { new Tile(1239, 1265), new Tile(1240, 1265), new Tile(1241, 1265) };
     } else if (npc.getRegionId() == 5395) {
-      tiles = new Tile[] {new Tile(1367, 1265), new Tile(1368, 1265), new Tile(1369, 1265)};
+      tiles = new Tile[] { new Tile(1367, 1265), new Tile(1368, 1265), new Tile(1369, 1265) };
     } else if (npc.getRegionId() == 5140) {
-      tiles = new Tile[] {new Tile(1303, 1329), new Tile(1304, 1329), new Tile(1305, 1329)};
+      tiles = new Tile[] { new Tile(1303, 1329), new Tile(1304, 1329), new Tile(1305, 1329) };
     }
     if (tiles == null) {
       return;
@@ -418,8 +415,8 @@ public class CerberusCombat extends NpcCombat {
       return;
     }
     aoeAttacks.clear();
-    var tiles =
-        new Tile[] {new Tile(entity), new Tile(entity).randomize(2), new Tile(entity).randomize(4)};
+    var tiles = new Tile[] { new Tile(entity), new Tile(entity).randomize(2),
+        new Tile(entity).randomize(4) };
     for (var tile : tiles) {
       var projectile = Graphic.Projectile.builder().id(1247).startTile(npc).endTile(tile)
           .projectileSpeed(getProjectileSpeed(entity)).build();

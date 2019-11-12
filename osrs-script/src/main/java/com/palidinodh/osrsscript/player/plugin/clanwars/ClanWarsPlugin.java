@@ -244,7 +244,7 @@ public class ClanWarsPlugin extends PlayerPlugin {
       case 26642: // Challenge portal
       case 26643: // Challenge portal
       case 26644: // Challenge portal
-        new JoinBattleDialogue(player, this);
+        player.openDialogue(new JoinBattleDialogue(player, this));
         return true;
     }
     return false;

@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -28,6 +29,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
 public class ArmadylGodWarsCombat extends NpcCombat {
+  @Inject
   private Npc npc;
 
   @Override
@@ -187,11 +189,6 @@ public class ArmadylGodWarsCombat extends NpcCombat {
 
     return Arrays.asList(spirituaMageCombat.build(), aviansie69Combat.build(),
         aviansie79Combat.build(), aviansie92Combat.build(), aviansie137Combat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

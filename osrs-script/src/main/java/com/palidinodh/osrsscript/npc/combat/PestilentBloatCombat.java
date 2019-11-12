@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
 import com.palidinodh.osrscore.model.Entity;
@@ -25,8 +26,9 @@ import lombok.var;
 
 public class PestilentBloatCombat extends NpcCombat {
   private static final Tile[] CORNERS =
-      {new Tile(3299, 4451), new Tile(3299, 4440), new Tile(3288, 4440), new Tile(3288, 4451)};
+      { new Tile(3299, 4451), new Tile(3299, 4440), new Tile(3288, 4440), new Tile(3288, 4451) };
 
+  @Inject
   private Npc npc;
   private boolean loaded;
   private int direction = 1;
@@ -52,11 +54,6 @@ public class PestilentBloatCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

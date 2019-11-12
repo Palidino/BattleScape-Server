@@ -21,7 +21,7 @@ public class InventoryEquipmentWidgetHook {
     if (widgetId == WidgetId.INVENTORY || isEquipment) {
       switch (itemId) {
         case ItemId.COMBAT_LAMP_LEVEL_99_32337:
-          new CombatLampLevel99Dialogue(player);
+          player.openDialogue(new CombatLampLevel99Dialogue(player));
           return true;
       }
     }

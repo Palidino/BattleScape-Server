@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
 import com.palidinodh.osrscore.model.Entity;
@@ -25,6 +26,7 @@ import com.palidinodh.random.PRandom;
 import lombok.var;
 
 public class AbyssalSireSpawnCombat extends NpcCombat {
+  @Inject
   private Npc npc;
   private Npc abyssalSire;
   private int transformTimer;
@@ -92,11 +94,6 @@ public class AbyssalSireSpawnCombat extends NpcCombat {
 
 
     return Arrays.asList(respiratory.build(), spawn.build(), scion.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

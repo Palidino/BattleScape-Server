@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -41,6 +42,7 @@ public class CursedJewelledCrabCombat extends NpcCombat {
           .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.SEERS_RING).weight(1)))
           .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.DRAGON_AXE).weight(4))).build();
 
+  @Inject
   private Npc npc;
   private int changeDelay;
 
@@ -186,11 +188,6 @@ public class CursedJewelledCrabCombat extends NpcCombat {
 
     return Arrays.asList(combat.build(), redCombat.build(), greenCombat.build(),
         blueCombat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

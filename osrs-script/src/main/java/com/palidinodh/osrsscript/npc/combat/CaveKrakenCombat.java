@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -38,6 +39,7 @@ public class CaveKrakenCombat extends NpcCombat {
       .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.TRIDENT_OF_THE_SEAS_FULL).weight(8)))
       .build();
 
+  @Inject
   private Npc npc;
 
   @Override
@@ -149,11 +151,6 @@ public class CaveKrakenCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build(), cursedCombat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

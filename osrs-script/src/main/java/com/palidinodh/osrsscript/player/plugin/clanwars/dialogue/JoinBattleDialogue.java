@@ -14,6 +14,5 @@ public class JoinBattleDialogue extends OptionsDialogue {
       Stages.openView(player, plugin);
     });
     addOption("Cancel.");
-    open(player);
   }
 }

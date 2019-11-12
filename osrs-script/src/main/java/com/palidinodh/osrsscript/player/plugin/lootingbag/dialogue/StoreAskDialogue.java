@@ -23,6 +23,5 @@ public class StoreAskDialogue extends OptionsDialogue {
       plugin.storeItemFromInventory(player.getAttributeInt("looting_bag_item_slot"),
           StoreType.STORE_X);
     });
-    open(player);
   }
 }

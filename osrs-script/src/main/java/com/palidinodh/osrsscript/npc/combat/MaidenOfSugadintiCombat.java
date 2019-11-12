@@ -3,6 +3,7 @@ package com.palidinodh.osrsscript.npc.combat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
 import com.palidinodh.osrscore.model.Entity;
@@ -34,10 +35,11 @@ import lombok.var;
 
 public class MaidenOfSugadintiCombat extends NpcCombat {
   private static int[] PHASE_IDS =
-      {NpcId.THE_MAIDEN_OF_SUGADINTI_940, NpcId.THE_MAIDEN_OF_SUGADINTI_940_8361,
+      { NpcId.THE_MAIDEN_OF_SUGADINTI_940, NpcId.THE_MAIDEN_OF_SUGADINTI_940_8361,
           NpcId.THE_MAIDEN_OF_SUGADINTI_940_8362, NpcId.THE_MAIDEN_OF_SUGADINTI_940_8363,
-          NpcId.THE_MAIDEN_OF_SUGADINTI_940_8364, NpcId.THE_MAIDEN_OF_SUGADINTI_940_8365};
+          NpcId.THE_MAIDEN_OF_SUGADINTI_940_8364, NpcId.THE_MAIDEN_OF_SUGADINTI_940_8365 };
 
+  @Inject
   private Npc npc;
   private boolean loaded;
   private boolean initialAttackDelay;
@@ -87,11 +89,6 @@ public class MaidenOfSugadintiCombat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

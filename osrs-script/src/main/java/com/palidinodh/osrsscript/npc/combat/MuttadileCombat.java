@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -32,6 +33,7 @@ public class MuttadileCombat extends NpcCombat {
   private static final Tile SPAWN_TILE = new Tile(3314, 5331, 1);
   private static final Tile BABY_SPAWN_TILE = new Tile(3310, 5317, 1);
 
+  @Inject
   private Npc npc;
   private boolean loaded;
   private Npc baby;
@@ -153,11 +155,6 @@ public class MuttadileCombat extends NpcCombat {
   }
 
   @Override
-  public void spawnHook() {
-    npc = getNpc();
-  }
-
-  @Override
   public void restoreHook() {
     npc.getWorld().removeNpc(baby);
   }
@@ -172,7 +169,7 @@ public class MuttadileCombat extends NpcCombat {
       return;
     }
     if (baby != null && npc.getId() == NpcId.MUTTADILE && (!baby.isVisible() || baby.isDead())) {
-      npc.getCombat().clear();
+      npc.getCombat2().clear();
       npc.setTransformationId(NpcId.MUTTADILE_7563);
       npc.setAnimation(7423);
       npc.setLock(7);

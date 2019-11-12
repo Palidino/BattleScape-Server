@@ -14,8 +14,8 @@ import lombok.var;
 public class EquipmentWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.EQUIPMENT, WidgetId.EQUIPMENT_BONUSES,
-        WidgetId.EQUIPMENT_BONUSES_INVENTORY};
+    return new int[] { WidgetId.EQUIPMENT, WidgetId.EQUIPMENT_BONUSES,
+        WidgetId.EQUIPMENT_BONUSES_INVENTORY };
   }
 
   @Override
@@ -134,7 +134,7 @@ public class EquipmentWidget implements WidgetHandler {
                 player.getController().stopWithTeleport();
                 player.clearHits();
               } else if (index == 2) {
-                new MaxCapeDialogue.FishDialogue(player);
+                player.openDialogue(new MaxCapeDialogue.FishDialogue(player));
               } else if (index == 3) {
                 Tile craftingGuildTile = new Tile(2936, 3282);
                 if (!player.getController().canTeleport(20, true)) {
@@ -158,13 +158,13 @@ public class EquipmentWidget implements WidgetHandler {
                 player.getController().stopWithTeleport();
                 player.clearHits();
               } else if (index == 5) {
-                new MaxCapeDialogue.PortalsDialogue(player);
+                player.openDialogue(new MaxCapeDialogue.PortalsDialogue(player));
               } else if (index == 6) {
-                new MaxCapeDialogue.OtherDialogue(player);
+                player.openDialogue(new MaxCapeDialogue.OtherDialogue(player));
               } else if (index == 7) {
                 player.openDialogue("spellbooks", 1);
               } else if (index == 8) {
-                new MaxCapeDialogue.FeaturesDialogue(player);
+                player.openDialogue(new MaxCapeDialogue.FeaturesDialogue(player));
               }
               break;
             case ItemId.BINDING_NECKLACE:
@@ -252,7 +252,6 @@ public class EquipmentWidget implements WidgetHandler {
         addOption("Edgeville", action);
         addOption("Chambers of Xeric", action);
         addOption("Catacombs of Kourend", action);
-        open(player);
       }
     }
 
@@ -281,7 +280,6 @@ public class EquipmentWidget implements WidgetHandler {
         addOption("Edgeville", action);
         addOption("Chambers of Xeric", action);
         addOption("Catacombs of Kourend", action);
-        open(player);
       }
     }
 
@@ -310,7 +308,6 @@ public class EquipmentWidget implements WidgetHandler {
         addOption("Edgeville", action);
         addOption("Chambers of Xeric", action);
         addOption("Catacombs of Kourend", action);
-        open(player);
       }
     }
 
@@ -339,7 +336,6 @@ public class EquipmentWidget implements WidgetHandler {
         addOption("Edgeville", action);
         addOption("Chambers of Xeric", action);
         addOption("Catacombs of Kourend", action);
-        open(player);
       }
     }
 
@@ -368,7 +364,6 @@ public class EquipmentWidget implements WidgetHandler {
         addOption("Edgeville", action);
         addOption("Chambers of Xeric", action);
         addOption("Catacombs of Kourend", action);
-        open(player);
       }
     }
   }

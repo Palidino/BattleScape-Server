@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -32,6 +33,7 @@ import com.palidinodh.random.PRandom;
 import lombok.var;
 
 public class RuneDragonCombat extends NpcCombat {
+  @Inject
   private Npc npc;
   private boolean boltEffect;
 
@@ -134,19 +136,14 @@ public class RuneDragonCombat extends NpcCombat {
   }
 
   @Override
-  public void spawnHook() {
-    npc = getNpc();
-  }
-
-  @Override
   public void tickStartHook() {
     if (!npc.isLocked() && npc.getHitDelay() == 0 && npc.isAttacking()
         && npc.getEngagingEntity() instanceof Player && PRandom.randomE(4) == 0
         && npc.withinDistance(npc.getEngagingEntity(), 10)) {
       npc.setAnimation(81);
       npc.setHitDelay(4);
-      var tiles = new Tile[] {new Tile(npc.getEngagingEntity()).randomize(4),
-          new Tile(npc.getEngagingEntity()).randomize(4)};
+      var tiles = new Tile[] { new Tile(npc.getEngagingEntity()).randomize(4),
+          new Tile(npc.getEngagingEntity()).randomize(4) };
       for (var tile : tiles) {
         if (!Route.canMove(npc.getEngagingEntity(), tile)) {
           continue;

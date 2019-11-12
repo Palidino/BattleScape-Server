@@ -14,6 +14,5 @@ public class CofferDialogue extends OptionsDialogue {
     addOption("View shop", (childId, slot) -> {
       player.openShop("pvp_tournament");
     });
-    open(player);
   }
 }

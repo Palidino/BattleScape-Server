@@ -36,6 +36,5 @@ public class AdminCofferDialogue extends OptionsDialogue {
         }
       });
     });
-    open(player);
   }
 }

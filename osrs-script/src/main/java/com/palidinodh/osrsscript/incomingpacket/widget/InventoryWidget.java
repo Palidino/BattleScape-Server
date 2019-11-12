@@ -1709,7 +1709,7 @@ public class InventoryWidget implements WidgetHandler {
             break;
           }
           if (index == 2) {
-            new MaxCapeDialogue(player);
+            player.openDialogue(new MaxCapeDialogue(player));
           } else if (index == 3) {
             player.getGameEncoder()
                 .sendMessage("There are currently no features. Feel free to suggest some!");
@@ -2359,7 +2359,6 @@ public class InventoryWidget implements WidgetHandler {
       addOption("Edgeville", action);
       addOption("Chambers of Xeric", action);
       addOption("Catacombs of Kourend", action);
-      open(player);
     }
   }
 }

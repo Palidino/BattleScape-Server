@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -25,6 +26,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
 public class BattleMageCombat extends NpcCombat {
+  @Inject
   private Npc npc;
 
   @Override
@@ -115,11 +117,6 @@ public class BattleMageCombat extends NpcCombat {
 
 
     return Arrays.asList(zamorakCombat.build(), saradominCombat.build(), guthixCombat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

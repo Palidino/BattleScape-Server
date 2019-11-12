@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
@@ -36,14 +37,14 @@ public class RevenantCombat extends NpcCombat {
   private static final RandomItem[] ANCIENT_WARRIOR_DROP_TABLE = {
       new RandomItem(ItemId.VESTAS_LONGSWORD, 1), new RandomItem(ItemId.STATIUSS_WARHAMMER, 1),
       new RandomItem(ItemId.VESTAS_SPEAR, 1), new RandomItem(ItemId.MORRIGANS_JAVELIN, 100),
-      new RandomItem(ItemId.MORRIGANS_THROWING_AXE, 100), new RandomItem(ItemId.ZURIELS_STAFF, 1)};
+      new RandomItem(ItemId.MORRIGANS_THROWING_AXE, 100), new RandomItem(ItemId.ZURIELS_STAFF, 1) };
   private static final RandomItem[] UNIQUE_DROP_TABLE =
-      {new RandomItem(ItemId.VIGGORAS_CHAINMACE_U, 1).weight(1),
+      { new RandomItem(ItemId.VIGGORAS_CHAINMACE_U, 1).weight(1),
           new RandomItem(ItemId.CRAWS_BOW_U, 1).weight(1),
           new RandomItem(ItemId.THAMMARONS_SCEPTRE_U, 1).weight(1),
-          new RandomItem(ItemId.AMULET_OF_AVARICE, 1).weight(2)};
+          new RandomItem(ItemId.AMULET_OF_AVARICE, 1).weight(2) };
   private static final RandomItem[] MEDIOCRE_DROP_TABLE =
-      {new RandomItem(ItemId.DRAGON_PLATELEGS, 1).weight(1),
+      { new RandomItem(ItemId.DRAGON_PLATELEGS, 1).weight(1),
           new RandomItem(ItemId.DRAGON_PLATESKIRT, 1).weight(1),
           new RandomItem(ItemId.RUNE_FULL_HELM, 1).weight(2),
           new RandomItem(ItemId.RUNE_PLATEBODY, 1).weight(2),
@@ -70,8 +71,9 @@ public class RevenantCombat extends NpcCombat {
           new RandomItem(ItemId.MANTA_RAY_NOTED, 30, 50).weight(3),
           new RandomItem(ItemId.RUNITE_BAR_NOTED, 3, 5).weight(6),
           new RandomItem(ItemId.REVENANT_CAVE_TELEPORT, 1).weight(7),
-          new RandomItem(ItemId.BRACELET_OF_ETHEREUM_UNCHARGED, 1).weight(30)};
+          new RandomItem(ItemId.BRACELET_OF_ETHEREUM_UNCHARGED, 1).weight(30) };
 
+  @Inject
   private Npc npc;
 
   @Override
@@ -519,11 +521,6 @@ public class RevenantCombat extends NpcCombat {
         hobgoblinCombat.build(), cyclopsCombat.build(), hellhoundCombat.build(),
         demonCombat.build(), orkCombat.build(), darkBeastCombat.build(), knightCombat.build(),
         dragonCombat.build());
-  }
-
-  @Override
-  public void spawnHook() {
-    npc = getNpc();
   }
 
   @Override

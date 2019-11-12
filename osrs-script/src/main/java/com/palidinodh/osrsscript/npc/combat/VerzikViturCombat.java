@@ -3,6 +3,7 @@ package com.palidinodh.osrsscript.npc.combat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
 import com.palidinodh.osrscore.model.Entity;
@@ -49,6 +50,7 @@ public class VerzikViturCombat extends NpcCombat {
           new Tile(3175, 4305), new Tile(3174, 4305), new Tile(3176, 4304), new Tile(3175, 4304)})};
   private static final int PHASE_1_HIT_DELAY = 16;
 
+  @Inject
   private Npc npc;
   private List<Npc> pillars = new ArrayList<>();
   private List<Npc> spiders = new ArrayList<>();
@@ -92,7 +94,6 @@ public class VerzikViturCombat extends NpcCombat {
 
   @Override
   public void spawnHook() {
-    npc = getNpc();
     if (npc.getId() == NpcId.VERZIK_VITUR_1040_8370) {
       for (var pillar : PILLARS) {
         pillars.add(new Npc(npc.getController(), NpcId.SUPPORTING_PILLAR, pillar.getTile()));

@@ -2,6 +2,7 @@ package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.Hit;
 import com.palidinodh.osrscore.model.HitEvent;
@@ -16,6 +17,7 @@ import lombok.var;
 public class VerzikViturPillarCombat extends NpcCombat {
   private static final int MAP_OBJECT_ID_SUPPORTING_PILLAR = 32687;
 
+  @Inject
   private Npc npc;
 
   @Override
@@ -29,7 +31,6 @@ public class VerzikViturPillarCombat extends NpcCombat {
 
   @Override
   public void spawnHook() {
-    npc = getNpc();
     npc.getController().addMapObject(new MapObject(MAP_OBJECT_ID_SUPPORTING_PILLAR, npc, 10, 0));
   }
 
