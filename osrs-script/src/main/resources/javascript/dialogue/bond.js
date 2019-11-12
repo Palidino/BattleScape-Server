@@ -34,7 +34,7 @@ lines.add("Green Skin (1000+ total bonds)");
 actions.add("close|script");
 lines.add("Blue Skin (2000+ total bonds)");
 actions.add("close|script");
-lines.add("Yellow Skin (5000+ total bnonds)");
+lines.add("Yellow Skin (5000+ total bonds)");
 actions.add("close|script");
 var obj2 = new DialogueEntry();
 entries.add(obj2);
