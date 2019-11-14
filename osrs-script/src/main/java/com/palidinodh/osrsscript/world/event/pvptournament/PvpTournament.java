@@ -191,7 +191,7 @@ public class PvpTournament extends PEvent implements WorldEventHooks {
       var prize = it.next();
       it.remove();
       if (!player.isGameModeNormal() && !player.isGameModeHard()
-          && prize.getId() != ItemId.BOND_32318 && prize.getId() != ItemId.PUMPKIN_TOKEN_32338) {
+          && prize.getId() != ItemId.BOND_32318 /*&& prize.getId() != ItemId.PUMPKIN_TOKEN_32338*/) {
         continue;
       }
       var prizeAmount = prize.getAmount();

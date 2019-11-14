@@ -1,11 +1,5 @@
 [
   {
-    "id": "NpcId.KILLER",
-    "direction": 3,
-    "x": 3089,
-    "y": 3495
-  },
-  {
     "id": "NpcId.BANKER",
     "direction": 3,
     "x": 3096,
