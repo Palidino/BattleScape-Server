@@ -9,7 +9,6 @@ import lombok.Setter;
 @Setter
 public class Settings {
   @Getter
-  @Setter
   private static Settings instance;
 
   private String name;
@@ -131,5 +130,12 @@ public class Settings {
 
   public String getDiscordChannel(DiscordChannel discordChannel) {
     return discordChannels != null ? discordChannels.get(discordChannel) : null;
+  }
+
+  public static void setInstance(Settings settings) {
+    if (instance != null) {
+      throw new IllegalStateException("Settings can't be overwritten!");
+    }
+    instance = settings;
   }
 }
