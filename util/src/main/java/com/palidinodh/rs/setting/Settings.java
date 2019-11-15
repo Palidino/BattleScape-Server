@@ -13,7 +13,6 @@ public class Settings {
 
   private String name;
   private int revision;
-  private int id;
   private String cacheDirectory;
   private String savesDirectory;
   private String logsDirectory;
@@ -25,8 +24,7 @@ public class Settings {
   private boolean betaSaving;
   private boolean local;
   private boolean withResponseServer;
-  private String worldIP;
-  private String responseIP;
+  private String communicationIp;
   private SqlForum sqlForum;
   private SqlConnection sqlConnection;
   private SqlCustomUserFields sqlCustomUserFields;
@@ -130,6 +128,22 @@ public class Settings {
 
   public String getDiscordChannel(DiscordChannel discordChannel) {
     return discordChannels != null ? discordChannels.get(discordChannel) : null;
+  }
+
+  public String getCommunicationIp() {
+    if (communicationIp == null) {
+      return "0.0.0.0";
+    }
+    String[] ipData = communicationIp.split(":");
+    return ipData[0];
+  }
+
+  public int getCommunicationPort() {
+    if (communicationIp == null) {
+      return 43596;
+    }
+    String[] ipData = communicationIp.split(":");
+    return Integer.parseInt(ipData[1]);
   }
 
   public static void setInstance(Settings settings) {

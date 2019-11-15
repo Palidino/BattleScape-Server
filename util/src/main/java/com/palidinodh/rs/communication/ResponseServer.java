@@ -2763,12 +2763,7 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (!isLocal) {
       FileManager.loadSql();
     }
-    String ip = Settings.getInstance().getResponseIP().split(":")[0];
-    int port = Integer.parseInt(Settings.getInstance().getResponseIP().split(":")[1]);
-    if (!Settings.getInstance().isWithResponseServer()) {
-      ip = Settings.getInstance().getWorldIP();
-    }
-    instance = new ResponseServer(ip, port);
+    instance = new ResponseServer("0.0.0.0", Settings.getInstance().getCommunicationPort());
   }
 
   public static void main(String[] args) {

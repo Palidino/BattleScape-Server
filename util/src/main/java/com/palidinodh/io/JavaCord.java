@@ -15,7 +15,7 @@ public class JavaCord {
   private static DiscordApi api = null;
   private static Map<String, Command> commands = new HashMap<>();
 
-  public static void init() {
+  public static void init(int worldId) {
     if (Settings.getInstance().getDiscordToken() == null) {
       return;
     }
@@ -23,7 +23,7 @@ public class JavaCord {
         .thenAccept(api -> {
           JavaCord.api = api;
           // System.out.println("Invite Url: " + api.createBotInvite());
-          if (Settings.getInstance().getId() == 1) {
+          if (worldId == 1) {
             sendMessage(
                 Settings.getInstance().isLocal() ? DiscordChannel.LOCAL
                     : DiscordChannel.ANNOUNCEMENTS,
