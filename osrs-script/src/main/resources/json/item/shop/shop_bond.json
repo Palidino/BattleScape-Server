@@ -2,7 +2,6 @@
   "name": "Bond Shop",
   "variableCurrency": "bonds",
   "items": [
-    { "id": "ItemId.PUMPKIN_TOKEN_32338", "price": 2 },
     { "id": "ItemId.MYSTERY_BOX", "price": 40 },
     { "id": "ItemId.SUPER_MYSTERY_BOX_32286", "price": 80 },
     { "id": "ItemId.PET_MYSTERY_BOX_32311", "price": 400 },
