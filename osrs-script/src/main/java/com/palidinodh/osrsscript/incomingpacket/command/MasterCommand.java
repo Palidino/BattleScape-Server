@@ -10,8 +10,7 @@ import lombok.var;
 public class MasterCommand implements CommandHandler {
   @Override
   public boolean canUse(Player player) {
-    return Settings.getInstance().isBeta() && !Settings.getInstance().isBetaSaving()
-        || player.getRights() == Player.RIGHTS_ADMIN
+    return Settings.isBeta() || player.getRights() == Player.RIGHTS_ADMIN
         || player.isUsergroup(SqlUserRank.COMMUNITY_MANAGER);
   }
 

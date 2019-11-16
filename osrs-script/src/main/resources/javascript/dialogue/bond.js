@@ -54,8 +54,7 @@ instance = new DialogueScript() {
                     player.getGameEncoder().sendMessage("You need a bond to do this.");
                     return;
                 }
-                RequestServer.getInstance().addSqlUpdate("INSERT INTO goldmember_update (userid) VALUES("
-                        + player.getId() + ")");
+                RequestManager.addGoldMembership(player);
                 player.setPremiumMember(true);
                 player.getGameEncoder().sendMessage("<col=ff0000>14 days of membership have been added to your account.");
                 player.getInventory().deleteItem(ItemId._14_DAYS_PREMIUM_MEMBERSHIP_32303, 1);

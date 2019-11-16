@@ -8,10 +8,10 @@ import java.util.Map;
 import com.palidinodh.encryption.MD5;
 
 public class Vbulletin4Forum implements Forum {
-  private Settings settings;
+  private SecureSettings secureSettings;
 
-  public Vbulletin4Forum(Settings settings) {
-    this.settings = settings;
+  public Vbulletin4Forum(SecureSettings secureSettings) {
+    this.secureSettings = secureSettings;
   }
 
   @Override
@@ -36,11 +36,11 @@ public class Vbulletin4Forum implements Forum {
       case PREMIUM_EXPIRATION:
         return "expirydate";
       case PENDING_BONDS:
-        return settings.getSqlCustomUserFields().getPendingBonds();
+        return secureSettings.getSqlCustomUserFields().getPendingBonds();
       case PENDING_VOTE_POINTS:
-        return settings.getSqlCustomUserFields().getPendingVotePoints();
+        return secureSettings.getSqlCustomUserFields().getPendingVotePoints();
       case VOTE_TIME_RUNELOCUS:
-        return settings.getSqlCustomUserFields().getVoteTimeRunelocus();
+        return secureSettings.getSqlCustomUserFields().getVoteTimeRunelocus();
       default:
         return null;
     }
@@ -79,12 +79,14 @@ public class Vbulletin4Forum implements Forum {
         results.put(sqlUserField, value);
       }
       int mainGroupId = Integer.parseInt(results.get(SqlUserField.MAIN_GROUP));
-      results.put(SqlUserField.MAIN_GROUP, settings.getSqlUserRank(mainGroupId).name());
+      results.put(SqlUserField.MAIN_GROUP,
+          Settings.getInstance().getSqlUserRank(mainGroupId).name());
       if (results.get(SqlUserField.SUB_GROUPS).length() > 0) {
         String[] subGroupIds = results.get(SqlUserField.SUB_GROUPS).split(",");
         String subGroupList = "";
         for (int i = 0; i < subGroupIds.length; i++) {
-          subGroupList += settings.getSqlUserRank(Integer.parseInt(subGroupIds[i])).name();
+          subGroupList +=
+              Settings.getInstance().getSqlUserRank(Integer.parseInt(subGroupIds[i])).name();
           if (i + 1 < subGroupIds.length) {
             subGroupList += ",";
           }

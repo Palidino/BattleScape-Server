@@ -67,6 +67,7 @@ import com.palidinodh.rs.communication.response.LoadClanResponse;
 import com.palidinodh.rs.communication.response.PlayerLoginResponse;
 import com.palidinodh.rs.communication.response.PrivateMessageResponse;
 import com.palidinodh.rs.communication.response.Response;
+import com.palidinodh.rs.setting.SecureSettings;
 import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import com.palidinodh.util.PString;
@@ -81,9 +82,11 @@ public class RequestServer implements Runnable {
       "Unable to send accounts to Response Server! Saving locally.";
 
   private static RequestServer instance;
+
   private String ip = "0.0.0.0";
   private int port = 43596;
   private int worldId;
+  private SecureSettings secureSettings;
   private boolean running = true;
   private List<RsPlayer> players = new ArrayList<>();
   private SocketChannel socket;
@@ -103,9 +106,10 @@ public class RequestServer implements Runnable {
   private int lastReadOpcode1 = -1, lastReadSize1 = -1, lastReadOpcode2 = -1, lastReadSize2 = -1,
       lastReadOpcode3 = -1, lastReadSize3 = -1;
 
-  public RequestServer(String ip, int port, int worldId) {
-    this.ip = ip;
-    this.port = port;
+  public RequestServer(SecureSettings secureSettings, int worldId) {
+    this.secureSettings = secureSettings;
+    this.ip = secureSettings.getCommunicationIp();
+    this.port = secureSettings.getCommunicationPort();
     this.worldId = worldId;
     connect(ip, port);
   }
@@ -233,7 +237,7 @@ public class RequestServer implements Runnable {
     outputStream.clear();
     outputStream.writeOpcodeVarInt(Opcodes.VERIFY);
     outputStream.writeShort(worldId);
-    outputStream.writeString(Settings.getInstance().getPassword());
+    outputStream.writeString(secureSettings.getPassword());
     synchronized (this) {
       outputStream.writeShort(players.size());
       for (RsPlayer player : players) {
@@ -1312,6 +1316,9 @@ public class RequestServer implements Runnable {
   }
 
   public Request addPlayerLogout(String username, int userId, byte[] file) {
+    if (Settings.isBeta()) {
+      file = null;
+    }
     Request request;
     synchronized (this) {
       newRequests.add(request =
@@ -1464,6 +1471,9 @@ public class RequestServer implements Runnable {
   }
 
   public Request addSqlUpdate(String sql) {
+    if (Settings.isBeta()) {
+      return null;
+    }
     Request request;
     synchronized (this) {
       newRequests.add(request = new SQLUpdateRequest(null, getUniqueKey(), sql));
@@ -1473,6 +1483,9 @@ public class RequestServer implements Runnable {
   }
 
   public Request addGERefresh(int userId, String username, int gameMode, long time) {
+    if (Settings.isBeta()) {
+      return null;
+    }
     GERefreshRequest request;
     synchronized (this) {
       newRequests.add(request = new GERefreshRequest(null, getUniqueKey(), userId,
@@ -1484,6 +1497,9 @@ public class RequestServer implements Runnable {
 
   public Request addGEBuyOffer(int userId, String username, String userIP, int gameMode, int slot,
       int id, String name, int amount, int price) {
+    if (Settings.isBeta()) {
+      return null;
+    }
     GEBuyOfferRequest request;
     synchronized (this) {
       newRequests.add(request = new GEBuyOfferRequest(null, getUniqueKey(), userId,
@@ -1495,6 +1511,9 @@ public class RequestServer implements Runnable {
 
   public Request addGESellOffer(int userId, String username, String userIP, int gameMode, int slot,
       int id, String name, int amount, int price) {
+    if (Settings.isBeta()) {
+      return null;
+    }
     GESellOfferRequest request;
     synchronized (this) {
       newRequests.add(request = new GESellOfferRequest(null, getUniqueKey(), userId,
@@ -1505,6 +1524,9 @@ public class RequestServer implements Runnable {
   }
 
   public Request addGEAbortOffer(int userId, int slot) {
+    if (Settings.isBeta()) {
+      return null;
+    }
     GEAbortOfferRequest request;
     synchronized (this) {
       newRequests.add(request = new GEAbortOfferRequest(null, getUniqueKey(), userId, slot));
@@ -1514,6 +1536,9 @@ public class RequestServer implements Runnable {
   }
 
   public Request addGECollectOffer(int userId, int slot, int collectedAmount, int collectedPrice) {
+    if (Settings.isBeta()) {
+      return null;
+    }
     GECollectOfferRequest request;
     synchronized (this) {
       newRequests.add(request = new GECollectOfferRequest(null, getUniqueKey(), userId, slot,
@@ -1524,6 +1549,9 @@ public class RequestServer implements Runnable {
   }
 
   public Request addGEPriceAverage(int userId, int gameMode, int itemId) {
+    if (Settings.isBeta()) {
+      return null;
+    }
     GEPriceAverageRequest request;
     synchronized (this) {
       newRequests
@@ -1534,6 +1562,9 @@ public class RequestServer implements Runnable {
   }
 
   public Request addGEHistory(int userId, int type) {
+    if (Settings.isBeta()) {
+      return null;
+    }
     GEHistoryRequest request;
     synchronized (this) {
       newRequests.add(request = new GEHistoryRequest(null, getUniqueKey(), userId, type));
@@ -1543,6 +1574,9 @@ public class RequestServer implements Runnable {
   }
 
   public Request addLog(File baseDirectory, String fileName, String line) {
+    if (Settings.isBeta()) {
+      return null;
+    }
     Request request;
     synchronized (this) {
       newRequests.add(
@@ -1553,6 +1587,9 @@ public class RequestServer implements Runnable {
   }
 
   public Request addGEShop(String username) {
+    if (Settings.isBeta()) {
+      return null;
+    }
     GEShopRequest request;
     synchronized (this) {
       newRequests.add(request = new GEShopRequest(null, getUniqueKey(), username.toLowerCase()));
@@ -1563,6 +1600,9 @@ public class RequestServer implements Runnable {
 
   public Request addGEShopOffer(int userId, String username, String userIP, int gameMode,
       int shopUserId, int slot, int id, int amount, int price, int state) {
+    if (Settings.isBeta()) {
+      return null;
+    }
     GEShopOfferRequest request;
     synchronized (this) {
       newRequests.add(request = new GEShopOfferRequest(null, getUniqueKey(), userId,
@@ -1573,6 +1613,9 @@ public class RequestServer implements Runnable {
   }
 
   public Request addGEList(int userId, int type, int searchId, String searchString) {
+    if (Settings.isBeta()) {
+      return null;
+    }
     GEListRequest request;
     synchronized (this) {
       newRequests.add(
@@ -1583,6 +1626,9 @@ public class RequestServer implements Runnable {
   }
 
   public Request addWorldsShutdown(int time) {
+    if (Settings.isBeta()) {
+      return null;
+    }
     WorldsShutdownRequest request;
     synchronized (this) {
       newRequests.add(request = new WorldsShutdownRequest(null, getUniqueKey(), time));
@@ -1660,10 +1706,10 @@ public class RequestServer implements Runnable {
     return instance;
   }
 
-  public static void init(String ip, int port, int worldId) {
+  public static void init(SecureSettings secureSettings, int worldId) {
     if (instance != null) {
       return;
     }
-    instance = new RequestServer(ip, port, worldId);
+    instance = new RequestServer(secureSettings, worldId);
   }
 }

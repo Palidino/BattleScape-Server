@@ -6,10 +6,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-@Setter
 public class Settings {
   @Getter
   private static Settings instance;
+  @Getter
+  private static SecureSettings secure;
+  private static Boolean beta;
 
   private String name;
   private int revision;
@@ -17,17 +19,11 @@ public class Settings {
   private String savesDirectory;
   private String logsDirectory;
   private String scriptPackage;
-  private String password;
   private WorldStyle worldStyle;
+  @Setter
   private boolean staffOnly;
-  private boolean beta;
-  private boolean betaSaving;
   private boolean local;
   private boolean withResponseServer;
-  private String communicationIp;
-  private SqlForum sqlForum;
-  private SqlConnection sqlConnection;
-  private SqlCustomUserFields sqlCustomUserFields;
   private Map<String, SqlUserRank> sqlUserRanks;
   private SqlUserPacketLog sqlUserPacketLog;
   private String discordUrl;
@@ -39,7 +35,6 @@ public class Settings {
   private String supportUrl;
   private String reportPlayerUrl;
   private String threadUrl;
-  private String discordToken;
   private Map<DiscordChannel, String> discordChannels;
 
   public File getCacheDirectory() {
@@ -113,37 +108,8 @@ public class Settings {
     return sqlUserRanks != null && sqlUserRanks.containsValue(rank);
   }
 
-  public Forum getForum() {
-    if (sqlForum == null) {
-      return null;
-    }
-    switch (sqlForum) {
-      case VBULLETIN_4:
-        return new Vbulletin4Forum(this);
-      case XENFORO:
-        return new XenforoForum(this);
-    }
-    return null;
-  }
-
   public String getDiscordChannel(DiscordChannel discordChannel) {
     return discordChannels != null ? discordChannels.get(discordChannel) : null;
-  }
-
-  public String getCommunicationIp() {
-    if (communicationIp == null) {
-      return "0.0.0.0";
-    }
-    String[] ipData = communicationIp.split(":");
-    return ipData[0];
-  }
-
-  public int getCommunicationPort() {
-    if (communicationIp == null) {
-      return 43596;
-    }
-    String[] ipData = communicationIp.split(":");
-    return Integer.parseInt(ipData[1]);
   }
 
   public static void setInstance(Settings settings) {
@@ -151,5 +117,23 @@ public class Settings {
       throw new IllegalStateException("Settings can't be overwritten!");
     }
     instance = settings;
+  }
+
+  public static void setSecure(SecureSettings settings) {
+    if (secure != null) {
+      throw new IllegalStateException("Secure settings can't be overwritten!");
+    }
+    secure = settings;
+  }
+
+  public static boolean isBeta() {
+    return beta != null ? beta : false;
+  }
+
+  public static void setBeta(boolean _beta) {
+    if (beta != null) {
+      throw new IllegalStateException("Secure settings can't be overwritten!");
+    }
+    beta = _beta;
   }
 }

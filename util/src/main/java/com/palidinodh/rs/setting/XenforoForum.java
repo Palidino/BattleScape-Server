@@ -8,10 +8,10 @@ import java.util.Map;
 import com.palidinodh.encryption.BCrypt;
 
 public class XenforoForum implements Forum {
-  private Settings settings;
+  private SecureSettings secureSettings;
 
-  public XenforoForum(Settings settings) {
-    this.settings = settings;
+  public XenforoForum(SecureSettings secureSettings) {
+    this.secureSettings = secureSettings;
   }
 
   @Override
@@ -30,11 +30,11 @@ public class XenforoForum implements Forum {
       case SUB_GROUPS:
         return "secondary_group_ids";
       case PENDING_BONDS:
-        return settings.getSqlCustomUserFields().getPendingBonds();
+        return secureSettings.getSqlCustomUserFields().getPendingBonds();
       case PENDING_VOTE_POINTS:
-        return settings.getSqlCustomUserFields().getPendingVotePoints();
+        return secureSettings.getSqlCustomUserFields().getPendingVotePoints();
       case VOTE_TIME_RUNELOCUS:
-        return settings.getSqlCustomUserFields().getVoteTimeRunelocus();
+        return secureSettings.getSqlCustomUserFields().getVoteTimeRunelocus();
       default:
         return null;
     }
@@ -74,7 +74,8 @@ public class XenforoForum implements Forum {
       password = password.replace("$2y$", "$2a$");
       results.put(SqlUserField.PASSWORD, password);
       int mainGroupId = Integer.parseInt(results.get(SqlUserField.MAIN_GROUP));
-      results.put(SqlUserField.MAIN_GROUP, settings.getSqlUserRank(mainGroupId).name());
+      results.put(SqlUserField.MAIN_GROUP,
+          Settings.getInstance().getSqlUserRank(mainGroupId).name());
       if ("1".equals(userResult.getString("is_banned"))) {
         results.put(SqlUserField.MAIN_GROUP, SqlUserRank.BANNED.name());
       }
@@ -82,7 +83,8 @@ public class XenforoForum implements Forum {
         String[] subGroupIds = results.get(SqlUserField.SUB_GROUPS).split(",");
         String subGroupList = "";
         for (int i = 0; i < subGroupIds.length; i++) {
-          subGroupList += settings.getSqlUserRank(Integer.parseInt(subGroupIds[i])).name();
+          subGroupList +=
+              Settings.getInstance().getSqlUserRank(Integer.parseInt(subGroupIds[i])).name();
           if (i + 1 < subGroupIds.length) {
             subGroupList += ",";
           }

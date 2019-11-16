@@ -16,13 +16,13 @@
             "projectName": "osrs-script",
             "name": "OSRS Eco Server Jars",
             "request": "launch",
-            "vmArgs": "-Xmx768m -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=25 -XX:MaxGCPauseMillis=50",
+            "vmArgs": "-Xmx768m -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=25 -XX:MaxGCPauseMillis=50 -Djava.security.debug=failure",
             "classPaths": [
                 "target/osrs/deploy/world.jar",
                 "target/osrs/deploy/script.jar"
             ],
             "mainClass": "com.palidinodh.osrscore.Main",
-            "args": "settings=/settings/economy_local.json id=1"
+            "args": "settings=/settings/economy_local.json id=1 security=true"
         }
     ]
 }
