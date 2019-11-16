@@ -61,7 +61,7 @@
 						</goals>
             			<configuration>
 							<tasks>
-								<copy file="${project.build.directory}/${project.artifactId}.jar" tofile="../target/osrs/deploy/world-script.jar"/>
+								<copy file="${project.build.directory}/${project.artifactId}.jar" tofile="../target/osrs/deploy/script.jar"/>
 							</tasks>
 						</configuration>
 					</execution>

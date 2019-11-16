@@ -9,49 +9,48 @@ import org.javacord.api.entity.message.MessageBuilder;
 import org.javacord.api.event.message.MessageCreateEvent;
 import org.javacord.api.util.logging.ExceptionLogger;
 import com.palidinodh.rs.setting.DiscordChannel;
+import com.palidinodh.rs.setting.SecureSettings;
 import com.palidinodh.rs.setting.Settings;
 
 public class JavaCord {
   private static DiscordApi api = null;
   private static Map<String, Command> commands = new HashMap<>();
 
-  public static void init() {
-    if (Settings.getInstance().getDiscordToken() == null) {
+  public static void init(SecureSettings secureSettings, int worldId) {
+    if (secureSettings.getDiscordToken() == null) {
       return;
     }
-    new DiscordApiBuilder().setToken(Settings.getInstance().getDiscordToken()).login()
-        .thenAccept(api -> {
-          JavaCord.api = api;
-          // System.out.println("Invite Url: " + api.createBotInvite());
-          if (Settings.getInstance().getId() == 1) {
-            sendMessage(
-                Settings.getInstance().isLocal() ? DiscordChannel.LOCAL
-                    : DiscordChannel.ANNOUNCEMENTS,
-                Settings.getInstance().getName() + " is now online!");
-          }
-          api.addMessageCreateListener(event -> {
-            if (!event.getMessageAuthor().isServerAdmin()) {
-              return;
-            }
-            String message = event.getMessageContent();
-            if (!message.startsWith("::")) {
-              return;
-            }
-            String commandName = message.substring(2).split(" ")[0].toLowerCase();
-            Command command = commands.get(commandName);
-            if (command == null) {
-              return;
-            }
-            try {
-              int commandNameLength = 2 + commandName.length() + 1;
-              message =
-                  commandNameLength < message.length() ? message.substring(commandNameLength) : "";
-              command.execute(event, message);
-            } catch (Exception e) {
-              e.printStackTrace();
-            }
-          });
-        }).exceptionally(ExceptionLogger.get());
+    new DiscordApiBuilder().setToken(secureSettings.getDiscordToken()).login().thenAccept(api -> {
+      JavaCord.api = api;
+      // System.out.println("Invite Url: " + api.createBotInvite());
+      if (worldId == 1) {
+        sendMessage(
+            Settings.getInstance().isLocal() ? DiscordChannel.LOCAL : DiscordChannel.ANNOUNCEMENTS,
+            Settings.getInstance().getName() + " is now online!");
+      }
+      api.addMessageCreateListener(event -> {
+        if (!event.getMessageAuthor().isServerAdmin()) {
+          return;
+        }
+        String message = event.getMessageContent();
+        if (!message.startsWith("::")) {
+          return;
+        }
+        String commandName = message.substring(2).split(" ")[0].toLowerCase();
+        Command command = commands.get(commandName);
+        if (command == null) {
+          return;
+        }
+        try {
+          int commandNameLength = 2 + commandName.length() + 1;
+          message =
+              commandNameLength < message.length() ? message.substring(commandNameLength) : "";
+          command.execute(event, message);
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+      });
+    }).exceptionally(ExceptionLogger.get());
   }
 
   public static void sendMessage(DiscordChannel channel, String msg) {

@@ -4,7 +4,7 @@ import lombok.Getter;
 
 @Getter
 public class SqlConnection {
-  private String connectionIP;
+  private String connectionIp;
   private int connectionPort;
   private String username;
   private String password;

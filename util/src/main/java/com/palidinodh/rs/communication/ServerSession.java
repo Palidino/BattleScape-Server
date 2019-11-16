@@ -30,7 +30,7 @@ public class ServerSession {
   }
 
   public boolean passwordMatches() {
-    return Settings.getInstance().getPassword().equals(password);
+    return Settings.getSecure().getPassword().equals(password);
   }
 
   public void close() {

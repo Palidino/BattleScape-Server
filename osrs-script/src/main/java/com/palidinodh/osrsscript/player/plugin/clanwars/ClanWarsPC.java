@@ -602,7 +602,7 @@ public class ClanWarsPC extends PController {
       }
       p2.getController().stop();
     }
-    if (Settings.getInstance().isBeta()) {
+    if (Settings.isBeta()) {
       if (lostClanName != null) {
         myPlayer.getWorld().sendNews(myPlayer.getMessaging().getClanChatName() + " has defeated "
             + lostClanName + " in a clan war!");

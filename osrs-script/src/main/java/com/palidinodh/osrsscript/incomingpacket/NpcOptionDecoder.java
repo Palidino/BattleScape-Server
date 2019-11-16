@@ -4,6 +4,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
+import com.palidinodh.io.Readers;
 import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.io.incomingpacket.InStreamKey;
@@ -32,8 +33,8 @@ public class NpcOptionDecoder extends IncomingPacketDecoder {
     if (npc == null) {
       return false;
     }
-    var message = "[NpcOption(" + option + ")] index=" + npcIndex + "; ctrlRun=" + ctrlRun
-        + "; id=" + npc.getId() + "/" + NpcId.valueOf(npc.getId());
+    var message = "[NpcOption(" + option + ")] index=" + npcIndex + "; ctrlRun=" + ctrlRun + "; id="
+        + npc.getId() + "/" + NpcId.valueOf(npc.getId());
     if (Settings.getInstance().isLocal()) {
       PLogger.println(message);
     }
@@ -123,8 +124,7 @@ public class NpcOptionDecoder extends IncomingPacketDecoder {
     }
     if (!actionMethods.containsKey(npc.getId())) {
       try {
-        var classReference = Class
-            .forName(Settings.getInstance().getScriptPackage() + ".incomingpacket.misc.NpcOptions");
+        var classReference = Readers.getScriptClass("incomingpacket.misc.NpcOptions");
         var methodName = "npc" + npc.getId();
         var actionMethod =
             classReference.getMethod(methodName, Player.class, Integer.TYPE, Npc.class);

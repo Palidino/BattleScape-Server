@@ -135,15 +135,19 @@ public class MapObjectOptionDecoder extends IncomingPacketDecoder {
     }
     if (!actionMethods.containsKey(mapObject.getId())) {
       try {
-        var classReference =
-            Readers.getScriptClass("incomingpacket.misc.MapObject" + mapObject.getId() / 16384);
-        var methodName = "mapObject" + mapObject.getId();
-        var actionMethod =
-            classReference.getMethod(methodName, Player.class, Integer.TYPE, MapObject.class);
-        if ((actionMethod.getModifiers() & Modifier.STATIC) == 0) {
-          actionMethod = null;
+        var classIndex = mapObject.getId() / 16384;
+        if (classIndex == 0 || classIndex == 1) {
+          var classReference = Readers.getScriptClass("incomingpacket.misc.MapObject" + classIndex);
+          var methodName = "mapObject" + mapObject.getId();
+          var actionMethod =
+              classReference.getMethod(methodName, Player.class, Integer.TYPE, MapObject.class);
+          if ((actionMethod.getModifiers() & Modifier.STATIC) == 0) {
+            actionMethod = null;
+          }
+          actionMethods.put(mapObject.getId(), actionMethod);
+        } else {
+          actionMethods.put(mapObject.getId(), null);
         }
-        actionMethods.put(mapObject.getId(), actionMethod);
       } catch (Exception e) {
         actionMethods.put(mapObject.getId(), null);
       }

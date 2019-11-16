@@ -92,7 +92,7 @@ public class BondWidget implements WidgetHandler {
         player.getGameEncoder().sendOpenUrl(Settings.getInstance().getStoreUrl());
         break;
       case 71:
-        if (Settings.getInstance().isBeta()) {
+        if (Settings.isBeta()) {
           player.getGameEncoder().sendMessage("You can't do this right now.");
           break;
         }

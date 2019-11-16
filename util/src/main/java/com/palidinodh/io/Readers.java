@@ -19,6 +19,8 @@ import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.security.AccessController;
+import java.security.PrivilegedAction;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.GZIPInputStream;
@@ -135,6 +137,14 @@ public class Readers {
     return null;
   }
 
+  public static InputStream getResourceAsStream(String filename) {
+    return getResourceAsStream(Readers.class, filename);
+  }
+
+  public static InputStream getResourceAsStream(Class<?> fromClass, String filename) {
+    return fromClass.getResourceAsStream(filename);
+  }
+
   public static List<String> getResourceList(Class<?> fromClass, String pathName) {
     List<String> filenames = new ArrayList<>();
     try {
@@ -169,12 +179,17 @@ public class Readers {
   }
 
   public static Class<?> getClass(String className) {
-    try {
-      return Class.forName(className);
-    } catch (Exception e) {
-      PLogger.error(e);
-    }
-    return null;
+    return AccessController.doPrivileged(new PrivilegedAction<Class<?>>() {
+      @Override
+      public Class<?> run() {
+        try {
+          return Class.forName(className);
+        } catch (Exception e) {
+          PLogger.error(e);
+          return null;
+        }
+      }
+    });
   }
 
   public static Class<?> getScriptClass(String className) {
@@ -184,21 +199,28 @@ public class Readers {
   @SuppressWarnings("unchecked")
   public static <T> List<Class<T>> getClasses(Class<T> fromClass, String packageName) {
     List<Class<T>> matchedClasses = new ArrayList<>();
-    try {
-      ClassPath classPath = ClassPath.from(
-          fromClass == Object.class ? Readers.class.getClassLoader() : fromClass.getClassLoader());
-      ImmutableSet<ClassInfo> classes = packageName == null ? classPath.getAllClasses()
-          : classPath.getTopLevelClassesRecursive(packageName);
-      for (ClassInfo classInfo : classes) {
-        Class<?> clazz = classInfo.load();
-        if (fromClass != Object.class && !fromClass.isAssignableFrom(clazz)) {
-          continue;
+    AccessController.doPrivileged(new PrivilegedAction<Boolean>() {
+      @Override
+      public Boolean run() {
+        try {
+          ClassPath classPath =
+              ClassPath.from(fromClass == Object.class ? Readers.class.getClassLoader()
+                  : fromClass.getClassLoader());
+          ImmutableSet<ClassInfo> classes = packageName == null ? classPath.getAllClasses()
+              : classPath.getTopLevelClassesRecursive(packageName);
+          for (ClassInfo classInfo : classes) {
+            Class<?> clazz = classInfo.load();
+            if (fromClass != Object.class && !fromClass.isAssignableFrom(clazz)) {
+              continue;
+            }
+            matchedClasses.add((Class<T>) clazz);
+          }
+        } catch (IOException ioe) {
+          ioe.printStackTrace();
         }
-        matchedClasses.add((Class<T>) clazz);
+        return Boolean.TRUE;
       }
-    } catch (IOException ioe) {
-      ioe.printStackTrace();
-    }
+    });
     return matchedClasses;
   }
 

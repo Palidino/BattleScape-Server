@@ -2,7 +2,6 @@
   "name": "Bond Shop",
   "variableCurrency": "bonds",
   "items": [
-    { "id": "ItemId.PUMPKIN_TOKEN_32338", "price": 2 },
     { "id": "ItemId._14_DAYS_PREMIUM_MEMBERSHIP_32303", "price": 40 },
     { "id": "ItemId.BLOOD_MONEY", "price": 40, "stack": 100000 },
     { "id": "ItemId.BOSS_INSTANCE_SCROLL_32313", "price": 40, "stack": 10 },

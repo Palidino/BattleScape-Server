@@ -17,16 +17,13 @@ public class DefaultPrize implements Prize {
     List<Item> items = null;
     switch (position) {
       case 0:
-        items = PCollection.toList(new Item(ItemId.COINS, 8_000_000)
-        /* new Item(ItemId.PUMPKIN_TOKEN_32338, 5) */);
+        items = PCollection.toList(new Item(ItemId.COINS, 8_000_000));
         break;
       case 1:
-        items = PCollection.toList(new Item(ItemId.COINS, 4_000_000)
-        /* new Item(ItemId.PUMPKIN_TOKEN_32338, 3) */);
+        items = PCollection.toList(new Item(ItemId.COINS, 4_000_000));
         break;
       case 2:
-        items = PCollection.toList(new Item(ItemId.COINS, 2_000_000)
-        /* new Item(ItemId.PUMPKIN_TOKEN_32338, 1) */);
+        items = PCollection.toList(new Item(ItemId.COINS, 2_000_000));
         break;
       case 3:
         items = PCollection.toList(new Item(ItemId.COINS, 1_000_000));

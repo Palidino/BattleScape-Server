@@ -9,11 +9,12 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.Writer;
 import java.lang.reflect.Type;
+import java.security.AccessController;
+import java.security.PrivilegedAction;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.ArrayList;
@@ -31,6 +32,7 @@ public class FileManager implements Runnable {
   public static final String JSON_DIR = "/json";
   public static final String XML_DIR = "/xml";
   public static final String JS_DIR = "/javascript";
+  public static final String SAVES_DIR = "./target/osrs";
   private static final XStream XSTREAM_IN, XSTREAM_OUT;
 
   private static FileManager instance = new FileManager();
@@ -92,8 +94,8 @@ public class FileManager implements Runnable {
   }
 
   public static void loadSql() {
-    sqlProperties.setProperty("user", Settings.getInstance().getSqlConnection().getUsername());
-    sqlProperties.setProperty("password", Settings.getInstance().getSqlConnection().getPassword());
+    sqlProperties.setProperty("user", Settings.getSecure().getSqlConnection().getUsername());
+    sqlProperties.setProperty("password", Settings.getSecure().getSqlConnection().getPassword());
     sqlProperties.setProperty("connectTimeout", "5000");
     sqlProperties.setProperty("socketTimeout", "5000");
     getSqlConnection();
@@ -104,9 +106,9 @@ public class FileManager implements Runnable {
       DriverManager.setLoginTimeout(10);
       if (sqlConnection == null || !sqlConnection.isValid(10)) {
         sqlConnection = DriverManager.getConnection(
-            "jdbc:mysql://" + Settings.getInstance().getSqlConnection().getConnectionIP() + ":"
-                + Settings.getInstance().getSqlConnection().getConnectionPort() + "/"
-                + Settings.getInstance().getSqlConnection().getDatabaseName()
+            "jdbc:mysql://" + Settings.getSecure().getSqlConnection().getConnectionIp() + ":"
+                + Settings.getSecure().getSqlConnection().getConnectionPort() + "/"
+                + Settings.getSecure().getSqlConnection().getDatabaseName()
                 + "?zeroDateTimeBehavior=convertToNull&serverTimezone=America/New_York",
             sqlProperties);
       }
@@ -116,44 +118,66 @@ public class FileManager implements Runnable {
     return sqlConnection;
   }
 
-  public static <T> T fromJson(File file, Class<T> type) {
-    try (Reader reader = new FileReader(file)) {
-      return fromJson(reader, type);
+  public static <T> T fromJsonFile(String filename, Class<T> type) {
+    return AccessController.doPrivileged(new PrivilegedAction<T>() {
+      @Override
+      public T run() {
+        File file =
+            filename.startsWith(JSON_DIR) ? new File(filename) : new File(JSON_DIR, filename);
+        if (file.getPath().contains("..")) {
+          throw new IllegalArgumentException("File path can't go up levels");
+        }
+        try (Reader reader = (file.exists() ? new FileReader(file)
+            : new InputStreamReader(FileManager.class.getResourceAsStream(file.getPath()),
+                "UTF-8"))) {
+          return gson.fromJson(reader, type);
+        } catch (IOException e) {
+          return null;
+        }
+      }
+    });
+  }
+
+  public static <T> T fromJsonFile(String filename, TypeToken<T> type) {
+    return AccessController.doPrivileged(new PrivilegedAction<T>() {
+      @Override
+      public T run() {
+        File file =
+            filename.startsWith(JSON_DIR) ? new File(filename) : new File(JSON_DIR, filename);
+        if (file.getPath().contains("..")) {
+          throw new IllegalArgumentException("File path can't go up levels");
+        }
+        try (Reader reader = (file.exists() ? new FileReader(file)
+            : new InputStreamReader(FileManager.class.getResourceAsStream(file.getPath()),
+                "UTF-8"))) {
+          return gson.fromJson(reader, type.getType());
+        } catch (IOException e) {
+          return null;
+        }
+      }
+    });
+  }
+
+  public static <T> T fromJsonFile(File file, Class<T> type) {
+    try (Reader reader = (file.exists() ? new FileReader(file)
+        : new InputStreamReader(FileManager.class.getResourceAsStream(file.getPath()), "UTF-8"))) {
+      return gson.fromJson(reader, type);
     } catch (IOException e) {
       return null;
     }
   }
 
-  public static <T> T fromJson(File file, TypeToken<T> type) {
-    try (Reader reader = new FileReader(file)) {
-      return fromJson(reader, type);
+  public static <T> T fromJsonFile(File file, TypeToken<T> type) {
+    try (Reader reader = (file.exists() ? new FileReader(file)
+        : new InputStreamReader(FileManager.class.getResourceAsStream(file.getPath()), "UTF-8"))) {
+      return gson.fromJson(reader, type.getType());
     } catch (IOException e) {
       return null;
     }
   }
 
-  public static <T> T fromJson(InputStream in, Class<T> type) {
-    try (InputStreamReader reader = new InputStreamReader(in, "UTF-8")) {
-      return fromJson(reader, type);
-    } catch (IOException e) {
-      return null;
-    }
-  }
-
-  public static <T> T fromJson(InputStream in, TypeToken<T> type) {
-    try (InputStreamReader reader = new InputStreamReader(in, "UTF-8")) {
-      return fromJson(reader, type);
-    } catch (IOException e) {
-      return null;
-    }
-  }
-
-  public static <T> T fromJson(Reader reader, Class<T> type) {
-    return gson.fromJson(reader, type);
-  }
-
-  public static <T> T fromJson(Reader reader, TypeToken<T> type) {
-    return gson.fromJson(reader, type.getType());
+  public static <T> T fromJsonString(String src, Class<T> type) {
+    return gson.fromJson(src, (Type) type);
   }
 
   public static void toJson(File file, Object src) {
@@ -167,10 +191,6 @@ public class FileManager implements Runnable {
     }
   }
 
-  public static <T> T fromJson(String src, Class<T> type) {
-    return gson.fromJson(src, (Type) type);
-  }
-
   public static String toJson(Object src) {
     return gson.toJson(src);
   }
@@ -179,22 +199,29 @@ public class FileManager implements Runnable {
     return gson.toJson(src, type);
   }
 
-  public static Object loadXML(String file) {
-    return loadXML(new File(file));
+  public static Object fromXmlFile(String filename) {
+    return AccessController.doPrivileged(new PrivilegedAction<Object>() {
+      @Override
+      public Object run() {
+        File file = filename.startsWith(XML_DIR) ? new File(filename) : new File(XML_DIR, filename);
+        if (file.getPath().contains("..")) {
+          throw new IllegalArgumentException("File path can't go up levels");
+        }
+        try (Reader reader = (file.exists() ? new FileReader(file)
+            : new InputStreamReader(FileManager.class.getResourceAsStream(file.getPath()),
+                "UTF-8"))) {
+          return XSTREAM_IN.fromXML(reader);
+        } catch (IOException e) {
+          return null;
+        }
+      }
+    });
   }
 
-  public static Object loadXML(File file) {
+  public static Object fromXmlFile(File file) {
     try {
       return XSTREAM_IN.fromXML(new BufferedInputStream(new FileInputStream(file)));
     } catch (FileNotFoundException fne) {
-      return null;
-    }
-  }
-
-  public static Object loadXML(InputStream in) {
-    try {
-      return XSTREAM_IN.fromXML(new BufferedInputStream(in));
-    } catch (Exception fne) {
       return null;
     }
   }

@@ -59,6 +59,7 @@ import com.palidinodh.rs.communication.request.Request;
 import com.palidinodh.rs.communication.request.SQLUpdateRequest;
 import com.palidinodh.rs.communication.request.WorldsShutdownRequest;
 import com.palidinodh.rs.setting.Forum;
+import com.palidinodh.rs.setting.SecureSettings;
 import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.rs.setting.SqlUserField;
 import com.palidinodh.rs.setting.SqlUserRank;
@@ -895,7 +896,7 @@ public class ResponseServer implements Runnable, SessionHandler {
     int userId = -1;
     int rights = 0;
     String username = request.getUsername();
-    Forum forum = Settings.getInstance().getForum();
+    Forum forum = Settings.getSecure().getForum();
     Map<SqlUserField, String> sqlResults =
         forum != null ? forum.executeLoginQuery(connection, username) : null;
     if (sqlResults == null) {
@@ -2549,8 +2550,12 @@ public class ResponseServer implements Runnable, SessionHandler {
   }
 
   private Clan loadClan(String username) {
-    return FileManager.fromJson(new File(Settings.getInstance().getPlayerClanDirectory(),
-        username.replace(" ", "_").toLowerCase() + ".json"), Clan.class);
+    File file = new File(Settings.getInstance().getPlayerClanDirectory(),
+        username.replace(" ", "_").toLowerCase() + ".json");
+    if (!file.exists()) {
+      return null;
+    }
+    return FileManager.fromJsonFile(file, Clan.class);
   }
 
   private void saveClan(Clan clan) {
@@ -2675,13 +2680,13 @@ public class ResponseServer implements Runnable, SessionHandler {
       }
       GrandExchangeUser user = null;
       if (file.getName().endsWith(".xml")) {
-        Object loadXML = FileManager.loadXML(file);
+        Object loadXML = FileManager.fromXmlFile(file);
         if (!(loadXML instanceof GrandExchangeUser)) {
           continue;
         }
         user = (GrandExchangeUser) loadXML;
       } else if (file.getName().endsWith(".json")) {
-        user = FileManager.fromJson(file, GrandExchangeUser.class);
+        user = FileManager.fromJsonFile(file, GrandExchangeUser.class);
       }
       user.expireItems();
       if (user.getGameMode() == 0) {
@@ -2763,22 +2768,14 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (!isLocal) {
       FileManager.loadSql();
     }
-    String ip = Settings.getInstance().getResponseIP().split(":")[0];
-    int port = Integer.parseInt(Settings.getInstance().getResponseIP().split(":")[1]);
-    if (!Settings.getInstance().isWithResponseServer()) {
-      ip = Settings.getInstance().getWorldIP();
-    }
-    instance = new ResponseServer(ip, port);
+    instance = new ResponseServer("0.0.0.0", Settings.getSecure().getCommunicationPort());
   }
 
   public static void main(String[] args) {
     try {
-      try {
-        Settings.setInstance(FileManager.fromJson(ResponseServer.class.getResourceAsStream(args[0]),
-            Settings.class));
-      } catch (Exception resourceError) {
-        Settings.setInstance(FileManager.fromJson(new File(args[0]), Settings.class));
-      }
+      Settings.setInstance(FileManager.fromJsonFile(new File(args[0]), Settings.class));
+      Settings.setSecure(FileManager
+          .fromJsonFile(new File(args[0].replace(".json", "_secure.json")), SecureSettings.class));
       init();
     } catch (Exception e) {
       e.printStackTrace();
