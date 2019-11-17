@@ -36,6 +36,8 @@ lines.add("Blue Skin (2000+ total bonds)");
 actions.add("close|script");
 lines.add("Yellow Skin (5000+ total bonds)");
 actions.add("close|script");
+lines.add("Black Skin (10000+ total bonds)");
+actions.add("close|script");
 var obj2 = new DialogueEntry();
 entries.add(obj2);
 obj2.setLargeSelection(title, PString.toStringArray(lines, true), PString.toStringArray(actions, true));
@@ -102,6 +104,12 @@ instance = new DialogueScript() {
                     return;
                 }
                 player.getAppearance().setColor(4, 17);
+            } else if (slot == 5) {
+                if (!player.isUsergroup(SqlUserRank.UBER_DONATOR)) {
+                    player.getGameEncoder().sendMessage("Only uber donators can use this.");
+                    return;
+                }   
+                player.getAppearance().setColor(4, 9);
             }
         }
     },
