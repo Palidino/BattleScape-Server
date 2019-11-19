@@ -1138,8 +1138,8 @@ pc = new PController() {
         var playersRewarded = [];
         for (var i = totalPoints; i > 0 && totalUniques < 3; i -= 570000) {
             var selectedPlayer = PRandom.listRandom(playerEntries);
-            var percent = selectedPlayer.getCombat().getForcedDropRate(-1, Math.min(i / 4338, 65),
-                    NpcDef.getNpcDef(7554));
+            var percent = selectedPlayer.getCombat().getRaidsDropRateMultiplier(-1,
+                    Math.min(i / 4338, 65), NpcDef.getNpcDef(7554));
             selectedPlayer.getCharges().depleteRoWICharge(0);
             if (PRandom.inRange(percent)) {
                 playersRewarded.push(selectedPlayer.getId());
