@@ -68,7 +68,7 @@ public class WildernessArea extends Area {
         } else if (index == 1) {
           if (player.hasAttribute("wilderness_obelisk")) {
             activateObelisk(mapObject,
-                WildernessObelisk.get(player.getAttributeInt("wilderness_obelisk")));
+                (WildernessObelisk) player.getAttribute("wilderness_obelisk"));
           }
         } else if (index == 2) {
           var options = new DialogueOption[WildernessObelisk.values().length];
@@ -76,7 +76,13 @@ public class WildernessArea extends Area {
             options[i] = new DialogueOption(WildernessObelisk.get(i).getFormattedName());
           }
           player.openDialogue(new LargeOptionsDialogue(options).action((childId, slot) -> {
-            player.putAttribute("wilderness_obelisk", slot);
+            var obelisk = WildernessObelisk.get(slot);
+            if (obelisk == null) {
+              return;
+            }
+            player.putAttribute("wilderness_obelisk", obelisk);
+            player.getGameEncoder()
+                .sendMessage("Destination set to " + obelisk.getFormattedName() + ".");
           }));
         }
         return true;
@@ -107,7 +113,7 @@ public class WildernessArea extends Area {
     var activateObelisksEvent = new TempMapObject(8, player.getController(), activatedMapObjects) {
       @Override
       public void executeScript() {
-        for (var player2 : player.getWorld().getPlayers(center.getRegionIds())) {
+        for (var player2 : player.getWorld().getPlayers(tiles[0].getRegionIds())) {
           if (player2.isLocked() || player2.getMovement().getTeleportBlock() > 0) {
             continue;
           }
