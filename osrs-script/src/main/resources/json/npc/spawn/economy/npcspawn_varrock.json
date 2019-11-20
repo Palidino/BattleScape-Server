@@ -11,5 +11,23 @@
     "moveDistance": 2,
     "x": 3226,
     "y": 3457
+  },
+  {
+    "id": "NpcId.BANKER",
+    "direction": 6,
+    "x": 3222,
+    "y": 3394
+  },
+  {
+    "id": "NpcId.WIZARD_4399",
+    "direction": 6,
+    "x": 3224,
+    "y": 3394
+  },
+  {
+    "id": "NpcId.TANNER",
+    "direction": 1,
+    "x": 3226,
+    "y": 3397
   }
 ]

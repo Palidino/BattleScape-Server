@@ -41,8 +41,8 @@ public class PvpTournament extends PEvent implements WorldEventHooks {
   public static final Tile LOBBY_TILE = new Tile(3079, 3479);
   public static final Tile ARENA_TILE_1 = new Tile(2594, 5406, 1),
       ARENA_TILE_2 = new Tile(2594, 5416, 1);
-  public static final String[] TIME = {"0:30", "2:30", "4:30", "6:30", "8:30", "10:30", "12:30",
-      "14:30", "16:30", "18:30", "20:30", "22:30"};
+  public static final String[] TIME = { "0:30", "2:30", "4:30", "6:30", "8:30", "10:30", "12:30",
+      "14:30", "16:30", "18:30", "20:30", "22:30" };
   public static final int MAX_TIME = (int) PTime.minToTick(60),
       MAX_ROUND_TIME = (int) PTime.minToTick(5);
   public static final int LOBBY_JOIN_TIME = 200;
@@ -368,9 +368,9 @@ public class PvpTournament extends PEvent implements WorldEventHooks {
       if (currentHour > hour || currentHour == hour && currentMinute > minute) {
         continue;
       }
-      return new int[] {hour, minute};
+      return new int[] { hour, minute };
     }
     var time = TIME[0].split(":");
-    return new int[] {Integer.parseInt(time[0]), Integer.parseInt(time[1])};
+    return new int[] { Integer.parseInt(time[0]), Integer.parseInt(time[1]) };
   }
 }

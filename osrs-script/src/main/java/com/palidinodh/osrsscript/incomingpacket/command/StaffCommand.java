@@ -29,7 +29,7 @@ public class StaffCommand implements CommandHandler {
       } else if (staff.isUsergroup(SqlUserRank.MODERATOR)) {
         rank = "Moderator";
       } else if (staff.isUsergroup(SqlUserRank.TRIAL_MODERATOR)) {
-        rank = "Junior Moderator";
+        rank = "Overseer";
       }
       lines.add(staff.getMessaging().getIconImage() + staff.getUsername() + " - " + rank);
     }

@@ -8249,6 +8249,13 @@
     }
   },
   {
+    "id": "ItemId.SLED_4084",
+    "equipSlot": "WEAPON",
+    "weaponType": "TYPE_20",
+    "attackSpeed": "4",
+    "stanceAnimations": [ "1461", "1468", "1468", "1468", "1468", "1468", "1467" ]
+  },
+  {
     "id": "ItemId.GRANITE_MAUL",
     "equipSlot": "WEAPON",
     "weaponType": "TYPE_2",

@@ -40,8 +40,9 @@ public class YellCommand implements CommandHandler {
       return;
     }
 
-    if (player.isUsergroup(SqlUserRank.TRIAL_MODERATOR) || player.isUsergroup(SqlUserRank.MODERATOR)
-        || player.getRights() == Player.RIGHTS_ADMIN
+    if (player.isUsergroup(SqlUserRank.TRIAL_MODERATOR)
+        || player.isUsergroup(SqlUserRank.SENIOR_MODERATOR)
+        || player.isUsergroup(SqlUserRank.MODERATOR) || player.getRights() == Player.RIGHTS_ADMIN
         || player.isUsergroup(SqlUserRank.COMMUNITY_MANAGER)) {
       yellDelay = PTime.secToTick(5);
     } else if (player.isUsergroup(SqlUserRank.UBER_DONATOR)) {
