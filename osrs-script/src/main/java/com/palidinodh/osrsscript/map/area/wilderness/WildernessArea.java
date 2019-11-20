@@ -68,7 +68,7 @@ public class WildernessArea extends Area {
         } else if (index == 1) {
           if (player.hasAttribute("wilderness_obelisk")) {
             activateObelisk(mapObject,
-                (WildernessObelisk) player.getAttribute("wilderness_obelisk"));
+                WildernessObelisk.get(player.getAttributeInt("wilderness_obelisk")));
           }
         } else if (index == 2) {
           var options = new DialogueOption[WildernessObelisk.values().length];
