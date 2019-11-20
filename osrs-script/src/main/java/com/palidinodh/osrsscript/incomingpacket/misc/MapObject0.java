@@ -8,7 +8,6 @@ import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.map.MapObject;
 import com.palidinodh.osrscore.model.map.Region;
 import com.palidinodh.osrscore.model.map.TempMapObject;
-import com.palidinodh.osrscore.model.map.WildernessObelisk;
 import com.palidinodh.osrscore.model.npc.Npc;
 import com.palidinodh.osrscore.model.player.AchievementDiary;
 import com.palidinodh.osrscore.model.player.AchievementDiaryTask;
@@ -2617,102 +2616,6 @@ public class MapObject0 {
       } else {
         player.getGameEncoder().sendMessage("You search the sack but find nothing.");
       }
-    }
-  }
-
-  // Obelisk
-  public static void mapObject14826(Player player, int index, MapObject mapObject) {
-    if (player.getInventory().hasItem(ItemId.BLOODY_KEY)
-        || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
-      player.getGameEncoder().sendMessage("You can't use this right now.");
-      return;
-    }
-    if (index == 0) {
-      WildernessObelisk.activateObelisk(player, mapObject);
-    } else if (index == 1) {
-      player.getGameEncoder().sendMessage("Teleport to destination");
-    } else if (index == 2) {
-      WildernessObelisk.setDestinationDialogue(player);
-    }
-  }
-
-  // Obelisk
-  public static void mapObject14827(Player player, int index, MapObject mapObject) {
-    if (player.getInventory().hasItem(ItemId.BLOODY_KEY)
-        || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
-      player.getGameEncoder().sendMessage("You can't use this right now.");
-      return;
-    }
-    if (index == 0) {
-      WildernessObelisk.activateObelisk(player, mapObject);
-    } else if (index == 1) {
-      player.getGameEncoder().sendMessage("Teleport to destination");
-    } else if (index == 2) {
-      WildernessObelisk.setDestinationDialogue(player);
-    }
-  }
-
-  // Obelisk
-  public static void mapObject14828(Player player, int index, MapObject mapObject) {
-    if (player.getInventory().hasItem(ItemId.BLOODY_KEY)
-        || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
-      player.getGameEncoder().sendMessage("You can't use this right now.");
-      return;
-    }
-    if (index == 0) {
-      WildernessObelisk.activateObelisk(player, mapObject);
-    } else if (index == 1) {
-      player.getGameEncoder().sendMessage("Teleport to destination");
-    } else if (index == 2) {
-      WildernessObelisk.setDestinationDialogue(player);
-    }
-  }
-
-  // Obelisk
-  public static void mapObject14829(Player player, int index, MapObject mapObject) {
-    if (player.getInventory().hasItem(ItemId.BLOODY_KEY)
-        || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
-      player.getGameEncoder().sendMessage("You can't use this right now.");
-      return;
-    }
-    if (index == 0) {
-      WildernessObelisk.activateObelisk(player, mapObject);
-    } else if (index == 1) {
-      player.getGameEncoder().sendMessage("Teleport to destination");
-    } else if (index == 2) {
-      WildernessObelisk.setDestinationDialogue(player);
-    }
-  }
-
-  // Obelisk
-  public static void mapObject14830(Player player, int index, MapObject mapObject) {
-    if (player.getInventory().hasItem(ItemId.BLOODY_KEY)
-        || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
-      player.getGameEncoder().sendMessage("You can't use this right now.");
-      return;
-    }
-    if (index == 0) {
-      WildernessObelisk.activateObelisk(player, mapObject);
-    } else if (index == 1) {
-      player.getGameEncoder().sendMessage("Teleport to destination");
-    } else if (index == 2) {
-      WildernessObelisk.setDestinationDialogue(player);
-    }
-  }
-
-  // Obelisk
-  public static void mapObject14831(Player player, int index, MapObject mapObject) {
-    if (player.getInventory().hasItem(ItemId.BLOODY_KEY)
-        || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
-      player.getGameEncoder().sendMessage("You can't use this right now.");
-      return;
-    }
-    if (index == 0) {
-      WildernessObelisk.activateObelisk(player, mapObject);
-    } else if (index == 1) {
-      player.getGameEncoder().sendMessage("Teleport to destination");
-    } else if (index == 2) {
-      WildernessObelisk.setDestinationDialogue(player);
     }
   }
 
