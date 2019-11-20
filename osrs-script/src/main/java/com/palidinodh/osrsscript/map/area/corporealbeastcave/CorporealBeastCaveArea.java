@@ -1,4 +1,4 @@
-package com.palidinodh.osrsscript.map.area;
+package com.palidinodh.osrsscript.map.area.corporealbeastcave;
 
 import com.palidinodh.osrscore.io.cache.id.ObjectId;
 import com.palidinodh.osrscore.model.Tile;

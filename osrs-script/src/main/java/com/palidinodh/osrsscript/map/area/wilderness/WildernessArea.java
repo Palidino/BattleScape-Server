@@ -1,8 +1,10 @@
-package com.palidinodh.osrsscript.map.area;
+package com.palidinodh.osrsscript.map.area.wilderness;
 
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.ObjectId;
 import com.palidinodh.osrscore.model.Tile;
+import com.palidinodh.osrscore.model.dialogue.DialogueOption;
+import com.palidinodh.osrscore.model.dialogue.LargeOptionsDialogue;
 import com.palidinodh.osrscore.model.map.Area;
 import com.palidinodh.osrscore.model.map.MapObject;
 import lombok.var;
@@ -54,6 +56,20 @@ public class WildernessArea extends Area {
         }
         player.getMovement().ladderUpTeleport(new Tile(2964, 4382, 2));
         return true;
+      case ObjectId.OBELISK_14826:
+      case ObjectId.OBELISK_14827:
+      case ObjectId.OBELISK_14828:
+      case ObjectId.OBELISK_14829:
+      case ObjectId.OBELISK_14830:
+      case ObjectId.OBELISK_14831:
+        if (index == 0) {
+          //
+        } else if (index == 1) {
+          //
+        } else if (index == 2) {
+          player.openDialogue(new LargeOptionsDialogue(new DialogueOption("")));
+        }
+        return true;
     }
     return false;
   }
@@ -61,5 +77,44 @@ public class WildernessArea extends Area {
   @Override
   public boolean inWilderness() {
     return getTile().getRegionId() != 12442 || getTile().getY() > 9919;
+  }
+
+  private void activateObelisk(MapObject mapObject) {
+    /*var player = getPlayer();
+    var obelisk = WildernessObelisk.getByObjectId(mapObject.getId());
+    if (obelisk == null) {
+      return;
+    }
+    var tiles = obelisk.getTiles();
+    var activatedMapObjects = new MapObject[tiles.length];
+    for (var i = 0; i < activatedMapObjects.length; i++) {
+      activatedMapObjects[i] = new MapObject(ObjectId.OBELISK_14825, tiles[i], 10, 0);
+    }
+    var activateObelisks = new TempMapObject(8, player.getController(), activatedMapObjects) {
+      @Override
+      public void executeScript() {
+        Tile[] toTiles;
+        while ((toTiles =
+            OBELISK_TILES[PRandom.randomE(OBELISK_TILES.length)]) == tiles) {
+
+        }
+        Tile center = new Tile(toTiles[SOUTH_WEST]).moveTile(2, 2);
+        for (Player p2 : p.getWorld().getPlayers(player.getController(),
+        activatedMapObjects[0].getRegionIds())) {
+          if (p2.isLocked() || p2.getMovement().getTeleportBlock() > 0
+              || !inObelisk(p2, tiles)) {
+            continue;
+          }
+          if (p2.getInventory().hasItem(ItemId.BLOODY_KEY)
+              || p2.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
+            continue;
+          }
+          p2.getMovement().animatedTeleport(new Tile(center).randomize(1), 1816, null, 2);
+          p2.getGameEncoder()
+              .sendMessage("Ancient magic teleports you to a place within the wilderness!");
+        }
+      }
+    };
+    p.getWorld().addEvent(activateObelisks);*/
   }
 }

@@ -1,4 +1,4 @@
-package com.palidinodh.osrsscript.map.area;
+package com.palidinodh.osrsscript.map.area.portphasmatys;
 
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.ObjectId;

@@ -110,7 +110,7 @@ public class Fishing extends SkillContainer {
       player.getGameEncoder().sendMessage("<col=ff0000>You catch an unusual fish.</col>");
       return new Item(ItemId.UNUSUAL_FISH);
     }
-    var cookingContainer = SkillContainer.get(Skills.COOKING);
+    var cookingContainer = SkillContainer.getBySkillId(Skills.COOKING);
     var cookEntry = cookingContainer.findEntryFromConsume(item.getId());
     if (usingInfernalHarpoon(player, entry) && cookEntry != null && PRandom.randomE(3) == 0) {
       var cookXp = cookingContainer.experienceHook(player, cookEntry.getExperience(), npc,

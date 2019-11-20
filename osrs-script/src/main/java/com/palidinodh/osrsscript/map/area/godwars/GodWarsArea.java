@@ -1,4 +1,4 @@
-package com.palidinodh.osrsscript.map.area;
+package com.palidinodh.osrsscript.map.area.godwars;
 
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.ObjectId;
@@ -103,7 +103,7 @@ public class GodWarsArea extends Area {
         player.getMovement().ladderDownTeleport(new Tile(2882, 5311, 2));
         return true;
       case ObjectId.ROPE_26370: // Exit
-        player.getMovement().ladderUpTeleport(new Tile(2916, 3746, 0));
+        player.getMovement().ladderUpTeleport(new Tile(2916, 3746));
         return true;
       case ObjectId.ROPE_26371: // Saradomin
         player.getMovement().ladderUpTeleport(new Tile(2912, 5300, 2));
@@ -136,7 +136,7 @@ public class GodWarsArea extends Area {
         player.getMovement().ladderDownTeleport(new Tile(2915, 5300, 1));
         return true;
       case ObjectId.ROCK_26562: // Saradomin
-        player.getMovement().ladderDownTeleport(new Tile(2919, 5274, 0));
+        player.getMovement().ladderDownTeleport(new Tile(2919, 5274));
         return true;
       case ObjectId.ZAMORAK_ALTAR:
       case ObjectId.SARADOMIN_ALTAR:

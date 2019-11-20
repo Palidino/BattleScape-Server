@@ -1,4 +1,4 @@
-package com.palidinodh.osrsscript.map.area;
+package com.palidinodh.osrsscript.map.area.karuulm;
 
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.ObjectId;
@@ -88,14 +88,13 @@ public class KaruulmArea extends Area {
         return true;
       case ObjectId.ALCHEMICAL_DOOR:
       case ObjectId.ALCHEMICAL_DOOR_34554:
-      if (player.getX() <= 1355) {
-        player.openDialogue("bossinstance", 14);
-      } else {
-        player.getController().stopWithTeleport();
-        player.getMovement().teleport(1355, 10258);
-      }
+        if (player.getX() <= 1355) {
+          player.openDialogue("bossinstance", 14);
+        } else {
+          player.getController().stopWithTeleport();
+          player.getMovement().teleport(1355, 10258);
+        }
         return true;
-
     }
     return false;
   }

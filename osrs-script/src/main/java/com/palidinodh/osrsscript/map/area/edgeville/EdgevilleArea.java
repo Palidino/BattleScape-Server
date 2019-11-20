@@ -1,4 +1,4 @@
-package com.palidinodh.osrsscript.map.area;
+package com.palidinodh.osrsscript.map.area.edgeville;
 
 import java.util.List;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
@@ -7,6 +7,7 @@ import com.palidinodh.osrscore.io.cache.id.ObjectId;
 import com.palidinodh.osrscore.io.cache.id.ScriptId;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.Tile;
+import com.palidinodh.osrscore.model.dialogue.DialogueOption;
 import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.guide.Guide;
 import com.palidinodh.osrscore.model.item.Item;
@@ -25,6 +26,7 @@ import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
 public class EdgevilleArea extends Area {
+  // TODO: this block is butt ugly
   private static final List<RandomItem> CRYSTAL_CHEST_ITEMS = RandomItem.buildList(
       new RandomItem(ItemId.LOOP_HALF_OF_KEY), new RandomItem(ItemId.TOOTH_HALF_OF_KEY),
       new RandomItem(ItemId.BABYDRAGON_BONES, 1, 150), new RandomItem(ItemId.DRAGON_BONES, 1, 50),
@@ -248,7 +250,13 @@ public class EdgevilleArea extends Area {
         player.rejuvenate();
         return true;
       case ObjectId.FREE_FOR_ALL_PORTAL:
-        player.openDialogue(new FreeForAllPortalDialogue(player));
+        player.openDialogue(
+            new OptionsDialogue(new DialogueOption("Safe Free-For-All", (childId, slot) -> {
+              player.getMovement().teleport(3327, 4752);
+              player.setController(new ClanWarsFreeForAllPC());
+            }), new DialogueOption("Risk Zone", (childId, slot) -> {
+              player.getMovement().teleport(2655, 5471);
+            })));
         return true;
       case ObjectId.LEVER_26761:
         if (player.getMovement().getTeleportBlock() > 0) {
@@ -359,11 +367,11 @@ public class EdgevilleArea extends Area {
       }
       player.getInventory().deleteItem(ItemId.CRYSTAL_KEY);
       player.getInventory().addOrDropItem(ItemId.UNCUT_DRAGONSTONE_NOTED);
-      var clueItems = new RandomItem[] {new RandomItem(ItemId.CLUE_SCROLL_EASY).weight(8),
+      var clueItems = new RandomItem[] { new RandomItem(ItemId.CLUE_SCROLL_EASY).weight(8),
           new RandomItem(ItemId.CLUE_SCROLL_MEDIUM).weight(6),
           new RandomItem(ItemId.CLUE_SCROLL_HARD).weight(4),
           new RandomItem(ItemId.CLUE_SCROLL_ELITE).weight(2),
-          new RandomItem(ItemId.CLUE_SCROLL_MASTER).weight(1)};
+          new RandomItem(ItemId.CLUE_SCROLL_MASTER).weight(1) };
       if (PRandom.randomE(4) == 0) {
         player.getInventory().addOrDropItem(RandomItem.getItem(clueItems));
       }
@@ -381,6 +389,7 @@ public class EdgevilleArea extends Area {
     }
   }
 
+  // TODO: remove inner class
   public class ExchangeSpecialSkillItemsDialogue extends OptionsDialogue {
     public ExchangeSpecialSkillItemsDialogue(Player player) {
       addOption("View shop", (childId, slot) -> {
@@ -416,8 +425,8 @@ public class EdgevilleArea extends Area {
           player.getInventory().addOrDropItem(ItemId.BIRD_NEST_5073, 1 * coloredEggCount);
           if (PRandom.randomE(132 / coloredEggCount) == 0) {
             Item[] evilChickenOutfit =
-                {new Item(ItemId.EVIL_CHICKEN_FEET), new Item(ItemId.EVIL_CHICKEN_WINGS),
-                    new Item(ItemId.EVIL_CHICKEN_HEAD), new Item(ItemId.EVIL_CHICKEN_LEGS)};
+                { new Item(ItemId.EVIL_CHICKEN_FEET), new Item(ItemId.EVIL_CHICKEN_WINGS),
+                    new Item(ItemId.EVIL_CHICKEN_HEAD), new Item(ItemId.EVIL_CHICKEN_LEGS) };
             if (!player.hasItem(ItemId.EVIL_CHICKEN_FEET)) {
               player.getInventory().addOrDropItem(ItemId.EVIL_CHICKEN_FEET);
             } else if (!player.hasItem(ItemId.EVIL_CHICKEN_WINGS)) {
@@ -445,18 +454,6 @@ public class EdgevilleArea extends Area {
         }
       });
       addOption("Nevermind");
-    }
-  }
-
-  private class FreeForAllPortalDialogue extends OptionsDialogue {
-    private FreeForAllPortalDialogue(Player player) {
-      addOption("Safe Free-For-All", (childId, slot) -> {
-        player.getMovement().teleport(3327, 4752);
-        player.setController(new ClanWarsFreeForAllPC());
-      });
-      addOption("Risk Zone", (childId, slot) -> {
-        player.getMovement().teleport(2655, 5471);
-      });
     }
   }
 }

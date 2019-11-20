@@ -1,4 +1,4 @@
-package com.palidinodh.osrsscript.map.area;
+package com.palidinodh.osrsscript.map.area.taverley;
 
 import com.palidinodh.osrscore.io.cache.id.ObjectId;
 import com.palidinodh.osrscore.model.Tile;
@@ -6,20 +6,18 @@ import com.palidinodh.osrscore.model.map.Area;
 import com.palidinodh.osrscore.model.map.MapObject;
 import lombok.var;
 
-public class SmokeDevilDungeonArea extends Area {
-  public SmokeDevilDungeonArea() {
-    super(9363, 9619);
+public class TaverleyArea extends Area {
+  public TaverleyArea() {
+    // 11929 is also the dwarvern mine dungeon.
+    super(11573, 11416, 11417, 11671, 11672, 11673, 11928, 11929);
   }
 
   @Override
   public boolean mapObjectOptionHook(int index, MapObject mapObject) {
     var player = getPlayer();
     switch (mapObject.getId()) {
-      case ObjectId.CREVICE:
-        player.getMovement().ladderUpTeleport(new Tile(2413, 3059));
-        return true;
-      case ObjectId.CREVICE_536:
-        player.getMovement().ladderDownTeleport(new Tile(2379, 9452));
+      case ObjectId.ROCKS:
+        player.getMovement().ladderUpTeleport(new Tile(2888, 9823, 1));
         return true;
     }
     return false;

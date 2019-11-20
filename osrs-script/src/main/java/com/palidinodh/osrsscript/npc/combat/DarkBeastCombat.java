@@ -30,7 +30,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.npc.combat.style.special.NpcCombatTargetTile;
 import com.palidinodh.osrscore.model.player.Player;
-import com.palidinodh.osrsscript.map.area.CatacombsOfKourendArea;
+import com.palidinodh.osrsscript.map.area.kourend.CatacombsOfKourendArea;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 

@@ -1,4 +1,4 @@
-package com.palidinodh.osrsscript.map.area;
+package com.palidinodh.osrsscript.map.area.smokedevildungeon;
 
 import com.palidinodh.osrscore.io.cache.id.ObjectId;
 import com.palidinodh.osrscore.model.Tile;
@@ -6,21 +6,20 @@ import com.palidinodh.osrscore.model.map.Area;
 import com.palidinodh.osrscore.model.map.MapObject;
 import lombok.var;
 
-public class KrakenCoveArea extends Area {
-  public KrakenCoveArea() {
-    super(9116);
+public class SmokeDevilDungeonArea extends Area {
+  public SmokeDevilDungeonArea() {
+    super(9363, 9619);
   }
 
   @Override
   public boolean mapObjectOptionHook(int index, MapObject mapObject) {
     var player = getPlayer();
     switch (mapObject.getId()) {
-      case ObjectId.CREVICE_537:
-        player.openDialogue("bossinstance", 12);
+      case ObjectId.CREVICE:
+        player.getMovement().ladderUpTeleport(new Tile(2413, 3059));
         return true;
-      case ObjectId.CREVICE_538:
-        player.getMovement().ladderUpTeleport(new Tile(2280, 10016));
-        player.getController().stopWithTeleport();
+      case ObjectId.CREVICE_536:
+        player.getMovement().ladderDownTeleport(new Tile(2379, 9452));
         return true;
     }
     return false;

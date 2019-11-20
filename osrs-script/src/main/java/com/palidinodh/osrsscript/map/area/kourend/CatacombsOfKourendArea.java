@@ -1,4 +1,4 @@
-package com.palidinodh.osrsscript.map.area;
+package com.palidinodh.osrsscript.map.area.kourend;
 
 import com.palidinodh.osrscore.model.map.Area;
 

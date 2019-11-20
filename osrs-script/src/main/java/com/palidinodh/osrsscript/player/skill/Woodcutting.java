@@ -110,7 +110,7 @@ public class Woodcutting extends SkillContainer {
 
   @Override
   public Item createHook(Player player, Item item, Npc npc, MapObject mapObject, SkillEntry entry) {
-    var fireContainer = SkillContainer.get(Skills.FIREMAKING);
+    var fireContainer = SkillContainer.getBySkillId(Skills.FIREMAKING);
     var fireEntry = fireContainer.findEntryFromConsume(item.getId());
     if (getHatchet(player).getItemId() == ItemId.INFERNAL_AXE && fireEntry != null
         && PRandom.randomE(3) == 0) {
