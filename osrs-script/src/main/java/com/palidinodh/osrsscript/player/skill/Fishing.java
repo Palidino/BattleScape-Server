@@ -90,11 +90,14 @@ public class Fishing extends SkillContainer {
   @Override
   public void clueRolled(Player player, Npc npc, MapObject mapObject, SkillEntry entry) {
     var clueId = ItemId.CLUE_BOTTLE_EASY;
-    if (PRandom.randomE(100) < 10) {
+    if (PRandom
+        .randomE((int) (100 / player.getCombat().getDropRateMultiplier(clueId, null))) < 10) {
       clueId = ItemId.CLUE_BOTTLE_ELITE;
-    } else if (PRandom.randomE(100) < 20) {
+    } else if (PRandom
+        .randomE((int) (100 / player.getCombat().getDropRateMultiplier(clueId, null))) < 20) {
       clueId = ItemId.CLUE_BOTTLE_HARD;
-    } else if (PRandom.randomE(100) < 30) {
+    } else if (PRandom
+        .randomE((int) (100 / player.getCombat().getDropRateMultiplier(clueId, null))) < 30) {
       clueId = ItemId.CLUE_BOTTLE_MEDIUM;
     }
     player.getInventory().addOrDropItem(clueId);

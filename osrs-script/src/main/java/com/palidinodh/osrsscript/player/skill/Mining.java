@@ -22,7 +22,7 @@ import lombok.var;
 
 public class Mining extends SkillContainer {
   private static final MiningPickaxe[] PICKAXES =
-      {new MiningPickaxe(ItemId.BRONZE_PICKAXE, 1, 625, 6753),
+      { new MiningPickaxe(ItemId.BRONZE_PICKAXE, 1, 625, 6753),
           new MiningPickaxe(ItemId.IRON_PICKAXE, 1, 626, 6754),
           new MiningPickaxe(ItemId.STEEL_PICKAXE, 6, 627, 6755),
           new MiningPickaxe(ItemId.BLACK_PICKAXE, 11, 625, 6753),
@@ -34,7 +34,7 @@ public class Mining extends SkillContainer {
           new MiningPickaxe(ItemId.DRAGON_PICKAXE_12797, 61, 642, 335),
           new MiningPickaxe(ItemId._3RD_AGE_PICKAXE, 61, 7283, 7282),
           new MiningPickaxe(ItemId.INFERNAL_PICKAXE, 61, 4482, 4481),
-          new MiningPickaxe(ItemId.INFERNAL_PICKAXE_UNCHARGED, 61, 4482, 4481)};
+          new MiningPickaxe(ItemId.INFERNAL_PICKAXE_UNCHARGED, 61, 4482, 4481) };
   public static final int UNIDENTIFIED_MINERAL_VARIABLE = 0;
 
   private static List<SkillEntry> entries = new ArrayList<>();
@@ -105,11 +105,14 @@ public class Mining extends SkillContainer {
   @Override
   public void clueRolled(Player player, Npc npc, MapObject mapObject, SkillEntry entry) {
     var clueId = ItemId.CLUE_GEODE_EASY;
-    if (PRandom.randomE(100) < 10) {
+    if (PRandom
+        .randomE((int) (100 / player.getCombat().getDropRateMultiplier(clueId, null))) < 10) {
       clueId = ItemId.CLUE_GEODE_ELITE;
-    } else if (PRandom.randomE(100) < 20) {
+    } else if (PRandom
+        .randomE((int) (100 / player.getCombat().getDropRateMultiplier(clueId, null))) < 20) {
       clueId = ItemId.CLUE_GEODE_HARD;
-    } else if (PRandom.randomE(100) < 30) {
+    } else if (PRandom
+        .randomE((int) (100 / player.getCombat().getDropRateMultiplier(clueId, null))) < 30) {
       clueId = ItemId.CLUE_GEODE_MEDIUM;
     }
     player.getInventory().addOrDropItem(clueId);

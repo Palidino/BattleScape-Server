@@ -23,7 +23,7 @@ import lombok.var;
 
 public class Woodcutting extends SkillContainer {
   private static final WoodcuttingHatchet[] HATCHETS =
-      {new WoodcuttingHatchet(ItemId.BRONZE_AXE, 1, 879),
+      { new WoodcuttingHatchet(ItemId.BRONZE_AXE, 1, 879),
           new WoodcuttingHatchet(ItemId.IRON_AXE, 1, 877),
           new WoodcuttingHatchet(ItemId.STEEL_AXE, 6, 875),
           new WoodcuttingHatchet(ItemId.MITHRIL_AXE, 21, 871),
@@ -33,12 +33,12 @@ public class Woodcutting extends SkillContainer {
           new WoodcuttingHatchet(ItemId.DRAGON_AXE, 61, 2846),
           new WoodcuttingHatchet(ItemId._3RD_AGE_AXE, 61, 7264),
           new WoodcuttingHatchet(ItemId.INFERNAL_AXE, 61, 2117),
-          new WoodcuttingHatchet(ItemId.INFERNAL_AXE_UNCHARGED, 61, 2117)};
-  private static final Item[] COLORED_EGG_NESTS = {new Item(ItemId.BIRD_NEST),
-      new Item(ItemId.BIRD_NEST_5071), new Item(ItemId.BIRD_NEST_5072)};
+          new WoodcuttingHatchet(ItemId.INFERNAL_AXE_UNCHARGED, 61, 2117) };
+  private static final Item[] COLORED_EGG_NESTS = { new Item(ItemId.BIRD_NEST),
+      new Item(ItemId.BIRD_NEST_5071), new Item(ItemId.BIRD_NEST_5072) };
   private static final Item[] EVIL_CHICKEN_OUTFIT =
-      {new Item(ItemId.EVIL_CHICKEN_FEET), new Item(ItemId.EVIL_CHICKEN_WINGS),
-          new Item(ItemId.EVIL_CHICKEN_HEAD), new Item(ItemId.EVIL_CHICKEN_LEGS)};
+      { new Item(ItemId.EVIL_CHICKEN_FEET), new Item(ItemId.EVIL_CHICKEN_WINGS),
+          new Item(ItemId.EVIL_CHICKEN_HEAD), new Item(ItemId.EVIL_CHICKEN_LEGS) };
 
   private static List<SkillEntry> entries = new ArrayList<>();
 
@@ -98,11 +98,14 @@ public class Woodcutting extends SkillContainer {
   @Override
   public void clueRolled(Player player, Npc npc, MapObject mapObject, SkillEntry entry) {
     var clueId = ItemId.CLUE_NEST_EASY;
-    if (PRandom.randomE(100) < 10) {
+    if (PRandom
+        .randomE((int) (100 / player.getCombat().getDropRateMultiplier(clueId, null))) < 10) {
       clueId = ItemId.CLUE_NEST_ELITE;
-    } else if (PRandom.randomE(100) < 20) {
+    } else if (PRandom
+        .randomE((int) (100 / player.getCombat().getDropRateMultiplier(clueId, null))) < 20) {
       clueId = ItemId.CLUE_NEST_HARD;
-    } else if (PRandom.randomE(100) < 30) {
+    } else if (PRandom
+        .randomE((int) (100 / player.getCombat().getDropRateMultiplier(clueId, null))) < 30) {
       clueId = ItemId.CLUE_NEST_MEDIUM;
     }
     player.getInventory().addOrDropItem(clueId);
