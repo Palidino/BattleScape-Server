@@ -32,7 +32,7 @@ Creating your own fork:
 - Go to View -> Command Pallete...
 - Type in `Git: Clone` and select it.
 - Paste the url you copied earlier from `Clone or download` and hit enter.
-- Choose the location you'd like to create tthe repository at, such as your desktop. The directory that will be created can be renamed or moved later.
+- Choose the location you'd like to create the repository at, such as your desktop. The directory that will be created can be renamed or moved later.
 - Select open when asked if you'd like to open the cloned repository.
 
 ## Running/Debugging
@@ -54,7 +54,7 @@ Setup:
 - Type in `Git: Fetch From All Remotes`.
 
 Pulling any changes from the official repo:
-- From `Source Ccontrol` in the sidebar, select the three dots on the right-side of source control git (`More Actions...`).
+- From `Source Control` in the sidebar, select the three dots on the right-side of source control git (`More Actions...`).
 - Select `Pull from...`.
 - Select `BattleScape-Server`.
 - Select `BattleScape-Server/master`.
