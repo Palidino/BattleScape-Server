@@ -24,7 +24,7 @@ public class KaruulmArea extends Area {
   }
 
   @Override
-  public boolean mapObjectOptionHook(int index, MapObject mapObject) {
+  public boolean mapObjectOptionHook(int option, MapObject mapObject) {
     var player = getPlayer();
     switch (mapObject.getId()) {
       case ObjectId.CAVE_EXIT_34514:

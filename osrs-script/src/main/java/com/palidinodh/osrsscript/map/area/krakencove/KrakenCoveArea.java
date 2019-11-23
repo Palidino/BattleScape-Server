@@ -12,7 +12,7 @@ public class KrakenCoveArea extends Area {
   }
 
   @Override
-  public boolean mapObjectOptionHook(int index, MapObject mapObject) {
+  public boolean mapObjectOptionHook(int option, MapObject mapObject) {
     var player = getPlayer();
     switch (mapObject.getId()) {
       case ObjectId.CREVICE_537:

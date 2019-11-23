@@ -10,12 +10,12 @@ import com.palidinodh.rs.adaptive.GrandExchangeUser;
 public class ExchangeWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.GRAND_EXCHANGE, WidgetId.GRAND_EXCHANGE_INVENTORY,
-        WidgetId.GRAND_EXCHANGE_HISTORY};
+    return new int[] { WidgetId.GRAND_EXCHANGE, WidgetId.GRAND_EXCHANGE_INVENTORY,
+        WidgetId.GRAND_EXCHANGE_HISTORY };
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {
       return;
     }
@@ -28,7 +28,7 @@ public class ExchangeWidget implements WidgetHandler {
           player.getGrandExchange().reset(false);
           break;
         case 6:
-          if (index == 0) {
+          if (option == 0) {
             player.getGrandExchange().collectAll();
           }
           break;
@@ -41,9 +41,9 @@ public class ExchangeWidget implements WidgetHandler {
         case 13:
         case 14:
           if (slot == 2) {
-            if (index == 0) {
+            if (option == 0) {
               player.getGrandExchange().viewOffer(childId - 7);
-            } else if (index == 1) {
+            } else if (option == 1) {
               player.getGrandExchange().abortOffer(childId - 7);
             }
           } else if (slot == 3) {
@@ -58,7 +58,7 @@ public class ExchangeWidget implements WidgetHandler {
         case 23:
           if (slot == 2 || slot == 3) {
             player.getGrandExchange().collectOffer(player.getAttributeInt("ge_slot"), itemId,
-                index);
+                option);
           }
           break;
         case 24:
@@ -112,7 +112,7 @@ public class ExchangeWidget implements WidgetHandler {
     } else if (widgetId == WidgetId.GRAND_EXCHANGE_INVENTORY) {
       switch (childId) {
         case 0:
-          if (index == 0) {
+          if (option == 0) {
             player.getGrandExchange().configureSellOffer(-1, slot);
           }
           break;

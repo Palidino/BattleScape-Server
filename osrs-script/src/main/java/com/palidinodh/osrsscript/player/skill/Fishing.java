@@ -229,7 +229,7 @@ public class Fishing extends SkillContainer {
   }
 
   @Override
-  public boolean npcOptionHook(Player player, int index, Npc npc) {
+  public boolean npcOptionHook(Player player, int option, Npc npc) {
     switch (npc.getId()) {
       case NpcId.ROACHEY:
         player.openShop("skilling");

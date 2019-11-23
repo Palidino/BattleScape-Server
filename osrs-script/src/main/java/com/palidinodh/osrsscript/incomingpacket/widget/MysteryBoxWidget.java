@@ -20,7 +20,7 @@ public class MysteryBoxWidget implements WidgetHandler {
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {
       return;
     }

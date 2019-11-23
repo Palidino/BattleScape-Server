@@ -54,38 +54,38 @@ public class InventoryWidget implements WidgetHandler {
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     player.clearAllActions(false, false);
     if (itemId != player.getInventory().getId(slot)) {
       return;
     }
     Item item = player.getInventory().getItem(slot);
-    if (index == 0 && player.getController().isFood(itemId)) {
+    if (option == 0 && player.getController().isFood(itemId)) {
       player.getWidgetManager().removeInteractiveWidgets();
       player.getSkills().eatFood(slot);
       return;
     }
-    if (index == 0 && player.getController().isDrink(itemId)) {
+    if (option == 0 && player.getController().isDrink(itemId)) {
       player.getWidgetManager().removeInteractiveWidgets();
       player.getSkills().drink(slot);
       return;
     }
-    if (index == 0 && player.getPrayer().buryBones(slot) >= 0) {
+    if (option == 0 && player.getPrayer().buryBones(slot) >= 0) {
       player.getWidgetManager().removeInteractiveWidgets();
       return;
     }
-    if (index == 0 && Herblore.cleanHerb(player, itemId, slot)) {
+    if (option == 0 && Herblore.cleanHerb(player, itemId, slot)) {
       return;
     }
     if (item.getDef().getEquipSlot() != null
-        && (item.getDef().isOption(index, "wear") || item.getDef().isOption(index, "wield")
-            || item.getDef().isOption(index, "equip") || item.getDef().isOption(index, "ride"))) {
+        && (item.getDef().isOption(option, "wear") || item.getDef().isOption(option, "wield")
+            || item.getDef().isOption(option, "equip") || item.getDef().isOption(option, "ride"))) {
       player.getEquipment().equip(itemId, slot);
       return;
     }
-    if (index == 4 && (item.getDef().getOption(index) == null
-        || item.getDef().isOption(index, "drop") || item.getDef().isOption(index, "destroy")
-        || item.getDef().isOption(index, "release"))) {
+    if (option == 4 && (item.getDef().getOption(option) == null
+        || item.getDef().isOption(option, "drop") || item.getDef().isOption(option, "destroy")
+        || item.getDef().isOption(option, "release"))) {
       player.getWidgetManager().removeInteractiveWidgets();
       if (Familiar.isPetItem(itemId)) {
         player.getFamiliar().summonPet(itemId);
@@ -120,7 +120,7 @@ public class InventoryWidget implements WidgetHandler {
         }
       } else if (player.getController().isInstanced()) {
         player.getController().addMapItem(item, player, MapItem.LONG_TIME, MapItem.NORMAL_APPEAR);
-      } else if (!item.getDef().isOption(index, "release")) {
+      } else if (!item.getDef().isOption(option, "release")) {
         player.getController().addMapItem(item, player, player);
       }
       player.getInventory().deleteItem(itemId, item.getAmount(), slot);
@@ -128,8 +128,8 @@ public class InventoryWidget implements WidgetHandler {
           player.getLogName() + " dropped " + item.getLogName() + " located at " + player + ".");
       return;
     }
-    if (index == 0 && item.getDef().getExchangeSetIds() != null
-        && item.getDef().isOption(index, "open")) {
+    if (option == 0 && item.getDef().getExchangeSetIds() != null
+        && item.getDef().isOption(option, "open")) {
       if (player.getInventory().getRemainingSlots() < item.getDef().getExchangeSetIds().length) {
         player.getInventory().notEnoughSpace();
         return;
@@ -532,7 +532,7 @@ public class InventoryWidget implements WidgetHandler {
         player.getInventory().addOrDropItem(RandomItem.getItem(randomItems));
         break;
       case 13226: // Herb sack
-        if (index == 0) {
+        if (option == 0) {
           for (int i = player.getInventory().size(); i >= 0; i--) {
             int addingId = player.getInventory().getId(i);
             if (!Herblore.isHerb(addingId)) {
@@ -544,7 +544,7 @@ public class InventoryWidget implements WidgetHandler {
             player.getWidgetManager().getHerbSack().addItem(addingId, addingAmount);
             player.getInventory().deleteItem(addingId, addingAmount, i);
           }
-        } else if (index == 2) {
+        } else if (option == 2) {
           for (int i = player.getWidgetManager().getHerbSack().size(); i >= 0; i--) {
             int addingId = player.getWidgetManager().getHerbSack().getId(i);
             int addingAmount = player.getWidgetManager().getHerbSack().getAmount(i);
@@ -552,12 +552,12 @@ public class InventoryWidget implements WidgetHandler {
             player.getInventory().addItem(addingId, addingAmount);
             player.getWidgetManager().getHerbSack().deleteItem(addingId, addingAmount);
           }
-        } else if (index == 3) {
+        } else if (option == 3) {
           player.getWidgetManager().getHerbSack().displayItemList();
         }
         break;
       case 13639: // Seed box
-        if (index == 0) {
+        if (option == 0) {
           for (int i = player.getInventory().size(); i >= 0; i--) {
             int addingId = player.getInventory().getId(i);
             if (!Farming.isSeed(addingId)) {
@@ -569,7 +569,7 @@ public class InventoryWidget implements WidgetHandler {
             player.getWidgetManager().getSeedBox().addItem(addingId, addingAmount);
             player.getInventory().deleteItem(addingId, addingAmount, i);
           }
-        } else if (index == 1) {
+        } else if (option == 1) {
           for (int i = player.getWidgetManager().getSeedBox().size(); i >= 0; i--) {
             int addingId = player.getWidgetManager().getSeedBox().getId(i);
             int addingAmount = player.getWidgetManager().getSeedBox().getAmount(i);
@@ -577,7 +577,7 @@ public class InventoryWidget implements WidgetHandler {
             player.getInventory().addItem(addingId, addingAmount);
             player.getWidgetManager().getSeedBox().deleteItem(addingId, addingAmount);
           }
-        } else if (index == 2) {
+        } else if (option == 2) {
           player.getWidgetManager().getSeedBox().displayItemList();
         }
         break;
@@ -668,9 +668,9 @@ public class InventoryWidget implements WidgetHandler {
       case ItemId.MYSTERY_BOX:
       case ItemId.SUPER_MYSTERY_BOX_32286:
       case ItemId.PET_MYSTERY_BOX_32311:
-        if (index == 0) {
+        if (option == 0) {
           MysteryBox.open(player, itemId);
-        } else if (index == 1) {
+        } else if (option == 1) {
           MysteryBox.quickOpen(player, itemId);
         }
         break;
@@ -721,7 +721,7 @@ public class InventoryWidget implements WidgetHandler {
       case 5513: // Large pouch
       case 5514: // Giant pouch
       case 5515: // Giant pouch
-        if (index == 0) {
+        if (option == 0) {
           int pureEssenceCount = player.getInventory().getCount(7936);
           int addingAmount =
               player.getWidgetManager().getRCPouch(itemId).canAddAmount(7936, pureEssenceCount);
@@ -735,12 +735,12 @@ public class InventoryWidget implements WidgetHandler {
           }
           player.getInventory().deleteItem(7936, addingAmount);
           player.getWidgetManager().getRCPouch(itemId).addItem(7936, addingAmount);
-        } else if (index == 1) {
+        } else if (option == 1) {
           int pureEssenceCount = player.getWidgetManager().getRCPouch(itemId).getCount(7936);
           int addingAmount = player.getInventory().canAddAmount(7936, pureEssenceCount);
           player.getWidgetManager().getRCPouch(itemId).deleteItem(7936, addingAmount);
           player.getInventory().addItem(7936, addingAmount);
-        } else if (index == 2) {
+        } else if (option == 2) {
           int pureEssenceCount = player.getWidgetManager().getRCPouch(itemId).getCount(7936);
           player.getGameEncoder()
               .sendMessage("Your " + player.getWidgetManager().getRCPouch(itemId).getName()
@@ -1188,9 +1188,9 @@ public class InventoryWidget implements WidgetHandler {
         player.openDialogue("bond", 0);
         break;
       case 12791: // Rune pouch
-        if (index == 0) {
+        if (option == 0) {
           player.getMagic().openRunePouch();
-        } else if (index == 3) {
+        } else if (option == 3) {
           player.getMagic().removeRunesFromPouch(0, Magic.MAX_RUNE_POUCH_AMOUNT);
           player.getMagic().removeRunesFromPouch(1, Magic.MAX_RUNE_POUCH_AMOUNT);
           player.getMagic().removeRunesFromPouch(2, Magic.MAX_RUNE_POUCH_AMOUNT);
@@ -1215,7 +1215,7 @@ public class InventoryWidget implements WidgetHandler {
         player.setAnimation(1835);
         break;
       case ItemId.TRIDENT_OF_THE_SEAS_FULL:
-        if (index == 3) {
+        if (option == 3) {
           player.getInventory().deleteItem(itemId, 1, slot);
           player.getInventory().addItem(ItemId.UNCHARGED_TRIDENT, 1, slot);
           player.getInventory().addOrDropItem(ItemId.DEATH_RUNE, 2500);
@@ -1224,9 +1224,9 @@ public class InventoryWidget implements WidgetHandler {
         }
         break;
       case ItemId.TRIDENT_OF_THE_SEAS:
-        if (index == 2) {
+        if (option == 2) {
           player.getCharges().checkCharges(slot);
-        } else if (index == 3) {
+        } else if (option == 3) {
           var charges = item.getCharges();
           player.getInventory().deleteItem(itemId, 1, slot);
           player.getInventory().addItem(ItemId.UNCHARGED_TRIDENT, 1, slot);
@@ -1236,9 +1236,9 @@ public class InventoryWidget implements WidgetHandler {
         }
         break;
       case ItemId.TRIDENT_OF_THE_SEAS_E:
-        if (index == 2) {
+        if (option == 2) {
           player.getCharges().checkCharges(slot);
-        } else if (index == 3) {
+        } else if (option == 3) {
           var charges = item.getCharges();
           player.getInventory().deleteItem(itemId, 1, slot);
           player.getInventory().addItem(ItemId.UNCHARGED_TRIDENT_E, 1, slot);
@@ -1254,10 +1254,10 @@ public class InventoryWidget implements WidgetHandler {
             "Each charge requires 1 death rune, 1 chaos rune, 5 fire runes and 10 coins.");
         break;
       case 12900: // Uncharged toxic trident
-        if (index == 2) {
+        if (option == 2) {
           player.getGameEncoder().sendMessage(
               "Each charge requires 1 death rune, 1 chaos rune, 5 fire runes, 10 coins and 1 Zulrah's scale.");
-        } else if (index == 3) {
+        } else if (option == 3) {
           if (player.getInventory().getRemainingSlots() < 1) {
             player.getInventory().notEnoughSpace();
             break;
@@ -1268,10 +1268,10 @@ public class InventoryWidget implements WidgetHandler {
         }
         break;
       case 22294: // Uncharged toxic trident (e)
-        if (index == 2) {
+        if (option == 2) {
           player.getGameEncoder().sendMessage(
               "Each charge requires 1 death rune, 1 chaos rune, 5 fire runes, 10 coins and 1 Zulrah's scale.");
-        } else if (index == 3) {
+        } else if (option == 3) {
           if (player.getInventory().getRemainingSlots() < 1) {
             player.getInventory().notEnoughSpace();
             break;
@@ -1523,9 +1523,9 @@ public class InventoryWidget implements WidgetHandler {
         player.getGameEncoder().sendMessage("This item needs to be charged with coins.");
         break;
       case 22545: // Viggora's chainmace
-        if (index == 2) {
+        if (option == 2) {
           player.getCharges().checkCharges(slot);
-        } else if (index == 4) {
+        } else if (option == 4) {
           if (player.getInventory().getRemainingSlots() < 1) {
             player.getInventory().notEnoughSpace();
             break;
@@ -1536,9 +1536,9 @@ public class InventoryWidget implements WidgetHandler {
         }
         break;
       case 22550: // Craw's bow
-        if (index == 2) {
+        if (option == 2) {
           player.getCharges().checkCharges(slot);
-        } else if (index == 4) {
+        } else if (option == 4) {
           if (player.getInventory().getRemainingSlots() < 1) {
             player.getInventory().notEnoughSpace();
             break;
@@ -1549,9 +1549,9 @@ public class InventoryWidget implements WidgetHandler {
         }
         break;
       case 22555: // Thammaron's sceptre
-        if (index == 2) {
+        if (option == 2) {
           player.getCharges().checkCharges(slot);
-        } else if (index == 4) {
+        } else if (option == 4) {
           if (player.getInventory().getRemainingSlots() < 1) {
             player.getInventory().notEnoughSpace();
             break;
@@ -1563,38 +1563,38 @@ public class InventoryWidget implements WidgetHandler {
         break;
       case 12899: // Trident of the swamp
       case 22292: // Trident of the swamp (e)
-        if (index == 2) {
+        if (option == 2) {
           player.getCharges().checkCharges(slot);
-        } else if (index == 3) {
+        } else if (option == 3) {
           player.getCharges().unloadToxicTrident(slot);
         }
         break;
       case 22323: // Sanguinesti staff
-        if (index == 2) {
+        if (option == 2) {
           player.getCharges().checkCharges(slot);
-        } else if (index == 3) {
+        } else if (option == 3) {
           player.getGameEncoder().sendMessage("This is charged with blood runes.");
-        } else if (index == 4) {
+        } else if (option == 4) {
           player.getInventory().deleteItem(itemId, 1, slot);
           player.getInventory().addItem(22481, 1, slot);
         }
         break;
       case 22325: // Scythe of vitur
-        if (index == 2) {
+        if (option == 2) {
           player.getCharges().checkCharges(slot);
-        } else if (index == 3) {
+        } else if (option == 3) {
           player.getInventory().deleteItem(itemId, 1, slot);
           player.getInventory().addItem(22486, 1, slot);
         }
         break;
       case 21816: // Bracelet of ethereum
-        if (index == 2) {
+        if (option == 2) {
           player.getCharges().checkCharges(slot);
-        } else if (index == 3) {
+        } else if (option == 3) {
           player.getCharges().setEthereumAutoAbsorb(!player.getCharges().getEthereumAutoAbsorb());
           player.getGameEncoder().sendMessage(
               "Ether automatic absorption: " + player.getCharges().getEthereumAutoAbsorb());
-        } else if (index == 4) {
+        } else if (option == 4) {
           if (player.getInventory().getRemainingSlots() < 1) {
             player.getInventory().notEnoughSpace();
             break;
@@ -1605,19 +1605,19 @@ public class InventoryWidget implements WidgetHandler {
         }
         break;
       case 21817: // Bracelet of ethereum (uncharged)
-        if (index == 2) {
+        if (option == 2) {
           player.getCharges().setEthereumAutoAbsorb(!player.getCharges().getEthereumAutoAbsorb());
           player.getGameEncoder().sendMessage(
               "Ether automatic absorption: " + player.getCharges().getEthereumAutoAbsorb());
-        } else if (index == 3) {
+        } else if (option == 3) {
           player.getInventory().deleteItem(itemId, 1, slot);
           player.getInventory().addItem(21820, 250, slot);
         }
         break;
       case 20714: // Tome of fire
-        if (index == 2) {
+        if (option == 2) {
           player.getGameEncoder().sendMessage("This book has unlimited charges.");
-        } else if (index == 3) {
+        } else if (option == 3) {
           if (player.getInventory().getRemainingSlots() < 1) {
             player.getInventory().notEnoughSpace();
             break;
@@ -1633,34 +1633,34 @@ public class InventoryWidget implements WidgetHandler {
         player.getSkills().eatFood(slot);
         break;
       case 12904: // Toxic staff of the dead
-        if (index == 2) {
+        if (option == 2) {
           player.getCharges().checkToxicStaff(slot);
-        } else if (index == 4) {
+        } else if (option == 4) {
           player.getCharges().unloadToxicStaff(slot);
         }
         break;
       case 12926: // Toxic blowpipe
-        if (index == 2) {
+        if (option == 2) {
           player.getCharges().checkToxicBlowpipe(slot);
-        } else if (index == 3) {
+        } else if (option == 3) {
           player.getCharges().unloadToxicBlowpipe(slot, false);
-        } else if (index == 4) {
+        } else if (option == 4) {
           player.getCharges().unloadToxicBlowpipe(slot, true);
         }
         break;
       case 12931: // Serpentine helm
       case 13197: // Tanzanite helm
       case 13199: // Magma helm
-        if (index == 2) {
+        if (option == 2) {
           player.getCharges().checkSerpentineHelm(slot);
-        } else if (index == 4) {
+        } else if (option == 4) {
           player.getCharges().unloadSerpentineHelm(slot);
         }
         break;
       case 12785: // Ring of wealth (i)
-        if (index == 2) {
+        if (option == 2) {
           Guide.openEntry(player, "main", "bonds");
-        } else if (index == 3) {
+        } else if (option == 3) {
           player.openDialogue("ringwealth", 0);
         }
         break;
@@ -1669,7 +1669,7 @@ public class InventoryWidget implements WidgetHandler {
           break;
         }
         Tile ardougneCloak1Teleport = null;
-        if (index == 2) {
+        if (option == 2) {
           ardougneCloak1Teleport = new Tile(2606, 3223);
         }
         if (ardougneCloak1Teleport == null) {
@@ -1688,9 +1688,9 @@ public class InventoryWidget implements WidgetHandler {
           break;
         }
         Tile ardougneCloakTeleport = null;
-        if (index == 2) {
+        if (option == 2) {
           ardougneCloakTeleport = new Tile(2606, 3223);
-        } else if (index == 3) {
+        } else if (option == 3) {
           ardougneCloakTeleport = new Tile(2673, 3374);
         }
         if (ardougneCloakTeleport == null) {
@@ -1708,9 +1708,9 @@ public class InventoryWidget implements WidgetHandler {
           if (!player.getController().canTeleport(30, true)) {
             break;
           }
-          if (index == 2) {
+          if (option == 2) {
             player.openDialogue(new MaxCapeDialogue(player));
-          } else if (index == 3) {
+          } else if (option == 3) {
             player.getGameEncoder()
                 .sendMessage("There are currently no features. Feel free to suggest some!");
           }
@@ -1940,18 +1940,18 @@ public class InventoryWidget implements WidgetHandler {
         player.getInventory().addItem(20714, 1, slot);
         break;
       case ItemId.ABYSSAL_TENTACLE:
-        if (index == 3) {
+        if (option == 3) {
           player.getCharges().checkCharges(slot);
-        } else if (index == 4) {
+        } else if (option == 4) {
           player.getInventory().deleteItem(itemId, 1, slot);
           player.getInventory().addItem(ItemId.KRAKEN_TENTACLE, 1, slot);
         }
         break;
       case ItemId.SARAS_BLESSED_SWORD_FULL:
       case ItemId.SARADOMINS_BLESSED_SWORD:
-        if (index == 2) {
+        if (option == 2) {
           player.getCharges().checkCharges(slot);
-        } else if (index == 4) {
+        } else if (option == 4) {
           player.getInventory().deleteItem(itemId, 1, slot);
           player.getInventory().addItem(ItemId.SARADOMINS_TEAR, 1, slot);
           if (itemId == ItemId.SARAS_BLESSED_SWORD_FULL) {

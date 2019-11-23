@@ -197,7 +197,7 @@ public class Woodcutting extends SkillContainer {
   }
 
   @Override
-  public boolean mapObjectOptionHook(Player player, int index, MapObject mapObject) {
+  public boolean mapObjectOptionHook(Player player, int option, MapObject mapObject) {
     switch (mapObject.getId()) {
       case 29088: // Woodcutting Guild shrine
         var eggCount = player.getInventory().getCount(ItemId.BIRDS_EGG)

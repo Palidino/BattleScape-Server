@@ -7,23 +7,23 @@ import com.palidinodh.osrscore.model.player.Player;
 public class MinimapOrbWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.MINIMAP_ORBS};
+    return new int[] { WidgetId.MINIMAP_ORBS };
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     switch (childId) {
       case 1:
-        if (index == 0) {
+        if (option == 0) {
           player.getXPDrops().switchShow();
-        } else if (index == 1) {
+        } else if (option == 1) {
           player.getXPDrops().openSetup();
         }
         break;
       case 14:
-        if (index == 0) {
+        if (option == 0) {
           player.getPrayer().activateQuick();
-        } else if (index == 1) {
+        } else if (option == 1) {
           player.getPrayer().switchQuick();
         }
         break;
@@ -34,9 +34,9 @@ public class MinimapOrbWidget implements WidgetHandler {
         player.getCombat().activateSpecialAttack();
         break;
       case 43:
-        if (index == 0) {
+        if (option == 0) {
           player.getWidgetManager().changeWorldMapState();
-        } else if (index == 1) {
+        } else if (option == 1) {
           player.getWidgetManager().sendWorldMap(true);
         }
         break;

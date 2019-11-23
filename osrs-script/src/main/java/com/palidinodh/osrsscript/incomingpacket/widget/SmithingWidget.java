@@ -9,11 +9,11 @@ import com.palidinodh.osrscore.model.player.Smithing;
 public class SmithingWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.SMITHING};
+    return new int[] { WidgetId.SMITHING };
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {
       return;
     }
@@ -23,20 +23,20 @@ public class SmithingWidget implements WidgetHandler {
       return;
     }
     int smithId = itemArray[selected];
-    if (index == 0) {
+    if (option == 0) {
       Smithing.start(player, smithId, 1);
-    } else if (index == 1) {
+    } else if (option == 1) {
       Smithing.start(player, smithId, 5);
-    } else if (index == 2) {
+    } else if (option == 2) {
       Smithing.start(player, smithId, 10);
-    } else if (index == 3) {
+    } else if (option == 3) {
       player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
         @Override
         public void execute(int value) {
           Smithing.start(player, smithId, value);
         }
       });
-    } else if (index == 4) {
+    } else if (option == 4) {
       Smithing.start(player, smithId, 28);
     }
   }

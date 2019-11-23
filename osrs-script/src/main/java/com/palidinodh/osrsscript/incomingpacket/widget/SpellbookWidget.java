@@ -17,11 +17,11 @@ import com.palidinodh.util.PTime;
 public class SpellbookWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.SPELLBOOK, WidgetId.SPELL_SELECT, WidgetId.RUNE_POUCH};
+    return new int[] { WidgetId.SPELLBOOK, WidgetId.SPELL_SELECT, WidgetId.RUNE_POUCH };
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (widgetId == WidgetId.SPELLBOOK) {
       int height = 0;
       WidgetChild.Spellbook spellbookChild = WidgetChild.Spellbook.get(childId);
@@ -46,9 +46,9 @@ public class SpellbookWidget implements WidgetHandler {
           if (player.isLocked()) {
             break;
           }
-          if (index == 0) {
+          if (option == 0) {
             player.getCombat().getBountyHunter().selectTeleportToTarget();
-          } else if (index == 9) {
+          } else if (option == 9) {
             player.getCombat().getBountyHunter()
                 .setTeleportWarning(!player.getCombat().getBountyHunter().getTeleportWarning());
             player.getGameEncoder().sendMessage(
@@ -666,13 +666,13 @@ public class SpellbookWidget implements WidgetHandler {
     } else if (widgetId == WidgetId.RUNE_POUCH) {
       switch (childId) {
         case 4:
-          if (index == 0) {
+          if (option == 0) {
             player.getMagic().removeRunesFromPouch(slot, 1);
-          } else if (index == 1) {
+          } else if (option == 1) {
             player.getMagic().removeRunesFromPouch(slot, 5);
-          } else if (index == 2) {
+          } else if (option == 2) {
             player.getMagic().removeRunesFromPouch(slot, Item.MAX_AMOUNT);
-          } else if (index == 3) {
+          } else if (option == 3) {
             player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
               @Override
               public void execute(int value) {
@@ -682,13 +682,13 @@ public class SpellbookWidget implements WidgetHandler {
           }
           break;
         case 8:
-          if (index == 0) {
+          if (option == 0) {
             player.getMagic().addRunesToPouch(slot, 1);
-          } else if (index == 1) {
+          } else if (option == 1) {
             player.getMagic().addRunesToPouch(slot, 5);
-          } else if (index == 2) {
+          } else if (option == 2) {
             player.getMagic().addRunesToPouch(slot, Item.MAX_AMOUNT);
-          } else if (index == 3) {
+          } else if (option == 3) {
             player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
               @Override
               public void execute(int value) {

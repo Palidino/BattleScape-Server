@@ -19,14 +19,14 @@ public class EquipmentWidget implements WidgetHandler {
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {
       return;
     }
     if (widgetId == WidgetId.EQUIPMENT || widgetId == WidgetId.EQUIPMENT_BONUSES) {
       var equipSlot = Equipment.Slot.getFromWidget(widgetId, childId);
       if (equipSlot != null) {
-        if (index == 0) {
+        if (option == 0) {
           player.getController().unequip(equipSlot.ordinal());
         } else {
           switch (player.getEquipment().getId(equipSlot)) {
@@ -52,13 +52,13 @@ public class EquipmentWidget implements WidgetHandler {
                 break;
               }
               Tile gloryTeleport = null;
-              if (index == 1) {
+              if (option == 1) {
                 gloryTeleport = new Tile(3087, 3491);
-              } else if (index == 2) {
+              } else if (option == 2) {
                 gloryTeleport = new Tile(2915, 3152);
-              } else if (index == 3) {
+              } else if (option == 3) {
                 gloryTeleport = new Tile(3085, 3249);
-              } else if (index == 4) {
+              } else if (option == 4) {
                 gloryTeleport = new Tile(3293, 3177);
               }
               if (gloryTeleport == null) {
@@ -72,7 +72,7 @@ public class EquipmentWidget implements WidgetHandler {
               break;
             case ItemId.CRAFTING_CAPE:
             case ItemId.CRAFTING_CAPE_T:
-              if (index == 2) {
+              if (option == 2) {
                 if (!player.getController().canTeleport(20, true)) {
                   return;
                 }
@@ -89,7 +89,7 @@ public class EquipmentWidget implements WidgetHandler {
                 break;
               }
               Tile ardougneCloak1Teleport = null;
-              if (index == 1) {
+              if (option == 1) {
                 ardougneCloak1Teleport = new Tile(2606, 3223);
               }
               if (ardougneCloak1Teleport == null) {
@@ -108,9 +108,9 @@ public class EquipmentWidget implements WidgetHandler {
                 break;
               }
               Tile ardougneCloakTeleport = null;
-              if (index == 1) {
+              if (option == 1) {
                 ardougneCloakTeleport = new Tile(2606, 3223);
-              } else if (index == 2) {
+              } else if (option == 2) {
                 ardougneCloakTeleport = new Tile(2673, 3374);
               }
               if (ardougneCloakTeleport == null) {
@@ -123,7 +123,7 @@ public class EquipmentWidget implements WidgetHandler {
               player.clearHits();
               break;
             case ItemId.MAX_CAPE:
-              if (index == 1) {
+              if (option == 1) {
                 Tile warriorsGuildTile = new Tile(2845, 3544);
                 if (!player.getController().canTeleport(20, true)) {
                   return;
@@ -133,9 +133,9 @@ public class EquipmentWidget implements WidgetHandler {
                     Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
                 player.getController().stopWithTeleport();
                 player.clearHits();
-              } else if (index == 2) {
+              } else if (option == 2) {
                 player.openDialogue(new MaxCapeDialogue.FishDialogue(player));
-              } else if (index == 3) {
+              } else if (option == 3) {
                 Tile craftingGuildTile = new Tile(2936, 3282);
                 if (!player.getController().canTeleport(20, true)) {
                   return;
@@ -145,7 +145,7 @@ public class EquipmentWidget implements WidgetHandler {
                     Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
                 player.getController().stopWithTeleport();
                 player.clearHits();
-              } else if (index == 4) {
+              } else if (option == 4) {
                 Tile homeTile = player.getWidgetManager().getHomeTile();
                 if (!player.getController().canTeleport(20, true)) {
                   return;
@@ -157,13 +157,13 @@ public class EquipmentWidget implements WidgetHandler {
                     Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
                 player.getController().stopWithTeleport();
                 player.clearHits();
-              } else if (index == 5) {
+              } else if (option == 5) {
                 player.openDialogue(new MaxCapeDialogue.PortalsDialogue(player));
-              } else if (index == 6) {
+              } else if (option == 6) {
                 player.openDialogue(new MaxCapeDialogue.OtherDialogue(player));
-              } else if (index == 7) {
+              } else if (option == 7) {
                 player.openDialogue("spellbooks", 1);
-              } else if (index == 8) {
+              } else if (option == 8) {
                 player.openDialogue(new MaxCapeDialogue.FeaturesDialogue(player));
               }
               break;
@@ -182,9 +182,9 @@ public class EquipmentWidget implements WidgetHandler {
               break;
             case ItemId.BRACELET_OF_ETHEREUM:
             case ItemId.BRACELET_OF_ETHEREUM_UNCHARGED:
-              if (index == 1) {
+              if (option == 1) {
                 player.getCharges().checkCharges(equipSlot.ordinal() + 65536);
-              } else if (index == 2) {
+              } else if (option == 2) {
                 player.getCharges()
                     .setEthereumAutoAbsorb(!player.getCharges().getEthereumAutoAbsorb());
                 player.getGameEncoder().sendMessage(
@@ -218,7 +218,7 @@ public class EquipmentWidget implements WidgetHandler {
     } else if (widgetId == WidgetId.EQUIPMENT_BONUSES_INVENTORY) {
       switch (childId) {
         case 0:
-          if (index == 0) {
+          if (option == 0) {
             player.getEquipment().equip(itemId, slot);
           }
           break;

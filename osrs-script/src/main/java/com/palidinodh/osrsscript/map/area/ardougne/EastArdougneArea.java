@@ -15,7 +15,7 @@ public class EastArdougneArea extends Area {
   }
 
   @Override
-  public boolean mapObjectOptionHook(int index, MapObject mapObject) {
+  public boolean mapObjectOptionHook(int option, MapObject mapObject) {
     var player = getPlayer();
     AgilityObstacle obstacle = null;
     switch (mapObject.getId()) {

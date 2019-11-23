@@ -16,7 +16,7 @@ public class InventoryEquipmentWidgetHook {
     this.plugin = plugin;
   }
 
-  public boolean widgetHook(int index, int widgetId, int childId, int slot, int itemId) {
+  public boolean widgetHook(int option, int widgetId, int childId, int slot, int itemId) {
     var isEquipment = widgetId == WidgetId.EQUIPMENT || widgetId == WidgetId.EQUIPMENT_BONUSES;
     if (widgetId == WidgetId.INVENTORY || isEquipment) {
       switch (itemId) {

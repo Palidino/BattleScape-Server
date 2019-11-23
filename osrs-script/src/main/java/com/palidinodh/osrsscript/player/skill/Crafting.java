@@ -40,7 +40,7 @@ public class Crafting extends SkillContainer {
   }
 
   @Override
-  public boolean widgetHook(Player player, int index, int widgetId, int childId, int slot,
+  public boolean widgetHook(Player player, int option, int widgetId, int childId, int slot,
       int itemId) {
     if (widgetId == WidgetId.TANNING) {
       var amount = 1;
@@ -105,20 +105,20 @@ public class Crafting extends SkillContainer {
       if (entry == null) {
         return true;
       }
-      if (index == 0) {
+      if (option == 0) {
         startEvent(player, entry, 1);
-      } else if (index == 1) {
+      } else if (option == 1) {
         startEvent(player, entry, 5);
-      } else if (index == 2) {
+      } else if (option == 2) {
         startEvent(player, entry, 10);
-      } else if (index == 3) {
+      } else if (option == 3) {
         player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
           @Override
           public void execute(int value) {
             startEvent(player, entry, value);
           }
         });
-      } else if (index == 4) {
+      } else if (option == 4) {
         startEvent(player, entry, 28);
       }
       return true;
@@ -143,7 +143,7 @@ public class Crafting extends SkillContainer {
   }
 
   @Override
-  public boolean npcOptionHook(Player player, int index, Npc npc) {
+  public boolean npcOptionHook(Player player, int option, Npc npc) {
     if (npc.getId() == NpcId.TANNER) {
       openTanning(player);
       return true;

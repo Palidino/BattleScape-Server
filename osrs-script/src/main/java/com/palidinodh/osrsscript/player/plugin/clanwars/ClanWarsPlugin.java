@@ -138,7 +138,7 @@ public class ClanWarsPlugin extends PlayerPlugin {
   }
 
   @Override
-  public boolean widgetHook(int index, int widgetId, int childId, int slot, int itemId) {
+  public boolean widgetHook(int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {
       return false;
     }
@@ -236,7 +236,7 @@ public class ClanWarsPlugin extends PlayerPlugin {
   }
 
   @Override
-  public boolean mapObjectOptionHook(int index, MapObject mapObject) {
+  public boolean mapObjectOptionHook(int option, MapObject mapObject) {
     switch (mapObject.getId()) {
       case 26743: // Viewing orb
         teleportViewing(0);
@@ -251,8 +251,8 @@ public class ClanWarsPlugin extends PlayerPlugin {
   }
 
   @Override
-  public boolean playerOptionHook(int index, Player player2) {
-    if (index == 0 && player.inClanWarsChallengeArea() && player2.inClanWarsChallengeArea()) {
+  public boolean playerOptionHook(int option, Player player2) {
+    if (option == 0 && player.inClanWarsChallengeArea() && player2.inClanWarsChallengeArea()) {
       if (state != PlayerState.NONE
           || player2.getPlugin(ClanWarsPlugin.class).getState() != PlayerState.NONE) {
         return true;
@@ -452,7 +452,7 @@ public class ClanWarsPlugin extends PlayerPlugin {
         opponent.getPlugin(ClanWarsPlugin.class).getTotalKills());
   }
 
-  public void teleportViewing(int index) {
+  public void teleportViewing(int option) {
     if (player.isLocked() || player.getMovement().getTeleporting()
         || player.getMovement().getTeleported()) {
       return;
@@ -467,12 +467,12 @@ public class ClanWarsPlugin extends PlayerPlugin {
         player.getGameEncoder().sendWidgetText(WidgetId.TOURNAMENT_VIEWER, 5, "");
       }
       player.getGameEncoder().sendScript(ScriptId.TOURNAMENT_VIEWER, viewerList);
-      if (index < 0 || index >= activeLength) {
+      if (option < 0 || option >= activeLength) {
         return;
       }
-      tile = new Tile(2594, 5411, 1 + index * 4);
+      tile = new Tile(2594, 5411, 1 + option * 4);
     } else {
-      if (state == PlayerState.NONE || state != PlayerState.VIEW || index < 0
+      if (state == PlayerState.NONE || state != PlayerState.VIEW || option < 0
           || getArena().getOrbs().length > 4) {
         return;
       }
@@ -480,8 +480,8 @@ public class ClanWarsPlugin extends PlayerPlugin {
         player.getWidgetManager().sendInventoryOverlay(WidgetId.CLAN_WARS_ORBS);
       }
       player.getGameEncoder().sendScript(ScriptId.CLAN_WARS_ORBS,
-          ObjectDef.getObjectDef(ORB_OBJECT_ID).getModelId(), index);
-      tile = getArena().getOrbs()[index];
+          ObjectDef.getObjectDef(ORB_OBJECT_ID).getModelId(), option);
+      tile = getArena().getOrbs()[option];
     }
     if (tile == null) {
       return;
@@ -500,8 +500,8 @@ public class ClanWarsPlugin extends PlayerPlugin {
     return rule.getOptions().get(rules[rule.ordinal()]);
   }
 
-  public void setRule(int index, int slot) {
-    rules[index] = slot;
+  public void setRule(int option, int slot) {
+    rules[option] = slot;
   }
 
   public void setRules(int[] rules) {

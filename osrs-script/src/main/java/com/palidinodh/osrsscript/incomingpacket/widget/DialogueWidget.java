@@ -14,7 +14,7 @@ public class DialogueWidget implements WidgetHandler {
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (widgetId == WidgetId.CHATBOX_PLAYER || widgetId == WidgetId.CHATBOX_NPC
         || widgetId == WidgetId.CHATBOX_MESSAGE) {
       slot = 0;

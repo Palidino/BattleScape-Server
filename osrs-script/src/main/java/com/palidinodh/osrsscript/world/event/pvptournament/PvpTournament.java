@@ -102,7 +102,7 @@ public class PvpTournament extends PEvent implements WorldEventHooks {
   }
 
   @Override
-  public boolean mapObjectOptionHook(Player player, int index, MapObject mapObject) {
+  public boolean mapObjectOptionHook(Player player, int option, MapObject mapObject) {
     switch (mapObject.getId()) {
       case ObjectId.COFFER:
         if (player.getRights() == Player.RIGHTS_ADMIN

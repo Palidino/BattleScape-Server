@@ -22,14 +22,14 @@ public class AchievementDiaryPlugin extends PlayerPlugin {
   }
 
   @Override
-  public boolean widgetHook(int index, int widgetId, int childId, int slot, int itemId) {
+  public boolean widgetHook(int option, int widgetId, int childId, int slot, int itemId) {
     var isEquipment = widgetId == WidgetId.EQUIPMENT || widgetId == WidgetId.EQUIPMENT_BONUSES;
     if (widgetId == WidgetId.INVENTORY || isEquipment) {
       var prayerLevel = player.getController().getLevelForXP(Skills.PRAYER);
       switch (itemId) {
         case ItemId.FALADOR_SHIELD_1:
         case ItemId.FALADOR_SHIELD_2:
-          if (isEquipment && index == 1 || !isEquipment && index == 2) {
+          if (isEquipment && option == 1 || !isEquipment && option == 2) {
             if (PTime.getYearMonthDay().equals(faladorShield1And2)) {
               player.getGameEncoder().sendMessage("You can only use this once a day.");
               return true;
@@ -46,7 +46,7 @@ public class AchievementDiaryPlugin extends PlayerPlugin {
           break;
         case ItemId.FALADOR_SHIELD_3:
         case ItemId.FALADOR_SHIELD_4:
-          if (isEquipment && index == 1 || !isEquipment && index == 2) {
+          if (isEquipment && option == 1 || !isEquipment && option == 2) {
             if (!PTime.getYearMonthDay().equals(faladorShield3And4)) {
               faladorShield3And4 = PTime.getYearMonthDay();
               player.getPrayer().adjustPoints(prayerLevel);
@@ -63,7 +63,7 @@ public class AchievementDiaryPlugin extends PlayerPlugin {
               player.getGameEncoder().sendMessage("You can only use this once a day.");
             }
             return true;
-          } else if (isEquipment && index == 2 || !isEquipment && index == 3) {
+          } else if (isEquipment && option == 2 || !isEquipment && option == 3) {
             if (player.getRegionId() != 6992 && player.getRegionId() != 6993) {
               player.getGameEncoder().sendMessage("You can't use this here.");
               return true;

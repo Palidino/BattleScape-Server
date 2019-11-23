@@ -73,21 +73,21 @@ public class LootingBagPlugin extends PlayerPlugin {
   }
 
   @Override
-  public boolean widgetHook(int index, int widgetId, int childId, int slot, int itemId) {
+  public boolean widgetHook(int option, int widgetId, int childId, int slot, int itemId) {
     if (widgetId == WidgetId.INVENTORY) {
       switch (itemId) {
         case ItemId.LOOTING_BAG:
         case ItemId.LOOTING_BAG_22586:
-          if (index == 0) {
+          if (option == 0) {
             player.getInventory().deleteItem(itemId, 1, slot);
             if (itemId == ItemId.LOOTING_BAG) {
               player.getInventory().addItem(ItemId.LOOTING_BAG_22586, 1, slot);
             } else {
               player.getInventory().addItem(ItemId.LOOTING_BAG, 1, slot);
             }
-          } else if (index == 1) {
+          } else if (option == 1) {
             getItems().displayItemList();
-          } else if (index == 2) {
+          } else if (option == 2) {
             if (!player.getController().inWilderness() && !player.getController().inPvPWorld()) {
               player.getGameEncoder()
                   .sendMessage("You can't put items in the bag unless you're in the Wilderness.");
@@ -98,7 +98,7 @@ public class LootingBagPlugin extends PlayerPlugin {
             player.getGameEncoder().sendWidgetSettings(WidgetId.LOOTING_BAG_DEPOSIT, 5, 0,
                 player.getInventory().capacity() - 1, 1086);
             player.getInventory().setUpdate(true);
-          } else if (index == 3) {
+          } else if (option == 3) {
             player.openDialogue(new StoreTypeDialogue(player, this));
           }
           return true;
@@ -109,13 +109,13 @@ public class LootingBagPlugin extends PlayerPlugin {
       }
       switch (childId) {
         case 5:
-          if (index == 0) {
+          if (option == 0) {
             storeItemFromInventory(slot, StoreType.STORE_1);
-          } else if (index == 1) {
+          } else if (option == 1) {
             storeItemFromInventory(slot, StoreType.STORE_5);
-          } else if (index == 2) {
+          } else if (option == 2) {
             storeItemFromInventory(slot, StoreType.STORE_ALL);
-          } else if (index == 3) {
+          } else if (option == 3) {
             storeItemFromInventory(slot, StoreType.STORE_X);
           }
           return true;

@@ -10,11 +10,11 @@ import com.palidinodh.osrscore.model.player.Player;
 public class StakeWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.CUSTOM_STAKE, WidgetId.CUSTOM_STAKE_INVENTORY};
+    return new int[] { WidgetId.CUSTOM_STAKE, WidgetId.CUSTOM_STAKE_INVENTORY };
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (widgetId == WidgetId.CUSTOM_STAKE) {
       if (player.getDuel().getState() == Duel.State.CUSTOM_STAKE
           || player.getDuel().getState() == Duel.State.ACCEPT_CUSTOM_STAKE) {
@@ -23,7 +23,7 @@ public class StakeWidget implements WidgetHandler {
             player.getDuel().acceptCustomStake();
             break;
           case 28:
-            switch (index) {
+            switch (option) {
               case 0:
                 player.getDuel().removeOffer(slot, itemId, 1);
                 break;
@@ -54,7 +54,7 @@ public class StakeWidget implements WidgetHandler {
     } else if (widgetId == WidgetId.CUSTOM_STAKE_INVENTORY) {
       if (player.getDuel().getState() == Duel.State.CUSTOM_STAKE
           || player.getDuel().getState() == Duel.State.ACCEPT_CUSTOM_STAKE) {
-        switch (index) {
+        switch (option) {
           case 0:
             player.getDuel().addOffer(slot, itemId, 1);
             break;

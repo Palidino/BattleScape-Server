@@ -149,7 +149,7 @@ public class WildernessDiary extends AchievementDiary {
   }
 
   @Override
-  public void mapObjectOption(Player player, int index, MapObject mapObject) {
+  public void mapObjectOption(Player player, int option, MapObject mapObject) {
     if (mapObject.getId() == 411 && mapObject.getX() == 2947 && mapObject.getY() == 3820) {
       // addCompletedTask(player, WildernessTask.WILDERNESS_ALTAR);
     } else if (mapObject.getId() == 410
@@ -170,8 +170,8 @@ public class WildernessDiary extends AchievementDiary {
   }
 
   @Override
-  public void npcOption(Player player, int index, Npc npc) {
-    if (npc.getId() == NpcId.MAGE_OF_ZAMORAK_2581 && index == 3) {
+  public void npcOption(Player player, int option, Npc npc) {
+    if (npc.getId() == NpcId.MAGE_OF_ZAMORAK_2581 && option == 3) {
       // addCompletedTask(player, WildernessTask.MAGE_OF_ZAMORAK);
     }
   }
@@ -186,30 +186,28 @@ enum WildernessTask {
   CAST_ALCHEMY(new AchievementDiaryTask("Cast High Alchemy at the Fountain of Rune.", MEDIUM)), // not
                                                                                                 // done
   LEVER(new AchievementDiaryTask("Enter the Wilderness from the Ardougne or Edgeville lever",
-      MEDIUM)), WILDERNESS_ALTAR(
-          new AchievementDiaryTask("Pray at the Chaos Temple in level 38, Western Wilderness",
-              MEDIUM)), CHAOS_TEMPLE(
-                  new AchievementDiaryTask("Enter the Chaos Runecrafting temple.", MEDIUM)), // not
+      MEDIUM)),
+  WILDERNESS_ALTAR(
+      new AchievementDiaryTask("Pray at the Chaos Temple in level 38, Western Wilderness", MEDIUM)),
+  CHAOS_TEMPLE(new AchievementDiaryTask("Enter the Chaos Runecrafting temple.", MEDIUM)), // not
+                                                                                          // done
+  MAMMOTH(new AchievementDiaryTask("Kill a mammoth.", EASY)),
+  EARTH_WARRIOR(
+      new AchievementDiaryTask("Kill an earth warrior in the Wilderness beneath Edgeville.", EASY)),
+  DEMONIC_RUINS(
+      new AchievementDiaryTask("Restore some Prayer points at the Demonic Ruins.", MEDIUM)), // not
                                                                                              // done
-  MAMMOTH(new AchievementDiaryTask("Kill a mammoth.", EASY)), EARTH_WARRIOR(
-      new AchievementDiaryTask("Kill an earth warrior in the Wilderness beneath Edgeville.",
-          EASY)), DEMONIC_RUINS(
-              new AchievementDiaryTask("Restore some Prayer points at the Demonic Ruins.", MEDIUM)), // not
+  KING_BLACK_DRAGON(new AchievementDiaryTask("Enter the King Black Dragon Lair.", MEDIUM)),
+  SPIDER_EGGS(new AchievementDiaryTask("Collect 5 red spider's eggs from the Wilderness.", MEDIUM)), // not
                                                                                                      // done
-  KING_BLACK_DRAGON(
-      new AchievementDiaryTask("Enter the King Black Dragon Lair.", MEDIUM)), SPIDER_EGGS(
-          new AchievementDiaryTask("Collect 5 red spider's eggs from the Wilderness.", MEDIUM)), // not
-                                                                                                 // done
-  IRON_ORE(
-      new AchievementDiaryTask("Mine some iron ore in the Wilderness.", EASY)), MAGE_OF_ZAMORAK(
-          new AchievementDiaryTask("Have the Mage of Zamorak teleport you to the Abyss.",
-              EASY)), TEAM_CAPE(
-                  new AchievementDiaryTask("Equip any team cape in the Wilderness.", MEDIUM)), // not
-                                                                                               // done
+  IRON_ORE(new AchievementDiaryTask("Mine some iron ore in the Wilderness.", EASY)),
+  MAGE_OF_ZAMORAK(
+      new AchievementDiaryTask("Have the Mage of Zamorak teleport you to the Abyss.", EASY)),
+  TEAM_CAPE(new AchievementDiaryTask("Equip any team cape in the Wilderness.", MEDIUM)), // not
+                                                                                         // done
 
-  MITHRIL_ORE(
-      new AchievementDiaryTask("Mine some mithril ore in the Wilderness.", MEDIUM)), ENT_LOGS(
-          new AchievementDiaryTask("Chop some yew logs from an ent.", MEDIUM)), // not done
+  MITHRIL_ORE(new AchievementDiaryTask("Mine some mithril ore in the Wilderness.", MEDIUM)),
+  ENT_LOGS(new AchievementDiaryTask("Chop some yew logs from an ent.", MEDIUM)), // not done
   WILDERNESS_GODWARS(new AchievementDiaryTask("Enter the Wilderness God Wars Dungeon", MEDIUM)), // not
                                                                                                  // done
   WILDERNESS_AGILITY(
@@ -230,46 +228,31 @@ enum WildernessTask {
                                                                                            // done
 
   GOD_SPELL(new AchievementDiaryTask(
-      "Cast one of the 3 God spells against another player in the Wilderness.",
-      HARD)), CHARGE_AIR_ORB(
-          new AchievementDiaryTask("Charge an air orb.", HARD)), BLACK_SALAMANDER(
-              new AchievementDiaryTask("Catch a black salamander", HARD)), ADAMANT_SCIMITAR(
-                  new AchievementDiaryTask("Smith an adamant scimitar in the Resource Area.",
-                      HARD)), LAVA_DRAGON(
-                          new AchievementDiaryTask(
-                              "Kill a lava dragon and bury the bones on Lava Dragon Isle.",
-                              HARD)), CHAOS_ELEMENTAL(
-                                  new AchievementDiaryTask("Kill the Chaos Elemental.",
-                                      HARD)), DEMI_BOSSES(
-                                          new AchievementDiaryTask(
-                                              " Kill the Crazy archaeologist, Chaos Fanatic & Scorpia.",
-                                              HARD)), TROLLHEIM_SHORTCUT(
-                                                  new AchievementDiaryTask(
-                                                      "Take the Agility Shortcut from Trollheim into the Wilderness.",
-                                                      HARD)), SPIRITUAL_WARRIOR(
-                                                          new AchievementDiaryTask(
-                                                              "Kill a spiritual warrior in the Wilderness God Wars Dungeon.",
-                                                              HARD)), RAW_LAVA_EEL(
-                                                                  new AchievementDiaryTask(
-                                                                      "Fish some raw lava eel in the Wilderness.",
-                                                                      HARD)),
+      "Cast one of the 3 God spells against another player in the Wilderness.", HARD)),
+  CHARGE_AIR_ORB(new AchievementDiaryTask("Charge an air orb.", HARD)),
+  BLACK_SALAMANDER(new AchievementDiaryTask("Catch a black salamander", HARD)),
+  ADAMANT_SCIMITAR(
+      new AchievementDiaryTask("Smith an adamant scimitar in the Resource Area.", HARD)),
+  LAVA_DRAGON(
+      new AchievementDiaryTask("Kill a lava dragon and bury the bones on Lava Dragon Isle.", HARD)),
+  CHAOS_ELEMENTAL(new AchievementDiaryTask("Kill the Chaos Elemental.", HARD)),
+  DEMI_BOSSES(
+      new AchievementDiaryTask(" Kill the Crazy archaeologist, Chaos Fanatic & Scorpia.", HARD)),
+  TROLLHEIM_SHORTCUT(new AchievementDiaryTask(
+      "Take the Agility Shortcut from Trollheim into the Wilderness.", HARD)),
+  SPIRITUAL_WARRIOR(new AchievementDiaryTask(
+      "Kill a spiritual warrior in the Wilderness God Wars Dungeon.", HARD)),
+  RAW_LAVA_EEL(new AchievementDiaryTask("Fish some raw lava eel in the Wilderness.", HARD)),
 
-  WILDY_BOSSES(
-      new AchievementDiaryTask("Kill Callisto, Venenatis & Vet'ion.", ELITE)), GHORROCK_TELEPORT(
-          new AchievementDiaryTask("Teleport to Ghorrock.", ELITE)), DARK_CRAB(
-              new AchievementDiaryTask("Fish and cook a dark crab in the Resource Area.",
-                  ELITE)), RUNE_SCIMITAR(
-                      new AchievementDiaryTask(
-                          " Smith a rune scimitar from scratch in the Resource Area.",
-                          ELITE)), ROGUES_CASTLE_CHEST(
-                              new AchievementDiaryTask("Steal from the Chest (Rogues' Castle).",
-                                  ELITE)), SPIRITUAL_MAGE(
-                                      new AchievementDiaryTask(
-                                          "Slay a spiritual mage inside the Wilderness God Wars Dungeon.",
-                                          ELITE)), MAGIC_LOGS(
-                                              new AchievementDiaryTask(
-                                                  "Cut and burn some magic logs in the Resource Area.",
-                                                  ELITE));
+  WILDY_BOSSES(new AchievementDiaryTask("Kill Callisto, Venenatis & Vet'ion.", ELITE)),
+  GHORROCK_TELEPORT(new AchievementDiaryTask("Teleport to Ghorrock.", ELITE)),
+  DARK_CRAB(new AchievementDiaryTask("Fish and cook a dark crab in the Resource Area.", ELITE)),
+  RUNE_SCIMITAR(
+      new AchievementDiaryTask(" Smith a rune scimitar from scratch in the Resource Area.", ELITE)),
+  ROGUES_CASTLE_CHEST(new AchievementDiaryTask("Steal from the Chest (Rogues' Castle).", ELITE)),
+  SPIRITUAL_MAGE(new AchievementDiaryTask(
+      "Slay a spiritual mage inside the Wilderness God Wars Dungeon.", ELITE)),
+  MAGIC_LOGS(new AchievementDiaryTask("Cut and burn some magic logs in the Resource Area.", ELITE));
 
 
   private AchievementDiaryTask task;

@@ -12,11 +12,11 @@ import lombok.var;
 public class ClanChatWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.CLAN_CHAT, WidgetId.CLAN_CHAT_OPTIONS};
+    return new int[] { WidgetId.CLAN_CHAT, WidgetId.CLAN_CHAT_OPTIONS };
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {
       return;
     }
@@ -34,7 +34,7 @@ public class ClanChatWidget implements WidgetHandler {
       var settingValue = RsClanRank.NOT_IN_CLAN;
       switch (childId) {
         case 10:
-          if (index == 0) {
+          if (option == 0) {
             player.getGameEncoder().sendEnterString("Enter chat prefix:",
                 new ValueEnteredEvent.StringEvent() {
                   @Override
@@ -48,7 +48,7 @@ public class ClanChatWidget implements WidgetHandler {
                     }
                   }
                 });
-          } else if (index == 1) {
+          } else if (option == 1) {
             var disabled = !player.getMessaging().getClanChatDisabled();
             player.getMessaging().setClanChatDisabled(disabled);
             var name = player.getMessaging().getMyClanChatName();
@@ -62,63 +62,63 @@ public class ClanChatWidget implements WidgetHandler {
           }
           break;
         case 13:
-          if (index == 0) {
+          if (option == 0) {
             settingValue = RsClanRank.ANYONE;
-          } else if (index == 1) {
+          } else if (option == 1) {
             settingValue = RsClanRank.ANY_FRIENDS;
-          } else if (index == 2) {
+          } else if (option == 2) {
             settingValue = RsClanRank.RECRUIT;
-          } else if (index == 3) {
+          } else if (option == 3) {
             settingValue = RsClanRank.CORPORAL;
-          } else if (index == 4) {
+          } else if (option == 4) {
             settingValue = RsClanRank.SERGEANT;
-          } else if (index == 5) {
+          } else if (option == 5) {
             settingValue = RsClanRank.LIEUTENANT;
-          } else if (index == 6) {
+          } else if (option == 6) {
             settingValue = RsClanRank.CAPTAIN;
-          } else if (index == 7) {
+          } else if (option == 7) {
             settingValue = RsClanRank.GENERAL;
-          } else if (index == 8) {
+          } else if (option == 8) {
             settingValue = RsClanRank.ONLY_ME;
           }
           player.getMessaging().sendClanSetupEnterLimit(settingValue);
           RequestManager.getInstance().addClanSetting(player, Clan.ENTER_LIMIT, settingValue);
           break;
         case 16:
-          if (index == 0) {
+          if (option == 0) {
             settingValue = RsClanRank.ANYONE;
-          } else if (index == 1) {
+          } else if (option == 1) {
             settingValue = RsClanRank.ANY_FRIENDS;
-          } else if (index == 2) {
+          } else if (option == 2) {
             settingValue = RsClanRank.RECRUIT;
-          } else if (index == 3) {
+          } else if (option == 3) {
             settingValue = RsClanRank.CORPORAL;
-          } else if (index == 4) {
+          } else if (option == 4) {
             settingValue = RsClanRank.SERGEANT;
-          } else if (index == 5) {
+          } else if (option == 5) {
             settingValue = RsClanRank.LIEUTENANT;
-          } else if (index == 6) {
+          } else if (option == 6) {
             settingValue = RsClanRank.CAPTAIN;
-          } else if (index == 7) {
+          } else if (option == 7) {
             settingValue = RsClanRank.GENERAL;
-          } else if (index == 8) {
+          } else if (option == 8) {
             settingValue = RsClanRank.ONLY_ME;
           }
           player.getMessaging().sendClanSetupTalkLimit(settingValue);
           RequestManager.getInstance().addClanSetting(player, Clan.TALK_LIMIT, settingValue);
           break;
         case 19:
-          if (index == 3) {
+          if (option == 3) {
             settingValue = RsClanRank.CORPORAL;
-          } else if (index == 4) {
+          } else if (option == 4) {
             settingValue = RsClanRank.SERGEANT;
-          } else if (index == 5) {
+          } else if (option == 5) {
             settingValue = RsClanRank.LIEUTENANT;
-          } else if (index == 6) {
+          } else if (option == 6) {
             settingValue = RsClanRank.CAPTAIN;
-          } else if (index == 7) {
+          } else if (option == 7) {
             settingValue = RsClanRank.GENERAL;
-          } else if (index == 8) {
+          } else if (option == 8) {
             settingValue = RsClanRank.ONLY_ME;
           }
           player.getMessaging().sendClanSetupKickLimit(settingValue);

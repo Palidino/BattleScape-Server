@@ -20,7 +20,7 @@ public class WildernessArea extends Area {
   }
 
   @Override
-  public boolean mapObjectOptionHook(int index, MapObject mapObject) {
+  public boolean mapObjectOptionHook(int option, MapObject mapObject) {
     var player = getPlayer();
     switch (mapObject.getId()) {
       case ObjectId.SHIPS_LADDER:
@@ -63,14 +63,14 @@ public class WildernessArea extends Area {
       case ObjectId.OBELISK_14829:
       case ObjectId.OBELISK_14830:
       case ObjectId.OBELISK_14831:
-        if (index == 0) {
+        if (option == 0) {
           activateObelisk(mapObject, null);
-        } else if (index == 1) {
+        } else if (option == 1) {
           if (player.hasAttribute("wilderness_obelisk")) {
             activateObelisk(mapObject,
                 (WildernessObelisk) player.getAttribute("wilderness_obelisk"));
           }
-        } else if (index == 2) {
+        } else if (option == 2) {
           var options = new DialogueOption[WildernessObelisk.values().length];
           for (var i = 0; i < WildernessObelisk.values().length; i++) {
             options[i] = new DialogueOption(WildernessObelisk.get(i).getFormattedName());

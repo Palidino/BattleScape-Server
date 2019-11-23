@@ -14,7 +14,7 @@ public class JossiksPrayerBooksWidget implements WidgetHandler {
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     int bookId = -1;
     int price = 1;
     switch (childId) {

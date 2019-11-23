@@ -151,7 +151,7 @@ public class FaladorDiary extends AchievementDiary {
   }
 
   @Override
-  public void mapObjectOption(Player player, int index, MapObject mapObject) {
+  public void mapObjectOption(Player player, int option, MapObject mapObject) {
     if (mapObject.getId() == 172 && mapObject.getX() == 2914 && mapObject.getY() == 3452
         && player.getInventory().hasItem(ItemId.CRYSTAL_KEY)) {
       addCompletedTask(player, FaladorTask.CRYSTAL_CHEST);
@@ -176,7 +176,7 @@ public class FaladorDiary extends AchievementDiary {
   }
 
   @Override
-  public void npcOption(Player player, int index, Npc npc) {
+  public void npcOption(Player player, int option, Npc npc) {
     if (npc.getId() == NpcId.SECURITY_GUARD) {
       addCompletedTask(player, FaladorTask.SECURITY_BOOK);
     }

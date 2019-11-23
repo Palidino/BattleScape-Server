@@ -9,11 +9,11 @@ import com.palidinodh.osrscore.model.player.Player;
 public class TradeWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.TRADE, WidgetId.TRADE_INVENTORY, WidgetId.ACCEPT_TRADE};
+    return new int[] { WidgetId.TRADE, WidgetId.TRADE_INVENTORY, WidgetId.ACCEPT_TRADE };
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {
       return;
     }
@@ -23,15 +23,15 @@ public class TradeWidget implements WidgetHandler {
           player.getTrade().accept1();
           break;
         case 25:
-          if (index == 0) {
+          if (option == 0) {
             player.getTrade().removeOffer(itemId, slot, 1);
-          } else if (index == 1) {
+          } else if (option == 1) {
             player.getTrade().removeOffer(itemId, slot, 5);
-          } else if (index == 2) {
+          } else if (option == 2) {
             player.getTrade().removeOffer(itemId, slot, 10);
-          } else if (index == 3) {
+          } else if (option == 3) {
             player.getTrade().removeOffer(itemId, slot, Item.MAX_AMOUNT);
-          } else if (index == 4) {
+          } else if (option == 4) {
             player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
               @Override
               public void execute(int value) {
@@ -44,15 +44,15 @@ public class TradeWidget implements WidgetHandler {
     } else if (widgetId == WidgetId.TRADE_INVENTORY) {
       switch (childId) {
         case 0:
-          if (index == 0) {
+          if (option == 0) {
             player.getTrade().offerItem(itemId, slot, 1);
-          } else if (index == 1) {
+          } else if (option == 1) {
             player.getTrade().offerItem(itemId, slot, 5);
-          } else if (index == 2) {
+          } else if (option == 2) {
             player.getTrade().offerItem(itemId, slot, 10);
-          } else if (index == 3) {
+          } else if (option == 3) {
             player.getTrade().offerItem(itemId, slot, Item.MAX_AMOUNT);
-          } else if (index == 4) {
+          } else if (option == 4) {
             player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
               @Override
               public void execute(int value) {

@@ -94,7 +94,7 @@ public class TrainingDayDiary extends AchievementDiary {
   }
 
   @Override
-  public void npcOption(Player player, int index, Npc npc) {
+  public void npcOption(Player player, int option, Npc npc) {
     if (npc.getId() == NpcId.LOYALTY_MANAGER) {
       addCompletedTask(player, TrainingDayTask.TALK_LOYALTY_MANAGER);
     }

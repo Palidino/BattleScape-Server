@@ -12,7 +12,7 @@ public class QuestWidget implements WidgetHandler {
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (widgetId == WidgetId.QUEST_CONTAINER) {
       if (childId == 3) {
         player.getWidgetManager().sendQuestOverlay(WidgetId.QUEST);

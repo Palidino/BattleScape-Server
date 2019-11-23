@@ -24,12 +24,12 @@ import com.palidinodh.util.PTime;
 
 public class MapObject0 {
   // Shaking box
-  public static void mapObject721(Player player, int index, MapObject mapObject) {
+  public static void mapObject721(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Web
-  public static void mapObject733(Player player, int index, MapObject mapObject) {
+  public static void mapObject733(Player player, int option, MapObject mapObject) {
     if ((player.getEquipment().getWeaponDef().getWeaponType() == null
         || !player.getEquipment().getWeaponDef().getWeaponType().hasSlash())
         && !player.getInventory().hasItem(946)) {
@@ -47,7 +47,7 @@ public class MapObject0 {
   }
 
   // Dramen tree
-  public static void mapObject1292(Player player, int index, MapObject mapObject) {
+  public static void mapObject1292(Player player, int option, MapObject mapObject) {
     if (!player.getInventory().hasItem(" axe") && !player.getEquipment().hasItem(" axe")) {
       player.getGameEncoder().sendMessage("You need an axe to chop down this tree.");
       return;
@@ -62,22 +62,22 @@ public class MapObject0 {
   }
 
   // Spirit tree
-  public static void mapObject1293(Player player, int index, MapObject mapObject) {
+  public static void mapObject1293(Player player, int option, MapObject mapObject) {
     player.openDialogue("spirittree", 0);
   }
 
   // Spirit tree
-  public static void mapObject1294(Player player, int index, MapObject mapObject) {
+  public static void mapObject1294(Player player, int option, MapObject mapObject) {
     player.openDialogue("spirittree", 0);
   }
 
   // Spirit tree
-  public static void mapObject1295(Player player, int index, MapObject mapObject) {
+  public static void mapObject1295(Player player, int option, MapObject mapObject) {
     player.openDialogue("spirittree", 0);
   }
 
   // Trapdoor
-  public static void mapObject1579(Player player, int index, MapObject mapObject) {
+  public static void mapObject1579(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 3097 && mapObject.getY() == 3468) {
       // Edgeville dungeon
       player.getMovement().ladderUpTeleport(new Tile(3096, 9867));
@@ -85,7 +85,7 @@ public class MapObject0 {
   }
 
   // Trapdoor
-  public static void mapObject1738(Player player, int index, MapObject mapObject) {
+  public static void mapObject1738(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 3008 && mapObject.getY() == 3150) {
       // Asgarnian Ice Dungeon entrance
       Tile tile = new Tile(3007, 9550, 0);
@@ -94,7 +94,7 @@ public class MapObject0 {
   }
 
   // Lever
-  public static void mapObject1815(Player player, int index, MapObject mapObject) {
+  public static void mapObject1815(Player player, int option, MapObject mapObject) {
     if (player.getInventory().hasItem(ItemId.BLOODY_KEY)
         || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
       player.getGameEncoder().sendMessage("You can't use this right now.");
@@ -119,7 +119,7 @@ public class MapObject0 {
   }
 
   // Lever
-  public static void mapObject1816(Player player, int index, MapObject mapObject) {
+  public static void mapObject1816(Player player, int option, MapObject mapObject) {
     if (player.getInventory().hasItem(ItemId.BLOODY_KEY)
         || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
       player.getGameEncoder().sendMessage("You can't use this right now.");
@@ -133,19 +133,19 @@ public class MapObject0 {
                 + player.getMovement().getTeleportBlockRemaining() + ".");
         return;
       }
-      if (index == 0) {
+      if (option == 0) {
         Tile tile = new Tile(2271, 4680, 0);
         player.getMovement().animatedTeleport(tile, 2140, Magic.NORMAL_MAGIC_ANIMATION_START,
             Magic.NORMAL_MAGIC_ANIMATION_END, null, Magic.NORMAL_MAGIC_GRAPHIC, null, 1, 2);
         player.clearHits();
-      } else if (index == 4) {
+      } else if (option == 4) {
         player.openDialogue("bossinstance", 3);
       }
     }
   }
 
   // Lever
-  public static void mapObject1817(Player player, int index, MapObject mapObject) {
+  public static void mapObject1817(Player player, int option, MapObject mapObject) {
     if (player.getInventory().hasItem(ItemId.BLOODY_KEY)
         || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
       player.getGameEncoder().sendMessage("You can't use this right now.");
@@ -162,7 +162,7 @@ public class MapObject0 {
   }
 
   // Crumbling wall
-  public static void mapObject1948(Player player, int index, MapObject mapObject) {
+  public static void mapObject1948(Player player, int option, MapObject mapObject) {
     if (player.getY() != mapObject.getY() || player.getX() > mapObject.getX()) {
       return;
     }
@@ -225,7 +225,7 @@ public class MapObject0 {
   }
 
   // Anvil
-  public static void mapObject2031(Player player, int index, MapObject mapObject) {
+  public static void mapObject2031(Player player, int option, MapObject mapObject) {
     if (player.getInventory().hasItem(Smithing.BRONZE_BAR_ID)) {
       Smithing.openSmith(player, Smithing.BRONZE_BAR_ID);
     } else if (player.getInventory().hasItem(Smithing.IRON_BAR_ID)) {
@@ -244,7 +244,7 @@ public class MapObject0 {
   }
 
   // Anvil
-  public static void mapObject2097(Player player, int index, MapObject mapObject) {
+  public static void mapObject2097(Player player, int option, MapObject mapObject) {
     if (player.getInventory().hasItem(Smithing.BRONZE_BAR_ID)) {
       Smithing.openSmith(player, Smithing.BRONZE_BAR_ID);
     } else if (player.getInventory().hasItem(Smithing.IRON_BAR_ID)) {
@@ -263,7 +263,7 @@ public class MapObject0 {
   }
 
   // Door
-  public static void mapObject2102(Player player, int index, MapObject mapObject) {
+  public static void mapObject2102(Player player, int option, MapObject mapObject) {
     // Slayer Tower bloodvelds
     if (player.getY() >= 3556) {
       player.getMovement().teleport(player.getX(), 3555, 1);
@@ -273,7 +273,7 @@ public class MapObject0 {
   }
 
   // Door
-  public static void mapObject2104(Player player, int index, MapObject mapObject) {
+  public static void mapObject2104(Player player, int option, MapObject mapObject) {
     // Slayer Tower bloodvelds
     if (player.getY() >= 3556) {
       player.getMovement().teleport(player.getX(), 3555, 1);
@@ -283,35 +283,35 @@ public class MapObject0 {
   }
 
   // Staircase
-  public static void mapObject2114(Player player, int index, MapObject mapObject) {
+  public static void mapObject2114(Player player, int option, MapObject mapObject) {
     // Slayer Tower
     Tile tile = new Tile(3433, 3537, 1);
     player.getMovement().ladderUpTeleport(tile);
   }
 
   // Staircase
-  public static void mapObject2118(Player player, int index, MapObject mapObject) {
+  public static void mapObject2118(Player player, int option, MapObject mapObject) {
     // Slayer Tower
     Tile tile = new Tile(3438, 3537, 0);
     player.getMovement().ladderDownTeleport(tile);
   }
 
   // Staircase
-  public static void mapObject2119(Player player, int index, MapObject mapObject) {
+  public static void mapObject2119(Player player, int option, MapObject mapObject) {
     // Slayer Tower
     Tile tile = new Tile(3417, 3540, 2);
     player.getMovement().ladderUpTeleport(tile);
   }
 
   // Staircase
-  public static void mapObject2120(Player player, int index, MapObject mapObject) {
+  public static void mapObject2120(Player player, int option, MapObject mapObject) {
     // Slayer Tower
     Tile tile = new Tile(3412, 3540, 1);
     player.getMovement().ladderDownTeleport(tile);
   }
 
   // Loose Railing
-  public static void mapObject2186(Player player, int index, MapObject mapObject) {
+  public static void mapObject2186(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2515 && mapObject.getY() == 3161) {
       if (player.getY() >= 3161) {
         player.getMovement().teleport(2503, 3191);
@@ -322,7 +322,7 @@ public class MapObject0 {
   }
 
   // Gate
-  public static void mapObject2623(Player player, int index, MapObject mapObject) {
+  public static void mapObject2623(Player player, int option, MapObject mapObject) {
     // Taverley Dungeon blue dragons door
     if (player.getX() >= 2924) {
       player.getMovement().teleport(2923, player.getY(), 0);
@@ -332,7 +332,7 @@ public class MapObject0 {
   }
 
   // (Heroes Guild) Door
-  public static void mapObject2624(Player player, int index, MapObject mapObject) {
+  public static void mapObject2624(Player player, int option, MapObject mapObject) {
     if (mapObject.getOriginal() != null || mapObject.getAttachment() != null) {
       return;
     }
@@ -353,7 +353,7 @@ public class MapObject0 {
   }
 
   // (Heroes Guild) Door
-  public static void mapObject2625(Player player, int index, MapObject mapObject) {
+  public static void mapObject2625(Player player, int option, MapObject mapObject) {
     if (mapObject.getOriginal() != null || mapObject.getAttachment() != null) {
       return;
     }
@@ -374,17 +374,17 @@ public class MapObject0 {
   }
 
   // Legends Guild door
-  public static void mapObject2896(Player player, int index, MapObject mapObject) {
+  public static void mapObject2896(Player player, int option, MapObject mapObject) {
     Region.openDoors(player, mapObject);
   }
 
   // Legends Guild door
-  public static void mapObject2897(Player player, int index, MapObject mapObject) {
+  public static void mapObject2897(Player player, int option, MapObject mapObject) {
     Region.openDoors(player, mapObject);
   }
 
   // Fire Wall
-  public static void mapObject2908(Player player, int index, MapObject mapObject) {
+  public static void mapObject2908(Player player, int option, MapObject mapObject) {
     if (!player.carryingItem(730)) {
       player.getGameEncoder().sendMessage("You need a Binding book to enter.");
       return;
@@ -393,7 +393,7 @@ public class MapObject0 {
   }
 
   // Fire Wall
-  public static void mapObject2909(Player player, int index, MapObject mapObject) {
+  public static void mapObject2909(Player player, int option, MapObject mapObject) {
     if (!player.carryingItem(730)) {
       player.getGameEncoder().sendMessage("You need a Binding book to enter.");
       return;
@@ -402,7 +402,7 @@ public class MapObject0 {
   }
 
   // Bookcase
-  public static void mapObject2911(Player player, int index, MapObject mapObject) {
+  public static void mapObject2911(Player player, int option, MapObject mapObject) {
     if (player.getSkills().getLevel(Skills.AGILITY) < 50) {
       player.getGameEncoder().sendMessage("You need an Agility level of 50 to do this.");
       return;
@@ -412,7 +412,7 @@ public class MapObject0 {
   }
 
   // Ancient Gate
-  public static void mapObject2912(Player player, int index, MapObject mapObject) {
+  public static void mapObject2912(Player player, int option, MapObject mapObject) {
     if (mapObject.getOriginal() != null || mapObject.getAttachment() != null) {
       return;
     }
@@ -437,7 +437,7 @@ public class MapObject0 {
   }
 
   // Ancient Gate
-  public static void mapObject2913(Player player, int index, MapObject mapObject) {
+  public static void mapObject2913(Player player, int option, MapObject mapObject) {
     if (mapObject.getOriginal() != null || mapObject.getAttachment() != null) {
       return;
     }
@@ -462,12 +462,12 @@ public class MapObject0 {
   }
 
   // Crevice
-  public static void mapObject2918(Player player, int index, MapObject mapObject) {
+  public static void mapObject2918(Player player, int option, MapObject mapObject) {
     player.getMovement().ladderDownTeleport(new Tile(2795, 9338, 0));
   }
 
   // Boulder
-  public static void mapObject2919(Player player, int index, MapObject mapObject) {
+  public static void mapObject2919(Player player, int option, MapObject mapObject) {
     if (player.getY() >= 9329) {
       player.getMovement().teleport(player.getX(), 9326, 0);
     } else {
@@ -476,7 +476,7 @@ public class MapObject0 {
   }
 
   // Boulder
-  public static void mapObject2920(Player player, int index, MapObject mapObject) {
+  public static void mapObject2920(Player player, int option, MapObject mapObject) {
     if (player.getY() >= 9325) {
       player.getMovement().teleport(player.getX(), 9322, 0);
     } else {
@@ -485,7 +485,7 @@ public class MapObject0 {
   }
 
   // Boulder
-  public static void mapObject2921(Player player, int index, MapObject mapObject) {
+  public static void mapObject2921(Player player, int option, MapObject mapObject) {
     if (player.getY() >= 9321) {
       player.getMovement().teleport(player.getX(), 9318, 0);
     } else {
@@ -494,7 +494,7 @@ public class MapObject0 {
   }
 
   // Ancient Gate
-  public static void mapObject2922(Player player, int index, MapObject mapObject) {
+  public static void mapObject2922(Player player, int option, MapObject mapObject) {
     if (mapObject.getOriginal() != null || mapObject.getAttachment() != null) {
       return;
     } else if (player.getSkills().getLevel(Skills.STRENGTH) < 50) {
@@ -511,7 +511,7 @@ public class MapObject0 {
   }
 
   // Ancient Gate
-  public static void mapObject2923(Player player, int index, MapObject mapObject) {
+  public static void mapObject2923(Player player, int option, MapObject mapObject) {
     if (mapObject.getOriginal() != null || mapObject.getAttachment() != null) {
       return;
     } else if (player.getSkills().getLevel(Skills.STRENGTH) < 50) {
@@ -528,7 +528,7 @@ public class MapObject0 {
   }
 
   // Jagged wall
-  public static void mapObject2926(Player player, int index, MapObject mapObject) {
+  public static void mapObject2926(Player player, int option, MapObject mapObject) {
     if (player.getX() == 2790 && player.getY() == 9295) {
       player.getMovement().teleport(2789, 9296, 0);
     } else if (player.getX() == 2789 && player.getY() == 9296) {
@@ -537,7 +537,7 @@ public class MapObject0 {
   }
 
   // Marked wall
-  public static void mapObject2927(Player player, int index, MapObject mapObject) {
+  public static void mapObject2927(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2779 && mapObject.getY() == 9305) {
       if (player.getCombat().getLegendsQuest() == 0) {
         if (player.getInventory().getId(0) != 566 || player.getInventory().getId(1) != 558
@@ -561,7 +561,7 @@ public class MapObject0 {
   }
 
   // Ancient Gate
-  public static void mapObject2930(Player player, int index, MapObject mapObject) {
+  public static void mapObject2930(Player player, int option, MapObject mapObject) {
     if (player.getCombat().getLegendsQuest() == 0) {
       player.getGameEncoder().sendMessage("I don't think I should go in there...");
       return;
@@ -570,12 +570,12 @@ public class MapObject0 {
   }
 
   // Winch
-  public static void mapObject2934(Player player, int index, MapObject mapObject) {
+  public static void mapObject2934(Player player, int option, MapObject mapObject) {
     player.getGameEncoder().sendMessage("I need to find a way to climb down.");
   }
 
   // Rocky Ledge
-  public static void mapObject2959(Player player, int index, MapObject mapObject) {
+  public static void mapObject2959(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2377 && mapObject.getY() == 4717) {
       if (player.getX() != 2378 || player.getY() != 4717) {
         return;
@@ -603,7 +603,7 @@ public class MapObject0 {
   }
 
   // Rocky Ledge
-  public static void mapObject2960(Player player, int index, MapObject mapObject) {
+  public static void mapObject2960(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2377 && mapObject.getY() == 4728) {
       if (player.getX() != 2377 || player.getY() != 4727) {
         return;
@@ -631,7 +631,7 @@ public class MapObject0 {
   }
 
   // Rocky Ledge
-  public static void mapObject2961(Player player, int index, MapObject mapObject) {
+  public static void mapObject2961(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2382 && mapObject.getY() == 4729) {
       if (player.getX() != 2382 || player.getY() != 4730) {
         return;
@@ -659,7 +659,7 @@ public class MapObject0 {
   }
 
   // Rocks
-  public static void mapObject2962(Player player, int index, MapObject mapObject) {
+  public static void mapObject2962(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2387 && mapObject.getY() == 4728) {
       if (player.getX() != 2387 || player.getY() != 4727) {
         return;
@@ -687,7 +687,7 @@ public class MapObject0 {
   }
 
   // Rocks
-  public static void mapObject2963(Player player, int index, MapObject mapObject) {
+  public static void mapObject2963(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2390 && mapObject.getY() == 4724) {
       if (player.getX() != 2390 || player.getY() != 4725) {
         return;
@@ -715,7 +715,7 @@ public class MapObject0 {
   }
 
   // Rocks
-  public static void mapObject2964(Player player, int index, MapObject mapObject) {
+  public static void mapObject2964(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2390 && mapObject.getY() == 4718) {
       if (player.getX() != 2390 || player.getY() != 4719) {
         return;
@@ -743,17 +743,17 @@ public class MapObject0 {
   }
 
   // Mossy rock
-  public static void mapObject2965(Player player, int index, MapObject mapObject) {
+  public static void mapObject2965(Player player, int option, MapObject mapObject) {
     player.getGameEncoder().sendMessage("These rocks look somehow manufactured.");
   }
 
   // Furnace
-  public static void mapObject2966(Player player, int index, MapObject mapObject) {
+  public static void mapObject2966(Player player, int option, MapObject mapObject) {
     player.getGameEncoder().sendMessage("Perhaps I should use this to forge something...");
   }
 
   // Recess
-  public static void mapObject2969(Player player, int index, MapObject mapObject) {
+  public static void mapObject2969(Player player, int option, MapObject mapObject) {
     if (player.getCombat().getLegendsQuest() >= 2) {
       player.getGameEncoder().sendMessage("The wall appears to glow from the crystal.");
       return;
@@ -768,7 +768,7 @@ public class MapObject0 {
   }
 
   // Shimmering field
-  public static void mapObject2971(Player player, int index, MapObject mapObject) {
+  public static void mapObject2971(Player player, int option, MapObject mapObject) {
     if (player.getCombat().getLegendsQuest() < 2) {
       player.getGameEncoder()
           .sendMessage("You try to pass through the field, but something prevents you.");
@@ -782,19 +782,19 @@ public class MapObject0 {
   }
 
   // Open chest
-  public static void mapObject3194(Player player, int index, MapObject mapObject) {
+  public static void mapObject3194(Player player, int option, MapObject mapObject) {
     player.getBank().open();
   }
 
   // Cave entrance
-  public static void mapObject3650(Player player, int index, MapObject mapObject) {
+  public static void mapObject3650(Player player, int option, MapObject mapObject) {
     // Mos Le'Harmless Cave
     Tile tile = new Tile(3748, 9373, 0);
     player.getMovement().ladderDownTeleport(tile);
   }
 
   // Rope
-  public static void mapObject3832(Player player, int index, MapObject mapObject) {
+  public static void mapObject3832(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 3508 && mapObject.getY() == 9494) {
       player.getMovement().ladderUpTeleport(new Tile(3509, 9496, 2));
       player.getController().stopWithTeleport();
@@ -802,12 +802,12 @@ public class MapObject0 {
   }
 
   // Furnace
-  public static void mapObject4304(Player player, int index, MapObject mapObject) {
+  public static void mapObject4304(Player player, int option, MapObject mapObject) {
     Smithing.openSmelt(player);
   }
 
   // Anvil
-  public static void mapObject4306(Player player, int index, MapObject mapObject) {
+  public static void mapObject4306(Player player, int option, MapObject mapObject) {
     if (player.getInventory().hasItem(Smithing.BRONZE_BAR_ID)) {
       Smithing.openSmith(player, Smithing.BRONZE_BAR_ID);
     } else if (player.getInventory().hasItem(Smithing.IRON_BAR_ID)) {
@@ -826,62 +826,62 @@ public class MapObject0 {
   }
 
   // Iron ladder
-  public static void mapObject4413(Player player, int index, MapObject mapObject) {
+  public static void mapObject4413(Player player, int option, MapObject mapObject) {
     player.getMovement().ladderUpTeleport(new Tile(2515, 4629, player.getHeight()));
   }
 
   // Iron ladder
-  public static void mapObject4485(Player player, int index, MapObject mapObject) {
+  public static void mapObject4485(Player player, int option, MapObject mapObject) {
     player.getMovement().ladderDownTeleport(new Tile(2515, 4632, player.getHeight()));
   }
 
   // Cart tunnel
-  public static void mapObject4913(Player player, int index, MapObject mapObject) {
+  public static void mapObject4913(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 3440 && mapObject.getY() == 3232) {
       player.getMovement().ladderDownTeleport(new Tile(3436, 9637));
     }
   }
 
   // Cart tunnel
-  public static void mapObject4914(Player player, int index, MapObject mapObject) {
+  public static void mapObject4914(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 3430 && mapObject.getY() == 3233) {
       player.getMovement().ladderDownTeleport(new Tile(3405, 9631));
     }
   }
 
   // Cart tunnel
-  public static void mapObject4915(Player player, int index, MapObject mapObject) {
+  public static void mapObject4915(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 3429 && mapObject.getY() == 3225) {
       player.getMovement().ladderDownTeleport(new Tile(3409, 9623));
     }
   }
 
   // Mine cart
-  public static void mapObject4918(Player player, int index, MapObject mapObject) {
+  public static void mapObject4918(Player player, int option, MapObject mapObject) {
     player.getMovement().teleport(player.getX() >= 3446 ? 3444 : 3446, 3236);
   }
 
   // Cart tunnel
-  public static void mapObject4920(Player player, int index, MapObject mapObject) {
+  public static void mapObject4920(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 3437 && mapObject.getY() == 9637) {
       player.getMovement().ladderUpTeleport(new Tile(3441, 3232));
     }
   }
 
   // Cart tunnel
-  public static void mapObject4921(Player player, int index, MapObject mapObject) {
+  public static void mapObject4921(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 3404 && mapObject.getY() == 9631) {
       player.getMovement().ladderUpTeleport(new Tile(3429, 3233));
     }
   }
 
   // Water Valve
-  public static void mapObject4924(Player player, int index, MapObject mapObject) {
+  public static void mapObject4924(Player player, int option, MapObject mapObject) {
     player.getGameEncoder().sendMessage("This valve seems to already be open.");
   }
 
   // Crystal outcrop x:2792, y: 4429
-  public static void mapObject4926(Player player, int index, MapObject mapObject) {
+  public static void mapObject4926(Player player, int option, MapObject mapObject) {
     if (!player.getInventory().hasItem(1755)) {
       player.getGameEncoder().sendMessage("You need a chisel to do this.");
       return;
@@ -899,7 +899,7 @@ public class MapObject0 {
   }
 
   // Crystal outcrop x:2792, y: 4429
-  public static void mapObject4927(Player player, int index, MapObject mapObject) {
+  public static void mapObject4927(Player player, int option, MapObject mapObject) {
     if (!player.getInventory().hasItem(1755)) {
       player.getGameEncoder().sendMessage("You need a chisel to do this.");
       return;
@@ -917,7 +917,7 @@ public class MapObject0 {
   }
 
   // Crystal outcrop x:2792, y: 4429
-  public static void mapObject4928(Player player, int index, MapObject mapObject) {
+  public static void mapObject4928(Player player, int option, MapObject mapObject) {
     if (!player.getInventory().hasItem(1755)) {
       player.getGameEncoder().sendMessage("You need a chisel to do this.");
       return;
@@ -935,21 +935,21 @@ public class MapObject0 {
   }
 
   // Glowing fungus
-  public static void mapObject4932(Player player, int index, MapObject mapObject) {
+  public static void mapObject4932(Player player, int option, MapObject mapObject) {
     player.getInventory().addItem(4075, 1);
     player.getGameEncoder()
         .sendMessage("You pull the fungus from the water, it is very cold to the touch.");
   }
 
   // Glowing fungus
-  public static void mapObject4933(Player player, int index, MapObject mapObject) {
+  public static void mapObject4933(Player player, int option, MapObject mapObject) {
     player.getInventory().addItem(4075, 1);
     player.getGameEncoder()
         .sendMessage("You pull the fungus from the water, it is very cold to the touch.");
   }
 
   // Lift
-  public static void mapObject4937(Player player, int index, MapObject mapObject) {
+  public static void mapObject4937(Player player, int option, MapObject mapObject) {
     if (player.getCombat().getHauntedMine() < 2 || !player.getInventory().hasItem(4075)) {
       player.getGameEncoder()
           .sendMessage("You should take a glowing fungus with you before going down.");
@@ -959,7 +959,7 @@ public class MapObject0 {
   }
 
   // Lift
-  public static void mapObject4938(Player player, int index, MapObject mapObject) {
+  public static void mapObject4938(Player player, int option, MapObject mapObject) {
     if (player.getCombat().getHauntedMine() < 2 || !player.getInventory().hasItem(4075)) {
       player.getGameEncoder()
           .sendMessage("You should take a glowing fungus with you before going down.");
@@ -969,7 +969,7 @@ public class MapObject0 {
   }
 
   // Lift
-  public static void mapObject4940(Player player, int index, MapObject mapObject) {
+  public static void mapObject4940(Player player, int option, MapObject mapObject) {
     if (player.getCombat().getHauntedMine() < 2 || !player.getInventory().hasItem(4075)) {
       player.getGameEncoder()
           .sendMessage("You should take a glowing fungus with you before going down.");
@@ -979,52 +979,52 @@ public class MapObject0 {
   }
 
   // Points settings
-  public static void mapObject4949(Player player, int index, MapObject mapObject) {
+  public static void mapObject4949(Player player, int option, MapObject mapObject) {
     player.getGameEncoder().sendMessage("Everything looks good here.");
   }
 
   // Lever
-  public static void mapObject4950(Player player, int index, MapObject mapObject) {
+  public static void mapObject4950(Player player, int option, MapObject mapObject) {
     player.getGameEncoder().sendMessage("There is no reason to do that.");
   }
 
   // Lever
-  public static void mapObject4951(Player player, int index, MapObject mapObject) {
+  public static void mapObject4951(Player player, int option, MapObject mapObject) {
     player.getGameEncoder().sendMessage("There is no reason to do that.");
   }
 
   // Lever
-  public static void mapObject4952(Player player, int index, MapObject mapObject) {
+  public static void mapObject4952(Player player, int option, MapObject mapObject) {
     player.getGameEncoder().sendMessage("There is no reason to do that.");
   }
 
   // Lever
-  public static void mapObject4953(Player player, int index, MapObject mapObject) {
+  public static void mapObject4953(Player player, int option, MapObject mapObject) {
     player.getGameEncoder().sendMessage("There is no reason to do that.");
   }
 
   // Lever
-  public static void mapObject4954(Player player, int index, MapObject mapObject) {
+  public static void mapObject4954(Player player, int option, MapObject mapObject) {
     player.getGameEncoder().sendMessage("There is no reason to do that.");
   }
 
   // Lever
-  public static void mapObject4955(Player player, int index, MapObject mapObject) {
+  public static void mapObject4955(Player player, int option, MapObject mapObject) {
     player.getGameEncoder().sendMessage("There is no reason to do that.");
   }
 
   // Lever
-  public static void mapObject4956(Player player, int index, MapObject mapObject) {
+  public static void mapObject4956(Player player, int option, MapObject mapObject) {
     player.getGameEncoder().sendMessage("There is no reason to do that.");
   }
 
   // Lever
-  public static void mapObject4957(Player player, int index, MapObject mapObject) {
+  public static void mapObject4957(Player player, int option, MapObject mapObject) {
     player.getGameEncoder().sendMessage("There is no reason to do that.");
   }
 
   // (Haunted Mine) Door
-  public static void mapObject4962(Player player, int index, MapObject mapObject) {
+  public static void mapObject4962(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2799 && mapObject.getY() == 4453) {
       if (mapObject.isBusy() || player.getY() != mapObject.getY()) {
         return;
@@ -1040,7 +1040,7 @@ public class MapObject0 {
   }
 
   // (Haunted Mine) Large door
-  public static void mapObject4963(Player player, int index, MapObject mapObject) {
+  public static void mapObject4963(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2773 && mapObject.getY() == 4450) {
       if (mapObject.getOriginal() != null || mapObject.getAttachment() != null
           || player.getX() != mapObject.getX()) {
@@ -1062,7 +1062,7 @@ public class MapObject0 {
   }
 
   // (Haunted Mine) Large door
-  public static void mapObject4964(Player player, int index, MapObject mapObject) {
+  public static void mapObject4964(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2772 && mapObject.getY() == 4450) {
       if (mapObject.getOriginal() != null || mapObject.getAttachment() != null
           || player.getX() != mapObject.getX()) {
@@ -1084,7 +1084,7 @@ public class MapObject0 {
   }
 
   // Ladder
-  public static void mapObject4965(Player player, int index, MapObject mapObject) {
+  public static void mapObject4965(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 3422 && mapObject.getY() == 9625) {
       player.getMovement().ladderDownTeleport(new Tile(2782, 4568));
     } else if (mapObject.getX() == 3413 && mapObject.getY() == 9633) {
@@ -1093,7 +1093,7 @@ public class MapObject0 {
   }
 
   // Ladder
-  public static void mapObject4966(Player player, int index, MapObject mapObject) {
+  public static void mapObject4966(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2782 && mapObject.getY() == 4569) {
       player.getMovement().ladderUpTeleport(new Tile(3422, 9624));
     } else if (mapObject.getX() == 2773 && mapObject.getY() == 4577) {
@@ -1102,7 +1102,7 @@ public class MapObject0 {
   }
 
   // Ladder
-  public static void mapObject4967(Player player, int index, MapObject mapObject) {
+  public static void mapObject4967(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2725 && mapObject.getY() == 4486) {
       player.getMovement().ladderDownTeleport(new Tile(2789, 4487));
     } else if (mapObject.getX() == 2710 && mapObject.getY() == 4540) {
@@ -1113,7 +1113,7 @@ public class MapObject0 {
   }
 
   // Ladder
-  public static void mapObject4968(Player player, int index, MapObject mapObject) {
+  public static void mapObject4968(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2789 && mapObject.getY() == 4486) {
       player.getMovement().ladderUpTeleport(new Tile(2725, 4487));
     } else if (mapObject.getX() == 2774 && mapObject.getY() == 4540) {
@@ -1124,7 +1124,7 @@ public class MapObject0 {
   }
 
   // Ladder
-  public static void mapObject4969(Player player, int index, MapObject mapObject) {
+  public static void mapObject4969(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2798 && mapObject.getY() == 4567) {
       player.getMovement().ladderDownTeleport(new Tile(2734, 4504));
     } else if (mapObject.getX() == 2797 && mapObject.getY() == 4599) {
@@ -1133,7 +1133,7 @@ public class MapObject0 {
   }
 
   // Ladder
-  public static void mapObject4970(Player player, int index, MapObject mapObject) {
+  public static void mapObject4970(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2734 && mapObject.getY() == 4503) {
       player.getMovement().ladderUpTeleport(new Tile(2798, 4568));
     } else if (mapObject.getX() == 2733 && mapObject.getY() == 4535) {
@@ -1142,7 +1142,7 @@ public class MapObject0 {
   }
 
   // Stairs
-  public static void mapObject4971(Player player, int index, MapObject mapObject) {
+  public static void mapObject4971(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2746 && mapObject.getY() == 4436) {
       player.getMovement().ladderDownTeleport(new Tile(2811, 4453));
     } else if (mapObject.getX() == 2692 && mapObject.getY() == 4436) {
@@ -1151,7 +1151,7 @@ public class MapObject0 {
   }
 
   // Stairs
-  public static void mapObject4973(Player player, int index, MapObject mapObject) {
+  public static void mapObject4973(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2812 && mapObject.getY() == 4452) {
       player.getMovement().ladderUpTeleport(new Tile(2750, 4436));
     } else if (mapObject.getX() == 2755 && mapObject.getY() == 4452) {
@@ -1160,7 +1160,7 @@ public class MapObject0 {
   }
 
   // Mine cart
-  public static void mapObject4974(Player player, int index, MapObject mapObject) {
+  public static void mapObject4974(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2778 && mapObject.getY() == 4506) {
       if (player.getCombat().getHauntedMine() == 0) {
         player.getGameEncoder().sendMessage("This cart looks like it could carry something.");
@@ -1180,14 +1180,14 @@ public class MapObject0 {
   }
 
   // Cave
-  public static void mapObject5553(Player player, int index, MapObject mapObject) {
+  public static void mapObject5553(Player player, int option, MapObject mapObject) {
     // Mos Le'Harmless Cave
     Tile tile = new Tile(3748, 9373, 0);
     player.getMovement().ladderDownTeleport(tile);
   }
 
   // Lever
-  public static void mapObject5959(Player player, int index, MapObject mapObject) {
+  public static void mapObject5959(Player player, int option, MapObject mapObject) {
     if (player.getInventory().hasItem(ItemId.BLOODY_KEY)
         || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
       player.getGameEncoder().sendMessage("You can't use this right now.");
@@ -1209,7 +1209,7 @@ public class MapObject0 {
   }
 
   // Lever
-  public static void mapObject5960(Player player, int index, MapObject mapObject) {
+  public static void mapObject5960(Player player, int option, MapObject mapObject) {
     if (player.getInventory().hasItem(ItemId.BLOODY_KEY)
         || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
       player.getGameEncoder().sendMessage("You can't use this right now.");
@@ -1225,26 +1225,26 @@ public class MapObject0 {
   }
 
   // Smokey well
-  public static void mapObject6279(Player player, int index, MapObject mapObject) {
+  public static void mapObject6279(Player player, int option, MapObject mapObject) {
     // Smoke Dungeon entrance
     Tile tile = new Tile(3205, 9378, 0);
     player.getMovement().ladderDownTeleport(tile);
   }
 
   // Rope
-  public static void mapObject6439(Player player, int index, MapObject mapObject) {
+  public static void mapObject6439(Player player, int option, MapObject mapObject) {
     // Smoke Dungeon exit
     Tile tile = new Tile(3310, 2961, 0);
     player.getMovement().ladderDownTeleport(tile);
   }
 
   // Poll booth
-  public static void mapObject8720(Player player, int index, MapObject mapObject) {
+  public static void mapObject8720(Player player, int option, MapObject mapObject) {
     player.openDialogue("vote", 0);
   }
 
   // Steps
-  public static void mapObject8729(Player player, int index, MapObject mapObject) {
+  public static void mapObject8729(Player player, int option, MapObject mapObject) {
     // Asgarnian Ice Dungeon
     if (player.getY() >= 9557) {
       Tile tile = new Tile(3060, 9555, 0);
@@ -1256,37 +1256,37 @@ public class MapObject0 {
   }
 
   // Net trap
-  public static void mapObject8731(Player player, int index, MapObject mapObject) {
+  public static void mapObject8731(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Young tree
-  public static void mapObject8732(Player player, int index, MapObject mapObject) {
+  public static void mapObject8732(Player player, int option, MapObject mapObject) {
     player.getHunter().layTrap(-1, mapObject);
   }
 
   // Net trap
-  public static void mapObject8734(Player player, int index, MapObject mapObject) {
+  public static void mapObject8734(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // ladder
-  public static void mapObject8744(Player player, int index, MapObject mapObject) {
+  public static void mapObject8744(Player player, int option, MapObject mapObject) {
     player.getMovement().ladderUpTeleport(new Tile(player).setHeight(player.getHeight() + 1));
   }
 
   // ladder
-  public static void mapObject8745(Player player, int index, MapObject mapObject) {
+  public static void mapObject8745(Player player, int option, MapObject mapObject) {
     player.openDialogue("climb", 0);
   }
 
   // ladder
-  public static void mapObject8746(Player player, int index, MapObject mapObject) {
+  public static void mapObject8746(Player player, int option, MapObject mapObject) {
     player.getMovement().ladderDownTeleport(new Tile(player).setHeight(player.getHeight() - 1));
   }
 
   // Lletya altar
-  public static void mapObject8749(Player player, int index, MapObject mapObject) {
+  public static void mapObject8749(Player player, int option, MapObject mapObject) {
     if (player.getController().inPvPWorldCombat()) {
       player.getGameEncoder().sendMessage("You can't use this here.");
       return;
@@ -1296,14 +1296,14 @@ public class MapObject0 {
   }
 
   // Cave entrance
-  public static void mapObject8929(Player player, int index, MapObject mapObject) {
+  public static void mapObject8929(Player player, int option, MapObject mapObject) {
     // Waterbirth Dungeon entrance
     Tile tile = new Tile(2443, 10146, 0);
     player.getMovement().ladderDownTeleport(tile);
   }
 
   // Door
-  public static void mapObject8958(Player player, int index, MapObject mapObject) {
+  public static void mapObject8958(Player player, int option, MapObject mapObject) {
     // Waterbirth Dungeon top
     if (player.getX() <= 2490) {
       Tile tile = new Tile(player.getX() + 2, player.getY(), 0);
@@ -1315,7 +1315,7 @@ public class MapObject0 {
   }
 
   // Door
-  public static void mapObject8959(Player player, int index, MapObject mapObject) {
+  public static void mapObject8959(Player player, int option, MapObject mapObject) {
     // Waterbirth Dungeon middle
     if (player.getX() <= 2490) {
       Tile tile = new Tile(player.getX() + 2, player.getY(), 0);
@@ -1327,7 +1327,7 @@ public class MapObject0 {
   }
 
   // Door
-  public static void mapObject8960(Player player, int index, MapObject mapObject) {
+  public static void mapObject8960(Player player, int option, MapObject mapObject) {
     // Waterbirth Dungeon bottom
     if (player.getX() <= 2490) {
       Tile tile = new Tile(player.getX() + 2, player.getY(), 0);
@@ -1339,159 +1339,159 @@ public class MapObject0 {
   }
 
   // Steps
-  public static void mapObject8966(Player player, int index, MapObject mapObject) {
+  public static void mapObject8966(Player player, int option, MapObject mapObject) {
     // Waterbirth Dungeon exit
     Tile tile = new Tile(2524, 3739, 0);
     player.getMovement().ladderUpTeleport(tile);
   }
 
   // Net trap
-  public static void mapObject8973(Player player, int index, MapObject mapObject) {
+  public static void mapObject8973(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Net trap
-  public static void mapObject8986(Player player, int index, MapObject mapObject) {
+  public static void mapObject8986(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Net trap
-  public static void mapObject8988(Player player, int index, MapObject mapObject) {
+  public static void mapObject8988(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Young tree
-  public static void mapObject8989(Player player, int index, MapObject mapObject) {
+  public static void mapObject8989(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Young tree
-  public static void mapObject8990(Player player, int index, MapObject mapObject) {
+  public static void mapObject8990(Player player, int option, MapObject mapObject) {
     player.getHunter().layTrap(-1, mapObject);
   }
 
   // Net trap
-  public static void mapObject8992(Player player, int index, MapObject mapObject) {
+  public static void mapObject8992(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Net trap
-  public static void mapObject8996(Player player, int index, MapObject mapObject) {
+  public static void mapObject8996(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Net trap
-  public static void mapObject8998(Player player, int index, MapObject mapObject) {
-    player.getHunter().pickupTrap(mapObject);
-  }
-
-  // Young tree
-  public static void mapObject8999(Player player, int index, MapObject mapObject) {
-    player.getHunter().layTrap(-1, mapObject);
-  }
-
-  // Young tree
-  public static void mapObject9000(Player player, int index, MapObject mapObject) {
-    player.getHunter().layTrap(-1, mapObject);
-  }
-
-  // Net trap
-  public static void mapObject9002(Player player, int index, MapObject mapObject) {
-    player.getHunter().pickupTrap(mapObject);
-  }
-
-  // Net trap
-  public static void mapObject9004(Player player, int index, MapObject mapObject) {
+  public static void mapObject8998(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Young tree
-  public static void mapObject9341(Player player, int index, MapObject mapObject) {
+  public static void mapObject8999(Player player, int option, MapObject mapObject) {
+    player.getHunter().layTrap(-1, mapObject);
+  }
+
+  // Young tree
+  public static void mapObject9000(Player player, int option, MapObject mapObject) {
     player.getHunter().layTrap(-1, mapObject);
   }
 
   // Net trap
-  public static void mapObject9343(Player player, int index, MapObject mapObject) {
+  public static void mapObject9002(Player player, int option, MapObject mapObject) {
+    player.getHunter().pickupTrap(mapObject);
+  }
+
+  // Net trap
+  public static void mapObject9004(Player player, int option, MapObject mapObject) {
+    player.getHunter().pickupTrap(mapObject);
+  }
+
+  // Young tree
+  public static void mapObject9341(Player player, int option, MapObject mapObject) {
+    player.getHunter().layTrap(-1, mapObject);
+  }
+
+  // Net trap
+  public static void mapObject9343(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Bird snare
-  public static void mapObject9344(Player player, int index, MapObject mapObject) {
+  public static void mapObject9344(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Bird snare
-  public static void mapObject9345(Player player, int index, MapObject mapObject) {
+  public static void mapObject9345(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Bird snare
-  public static void mapObject9348(Player player, int index, MapObject mapObject) {
+  public static void mapObject9348(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Private portal
-  public static void mapObject9370(Player player, int index, MapObject mapObject) {
+  public static void mapObject9370(Player player, int option, MapObject mapObject) {
     player.openDialogue("bossinstance", 1);
   }
 
   // Bird snare
-  public static void mapObject9373(Player player, int index, MapObject mapObject) {
+  public static void mapObject9373(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Bird snare
-  public static void mapObject9375(Player player, int index, MapObject mapObject) {
+  public static void mapObject9375(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Bird snare
-  public static void mapObject9377(Player player, int index, MapObject mapObject) {
+  public static void mapObject9377(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Bird snare
-  public static void mapObject9379(Player player, int index, MapObject mapObject) {
+  public static void mapObject9379(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Box trap
-  public static void mapObject9380(Player player, int index, MapObject mapObject) {
+  public static void mapObject9380(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Shaking box
-  public static void mapObject9382(Player player, int index, MapObject mapObject) {
+  public static void mapObject9382(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Shaking box
-  public static void mapObject9383(Player player, int index, MapObject mapObject) {
+  public static void mapObject9383(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Shaking box
-  public static void mapObject9384(Player player, int index, MapObject mapObject) {
+  public static void mapObject9384(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Box trap
-  public static void mapObject9385(Player player, int index, MapObject mapObject) {
+  public static void mapObject9385(Player player, int option, MapObject mapObject) {
     player.getHunter().pickupTrap(mapObject);
   }
 
   // Ladder
-  public static void mapObject9558(Player player, int index, MapObject mapObject) {
+  public static void mapObject9558(Player player, int option, MapObject mapObject) {
     player.getMovement().ladderUpTeleport(new Tile(player).setHeight(1));
   }
 
   // Ladder
-  public static void mapObject9559(Player player, int index, MapObject mapObject) {
+  public static void mapObject9559(Player player, int option, MapObject mapObject) {
     player.getMovement().ladderDownTeleport(new Tile(player).setHeight(0));
   }
 
   // Lever
-  public static void mapObject9706(Player player, int index, MapObject mapObject) {
+  public static void mapObject9706(Player player, int option, MapObject mapObject) {
     if (player.getInventory().hasItem(ItemId.BLOODY_KEY)
         || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
       player.getGameEncoder().sendMessage("You can't use this right now.");
@@ -1510,7 +1510,7 @@ public class MapObject0 {
   }
 
   // Lever
-  public static void mapObject9707(Player player, int index, MapObject mapObject) {
+  public static void mapObject9707(Player player, int option, MapObject mapObject) {
     if (player.getInventory().hasItem(ItemId.BLOODY_KEY)
         || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
       player.getGameEncoder().sendMessage("You can't use this right now.");
@@ -1529,19 +1529,19 @@ public class MapObject0 {
   }
 
   // Ladder
-  public static void mapObject9742(Player player, int index, MapObject mapObject) {
+  public static void mapObject9742(Player player, int option, MapObject mapObject) {
     Tile tile = new Tile(2834, 3542, 0);
     player.getMovement().ladderUpTeleport(tile);
   }
 
   // Ladder
-  public static void mapObject10042(Player player, int index, MapObject mapObject) {
+  public static void mapObject10042(Player player, int option, MapObject mapObject) {
     Tile tile = new Tile(2907, 9968, 0);
     player.getMovement().ladderDownTeleport(tile);
   }
 
   // Door
-  public static void mapObject10043(Player player, int index, MapObject mapObject) {
+  public static void mapObject10043(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2911 && mapObject.getY() == 9968) {
       if (player.getX() >= 2912) {
         player.getMovement().teleport(2911, 9968, player.getHeight());
@@ -1560,12 +1560,12 @@ public class MapObject0 {
   }
 
   // Grand Exchange booth
-  public static void mapObject10060(Player player, int index, MapObject mapObject) {
+  public static void mapObject10060(Player player, int option, MapObject mapObject) {
     player.getBank().open();
   }
 
   // Grand Exchange booth
-  public static void mapObject10061(Player player, int index, MapObject mapObject) {
+  public static void mapObject10061(Player player, int option, MapObject mapObject) {
     if (player.getHeight() != 0) {
       player.getGameEncoder().sendMessage("You can't use this here.");
       return;
@@ -1574,18 +1574,18 @@ public class MapObject0 {
   }
 
   // Sacrificial boat
-  public static void mapObject10068(Player player, int index, MapObject mapObject) {
+  public static void mapObject10068(Player player, int option, MapObject mapObject) {
     player.openDialogue("zulrah", 0);
   }
 
   // Iron ladder
-  public static void mapObject10177(Player player, int index, MapObject mapObject) {
+  public static void mapObject10177(Player player, int option, MapObject mapObject) {
     // Waterbirth Dungeon
     player.openDialogue("bossinstance", 2);
   }
 
   // Ladder
-  public static void mapObject10229(Player player, int index, MapObject mapObject) {
+  public static void mapObject10229(Player player, int option, MapObject mapObject) {
     // Waterbirth Dungeon
     Tile tile = new Tile(2545, 10143, 0);
     player.getMovement().ladderUpTeleport(tile);
@@ -1593,33 +1593,33 @@ public class MapObject0 {
   }
 
   // Ladder
-  public static void mapObject10560(Player player, int index, MapObject mapObject) {
+  public static void mapObject10560(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 3190 && mapObject.getY() == 9758) {
       player.getMovement().ladderUpTeleport(new Tile(2212, 4940));
     }
   }
 
   // Icy Cavern
-  public static void mapObject10595(Player player, int index, MapObject mapObject) {
+  public static void mapObject10595(Player player, int option, MapObject mapObject) {
     // Asgarnian Ice Dungeon
     Tile tile = new Tile(3056, 9562, 0);
     player.getMovement().ladderDownTeleport(tile);
   }
 
   // Icy Cavern
-  public static void mapObject10596(Player player, int index, MapObject mapObject) {
+  public static void mapObject10596(Player player, int option, MapObject mapObject) {
     // Asgarnian Ice Dungeon
     Tile tile = new Tile(3056, 9555, 0);
     player.getMovement().ladderDownTeleport(tile);
   }
 
   // Chest
-  public static void mapObject10661(Player player, int index, MapObject mapObject) {
+  public static void mapObject10661(Player player, int option, MapObject mapObject) {
     player.getBank().open();
   }
 
   // Tall tree
-  public static void mapObject10819(Player player, int index, MapObject mapObject) {
+  public static void mapObject10819(Player player, int option, MapObject mapObject) {
     if (player.getSkills().getLevel(Skills.AGILITY) < 40) {
       player.getGameEncoder().sendMessage("You need an Agility level of 40 to use this course.");
       return;
@@ -1645,7 +1645,7 @@ public class MapObject0 {
   }
 
   // Gap
-  public static void mapObject10820(Player player, int index, MapObject mapObject) {
+  public static void mapObject10820(Player player, int option, MapObject mapObject) {
     if (player.getX() != 3505 || player.getY() != 3497) {
       return;
     }
@@ -1676,7 +1676,7 @@ public class MapObject0 {
   }
 
   // Gap
-  public static void mapObject10821(Player player, int index, MapObject mapObject) {
+  public static void mapObject10821(Player player, int option, MapObject mapObject) {
     if (player.getX() != 3498 || player.getY() != 3504) {
       return;
     }
@@ -1707,7 +1707,7 @@ public class MapObject0 {
   }
 
   // Gap
-  public static void mapObject10822(Player player, int index, MapObject mapObject) {
+  public static void mapObject10822(Player player, int option, MapObject mapObject) {
     if (player.getX() != 3478 || player.getY() != 3493) {
       return;
     }
@@ -1738,7 +1738,7 @@ public class MapObject0 {
   }
 
   // Gap
-  public static void mapObject10823(Player player, int index, MapObject mapObject) {
+  public static void mapObject10823(Player player, int option, MapObject mapObject) {
     if (player.getX() != 3502 || player.getY() != 3476) {
       return;
     }
@@ -1769,7 +1769,7 @@ public class MapObject0 {
   }
 
   // Gap
-  public static void mapObject10828(Player player, int index, MapObject mapObject) {
+  public static void mapObject10828(Player player, int option, MapObject mapObject) {
     if (player.getX() != 3487 || player.getY() != 3499) {
       return;
     }
@@ -1800,7 +1800,7 @@ public class MapObject0 {
   }
 
   // Pole-vault
-  public static void mapObject10831(Player player, int index, MapObject mapObject) {
+  public static void mapObject10831(Player player, int option, MapObject mapObject) {
     if (player.getX() != 3480 || player.getY() != 3484) {
       return;
     }
@@ -1829,7 +1829,7 @@ public class MapObject0 {
   }
 
   // Gap
-  public static void mapObject10832(Player player, int index, MapObject mapObject) {
+  public static void mapObject10832(Player player, int option, MapObject mapObject) {
     if (player.getX() != 3510 || player.getY() != 3482) {
       return;
     }
@@ -1872,7 +1872,7 @@ public class MapObject0 {
   }
 
   // Wall
-  public static void mapObject11373(Player player, int index, MapObject mapObject) {
+  public static void mapObject11373(Player player, int option, MapObject mapObject) {
     if (player.getX() != 2729 || player.getY() != 3489) {
       return;
     }
@@ -1908,7 +1908,7 @@ public class MapObject0 {
   }
 
   // Gap
-  public static void mapObject11374(Player player, int index, MapObject mapObject) {
+  public static void mapObject11374(Player player, int option, MapObject mapObject) {
     if (player.getX() != 2721 || player.getY() != 3494) {
       return;
     }
@@ -1951,7 +1951,7 @@ public class MapObject0 {
   }
 
   // Gap
-  public static void mapObject11375(Player player, int index, MapObject mapObject) {
+  public static void mapObject11375(Player player, int option, MapObject mapObject) {
     if (player.getX() != 2710 && player.getX() != 2711 || player.getY() != 3477) {
       return;
     }
@@ -1990,7 +1990,7 @@ public class MapObject0 {
   }
 
   // Gap
-  public static void mapObject11376(Player player, int index, MapObject mapObject) {
+  public static void mapObject11376(Player player, int option, MapObject mapObject) {
     if (player.getX() != 2702 || player.getY() != 3470) {
       return;
     }
@@ -2022,7 +2022,7 @@ public class MapObject0 {
   }
 
   // Edge
-  public static void mapObject11377(Player player, int index, MapObject mapObject) {
+  public static void mapObject11377(Player player, int option, MapObject mapObject) {
     if (player.getX() != 2702 || player.getY() != 3464) {
       return;
     }
@@ -2066,7 +2066,7 @@ public class MapObject0 {
   }
 
   // Tightrope
-  public static void mapObject11378(Player player, int index, MapObject mapObject) {
+  public static void mapObject11378(Player player, int option, MapObject mapObject) {
     if (player.getX() != 2710) {
       return;
     }
@@ -2102,7 +2102,7 @@ public class MapObject0 {
   }
 
   // Rough wall
-  public static void mapObject11391(Player player, int index, MapObject mapObject) {
+  public static void mapObject11391(Player player, int option, MapObject mapObject) {
     if (player.getX() != 2625 || player.getY() != 3677) {
       return;
     }
@@ -2131,7 +2131,7 @@ public class MapObject0 {
   }
 
   // Gap
-  public static void mapObject11392(Player player, int index, MapObject mapObject) {
+  public static void mapObject11392(Player player, int option, MapObject mapObject) {
     if (player.getX() != 2622 || player.getY() != 3672) {
       return;
     }
@@ -2161,7 +2161,7 @@ public class MapObject0 {
   }
 
   // Tightrope
-  public static void mapObject11393(Player player, int index, MapObject mapObject) {
+  public static void mapObject11393(Player player, int option, MapObject mapObject) {
     if (player.getX() != 2622 || player.getY() != 3658) {
       return;
     }
@@ -2197,7 +2197,7 @@ public class MapObject0 {
   }
 
   // Gap
-  public static void mapObject11395(Player player, int index, MapObject mapObject) {
+  public static void mapObject11395(Player player, int option, MapObject mapObject) {
     if (player.getX() != 2629 || player.getY() != 3655) {
       return;
     }
@@ -2251,7 +2251,7 @@ public class MapObject0 {
   }
 
   // Gap
-  public static void mapObject11396(Player player, int index, MapObject mapObject) {
+  public static void mapObject11396(Player player, int option, MapObject mapObject) {
     if (player.getX() != 2643 || player.getY() != 3653) {
       return;
     }
@@ -2281,7 +2281,7 @@ public class MapObject0 {
   }
 
   // Tightrope
-  public static void mapObject11397(Player player, int index, MapObject mapObject) {
+  public static void mapObject11397(Player player, int option, MapObject mapObject) {
     if (player.getX() != 2647 || player.getY() != 3662) {
       return;
     }
@@ -2318,14 +2318,14 @@ public class MapObject0 {
   }
 
   // Our lives
-  public static void mapObject11398(Player player, int index, MapObject mapObject) {
-    if (index == 1) {
+  public static void mapObject11398(Player player, int option, MapObject mapObject) {
+    if (option == 1) {
       player.getController().stop();
     }
   }
 
   // Pile of fish
-  public static void mapObject11404(Player player, int index, MapObject mapObject) {
+  public static void mapObject11404(Player player, int option, MapObject mapObject) {
     if (player.getX() != 2655 || player.getY() != 3676) {
       return;
     }
@@ -2368,7 +2368,7 @@ public class MapObject0 {
   }
 
   // Door
-  public static void mapObject11726(Player player, int index, MapObject mapObject) {
+  public static void mapObject11726(Player player, int option, MapObject mapObject) {
     if (mapObject.isBusy()) {
       return;
     }
@@ -2379,20 +2379,20 @@ public class MapObject0 {
         && player.getX() != mapObject.getX()) {
       return;
     }
-    if (index == 1) {
+    if (option == 1) {
       player.getGameEncoder().sendMessage("You attempt to pick the lock.");
     }
-    if (index == 1 && !player.getInventory().hasItem(1523)) {
+    if (option == 1 && !player.getInventory().hasItem(1523)) {
       player.getGameEncoder().sendMessage("You need a lockpick for this lock.");
       return;
     }
     if (player.getX() != mapObject.getX() || player.getY() != mapObject.getY()) {
-      if (index == 1) {
+      if (option == 1) {
         player.getGameEncoder().sendMessage("The door is already unlocked.");
         return;
       }
     } else {
-      if (index == 0) {
+      if (option == 0) {
         player.getGameEncoder().sendMessage("The door is locked.");
         return;
       } else if (PRandom.randomE(4) != 0) {
@@ -2400,9 +2400,9 @@ public class MapObject0 {
         return;
       }
     }
-    if (index == 0) {
+    if (option == 0) {
       player.getGameEncoder().sendMessage("You go through the door.");
-    } else if (index == 1) {
+    } else if (option == 1) {
       player.getGameEncoder().sendMessage("You manage to pick the lock.");
     }
     player.getMovement().clear();
@@ -2435,7 +2435,7 @@ public class MapObject0 {
   }
 
   // Door
-  public static void mapObject11727(Player player, int index, MapObject mapObject) {
+  public static void mapObject11727(Player player, int option, MapObject mapObject) {
     if (mapObject.isBusy()) {
       return;
     }
@@ -2446,20 +2446,20 @@ public class MapObject0 {
         && player.getX() != mapObject.getX()) {
       return;
     }
-    if (index == 1) {
+    if (option == 1) {
       player.getGameEncoder().sendMessage("You attempt to pick the lock.");
     }
-    if (index == 1 && !player.getInventory().hasItem(1523)) {
+    if (option == 1 && !player.getInventory().hasItem(1523)) {
       player.getGameEncoder().sendMessage("You need a lockpick for this lock.");
       return;
     }
     if (player.getX() == mapObject.getX() && player.getY() == mapObject.getY()) {
-      if (index == 1) {
+      if (option == 1) {
         player.getGameEncoder().sendMessage("The door is already unlocked.");
         return;
       }
     } else {
-      if (index == 0) {
+      if (option == 0) {
         player.getGameEncoder().sendMessage("The door is locked.");
         return;
       } else if (PRandom.randomE(4) != 0) {
@@ -2467,9 +2467,9 @@ public class MapObject0 {
         return;
       }
     }
-    if (index == 0) {
+    if (option == 0) {
       player.getGameEncoder().sendMessage("You go through the door.");
-    } else if (index == 1) {
+    } else if (option == 1) {
       player.getGameEncoder().sendMessage("You manage to pick the lock.");
     }
     player.getMovement().clear();
@@ -2502,27 +2502,27 @@ public class MapObject0 {
   }
 
   // Cave entrance
-  public static void mapObject11833(Player player, int index, MapObject mapObject) {
+  public static void mapObject11833(Player player, int option, MapObject mapObject) {
     player.openDialogue("tzhaar", 0);
   }
 
   // Cave entrance
-  public static void mapObject11834(Player player, int index, MapObject mapObject) {
+  public static void mapObject11834(Player player, int option, MapObject mapObject) {
     player.getCombat().getTzHaar().exitFightCave();
   }
 
   // Mole hill
-  public static void mapObject12202(Player player, int index, MapObject mapObject) {
+  public static void mapObject12202(Player player, int option, MapObject mapObject) {
     player.openDialogue("bossinstance", 6);
   }
 
   // Portal
-  public static void mapObject12356(Player player, int index, MapObject mapObject) {
+  public static void mapObject12356(Player player, int option, MapObject mapObject) {
     player.getController().stop();
   }
 
   // Altar
-  public static void mapObject13185(Player player, int index, MapObject mapObject) {
+  public static void mapObject13185(Player player, int option, MapObject mapObject) {
     if (player.getController().inPvPWorldCombat()) {
       player.getGameEncoder().sendMessage("You can't use this here.");
       return;
@@ -2532,7 +2532,7 @@ public class MapObject0 {
   }
 
   // Rocks
-  public static void mapObject14106(Player player, int index, MapObject mapObject) {
+  public static void mapObject14106(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2887 && mapObject.getY() == 9823) {
       // Taverley Dungeon
       player.getMovement().ladderUpTeleport(new Tile(2886, 9823, 0));
@@ -2540,16 +2540,16 @@ public class MapObject0 {
   }
 
 
-  public static void mapObject14235(Player player, int index, MapObject mapObject) {
+  public static void mapObject14235(Player player, int option, MapObject mapObject) {
     Region.openDoors(player, mapObject);
   }
 
-  public static void mapObject14233(Player player, int index, MapObject mapObject) {
+  public static void mapObject14233(Player player, int option, MapObject mapObject) {
     Region.openDoors(player, mapObject);
   }
 
   // Ladder
-  public static void mapObject14296(Player player, int index, MapObject mapObject) {
+  public static void mapObject14296(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 2644 && mapObject.getY() == 2601) {
       if (player.getX() == 2645 && player.getY() == 2601) {
         player.getMovement().ladderUpTeleport(new Tile(2643, 2601, 0));
@@ -2578,37 +2578,37 @@ public class MapObject0 {
   }
 
   // Gangplank
-  public static void mapObject14315(Player player, int index, MapObject mapObject) {
+  public static void mapObject14315(Player player, int option, MapObject mapObject) {
     player.setController(new PestControlPC());
   }
 
   // Staircase
-  public static void mapObject14735(Player player, int index, MapObject mapObject) {
+  public static void mapObject14735(Player player, int option, MapObject mapObject) {
     Tile tile = new Tile(player.getX(), player.getY(), player.getHeight() + 1);
     player.getMovement().ladderUpTeleport(tile);
   }
 
   // Staircase
-  public static void mapObject14736(Player player, int index, MapObject mapObject) {
-    if (index == 0) {
+  public static void mapObject14736(Player player, int option, MapObject mapObject) {
+    if (option == 0) {
       player.openDialogue("climb", 0);
-    } else if (index == 1) {
+    } else if (option == 1) {
       Tile tile = new Tile(player.getX(), player.getY(), player.getHeight() + 1);
       player.getMovement().ladderUpTeleport(tile);
-    } else if (index == 2) {
+    } else if (option == 2) {
       Tile tile = new Tile(player.getX(), player.getY(), player.getHeight() - 1);
       player.getMovement().ladderDownTeleport(tile);
     }
   }
 
   // Staircase
-  public static void mapObject14737(Player player, int index, MapObject mapObject) {
+  public static void mapObject14737(Player player, int option, MapObject mapObject) {
     Tile tile = new Tile(player.getX(), player.getY(), player.getHeight() - 1);
     player.getMovement().ladderDownTeleport(tile);
   }
 
   // Sack
-  public static void mapObject14743(Player player, int index, MapObject mapObject) {
+  public static void mapObject14743(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 3093 && mapObject.getY() == 3956) {
       if (!player.getInventory().hasItem(946)) {
         player.getGameEncoder().sendMessage("You search the sack and find a knife.");
@@ -2620,7 +2620,7 @@ public class MapObject0 {
   }
 
   // Bank chest
-  public static void mapObject14886(Player player, int index, MapObject mapObject) {
+  public static void mapObject14886(Player player, int option, MapObject mapObject) {
     if (!player.getWidgetManager().isDiaryComplete(AchievementDiary.Name.FALADOR,
         AchievementDiaryTask.Difficulty.HARD)) {
       player.getGameEncoder()
@@ -2631,62 +2631,62 @@ public class MapObject0 {
   }
 
   // Altar
-  public static void mapObject14897(Player player, int index, MapObject mapObject) {
+  public static void mapObject14897(Player player, int option, MapObject mapObject) {
     Runecrafting.craftRunes(player, Runecrafting.Altar.AIR);
   }
 
   // Altar
-  public static void mapObject14898(Player player, int index, MapObject mapObject) {
+  public static void mapObject14898(Player player, int option, MapObject mapObject) {
     Runecrafting.craftRunes(player, Runecrafting.Altar.MIND);
   }
 
   // Altar
-  public static void mapObject14899(Player player, int index, MapObject mapObject) {
+  public static void mapObject14899(Player player, int option, MapObject mapObject) {
     Runecrafting.craftRunes(player, Runecrafting.Altar.WATER);
   }
 
   // Altar
-  public static void mapObject14900(Player player, int index, MapObject mapObject) {
+  public static void mapObject14900(Player player, int option, MapObject mapObject) {
     Runecrafting.craftRunes(player, Runecrafting.Altar.EARTH);
   }
 
   // Altar
-  public static void mapObject14901(Player player, int index, MapObject mapObject) {
+  public static void mapObject14901(Player player, int option, MapObject mapObject) {
     Runecrafting.craftRunes(player, Runecrafting.Altar.FIRE);
   }
 
   // Altar
-  public static void mapObject14902(Player player, int index, MapObject mapObject) {
+  public static void mapObject14902(Player player, int option, MapObject mapObject) {
     Runecrafting.craftRunes(player, Runecrafting.Altar.BODY);
   }
 
   // Altar
-  public static void mapObject14903(Player player, int index, MapObject mapObject) {
+  public static void mapObject14903(Player player, int option, MapObject mapObject) {
     Runecrafting.craftRunes(player, Runecrafting.Altar.COSMIC);
   }
 
   // Altar
-  public static void mapObject14904(Player player, int index, MapObject mapObject) {
+  public static void mapObject14904(Player player, int option, MapObject mapObject) {
     Runecrafting.craftRunes(player, Runecrafting.Altar.LAW);
   }
 
   // Altar
-  public static void mapObject14905(Player player, int index, MapObject mapObject) {
+  public static void mapObject14905(Player player, int option, MapObject mapObject) {
     Runecrafting.craftRunes(player, Runecrafting.Altar.NATURE);
   }
 
   // Altar
-  public static void mapObject14906(Player player, int index, MapObject mapObject) {
+  public static void mapObject14906(Player player, int option, MapObject mapObject) {
     Runecrafting.craftRunes(player, Runecrafting.Altar.CHAOS);
   }
 
   // Altar
-  public static void mapObject14907(Player player, int index, MapObject mapObject) {
+  public static void mapObject14907(Player player, int option, MapObject mapObject) {
     Runecrafting.craftRunes(player, Runecrafting.Altar.DEATH);
   }
 
   // Guild Door
-  public static void mapObject14910(Player player, int index, MapObject mapObject) {
+  public static void mapObject14910(Player player, int option, MapObject mapObject) {
     if (mapObject.getOriginal() != null || mapObject.getAttachment() != null) {
       return;
     }
@@ -2704,7 +2704,7 @@ public class MapObject0 {
   }
 
   // Stepping stone
-  public static void mapObject14917(Player player, int index, MapObject mapObject) {
+  public static void mapObject14917(Player player, int option, MapObject mapObject) {
     if (player.getSkills().getLevel(Skills.AGILITY) < 82) {
       player.getGameEncoder().sendMessage("You need an Agility level of 82 to use this.");
       return;
@@ -2728,7 +2728,7 @@ public class MapObject0 {
   }
 
   // Stepping stone
-  public static void mapObject14918(Player player, int index, MapObject mapObject) {
+  public static void mapObject14918(Player player, int option, MapObject mapObject) {
     if (player.getSkills().getLevel(Skills.AGILITY) < 74) {
       player.getGameEncoder().sendMessage("You need an Agility level of 74 to use this.");
       return;
@@ -2752,7 +2752,7 @@ public class MapObject0 {
   }
 
   // Cart tunnel
-  public static void mapObject15830(Player player, int index, MapObject mapObject) {
+  public static void mapObject15830(Player player, int option, MapObject mapObject) {
     if (mapObject.getX() == 3408 && mapObject.getY() == 9623) {
       player.getMovement().ladderUpTeleport(new Tile(3428, 3225));
     }

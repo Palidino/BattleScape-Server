@@ -11,7 +11,7 @@ import com.palidinodh.random.PRandom;
 import com.palidinodh.rs.setting.Settings;
 
 public class NpcCombatDeathDropItems implements NpcCombatGlobalHooks {
-  public void deathDropItems(Npc npc, Player player, int index, boolean isSlayerTask,
+  public void deathDropItems(Npc npc, Player player, int option, boolean isSlayerTask,
       boolean isWildernessSlayerTask, Tile dropTile, int dropRateDivider, boolean hasRowCharge) {
     boolean allowSpecialDrops =
         (npc.getDef().getCombat().getDrop().hasDrops() && player.getController().canTeleport(false)

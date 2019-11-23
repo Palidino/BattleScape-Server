@@ -415,7 +415,7 @@ public class ClanWarsPC extends PController {
   }
 
   @Override
-  public boolean widgetHook(int index, int widgetId, int childId, int slot, int itemId) {
+  public boolean widgetHook(int option, int widgetId, int childId, int slot, int itemId) {
     if (p.isLocked() || p.getMovement().getTeleporting() || p.getMovement().getTeleported()) {
       return true;
     }
@@ -476,7 +476,7 @@ public class ClanWarsPC extends PController {
   }
 
   @Override
-  public boolean mapObjectOptionHook(int index, MapObject mapObject) {
+  public boolean mapObjectOptionHook(int option, MapObject mapObject) {
     if (p.isLocked() || p.getMovement().getTeleporting() || p.getMovement().getTeleported()) {
       return true;
     }

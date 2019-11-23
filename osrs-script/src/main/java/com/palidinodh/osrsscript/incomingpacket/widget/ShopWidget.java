@@ -11,11 +11,11 @@ import com.palidinodh.osrscore.model.player.Player;
 public class ShopWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.TOURNAMENT_SUPPLIES, WidgetId.SHOP, WidgetId.SHOP_INVENTORY};
+    return new int[] { WidgetId.TOURNAMENT_SUPPLIES, WidgetId.SHOP, WidgetId.SHOP_INVENTORY };
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {
       return;
     }
@@ -25,17 +25,17 @@ public class ShopWidget implements WidgetHandler {
           if (player.getShop() == null) {
             break;
           }
-          if (index == 0) {
+          if (option == 0) {
             player.getShop().sendShopPrice(player, itemId, slot);
-          } else if (index == 1) {
+          } else if (option == 1) {
             player.getShop().buyShopItem(player, itemId, slot, 1);
-          } else if (index == 2) {
+          } else if (option == 2) {
             player.getShop().buyShopItem(player, itemId, slot, 5);
-          } else if (index == 3) {
+          } else if (option == 3) {
             player.getShop().buyShopItem(player, itemId, slot, 10);
-          } else if (index == 4) {
+          } else if (option == 4) {
             player.getShop().buyShopItem(player, itemId, slot, 50);
-          } else if (index == 5) {
+          } else if (option == 5) {
             player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
               @Override
               public void execute(int value) {
@@ -45,17 +45,17 @@ public class ShopWidget implements WidgetHandler {
           }
           break;
         case 31:
-          if (index == 0) {
+          if (option == 0) {
             player.getLoadout().preview(slot);
-          } else if (index == 1) {
+          } else if (option == 1) {
             player.getLoadout().setAsQuick(slot - Loadout.OFFSET);
-          } else if (index == 2) {
+          } else if (option == 2) {
             player.getLoadout().rename(slot - Loadout.OFFSET);
-          } else if (index == 3) {
+          } else if (option == 3) {
             player.getLoadout().replace(slot - Loadout.OFFSET);
-          } else if (index == 4) {
+          } else if (option == 4) {
             player.getLoadout().insertNew(slot - Loadout.OFFSET);
-          } else if (index == 5) {
+          } else if (option == 5) {
             player.getLoadout().remove(slot - Loadout.OFFSET);
           }
           break;
@@ -67,15 +67,15 @@ public class ShopWidget implements WidgetHandler {
       switch (childId) {
         case 16:
           if (player.getGrandExchange().getViewingUserId() != -1) {
-            if (index == 0) {
+            if (option == 0) {
               player.getGrandExchange().sendShopPrice(itemId, slot - 1);
-            } else if (index == 1) {
+            } else if (option == 1) {
               player.getGrandExchange().buyShopItem(itemId, slot - 1, 1);
-            } else if (index == 2) {
+            } else if (option == 2) {
               player.getGrandExchange().buyShopItem(itemId, slot - 1, 5);
-            } else if (index == 3) {
+            } else if (option == 3) {
               player.getGrandExchange().buyShopItem(itemId, slot - 1, 10);
-            } else if (index == 4) {
+            } else if (option == 4) {
               player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 @Override
                 public void execute(int value) {
@@ -98,17 +98,17 @@ public class ShopWidget implements WidgetHandler {
       switch (childId) {
         case 0:
           if (player.getShop() != null) {
-            if (index == 0) {
+            if (option == 0) {
               player.getShop().sendInventoryPrice(player, itemId, slot);
-            } else if (index == 1) {
+            } else if (option == 1) {
               player.getShop().sellInventoryItem(player, itemId, slot, 1);
-            } else if (index == 2) {
+            } else if (option == 2) {
               player.getShop().sellInventoryItem(player, itemId, slot, 5);
-            } else if (index == 3) {
+            } else if (option == 3) {
               player.getShop().sellInventoryItem(player, itemId, slot, 10);
-            } else if (index == 4) {
+            } else if (option == 4) {
               player.getShop().sellInventoryItem(player, itemId, slot, 50);
-            } else if (index == 5) {
+            } else if (option == 5) {
               player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 @Override
                 public void execute(int value) {
@@ -117,17 +117,17 @@ public class ShopWidget implements WidgetHandler {
               });
             }
           } else if (player.getGrandExchange().getViewingUserId() != -1) {
-            if (index == 0) {
+            if (option == 0) {
               player.getGrandExchange().sendInventoryPrice(itemId, slot);
-            } else if (index == 1) {
+            } else if (option == 1) {
               player.getGrandExchange().sellInventoryItem(itemId, slot, 1);
-            } else if (index == 2) {
+            } else if (option == 2) {
               player.getGrandExchange().sellInventoryItem(itemId, slot, 5);
-            } else if (index == 3) {
+            } else if (option == 3) {
               player.getGrandExchange().sellInventoryItem(itemId, slot, 10);
-            } else if (index == 4) {
+            } else if (option == 4) {
               player.getGrandExchange().sellInventoryItem(itemId, slot, 50);
-            } else if (index == 5) {
+            } else if (option == 5) {
               player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 @Override
                 public void execute(int value) {

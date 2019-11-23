@@ -12,11 +12,11 @@ import com.palidinodh.rs.setting.Settings;
 public class BondWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.CUSTOM_BOND_POUCH};
+    return new int[] { WidgetId.CUSTOM_BOND_POUCH };
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {
       return;
     }
@@ -27,10 +27,10 @@ public class BondWidget implements WidgetHandler {
           player.getGameEncoder().sendMessage("You have no bonds in your inventory.");
           break;
         }
-        if (index == 0) {
+        if (option == 0) {
           player.getInventory().deleteItem(ItemId.BOND_32318, 1);
           player.getBonds().setPouch(player.getBonds().getPouch() + 1);
-        } else if (index == 1) {
+        } else if (option == 1) {
           player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
             @Override
             public void execute(int value) {
@@ -41,7 +41,7 @@ public class BondWidget implements WidgetHandler {
               player.getBonds().sendPouchCounts();
             }
           });
-        } else if (index == 2) {
+        } else if (option == 2) {
           player.getInventory().deleteItem(ItemId.BOND_32318, inventoryCount);
           player.getBonds().setPouch(player.getBonds().getPouch() + inventoryCount);
         }
@@ -51,7 +51,7 @@ public class BondWidget implements WidgetHandler {
           player.getGameEncoder().sendMessage("You have no bonds in your pouch.");
           break;
         }
-        if (index == 0) {
+        if (option == 0) {
           int maxWithdraw = (int) Math.min(player.getBonds().getPouch(), Item.MAX_AMOUNT);
           maxWithdraw = Math.min(1, maxWithdraw);
           maxWithdraw = player.getInventory().canAddAmount(ItemId.BOND_32318, maxWithdraw);
@@ -61,7 +61,7 @@ public class BondWidget implements WidgetHandler {
           }
           player.getBonds().setPouch(player.getBonds().getPouch() - maxWithdraw);
           player.getInventory().addItem(ItemId.BOND_32318, maxWithdraw);
-        } else if (index == 1) {
+        } else if (option == 1) {
           player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
             @Override
             public void execute(int value) {
@@ -77,7 +77,7 @@ public class BondWidget implements WidgetHandler {
               player.getBonds().sendPouchCounts();
             }
           });
-        } else if (index == 2) {
+        } else if (option == 2) {
           int maxWithdraw = (int) Math.min(player.getBonds().getPouch(), Item.MAX_AMOUNT);
           maxWithdraw = player.getInventory().canAddAmount(ItemId.BOND_32318, maxWithdraw);
           if (maxWithdraw == 0) {

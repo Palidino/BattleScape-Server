@@ -96,7 +96,7 @@ public class GodWarsArea extends Area {
   }
 
   @Override
-  public boolean mapObjectOptionHook(int index, MapObject mapObject) {
+  public boolean mapObjectOptionHook(int option, MapObject mapObject) {
     var player = getPlayer();
     switch (mapObject.getId()) {
       case ObjectId.HOLE_26419: // Entrance
@@ -142,7 +142,7 @@ public class GodWarsArea extends Area {
       case ObjectId.SARADOMIN_ALTAR:
       case ObjectId.ARMADYL_ALTAR:
       case ObjectId.BANDOS_ALTAR:
-        if (index == 0) {
+        if (option == 0) {
           if (altarDelay > 0) {
             var message =
                 "The gods blessed you recently. They will ignore your prayers for another ";
@@ -159,7 +159,7 @@ public class GodWarsArea extends Area {
           player.setAnimation(Prayer.PRAY_ANIMATION);
           player.getGameEncoder().sendMessage("You recharge your Prayer.");
           altarDelay = (int) PTime.minToTick(10);
-        } else if (index == 1) {
+        } else if (option == 1) {
           switch (mapObject.getId()) {
             case ObjectId.ZAMORAK_ALTAR:
               player.getMagic().standardTeleport(new Tile(2925, 5333, 2));

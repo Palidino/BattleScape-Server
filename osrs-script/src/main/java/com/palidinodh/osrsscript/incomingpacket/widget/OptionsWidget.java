@@ -12,7 +12,7 @@ public class OptionsWidget implements WidgetHandler {
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (widgetId == WidgetId.OPTIONS) {
       if (childId >= 18 && childId <= 21) {
         player.getOptions().setBrightness(childId - 18 + 1);

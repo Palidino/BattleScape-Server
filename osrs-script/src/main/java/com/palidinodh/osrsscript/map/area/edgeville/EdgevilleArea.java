@@ -73,7 +73,7 @@ public class EdgevilleArea extends Area {
   }
 
   @Override
-  public boolean npcOptionHook(int index, Npc npc) {
+  public boolean npcOptionHook(int option, Npc npc) {
     var player = getPlayer();
     switch (npc.getId()) {
       case NpcId.KILLER:
@@ -83,9 +83,9 @@ public class EdgevilleArea extends Area {
         player.openShop("platinum_tokens");
         return true;
       case NpcId.VOTE_MANAGER:
-        if (index == 0) {
+        if (option == 0) {
           player.openDialogue("vote", 0);
-        } else if (index == 3) {
+        } else if (option == 3) {
           player.openShop("vote");
         }
         return true;
@@ -108,11 +108,11 @@ public class EdgevilleArea extends Area {
         player.openDialogue("magezamorak", 0);
         return true;
       case NpcId.BOB_BARTER_HERBS:
-        if (index == 0) {
+        if (option == 0) {
           player.openDialogue("bobbarter", 0);
-        } else if (index == 2) {
+        } else if (option == 2) {
           player.openShop("herb_exchange");
-        } else if (index == 3) {
+        } else if (option == 3) {
           player.getSkills().decantAllPotions();
         }
         return true;
@@ -132,9 +132,9 @@ public class EdgevilleArea extends Area {
         player.openDialogue("mac", 0);
         return true;
       case NpcId.SKILLING_SELLER:
-        if (index == 0) {
+        if (option == 0) {
           player.openDialogue(new ExchangeSpecialSkillItemsDialogue(player));
-        } else if (index == 2) {
+        } else if (option == 2) {
           player.openShop("skilling");
         }
         return true;
@@ -142,14 +142,14 @@ public class EdgevilleArea extends Area {
         player.openShop("agility");
         return true;
       case NpcId.EMBLEM_TRADER_316:
-        if (index == 0) {
+        if (option == 0) {
           player.openDialogue("emblemtrader", 0);
-        } else if (index == 2) {
+        } else if (option == 2) {
           player.openShop("blood_money");
-        } else if (index == 3) {
+        } else if (option == 3) {
           player.getCombat().setShowKDR(!player.getCombat().showKDR());
           player.getGameEncoder().sendMessage("Streaks: " + player.getCombat().showKDR());
-        } else if (index == 4) {
+        } else if (option == 4) {
           player.getCombat().setPKSkullDelay(PCombat.SKULL_DELAY);
         }
         return true;
@@ -219,7 +219,7 @@ public class EdgevilleArea extends Area {
   }
 
   @Override
-  public boolean mapObjectOptionHook(int index, MapObject mapObject) {
+  public boolean mapObjectOptionHook(int option, MapObject mapObject) {
     var player = getPlayer();
     switch (mapObject.getId()) {
       case ObjectId.CLOSED_CHEST_172:
@@ -306,9 +306,9 @@ public class EdgevilleArea extends Area {
           player.getGameEncoder().sendMessage("You can't use this here.");
           return true;
         }
-        if (index == 0) {
+        if (option == 0) {
           player.openDialogue("spellbooks", 0);
-        } else if (index == 1) {
+        } else if (option == 1) {
           if (player.getMagic().getSpellbook() == Magic.STANDARD_MAGIC) {
             player.getMagic().setSpellbook(Magic.ANCIENT_MAGIC);
             player.getGameEncoder().sendMessage("You switch your spellbook to Ancient magic.");
@@ -317,7 +317,7 @@ public class EdgevilleArea extends Area {
             player.getMagic().setSpellbook(Magic.STANDARD_MAGIC);
             player.getGameEncoder().sendMessage("You switch your spellbook to normal magic.");
           }
-        } else if (index == 2) {
+        } else if (option == 2) {
           if (player.getMagic().getSpellbook() == Magic.STANDARD_MAGIC
               || player.getMagic().getSpellbook() == Magic.ANCIENT_MAGIC) {
             player.getMagic().setSpellbook(Magic.LUNAR_MAGIC);
@@ -334,9 +334,9 @@ public class EdgevilleArea extends Area {
         player.getGameEncoder().sendWidgetSettings(WidgetId.JEWELLERY_BOX, 0, 0, 24, 1);
         return true;
       case ObjectId.SPIRITUAL_FAIRY_TREE:
-        if (index == 0) {
+        if (option == 0) {
           player.openDialogue("spirittree", 0);
-        } else if (index == 1) {
+        } else if (option == 1) {
           player.openDialogue("fairyring", 0);
         }
         return true;

@@ -10,11 +10,11 @@ import com.palidinodh.osrscore.model.player.XPDrops;
 public class XpDropsWidget implements WidgetHandler {
   @Override
   public int[] getIds() {
-    return new int[] {WidgetId.CONFIGURE_XP_DROPS};
+    return new int[] { WidgetId.CONFIGURE_XP_DROPS };
   }
 
   @Override
-  public void execute(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+  public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {
       return;
     }
@@ -49,19 +49,19 @@ public class XpDropsWidget implements WidgetHandler {
         if (childId == 37) {
           typeName = "goal";
         }
-        if (index == 5) {
+        if (option == 5) {
           player.getGameEncoder().sendEnterAmount("Set " + typeName + " start point: (skill level)",
               new ValueEnteredEvent.IntegerEvent() {
                 @Override
                 public void execute(int value) {
-                  int index = player.getAttributeInt("xp_drops_index");
-                  if (XPDrops.POINTS_TO_SKILLS[index] != -1 && value > 0
+                  int option = player.getAttributeInt("xp_drops_index");
+                  if (XPDrops.POINTS_TO_SKILLS[option] != -1 && value > 0
                       && value < Skills.XP_TABLE.length) {
                     player.getXPDrops().setStartPoint(Skills.XP_TABLE[value]);
                   }
                 }
               });
-        } else if (index == 6) {
+        } else if (option == 6) {
           String message = "Set " + typeName + " start point: (XP value)";
           if (XPDrops.POINTS_TO_SKILLS[player.getAttributeInt("xp_drops_index")] == -1) {
             message = "Set " + typeName + " start point in THOUSANDS of XP:";
@@ -74,24 +74,24 @@ public class XpDropsWidget implements WidgetHandler {
               }
             }
           });
-        } else if (index == 9) {
+        } else if (option == 9) {
           player.getXPDrops().setStartPointToCurrentXP();
         }
         break;
       case 41:
-        if (index == 5) {
+        if (option == 5) {
           player.getGameEncoder().sendEnterAmount("Set goal end point: (skill level)",
               new ValueEnteredEvent.IntegerEvent() {
                 @Override
                 public void execute(int value) {
-                  int index = player.getAttributeInt("xp_drops_index");
-                  if (XPDrops.POINTS_TO_SKILLS[index] != -1 && value > 0
+                  int option = player.getAttributeInt("xp_drops_index");
+                  if (XPDrops.POINTS_TO_SKILLS[option] != -1 && value > 0
                       && value < Skills.XP_TABLE.length) {
                     player.getXPDrops().setEndPoint(Skills.XP_TABLE[value]);
                   }
                 }
               });
-        } else if (index == 6) {
+        } else if (option == 6) {
           String message = "Set goal end point: (XP value)";
           if (XPDrops.POINTS_TO_SKILLS[player.getAttributeInt("xp_drops_index")] == -1) {
             message = "Set goal start end in THOUSANDS of XP:";

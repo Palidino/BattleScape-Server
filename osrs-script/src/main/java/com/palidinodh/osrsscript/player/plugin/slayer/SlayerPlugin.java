@@ -258,7 +258,7 @@ public class SlayerPlugin extends PlayerPlugin {
   }
 
   @Override
-  public boolean widgetHook(int index, int widgetId, int childId, int slot, int itemId) {
+  public boolean widgetHook(int option, int widgetId, int childId, int slot, int itemId) {
     var isEquipment = widgetId == WidgetId.EQUIPMENT || widgetId == WidgetId.EQUIPMENT_BONUSES;
     if (widgetId == WidgetId.INVENTORY || isEquipment) {
       switch (itemId) {
@@ -276,7 +276,7 @@ public class SlayerPlugin extends PlayerPlugin {
         case ItemId.TURQUOISE_SLAYER_HELMET_I:
         case ItemId.HYDRA_SLAYER_HELMET:
         case ItemId.HYDRA_SLAYER_HELMET_I:
-          if (isEquipment && index == 3 || !isEquipment && index == 2) {
+          if (isEquipment && option == 3 || !isEquipment && option == 2) {
             sendTask();
             return true;
           }
@@ -320,7 +320,7 @@ public class SlayerPlugin extends PlayerPlugin {
         case ItemId.SLAYER_RING_2:
         case ItemId.SLAYER_RING_1:
         case ItemId.SLAYER_RING_ETERNAL:
-          if (index == 2) {
+          if (option == 2) {
             if (isEquipment) {
               slot += 65536;
             }
@@ -328,7 +328,7 @@ public class SlayerPlugin extends PlayerPlugin {
             openSlayerRingDialogue();
             return true;
           }
-          if (isEquipment && index == 1 || !isEquipment && index == 3) {
+          if (isEquipment && option == 1 || !isEquipment && option == 3) {
             sendTask();
             return true;
           }
@@ -466,15 +466,15 @@ public class SlayerPlugin extends PlayerPlugin {
           break;
         case 23:
           if (itemId == ItemId.BROAD_BOLTS) {
-            if (index == 1) {
+            if (option == 1) {
               buy(new Item(itemId, 250), 35);
-            } else if (index == 2) {
+            } else if (option == 2) {
               buy(new Item(itemId, 1250), 175);
-            } else if (index == 3) {
+            } else if (option == 3) {
               buy(new Item(itemId, 2500), 350);
             }
           } else if (itemId == ItemId.RUNE_POUCH) {
-            if (index == 1) {
+            if (option == 1) {
               buy(new Item(itemId, 1), 1250);
             }
           } else {
@@ -565,7 +565,7 @@ public class SlayerPlugin extends PlayerPlugin {
   }
 
   @Override
-  public boolean mapObjectOptionHook(int index, MapObject mapObject) {
+  public boolean mapObjectOptionHook(int option, MapObject mapObject) {
     switch (mapObject.getId()) {
       case 172: // Closed chest: crystal chest
         if (!player.getInventory().hasItem(ItemId.BRIMSTONE_KEY)) {
@@ -646,27 +646,27 @@ public class SlayerPlugin extends PlayerPlugin {
   }
 
   @Override
-  public boolean npcOptionHook(int index, Npc npc) {
+  public boolean npcOptionHook(int option, Npc npc) {
     switch (npc.getId()) {
       case NpcId.NIEVE:
-        if (index == 0) {
+        if (option == 0) {
           player.openDialogue(new MasterMenuDialogue(player, this));
-        } else if (index == 2) {
+        } else if (option == 2) {
           getAssignment();
-        } else if (index == 3) {
+        } else if (option == 3) {
           player.openShop("slayer");
-        } else if (index == 4) {
+        } else if (option == 4) {
           player.openDialogue(new RewardsDialogue(player, this));
         }
         return true;
       case NpcId.KRYSTILIA:
-        if (index == 0) {
+        if (option == 0) {
           player.openDialogue(new WildernessMasterMenuDialogue(player, this));
-        } else if (index == 2) {
+        } else if (option == 2) {
           getAssignment(SlayerMaster.WILDERNESS_MASTER);
-        } else if (index == 3) {
+        } else if (option == 3) {
           player.openShop("slayer");
-        } else if (index == 4) {
+        } else if (option == 4) {
           openRewards();
         }
         return true;
@@ -1190,11 +1190,11 @@ public class SlayerPlugin extends PlayerPlugin {
     sendRewardsVarps();
   }
 
-  public void unblockTask(int index) {
-    if (blockedTasks == null || index >= blockedTasks.size()) {
+  public void unblockTask(int option) {
+    if (blockedTasks == null || option >= blockedTasks.size()) {
       return;
     }
-    blockedTasks.remove(index);
+    blockedTasks.remove(option);
     if (blockedTasks.size() == 0) {
       blockedTasks = null;
     }
