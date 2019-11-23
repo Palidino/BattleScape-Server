@@ -1,12 +1,17 @@
-package com.palidinodh.osrsscript.npc.combatv0;
+package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
+import com.palidinodh.osrscore.model.Entity;
 import com.palidinodh.osrscore.model.Graphic;
+import com.palidinodh.osrscore.model.HitType;
+import com.palidinodh.osrscore.model.Tile;
 import com.palidinodh.osrscore.model.item.RandomItem;
+import com.palidinodh.osrscore.model.npc.Npc;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombat;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatDefinition;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatDrop;
@@ -23,29 +28,42 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatDamage;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatProjectile;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
+import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.setting.Settings;
+import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
-public class Kraken291Combat extends NpcCombat {
+public class KrakenCombat extends NpcCombat {
+  private static final Tile[] TENTACLE_TILES = { new Tile(2275, 10034), new Tile(2284, 10034),
+      new Tile(2275, 10038), new Tile(2284, 10038) };
+
+  @Inject
+  private Npc npc;
+  private Npc[] tentacles;
+  private boolean setTentacleIndices;
+
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var drop = NpcCombatDrop.builder().underKiller(true)
-        .rareDropTableRate(NpcCombatDropTable.CHANCE_1_IN_256);
-    var dropTable = NpcCombatDropTable.builder().chance(0.034).broadcast(true).log(true);
+        .rareDropTableRate(NpcCombatDropTable.CHANCE_1_IN_256)
+        .clue(NpcCombatDrop.ClueScroll.ELITE, NpcCombatDropTable.CHANCE_1_IN_500);
+    var dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_3000)
+        .broadcast(true).log(true);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.PET_KRAKEN)));
     drop.table(dropTable.build());
-    dropTable = NpcCombatDropTable.builder().chance(0.1).broadcast(true).log(true);
+    dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_1000)
+        .broadcast(true).log(true);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.JAR_OF_DIRT)));
     drop.table(dropTable.build());
-    dropTable = NpcCombatDropTable.builder().chance(0.2);
-    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.CLUE_SCROLL_ELITE)));
-    drop.table(dropTable.build());
-    dropTable = NpcCombatDropTable.builder().chance(0.29).broadcast(true).log(true);
+    dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_512)
+        .broadcast(true).log(true);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.TRIDENT_OF_THE_SEAS_FULL)));
     drop.table(dropTable.build());
-    dropTable = NpcCombatDropTable.builder().chance(0.5).broadcast(true).log(true);
+    dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_400)
+        .broadcast(true).log(true);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.KRAKEN_TENTACLE)));
     drop.table(dropTable.build());
-    dropTable = NpcCombatDropTable.builder().chance(2.3);
+    dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_64);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.MAGIC_SEED)));
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.DRAGONSTONE_RING)));
     drop.table(dropTable.build());
@@ -99,7 +117,7 @@ public class Kraken291Combat extends NpcCombat {
     combat.immunity(NpcCombatImmunity.builder().poison(true).venom(true).build());
     combat.focus(NpcCombatFocus.builder().bypassMapObjects(true).build());
     combat.killCount(NpcCombatKillCount.builder().sendMessage(true).build());
-    combat.combatScript("KrakenCS").deathAnimation(3993).blockAnimation(3990);
+    combat.deathAnimation(3993).blockAnimation(3990);
     combat.drop(drop.build());
 
     var style = NpcCombatStyle.builder();
@@ -112,5 +130,108 @@ public class Kraken291Combat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
+  }
+
+  @Override
+  public void restoreHook() {
+    loadTentacles();
+  }
+
+  @Override
+  public void tickStartHook() {
+    if (npc.isLocked()) {
+      return;
+    }
+    if (tentacles == null) {
+      loadTentacles();
+    }
+    if (!setTentacleIndices) {
+      for (var tentacle : tentacles) {
+        tentacle.getCombat().getCombatScript().script("kraken=" + npc.getIndex());
+        tentacle.getCombat().getCombatScript().script("tentacle0=" + tentacles[0].getIndex());
+        tentacle.getCombat().getCombatScript().script("tentacle1=" + tentacles[1].getIndex());
+        tentacle.getCombat().getCombatScript().script("tentacle2=" + tentacles[2].getIndex());
+        tentacle.getCombat().getCombatScript().script("tentacle3=" + tentacles[3].getIndex());
+      }
+      setTentacleIndices = true;
+    }
+    if (npc.getInCombatDelay() == 0 && !npc.isAttacking() && npc.getId() != NpcId.WHIRLPOOL) {
+      npc.setTransformationId(NpcId.WHIRLPOOL);
+    } else if (npc.getInCombatDelay() > 0 || npc.isAttacking()) {
+      npc.getMovement().clear();
+      if (npc.getId() != NpcId.KRAKEN_291) {
+        npc.setTransformationId(NpcId.KRAKEN_291);
+        npc.setAnimation(7135);
+        npc.setHitDelay(4);
+      }
+    }
+    if (npc.isDead()) {
+      for (var tentacle : tentacles) {
+        if (tentacle.isVisible() && !tentacle.isDead()) {
+          tentacle.getCombat().timedDeath();
+        }
+      }
+    }
+  }
+
+  @Override
+  public boolean canBeAttackedHook(Entity opponent, boolean sendMessage, HitType hitType) {
+    if (!(opponent instanceof Player)) {
+      return false;
+    }
+    var player = (Player) opponent;
+    if (!Settings.getInstance().isSpawn() && !player.getSkills().isAnySlayerTask(npc)
+        && !player.isUsergroup(SqlUserRank.YOUTUBER)) {
+      if (sendMessage) {
+        player.getGameEncoder()
+            .sendMessage("This can only be attacked on an appropriate Slayer task.");
+      }
+      return false;
+    }
+    if (hitType == HitType.MELEE || hitType == HitType.RANGED) {
+      if (sendMessage) {
+        player.getGameEncoder().sendMessage("Only magic seems effective against these...");
+      }
+      return false;
+    }
+    for (var tentacle : tentacles) {
+      if (tentacle.isVisible() && tentacle.getId() != NpcId.ENORMOUS_TENTACLE_112) {
+        player.getGameEncoder().sendMessage("Nothing interesting happens.");
+        return false;
+      }
+    }
+    if (npc.isAttacking() && npc.getLastHitByEntity() != null
+        && player != npc.getLastHitByEntity()) {
+      if (sendMessage) {
+        player.getGameEncoder().sendMessage("The Kraken is busy attacking someone else.");
+      }
+      return false;
+    }
+    for (var tentacle : tentacles) {
+      if (tentacle.isAttacking() && tentacle.getLastHitByEntity() != null
+          && player != tentacle.getLastHitByEntity()) {
+        if (sendMessage) {
+          player.getGameEncoder().sendMessage("The Kraken is busy attacking someone else.");
+        }
+        return false;
+      }
+    }
+    return true;
+  }
+
+  private void loadTentacles() {
+    if (tentacles == null) {
+      tentacles = new Npc[4];
+    } else {
+      npc.getWorld().removeNpcs(tentacles);
+    }
+    if (npc.getIndex() == 0) {
+      return;
+    }
+    for (var i = 0; i < tentacles.length; i++) {
+      tentacles[i] = new Npc(npc.getController(), NpcId.WHIRLPOOL_5534, TENTACLE_TILES[i]);
+      tentacles[i].setRespawns(npc.getRespawns());
+    }
+    setTentacleIndices = false;
   }
 }

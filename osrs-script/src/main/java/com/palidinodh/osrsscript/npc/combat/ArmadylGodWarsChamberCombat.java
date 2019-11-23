@@ -141,6 +141,7 @@ public class ArmadylGodWarsChamberCombat extends NpcCombat {
     dropTable
         .drop(NpcCombatDropTableDrop.builder().item(new RandomItem(ItemId.COINS, 1000, 5000, 120))
             .log(NpcCombatDropTableDrop.Log.NO).build());
+    wingmanSkreeDrop.table(dropTable.build());
     dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_UNCOMMON);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.SMOKE_RUNE, 15, 25)));
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.MANTA_RAY, 2)));
@@ -194,6 +195,7 @@ public class ArmadylGodWarsChamberCombat extends NpcCombat {
     dropTable
         .drop(NpcCombatDropTableDrop.builder().item(new RandomItem(ItemId.COINS, 1000, 5000, 120))
             .log(NpcCombatDropTableDrop.Log.NO).build());
+    flockleaderGeerinDrop.table(dropTable.build());
     dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_UNCOMMON);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.MANTA_RAY, 2)));
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.MUSHROOM_POTATO, 3)));

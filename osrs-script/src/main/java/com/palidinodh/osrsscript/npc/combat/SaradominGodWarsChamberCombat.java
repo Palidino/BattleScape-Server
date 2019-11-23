@@ -134,6 +134,7 @@ public class SaradominGodWarsChamberCombat extends NpcCombat {
     dropTable
         .drop(NpcCombatDropTableDrop.builder().item(new RandomItem(ItemId.COINS, 1000, 5000, 40))
             .log(NpcCombatDropTableDrop.Log.NO).build());
+    breeDrop.table(dropTable.build());
     dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_UNCOMMON);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.GRIMY_RANARR_WEED_NOTED)));
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.UNICORN_HORN_NOTED, 6)));
@@ -189,6 +190,7 @@ public class SaradominGodWarsChamberCombat extends NpcCombat {
     dropTable
         .drop(NpcCombatDropTableDrop.builder().item(new RandomItem(ItemId.COINS, 1000, 5000, 40))
             .log(NpcCombatDropTableDrop.Log.NO).build());
+    growlerDrop.table(dropTable.build());
     dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_UNCOMMON);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.GRIMY_RANARR_WEED_NOTED)));
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.SUMMER_PIE)));
@@ -243,6 +245,7 @@ public class SaradominGodWarsChamberCombat extends NpcCombat {
     dropTable
         .drop(NpcCombatDropTableDrop.builder().item(new RandomItem(ItemId.COINS, 1000, 5000, 40))
             .log(NpcCombatDropTableDrop.Log.NO).build());
+    starlightDrop.table(dropTable.build());
     dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_UNCOMMON);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.GRIMY_RANARR_WEED_NOTED)));
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.SUMMER_PIE)));
