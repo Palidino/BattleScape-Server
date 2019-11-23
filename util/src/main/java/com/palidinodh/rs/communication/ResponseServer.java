@@ -1800,9 +1800,9 @@ public class ResponseServer implements Runnable, SessionHandler {
         player.getIgnores());
     synchronized (this) {
       RsPlayer p = playersByUsername.get(friend.getUsername().toLowerCase());
-      if (p != null && RsFriend.canRegister(player.getUsername(), player.getPrivateChatStatus(),
+      if (p != null && (player.getRights() > 0 || RsFriend.canRegister(player.getUsername(), player.getPrivateChatStatus(),
           p.getUsername(), p.getPrivateChatStatus(), player.getFriends(), p.getFriends(),
-          p.getIgnores())) {
+          p.getIgnores()))) {
         friend.setWorldId(p.getWorldId());
       } else {
         friend.setWorldId(0);
