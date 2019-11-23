@@ -1178,9 +1178,10 @@ public class ResponseServer implements Runnable, SessionHandler {
     synchronized (this) {
       for (RsPlayer p : playersById.values()) {
         RsFriend friend = new RsFriend(p.getUsername());
-        if (!friends.contains(friend) || !RsFriend.canRegister(player.getUsername(),
-            player.getPrivateChatStatus(), p.getUsername(), p.getPrivateChatStatus(), friends,
-            p.getFriends(), p.getIgnores())) {
+        if (!friends.contains(friend)
+            || player.getRights() == 0 && !RsFriend.canRegister(player.getUsername(),
+                player.getPrivateChatStatus(), p.getUsername(), p.getPrivateChatStatus(), friends,
+                p.getFriends(), p.getIgnores())) {
           continue;
         }
         friendsOnline.add(new RsFriend(p.getUsername(), p.getWorldId()));
@@ -1229,9 +1230,9 @@ public class ResponseServer implements Runnable, SessionHandler {
         player.getIgnores());
     synchronized (this) {
       RsPlayer p = playersByUsername.get(friend.getUsername().toLowerCase());
-      if (p != null && RsFriend.canRegister(player.getUsername(), player.getPrivateChatStatus(),
-          p.getUsername(), p.getPrivateChatStatus(), player.getFriends(), p.getFriends(),
-          p.getIgnores())) {
+      if (p != null && (player.getRights() > 0 || RsFriend.canRegister(player.getUsername(),
+          player.getPrivateChatStatus(), p.getUsername(), p.getPrivateChatStatus(),
+          player.getFriends(), p.getFriends(), p.getIgnores()))) {
         friend.setWorldId(p.getWorldId());
       } else {
         friend.setWorldId(0);
@@ -1418,9 +1419,9 @@ public class ResponseServer implements Runnable, SessionHandler {
     if (session == null) {
       return;
     }
-    if (!RsFriend.canRegister(sender.getUsername(), sender.getPrivateChatStatus(),
-        receiver.getUsername(), receiver.getPrivateChatStatus(), sender.getFriends(),
-        receiver.getFriends(), receiver.getIgnores())) {
+    if (sender.getRights() == 0 && !RsFriend.canRegister(sender.getUsername(),
+        sender.getPrivateChatStatus(), receiver.getUsername(), receiver.getPrivateChatStatus(),
+        sender.getFriends(), receiver.getFriends(), receiver.getIgnores())) {
       return;
     }
     session.getOutput().writeOpcodeVarInt(Opcodes.PRIVATE_MESSAGE);
