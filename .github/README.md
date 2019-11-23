@@ -20,9 +20,9 @@ Recommended extensions:
 - Trello Viewer (if you've been given access to BattleScape's Trello).
 
 Creating your own fork:
-- Select `fork` in the top-right of this page.
+- Select `Fork` in the top-right of this page.
 - Once it finishes, you'll be taken to your forked copy of our repo.
-- Select `clone or download` and copy the url, you'll need this to start installing.
+- Select `Clone or download` and copy the url, you'll need this to start installing.
 
 ### Installing
 
@@ -30,8 +30,8 @@ Creating your own fork:
 - Open Visual Studio Code.
 - Install the extensions mentioned in prerequisites through the sidebar.
 - Go to View -> Command Pallete...
-- Type in `git: clone` and select it.
-- Paste the url you copied earlier from `clone or download` and hit enter.
+- Type in `Git: Clone` and select it.
+- Paste the url you copied earlier from `Clone or download` and hit enter.
 - Choose the location you'd like to create tthe repository at, such as your desktop. The directory that will be created can be renamed or moved later.
 - Select open when asked if you'd like to open the cloned repository.
 
@@ -67,4 +67,4 @@ Once you've completed change(s), push them into your forked repo.
 - Select the checkmark (`Commit`).
 - Select the `Synchronize Changes`, which saves your changes into your forked repo.
 
-To request your changes to be added to the official repo, visit your forked repo on GitHub. Select `new pull request`, and then submit your changes from there.
+To request your changes to be added to the official repo, visit your forked repo on GitHub. Select `New pull request`, and then submit your changes from there.
