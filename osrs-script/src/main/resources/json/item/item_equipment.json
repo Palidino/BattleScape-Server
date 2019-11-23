@@ -6635,7 +6635,8 @@
   },
   {
     "id": "ItemId.MIME_MASK",
-    "equipSlot": "HEAD"
+    "equipSlot": "HEAD",
+    "showHair": true
   },
   {
     "id": "ItemId.MIME_TOP",
