@@ -1,9 +1,14 @@
-package com.palidinodh.osrsscript.npc.combatv0;
+package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
+import com.palidinodh.osrscore.model.Graphic;
 import com.palidinodh.osrscore.model.HitType;
+import com.palidinodh.osrscore.model.Tile;
+import com.palidinodh.osrscore.model.TileHitEvent;
+import com.palidinodh.osrscore.model.npc.Npc;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombat;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatAggression;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatDefinition;
@@ -17,7 +22,10 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import lombok.var;
 
-public class JalMejjak250Combat extends NpcCombat {
+public class JalMejjakCombat extends NpcCombat {
+  @Inject
+  private Npc npc;
+
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var combat = NpcCombatDefinition.builder();
@@ -27,7 +35,7 @@ public class JalMejjak250Combat extends NpcCombat {
     combat.aggression(NpcCombatAggression.builder().range(8).always(true).sameTarget(true).build());
     combat.immunity(NpcCombatImmunity.builder().poison(true).venom(true).build());
     combat.focus(NpcCombatFocus.builder().bypassMapObjects(true).build());
-    combat.combatScript("JalMejJakCS").deathAnimation(2866).blockAnimation(2869);
+    combat.deathAnimation(2866).blockAnimation(2869);
 
     var style = NpcCombatStyle.builder();
     style
@@ -39,5 +47,28 @@ public class JalMejjak250Combat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
+  }
+
+  @Override
+  public void tickStartHook() {
+    if (npc.isLocked() || npc.isDead() || npc.getHitDelay() > 0
+        || npc.getEngagingEntity() instanceof Npc) {
+      return;
+    }
+    npc.setAnimation(2868);
+    for (var i = 0; i < 3; i++) {
+      var tile = new Tile(npc.getX(), npc.getY() - 7);
+      tile.randomize(2);
+      var projectile = Graphic.Projectile.builder().id(660).startTile(npc).endTile(tile)
+          .projectileSpeed(getProjectileSpeed(tile)).startHeight(1).endHeight(1).curve(255).build();
+      sendMapProjectile(projectile);
+      npc.getController().sendMapGraphic(tile, new Graphic(659, 0, projectile.getContactDelay()));
+      var the = new TileHitEvent(projectile.getEventDelay(), npc.getController(), tile, 10,
+          HitType.MAGIC);
+      the.setRadius(1);
+      the.setIgnorePrayer(true);
+      npc.getWorld().addEvent(the);
+    }
+    npc.setHitDelay(3);
   }
 }

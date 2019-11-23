@@ -1,9 +1,10 @@
-package com.palidinodh.osrsscript.npc.combatv0;
+package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
+import com.palidinodh.osrscore.model.Entity;
 import com.palidinodh.osrscore.model.Graphic;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombat;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatAggression;
@@ -19,7 +20,9 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Skills;
 import lombok.var;
 
-public class Karamel136Combat extends NpcCombat {
+public class KaramelCombat extends NpcCombat {
+  private boolean secondHit;
+
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var combat = NpcCombatDefinition.builder();
@@ -32,7 +35,7 @@ public class Karamel136Combat extends NpcCombat {
         .bonus(CombatBonus.DEFENCE_RANGED, 150).build());
     combat.aggression(NpcCombatAggression.PLAYERS);
     combat.immunity(NpcCombatImmunity.builder().poison(true).venom(true).build());
-    combat.combatScript("KaramelCS").deathAnimation(836).blockAnimation(424);
+    combat.deathAnimation(836).blockAnimation(424);
 
     var style = NpcCombatStyle.builder();
     style.damage(NpcCombatDamage.maximum(20));
@@ -57,5 +60,19 @@ public class Karamel136Combat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
+  }
+
+  @Override
+  public double damageInflictedHook(NpcCombatStyle combatStyle, Entity opponent, double damage) {
+    if (secondHit && damage > 0) {
+      return 3;
+    }
+    return damage;
+  }
+
+  @Override
+  public void applyAttackStartHook(NpcCombatStyle combatStyle, Entity opponent,
+      int applyAttackLoopCount) {
+    secondHit = applyAttackLoopCount > 0;
   }
 }

@@ -600,7 +600,7 @@ public class SlayerPlugin extends PlayerPlugin {
         }
         return true;
       case 31669: // the cloister bell
-        if (!Settings.getInstance().isSpawn()
+        if (!Settings.getInstance().isLocal() && !Settings.getInstance().isSpawn()
             && !isAnyTask(NpcId.DUSK_248, NpcDef.getName(NpcId.DUSK_248))) {
           player.getGameEncoder().sendMessage("You need an appropriate task to do this.");
           return true;
@@ -631,7 +631,7 @@ public class SlayerPlugin extends PlayerPlugin {
           unlock(SlayerUnlock.GROTESQUE_GUARDIANS);
           return true;
         }
-        if (!Settings.getInstance().isSpawn()
+        if (!Settings.getInstance().isLocal() && !Settings.getInstance().isSpawn()
             && !isAnyTask(NpcId.DUSK_248, NpcDef.getName(NpcId.DUSK_248))) {
           player.getGameEncoder().sendMessage("You need an appropriate task to enter.");
           return true;

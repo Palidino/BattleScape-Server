@@ -1,11 +1,15 @@
-package com.palidinodh.osrsscript.npc.combatv0;
+package com.palidinodh.osrsscript.npc.combat;
 
 import java.util.Arrays;
 import java.util.List;
+import com.google.inject.Inject;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.model.CombatBonus;
+import com.palidinodh.osrscore.model.Entity;
+import com.palidinodh.osrscore.model.HitEvent;
 import com.palidinodh.osrscore.model.item.RandomItem;
+import com.palidinodh.osrscore.model.npc.Npc;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombat;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatAggression;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatDefinition;
@@ -21,25 +25,31 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatEffect;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatProjectile;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
+import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.osrscore.model.player.Skills;
+import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class KingBlackDragon276Combat extends NpcCombat {
+public class KingBlackDragonCombat extends NpcCombat {
+  @Inject
+  private Npc npc;
+
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
-    var drop = NpcCombatDrop.builder().rareDropTableRate(NpcCombatDropTable.CHANCE_1_IN_256);
-    var dropTable = NpcCombatDropTable.builder().chance(0.034).broadcast(true).log(true);
+    var drop = NpcCombatDrop.builder().rareDropTableRate(NpcCombatDropTable.CHANCE_1_IN_256)
+        .clue(NpcCombatDrop.ClueScroll.ELITE, NpcCombatDropTable.CHANCE_1_IN_450);
+    var dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_3000)
+        .broadcast(true).log(true);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.PRINCE_BLACK_DRAGON)));
     drop.table(dropTable.build());
-    dropTable = NpcCombatDropTable.builder().chance(0.08).broadcast(true).log(true);
+    dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_1250)
+        .broadcast(true).log(true);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.DRACONIC_VISAGE)));
     drop.table(dropTable.build());
-    dropTable = NpcCombatDropTable.builder().chance(0.1).log(true);
+    dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_750).log(true);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.DRAGON_PICKAXE)));
     drop.table(dropTable.build());
-    dropTable = NpcCombatDropTable.builder().chance(0.22);
-    dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.CLUE_SCROLL_ELITE)));
-    drop.table(dropTable.build());
-    dropTable = NpcCombatDropTable.builder().chance(2.4).log(true);
+    dropTable = NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_64).log(true);
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.DRAGON_MED_HELM)));
     dropTable.drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.KBD_HEADS)));
     drop.table(dropTable.build());
@@ -83,7 +93,7 @@ public class KingBlackDragon276Combat extends NpcCombat {
         .bonus(CombatBonus.DEFENCE_RANGED, 70).build());
     combat.aggression(NpcCombatAggression.builder().range(15).build());
     combat.killCount(NpcCombatKillCount.builder().sendMessage(true).build());
-    combat.combatScript("KingBlackDragonCS").deathAnimation(92).blockAnimation(89);
+    combat.deathAnimation(92).blockAnimation(89);
     combat.drop(drop.build());
 
     var style = NpcCombatStyle.builder();
@@ -129,5 +139,58 @@ public class KingBlackDragon276Combat extends NpcCombat {
 
 
     return Arrays.asList(combat.build());
+  }
+
+  @Override
+  public void applyAttackEndHook(NpcCombatStyle combatStyle, Entity opponent,
+      int applyAttackLoopCount, HitEvent hitEvent) {
+    if (!(opponent instanceof Player) || combatStyle.getProjectile().getId() == 393
+        || PRandom.randomE(5) != 0) {
+      return;
+    }
+    var player = (Player) opponent;
+    if (combatStyle.getProjectile().getId() == 395) {
+      if (player.getController().canMagicBind()) {
+        player.getController().setMagicBind(8, npc);
+        if (player.getHitDelay() < 8) {
+          player.setHitDelay(8);
+        }
+        player.getGameEncoder().sendMessage("You've been frozen!");
+      }
+    } else if (combatStyle.getProjectile().getId() == 396) {
+      player.getSkills().changeStat(Skills.ATTACK, -2);
+      player.getSkills().changeStat(Skills.DEFENCE, -2);
+      player.getSkills().changeStat(Skills.STRENGTH, -2);
+      player.getSkills().changeStat(Skills.RANGED, -2);
+      player.getSkills().changeStat(Skills.MAGIC, -2);
+      player.getGameEncoder().sendMessage("You're shocked and weakened!");
+    }
+  }
+
+  @Override
+  public int dragonfireDamageHook(NpcCombatStyle combatStyle, Entity opponent, int damage) {
+    var normalFire = combatStyle.getProjectile().getId() == 393;
+    if (!(opponent instanceof Player)) {
+      return damage;
+    }
+    var player = (Player) opponent;
+    if (player.getSkills().getSuperAntifireTime() > 0) {
+      damage *= 0.5;
+    } else if (player.getSkills().getAntifireTime() > 0) {
+      damage *= 0.75;
+    }
+    if (player.getEquipment().wearingDragonfireShield()) {
+      if (normalFire) {
+        damage *= 0.30;
+      } else {
+        damage *= 0.20;
+      }
+    }
+    if (normalFire && player.getEquipment().wearingDragonfireShield()
+        && (player.getSkills().getAntifireTime() > 0
+            || player.getSkills().getSuperAntifireTime() > 0)) {
+      damage = 0;
+    }
+    return damage;
   }
 }
