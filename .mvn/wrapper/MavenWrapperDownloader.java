@@ -46,9 +46,9 @@ public class MavenWrapperDownloader {
     private static final String PROPERTY_NAME_WRAPPER_URL = "wrapperUrl";
 
     public static void main(String args[]) {
-        LogManager.getLogger().debug("- Downloader started");
+        System.out.println("- Downloader started");
         File baseDirectory = new File(args[0]);
-        LogManager.getLogger().debug("- Using base directory: " + baseDirectory.getAbsolutePath());
+        System.out.println("- Using base directory: " + baseDirectory.getAbsolutePath());
 
         // If the maven-wrapper.properties exists, read it and check if it contains a custom
         // wrapperUrl parameter.
@@ -62,7 +62,7 @@ public class MavenWrapperDownloader {
                 mavenWrapperProperties.load(mavenWrapperPropertyFileInputStream);
                 url = mavenWrapperProperties.getProperty(PROPERTY_NAME_WRAPPER_URL, url);
             } catch (IOException e) {
-                LogManager.getLogger().debug("- ERROR loading '" + MAVEN_WRAPPER_PROPERTIES_PATH + "'");
+                System.out.println("- ERROR loading '" + MAVEN_WRAPPER_PROPERTIES_PATH + "'");
             } finally {
                 try {
                     if(mavenWrapperPropertyFileInputStream != null) {
@@ -73,22 +73,22 @@ public class MavenWrapperDownloader {
                 }
             }
         }
-        LogManager.getLogger().debug("- Downloading from: " + url);
+        System.out.println("- Downloading from: " + url);
 
         File outputFile = new File(baseDirectory.getAbsolutePath(), MAVEN_WRAPPER_JAR_PATH);
         if(!outputFile.getParentFile().exists()) {
             if(!outputFile.getParentFile().mkdirs()) {
-                LogManager.getLogger().debug(
+                System.out.println(
                         "- ERROR creating output directory '" + outputFile.getParentFile().getAbsolutePath() + "'");
             }
         }
-        LogManager.getLogger().debug("- Downloading to: " + outputFile.getAbsolutePath());
+        System.out.println("- Downloading to: " + outputFile.getAbsolutePath());
         try {
             downloadFileFromURL(url, outputFile);
-            LogManager.getLogger().debug("Done");
+            System.out.println("Done");
             System.exit(0);
         } catch (Throwable e) {
-            LogManager.getLogger().debug("- Error downloading");
+            System.out.println("- Error downloading");
             e.printStackTrace();
             System.exit(1);
         }
