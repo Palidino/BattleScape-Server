@@ -33,7 +33,6 @@ public enum WildernessObelisk {
   private Tile northWest;
 
   public boolean inside(Tile tile) {
-    System.out.println(tile + ", " + southWest + ", " + northEast);
     return tile.getX() > southWest.getX() && tile.getY() > southWest.getY()
         && tile.getX() < northEast.getX() && tile.getY() < northEast.getY();
   }
