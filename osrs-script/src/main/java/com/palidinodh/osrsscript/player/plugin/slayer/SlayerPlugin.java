@@ -39,9 +39,9 @@ import lombok.var;
 
 public class SlayerPlugin extends PlayerPlugin {
   private static final int[] BLOCKED_TASK_VARBITS =
-      {VarbitId.SLAYER_BLOCKED_TASK_1, VarbitId.SLAYER_BLOCKED_TASK_2,
+      { VarbitId.SLAYER_BLOCKED_TASK_1, VarbitId.SLAYER_BLOCKED_TASK_2,
           VarbitId.SLAYER_BLOCKED_TASK_3, VarbitId.SLAYER_BLOCKED_TASK_4,
-          VarbitId.SLAYER_BLOCKED_TASK_5, VarbitId.SLAYER_BLOCKED_TASK_6};
+          VarbitId.SLAYER_BLOCKED_TASK_5, VarbitId.SLAYER_BLOCKED_TASK_6 };
   private static final List<RandomItem> BRIMSTONE_CHEST_ITEMS =
       RandomItem.buildList(new RandomItem(ItemId.UNCUT_DIAMOND, 25, 35).weight(1024 - 12),
           new RandomItem(ItemId.UNCUT_RUBY, 25, 35).weight(1024 - 12),

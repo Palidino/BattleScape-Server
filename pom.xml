@@ -16,131 +16,177 @@
 	CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, 
 	OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE 
 	USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-
-	<groupId>com.palidinodh</groupId>
-	<artifactId>BattleScape-Server</artifactId>
-	<version>1.0</version>
-	<packaging>pom</packaging>
-
-	<name>BattleScape Server</name>
-	<description>BattleScape RSPS</description>
-	<url>https://www.battle-scape.com</url>
-
-	<properties>
-		<java.version>1.8</java.version>
-		<lombok.version>1.18.10</lombok.version>
-		<javacord.version>3.0.4</javacord.version>
-
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>${java.version}</maven.compiler.source>
-		<maven.compiler.target>${java.version}</maven.compiler.target>
-
-		<maven.javadoc.skip>true</maven.javadoc.skip>
-		<checkstyle.skip>true</checkstyle.skip>
-	</properties>
-
-	<licenses>
-		<license>
-			<name>2-Clause BSD License</name>
-			<url>https://opensource.org/licenses/BSD-2-Clause</url>
-		</license>
-	</licenses>
-
-	<inceptionYear>2019</inceptionYear>
-
-	<scm>
-		<url>https://github.com/Palidino/BattleScape-Server</url>
-		<connection>scm:git:git://github.com/Palidino/BattleScape-Server</connection>
-		<developerConnection>scm:git:git@github.com:Palidino/BattleScape-Server</developerConnection>
-		<tag>HEAD</tag>
-	</scm>
-
-	<developers>
-		<developer>
-			<id>Palidino</id>
-			<name>Dalton</name>
-		</developer>
-	</developers>
-
-	<issueManagement>
-		<system>GitHub Issues</system>
-		<url>https://github.com/Palidino/BattleScape-Server/issues</url>
-	</issueManagement>
-
-	<repositories>
-		<repository>
-			<id>maven-central</id>
-			<url>http://repo1.maven.org/maven2</url>
-		</repository>
-		<repository>
-			<id>local-repo</id>
-			<url>file:///${project.basedir}/repo</url>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</releases>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>maven-central-plugins</id>
-			<url>http://repo1.maven.org/maven2</url>
-		</pluginRepository>
-	</pluginRepositories>
-
-	<modules>
-		<module>osrs-core</module>
-		<module>osrs-script</module>
-		<module>util</module>
-	</modules>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.projectlombok</groupId>
-				<artifactId>lombok</artifactId>
-				<version>${lombok.version}</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>com.google.code.gson</groupId>
-				<artifactId>gson</artifactId>
-				<version>2.8.6</version>
-			</dependency>
-			<dependency>
-				<groupId>org.javacord</groupId>
-				<artifactId>javacord</artifactId>
-				<version>${javacord.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
-	<build>
-		<finalName>${project.artifactId}</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>3.2.1</version>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.8</version>
-			</plugin>
-		</plugins>
-	</build>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.palidinodh</groupId>
+  <artifactId>BattleScape-Server</artifactId>
+ <version>1.0.1</version>
+  <packaging>pom</packaging>
+  <name>BattleScape Server</name>
+  <description>BattleScape RSPS</description>
+  <url>https://www.battle-scape.com</url>
+  <properties>
+    <java.version>1.8</java.version>
+    <lombok.version>1.18.10</lombok.version>
+    <javacord.version>3.0.4</javacord.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <maven.javadoc.skip>true</maven.javadoc.skip>
+    <checkstyle.skip>true</checkstyle.skip>
+  </properties>
+  <licenses>
+    <license>
+      <name>2-Clause BSD License</name>
+      <url>https://opensource.org/licenses/BSD-2-Clause</url>
+    </license>
+  </licenses>
+  <inceptionYear>2019</inceptionYear>
+  <scm>
+    <url>https://github.com/Palidino/BattleScape-Server</url>
+    <connection>scm:git:git://github.com/Palidino/BattleScape-Server</connection>
+    <developerConnection>scm:git:git@github.com:Palidino/BattleScape-Server</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+  <developers>
+    <developer>
+      <id>Palidino</id>
+    </developer>
+    <developer>
+      <id>Miika</id>
+    </developer>
+  </developers>
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/Palidino/BattleScape-Server/issues</url>
+  </issueManagement>
+  <repositories>
+    <repository>
+      <id>maven-central</id>
+      <url>http://repo1.maven.org/maven2</url>
+    </repository>
+    <repository>
+      <id>local-maven-repo</id>
+      <url>file:${project.basedir}/repo</url>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </releases>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>maven-central-plugins</id>
+      <url>http://repo1.maven.org/maven2</url>
+    </pluginRepository>
+  </pluginRepositories>
+  <modules>
+    <module>util</module>
+    <module>osrs-script</module>
+  </modules>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.8.6</version>
+      </dependency>
+      <dependency>
+        <groupId>org.javacord</groupId>
+        <artifactId>javacord</artifactId>
+        <version>${javacord.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <profiles>
+    <profile>
+      <id>Full Access</id>
+      <activation>
+        <file>
+          <exists>${basedir}/osrs-core/pom.xml</exists>
+        </file>
+      </activation>
+      <modules>
+        <module>osrs-core</module>
+      </modules>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>build-helper-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>parse-version</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>versions-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>set</goal>
+                  <goal>commit</goal>
+                </goals>
+                <configuration>
+                  <newVersion>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.nextIncrementalVersion}</newVersion>
+                  <generateBackupPoms>false</generateBackupPoms>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+  <build>
+    <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.1</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.8</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.0.0-M1</version>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>3.0.0</version>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>2.7</version>
+      </plugin>
+    </plugins>
+  </build>
 </project>
