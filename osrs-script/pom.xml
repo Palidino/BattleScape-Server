@@ -29,7 +29,7 @@
     <dependency>
       <groupId>com.palidinodh</groupId>
       <artifactId>osrs-core</artifactId>
-      <version>LATEST</version>
+      <version>[1.0.0,)</version>
     </dependency>
     <dependency>
       <groupId>com.palidinodh</groupId>

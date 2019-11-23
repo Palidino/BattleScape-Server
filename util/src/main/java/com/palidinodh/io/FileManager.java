@@ -126,6 +126,8 @@ public class FileManager implements Runnable {
             filename.startsWith(JSON_DIR) ? new File(filename) : new File(JSON_DIR, filename);
         if (file.getPath().contains("..")) {
           throw new IllegalArgumentException("File path can't go up levels");
+        } else if (file.getPath().contains("settings")) {
+          throw new IllegalArgumentException("File path can't contain settings");
         }
         try (Reader reader = (file.exists() ? new FileReader(file)
             : new InputStreamReader(FileManager.class.getResourceAsStream(file.getPath()),
@@ -146,6 +148,8 @@ public class FileManager implements Runnable {
             filename.startsWith(JSON_DIR) ? new File(filename) : new File(JSON_DIR, filename);
         if (file.getPath().contains("..")) {
           throw new IllegalArgumentException("File path can't go up levels");
+        } else if (file.getPath().contains("settings")) {
+          throw new IllegalArgumentException("File path can't contain settings");
         }
         try (Reader reader = (file.exists() ? new FileReader(file)
             : new InputStreamReader(FileManager.class.getResourceAsStream(file.getPath()),

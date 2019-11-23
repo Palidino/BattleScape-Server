@@ -145,6 +145,10 @@ public class Readers {
     return fromClass.getResourceAsStream(filename);
   }
 
+  public static List<String> getResourceList(String pathName) {
+    return getResourceList(Readers.class, pathName);
+  }
+
   public static List<String> getResourceList(Class<?> fromClass, String pathName) {
     List<String> filenames = new ArrayList<>();
     try {
