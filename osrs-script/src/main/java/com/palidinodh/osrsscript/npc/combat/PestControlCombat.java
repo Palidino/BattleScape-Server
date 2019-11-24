@@ -376,6 +376,22 @@ public class PestControlCombat extends NpcCombat {
     defiler33Combat.style(style.build());
 
 
+    var defiler50Combat = NpcCombatDefinition.builder();
+    defiler50Combat.id(NpcId.DEFILER_50);
+    defiler50Combat.spawn(NpcCombatSpawn.builder().respawnDelay(100).build());
+    defiler50Combat.hitpoints(NpcCombatHitpoints.total(90));
+    defiler50Combat.stats(NpcCombatStats.builder().rangedLevel(50).defenceLevel(25).build());
+    defiler50Combat.aggression(NpcCombatAggression.PLAYERS);
+    defiler50Combat.deathAnimation(3922).blockAnimation(3921);
+
+    style = NpcCombatStyle.builder();
+    style.type(NpcCombatStyleType.RANGED);
+    style.damage(NpcCombatDamage.maximum(8));
+    style.animation(3920).attackSpeed(4);
+    style.projectile(NpcCombatProjectile.id(335));
+    defiler50Combat.style(style.build());
+
+
     var defiler66Combat = NpcCombatDefinition.builder();
     defiler66Combat.id(NpcId.DEFILER_66);
     defiler66Combat.spawn(NpcCombatSpawn.builder().respawnDelay(100).build());
@@ -523,9 +539,9 @@ public class PestControlCombat extends NpcCombat {
         spinner55Combat.build(), spinner74Combat.build(), spinner92Combat.build(),
         torcher33Combat.build(), torcher49Combat.build(), torcher66Combat.build(),
         torcher79Combat.build(), torcher92Combat.build(), defiler33Combat.build(),
-        defiler66Combat.build(), defiler80Combat.build(), defiler97Combat.build(),
-        brawler51Combat.build(), brawler76Combat.build(), brawler101Combat.build(),
-        brawler129Combat.build());
+        defiler50Combat.build(), defiler66Combat.build(), defiler80Combat.build(),
+        defiler97Combat.build(), brawler51Combat.build(), brawler76Combat.build(),
+        brawler101Combat.build(), brawler129Combat.build());
   }
 
   @Override

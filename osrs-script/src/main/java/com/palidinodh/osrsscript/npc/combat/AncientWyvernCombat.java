@@ -108,7 +108,7 @@ public class AncientWyvernCombat extends NpcCombat {
     combat.slayer(NpcCombatSlayer.builder().level(82).build());
     combat.aggression(NpcCombatAggression.PLAYERS);
     combat.killCount(NpcCombatKillCount.builder().asName("Fossil Island wyvern").build());
-    combat.combatScript("WyvernCS").deathAnimation(7652).blockAnimation(7659);
+    combat.deathAnimation(7652).blockAnimation(7659);
     combat.drop(drop.build());
 
     var style = NpcCombatStyle.builder();
