@@ -9,12 +9,14 @@ These instructions will get you a copy of the project up on your local machine f
 ### Prerequisites
 
 [Visual Studio Code](https://code.visualstudio.com) is recommended, and will be the IDE used in the installation guide.
+[Git](https://git-scm.com), needed to clone the repo and also to fetch and push any changes.
+[Java 8 Development Kit](https://adoptopenjdk.net). In the setup, select/enable the "Set JAVA_HOME variable" option.
 
-Required extensions:
+Required VSCode extensions:
 - Java Extension Pack
 - Lombok Annotations Support for VS Code
 
-Recommended extensions:
+Recommended VSCode extensions:
 - Bracket Pair Colorizer
 - GitLens — Git supercharged
 - Trello Viewer (if you've been given access to BattleScape's Trello).
@@ -26,14 +28,15 @@ Creating your own fork:
 
 ### Installing
 
+- Install all of the software listed in prerequisites.
 - Create your own fork, as described in prerequisites.
 - Open Visual Studio Code.
 - Install the extensions mentioned in prerequisites through the sidebar.
 - Go to View -> Command Pallete...
 - Type in `Git: Clone` and select it.
 - Paste the url you copied earlier from `Clone or download` and hit enter.
-- Choose the location you'd like to create the repository at, such as your desktop. The directory that will be created can be renamed or moved later.
-- Select open when asked if you'd like to open the cloned repository.
+- Choose the location you'd like to create the repo at, such as your desktop. The directory that will be created can be renamed or moved later.
+- Select open when asked if you'd like to open the cloned repo.
 
 ## Running/Debugging
 
