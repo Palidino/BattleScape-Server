@@ -1,3 +1,3 @@
-[submodule "BattleScape-Core"]
+[submodule "osrs-core"]
 	path = osrs-core
 	url = https://github.com/Palidino/BattleScape-Core.git

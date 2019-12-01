@@ -20,4 +20,3 @@ log.txt
 nohup*.out
 **/target
 /rs
-/osrs-core
