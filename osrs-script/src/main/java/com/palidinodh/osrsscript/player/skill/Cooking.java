@@ -227,6 +227,10 @@ class Cooking extends SkillContainer {
         .widgetOnMapObject(COOKING_RANGE_ID).consume(new RandomItem(ItemId.RAW_MONKFISH))
         .create(new RandomItem(ItemId.MONKFISH)).failedCreate(new RandomItem(ItemId.BURNT_MONKFISH))
         .build());
+    entries.add(SkillEntry.builder().level(82).failFactor(104).experience(211).animation(883)
+        .widgetOnMapObject(COOKING_RANGE_ID).consume(new RandomItem(ItemId.RAW_SEA_TURTLE))
+        .create(new RandomItem(ItemId.SEA_TURTLE))
+        .failedCreate(new RandomItem(ItemId.BURNT_SEA_TURTLE)).build());
     entries.add(SkillEntry.builder().level(80).failFactor(104).experience(210).animation(883)
         .widgetOnMapObject(COOKING_RANGE_ID).consume(new RandomItem(ItemId.RAW_SHARK))
         .create(new RandomItem(ItemId.SHARK)).failedCreate(new RandomItem(ItemId.BURNT_SHARK))
