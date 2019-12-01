@@ -30,7 +30,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class AncientWyvernCombat extends NpcCombat {
+class AncientWyvernCombat extends NpcCombat {
   @Inject
   private Npc npc;
 

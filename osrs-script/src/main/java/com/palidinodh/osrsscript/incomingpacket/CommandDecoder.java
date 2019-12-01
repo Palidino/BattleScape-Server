@@ -15,7 +15,7 @@ import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
-public class CommandDecoder extends IncomingPacketDecoder {
+class CommandDecoder extends IncomingPacketDecoder {
   private static Map<String, CommandHandler> commands = new HashMap<>();
 
   @Override

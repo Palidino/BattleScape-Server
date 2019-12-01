@@ -17,7 +17,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatImmunity;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatStats;
 import lombok.var;
 
-public class TektonCombat extends NpcCombat {
+class TektonCombat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var drop = NpcCombatDrop.builder();

@@ -12,7 +12,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatHitpoints;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatImmunity;
 import lombok.var;
 
-public class CombatDummyCombat extends NpcCombat {
+class CombatDummyCombat extends NpcCombat {
   @Inject
   private Npc npc;
 

@@ -4,7 +4,7 @@ import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.SqlUserRank;
 
-public class AnimCommand implements CommandHandler {
+class AnimCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "id";

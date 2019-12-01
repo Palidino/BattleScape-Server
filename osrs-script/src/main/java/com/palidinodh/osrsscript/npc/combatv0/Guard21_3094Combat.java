@@ -14,7 +14,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatProjectile;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import lombok.var;
 
-public class Guard21_3094Combat extends NpcCombat {
+class Guard21_3094Combat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var drop = NpcCombatDrop.builder();

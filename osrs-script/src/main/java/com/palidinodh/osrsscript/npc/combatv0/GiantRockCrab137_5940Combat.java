@@ -20,7 +20,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import lombok.var;
 
-public class GiantRockCrab137_5940Combat extends NpcCombat {
+class GiantRockCrab137_5940Combat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var drop = NpcCombatDrop.builder().rareDropTableRate(NpcCombatDropTable.CHANCE_1_IN_256);

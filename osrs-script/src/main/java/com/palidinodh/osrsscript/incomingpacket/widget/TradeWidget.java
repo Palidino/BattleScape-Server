@@ -5,13 +5,10 @@ import com.palidinodh.osrscore.io.incomingpacket.WidgetHandler;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.ReferenceId;
 
-public class TradeWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] { WidgetId.TRADE, WidgetId.TRADE_INVENTORY, WidgetId.ACCEPT_TRADE };
-  }
-
+@ReferenceId({ WidgetId.TRADE, WidgetId.TRADE_INVENTORY, WidgetId.ACCEPT_TRADE })
+class TradeWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {

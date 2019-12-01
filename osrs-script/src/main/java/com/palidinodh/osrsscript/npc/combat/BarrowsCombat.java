@@ -34,7 +34,7 @@ import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class BarrowsCombat extends NpcCombat {
+class BarrowsCombat extends NpcCombat {
   private static final NpcCombatStyle AHRIM_STUN = NpcCombatStyle.builder()
       .type(NpcCombatStyleType.MAGIC)
       .damage(NpcCombatDamage.builder().maximum(0).ignorePrayer(true).splashOnMiss(true).build())

@@ -18,8 +18,8 @@ import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
-public class WidgetDecoder extends IncomingPacketDecoder {
-  private static Map<Integer, WidgetHandler> widgets = new HashMap<>();
+class WidgetDecoder extends IncomingPacketDecoder {
+  private static Map<Integer, WidgetHandler> widgetHandlers = new HashMap<>();
 
   @Override
   public boolean execute(Player player, Stream stream) {
@@ -73,7 +73,7 @@ public class WidgetDecoder extends IncomingPacketDecoder {
     if (SkillContainer.widgets(player, option, widgetId, widgetChildId, widgetSlot, itemId)) {
       return false;
     }
-    var widget = widgets.get(widgetId);
+    var widget = widgetHandlers.get(widgetId);
     if (widget != null) {
       widget.execute(player, option, widgetId, widgetChildId, widgetSlot, itemId);
     }
@@ -84,12 +84,16 @@ public class WidgetDecoder extends IncomingPacketDecoder {
     try {
       var classes = Readers.getScriptClasses(WidgetHandler.class, "incomingpacket.widget");
       for (var clazz : classes) {
-        var classInstance = (WidgetHandler) clazz.newInstance();
-        for (var widgetId : classInstance.getIds()) {
-          if (widgets.containsKey(widgetId)) {
-            throw new Exception(clazz.getName() + " - " + widgetId + ": widget id already used.");
+        var handler = (WidgetHandler) clazz.newInstance();
+        var ids = WidgetHandler.getIds(handler);
+        if (ids == null) {
+          continue;
+        }
+        for (int id : ids) {
+          if (widgetHandlers.containsKey(id)) {
+            throw new RuntimeException(clazz.getName() + " - " + id + ": widget id already used.");
           }
-          widgets.put(widgetId, classInstance);
+          widgetHandlers.put(id, handler);
         }
       }
     } catch (Exception e) {

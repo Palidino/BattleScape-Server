@@ -21,7 +21,7 @@ import com.palidinodh.util.PEvent;
 import com.palidinodh.util.PNumber;
 import lombok.var;
 
-public class Fishing extends SkillContainer {
+class Fishing extends SkillContainer {
   private static final int TOTAL_RESOURCES = 30;
   private static final Item DRAGON_HARPOON = new Item(ItemId.DRAGON_HARPOON);
   private static final Item INFERNAL_HARPOON = new Item(ItemId.INFERNAL_HARPOON);

@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.util.PString;
 import lombok.var;
 
-public class FakeDropCommand implements CommandHandler {
+class FakeDropCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "username,itemname,from. ex. ::fakedrop miika,blue partyhat,bloodier key";

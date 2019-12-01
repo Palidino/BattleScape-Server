@@ -12,7 +12,7 @@ import com.palidinodh.rs.setting.SqlUserRank;
 import com.palidinodh.util.PTime;
 import lombok.var;
 
-public class PlayersCommand implements CommandHandler {
+class PlayersCommand implements CommandHandler {
   @Override
   public boolean canUse(Player player) {
     return player.isUsergroup(SqlUserRank.TRIAL_MODERATOR)
@@ -29,14 +29,14 @@ public class PlayersCommand implements CommandHandler {
         return Integer.compare(p1.getIdleTime(), p2.getIdleTime());
       }
     });
-    var dialogue = new LargeOptionsDialogue("Players").action((childId, slot) -> {
+    var dialogue = new LargeOptionsDialogue("Players").action((c, s) -> {
       if (player.isDead() || player.getInCombatDelay() > 0) {
         return;
       }
-      if (slot < 0 || slot >= players.size()) {
+      if (s < 0 || s >= players.size()) {
         return;
       }
-      var player2 = players.get(slot);
+      var player2 = players.get(s);
       if (player2 == null || !player2.isVisible()) {
         player.getGameEncoder().sendMessage("Unable to find user.");
         return;

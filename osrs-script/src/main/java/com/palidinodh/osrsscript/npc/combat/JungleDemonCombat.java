@@ -20,7 +20,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class JungleDemonCombat extends NpcCombat {
+class JungleDemonCombat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var combat = NpcCombatDefinition.builder();

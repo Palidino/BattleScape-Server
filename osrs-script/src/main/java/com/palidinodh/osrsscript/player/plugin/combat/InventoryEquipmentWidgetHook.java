@@ -3,10 +3,9 @@ package com.palidinodh.osrsscript.player.plugin.combat;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
-import com.palidinodh.osrsscript.player.plugin.combat.dialogue.CombatLampLevel99Dialogue;
 import lombok.var;
 
-public class InventoryEquipmentWidgetHook {
+class InventoryEquipmentWidgetHook {
   private Player player;
   @SuppressWarnings("unused")
   private CombatPlugin plugin;

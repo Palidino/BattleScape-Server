@@ -33,7 +33,7 @@ import com.palidinodh.util.PCollection;
 import com.palidinodh.util.PEvent;
 import lombok.var;
 
-public class MaidenOfSugadintiCombat extends NpcCombat {
+class MaidenOfSugadintiCombat extends NpcCombat {
   private static int[] PHASE_IDS =
       { NpcId.THE_MAIDEN_OF_SUGADINTI_940, NpcId.THE_MAIDEN_OF_SUGADINTI_940_8361,
           NpcId.THE_MAIDEN_OF_SUGADINTI_940_8362, NpcId.THE_MAIDEN_OF_SUGADINTI_940_8363,

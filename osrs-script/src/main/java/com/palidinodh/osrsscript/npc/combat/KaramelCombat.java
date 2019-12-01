@@ -20,7 +20,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Skills;
 import lombok.var;
 
-public class KaramelCombat extends NpcCombat {
+class KaramelCombat extends NpcCombat {
   private boolean secondHit;
 
   @Override

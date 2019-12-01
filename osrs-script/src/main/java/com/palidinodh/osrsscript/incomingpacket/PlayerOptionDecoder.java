@@ -12,7 +12,7 @@ import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
-public class PlayerOptionDecoder extends IncomingPacketDecoder {
+class PlayerOptionDecoder extends IncomingPacketDecoder {
   @Override
   public boolean execute(Player player, Stream stream) {
     var option = getInt(InStreamKey.PACKET_OPTION);

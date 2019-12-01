@@ -41,6 +41,8 @@ public class Vbulletin4Forum implements Forum {
         return secureSettings.getSqlCustomUserFields().getPendingVotePoints();
       case VOTE_TIME_RUNELOCUS:
         return secureSettings.getSqlCustomUserFields().getVoteTimeRunelocus();
+      case VOTE_TIME_TOPG:
+        return secureSettings.getSqlCustomUserFields().getVoteTimeTopg();
       default:
         return null;
     }
@@ -93,22 +95,40 @@ public class Vbulletin4Forum implements Forum {
         }
         results.put(SqlUserField.SUB_GROUPS, subGroupList);
       }
-      int voteTime = results.containsKey(SqlUserField.VOTE_TIME_RUNELOCUS)
-          ? Integer.parseInt(results.get(SqlUserField.VOTE_TIME_RUNELOCUS))
-          : 0;
+      int[] voteTimes = new int[SqlUserField.VOTE_FIELDS.length];
+      for (int i = 0; i < voteTimes.length; i++) {
+        voteTimes[i] = results.containsKey(SqlUserField.VOTE_FIELDS[i])
+            ? Integer.parseInt(results.get(SqlUserField.VOTE_FIELDS[i]))
+            : 0;
+      }
+      StringBuilder voteColumnBuilder = new StringBuilder();
+      for (SqlUserField field : SqlUserField.VOTE_FIELDS) {
+        String columnName = getColumnName(field);
+        if (columnName == null) {
+          continue;
+        }
+        if (voteColumnBuilder.length() > 0) {
+          voteColumnBuilder.append(", ");
+        }
+        voteColumnBuilder.append(columnName);
+      }
       String ipAddress = results.get(SqlUserField.IP_ADDRESS);
-      if (ipAddress != null) {
-        voteResult = statement.executeQuery(
-            "SELECT " + getColumnName(SqlUserField.VOTE_TIME_RUNELOCUS) + " FROM user WHERE "
+      if (ipAddress != null && voteColumnBuilder.length() > 0) {
+        voteResult =
+            statement.executeQuery("SELECT " + voteColumnBuilder.toString() + " FROM user WHERE "
                 + getColumnName(SqlUserField.IP_ADDRESS) + "='" + ipAddress + "'");
         while (voteResult.next()) {
-          int foundVoteTime = voteResult.getInt(getColumnName(SqlUserField.VOTE_TIME_RUNELOCUS));
-          if (foundVoteTime > voteTime) {
-            voteTime = foundVoteTime;
+          for (int i = 0; i < voteTimes.length; i++) {
+            int foundVoteTime = voteResult.getInt(getColumnName(SqlUserField.VOTE_FIELDS[i]));
+            if (foundVoteTime > voteTimes[i]) {
+              voteTimes[i] = foundVoteTime;
+            }
           }
         }
       }
-      results.put(SqlUserField.VOTE_TIME_RUNELOCUS, Integer.toString(voteTime));
+      for (int i = 0; i < voteTimes.length; i++) {
+        results.put(SqlUserField.VOTE_FIELDS[i], Integer.toString(voteTimes[i]));
+      }
     } catch (Exception e) {
       results.clear();
       System.out.println(e.getMessage());

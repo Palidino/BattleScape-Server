@@ -1,4 +1,4 @@
 package com.palidinodh.osrsscript.incomingpacket;
 
-public class ItemOptionDecoder extends WidgetDecoder {
+class ItemOptionDecoder extends WidgetDecoder {
 }

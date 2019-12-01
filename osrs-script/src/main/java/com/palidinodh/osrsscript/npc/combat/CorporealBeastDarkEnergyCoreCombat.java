@@ -25,7 +25,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatStats;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class CorporealBeastDarkEnergyCoreCombat extends NpcCombat {
+class CorporealBeastDarkEnergyCoreCombat extends NpcCombat {
   @Inject
   private Npc npc;
   private int jumpTime;

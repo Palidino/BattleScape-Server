@@ -14,7 +14,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import lombok.var;
 
-public class TokXil90_3122Combat extends NpcCombat {
+class TokXil90_3122Combat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var combat = NpcCombatDefinition.builder();

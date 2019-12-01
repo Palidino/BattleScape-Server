@@ -34,7 +34,7 @@ import com.palidinodh.random.PRandom;
 import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
-public class DemonicGorillaCombat extends NpcCombat {
+class DemonicGorillaCombat extends NpcCombat {
   @Inject
   private Npc npc;
   private HitType attackStyle;

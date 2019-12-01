@@ -13,7 +13,7 @@ import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PString;
 import lombok.var;
 
-public class SaveNpcCommand implements CommandHandler {
+class SaveNpcCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "id (distance) (direction)";

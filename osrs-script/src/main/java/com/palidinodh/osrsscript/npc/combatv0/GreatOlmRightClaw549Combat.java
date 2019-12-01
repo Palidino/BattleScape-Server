@@ -12,7 +12,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatHitpoints;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatStats;
 import lombok.var;
 
-public class GreatOlmRightClaw549Combat extends NpcCombat {
+class GreatOlmRightClaw549Combat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var combat = NpcCombatDefinition.builder();

@@ -35,6 +35,8 @@ public class XenforoForum implements Forum {
         return secureSettings.getSqlCustomUserFields().getPendingVotePoints();
       case VOTE_TIME_RUNELOCUS:
         return secureSettings.getSqlCustomUserFields().getVoteTimeRunelocus();
+      case VOTE_TIME_TOPG:
+        return secureSettings.getSqlCustomUserFields().getVoteTimeTopg();
       default:
         return null;
     }

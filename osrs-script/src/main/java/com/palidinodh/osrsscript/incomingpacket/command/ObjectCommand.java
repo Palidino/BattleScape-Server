@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.model.map.MapObject;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class ObjectCommand implements CommandHandler {
+class ObjectCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "id type direction";

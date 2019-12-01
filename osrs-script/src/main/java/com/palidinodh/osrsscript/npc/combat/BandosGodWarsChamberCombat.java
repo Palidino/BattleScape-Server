@@ -29,7 +29,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class BandosGodWarsChamberCombat extends NpcCombat {
+class BandosGodWarsChamberCombat extends NpcCombat {
   @Inject
   private Npc npc;
 

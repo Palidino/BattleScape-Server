@@ -16,7 +16,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatFocus;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatHitpoints;
 import lombok.var;
 
-public class InfernoSupportCombat extends NpcCombat {
+class InfernoSupportCombat extends NpcCombat {
   @Inject
   private Npc npc;
 

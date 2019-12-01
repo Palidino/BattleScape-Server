@@ -19,7 +19,7 @@ import com.palidinodh.osrscore.model.player.skill.SkillEntry;
 import com.palidinodh.util.PNumber;
 import lombok.var;
 
-public class Crafting extends SkillContainer {
+class Crafting extends SkillContainer {
   private static final int LEATHER_COST = 100;
   private static final int HARD_LEATHER_COST = 300;
   private static final int SNAKESKIN_LEATHER_COST = 1500;

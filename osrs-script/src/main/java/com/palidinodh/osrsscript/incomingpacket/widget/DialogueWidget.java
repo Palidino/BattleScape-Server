@@ -5,14 +5,11 @@ import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.dialogue.Dialogue;
 import com.palidinodh.osrscore.model.dialogue.old.DialogueOld;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.ReferenceId;
 
-public class DialogueWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] { WidgetId.CHATBOX_PLAYER, WidgetId.CHATBOX_NPC, WidgetId.CHATBOX_MESSAGE,
-        WidgetId.CHATBOX_SELECTION, WidgetId.SCREEN_SELECTION, WidgetId.MAKE_X };
-  }
-
+@ReferenceId({ WidgetId.CHATBOX_PLAYER, WidgetId.CHATBOX_NPC, WidgetId.CHATBOX_MESSAGE,
+    WidgetId.CHATBOX_SELECTION, WidgetId.SCREEN_SELECTION, WidgetId.MAKE_X })
+class DialogueWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (widgetId == WidgetId.CHATBOX_PLAYER || widgetId == WidgetId.CHATBOX_NPC

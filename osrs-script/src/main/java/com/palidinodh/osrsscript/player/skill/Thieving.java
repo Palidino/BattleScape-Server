@@ -23,7 +23,7 @@ import com.palidinodh.util.PEvent;
 import com.palidinodh.util.PNumber;
 import lombok.var;
 
-public class Thieving extends SkillContainer {
+class Thieving extends SkillContainer {
   private static List<SkillEntry> entries = new ArrayList<>();
 
   @Override

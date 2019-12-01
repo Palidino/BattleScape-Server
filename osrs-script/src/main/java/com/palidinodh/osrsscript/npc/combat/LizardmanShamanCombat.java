@@ -34,7 +34,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class LizardmanShamanCombat extends NpcCombat {
+class LizardmanShamanCombat extends NpcCombat {
   private static final NpcCombatDropTable SUPERIOR_DROP_TABLE = NpcCombatDropTable.builder()
       .chance(2.32).log(true)
       .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.IMBUED_HEART, 1, 1, 1)))

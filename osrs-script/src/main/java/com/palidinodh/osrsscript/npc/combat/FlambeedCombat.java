@@ -24,7 +24,7 @@ import com.palidinodh.osrscore.model.player.Equipment;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class FlambeedCombat extends NpcCombat {
+class FlambeedCombat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var drop = NpcCombatDrop.builder();

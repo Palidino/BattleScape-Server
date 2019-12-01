@@ -4,7 +4,7 @@ import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.Settings;
 
-public class GorillasCommand implements CommandHandler {
+class GorillasCommand implements CommandHandler {
 
   @Override
   public boolean canUse(Player player) {

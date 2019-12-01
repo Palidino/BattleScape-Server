@@ -7,13 +7,10 @@ import com.palidinodh.osrscore.io.cache.WidgetChild;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.player.Magic;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.ReferenceId;
 
-public class CombatOptionsWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] {WidgetId.COMBAT};
-  }
-
+@ReferenceId(WidgetId.COMBAT)
+class CombatOptionsWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     switch (childId) {

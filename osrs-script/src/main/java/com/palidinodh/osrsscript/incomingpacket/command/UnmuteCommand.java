@@ -6,7 +6,7 @@ import com.palidinodh.osrscore.util.RequestManager;
 import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
-public class UnmuteCommand implements CommandHandler {
+class UnmuteCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "hours username_or_userid";

@@ -28,7 +28,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.npc.combat.style.special.NpcCombatTargetTile;
 import lombok.var;
 
-public class Zulrah725_2043Combat extends NpcCombat {
+class Zulrah725_2043Combat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var drop = NpcCombatDrop.builder().underKiller(true)

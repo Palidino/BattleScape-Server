@@ -218,7 +218,7 @@ public class ResponseServer implements Runnable, SessionHandler {
               }
             }
           }
-          if (!isLocal && PTime.nanoToMin(lastPlayerCount) >= 1) {
+          if (!isLocal && PTime.betweenNanoToMin(lastPlayerCount) >= 1) {
             lastPlayerCount = PTime.nanoTime();
             int playerCount = 0;
             Statement statement = null;

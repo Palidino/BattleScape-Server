@@ -7,7 +7,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
-public class NpcCommand implements CommandHandler {
+class NpcCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "id_or_name";

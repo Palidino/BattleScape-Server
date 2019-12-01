@@ -17,7 +17,7 @@ import lombok.var;
  * consider a proper command for it.
  */
 @SuppressWarnings("all")
-public class TestCommand implements CommandHandler {
+class TestCommand implements CommandHandler {
   @Override
   public boolean canUse(Player player) {
     return player.getRights() == Player.RIGHTS_ADMIN;
@@ -41,7 +41,7 @@ public class TestCommand implements CommandHandler {
         new NormalChatDialogue(NpcId.BOB, "Who?"),
         new OptionsDialogue(new DialogueOption("You know who!", DialogueChain.ACTION_NEXT),
             new DialogueOption("Nevermind",
-                (childId, slot) -> player
+                (c, s) -> player
                     .openDialogue(new NormalChatDialogue("Nevermind, I'll go.")))),
         new NormalChatDialogue("You know who!"),
         new NormalChatDialogue(NpcId.BOB, "OH, YOU MEAN MIKASA!"),

@@ -4,7 +4,7 @@ import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class WidgetIndexCommand implements CommandHandler {
+class WidgetIndexCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "id index";

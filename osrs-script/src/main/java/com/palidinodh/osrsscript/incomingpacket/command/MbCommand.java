@@ -3,7 +3,7 @@ package com.palidinodh.osrsscript.incomingpacket.command;
 import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
 
-public class MbCommand implements CommandHandler {
+class MbCommand implements CommandHandler {
   @Override
   public boolean canUse(Player player) {
     return !player.getController().inWilderness() && !player.getController().inPvPWorld();

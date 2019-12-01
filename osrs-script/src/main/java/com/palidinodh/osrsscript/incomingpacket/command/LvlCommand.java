@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Skills;
 import lombok.var;
 
-public class LvlCommand implements CommandHandler {
+class LvlCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "skill_id skill_level username_or_userid";

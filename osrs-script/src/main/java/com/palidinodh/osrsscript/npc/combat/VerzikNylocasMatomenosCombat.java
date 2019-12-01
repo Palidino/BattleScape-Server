@@ -13,7 +13,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatSpawn;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatStats;
 import lombok.var;
 
-public class VerzikNylocasMatomenosCombat extends NpcCombat {
+class VerzikNylocasMatomenosCombat extends NpcCombat {
   @Inject
   private Npc npc;
 

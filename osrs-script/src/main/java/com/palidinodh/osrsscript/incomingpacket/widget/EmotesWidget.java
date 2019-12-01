@@ -6,13 +6,10 @@ import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.Graphic;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
+import com.palidinodh.rs.ReferenceId;
 
-public class EmotesWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] {WidgetId.EMOTES};
-  }
-
+@ReferenceId(WidgetId.EMOTES)
+class EmotesWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {

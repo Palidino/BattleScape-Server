@@ -15,6 +15,6 @@ public class RsClanKickedUser {
   }
 
   public boolean isValid() {
-    return PTime.milliToMin(kickDate) < BAN_LENGTH_MINUTES;
+    return PTime.betweenMilliToMin(kickDate) < BAN_LENGTH_MINUTES;
   }
 }

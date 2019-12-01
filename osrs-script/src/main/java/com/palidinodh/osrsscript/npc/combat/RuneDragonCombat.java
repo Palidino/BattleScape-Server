@@ -32,7 +32,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class RuneDragonCombat extends NpcCombat {
+class RuneDragonCombat extends NpcCombat {
   @Inject
   private Npc npc;
   private boolean boltEffect;

@@ -12,14 +12,11 @@ import com.palidinodh.osrscore.model.player.Magic;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.osrscore.model.player.combat.CombatSpellDef;
+import com.palidinodh.rs.ReferenceId;
 import com.palidinodh.util.PTime;
 
-public class SpellbookWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] { WidgetId.SPELLBOOK, WidgetId.SPELL_SELECT, WidgetId.RUNE_POUCH };
-  }
-
+@ReferenceId({ WidgetId.SPELLBOOK, WidgetId.SPELL_SELECT, WidgetId.RUNE_POUCH })
+class SpellbookWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (widgetId == WidgetId.SPELLBOOK) {

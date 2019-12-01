@@ -18,7 +18,7 @@ import com.palidinodh.util.PEvent;
 import com.palidinodh.util.PNumber;
 import lombok.var;
 
-public class Cooking extends SkillContainer {
+class Cooking extends SkillContainer {
   private static final int COOKING_RANGE_ID = 114;
 
   private static List<SkillEntry> entries = new ArrayList<>();

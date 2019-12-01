@@ -16,7 +16,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatProjectile;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import lombok.var;
 
-public class KnightOfArdougne46_3111Combat extends NpcCombat {
+class KnightOfArdougne46_3111Combat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var drop = NpcCombatDrop.builder();

@@ -15,7 +15,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatFocus;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatHitpoints;
 import lombok.var;
 
-public class DerwenEnergyBallCombat extends NpcCombat {
+class DerwenEnergyBallCombat extends NpcCombat {
   @Inject
   private Npc npc;
   private Npc derwen;

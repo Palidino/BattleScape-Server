@@ -34,6 +34,7 @@ import com.palidinodh.osrscore.util.RequestManager;
 import com.palidinodh.osrscore.world.WildernessEvent;
 import com.palidinodh.osrscore.world.World;
 import com.palidinodh.random.PRandom;
+import com.palidinodh.rs.ReferenceId;
 import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.rs.setting.SqlUserRank;
 import com.palidinodh.util.PNumber;
@@ -42,17 +43,13 @@ import lombok.var;
 
 // No longer JS woohoo! Need a better solution than a 2K line file and growing.
 // One item id per file would be horid
-// A lot of these can be moved into appropriate skill container classes
-// Option #1: group ids by relevance and then split those into sub classes.
+// A lot of these can be moved into appropriate skill container class es
+// Option #1: group ids by relevance and then split those into sub class es.
 // Option #2: group by id (maybe 1-4096, etc)
 // Option #3: ???
 
-public class InventoryWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] {WidgetId.INVENTORY};
-  }
-
+@ReferenceId(WidgetId.INVENTORY)
+class InventoryWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     player.clearAllActions(false, false);
@@ -2336,13 +2333,13 @@ public class InventoryWidget implements WidgetHandler {
 
   public static class MaxCapeDialogue extends OptionsDialogue {
     public MaxCapeDialogue(Player player) {
-      DialogueAction action = (childId, slot) -> {
+      DialogueAction action = (c, s) -> {
         Tile maxCapeTele = null;
-        if (slot == 0) {
+        if (s == 0) {
           maxCapeTele = new Tile(3093, 3495);
-        } else if (slot == 1) {
+        } else if (s == 1) {
           maxCapeTele = new Tile(1233, 3565);
-        } else if (slot == 2) {
+        } else if (s == 2) {
           maxCapeTele = new Tile(1666, 10050);
         }
         if (!player.getController().canTeleport(true)) {

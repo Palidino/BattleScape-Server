@@ -12,13 +12,6 @@ import com.palidinodh.osrscore.model.map.ObjectDef;
 import com.palidinodh.osrscore.model.player.Messaging;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.PlayerPlugin;
-import com.palidinodh.osrsscript.player.plugin.clanwars.dialogue.JoinBattleDialogue;
-import com.palidinodh.osrsscript.player.plugin.clanwars.rule.Arena;
-import com.palidinodh.osrsscript.player.plugin.clanwars.rule.Rule;
-import com.palidinodh.osrsscript.player.plugin.clanwars.rule.RuleOption;
-import com.palidinodh.osrsscript.player.plugin.clanwars.state.BarrierState;
-import com.palidinodh.osrsscript.player.plugin.clanwars.state.CompletedState;
-import com.palidinodh.osrsscript.player.plugin.clanwars.state.PlayerState;
 import com.palidinodh.osrsscript.world.event.pvptournament.PvpTournament;
 import com.palidinodh.util.PTime;
 import lombok.Getter;
@@ -38,7 +31,7 @@ public class ClanWarsPlugin extends PlayerPlugin {
   private transient Player teammate;
   @Getter
   @Setter
-  private transient PlayerState state = PlayerState.NONE;
+  private transient ClanWarsPlayerState state = ClanWarsPlayerState.NONE;
   @Getter
   @Setter
   private transient CompletedState completed;
@@ -115,7 +108,7 @@ public class ClanWarsPlugin extends PlayerPlugin {
     }
     if (countdown > 0) {
       countdown--;
-      if (state == PlayerState.BATTLE) {
+      if (state == ClanWarsPlayerState.BATTLE) {
         if (countdown == 4) {
           loadBarrier(BarrierState.DROP);
         } else if (countdown == 0) {
@@ -124,7 +117,7 @@ public class ClanWarsPlugin extends PlayerPlugin {
         }
       }
     }
-    if (state == PlayerState.BATTLE) {
+    if (state == ClanWarsPlayerState.BATTLE) {
       time++;
     }
     if (tournamentFightDelay > 0) {
@@ -143,70 +136,70 @@ public class ClanWarsPlugin extends PlayerPlugin {
       return false;
     }
     if (widgetId == WidgetId.CLAN_WARS_OPTIONS) {
-      Rule ruleBySlot = null;
+      ClanWarsRule ruleBySlot = null;
       switch (childId) {
         case 27:
-          Stages.acceptRuleSelection(player, this);
+          ClanWarsStages.acceptRuleSelection(player, this);
           break;
         case 6:
           if (slot >= 24) {
-            Stages.sendVarbits(player, this);
+            ClanWarsStages.sendVarbits(player, this);
             player.getGameEncoder().sendMessage("This option is currently disabled.");
             break;
           }
-          changeRule(Rule.GAME_END, slot / 3);
+          changeRule(ClanWarsRule.GAME_END, slot / 3);
           break;
         case 10:
           int mapId = slot / 3;
           if (Arena.get(mapId) == null || Arena.get(mapId).getArenaTop().getX() == 0) {
-            Stages.sendVarbits(player, this);
+            ClanWarsStages.sendVarbits(player, this);
             player.getGameEncoder().sendMessage("This option is currently disabled.");
             break;
           }
-          changeRule(Rule.ARENA, slot / 3);
+          changeRule(ClanWarsRule.ARENA, slot / 3);
           break;
         case 14:
-          ruleBySlot = Rule.STRAGGLERS;
+          ruleBySlot = ClanWarsRule.STRAGGLERS;
           break;
         case 17:
-          Rule rule = null;
+          ClanWarsRule rule = null;
           if (slot == 0) {
-            rule = Rule.IGNORE_FREEZING;
+            rule = ClanWarsRule.IGNORE_FREEZING;
           } else if (slot == 3) {
-            rule = Rule.PJ_TIMER;
+            rule = ClanWarsRule.PJ_TIMER;
           } else if (slot == 6) {
-            rule = Rule.SINGLE_SPELLS;
+            rule = ClanWarsRule.SINGLE_SPELLS;
           } else if (slot == 9) {
-            rule = Rule.ALLOW_TRIDENT_IN_PVP;
+            rule = ClanWarsRule.ALLOW_TRIDENT_IN_PVP;
           }
           if (rule != null) {
-            if (ruleSelected(rule, RuleOption.DISABLED)) {
-              changeRule(rule, RuleOption.ALLOWED);
+            if (ruleSelected(rule, ClanWarsRuleOption.DISABLED)) {
+              changeRule(rule, ClanWarsRuleOption.ALLOWED);
             } else {
-              changeRule(rule, RuleOption.DISABLED);
+              changeRule(rule, ClanWarsRuleOption.DISABLED);
             }
           }
           break;
         case 19:
-          ruleBySlot = Rule.MELEE;
+          ruleBySlot = ClanWarsRule.MELEE;
           break;
         case 20:
-          ruleBySlot = Rule.RANGING;
+          ruleBySlot = ClanWarsRule.RANGING;
           break;
         case 21:
-          ruleBySlot = Rule.MAGIC;
+          ruleBySlot = ClanWarsRule.MAGIC;
           break;
         case 22:
-          ruleBySlot = Rule.PRAYER;
+          ruleBySlot = ClanWarsRule.PRAYER;
           break;
         case 23:
-          ruleBySlot = Rule.FOOD;
+          ruleBySlot = ClanWarsRule.FOOD;
           break;
         case 24:
-          ruleBySlot = Rule.DRINKS;
+          ruleBySlot = ClanWarsRule.DRINKS;
           break;
         case 25:
-          ruleBySlot = Rule.SPECIAL_ATTACKS;
+          ruleBySlot = ClanWarsRule.SPECIAL_ATTACKS;
           break;
       }
       if (ruleBySlot != null) {
@@ -216,7 +209,7 @@ public class ClanWarsPlugin extends PlayerPlugin {
     } else if (widgetId == WidgetId.CLAN_WARS_CONFIRM) {
       switch (childId) {
         case 6:
-          Stages.acceptRuleConfirmation(player, this);
+          ClanWarsStages.acceptRuleConfirmation(player, this);
           break;
       }
       return true;
@@ -236,25 +229,10 @@ public class ClanWarsPlugin extends PlayerPlugin {
   }
 
   @Override
-  public boolean mapObjectOptionHook(int option, MapObject mapObject) {
-    switch (mapObject.getId()) {
-      case 26743: // Viewing orb
-        teleportViewing(0);
-        return true;
-      case 26642: // Challenge portal
-      case 26643: // Challenge portal
-      case 26644: // Challenge portal
-        player.openDialogue(new JoinBattleDialogue(player, this));
-        return true;
-    }
-    return false;
-  }
-
-  @Override
   public boolean playerOptionHook(int option, Player player2) {
     if (option == 0 && player.inClanWarsChallengeArea() && player2.inClanWarsChallengeArea()) {
-      if (state != PlayerState.NONE
-          || player2.getPlugin(ClanWarsPlugin.class).getState() != PlayerState.NONE) {
+      if (state != ClanWarsPlayerState.NONE
+          || player2.getPlugin(ClanWarsPlugin.class).getState() != ClanWarsPlayerState.NONE) {
         return true;
       }
       if (!player.getMessaging().canClanChatEvent()) {
@@ -268,8 +246,8 @@ public class ClanWarsPlugin extends PlayerPlugin {
       }
       opponent = player2;
       if (player == player2.getPlugin(ClanWarsPlugin.class).getOpponent()) {
-        Stages.openRuleSelection(player, this);
-        Stages.openRuleSelection(player2, player2.getPlugin(ClanWarsPlugin.class));
+        ClanWarsStages.openRuleSelection(player, this);
+        ClanWarsStages.openRuleSelection(player2, player2.getPlugin(ClanWarsPlugin.class));
       } else {
         player.getGameEncoder().sendMessage("Sending Clan Wars challenge...");
         player2.getGameEncoder().sendMessage(
@@ -285,7 +263,7 @@ public class ClanWarsPlugin extends PlayerPlugin {
     if (opponent == null) {
       return;
     }
-    state = PlayerState.BATTLE;
+    state = ClanWarsPlayerState.BATTLE;
     countdown = COUNT_DOWN;
     time = 0;
     this.isTop = isTop;
@@ -318,7 +296,7 @@ public class ClanWarsPlugin extends PlayerPlugin {
   public void cancel() {
     opponent = null;
     teammate = null;
-    state = PlayerState.NONE;
+    state = ClanWarsPlayerState.NONE;
     rules = null;
     isTop = false;
     time = 0;
@@ -348,9 +326,11 @@ public class ClanWarsPlugin extends PlayerPlugin {
       return;
     }
     for (var i = getArena().getBarrierStartX(); i <= getArena().getBarrierEndX(); i++) {
-      if (ruleSelected(Rule.ARENA, RuleOption.SYLVAN_GLADE) && i > 3419 && i < 3428) {
+      if (ruleSelected(ClanWarsRule.ARENA, ClanWarsRuleOption.SYLVAN_GLADE) && i > 3419
+          && i < 3428) {
         continue;
-      } else if (ruleSelected(Rule.ARENA, RuleOption.FORSAKEN_QUARRY) && i > 3415 && i < 3432) {
+      } else if (ruleSelected(ClanWarsRule.ARENA, ClanWarsRuleOption.FORSAKEN_QUARRY) && i > 3415
+          && i < 3432) {
         continue;
       }
       var barrier = new MapObject(getArena().getBarrierObjectId(), i, getArena().getBarrierY(), 0,
@@ -402,22 +382,23 @@ public class ClanWarsPlugin extends PlayerPlugin {
     }
   }
 
-  public boolean ruleSelected(Rule rule, RuleOption option) {
-    if (state == PlayerState.NONE || rules == null || rule == null || option == null) {
+  public boolean ruleSelected(ClanWarsRule rule, ClanWarsRuleOption option) {
+    if (state == ClanWarsPlayerState.NONE || rules == null || rule == null || option == null) {
       return false;
     }
     return rules[rule.ordinal()] == option.getIndex();
   }
 
-  public void changeRule(Rule rule, RuleOption option) {
+  public void changeRule(ClanWarsRule rule, ClanWarsRuleOption option) {
     if (rule == null || option == null || !rule.hasOption(option)) {
       return;
     }
     changeRule(rule, option.getIndex());
   }
 
-  public void changeRule(Rule rule, int slot) {
-    if (state != PlayerState.RULE_SELECTION && state != PlayerState.ACCEPT_RULE_SELECTION) {
+  public void changeRule(ClanWarsRule rule, int slot) {
+    if (state != ClanWarsPlayerState.RULE_SELECTION
+        && state != ClanWarsPlayerState.ACCEPT_RULE_SELECTION) {
       return;
     }
     if (opponent == null || opponent.isLocked()) {
@@ -427,9 +408,9 @@ public class ClanWarsPlugin extends PlayerPlugin {
         || !opponent.getWidgetManager().hasWidget(WidgetId.CLAN_WARS_OPTIONS)) {
       return;
     }
-    if (opponent.getPlugin(ClanWarsPlugin.class).getState() != PlayerState.RULE_SELECTION
+    if (opponent.getPlugin(ClanWarsPlugin.class).getState() != ClanWarsPlayerState.RULE_SELECTION
         && opponent.getPlugin(ClanWarsPlugin.class)
-            .getState() != PlayerState.ACCEPT_RULE_SELECTION) {
+            .getState() != ClanWarsPlayerState.ACCEPT_RULE_SELECTION) {
       return;
     }
     if (rule == null || slot < 0 || slot >= rule.getOptions().size()) {
@@ -439,8 +420,8 @@ public class ClanWarsPlugin extends PlayerPlugin {
     opponent.getPlugin(ClanWarsPlugin.class).setRule(rule.ordinal(), slot);
     player.getGameEncoder().setVarbit(rule.getVarbit(), slot);
     opponent.getGameEncoder().setVarbit(rule.getVarbit(), slot);
-    state = PlayerState.RULE_SELECTION;
-    opponent.getPlugin(ClanWarsPlugin.class).setState(PlayerState.RULE_SELECTION);
+    state = ClanWarsPlayerState.RULE_SELECTION;
+    opponent.getPlugin(ClanWarsPlugin.class).setState(ClanWarsPlayerState.RULE_SELECTION);
   }
 
   public void sendBattleVarbits(int myTeamCount, int otherTeamCount, Player opponent) {
@@ -472,7 +453,7 @@ public class ClanWarsPlugin extends PlayerPlugin {
       }
       tile = new Tile(2594, 5411, 1 + option * 4);
     } else {
-      if (state == PlayerState.NONE || state != PlayerState.VIEW || option < 0
+      if (state == ClanWarsPlayerState.NONE || state != ClanWarsPlayerState.VIEW || option < 0
           || getArena().getOrbs().length > 4) {
         return;
       }
@@ -490,11 +471,11 @@ public class ClanWarsPlugin extends PlayerPlugin {
   }
 
   public Arena getArena() {
-    return Arena.get(rules[Rule.ARENA.ordinal()]);
+    return Arena.get(rules[ClanWarsRule.ARENA.ordinal()]);
   }
 
-  public RuleOption getRule(Rule rule) {
-    if (state == PlayerState.NONE || rules == null || rule == null) {
+  public ClanWarsRuleOption getRule(ClanWarsRule rule) {
+    if (state == ClanWarsPlayerState.NONE || rules == null || rule == null) {
       return null;
     }
     return rule.getOptions().get(rules[rule.ordinal()]);
@@ -506,9 +487,9 @@ public class ClanWarsPlugin extends PlayerPlugin {
 
   public void setRules(int[] rules) {
     if (this.rules == null) {
-      this.rules = new int[Rule.TOTAL];
+      this.rules = new int[ClanWarsRule.TOTAL];
     }
-    System.arraycopy(rules, 0, this.rules, 0, Rule.TOTAL);
+    System.arraycopy(rules, 0, this.rules, 0, ClanWarsRule.TOTAL);
   }
 
   public void incrimentTournamentWins() {

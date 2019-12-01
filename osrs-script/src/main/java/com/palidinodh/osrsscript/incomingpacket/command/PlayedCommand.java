@@ -3,7 +3,7 @@ package com.palidinodh.osrsscript.incomingpacket.command;
 import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
 
-public class PlayedCommand implements CommandHandler {
+class PlayedCommand implements CommandHandler {
 
   @Override
   public boolean canUse(Player player) {

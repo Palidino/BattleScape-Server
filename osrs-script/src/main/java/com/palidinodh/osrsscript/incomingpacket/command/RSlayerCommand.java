@@ -4,7 +4,7 @@ import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class RSlayerCommand implements CommandHandler {
+class RSlayerCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "username";

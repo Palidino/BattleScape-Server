@@ -11,7 +11,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatImmunity;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatStats;
 import lombok.var;
 
-public class VanguardCombat extends NpcCombat {
+class VanguardCombat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var combat = NpcCombatDefinition.builder();

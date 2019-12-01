@@ -11,7 +11,6 @@ import com.palidinodh.osrscore.model.item.clue.ClueChestType;
 import com.palidinodh.osrscore.model.map.MapObject;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.PlayerPlugin;
-import com.palidinodh.osrsscript.player.plugin.cluechest.dialogue.TreasureChestDialogue;
 import com.palidinodh.util.PCollection;
 import lombok.var;
 
@@ -65,16 +64,6 @@ public class ClueChestPlugin extends PlayerPlugin {
     if (widgetId == WidgetId.INVENTORY && mapObject.getId() == 18808) {
       addItem(itemId);
       return true;
-    }
-    return false;
-  }
-
-  @Override
-  public boolean mapObjectOptionHook(int option, MapObject mapObject) {
-    switch (mapObject.getId()) {
-      case 18808: // treasure chest
-        new TreasureChestDialogue(player, this);
-        return true;
     }
     return false;
   }

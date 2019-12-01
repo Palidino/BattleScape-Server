@@ -14,7 +14,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatFocus;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatHitpoints;
 import lombok.var;
 
-public class VerzikViturPillarCombat extends NpcCombat {
+class VerzikViturPillarCombat extends NpcCombat {
   private static final int MAP_OBJECT_ID_SUPPORTING_PILLAR = 32687;
 
   @Inject

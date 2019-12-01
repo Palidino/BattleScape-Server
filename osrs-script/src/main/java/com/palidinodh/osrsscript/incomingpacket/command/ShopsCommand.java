@@ -4,7 +4,7 @@ import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.Settings;
 
-public class ShopsCommand implements CommandHandler {
+class ShopsCommand implements CommandHandler {
   @Override
   public boolean canUse(Player player) {
     return Settings.getInstance().isSpawn() && !player.getController().inWilderness()

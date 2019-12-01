@@ -4,14 +4,11 @@ import com.palidinodh.osrscore.io.incomingpacket.WidgetHandler;
 import com.palidinodh.osrscore.io.cache.WidgetChild;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.ReferenceId;
 import com.palidinodh.rs.setting.Settings;
 
-public class FriendsWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] { WidgetId.FRIENDS, WidgetId.IGNORES, WidgetId.ACCOUNT_MANAGEMENT };
-  }
-
+@ReferenceId({ WidgetId.FRIENDS, WidgetId.IGNORES, WidgetId.ACCOUNT_MANAGEMENT })
+class FriendsWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (widgetId == WidgetId.FRIENDS) {

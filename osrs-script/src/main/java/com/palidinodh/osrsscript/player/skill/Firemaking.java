@@ -23,7 +23,7 @@ import com.palidinodh.util.PCollection;
 import com.palidinodh.util.PEvent;
 import lombok.var;
 
-public class Firemaking extends SkillContainer {
+class Firemaking extends SkillContainer {
   private static final int START_FIRE_ANIMATION = 733;
   private static final int ADD_TO_FIRE_ANIMATION = 897;
   private static final int FIRE_MAP_OBJECT = 5249;

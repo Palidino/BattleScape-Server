@@ -45,7 +45,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.var;
 
-public class AlchemicalHydraCombat extends NpcCombat {
+class AlchemicalHydraCombat extends NpcCombat {
   private static final NpcCombatStyle.NpcCombatStyleBuilder POISON_ATTACK_BUILDER = NpcCombatStyle
       .builder()
       .type(NpcCombatStyleType.builder().hitType(HitType.MAGIC).subHitType(HitType.TYPELESS)

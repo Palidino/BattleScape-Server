@@ -12,15 +12,15 @@ import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
-public class RotateWidgetDecoder {
-  public static class RotateSingleWidgetDecoder extends IncomingPacketDecoder {
+class RotateWidgetDecoder {
+  static class RotateSingleWidgetDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       return rotate(player, stream, this);
     }
   }
 
-  public static class RotateTwoWidgetsDecoder extends IncomingPacketDecoder {
+  static class RotateTwoWidgetsDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       return rotate(player, stream, this);

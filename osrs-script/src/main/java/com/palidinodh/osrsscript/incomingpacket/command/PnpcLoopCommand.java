@@ -6,7 +6,7 @@ import com.palidinodh.util.PEvent;
 import lombok.var;
 
 @SuppressWarnings("all")
-public class PnpcLoopCommand implements CommandHandler {
+class PnpcLoopCommand implements CommandHandler {
   @Override
   public boolean canUse(Player player) {
     return player.getRights() == Player.RIGHTS_ADMIN;

@@ -6,15 +6,12 @@ import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.player.Duel;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.ReferenceId;
 import lombok.var;
 
-public class DuelWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] {WidgetId.DUEL_OPTIONS, WidgetId.DUEL_STAKE, WidgetId.DUEL_CONFIRM,
-        WidgetId.DUEL_COMPLETE};
-  }
-
+@ReferenceId({ WidgetId.DUEL_OPTIONS, WidgetId.DUEL_STAKE, WidgetId.DUEL_CONFIRM,
+    WidgetId.DUEL_COMPLETE })
+class DuelWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {

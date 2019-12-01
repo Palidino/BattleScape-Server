@@ -24,7 +24,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class DagannothMotherCombat extends NpcCombat {
+class DagannothMotherCombat extends NpcCombat {
   @Inject
   private Npc npc;
   private int changeDelay;

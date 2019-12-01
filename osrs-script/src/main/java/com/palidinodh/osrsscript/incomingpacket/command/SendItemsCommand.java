@@ -7,7 +7,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class SendItemsCommand implements CommandHandler {
+class SendItemsCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "widget_id child_id item_count (random_ids)";

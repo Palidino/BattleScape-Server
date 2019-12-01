@@ -16,7 +16,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatProjectile;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import lombok.var;
 
-public class KnightOfArdougneCombat extends NpcCombat {
+class KnightOfArdougneCombat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var drop = NpcCombatDrop.builder().clue(NpcCombatDrop.ClueScroll.EASY,

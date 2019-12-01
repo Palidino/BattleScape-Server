@@ -117,7 +117,7 @@ public class RequestServer implements Runnable {
   @Override
   public void run() {
     while (shutdown == 0
-        || !requests.isEmpty() && PTime.milliToMin(shutdown) < SHUTDOWN_REQUEST_DELAY) {
+        || !requests.isEmpty() && PTime.betweenMilliToMin(shutdown) < SHUTDOWN_REQUEST_DELAY) {
       try {
         boolean connect = false;
         if (!requests.isEmpty()) {

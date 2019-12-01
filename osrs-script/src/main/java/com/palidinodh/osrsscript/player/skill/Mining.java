@@ -20,7 +20,7 @@ import com.palidinodh.util.PNumber;
 import lombok.Getter;
 import lombok.var;
 
-public class Mining extends SkillContainer {
+class Mining extends SkillContainer {
   private static final MiningPickaxe[] PICKAXES =
       { new MiningPickaxe(ItemId.BRONZE_PICKAXE, 1, 625, 6753),
           new MiningPickaxe(ItemId.IRON_PICKAXE, 1, 626, 6754),

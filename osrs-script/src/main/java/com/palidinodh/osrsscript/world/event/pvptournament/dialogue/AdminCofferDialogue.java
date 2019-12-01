@@ -12,16 +12,16 @@ import lombok.var;
 public class AdminCofferDialogue extends OptionsDialogue {
   public AdminCofferDialogue(Player player) {
     var tournament = player.getWorld().getWorldEvent(PvpTournament.class);
-    addOption("View prizes", (childId, slot) -> {
+    addOption("View prizes", (c, s) -> {
       tournament.viewPrizes(player);
     });
-    addOption("View shop", (childId, slot) -> {
+    addOption("View shop", (c, s) -> {
       player.openShop("pvp_tournament");
     });
-    addOption("Select mode", (childId, slot) -> {
+    addOption("Select mode", (c, s) -> {
       new ChooseModeDialogue(player);
     });
-    addOption("Set OSRS prize", (childId, slot) -> {
+    addOption("Set OSRS prize", (c, s) -> {
       player.getGameEncoder().sendEnterAmount("OSRS prize:", new ValueEnteredEvent.IntegerEvent() {
         @Override
         public void execute(int value) {

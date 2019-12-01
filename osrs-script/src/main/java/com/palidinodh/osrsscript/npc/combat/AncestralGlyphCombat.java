@@ -15,7 +15,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatHitpoints;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatImmunity;
 import lombok.var;
 
-public class AncestralGlyphCombat extends NpcCombat {
+class AncestralGlyphCombat extends NpcCombat {
   @Inject
   private Npc npc;
   private int moveDelay;

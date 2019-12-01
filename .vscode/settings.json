@@ -35,13 +35,16 @@
         "**/map/xtea.json": true,
         "**/map/no_xtea.json": true
     },
-    "editor.wrappingIndent": "deepIndent",
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 100,
     "java.configuration.updateBuildConfiguration": "interactive",
     "java.format.onType.enabled": true,
     "[java]": {
-        "editor.formatOnSave": true
+        "editor.wrappingIndent": "deepIndent",
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 100,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        "editor.formatOnSave": true,
     },
     "javascript.validate.enable": false
 }

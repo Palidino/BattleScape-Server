@@ -33,7 +33,7 @@ import com.palidinodh.random.PRandom;
 import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
-public class RevenantCombat extends NpcCombat {
+class RevenantCombat extends NpcCombat {
   private static final RandomItem[] ANCIENT_WARRIOR_DROP_TABLE = {
       new RandomItem(ItemId.VESTAS_LONGSWORD, 1), new RandomItem(ItemId.STATIUSS_WARHAMMER, 1),
       new RandomItem(ItemId.VESTAS_SPEAR, 1), new RandomItem(ItemId.MORRIGANS_JAVELIN, 100),

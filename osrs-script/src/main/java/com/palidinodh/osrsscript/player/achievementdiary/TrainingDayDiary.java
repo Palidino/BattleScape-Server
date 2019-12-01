@@ -17,7 +17,7 @@ import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.osrscore.model.player.slayer.SlayerMaster;
 import com.palidinodh.osrscore.model.player.slayer.SlayerTask;
 
-public class TrainingDayDiary extends AchievementDiary {
+class TrainingDayDiary extends AchievementDiary {
   public TrainingDayDiary() {
     super(AchievementDiary.Name.TRAINING_DAY);
   }

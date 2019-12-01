@@ -6,7 +6,7 @@ import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
-public class ResetAllSkillsCommand implements CommandHandler {
+class ResetAllSkillsCommand implements CommandHandler {
   @Override
   public boolean canUse(Player player) {
     return Settings.getInstance().isLocal();

@@ -27,10 +27,9 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatProjectile;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Player;
-import com.palidinodh.osrsscript.map.area.kourend.CatacombsOfKourendArea;
 import lombok.var;
 
-public class AberrantSpectreCombat extends NpcCombat {
+class AberrantSpectreCombat extends NpcCombat {
   private static final NpcCombatDropTable SUPERIOR_DROP_TABLE = NpcCombatDropTable.builder()
       .chance(1.07).log(true)
       .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.IMBUED_HEART, 1, 1, 1)))
@@ -161,7 +160,7 @@ public class AberrantSpectreCombat extends NpcCombat {
 
   @Override
   public void deathDropItemsHook(Player player, int additionalPlayerLoopCount, Tile dropTile) {
-    if (npc.getArea().matches(CatacombsOfKourendArea.class)) {
+    if (npc.getArea().inCatacombsOfKourend()) {
       if (npc.getId() == NpcId.ABHORRENT_SPECTRE_253 || TOTEM_DROP_TABLE.canDrop(npc, player)) {
         TOTEM_DROP_TABLE.dropItems(npc, player, dropTile);
       }

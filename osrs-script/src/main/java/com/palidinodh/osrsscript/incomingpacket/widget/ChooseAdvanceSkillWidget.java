@@ -5,24 +5,21 @@ import com.palidinodh.osrscore.io.cache.id.VarpId;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Skills;
+import com.palidinodh.rs.ReferenceId;
 import com.palidinodh.util.PNumber;
 
-public class ChooseAdvanceSkillWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] {WidgetId.CHOOSE_ADVANCE_SKILL};
-  }
-
+@ReferenceId(WidgetId.CHOOSE_ADVANCE_SKILL)
+class ChooseAdvanceSkillWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {
       return;
     }
-    int[] skillOrder = new int[] {Skills.ATTACK, Skills.STRENGTH, Skills.RANGED, Skills.MAGIC,
+    int[] skillOrder = new int[] { Skills.ATTACK, Skills.STRENGTH, Skills.RANGED, Skills.MAGIC,
         Skills.DEFENCE, Skills.HITPOINTS, Skills.PRAYER, Skills.AGILITY, Skills.HERBLORE,
         Skills.THIEVING, Skills.CRAFTING, Skills.RUNECRAFTING, Skills.MINING, Skills.SMITHING,
         Skills.FISHING, Skills.COOKING, Skills.FIREMAKING, Skills.WOODCUTTING, Skills.FLETCHING,
-        Skills.SLAYER, Skills.FARMING, Skills.CONSTRUCTION, Skills.HUNTER};
+        Skills.SLAYER, Skills.FARMING, Skills.CONSTRUCTION, Skills.HUNTER };
     if (childId - 3 >= 0 && childId - 3 < skillOrder.length) {
       int skillId = skillOrder[childId - 3];
       if (skillId == Skills.CONSTRUCTION) {

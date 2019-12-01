@@ -7,7 +7,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
-public class ViewCommand implements CommandHandler {
+class ViewCommand implements CommandHandler {
   @Override
   public boolean canUse(Player player) {
     return player.isUsergroup(SqlUserRank.TRIAL_MODERATOR)

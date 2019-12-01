@@ -23,7 +23,7 @@ import com.palidinodh.random.PRandom;
 import com.palidinodh.util.PCollection;
 import lombok.var;
 
-public class JalZekCombat extends NpcCombat {
+class JalZekCombat extends NpcCombat {
   @Inject
   private Npc npc;
   private List<Npc> monsters = new ArrayList<>();

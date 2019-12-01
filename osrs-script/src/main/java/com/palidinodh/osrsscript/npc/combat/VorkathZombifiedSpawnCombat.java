@@ -20,7 +20,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatType;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class VorkathZombifiedSpawnCombat extends NpcCombat {
+class VorkathZombifiedSpawnCombat extends NpcCombat {
   @Inject
   private Npc npc;
   private int countdown1;

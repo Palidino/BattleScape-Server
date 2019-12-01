@@ -4,7 +4,7 @@ import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class WidgetCommand implements CommandHandler {
+class WidgetCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "id";

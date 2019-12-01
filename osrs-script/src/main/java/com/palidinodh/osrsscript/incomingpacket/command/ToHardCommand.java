@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.adaptive.RsGameMode;
 import lombok.var;
 
-public class ToHardCommand implements CommandHandler {
+class ToHardCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "username";

@@ -40,7 +40,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class AbyssalSireCombat extends NpcCombat {
+class AbyssalSireCombat extends NpcCombat {
   @Inject
   private Npc npc;
   private int phase;

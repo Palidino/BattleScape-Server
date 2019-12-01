@@ -8,7 +8,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.util.RequestManager;
 import lombok.var;
 
-public class MovementDecoder extends IncomingPacketDecoder {
+class MovementDecoder extends IncomingPacketDecoder {
   @Override
   public boolean execute(Player player, Stream stream) {
     var option = getInt(InStreamKey.PACKET_OPTION);

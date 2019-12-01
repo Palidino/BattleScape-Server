@@ -35,7 +35,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class ZamorakGodWarsChamberCombat extends NpcCombat {
+class ZamorakGodWarsChamberCombat extends NpcCombat {
   private static final NpcCombatStyle SPECIAL_ATTACK =
       NpcCombatStyle.builder().type(NpcCombatStyleType.MELEE)
           .damage(NpcCombatDamage.builder().maximum(49).ignorePrayer(true).build())

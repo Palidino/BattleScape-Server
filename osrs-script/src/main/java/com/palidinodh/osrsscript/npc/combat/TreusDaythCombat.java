@@ -21,7 +21,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class TreusDaythCombat extends NpcCombat {
+class TreusDaythCombat extends NpcCombat {
   private static final Tile[] MOVE_PATHS = { new Tile(2781, 4459), new Tile(2787, 4444),
       new Tile(2788, 4463), new Tile(2794, 4451), new Tile(2781, 4454) };
 

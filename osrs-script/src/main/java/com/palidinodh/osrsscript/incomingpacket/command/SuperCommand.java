@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
-public class SuperCommand implements CommandHandler {
+class SuperCommand implements CommandHandler {
   @Override
   public boolean canUse(Player player) {
     return player.getRights() == Player.RIGHTS_ADMIN

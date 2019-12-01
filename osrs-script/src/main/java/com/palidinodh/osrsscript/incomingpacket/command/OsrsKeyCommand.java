@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class OsrsKeyCommand implements CommandHandler {
+class OsrsKeyCommand implements CommandHandler {
   @Override
   public boolean canUse(Player player) {
     return player.getRights() == Player.RIGHTS_ADMIN;

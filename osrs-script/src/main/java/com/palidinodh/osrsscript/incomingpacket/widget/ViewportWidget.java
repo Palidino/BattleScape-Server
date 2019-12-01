@@ -4,14 +4,11 @@ import com.palidinodh.osrscore.io.incomingpacket.WidgetHandler;
 import com.palidinodh.osrscore.io.cache.WidgetChild;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.ReferenceId;
 
-public class ViewportWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] { WidgetId.FIXED_VIEWPORT, WidgetId.RESIZABLE_BOX_VIEWPORT,
-        WidgetId.RESIZABLE_LINE_VIEWPORT };
-  }
-
+@ReferenceId({ WidgetId.FIXED_VIEWPORT, WidgetId.RESIZABLE_BOX_VIEWPORT,
+    WidgetId.RESIZABLE_LINE_VIEWPORT })
+class ViewportWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (widgetId == WidgetId.FIXED_VIEWPORT) {

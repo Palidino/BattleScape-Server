@@ -198,7 +198,7 @@ public class GrandExchangeItem implements Serializable {
   }
 
   public boolean isExpired() {
-    return PTime.milliToDay(creation) > EXPIRATION;
+    return PTime.betweenMilliToDay(creation) > EXPIRATION;
   }
 
   public int getState() {

@@ -22,7 +22,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class JalAkCombat extends NpcCombat {
+class JalAkCombat extends NpcCombat {
   @Inject
   private Npc npc;
   private HitType attackStyle;

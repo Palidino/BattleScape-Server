@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.model.dialogue.DialogueOption;
 import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.player.Player;
 
-public class WestsCommand implements CommandHandler {
+class WestsCommand implements CommandHandler {
   @Override
   public boolean canUse(Player player) {
     return !player.getController().inWilderness() && !player.getController().inPvPWorld();
@@ -18,7 +18,7 @@ public class WestsCommand implements CommandHandler {
     }
     player.openDialogue(new OptionsDialogue("Are you sure you want to teleport to the wilderness?",
         new DialogueOption("Are you sure you want to teleport to the wilderness?",
-            (childId, slot) -> {
+            (c, s) -> {
               player.getMagic().standardTeleport(2976, 3604, 0);
               player.getGameEncoder().sendMessage("You teleport to West dragons..");
               player.getController().stopWithTeleport();

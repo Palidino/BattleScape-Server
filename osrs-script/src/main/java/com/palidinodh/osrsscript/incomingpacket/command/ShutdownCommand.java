@@ -8,7 +8,7 @@ import com.palidinodh.rs.setting.SqlUserRank;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
-public class ShutdownCommand implements CommandHandler {
+class ShutdownCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "minutes";

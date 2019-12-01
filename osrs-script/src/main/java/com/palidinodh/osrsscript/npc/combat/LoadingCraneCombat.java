@@ -19,7 +19,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import lombok.var;
 
-public class LoadingCraneCombat extends NpcCombat {
+class LoadingCraneCombat extends NpcCombat {
   @Inject
   private Npc npc;
 

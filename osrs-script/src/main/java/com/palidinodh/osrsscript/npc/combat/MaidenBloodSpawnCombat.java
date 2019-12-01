@@ -16,7 +16,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatImmunity;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class MaidenBloodSpawnCombat extends NpcCombat {
+class MaidenBloodSpawnCombat extends NpcCombat {
   @Inject
   private Npc npc;
   private List<TempMapObject> tempMapObjects = new ArrayList<>();

@@ -10,7 +10,6 @@ import com.palidinodh.osrscore.io.cache.id.VarpId;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.Tile;
 import com.palidinodh.osrscore.model.item.Item;
-import com.palidinodh.osrscore.model.item.RandomItem;
 import com.palidinodh.osrscore.model.map.MapObject;
 import com.palidinodh.osrscore.model.npc.Npc;
 import com.palidinodh.osrscore.model.npc.NpcDef;
@@ -18,17 +17,13 @@ import com.palidinodh.osrscore.model.player.AchievementDiary;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.PlayerPlugin;
 import com.palidinodh.osrscore.model.player.Skills;
-import com.palidinodh.osrscore.model.player.controller.BossInstancePC;
 import com.palidinodh.osrscore.model.player.slayer.AssignedSlayerTask;
 import com.palidinodh.osrscore.model.player.slayer.SlayerMaster;
 import com.palidinodh.osrscore.model.player.slayer.SlayerTask;
 import com.palidinodh.osrscore.model.player.slayer.SlayerTaskIdentifier;
 import com.palidinodh.osrscore.model.player.slayer.SlayerUnlock;
 import com.palidinodh.osrsscript.incomingpacket.UseWidgetDecoder;
-import com.palidinodh.osrsscript.player.plugin.slayer.dialogue.MasterMenuDialogue;
-import com.palidinodh.osrsscript.player.plugin.slayer.dialogue.RewardsDialogue;
 import com.palidinodh.osrsscript.player.plugin.slayer.dialogue.SlayerRingDialogue;
-import com.palidinodh.osrsscript.player.plugin.slayer.dialogue.WildernessMasterMenuDialogue;
 import com.palidinodh.random.PRandom;
 import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PCollection;
@@ -42,43 +37,6 @@ public class SlayerPlugin extends PlayerPlugin {
       { VarbitId.SLAYER_BLOCKED_TASK_1, VarbitId.SLAYER_BLOCKED_TASK_2,
           VarbitId.SLAYER_BLOCKED_TASK_3, VarbitId.SLAYER_BLOCKED_TASK_4,
           VarbitId.SLAYER_BLOCKED_TASK_5, VarbitId.SLAYER_BLOCKED_TASK_6 };
-  private static final List<RandomItem> BRIMSTONE_CHEST_ITEMS =
-      RandomItem.buildList(new RandomItem(ItemId.UNCUT_DIAMOND, 25, 35).weight(1024 - 12),
-          new RandomItem(ItemId.UNCUT_RUBY, 25, 35).weight(1024 - 12),
-          new RandomItem(ItemId.COAL, 300, 500).weight(1024 - 12),
-          new RandomItem(ItemId.COINS, 50_000, 150_000).weight(1024 - 12),
-          new RandomItem(ItemId.GOLD_ORE, 100, 200).weight(1024 - 15),
-          new RandomItem(ItemId.DRAGON_ARROWTIPS, 50, 200).weight(1024 - 15),
-          new RandomItem(ItemId.IRON_ORE, 350, 500).weight(1024 - 20),
-          new RandomItem(ItemId.RUNE_FULL_HELM, 2, 4).weight(1024 - 20),
-          new RandomItem(ItemId.RUNE_PLATEBODY, 1, 2).weight(1024 - 20),
-          new RandomItem(ItemId.RUNE_PLATELEGS, 1, 2).weight(1024 - 20),
-          new RandomItem(ItemId.RAW_TUNA, 100, 350).weight(1024 - 20),
-          new RandomItem(ItemId.RAW_LOBSTER, 100, 350).weight(1024 - 20),
-          new RandomItem(ItemId.RAW_SWORDFISH, 100, 350).weight(1024 - 20),
-          new RandomItem(ItemId.RAW_MONKFISH, 100, 300).weight(1024 - 20),
-          new RandomItem(ItemId.RAW_SHARK, 100, 250).weight(1024 - 20),
-          new RandomItem(ItemId.RAW_SEA_TURTLE, 80, 200).weight(1024 - 20),
-          new RandomItem(ItemId.RAW_MANTA_RAY, 80, 160).weight(1024 - 20),
-          new RandomItem(ItemId.RUNITE_ORE, 10, 15).weight(1024 - 30),
-          new RandomItem(ItemId.STEEL_BAR, 300, 500).weight(1024 - 30),
-          new RandomItem(ItemId.MAGIC_LOGS, 120, 160).weight(1024 - 30),
-          new RandomItem(ItemId.DRAGON_DART_TIP, 40, 160).weight(1024 - 30),
-          new RandomItem(ItemId.PALM_TREE_SEED, 2, 4).weight(1024 - 60),
-          new RandomItem(ItemId.MAGIC_SEED, 2, 4).weight(1024 - 60),
-          new RandomItem(ItemId.CELASTRUS_SEED, 2, 4).weight(1024 - 60),
-          new RandomItem(ItemId.DRAGONFRUIT_TREE_SEED, 2, 4).weight(1024 - 60),
-          new RandomItem(ItemId.REDWOOD_TREE_SEED).weight(1024 - 60),
-          new RandomItem(ItemId.TORSTOL_SEED, 3, 5).weight(1024 - 60),
-          new RandomItem(ItemId.SNAPDRAGON_SEED, 3, 5).weight(1024 - 60),
-          new RandomItem(ItemId.RANARR_SEED, 3, 5).weight(1024 - 60),
-          new RandomItem(ItemId.PURE_ESSENCE, 3000, 6000).weight(1024 - 60),
-          new RandomItem(ItemId.DRAGON_HASTA).weight(1024 - 200),
-          new RandomItem(ItemId.MYSTIC_HAT_DUSK).weight(1024 - 1000),
-          new RandomItem(ItemId.MYSTIC_ROBE_TOP_DUSK).weight(1024 - 1000),
-          new RandomItem(ItemId.MYSTIC_ROBE_BOTTOM_DUSK).weight(1024 - 1000),
-          new RandomItem(ItemId.MYSTIC_GLOVES_DUSK).weight(1024 - 1000),
-          new RandomItem(ItemId.MYSTIC_BOOTS_DUSK).weight(1024 - 1000));
 
   private transient Player player;
 
@@ -564,27 +522,10 @@ public class SlayerPlugin extends PlayerPlugin {
     return false;
   }
 
+  // TODO: Move to areas
   @Override
   public boolean mapObjectOptionHook(int option, MapObject mapObject) {
     switch (mapObject.getId()) {
-      case 172: // Closed chest: crystal chest
-        if (!player.getInventory().hasItem(ItemId.BRIMSTONE_KEY)) {
-          return false;
-        }
-        player.getInventory().deleteItem(ItemId.BRIMSTONE_KEY);
-        var item = RandomItem.getItem(BRIMSTONE_CHEST_ITEMS);
-        player.getInventory().addOrDropItem(item.getNotedId(), item.getAmount());
-        player.getGameEncoder().sendMessage("You find some treasure in the chest!");
-        brimstoneKeys++;
-        return true;
-      case 535: // crevice
-        if (!Settings.getInstance().isSpawn() && !isAnyTask(NpcId.THERMONUCLEAR_SMOKE_DEVIL_301,
-            NpcDef.getName(NpcId.THERMONUCLEAR_SMOKE_DEVIL_301))) {
-          player.getGameEncoder().sendMessage("You need an appropriate task to enter.");
-          return true;
-        }
-        player.openDialogue("bossinstance", 5);
-        return true;
       case 23104: // iron winch
         if (!Settings.getInstance().isSpawn()
             && !isAnyTask(NpcId.CERBERUS_318, NpcDef.getName(NpcId.CERBERUS_318))) {
@@ -597,77 +538,6 @@ public class SlayerPlugin extends PlayerPlugin {
           player.getMovement().teleport(1368, 1227);
         } else if (mapObject.getX() == 1307 && mapObject.getY() == 1269) {
           player.openDialogue("bossinstance", 4);
-        }
-        return true;
-      case 31669: // the cloister bell
-        if (!Settings.getInstance().isLocal() && !Settings.getInstance().isSpawn()
-            && !isAnyTask(NpcId.DUSK_248, NpcDef.getName(NpcId.DUSK_248))) {
-          player.getGameEncoder().sendMessage("You need an appropriate task to do this.");
-          return true;
-        }
-        if (player.getController().getNpc(NpcId.DUSK_248) != null
-            || player.getController().getNpc(NpcId.DUSK_248_7882) != null
-            || player.getController().getNpc(NpcId.DUSK_328_7888) != null
-            || player.getController().getNpc(NpcId.DAWN_228) != null
-            || player.getController().getNpc(NpcId.DAWN_228_7885) != null
-            || player.getController().getNpc(NpcId.DUSK_328_7889) != null) {
-          player.getGameEncoder().sendMessage("Nothing interesting happens.");
-          return true;
-        }
-        player.getGameEncoder().setVarp(1667, 3);
-        player.getGameEncoder().sendMapObjectAnimation(mapObject, 7748);
-        var dusk = new Npc(player.getController(), NpcId.DUSK_248, new Tile(1685, 4573));
-        dusk.setLargeVisibility();
-        var dawn = new Npc(player.getController(), NpcId.DAWN_228, new Tile(1705, 4573));
-        dawn.setLargeVisibility();
-        return true;
-      case 31681: // roof entrance
-        if (!Settings.getInstance().isSpawn() && !isUnlocked(SlayerUnlock.GROTESQUE_GUARDIANS)) {
-          if (!player.getInventory().hasItem(ItemId.BRITTLE_KEY)) {
-            player.getGameEncoder().sendMessage("You need a brittle key to unlock this.");
-            return true;
-          }
-          player.getInventory().deleteItem(ItemId.BRITTLE_KEY);
-          unlock(SlayerUnlock.GROTESQUE_GUARDIANS);
-          return true;
-        }
-        if (!Settings.getInstance().isLocal() && !Settings.getInstance().isSpawn()
-            && !isAnyTask(NpcId.DUSK_248, NpcDef.getName(NpcId.DUSK_248))) {
-          player.getGameEncoder().sendMessage("You need an appropriate task to enter.");
-          return true;
-        }
-        player.setController(new BossInstancePC());
-        player.getController().instance();
-        player.getMovement().teleport(1696, 4574);
-        player.getController().getVariable("boss_instance_grotesque_guardians");
-        return true;
-    }
-    return false;
-  }
-
-  @Override
-  public boolean npcOptionHook(int option, Npc npc) {
-    switch (npc.getId()) {
-      case NpcId.NIEVE:
-        if (option == 0) {
-          player.openDialogue(new MasterMenuDialogue(player, this));
-        } else if (option == 2) {
-          getAssignment();
-        } else if (option == 3) {
-          player.openShop("slayer");
-        } else if (option == 4) {
-          player.openDialogue(new RewardsDialogue(player, this));
-        }
-        return true;
-      case NpcId.KRYSTILIA:
-        if (option == 0) {
-          player.openDialogue(new WildernessMasterMenuDialogue(player, this));
-        } else if (option == 2) {
-          getAssignment(SlayerMaster.WILDERNESS_MASTER);
-        } else if (option == 3) {
-          player.openShop("slayer");
-        } else if (option == 4) {
-          openRewards();
         }
         return true;
     }
@@ -689,7 +559,6 @@ public class SlayerPlugin extends PlayerPlugin {
       }
     }
     player.getGameEncoder().sendMessage("Couldn't find a suitable Slayer master.");
-
   }
 
   public void getAssignment(String name) {
@@ -874,6 +743,204 @@ public class SlayerPlugin extends PlayerPlugin {
     AchievementDiary.slayerAssignmentUpdate(player, master, selectedTask, quantity);
   }
 
+  public void sendTask() {
+    if (task.isComplete() && wildernessTask.isComplete()) {
+      player.getGameEncoder().sendMessage("You need something new to hunt.");
+      return;
+    }
+    if (!task.isComplete()) {
+      player.getGameEncoder().sendMessage("You're assigned to kill " + task.getName() + "s; only "
+          + task.getQuantity() + " more to go.");
+      if (task.getSlayerTask().getLocation() != null) {
+        player.getGameEncoder()
+            .sendMessage("They are located at " + task.getSlayerTask().getLocation() + ".");
+      }
+    }
+    if (!wildernessTask.isComplete()) {
+      player.getGameEncoder().sendMessage("You're assigned to kill " + wildernessTask.getName()
+          + "s in the wilderness; only " + wildernessTask.getQuantity() + " more to go.");
+      if (wildernessTask.getSlayerTask().getLocation() != null) {
+        player.getGameEncoder().sendMessage(
+            "They are located at " + wildernessTask.getSlayerTask().getLocation() + ".");
+      }
+    }
+  }
+
+  public void cancelWildernessTask() {
+    if (wildernessTask.isComplete()) {
+      player.getGameEncoder().sendMessage("You need something new to hunt.");
+      return;
+    }
+    if (points < 30) {
+      player.getGameEncoder().sendMessage("You need 30 points to cancel a wilderness task.");
+      return;
+    }
+    player.getGameEncoder().sendMessage("Your wilderness task has been cancelled.");
+    player.getGameEncoder().sendMessage("Completion of your next task won't upgrade your emblem.");
+    wildernessTask.cancel();
+    points -= 30;
+    wildernessTaskEmblemUpgrade = false;
+  }
+
+  public void openRewards() {
+    player.getWidgetManager().sendInteractiveOverlay(WidgetId.SLAYER_REWARDS);
+    player.getGameEncoder().sendWidgetSettings(WidgetId.SLAYER_REWARDS, 8, 0, 100, 2);
+    player.getGameEncoder().sendWidgetSettings(WidgetId.SLAYER_REWARDS, 12, 0, 10, 2);
+    player.getGameEncoder().sendWidgetSettings(WidgetId.SLAYER_REWARDS, 23, 0, 10, 1086);
+    sendRewardsVarps();
+  }
+
+  public boolean isUnlocked(SlayerUnlock unlock) {
+    return unlocks != null && unlocks.contains(unlock);
+  }
+
+  public void unlock(SlayerUnlock unlock) {
+    if (isUnlocked(unlock)) {
+      lock(unlock);
+      return;
+    }
+    var cost = unlock.getPrice();
+    if (points < cost) {
+      player.getGameEncoder().sendMessage("You need " + cost + " points to unlock this.");
+      return;
+    }
+    if (unlocks == null) {
+      unlocks = new ArrayList<>();
+    }
+    if (!unlocks.contains(unlock)) {
+      unlocks.add(unlock);
+    }
+    points -= cost;
+    sendRewardsVarps();
+  }
+
+  public void incrimentBrimstoneKeys() {
+    brimstoneKeys++;
+  }
+
+  private void lock(SlayerUnlock unlock) {
+    if (unlocks == null || !unlocks.contains(unlock)) {
+      return;
+    }
+    unlocks.remove(unlock);
+    sendRewardsVarps();
+  }
+
+  private void sendVarps() {
+    player.getGameEncoder().setVarp(VarpId.SLAYER_QUANTITY, task.getQuantity());
+    player.getGameEncoder().setVarp(VarpId.SLAYER_TASK_IDENTIFIER,
+        !task.isComplete() ? task.getIdentifier() != null ? task.getIdentifier().ordinal() : 156
+            : 0);
+    player.getGameEncoder().setVarbit(VarbitId.SLAYER_GROTESQUE_GUARDIANS_DOOR,
+        isUnlocked(SlayerUnlock.GROTESQUE_GUARDIANS) ? 1 : 0);
+  }
+
+  private void sendRewardsVarps() {
+    sendVarps();
+    player.getGameEncoder().setVarbit(VarbitId.SLAYER_POINTS, points);
+    if (unlocks != null) {
+      for (SlayerUnlock unlock : unlocks) {
+        if (unlock.getVarbit() == -1) {
+          continue;
+        }
+        player.getGameEncoder().setVarbit(unlock.getVarbit(), 1);
+      }
+    }
+    if (blockedTasks != null) {
+      for (int i = 0; i < blockedTasks.size(); i++) {
+        player.getGameEncoder().setVarbit(BLOCKED_TASK_VARBITS[i], blockedTasks.get(i).ordinal());
+      }
+    }
+  }
+
+  private void openSlayerRingDialogue() {
+    if (task.isComplete()) {
+      player.getGameEncoder().sendMessage("You need a task to do this.");
+      return;
+    }
+    if (task.getSlayerTask().getTeleports() == null
+        || task.getSlayerTask().getTeleports().isEmpty()) {
+      player.getGameEncoder().sendMessage("There are no teleports associated with this task.");
+      return;
+    }
+    player.openDialogue(new SlayerRingDialogue(player, this));
+  }
+
+  private boolean isBlockedTask(SlayerTaskIdentifier identifier) {
+    return blockedTasks != null && blockedTasks.contains(identifier);
+  }
+
+  private void cancelTask() {
+    if (task.isComplete()) {
+      player.getGameEncoder().sendMessage("You need something new to hunt.");
+      return;
+    }
+    if (points < 30) {
+      player.getGameEncoder().sendMessage("You need 30 points to cancel a task.");
+      return;
+    }
+    player.getGameEncoder().sendMessage("Your task has been cancelled.");
+    task.cancel();
+    points -= 30;
+    sendRewardsVarps();
+  }
+
+  private void blockTask() {
+    if (task.isComplete()) {
+      player.getGameEncoder().sendMessage("You need something new to hunt.");
+      return;
+    }
+    if (task.getIdentifier() == null) {
+      player.getGameEncoder().sendMessage("This task can't be blocked.");
+      return;
+    }
+    if (blockedTasks != null && blockedTasks.contains(task.getIdentifier())) {
+      player.getGameEncoder().sendMessage("This task is already blocked.");
+      return;
+    }
+    if (points < 100) {
+      player.getGameEncoder().sendMessage("You need 100 points to block a task.");
+      return;
+    }
+    if (blockedTasks != null && blockedTasks.size() >= 6) {
+      player.getGameEncoder().sendMessage("You can't block any more tasks.");
+      return;
+    }
+    if (blockedTasks == null) {
+      blockedTasks = new ArrayList<>();
+    }
+    blockedTasks.add(task.getIdentifier());
+    points -= 100;
+    task.cancel();
+    sendRewardsVarps();
+  }
+
+  private void unblockTask(int option) {
+    if (blockedTasks == null || option >= blockedTasks.size()) {
+      return;
+    }
+    blockedTasks.remove(option);
+    if (blockedTasks.size() == 0) {
+      blockedTasks = null;
+    }
+    sendRewardsVarps();
+  }
+
+  private void buy(Item item, int cost) {
+    if (points < cost) {
+      player.getGameEncoder()
+          .sendMessage("You need " + PNumber.formatNumber(cost) + " points to buy this.");
+      return;
+    }
+    if (!player.getInventory().canAddItem(item)) {
+      player.getInventory().notEnoughSpace();
+      return;
+    }
+    player.getInventory().addItem(item);
+    points -= cost;
+    sendRewardsVarps();
+  }
+
   private void taskKillCheck(AssignedSlayerTask assignedTask, Npc npc) {
     if (!countsTowardTaskQuantity(assignedTask, npc.getId())) {
       return;
@@ -1020,199 +1087,5 @@ public class SlayerPlugin extends PlayerPlugin {
     }
     return assignedTask.containsId(id)
         || name != null && name.matches(".*(?i)(" + assignedTask.getName() + ")\\b.*");
-  }
-
-  public void sendTask() {
-    if (task.isComplete() && wildernessTask.isComplete()) {
-      player.getGameEncoder().sendMessage("You need something new to hunt.");
-      return;
-    }
-    if (!task.isComplete()) {
-      player.getGameEncoder().sendMessage("You're assigned to kill " + task.getName() + "s; only "
-          + task.getQuantity() + " more to go.");
-      if (task.getSlayerTask().getLocation() != null) {
-        player.getGameEncoder()
-            .sendMessage("They are located at " + task.getSlayerTask().getLocation() + ".");
-      }
-    }
-    if (!wildernessTask.isComplete()) {
-      player.getGameEncoder().sendMessage("You're assigned to kill " + wildernessTask.getName()
-          + "s in the wilderness; only " + wildernessTask.getQuantity() + " more to go.");
-      if (wildernessTask.getSlayerTask().getLocation() != null) {
-        player.getGameEncoder().sendMessage(
-            "They are located at " + wildernessTask.getSlayerTask().getLocation() + ".");
-      }
-    }
-  }
-
-  public boolean isUnlocked(SlayerUnlock unlock) {
-    return unlocks != null && unlocks.contains(unlock);
-  }
-
-  public void unlock(SlayerUnlock unlock) {
-    if (isUnlocked(unlock)) {
-      lock(unlock);
-      return;
-    }
-    var cost = unlock.getPrice();
-    if (points < cost) {
-      player.getGameEncoder().sendMessage("You need " + cost + " points to unlock this.");
-      return;
-    }
-    if (unlocks == null) {
-      unlocks = new ArrayList<>();
-    }
-    if (!unlocks.contains(unlock)) {
-      unlocks.add(unlock);
-    }
-    points -= cost;
-    sendRewardsVarps();
-  }
-
-  public void lock(SlayerUnlock unlock) {
-    if (unlocks == null || !unlocks.contains(unlock)) {
-      return;
-    }
-    unlocks.remove(unlock);
-    sendRewardsVarps();
-  }
-
-  public void openRewards() {
-    player.getWidgetManager().sendInteractiveOverlay(426);
-    player.getGameEncoder().sendWidgetSettings(426, 8, 0, 100, 2);
-    player.getGameEncoder().sendWidgetSettings(426, 12, 0, 10, 2);
-    player.getGameEncoder().sendWidgetSettings(426, 23, 0, 10, 1086);
-    sendRewardsVarps();
-  }
-
-  private void sendVarps() {
-    player.getGameEncoder().setVarp(VarpId.SLAYER_QUANTITY, task.getQuantity());
-    player.getGameEncoder().setVarp(VarpId.SLAYER_TASK_IDENTIFIER,
-        !task.isComplete() ? task.getIdentifier() != null ? task.getIdentifier().ordinal() : 156
-            : 0);
-    player.getGameEncoder().setVarbit(VarbitId.SLAYER_GROTESQUE_GUARDIANS_DOOR,
-        isUnlocked(SlayerUnlock.GROTESQUE_GUARDIANS) ? 1 : 0);
-  }
-
-  public void sendRewardsVarps() {
-    sendVarps();
-    player.getGameEncoder().setVarbit(VarbitId.SLAYER_POINTS, points);
-    if (unlocks != null) {
-      for (SlayerUnlock unlock : unlocks) {
-        if (unlock.getVarbit() == -1) {
-          continue;
-        }
-        player.getGameEncoder().setVarbit(unlock.getVarbit(), 1);
-      }
-    }
-    if (blockedTasks != null) {
-      for (int i = 0; i < blockedTasks.size(); i++) {
-        player.getGameEncoder().setVarbit(BLOCKED_TASK_VARBITS[i], blockedTasks.get(i).ordinal());
-      }
-    }
-  }
-
-  public void openSlayerRingDialogue() {
-    if (task.isComplete()) {
-      player.getGameEncoder().sendMessage("You need a task to do this.");
-      return;
-    }
-    if (task.getSlayerTask().getTeleports() == null
-        || task.getSlayerTask().getTeleports().isEmpty()) {
-      player.getGameEncoder().sendMessage("There are no teleports associated with this task.");
-      return;
-    }
-    player.openDialogue(new SlayerRingDialogue(player, this));
-  }
-
-  public boolean isBlockedTask(SlayerTaskIdentifier identifier) {
-    return blockedTasks != null && blockedTasks.contains(identifier);
-  }
-
-  public void cancelTask() {
-    if (task.isComplete()) {
-      player.getGameEncoder().sendMessage("You need something new to hunt.");
-      return;
-    }
-    if (points < 30) {
-      player.getGameEncoder().sendMessage("You need 30 points to cancel a task.");
-      return;
-    }
-    player.getGameEncoder().sendMessage("Your task has been cancelled.");
-    task.cancel();
-    points -= 30;
-    sendRewardsVarps();
-  }
-
-  public void cancelWildernessTask() {
-    if (wildernessTask.isComplete()) {
-      player.getGameEncoder().sendMessage("You need something new to hunt.");
-      return;
-    }
-    if (points < 30) {
-      player.getGameEncoder().sendMessage("You need 30 points to cancel a wilderness task.");
-      return;
-    }
-    player.getGameEncoder().sendMessage("Your wilderness task has been cancelled.");
-    player.getGameEncoder().sendMessage("Completion of your next task won't upgrade your emblem.");
-    wildernessTask.cancel();
-    points -= 30;
-    wildernessTaskEmblemUpgrade = false;
-  }
-
-  public void blockTask() {
-    if (task.isComplete()) {
-      player.getGameEncoder().sendMessage("You need something new to hunt.");
-      return;
-    }
-    if (task.getIdentifier() == null) {
-      player.getGameEncoder().sendMessage("This task can't be blocked.");
-      return;
-    }
-    if (blockedTasks != null && blockedTasks.contains(task.getIdentifier())) {
-      player.getGameEncoder().sendMessage("This task is already blocked.");
-      return;
-    }
-    if (points < 100) {
-      player.getGameEncoder().sendMessage("You need 100 points to block a task.");
-      return;
-    }
-    if (blockedTasks != null && blockedTasks.size() >= 6) {
-      player.getGameEncoder().sendMessage("You can't block any more tasks.");
-      return;
-    }
-    if (blockedTasks == null) {
-      blockedTasks = new ArrayList<>();
-    }
-    blockedTasks.add(task.getIdentifier());
-    points -= 100;
-    task.cancel();
-    sendRewardsVarps();
-  }
-
-  public void unblockTask(int option) {
-    if (blockedTasks == null || option >= blockedTasks.size()) {
-      return;
-    }
-    blockedTasks.remove(option);
-    if (blockedTasks.size() == 0) {
-      blockedTasks = null;
-    }
-    sendRewardsVarps();
-  }
-
-  public void buy(Item item, int cost) {
-    if (points < cost) {
-      player.getGameEncoder()
-          .sendMessage("You need " + PNumber.formatNumber(cost) + " points to buy this.");
-      return;
-    }
-    if (!player.getInventory().canAddItem(item)) {
-      player.getInventory().notEnoughSpace();
-      return;
-    }
-    player.getInventory().addItem(item);
-    points -= cost;
-    sendRewardsVarps();
   }
 }

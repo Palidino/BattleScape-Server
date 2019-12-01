@@ -20,7 +20,7 @@ import com.palidinodh.osrscore.model.player.AchievementDiaryTask;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Skills;
 
-public class FaladorDiary extends AchievementDiary {
+class FaladorDiary extends AchievementDiary {
   public FaladorDiary() {
     super(AchievementDiary.Name.FALADOR);
   }

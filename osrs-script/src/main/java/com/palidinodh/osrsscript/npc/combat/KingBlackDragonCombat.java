@@ -30,7 +30,7 @@ import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class KingBlackDragonCombat extends NpcCombat {
+class KingBlackDragonCombat extends NpcCombat {
   @Inject
   private Npc npc;
 

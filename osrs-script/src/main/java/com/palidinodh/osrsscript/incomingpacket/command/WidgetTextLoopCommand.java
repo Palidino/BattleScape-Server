@@ -4,7 +4,7 @@ import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class WidgetTextLoopCommand implements CommandHandler {
+class WidgetTextLoopCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "id start end";

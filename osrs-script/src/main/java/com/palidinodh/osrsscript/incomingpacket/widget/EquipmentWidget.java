@@ -9,15 +9,12 @@ import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.player.Equipment;
 import com.palidinodh.osrscore.model.player.Magic;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.ReferenceId;
 import lombok.var;
 
-public class EquipmentWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] { WidgetId.EQUIPMENT, WidgetId.EQUIPMENT_BONUSES,
-        WidgetId.EQUIPMENT_BONUSES_INVENTORY };
-  }
-
+@ReferenceId({ WidgetId.EQUIPMENT, WidgetId.EQUIPMENT_BONUSES,
+    WidgetId.EQUIPMENT_BONUSES_INVENTORY })
+class EquipmentWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {
@@ -229,13 +226,13 @@ public class EquipmentWidget implements WidgetHandler {
   public static class MaxCapeDialogue {
     public static class FishDialogue extends OptionsDialogue {
       public FishDialogue(Player player) {
-        DialogueAction action = (childId, slot) -> {
+        DialogueAction action = (c, s) -> {
           Tile maxCapeTele = null;
-          if (slot == 0) {
+          if (s == 0) {
             maxCapeTele = new Tile(3093, 3495);
-          } else if (slot == 1) {
+          } else if (s == 1) {
             maxCapeTele = new Tile(1233, 3565);
-          } else if (slot == 2) {
+          } else if (s == 2) {
             maxCapeTele = new Tile(1666, 10050);
           }
           if (!player.getController().canTeleport(true)) {
@@ -257,13 +254,13 @@ public class EquipmentWidget implements WidgetHandler {
 
     public static class OtherDialogue extends OptionsDialogue {
       public OtherDialogue(Player player) {
-        DialogueAction action = (childId, slot) -> {
+        DialogueAction action = (c, s) -> {
           Tile maxCapeTele = null;
-          if (slot == 0) {
+          if (s == 0) {
             maxCapeTele = new Tile(3093, 3495);
-          } else if (slot == 1) {
+          } else if (s == 1) {
             maxCapeTele = new Tile(1233, 3565);
-          } else if (slot == 2) {
+          } else if (s == 2) {
             maxCapeTele = new Tile(1666, 10050);
           }
           if (!player.getController().canTeleport(true)) {
@@ -285,13 +282,13 @@ public class EquipmentWidget implements WidgetHandler {
 
     public static class PortalsDialogue extends OptionsDialogue {
       public PortalsDialogue(Player player) {
-        DialogueAction action = (childId, slot) -> {
+        DialogueAction action = (c, s) -> {
           Tile maxCapeTele = null;
-          if (slot == 0) {
+          if (s == 0) {
             maxCapeTele = new Tile(3093, 3495);
-          } else if (slot == 1) {
+          } else if (s == 1) {
             maxCapeTele = new Tile(1233, 3565);
-          } else if (slot == 2) {
+          } else if (s == 2) {
             maxCapeTele = new Tile(1666, 10050);
           }
           if (!player.getController().canTeleport(true)) {
@@ -313,13 +310,13 @@ public class EquipmentWidget implements WidgetHandler {
 
     public static class TeleportsDialogue extends OptionsDialogue {
       public TeleportsDialogue(Player player) {
-        DialogueAction action = (childId, slot) -> {
+        DialogueAction action = (c, s) -> {
           Tile maxCapeTele = null;
-          if (slot == 0) {
+          if (s == 0) {
             maxCapeTele = new Tile(3093, 3495);
-          } else if (slot == 1) {
+          } else if (s == 1) {
             maxCapeTele = new Tile(1233, 3565);
-          } else if (slot == 2) {
+          } else if (s == 2) {
             maxCapeTele = new Tile(1666, 10050);
           }
           if (!player.getController().canTeleport(true)) {
@@ -341,13 +338,13 @@ public class EquipmentWidget implements WidgetHandler {
 
     public static class FeaturesDialogue extends OptionsDialogue {
       public FeaturesDialogue(Player player) {
-        DialogueAction action = (childId, slot) -> {
+        DialogueAction action = (c, s) -> {
           Tile maxCapeTele = null;
-          if (slot == 0) {
+          if (s == 0) {
             maxCapeTele = new Tile(3093, 3495);
-          } else if (slot == 1) {
+          } else if (s == 1) {
             maxCapeTele = new Tile(1233, 3565);
-          } else if (slot == 2) {
+          } else if (s == 2) {
             maxCapeTele = new Tile(1666, 10050);
           }
           if (!player.getController().canTeleport(true)) {

@@ -5,14 +5,11 @@ import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.osrscore.model.player.WidgetManager;
+import com.palidinodh.rs.ReferenceId;
 import com.palidinodh.rs.setting.Settings;
 
-public class SkillsWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] {WidgetId.SKILLS, WidgetId.SKILL_GUIDE};
-  }
-
+@ReferenceId({ WidgetId.SKILLS, WidgetId.SKILL_GUIDE })
+class SkillsWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {

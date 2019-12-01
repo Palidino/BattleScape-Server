@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
-public class TotalBondsCommand implements CommandHandler {
+class TotalBondsCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "total_purchased username_or_userid";

@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.Settings;
 
-public class RulesCommand implements CommandHandler {
+class RulesCommand implements CommandHandler {
 
   @Override
   public String getExample() {

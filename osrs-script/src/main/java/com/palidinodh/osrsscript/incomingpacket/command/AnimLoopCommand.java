@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.util.PEvent;
 import lombok.var;
 
-public class AnimLoopCommand implements CommandHandler {
+class AnimLoopCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "id";

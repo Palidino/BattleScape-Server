@@ -233,6 +233,9 @@ public class Readers {
   }
 
   public static <T> List<Class<T>> getScriptClasses(Class<T> fromClass, String packageName) {
-    return getClasses(fromClass, Settings.getInstance().getScriptPackage() + "." + packageName);
+    if (!packageName.startsWith(Settings.getInstance().getScriptPackage())) {
+      packageName = Settings.getInstance().getScriptPackage() + "." + packageName;
+    }
+    return getClasses(fromClass, packageName);
   }
 }

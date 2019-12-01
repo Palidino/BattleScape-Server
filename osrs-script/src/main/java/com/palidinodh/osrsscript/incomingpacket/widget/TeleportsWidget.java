@@ -4,13 +4,10 @@ import com.palidinodh.osrscore.io.incomingpacket.WidgetHandler;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Teleports;
+import com.palidinodh.rs.ReferenceId;
 
-public class TeleportsWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] {WidgetId.CUSTOM_TELEPORTS};
-  }
-
+@ReferenceId(WidgetId.CUSTOM_TELEPORTS)
+class TeleportsWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {

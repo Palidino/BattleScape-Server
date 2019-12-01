@@ -16,11 +16,6 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Prayer;
 import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.osrscore.model.player.controller.PController;
-import com.palidinodh.osrsscript.player.plugin.clanwars.dialogue.LeaveBattleDialogue;
-import com.palidinodh.osrsscript.player.plugin.clanwars.rule.Rule;
-import com.palidinodh.osrsscript.player.plugin.clanwars.rule.RuleOption;
-import com.palidinodh.osrsscript.player.plugin.clanwars.state.CompletedState;
-import com.palidinodh.osrsscript.player.plugin.clanwars.state.PlayerState;
 import com.palidinodh.osrsscript.world.event.pvptournament.PvpTournament;
 import com.palidinodh.rs.setting.Settings;
 
@@ -46,7 +41,7 @@ public class ClanWarsPC extends PController {
     exitTile = new Tile(entity);
     p.getGameEncoder().sendPlayerOption("null", 1, false);
     p.getGameEncoder().sendHintIconReset();
-    if (plugin.getState() == PlayerState.TOURNAMENT) {
+    if (plugin.getState() == ClanWarsPlayerState.TOURNAMENT) {
       tournament = p.getWorld().getWorldEvent(PvpTournament.class);
       p.getPrayer().setAllowAllPrayers(true);
       p.getMagic().sendMagicConfigs();
@@ -62,7 +57,7 @@ public class ClanWarsPC extends PController {
 
   @Override
   public void stopHook() {
-    if (plugin.getState() == PlayerState.TOURNAMENT) {
+    if (plugin.getState() == ClanWarsPlayerState.TOURNAMENT) {
       p.getGameEncoder().sendHideWidget(WidgetId.LMS_LOBBY_OVERLAY, 0, false);
       p.getInventory().clear();
       p.getEquipment().clear();
@@ -79,7 +74,7 @@ public class ClanWarsPC extends PController {
     p.getWidgetManager().removeInteractiveWidgets();
     p.getMovement().teleport(exitTile);
     p.restore();
-    Stages.openCompletedState(p, plugin);
+    ClanWarsStages.openCompletedState(p, plugin);
     p.getCombat().setUsingWildernessInterface(false);
     p.getSkills().setCombatLevel();
     p.getGameEncoder().sendWorldMode(p.getWorld().getMode());
@@ -91,14 +86,14 @@ public class ClanWarsPC extends PController {
     if (identifier.equals("clan_wars")) {
       return true;
     } else if (identifier.equals("clan_wars_battle")) {
-      return plugin.getState() == PlayerState.BATTLE;
+      return plugin.getState() == ClanWarsPlayerState.BATTLE;
     }
     return null;
   }
 
   @Override
   public void tickHook() {
-    if (plugin.getState() == PlayerState.TOURNAMENT && !p.isLocked()
+    if (plugin.getState() == ClanWarsPlayerState.TOURNAMENT && !p.isLocked()
         && !p.getMovement().getTeleporting() && !p.getMovement().getTeleported()) {
       if (!p.inClanWarsTournamentLobby() && !p.inClanWarsBattle()) {
         stop();
@@ -108,7 +103,7 @@ public class ClanWarsPC extends PController {
         plugin.setOpponent(null);
       }
     }
-    setMultiCombatFlag(plugin.getState() != PlayerState.TOURNAMENT);
+    setMultiCombatFlag(plugin.getState() != ClanWarsPlayerState.TOURNAMENT);
     if (lastUpdate > 0) {
       lastUpdate--;
       if (lastUpdate == 0) {
@@ -139,22 +134,23 @@ public class ClanWarsPC extends PController {
       p.setAnimation(DEATH_ANIMATION);
     } else if (p.getRespawnDelay() == 0) {
       for (Player player2 : getPlayers()) {
-        if (player2.getPlugin(ClanWarsPlugin.class).getState() != PlayerState.BATTLE
+        if (player2.getPlugin(ClanWarsPlugin.class).getState() != ClanWarsPlayerState.BATTLE
             || plugin.isTop() == player2.getPlugin(ClanWarsPlugin.class).isTop()) {
           continue;
         }
         player2.getPlugin(ClanWarsPlugin.class).incrimentTotalKills();
       }
-      boolean isTournament = plugin.getState() == PlayerState.TOURNAMENT;
+      boolean isTournament = plugin.getState() == ClanWarsPlayerState.TOURNAMENT;
       if (isTournament) {
         p.getInventory().clear();
         p.getEquipment().clear();
         tournament.removePlayer(p);
         tournament.checkPrizes(p, false);
       }
-      if (plugin.ruleSelected(Rule.GAME_END, RuleOption.LAST_TEAM_STANDING) && !isTournament) {
+      if (plugin.ruleSelected(ClanWarsRule.GAME_END, ClanWarsRuleOption.LAST_TEAM_STANDING)
+          && !isTournament) {
         p.restore();
-        plugin.setState(PlayerState.VIEW);
+        plugin.setState(ClanWarsPlayerState.VIEW);
         plugin.teleportViewing();
       } else {
         stop();
@@ -169,12 +165,12 @@ public class ClanWarsPC extends PController {
 
   @Override
   public boolean allowMultiTargetAttacksHook() {
-    return plugin.ruleSelected(Rule.SINGLE_SPELLS, RuleOption.DISABLED);
+    return plugin.ruleSelected(ClanWarsRule.SINGLE_SPELLS, ClanWarsRuleOption.DISABLED);
   }
 
   @Override
   public MapItem addMapItemHook(MapItem mapItem) {
-    if (plugin.getState() == PlayerState.TOURNAMENT) {
+    if (plugin.getState() == ClanWarsPlayerState.TOURNAMENT) {
       mapItem.setNeverAppear();
       if (!p.inClanWarsBattle()) {
         mapItem = null;
@@ -185,11 +181,11 @@ public class ClanWarsPC extends PController {
 
   @Override
   public boolean canEatHook(int itemId) {
-    if (plugin.ruleSelected(Rule.FOOD, RuleOption.DISABLED)) {
+    if (plugin.ruleSelected(ClanWarsRule.FOOD, ClanWarsRuleOption.DISABLED)) {
       p.getGameEncoder().sendMessage("You can't eat food in this war.");
       return false;
     }
-    if (plugin.ruleSelected(Rule.IGNORE_FREEZING, RuleOption.ALLOWED)
+    if (plugin.ruleSelected(ClanWarsRule.IGNORE_FREEZING, ClanWarsRuleOption.ALLOWED)
         && ItemDef.isMembers(itemId)) {
       p.getGameEncoder().sendMessage("You can't eat this food in this war.");
       return false;
@@ -199,15 +195,16 @@ public class ClanWarsPC extends PController {
 
   @Override
   public boolean canDrinkHook(int itemId) {
-    if (plugin.ruleSelected(Rule.DRINKS, RuleOption.DISABLED)) {
+    if (plugin.ruleSelected(ClanWarsRule.DRINKS, ClanWarsRuleOption.DISABLED)) {
       p.getGameEncoder().sendMessage("You can't drink potions in this war.");
       return false;
     }
-    if (plugin.ruleSelected(Rule.FOOD, RuleOption.DISABLED) && Skills.getDrink(itemId).doesHeal()) {
+    if (plugin.ruleSelected(ClanWarsRule.FOOD, ClanWarsRuleOption.DISABLED)
+        && Skills.getDrink(itemId).doesHeal()) {
       p.getGameEncoder().sendMessage("You can't eat food in this war.");
       return false;
     }
-    if (plugin.ruleSelected(Rule.IGNORE_FREEZING, RuleOption.ALLOWED)
+    if (plugin.ruleSelected(ClanWarsRule.IGNORE_FREEZING, ClanWarsRuleOption.ALLOWED)
         && ItemDef.isMembers(itemId)) {
       p.getGameEncoder().sendMessage("You can't drink this potion in this war.");
       return false;
@@ -217,7 +214,7 @@ public class ClanWarsPC extends PController {
 
   @Override
   public int getLevelForXP(int index) {
-    if (plugin.getState() == PlayerState.TOURNAMENT) {
+    if (plugin.getState() == ClanWarsPlayerState.TOURNAMENT) {
       if (index < tournament.getMode().getSkillLevels().length) {
         return tournament.getMode().getSkillLevels()[index];
       } else {
@@ -229,7 +226,7 @@ public class ClanWarsPC extends PController {
 
   @Override
   public int getXP(int index) {
-    if (plugin.getState() == PlayerState.TOURNAMENT) {
+    if (plugin.getState() == ClanWarsPlayerState.TOURNAMENT) {
       if (index < tournament.getMode().getSkillLevels().length) {
         return Skills.XP_TABLE[tournament.getMode().getSkillLevels()[index]];
       } else {
@@ -246,7 +243,7 @@ public class ClanWarsPC extends PController {
 
   @Override
   public int getXPMultiplier(int skillId) {
-    return plugin.getState() == PlayerState.TOURNAMENT ? 1 : -1;
+    return plugin.getState() == ClanWarsPlayerState.TOURNAMENT ? 1 : -1;
   }
 
   @Override
@@ -262,7 +259,7 @@ public class ClanWarsPC extends PController {
 
   @Override
   public boolean canEquipHook(int itemId, int slot) {
-    if (plugin.ruleSelected(Rule.IGNORE_FREEZING, RuleOption.ALLOWED)
+    if (plugin.ruleSelected(ClanWarsRule.IGNORE_FREEZING, ClanWarsRuleOption.ALLOWED)
         && ItemDef.isMembers(itemId)) {
       return false;
     }
@@ -271,15 +268,15 @@ public class ClanWarsPC extends PController {
 
   @Override
   public boolean canActivatePrayerHook(int childId) {
-    if (plugin.ruleSelected(Rule.PRAYER, RuleOption.DISABLED)) {
+    if (plugin.ruleSelected(ClanWarsRule.PRAYER, ClanWarsRuleOption.DISABLED)) {
       return false;
-    } else if (plugin.ruleSelected(Rule.PRAYER, RuleOption.NO_OVERHEADS)) {
+    } else if (plugin.ruleSelected(ClanWarsRule.PRAYER, ClanWarsRuleOption.NO_OVERHEADS)) {
       if (Prayer.getPrayerDef(childId) != null
           && Prayer.getPrayerDef(childId).getHeadiconId() != -1) {
         return false;
       }
     }
-    if (plugin.ruleSelected(Rule.IGNORE_FREEZING, RuleOption.ALLOWED)
+    if (plugin.ruleSelected(ClanWarsRule.IGNORE_FREEZING, ClanWarsRuleOption.ALLOWED)
         && Prayer.getPrayerDef(childId) != null
         && Prayer.getPrayerDef(childId).getIdentifier() != null) {
       String identifier = Prayer.getPrayerDef(childId).getIdentifier();
@@ -299,31 +296,33 @@ public class ClanWarsPC extends PController {
         && (p.getMagic().getActiveSpell().getName().equals("trident of the seas")
             || p.getMagic().getActiveSpell().getName().equals("trident of the swamp")
             || p.getMagic().getActiveSpell().getName().equals("sanguinesti staff"));
-    if (plugin.ruleSelected(Rule.MELEE, RuleOption.DISABLED) && hitType == HitType.MELEE) {
+    if (plugin.ruleSelected(ClanWarsRule.MELEE, ClanWarsRuleOption.DISABLED)
+        && hitType == HitType.MELEE) {
       if (sendMessage) {
         p.getGameEncoder().sendMessage("You can't use melee in this war.");
       }
       return false;
-    } else if (plugin.ruleSelected(Rule.RANGING, RuleOption.DISABLED)
+    } else if (plugin.ruleSelected(ClanWarsRule.RANGING, ClanWarsRuleOption.DISABLED)
         && hitType == HitType.RANGED) {
       if (sendMessage) {
         p.getGameEncoder().sendMessage("You can't use ranged in this war.");
       }
       return false;
-    } else if (plugin.ruleSelected(Rule.MAGIC, RuleOption.DISABLED) && hitType == HitType.MAGIC) {
+    } else if (plugin.ruleSelected(ClanWarsRule.MAGIC, ClanWarsRuleOption.DISABLED)
+        && hitType == HitType.MAGIC) {
       if (sendMessage) {
         p.getGameEncoder().sendMessage("You can't use magic in this war.");
       }
       return false;
-    } else if (plugin.ruleSelected(Rule.MAGIC, RuleOption.STANDARD_SPELLS)
+    } else if (plugin.ruleSelected(ClanWarsRule.MAGIC, ClanWarsRuleOption.STANDARD_SPELLS)
         && hitType == HitType.MAGIC
         && (p.getMagic().getSpellbook() != Magic.STANDARD_MAGIC || tridentAttack)) {
       if (sendMessage) {
         p.getGameEncoder().sendMessage("You can't use this spellbook in this war.");
       }
       return false;
-    } else if (plugin.ruleSelected(Rule.MAGIC, RuleOption.BINDING_ONLY) && hitType == HitType.MAGIC
-        && p.getMagic().getActiveSpell() != null
+    } else if (plugin.ruleSelected(ClanWarsRule.MAGIC, ClanWarsRuleOption.BINDING_ONLY)
+        && hitType == HitType.MAGIC && p.getMagic().getActiveSpell() != null
         && !p.getMagic().getActiveSpell().getName().equals("bind")
         && !p.getMagic().getActiveSpell().getName().equals("snare")
         && !p.getMagic().getActiveSpell().getName().equals("entangle")) {
@@ -331,22 +330,23 @@ public class ClanWarsPC extends PController {
         p.getGameEncoder().sendMessage("You can't use this spell in this war.");
       }
       return false;
-    } else if (plugin.ruleSelected(Rule.ALLOW_TRIDENT_IN_PVP, RuleOption.DISABLED)
+    } else if (plugin.ruleSelected(ClanWarsRule.ALLOW_TRIDENT_IN_PVP, ClanWarsRuleOption.DISABLED)
         && tridentAttack) {
       if (sendMessage) {
         p.getGameEncoder().sendMessage("You can't use this spell in this war.");
       }
       return false;
-    } else if (plugin.getCountdown() > 0
-        || plugin.getState() != PlayerState.BATTLE && plugin.getState() != PlayerState.TOURNAMENT) {
+    } else if (plugin.getCountdown() > 0 || plugin.getState() != ClanWarsPlayerState.BATTLE
+        && plugin.getState() != ClanWarsPlayerState.TOURNAMENT) {
       return false;
-    } else if (p2 != null && p2.getPlugin(ClanWarsPlugin.class).getState() != PlayerState.BATTLE
-        && p2.getPlugin(ClanWarsPlugin.class).getState() != PlayerState.TOURNAMENT) {
+    } else if (p2 != null
+        && p2.getPlugin(ClanWarsPlugin.class).getState() != ClanWarsPlayerState.BATTLE
+        && p2.getPlugin(ClanWarsPlugin.class).getState() != ClanWarsPlayerState.TOURNAMENT) {
       if (sendMessage) {
         p.getGameEncoder().sendMessage("You can't attack this player.");
       }
       return false;
-    } else if (plugin.ruleSelected(Rule.IGNORE_FREEZING, RuleOption.ALLOWED)
+    } else if (plugin.ruleSelected(ClanWarsRule.IGNORE_FREEZING, ClanWarsRuleOption.ALLOWED)
         && hitType == HitType.MAGIC && p.getMagic().getActiveSpell() != null) {
       if (p.getMagic().getSpellbook() != Magic.STANDARD_MAGIC) {
         if (sendMessage) {
@@ -361,7 +361,7 @@ public class ClanWarsPC extends PController {
         return false;
       }
     }
-    if (plugin.getState() == PlayerState.TOURNAMENT) {
+    if (plugin.getState() == ClanWarsPlayerState.TOURNAMENT) {
       if (!p.inClanWarsBattle()) {
         return false;
       }
@@ -378,11 +378,12 @@ public class ClanWarsPC extends PController {
 
   @Override
   public boolean canActivateSpecialAttackHook() {
-    if (plugin.ruleSelected(Rule.SPECIAL_ATTACKS, RuleOption.DISABLED)) {
+    if (plugin.ruleSelected(ClanWarsRule.SPECIAL_ATTACKS, ClanWarsRuleOption.DISABLED)) {
       p.getGameEncoder().sendMessage("You can't use special attacks in this war.");
       return false;
     }
-    if (plugin.ruleSelected(Rule.SPECIAL_ATTACKS, RuleOption.NO_STAFF_OF_THE_DEAD)) {
+    if (plugin.ruleSelected(ClanWarsRule.SPECIAL_ATTACKS,
+        ClanWarsRuleOption.NO_STAFF_OF_THE_DEAD)) {
       if (p.getEquipment().getWeaponId() == 11791 || p.getEquipment().getWeaponId() == 12902
           || p.getEquipment().getWeaponId() == 12904 || p.getEquipment().getWeaponId() == 22296) {
         p.getGameEncoder().sendMessage("You can't this special attack in this war.");
@@ -394,24 +395,26 @@ public class ClanWarsPC extends PController {
 
   @Override
   public int[] runePouchHook() {
-    return plugin.getState() == PlayerState.TOURNAMENT
+    return plugin.getState() == ClanWarsPlayerState.TOURNAMENT
         ? tournament.getMode().getRunes().stream().mapToInt(i -> i).toArray()
         : null;
   }
 
   @Override
   public boolean spawnLoadouts() {
-    return plugin.getState() == PlayerState.TOURNAMENT;
+    return plugin.getState() == ClanWarsPlayerState.TOURNAMENT;
   }
 
   @Override
   public boolean inLoadoutZoneHook() {
-    return plugin.getState() == PlayerState.TOURNAMENT ? p.inClanWarsTournamentLobby() : false;
+    return plugin.getState() == ClanWarsPlayerState.TOURNAMENT ? p.inClanWarsTournamentLobby()
+        : false;
   }
 
   @Override
   public List<Loadout.Entry> getLoadoutEntriesHook() {
-    return plugin.getState() == PlayerState.TOURNAMENT ? tournament.getMode().getLoadouts() : null;
+    return plugin.getState() == ClanWarsPlayerState.TOURNAMENT ? tournament.getMode().getLoadouts()
+        : null;
   }
 
   @Override
@@ -435,15 +438,15 @@ public class ClanWarsPC extends PController {
     } else if (widgetId == WidgetId.CUSTOM_BOND_POUCH) {
       p.getGameEncoder().sendMessage("You can't use bonds right now.");
       return true;
-    } else if (plugin.ruleSelected(Rule.MAGIC, RuleOption.DISABLED)
+    } else if (plugin.ruleSelected(ClanWarsRule.MAGIC, ClanWarsRuleOption.DISABLED)
         && (widgetId == Magic.INTERFACE_ID || widgetId == Magic.INTERFACE_SPELL_SELECT_ID)) {
       p.getGameEncoder().sendMessage("You can't use magic in this war.");
       return true;
-    } else if (plugin.ruleSelected(Rule.MAGIC, RuleOption.BINDING_ONLY)
+    } else if (plugin.ruleSelected(ClanWarsRule.MAGIC, ClanWarsRuleOption.BINDING_ONLY)
         && (widgetId == Magic.INTERFACE_ID || widgetId == Magic.INTERFACE_SPELL_SELECT_ID)) {
       p.getGameEncoder().sendMessage("You can't use this spellbook in this war.");
       return true;
-    } else if (plugin.ruleSelected(Rule.MAGIC, RuleOption.STANDARD_SPELLS)
+    } else if (plugin.ruleSelected(ClanWarsRule.MAGIC, ClanWarsRuleOption.STANDARD_SPELLS)
         && (widgetId == Magic.INTERFACE_ID || widgetId == Magic.INTERFACE_SPELL_SELECT_ID)
         && p.getMagic().getSpellbook() != Magic.STANDARD_MAGIC) {
       p.getGameEncoder().sendMessage("You can't use this spellbook in this war.");
@@ -482,41 +485,11 @@ public class ClanWarsPC extends PController {
     }
     switch (mapObject.getId()) {
       case 32446:
-        if (plugin.getState() != PlayerState.TOURNAMENT
+        if (plugin.getState() != ClanWarsPlayerState.TOURNAMENT
             || tournament.getMode().getLoadouts() == null) {
           break;
         }
         p.getLoadout().openSelection();
-        return true;
-      case 26741:
-      case 26743:
-      case 26745:
-      case 26747:
-        plugin.teleportViewing(2);
-        return true;
-      case 26727:
-      case 26728:
-      case 26731:
-      case 26732:
-      case 26733:
-      case 26734:
-      case 26738:
-      case 26739:
-      case 26740:
-      case 7819:
-      case 7820:
-      case 4629:
-      case 4631:
-      case 4632:
-      case 4633:
-      case 4638:
-      case 4640:
-      case 10553:
-        if (plugin.getState() == PlayerState.TOURNAMENT && p.getInCombatDelay() > 0) {
-          p.getGameEncoder().sendMessage("You can't do this while in combat.");
-          break;
-        }
-        new LeaveBattleDialogue(p, p.getPlugin(ClanWarsPlugin.class));
         return true;
     }
     return false;
@@ -537,7 +510,7 @@ public class ClanWarsPC extends PController {
   }
 
   public void checkStatus() {
-    if (plugin.getState() == PlayerState.TOURNAMENT) {
+    if (plugin.getState() == ClanWarsPlayerState.TOURNAMENT) {
       return;
     }
     if (clanChatUsername == null || !p.getMessaging().matchesClanChat(clanChatUsername)) {
@@ -550,7 +523,7 @@ public class ClanWarsPC extends PController {
     Player opponent = null;
     for (int i = 0; i < players.size(); i++) {
       Player p2 = players.get(i);
-      if (p2.getPlugin(ClanWarsPlugin.class).getState() != PlayerState.BATTLE) {
+      if (p2.getPlugin(ClanWarsPlugin.class).getState() != ClanWarsPlayerState.BATTLE) {
         continue;
       }
       if (plugin.isTop() == p2.getPlugin(ClanWarsPlugin.class).isTop()) {
@@ -561,32 +534,33 @@ public class ClanWarsPC extends PController {
       }
     }
     boolean meetsGameEnd = false;
-    if (plugin.ruleSelected(Rule.GAME_END, RuleOption.KILLS_25) && plugin.getTotalKills() >= 25) {
+    if (plugin.ruleSelected(ClanWarsRule.GAME_END, ClanWarsRuleOption.KILLS_25)
+        && plugin.getTotalKills() >= 25) {
       meetsGameEnd = true;
-    } else if (plugin.ruleSelected(Rule.GAME_END, RuleOption.KILLS_50)
+    } else if (plugin.ruleSelected(ClanWarsRule.GAME_END, ClanWarsRuleOption.KILLS_50)
         && plugin.getTotalKills() >= 50) {
       meetsGameEnd = true;
-    } else if (plugin.ruleSelected(Rule.GAME_END, RuleOption.KILLS_100)
+    } else if (plugin.ruleSelected(ClanWarsRule.GAME_END, ClanWarsRuleOption.KILLS_100)
         && plugin.getTotalKills() >= 100) {
       meetsGameEnd = true;
-    } else if (plugin.ruleSelected(Rule.GAME_END, RuleOption.KILLS_200)
+    } else if (plugin.ruleSelected(ClanWarsRule.GAME_END, ClanWarsRuleOption.KILLS_200)
         && plugin.getTotalKills() >= 200) {
       meetsGameEnd = true;
-    } else if (plugin.ruleSelected(Rule.GAME_END, RuleOption.KILLS_500)
+    } else if (plugin.ruleSelected(ClanWarsRule.GAME_END, ClanWarsRuleOption.KILLS_500)
         && plugin.getTotalKills() >= 500) {
       meetsGameEnd = true;
-    } else if (plugin.ruleSelected(Rule.GAME_END, RuleOption.KILLS_1000)
+    } else if (plugin.ruleSelected(ClanWarsRule.GAME_END, ClanWarsRuleOption.KILLS_1000)
         && plugin.getTotalKills() >= 1000) {
       meetsGameEnd = true;
-    } else if (plugin.ruleSelected(Rule.GAME_END, RuleOption.KILLS_5000)
+    } else if (plugin.ruleSelected(ClanWarsRule.GAME_END, ClanWarsRuleOption.KILLS_5000)
         && plugin.getTotalKills() >= 5000) {
       meetsGameEnd = true;
-    } else if (plugin.ruleSelected(Rule.GAME_END, RuleOption.KILLS_10000)
+    } else if (plugin.ruleSelected(ClanWarsRule.GAME_END, ClanWarsRuleOption.KILLS_10000)
         && plugin.getTotalKills() >= 10000) {
       meetsGameEnd = true;
     }
     plugin.sendBattleVarbits(myTeamCount, otherTeamCount, opponent);
-    boolean ignore5 = plugin.ruleSelected(Rule.STRAGGLERS, RuleOption.IGNORE_5);
+    boolean ignore5 = plugin.ruleSelected(ClanWarsRule.STRAGGLERS, ClanWarsRuleOption.IGNORE_5);
     if (!meetsGameEnd && (!ignore5 && otherTeamCount > 0 || ignore5 && otherTeamCount > 5)) {
       return;
     }

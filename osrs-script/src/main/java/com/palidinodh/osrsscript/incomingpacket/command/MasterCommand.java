@@ -7,7 +7,7 @@ import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
-public class MasterCommand implements CommandHandler {
+class MasterCommand implements CommandHandler {
   @Override
   public boolean canUse(Player player) {
     return Settings.isBeta() || player.getRights() == Player.RIGHTS_ADMIN

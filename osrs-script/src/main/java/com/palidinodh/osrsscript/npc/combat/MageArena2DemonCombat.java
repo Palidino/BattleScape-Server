@@ -26,7 +26,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.util.PEvent;
 import lombok.var;
 
-public class MageArena2DemonCombat extends NpcCombat {
+class MageArena2DemonCombat extends NpcCombat {
   @Inject
   private Npc npc;
 

@@ -3,7 +3,7 @@ package com.palidinodh.osrsscript.incomingpacket.command;
 import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
 
-public class SkullIconCommand implements CommandHandler {
+class SkullIconCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "id";

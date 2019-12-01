@@ -7,7 +7,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombat;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatDefinition;
 import lombok.var;
 
-public class VerzikVitur1040_8371Combat extends NpcCombat {
+class VerzikVitur1040_8371Combat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var combat = NpcCombatDefinition.builder();

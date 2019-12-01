@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.SqlUserRank;
 
-public class StarterPackCommand implements CommandHandler {
+class StarterPackCommand implements CommandHandler {
   @Override
   public boolean canUse(Player player) {
     return player.getRights() == Player.RIGHTS_ADMIN

@@ -7,7 +7,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
-public class TeleCommand implements CommandHandler {
+class TeleCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "region_id/x y (z)";

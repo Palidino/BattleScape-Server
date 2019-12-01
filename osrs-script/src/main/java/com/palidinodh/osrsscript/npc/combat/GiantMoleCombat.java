@@ -33,7 +33,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class GiantMoleCombat extends NpcCombat {
+class GiantMoleCombat extends NpcCombat {
   public static final Tile[] BURROWS =
       { new Tile(1736, 5227), new Tile(1776, 5236), new Tile(1752, 5204), new Tile(1769, 5199),
           new Tile(1778, 5207), new Tile(1740, 5187), new Tile(1745, 5170), new Tile(1774, 5173),

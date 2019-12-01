@@ -33,7 +33,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.Settings;
 import lombok.var;
 
-public class EventChaosElementalCombat extends NpcCombat {
+class EventChaosElementalCombat extends NpcCombat {
   @Inject
   private Npc npc;
   private List<Npc> fanatics = new ArrayList<>();

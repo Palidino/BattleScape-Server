@@ -6,7 +6,7 @@ import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class HookupCommand implements CommandHandler {
+class HookupCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "username amount";

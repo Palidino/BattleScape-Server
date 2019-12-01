@@ -13,7 +13,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatStats;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatType;
 import lombok.var;
 
-public class RespiratorySystemCombat extends NpcCombat {
+class RespiratorySystemCombat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var combat = NpcCombatDefinition.builder();

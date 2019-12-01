@@ -27,7 +27,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.var;
 
-public class VerzikViturCombat extends NpcCombat {
+class VerzikViturCombat extends NpcCombat {
   private static final Pillar[] PILLARS = {new Pillar(new Tile(3161, 4318),
       new Tile[] {new Tile(3160, 4318), new Tile(3159, 4317), new Tile(3160, 4317),
           new Tile(3161, 4317), new Tile(3162, 4317), new Tile(3159, 4316), new Tile(3160, 4316)}),

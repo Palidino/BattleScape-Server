@@ -415,11 +415,6 @@ public class NpcOptions {
     }
   }
 
-  // Head chef
-  public static void npc2658(Player player, int option, Npc npc) {
-    player.openShop("equipment");
-  }
-
   // Elstan
   public static void npc2663(Player player, int option, Npc npc) {
     if (option == 0) {

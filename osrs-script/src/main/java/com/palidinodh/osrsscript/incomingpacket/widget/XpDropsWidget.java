@@ -6,13 +6,10 @@ import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.osrscore.model.player.XPDrops;
+import com.palidinodh.rs.ReferenceId;
 
-public class XpDropsWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] { WidgetId.CONFIGURE_XP_DROPS };
-  }
-
+@ReferenceId(WidgetId.CONFIGURE_XP_DROPS)
+class XpDropsWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {

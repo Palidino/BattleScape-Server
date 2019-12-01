@@ -10,7 +10,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
 import com.palidinodh.rs.setting.Settings;
 
-public class NpcCombatDeathDropItems implements NpcCombatGlobalHooks {
+class NpcCombatDeathDropItems implements NpcCombatGlobalHooks {
   public void deathDropItems(Npc npc, Player player, int option, boolean isSlayerTask,
       boolean isWildernessSlayerTask, Tile dropTile, int dropRateDivider, boolean hasRowCharge) {
     boolean allowSpecialDrops =

@@ -33,7 +33,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class ArmadylGodWarsChamberCombat extends NpcCombat {
+class ArmadylGodWarsChamberCombat extends NpcCombat {
   @Inject
   private Npc npc;
 

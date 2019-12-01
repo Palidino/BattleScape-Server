@@ -7,7 +7,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Skills;
 import lombok.var;
 
-public class YoutuberCommand implements CommandHandler {
+class YoutuberCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "username";

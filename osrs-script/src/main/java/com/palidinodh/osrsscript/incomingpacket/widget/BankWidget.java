@@ -9,15 +9,12 @@ import com.palidinodh.osrscore.model.player.Bank;
 import com.palidinodh.osrscore.model.player.Magic;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrsscript.player.plugin.lootingbag.LootingBagPlugin;
+import com.palidinodh.rs.ReferenceId;
 import lombok.var;
 
-public class BankWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] { WidgetId.BANK, WidgetId.BANK_INVENTORY, WidgetId.DEPOSIT_BOX,
-        WidgetId.BANK_PIN_SETTINGS };
-  }
-
+@ReferenceId({ WidgetId.BANK, WidgetId.BANK_INVENTORY, WidgetId.DEPOSIT_BOX,
+    WidgetId.BANK_PIN_SETTINGS })
+class BankWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {

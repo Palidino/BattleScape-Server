@@ -15,7 +15,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyle;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class TreeSpiritCombat extends NpcCombat {
+class TreeSpiritCombat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var combat = NpcCombatDefinition.builder();

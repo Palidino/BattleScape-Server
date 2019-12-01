@@ -8,7 +8,7 @@ import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
-public class WarnCommand implements CommandHandler {
+class WarnCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "username";

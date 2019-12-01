@@ -7,7 +7,7 @@ import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class EmptyCommand implements CommandHandler {
+class EmptyCommand implements CommandHandler {
 
   @Override
   public String getExample() {
@@ -21,7 +21,7 @@ public class EmptyCommand implements CommandHandler {
       return;
     }
     player.openDialogue(new OptionsDialogue("Are you sure you want to empty your inventory?",
-        new DialogueOption("Yes, empty my inventory!", (childId, slot) -> {
+        new DialogueOption("Yes, empty my inventory!", (c, s) -> {
           for (var i = 0; i < player.getInventory().size(); i++) {
             var id = player.getInventory().getId(i);
             player.getInventory().deleteItem(id, Item.MAX_AMOUNT);

@@ -6,13 +6,10 @@ import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.player.Duel;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.ReferenceId;
 
-public class StakeWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] { WidgetId.CUSTOM_STAKE, WidgetId.CUSTOM_STAKE_INVENTORY };
-  }
-
+@ReferenceId({ WidgetId.CUSTOM_STAKE, WidgetId.CUSTOM_STAKE_INVENTORY })
+class StakeWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (widgetId == WidgetId.CUSTOM_STAKE) {

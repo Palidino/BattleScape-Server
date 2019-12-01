@@ -10,15 +10,12 @@ import com.palidinodh.osrscore.model.item.ItemDef;
 import com.palidinodh.osrscore.model.item.MysteryBox;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.util.RequestManager;
+import com.palidinodh.rs.ReferenceId;
 import com.palidinodh.util.PEvent;
 import lombok.var;
 
-public class MysteryBoxWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] { WidgetId.CUSTOM_MYSTERY_BOX };
-  }
-
+@ReferenceId(WidgetId.CUSTOM_MYSTERY_BOX)
+class MysteryBoxWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {

@@ -29,7 +29,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.Skills;
 import lombok.var;
 
-public class KalphiteQueenCombat extends NpcCombat {
+class KalphiteQueenCombat extends NpcCombat {
   private static final NpcCombatDropTable SUPPLIES_DROP_TABLE = NpcCombatDropTable.builder()
       .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.MONKFISH, 3)))
       .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.SHARK, 2)))

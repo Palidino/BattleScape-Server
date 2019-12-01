@@ -4,7 +4,7 @@ import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.PCombat;
 import com.palidinodh.osrscore.model.player.Player;
 
-public class SkullCommand implements CommandHandler {
+class SkullCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "- Skulls you.";

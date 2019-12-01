@@ -6,7 +6,7 @@ import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
-public class XpCommand implements CommandHandler {
+class XpCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "skill_id skill_xp username_or_userid";

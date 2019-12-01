@@ -8,7 +8,7 @@ import com.palidinodh.osrscore.model.player.IdentityKit;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class AppearanceSelectDecoder extends IncomingPacketDecoder {
+class AppearanceSelectDecoder extends IncomingPacketDecoder {
   @Override
   public boolean execute(Player player, Stream stream) {
     player.clearIdleTime();

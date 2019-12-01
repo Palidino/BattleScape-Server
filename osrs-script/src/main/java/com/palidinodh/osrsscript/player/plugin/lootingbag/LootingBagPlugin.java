@@ -5,6 +5,8 @@ import com.palidinodh.osrscore.io.ValueEnteredEvent;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.ScriptId;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
+import com.palidinodh.osrscore.model.dialogue.DialogueOption;
+import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.item.ItemDef;
 import com.palidinodh.osrscore.model.item.ItemList;
@@ -12,8 +14,6 @@ import com.palidinodh.osrscore.model.map.MapItem;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.PlayerPlugin;
 import com.palidinodh.osrsscript.incomingpacket.UseWidgetDecoder;
-import com.palidinodh.osrsscript.player.plugin.lootingbag.dialogue.StoreAskDialogue;
-import com.palidinodh.osrsscript.player.plugin.lootingbag.dialogue.StoreTypeDialogue;
 import lombok.Setter;
 import lombok.var;
 
@@ -22,7 +22,7 @@ public class LootingBagPlugin extends PlayerPlugin {
 
   private ItemList items;
   @Setter
-  private StoreType storeType = StoreType.ASK;
+  private LootingBagStoreType storeType = LootingBagStoreType.ASK;
 
   @Override
   public void login() {
@@ -39,7 +39,7 @@ public class LootingBagPlugin extends PlayerPlugin {
       }
     }
     if (map.containsKey("widgetManager.lootingBagStoreType")) {
-      storeType = StoreType.values()[(int) map.get("widgetManager.lootingBagStoreType")];
+      storeType = LootingBagStoreType.values()[(int) map.get("widgetManager.lootingBagStoreType")];
     }
   }
 
@@ -99,7 +99,16 @@ public class LootingBagPlugin extends PlayerPlugin {
                 player.getInventory().capacity() - 1, 1086);
             player.getInventory().setUpdate(true);
           } else if (option == 3) {
-            player.openDialogue(new StoreTypeDialogue(player, this));
+            player.openDialogue(new OptionsDialogue(
+                new DialogueOption("Always Ask", (c, s) -> setStoreType(LootingBagStoreType.ASK)),
+                new DialogueOption("Always Store-1",
+                    (c, s) -> setStoreType(LootingBagStoreType.STORE_1)),
+                new DialogueOption("Always Store-5",
+                    (c, s) -> setStoreType(LootingBagStoreType.STORE_5)),
+                new DialogueOption("Always Store-All",
+                    (c, s) -> setStoreType(LootingBagStoreType.STORE_ALL)),
+                new DialogueOption("Always Store-X",
+                    (c, s) -> setStoreType(LootingBagStoreType.STORE_X))));
           }
           return true;
       }
@@ -110,13 +119,13 @@ public class LootingBagPlugin extends PlayerPlugin {
       switch (childId) {
         case 5:
           if (option == 0) {
-            storeItemFromInventory(slot, StoreType.STORE_1);
+            storeItemFromInventory(slot, LootingBagStoreType.STORE_1);
           } else if (option == 1) {
-            storeItemFromInventory(slot, StoreType.STORE_5);
+            storeItemFromInventory(slot, LootingBagStoreType.STORE_5);
           } else if (option == 2) {
-            storeItemFromInventory(slot, StoreType.STORE_ALL);
+            storeItemFromInventory(slot, LootingBagStoreType.STORE_ALL);
           } else if (option == 3) {
-            storeItemFromInventory(slot, StoreType.STORE_X);
+            storeItemFromInventory(slot, LootingBagStoreType.STORE_X);
           }
           return true;
       }
@@ -130,18 +139,25 @@ public class LootingBagPlugin extends PlayerPlugin {
     if (useWidgetId == WidgetId.INVENTORY && onWidgetId == WidgetId.INVENTORY) {
       if (UseWidgetDecoder.hasMatch(useItemId, onItemId, ItemId.LOOTING_BAG, -1)) {
         var itemSlot = useItemId != ItemId.LOOTING_BAG ? useSlot : onSlot;
-        if (storeType == StoreType.ASK) {
-          player.openDialogue(new StoreAskDialogue(player, this));
-          player.putAttribute("looting_bag_item_slot", itemSlot);
+        if (storeType == LootingBagStoreType.ASK) {
+          player.openDialogue(new OptionsDialogue(
+              new DialogueOption("Store-1",
+                  (c, s) -> storeItemFromInventory(itemSlot, LootingBagStoreType.STORE_1)),
+              new DialogueOption("Store-5",
+                  (c, s) -> storeItemFromInventory(itemSlot, LootingBagStoreType.STORE_5)),
+              new DialogueOption("Store-All",
+                  (c, s) -> storeItemFromInventory(itemSlot, LootingBagStoreType.STORE_ALL)),
+              new DialogueOption("Store-X",
+                  (c, s) -> storeItemFromInventory(itemSlot, LootingBagStoreType.STORE_X))));
           return true;
-        } else if (storeType == StoreType.STORE_1) {
-          storeItemFromInventory(itemSlot, StoreType.STORE_1);
-        } else if (storeType == StoreType.STORE_5) {
-          storeItemFromInventory(itemSlot, StoreType.STORE_5);
-        } else if (storeType == StoreType.STORE_ALL) {
-          storeItemFromInventory(itemSlot, StoreType.STORE_ALL);
-        } else if (storeType == StoreType.STORE_X) {
-          storeItemFromInventory(itemSlot, StoreType.STORE_X);
+        } else if (storeType == LootingBagStoreType.STORE_1) {
+          storeItemFromInventory(itemSlot, LootingBagStoreType.STORE_1);
+        } else if (storeType == LootingBagStoreType.STORE_5) {
+          storeItemFromInventory(itemSlot, LootingBagStoreType.STORE_5);
+        } else if (storeType == LootingBagStoreType.STORE_ALL) {
+          storeItemFromInventory(itemSlot, LootingBagStoreType.STORE_ALL);
+        } else if (storeType == LootingBagStoreType.STORE_X) {
+          storeItemFromInventory(itemSlot, LootingBagStoreType.STORE_X);
         }
         return true;
       }
@@ -149,7 +165,17 @@ public class LootingBagPlugin extends PlayerPlugin {
     return false;
   }
 
-  public ItemList getItems() {
+  public void bankItems() {
+    while (!getItems().isEmpty()) {
+      var slot = getItems().getFirstUsedSlot();
+      if (!player.getBank().deposit(getItems(), getItems().getId(slot), slot,
+          getItems().getAmount(slot))) {
+        break;
+      }
+    }
+  }
+
+  private ItemList getItems() {
     if (items == null) {
       items = (ItemList) new ItemList(28).setName("looting bag").setWidget(-1, 93);
     }
@@ -157,14 +183,14 @@ public class LootingBagPlugin extends PlayerPlugin {
     return items;
   }
 
-  public void storeItemFromInventory(int itemSlot, StoreType storeType) {
+  private void storeItemFromInventory(int itemSlot, LootingBagStoreType storeType) {
     var itemId = player.getInventory().getId(itemSlot);
     var amount = 0;
-    if (storeType == StoreType.STORE_1) {
+    if (storeType == LootingBagStoreType.STORE_1) {
       amount = 1;
-    } else if (storeType == StoreType.STORE_5) {
+    } else if (storeType == LootingBagStoreType.STORE_5) {
       amount = 5;
-    } else if (storeType == StoreType.STORE_ALL) {
+    } else if (storeType == LootingBagStoreType.STORE_ALL) {
       amount = ItemDef.getStackOrNote(itemId) ? player.getInventory().getAmount(itemSlot)
           : Item.MAX_AMOUNT;
     }
@@ -184,14 +210,14 @@ public class LootingBagPlugin extends PlayerPlugin {
         getItems().addItem(itemId, value);
       }
     };
-    if (storeType == StoreType.ASK || storeType == StoreType.STORE_X) {
+    if (storeType == LootingBagStoreType.ASK || storeType == LootingBagStoreType.STORE_X) {
       player.getGameEncoder().sendEnterAmount(valueEntered);
     } else {
       valueEntered.execute(amount);
     }
   }
 
-  public boolean canStoreItem(int itemId, boolean sendMessage) {
+  private boolean canStoreItem(int itemId, boolean sendMessage) {
     if (!player.getController().inWilderness() && !player.getController().inPvPWorld()) {
       if (sendMessage) {
         player.getGameEncoder()
@@ -215,15 +241,5 @@ public class LootingBagPlugin extends PlayerPlugin {
       return false;
     }
     return true;
-  }
-
-  public void bankItems() {
-    while (!getItems().isEmpty()) {
-      var slot = getItems().getFirstUsedSlot();
-      if (!player.getBank().deposit(getItems(), getItems().getId(slot), slot,
-          getItems().getAmount(slot))) {
-        break;
-      }
-    }
   }
 }

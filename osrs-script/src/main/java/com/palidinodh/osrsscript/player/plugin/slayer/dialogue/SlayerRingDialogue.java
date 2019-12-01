@@ -10,7 +10,7 @@ import lombok.var;
 
 public class SlayerRingDialogue extends OptionsDialogue {
   public SlayerRingDialogue(Player player, SlayerPlugin plugin) {
-    addOption("Option", (childId, slot) -> {
+    addOption("Option", (c, s) -> {
       if (plugin.getTask().isComplete()) {
         player.getGameEncoder().sendMessage("You need a task to do this.");
         return;
@@ -20,7 +20,7 @@ public class SlayerRingDialogue extends OptionsDialogue {
         player.getGameEncoder().sendMessage("There are no teleports associated with this task.");
         return;
       }
-      if (slot >= plugin.getTask().getSlayerTask().getTeleports().size()) {
+      if (s >= plugin.getTask().getSlayerTask().getTeleports().size()) {
         return;
       }
       if (!player.getController().canTeleport(30, true)) {
@@ -55,7 +55,7 @@ public class SlayerRingDialogue extends OptionsDialogue {
         }
       }
       player.getMagic()
-          .standardTeleport(plugin.getTask().getSlayerTask().getTeleports().get(slot).getTile());
+          .standardTeleport(plugin.getTask().getSlayerTask().getTeleports().get(s).getTile());
       player.getController().stopWithTeleport();
       player.clearHits();
     });

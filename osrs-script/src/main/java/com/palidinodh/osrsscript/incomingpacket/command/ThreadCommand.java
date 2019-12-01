@@ -4,7 +4,7 @@ import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.Settings;
 
-public class ThreadCommand implements CommandHandler {
+class ThreadCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "- Open a thread by id.";

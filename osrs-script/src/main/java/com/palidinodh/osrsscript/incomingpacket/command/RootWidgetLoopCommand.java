@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.util.PEvent;
 import lombok.var;
 
-public class RootWidgetLoopCommand implements CommandHandler {
+class RootWidgetLoopCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "widget_id";

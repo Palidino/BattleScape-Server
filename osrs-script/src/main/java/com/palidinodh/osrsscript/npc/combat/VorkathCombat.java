@@ -41,7 +41,7 @@ import com.palidinodh.random.PRandom;
 import com.palidinodh.util.PEvent;
 import lombok.var;
 
-public class VorkathCombat extends NpcCombat {
+class VorkathCombat extends NpcCombat {
   private static final NpcCombatStyle POISON_ATTACK = NpcCombatStyle.builder()
       .type(
           NpcCombatStyleType.builder().hitType(HitType.MAGIC).subHitType(HitType.TYPELESS).build())

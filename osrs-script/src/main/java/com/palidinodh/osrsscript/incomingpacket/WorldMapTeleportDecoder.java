@@ -6,7 +6,7 @@ import com.palidinodh.osrscore.io.incomingpacket.IncomingPacketDecoder;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class WorldMapTeleportDecoder extends IncomingPacketDecoder {
+class WorldMapTeleportDecoder extends IncomingPacketDecoder {
   @Override
   public boolean execute(Player player, Stream stream) {
     var tileHash = getInt(InStreamKey.TILE_HASH);

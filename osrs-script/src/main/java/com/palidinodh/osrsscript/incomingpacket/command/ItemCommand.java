@@ -6,7 +6,7 @@ import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class ItemCommand implements CommandHandler {
+class ItemCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "id_or_name (quantity)";

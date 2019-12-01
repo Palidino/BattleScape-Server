@@ -25,7 +25,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Skills;
 import lombok.var;
 
-public class SkeletalMystic7605Combat extends NpcCombat {
+class SkeletalMystic7605Combat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var drop = NpcCombatDrop.builder();

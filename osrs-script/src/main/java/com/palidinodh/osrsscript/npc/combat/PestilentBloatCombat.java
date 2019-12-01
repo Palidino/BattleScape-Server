@@ -24,7 +24,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatStats;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class PestilentBloatCombat extends NpcCombat {
+class PestilentBloatCombat extends NpcCombat {
   private static final Tile[] CORNERS =
       { new Tile(3299, 4451), new Tile(3299, 4440), new Tile(3288, 4440), new Tile(3288, 4451) };
 

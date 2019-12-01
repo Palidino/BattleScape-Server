@@ -27,7 +27,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class PestControlCombat extends NpcCombat {
+class PestControlCombat extends NpcCombat {
   private static final List<Integer> KNIGHTS = Arrays.asList(NpcId.VOID_KNIGHT_2950,
       NpcId.VOID_KNIGHT_2951, NpcId.VOID_KNIGHT_2952, NpcId.VOID_KNIGHT_2953);
   private static final List<Integer> SHIFTERS = Arrays.asList(NpcId.SHIFTER_38, NpcId.SHIFTER_57,

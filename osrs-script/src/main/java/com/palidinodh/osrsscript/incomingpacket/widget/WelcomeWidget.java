@@ -5,14 +5,11 @@ import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.dialogue.MessageDialogue;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
+import com.palidinodh.rs.ReferenceId;
 import com.palidinodh.rs.setting.Settings;
 
-public class WelcomeWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] { WidgetId.WELCOME };
-  }
-
+@ReferenceId(WidgetId.WELCOME)
+class WelcomeWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     switch (childId) {

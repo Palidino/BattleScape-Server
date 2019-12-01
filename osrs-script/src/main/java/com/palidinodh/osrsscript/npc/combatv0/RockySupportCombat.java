@@ -9,7 +9,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatFocus;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatHitpoints;
 import lombok.var;
 
-public class RockySupportCombat extends NpcCombat {
+class RockySupportCombat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var combat = NpcCombatDefinition.builder();

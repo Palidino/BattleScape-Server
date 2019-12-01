@@ -33,7 +33,7 @@ import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
-public class KrakenCombat extends NpcCombat {
+class KrakenCombat extends NpcCombat {
   private static final Tile[] TENTACLE_TILES = { new Tile(2275, 10034), new Tile(2284, 10034),
       new Tile(2275, 10038), new Tile(2284, 10038) };
 

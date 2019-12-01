@@ -19,7 +19,7 @@ import com.palidinodh.osrscore.model.player.AchievementDiary;
 import com.palidinodh.osrscore.model.player.AchievementDiaryTask;
 import com.palidinodh.osrscore.model.player.Player;
 
-public class WildernessDiary extends AchievementDiary {
+class WildernessDiary extends AchievementDiary {
   public WildernessDiary() {
     super(AchievementDiary.Name.WILDERNESS);
   }

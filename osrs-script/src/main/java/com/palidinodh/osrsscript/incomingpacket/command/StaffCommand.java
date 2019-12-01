@@ -8,7 +8,7 @@ import com.palidinodh.rs.setting.SqlUserRank;
 import com.palidinodh.util.PString;
 import lombok.var;
 
-public class StaffCommand implements CommandHandler {
+class StaffCommand implements CommandHandler {
 
   @Override
   public String getExample() {

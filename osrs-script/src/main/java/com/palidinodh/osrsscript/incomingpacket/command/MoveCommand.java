@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
-public class MoveCommand implements CommandHandler {
+class MoveCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "username";

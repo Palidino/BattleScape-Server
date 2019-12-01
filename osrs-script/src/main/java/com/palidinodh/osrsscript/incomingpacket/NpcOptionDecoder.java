@@ -20,7 +20,7 @@ import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
-public class NpcOptionDecoder extends IncomingPacketDecoder {
+class NpcOptionDecoder extends IncomingPacketDecoder {
   private static Map<Integer, Method> actionMethods = new HashMap<>();
 
   @Override

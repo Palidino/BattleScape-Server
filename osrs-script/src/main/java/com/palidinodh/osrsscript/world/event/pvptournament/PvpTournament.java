@@ -17,7 +17,7 @@ import com.palidinodh.osrscore.util.RequestManager;
 import com.palidinodh.osrscore.world.WorldEventHooks;
 import com.palidinodh.osrsscript.player.plugin.clanwars.ClanWarsPC;
 import com.palidinodh.osrsscript.player.plugin.clanwars.ClanWarsPlugin;
-import com.palidinodh.osrsscript.player.plugin.clanwars.state.PlayerState;
+import com.palidinodh.osrsscript.player.plugin.clanwars.ClanWarsPlayerState;
 import com.palidinodh.osrsscript.world.event.pvptournament.dialogue.AdminCofferDialogue;
 import com.palidinodh.osrsscript.world.event.pvptournament.dialogue.CofferDialogue;
 import com.palidinodh.osrsscript.world.event.pvptournament.dialogue.DonateItemDialogue;
@@ -145,7 +145,7 @@ public class PvpTournament extends PEvent implements WorldEventHooks {
       return;
     }
     var plugin = player.getPlugin(ClanWarsPlugin.class);
-    plugin.setState(PlayerState.TOURNAMENT);
+    plugin.setState(ClanWarsPlayerState.TOURNAMENT);
     plugin.setRules(mode.getRules());
     player.setController(new ClanWarsPC());
     player.restore();

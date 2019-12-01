@@ -6,7 +6,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.DiscordChannel;
 import com.palidinodh.rs.setting.SqlUserRank;
 
-public class ScCommand implements CommandHandler {
+class ScCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "message to staff only";

@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.Settings;
 
-public class VengCommand implements CommandHandler {
+class VengCommand implements CommandHandler {
   @Override
   public boolean canUse(Player player) {
     return Settings.getInstance().isSpawn() && player.inEdgeville()

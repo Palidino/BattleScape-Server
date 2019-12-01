@@ -20,7 +20,7 @@ import com.palidinodh.util.PLogger;
 import lombok.var;
 
 public class UseWidgetDecoder {
-  public static class WidgetOnWidgetDecoder extends IncomingPacketDecoder {
+  static class WidgetOnWidgetDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var useWidgetHash = getInt(InStreamKey.USE_WIDGET_HASH);
@@ -128,7 +128,7 @@ public class UseWidgetDecoder {
     }
   }
 
-  public static class WidgetOnNpcDecoder extends IncomingPacketDecoder {
+  static class WidgetOnNpcDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var widgetHash = getInt(InStreamKey.WIDGET_HASH);
@@ -206,7 +206,7 @@ public class UseWidgetDecoder {
     }
   }
 
-  public static class WidgetOnPlayerDecoder extends IncomingPacketDecoder {
+  static class WidgetOnPlayerDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var widgetHash = getInt(InStreamKey.WIDGET_HASH);
@@ -284,7 +284,7 @@ public class UseWidgetDecoder {
     }
   }
 
-  public static class WidgetOnMapObjectDecoder extends IncomingPacketDecoder {
+  static class WidgetOnMapObjectDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var widgetHash = getInt(InStreamKey.WIDGET_HASH);

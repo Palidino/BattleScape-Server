@@ -8,15 +8,12 @@ import com.palidinodh.osrscore.io.cache.WidgetChild;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.ReferenceId;
 import com.palidinodh.rs.setting.DiscordChannel;
 import com.palidinodh.util.PTime;
 
-public class LogoutWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] {WidgetId.LOGOUT, WidgetId.WORLD_SELECT};
-  }
-
+@ReferenceId({ WidgetId.LOGOUT, WidgetId.WORLD_SELECT })
+class LogoutWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {
@@ -54,7 +51,7 @@ public class LogoutWidget implements WidgetHandler {
                     player.setVisible(false);
                   }
                 });
-          } else if (PTime.milliToHour(player.getCreationTime()) < 4) {
+          } else if (PTime.betweenMilliToHour(player.getCreationTime()) < 4) {
             player.openDialogue(new FeedbackDialogue(player));
           } else {
             player.getGameEncoder().sendLogout();
@@ -109,7 +106,7 @@ public class LogoutWidget implements WidgetHandler {
 
   public static class FeedbackDialogue extends OptionsDialogue {
     public FeedbackDialogue(Player player) {
-      addOption("Leave feedback and logout.", (childId, slot) -> {
+      addOption("Leave feedback and logout.", (c, s) -> {
         player.getGameEncoder().sendEnterString("Feedback:", new ValueEnteredEvent.StringEvent() {
           @Override
           public void execute(String value) {
@@ -126,7 +123,7 @@ public class LogoutWidget implements WidgetHandler {
           }
         });
       });
-      addOption("Logout.", (childId, slot) -> {
+      addOption("Logout.", (c, s) -> {
         player.getGameEncoder().sendLogout();
         player.setVisible(false);
       });

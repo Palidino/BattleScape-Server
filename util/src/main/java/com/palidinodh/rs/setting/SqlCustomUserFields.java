@@ -7,4 +7,5 @@ public class SqlCustomUserFields {
   private String pendingBonds;
   private String pendingVotePoints;
   private String voteTimeRunelocus;
+  private String voteTimeTopg;
 }

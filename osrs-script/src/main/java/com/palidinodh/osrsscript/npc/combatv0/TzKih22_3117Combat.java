@@ -16,7 +16,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Skills;
 import lombok.var;
 
-public class TzKih22_3117Combat extends NpcCombat {
+class TzKih22_3117Combat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var combat = NpcCombatDefinition.builder();

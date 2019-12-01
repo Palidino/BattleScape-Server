@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class PTime {
   public static final TimeZone DEFAULT_TIMEZONE = TimeZone.getTimeZone("America/New_York");
   public static final String[] CALENDAR_DAYS =
-      {"", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+      { "", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
   public static final SimpleDateFormat FULL_DATE = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
   public static final SimpleDateFormat FULL_DATE_FILENAME =
       new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
@@ -52,6 +52,34 @@ public class PTime {
     return System.nanoTime();
   }
 
+  public static long betweenNanoToMilli(long start) {
+    return TimeUnit.NANOSECONDS.toMillis(nanoTime() - start);
+  }
+
+  public static long betweenNanoToSec(long start) {
+    return TimeUnit.NANOSECONDS.toSeconds(nanoTime() - start);
+  }
+
+  public static long betweenNanoToMin(long start) {
+    return TimeUnit.NANOSECONDS.toMinutes(nanoTime() - start);
+  }
+
+  public static long betweenMilliToSec(long start) {
+    return TimeUnit.MILLISECONDS.toSeconds(currentTimeMillis() - start);
+  }
+
+  public static long betweenMilliToMin(long start) {
+    return TimeUnit.MILLISECONDS.toMinutes(currentTimeMillis() - start);
+  }
+
+  public static long betweenMilliToHour(long start) {
+    return TimeUnit.MILLISECONDS.toHours(currentTimeMillis() - start);
+  }
+
+  public static long betweenMilliToDay(long start) {
+    return TimeUnit.MILLISECONDS.toDays(currentTimeMillis() - start);
+  }
+
   public static long nanoToMilli(long start, long end) {
     return TimeUnit.NANOSECONDS.toMillis(end - start);
   }
@@ -64,36 +92,28 @@ public class PTime {
     return TimeUnit.NANOSECONDS.toMinutes(end - start);
   }
 
-  public static long nanoToMilli(long start) {
-    return TimeUnit.NANOSECONDS.toMillis(nanoTime() - start);
+  public static long secToMilli(long seconds) {
+    return TimeUnit.SECONDS.toMillis(seconds);
   }
 
-  public static long nanoToSec(long start) {
-    return TimeUnit.NANOSECONDS.toSeconds(nanoTime() - start);
+  public static long secToMin(long seconds) {
+    return TimeUnit.SECONDS.toMinutes(seconds);
   }
 
-  public static long nanoToMin(long start) {
-    return TimeUnit.NANOSECONDS.toMinutes(nanoTime() - start);
+  public static long secToHour(long seconds) {
+    return TimeUnit.SECONDS.toHours(seconds);
   }
 
-  public static long milliToSec(long start) {
-    return TimeUnit.MILLISECONDS.toSeconds(currentTimeMillis() - start);
-  }
-
-  public static long milliToMin(long start) {
-    return TimeUnit.MILLISECONDS.toMinutes(currentTimeMillis() - start);
-  }
-
-  public static long milliToHour(long start) {
-    return TimeUnit.MILLISECONDS.toHours(currentTimeMillis() - start);
-  }
-
-  public static long milliToDay(long start) {
-    return TimeUnit.MILLISECONDS.toDays(currentTimeMillis() - start);
+  public static long betweenSecToHour(long start) {
+    return TimeUnit.SECONDS.toHours(currentTimeMillis() / 1000 - start);
   }
 
   public static long secToDay(long seconds) {
     return TimeUnit.SECONDS.toDays(seconds);
+  }
+
+  public static long minToMilli(long minutes) {
+    return TimeUnit.MINUTES.toMillis(minutes);
   }
 
   public static long minToSec(long minutes) {
@@ -104,12 +124,36 @@ public class PTime {
     return TimeUnit.MINUTES.toHours(minutes);
   }
 
+  public static long minToDay(long minutes) {
+    return TimeUnit.MINUTES.toDays(minutes);
+  }
+
+  public static long hourToMilli(long hours) {
+    return TimeUnit.HOURS.toMillis(hours);
+  }
+
   public static long hourToMin(long hours) {
     return TimeUnit.HOURS.toMinutes(hours);
   }
 
+  public static long hourToDay(long hours) {
+    return TimeUnit.HOURS.toDays(hours);
+  }
+
   public static long dayToMilli(long days) {
     return TimeUnit.DAYS.toMillis(days);
+  }
+
+  public static long dayToSec(long days) {
+    return TimeUnit.DAYS.toSeconds(days);
+  }
+
+  public static long dayToMin(long days) {
+    return TimeUnit.DAYS.toMinutes(days);
+  }
+
+  public static long dayToHour(long days) {
+    return TimeUnit.DAYS.toHours(days);
   }
 
   public static long tickToMilli(long ticks) {

@@ -27,7 +27,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.special.NpcCombatTargetTil
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class AdamantDragonCombat extends NpcCombat {
+class AdamantDragonCombat extends NpcCombat {
   private boolean boltEffect;
 
   @Override

@@ -22,7 +22,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class GelatinnothMotherCombat extends NpcCombat {
+class GelatinnothMotherCombat extends NpcCombat {
   @Inject
   private Npc npc;
   private int changeDelay;

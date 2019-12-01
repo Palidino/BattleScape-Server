@@ -57,8 +57,8 @@ public class PCollection {
     if (entries.length % 2 != 0) {
       throw new IndexOutOfBoundsException("toMap should be an even size!");
     }
-    Class<K> keyClass = (Class<K>) entries[0].getClass();
-    Class<V> valueClass = (Class<V>) entries[1].getClass();
+    Class<?> keyClass = entries[0].getClass();
+    Class<?> valueClass = entries[1].getClass();
     Map<K, V> map = new HashMap<>(entries.length);
     for (int i = 0; i < entries.length; i += 2) {
       if (!keyClass.isInstance(entries[i]) || !valueClass.isInstance(entries[i + 1])) {

@@ -5,16 +5,13 @@ import com.palidinodh.osrscore.io.incomingpacket.WidgetHandler;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.util.RequestManager;
+import com.palidinodh.rs.ReferenceId;
 import com.palidinodh.rs.adaptive.Clan;
 import com.palidinodh.rs.adaptive.RsClanRank;
 import lombok.var;
 
-public class ClanChatWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] { WidgetId.CLAN_CHAT, WidgetId.CLAN_CHAT_OPTIONS };
-  }
-
+@ReferenceId({ WidgetId.CLAN_CHAT, WidgetId.CLAN_CHAT_OPTIONS })
+class ClanChatWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {

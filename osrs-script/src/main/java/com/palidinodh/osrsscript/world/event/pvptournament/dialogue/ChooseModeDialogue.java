@@ -8,8 +8,8 @@ import lombok.var;
 public class ChooseModeDialogue extends LargeOptionsDialogue {
   public ChooseModeDialogue(Player player) {
     var tournament = player.getWorld().getWorldEvent(PvpTournament.class);
-    addOption("Option", (childId, slot) -> {
-      tournament.selectCustomMode(player, slot);
+    addOption("Option", (c, s) -> {
+      tournament.selectCustomMode(player, s);
     });
     open(player);
   }

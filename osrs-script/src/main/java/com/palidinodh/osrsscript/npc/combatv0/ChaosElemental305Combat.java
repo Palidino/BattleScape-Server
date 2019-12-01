@@ -7,7 +7,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombat;
 import com.palidinodh.osrscore.model.npc.combat.NpcCombatDefinition;
 import lombok.var;
 
-public class ChaosElemental305Combat extends NpcCombat {
+class ChaosElemental305Combat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var combat = NpcCombatDefinition.builder();

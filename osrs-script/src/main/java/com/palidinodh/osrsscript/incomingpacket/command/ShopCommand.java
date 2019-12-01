@@ -3,7 +3,7 @@ package com.palidinodh.osrsscript.incomingpacket.command;
 import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
 
-public class ShopCommand implements CommandHandler {
+class ShopCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "name";

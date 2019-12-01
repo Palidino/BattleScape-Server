@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.model.dialogue.DialogueOption;
 import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.player.Player;
 
-public class GravesCommand implements CommandHandler {
+class GravesCommand implements CommandHandler {
 
   @Override
   public boolean canUse(Player player) {
@@ -19,7 +19,7 @@ public class GravesCommand implements CommandHandler {
     }
     player.openDialogue(new OptionsDialogue("Are you sure you want to teleport to the wilderness?",
         new DialogueOption("Are you sure you want to teleport to the wilderness?",
-            (childId, slot) -> {
+            (c, s) -> {
               player.getMagic().standardTeleport(3150, 3670, 0);
               player.getGameEncoder().sendMessage("You teleport to the Graveyard..");
               player.getController().stopWithTeleport();

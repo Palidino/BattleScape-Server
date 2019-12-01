@@ -11,8 +11,8 @@ import com.palidinodh.rs.adaptive.Clan;
 import com.palidinodh.rs.adaptive.RsClanRank;
 import lombok.var;
 
-public class ChatDecoder {
-  public static class PublicChatDecoder extends IncomingPacketDecoder {
+class ChatDecoder {
+  static class PublicChatDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var effects = getInt(InStreamKey.EFFECTS);
@@ -29,7 +29,7 @@ public class ChatDecoder {
     }
   }
 
-  public static class PublicPrivateTradeDecoder extends IncomingPacketDecoder {
+  static class PublicPrivateTradeDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var publicChat = getInt(InStreamKey.PUBLIC);
@@ -43,7 +43,7 @@ public class ChatDecoder {
     }
   }
 
-  public static class AddFriendDecoder extends IncomingPacketDecoder {
+  static class AddFriendDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var username = getString(InStreamKey.STRING_INPUT);
@@ -53,7 +53,7 @@ public class ChatDecoder {
     }
   }
 
-  public static class RemoveFriendDecoder extends IncomingPacketDecoder {
+  static class RemoveFriendDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var username = getString(InStreamKey.STRING_INPUT);
@@ -63,7 +63,7 @@ public class ChatDecoder {
     }
   }
 
-  public static class MessageFriendDecoder extends IncomingPacketDecoder {
+  static class MessageFriendDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var username = stream.readString();
@@ -77,7 +77,7 @@ public class ChatDecoder {
     }
   }
 
-  public static class AddIgnoreDecoder extends IncomingPacketDecoder {
+  static class AddIgnoreDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var username = getString(InStreamKey.STRING_INPUT);
@@ -87,7 +87,7 @@ public class ChatDecoder {
     }
   }
 
-  public static class RemoveIgnoreDecoder extends IncomingPacketDecoder {
+  static class RemoveIgnoreDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var username = getString(InStreamKey.STRING_INPUT);
@@ -97,7 +97,7 @@ public class ChatDecoder {
     }
   }
 
-  public static class JoinClanDecoder extends IncomingPacketDecoder {
+  static class JoinClanDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var username = getString(InStreamKey.STRING_INPUT);
@@ -111,7 +111,7 @@ public class ChatDecoder {
     }
   }
 
-  public static class ClanRankDecoder extends IncomingPacketDecoder {
+  static class ClanRankDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var username = getString(InStreamKey.STRING_INPUT);
@@ -147,7 +147,7 @@ public class ChatDecoder {
     }
   }
 
-  public static class KickClanUserDecoder extends IncomingPacketDecoder {
+  static class KickClanUserDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       var username = getString(InStreamKey.STRING_INPUT);
@@ -157,7 +157,7 @@ public class ChatDecoder {
     }
   }
 
-  public static class UsernameListDecoder extends IncomingPacketDecoder {
+  static class UsernameListDecoder extends IncomingPacketDecoder {
     @Override
     public boolean execute(Player player, Stream stream) {
       player.getWorld().getWorldEvent(PvpTournament.class).teleportViewing(player,

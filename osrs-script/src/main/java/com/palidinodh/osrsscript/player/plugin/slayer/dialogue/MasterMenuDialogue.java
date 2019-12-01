@@ -5,19 +5,15 @@ import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.slayer.SlayerMaster;
 import com.palidinodh.osrsscript.player.plugin.slayer.SlayerPlugin;
+import lombok.var;
 
 public class MasterMenuDialogue extends OptionsDialogue {
-  public MasterMenuDialogue(Player player, SlayerPlugin plugin) {
-    addOption("Get task", (childId, slot) -> {
-      player.openDialogue(new ChooseMasterDialogue(player, plugin));
-    });
-    addOption("Current task", (childId, slot) -> {
-      plugin.sendTask();
-    });
-    addOption("Get boss task", (childId, slot) -> {
-      plugin.getAssignment(SlayerMaster.BOSS_MASTER);
-    });
-    addOption("Cancel boss task", (childId, slot) -> {
+  public MasterMenuDialogue(Player player) {
+    var plugin = player.getPlugin(SlayerPlugin.class);
+    addOption("Get task", (c, s) -> player.openDialogue(new ChooseMasterDialogue(player)));
+    addOption("Current task", (c, s) -> plugin.sendTask());
+    addOption("Get boss task", (c, s) -> plugin.getAssignment(SlayerMaster.BOSS_MASTER));
+    addOption("Cancel boss task", (c, s) -> {
       if (player.getInventory().getCount(ItemId.COINS) < 500000) {
         player.getGameEncoder().sendMessage("You need 500K coins to do this.");
         return;

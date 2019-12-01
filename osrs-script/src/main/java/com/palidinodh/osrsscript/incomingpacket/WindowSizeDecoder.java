@@ -7,7 +7,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.osrscore.model.player.WidgetManager;
 import lombok.var;
 
-public class WindowSizeDecoder extends IncomingPacketDecoder {
+class WindowSizeDecoder extends IncomingPacketDecoder {
   @Override
   @SuppressWarnings("unused")
   public boolean execute(Player player, Stream stream) {

@@ -23,7 +23,7 @@ import com.palidinodh.rs.setting.Settings;
 import com.palidinodh.util.PLogger;
 import lombok.var;
 
-public class MapObjectOptionDecoder extends IncomingPacketDecoder {
+class MapObjectOptionDecoder extends IncomingPacketDecoder {
   private static Map<Integer, Method> actionMethods = new HashMap<>();
 
   @Override
@@ -48,8 +48,9 @@ public class MapObjectOptionDecoder extends IncomingPacketDecoder {
       }
     }
     var message = "[MapObjectOption(" + option + ")] mapObjectId=" + mapObjectId + "/"
-        + mapObject.getName() + "; tileX=" + tileX + "; tileY=" + tileY + "; ctrlRun=" + ctrlRun
-        + ", type=" + mapObject.getType() + ", direction=" + mapObject.getDirection();
+        + ObjectId.valueOf(mapObject.getId()) + "; tileX=" + tileX + "; tileY=" + tileY
+        + "; ctrlRun=" + ctrlRun + ", type=" + mapObject.getType() + ", direction="
+        + mapObject.getDirection();
     if (Settings.getInstance().isLocal()) {
       PLogger.println(message);
     }

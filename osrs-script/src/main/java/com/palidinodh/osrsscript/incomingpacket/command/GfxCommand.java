@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.SqlUserRank;
 import lombok.var;
 
-public class GfxCommand implements CommandHandler {
+class GfxCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "id (height)";

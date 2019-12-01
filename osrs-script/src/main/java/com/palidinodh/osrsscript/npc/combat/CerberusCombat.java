@@ -38,7 +38,7 @@ import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class CerberusCombat extends NpcCombat {
+class CerberusCombat extends NpcCombat {
   private static final NpcCombatStyle SPECIAL_ATTACK = NpcCombatStyle.builder()
       .type(NpcCombatStyleType.MELEE_SLASH).damage(NpcCombatDamage.maximum(23)).animation(4491)
       .attackSpeed(4).attackRange(10).build();

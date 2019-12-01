@@ -15,7 +15,7 @@ import com.palidinodh.osrscore.model.npc.combat.NpcCombatSpawn;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class SkotizoAltarCombat extends NpcCombat {
+class SkotizoAltarCombat extends NpcCombat {
   @Override
   public List<NpcCombatDefinition> getCombatDefinitions() {
     var combat = NpcCombatDefinition.builder();

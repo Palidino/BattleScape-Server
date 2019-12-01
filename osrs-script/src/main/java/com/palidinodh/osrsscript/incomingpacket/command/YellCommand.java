@@ -7,7 +7,7 @@ import com.palidinodh.rs.setting.SqlUserRank;
 import com.palidinodh.util.PTime;
 import lombok.var;
 
-public class YellCommand implements CommandHandler {
+class YellCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "message";

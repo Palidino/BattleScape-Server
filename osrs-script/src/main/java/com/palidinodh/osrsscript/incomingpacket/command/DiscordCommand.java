@@ -4,7 +4,7 @@ import com.palidinodh.osrscore.io.incomingpacket.CommandHandler;
 import com.palidinodh.osrscore.model.player.Player;
 import com.palidinodh.rs.setting.Settings;
 
-public class DiscordCommand implements CommandHandler {
+class DiscordCommand implements CommandHandler {
   @Override
   public String getExample() {
     return "- Connects to the official Battle-Scape discord server.";

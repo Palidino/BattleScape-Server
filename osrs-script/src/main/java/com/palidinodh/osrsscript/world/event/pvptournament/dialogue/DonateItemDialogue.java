@@ -14,9 +14,9 @@ public class DonateItemDialogue extends OptionsDialogue {
   public DonateItemDialogue(Player player, Item item) {
     this.item = item;
     var tournament = player.getWorld().getWorldEvent(PvpTournament.class);
-    DialogueAction action = (childId, slot) -> {
+    DialogueAction action = (c, s) -> {
       player.getWidgetManager().removeInteractiveWidgets();
-      if (!tournament.donateItem(player, item.getId(), slot)) {
+      if (!tournament.donateItem(player, item.getId(), s)) {
         return;
       }
       if (tournament.getMode() != null) {

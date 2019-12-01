@@ -21,7 +21,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class JalImkotCombat extends NpcCombat {
+class JalImkotCombat extends NpcCombat {
   @Inject
   private Npc npc;
 

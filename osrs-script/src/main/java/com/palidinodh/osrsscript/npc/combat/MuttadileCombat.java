@@ -29,7 +29,7 @@ import com.palidinodh.random.PRandom;
 import com.palidinodh.util.PNumber;
 import lombok.var;
 
-public class MuttadileCombat extends NpcCombat {
+class MuttadileCombat extends NpcCombat {
   private static final Tile SPAWN_TILE = new Tile(3314, 5331, 1);
   private static final Tile BABY_SPAWN_TILE = new Tile(3310, 5317, 1);
 

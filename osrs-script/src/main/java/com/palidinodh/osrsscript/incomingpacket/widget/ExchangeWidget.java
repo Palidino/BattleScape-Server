@@ -4,16 +4,13 @@ import com.palidinodh.osrscore.io.ValueEnteredEvent;
 import com.palidinodh.osrscore.io.incomingpacket.WidgetHandler;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.player.Player;
+import com.palidinodh.rs.ReferenceId;
 import com.palidinodh.rs.adaptive.GrandExchangeItem;
 import com.palidinodh.rs.adaptive.GrandExchangeUser;
 
-public class ExchangeWidget implements WidgetHandler {
-  @Override
-  public int[] getIds() {
-    return new int[] { WidgetId.GRAND_EXCHANGE, WidgetId.GRAND_EXCHANGE_INVENTORY,
-        WidgetId.GRAND_EXCHANGE_HISTORY };
-  }
-
+@ReferenceId({ WidgetId.GRAND_EXCHANGE, WidgetId.GRAND_EXCHANGE_INVENTORY,
+    WidgetId.GRAND_EXCHANGE_HISTORY })
+class ExchangeWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.isLocked()) {

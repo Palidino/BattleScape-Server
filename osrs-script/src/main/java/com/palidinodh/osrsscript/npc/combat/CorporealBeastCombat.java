@@ -36,7 +36,7 @@ import com.palidinodh.osrscore.model.player.Skills;
 import com.palidinodh.random.PRandom;
 import lombok.var;
 
-public class CorporealBeastCombat extends NpcCombat {
+class CorporealBeastCombat extends NpcCombat {
   @Inject
   private Npc npc;
   private Npc darkCore;

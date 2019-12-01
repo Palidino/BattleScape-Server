@@ -40,7 +40,7 @@ import com.palidinodh.random.PRandom;
 import com.palidinodh.util.PEvent;
 import lombok.var;
 
-public class GrotesqueGuardianCombat extends NpcCombat {
+class GrotesqueGuardianCombat extends NpcCombat {
   private static final Tile DUSK_TILE_ATTACK = new Tile(1691, 4573),
       DAWN_TILE_ATTACK = new Tile(1699, 4573);
   private static final int PHASE_1 = 0, PHASE_1_POSITION = 1, PHASE_1_SPECIAL_PREP = 2,

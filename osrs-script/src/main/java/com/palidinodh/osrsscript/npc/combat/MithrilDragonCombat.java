@@ -29,7 +29,7 @@ import com.palidinodh.osrscore.model.player.slayer.SlayerUnlock;
 import com.palidinodh.osrsscript.player.plugin.slayer.SlayerPlugin;
 import lombok.var;
 
-public class MithrilDragonCombat extends NpcCombat {
+class MithrilDragonCombat extends NpcCombat {
   @Inject
   private Npc npc;
 

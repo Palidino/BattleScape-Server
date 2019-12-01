@@ -23,7 +23,7 @@ import com.palidinodh.osrscore.model.npc.combat.style.NpcCombatStyleType;
 import com.palidinodh.osrscore.model.player.Player;
 import lombok.var;
 
-public class KolodionCombat extends NpcCombat {
+class KolodionCombat extends NpcCombat {
   @Inject
   private Npc npc;
 

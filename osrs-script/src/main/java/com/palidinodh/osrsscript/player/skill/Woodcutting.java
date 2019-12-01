@@ -21,7 +21,7 @@ import com.palidinodh.util.PNumber;
 import lombok.Getter;
 import lombok.var;
 
-public class Woodcutting extends SkillContainer {
+class Woodcutting extends SkillContainer {
   private static final WoodcuttingHatchet[] HATCHETS =
       { new WoodcuttingHatchet(ItemId.BRONZE_AXE, 1, 879),
           new WoodcuttingHatchet(ItemId.IRON_AXE, 1, 877),
