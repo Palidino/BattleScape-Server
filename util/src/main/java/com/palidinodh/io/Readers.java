@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.Constructor;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URL;
@@ -180,6 +181,22 @@ public class Readers {
       PLogger.error(e);
     }
     return filenames;
+  }
+
+  public static <T> T newInstance(Class<T> fromClass) {
+    return AccessController.doPrivileged(new PrivilegedAction<T>() {
+      @Override
+      public T run() {
+        try {
+          Constructor<T> constructor = fromClass.getDeclaredConstructor();
+          constructor.setAccessible(true);
+          return constructor.newInstance();
+        } catch (Exception e) {
+          PLogger.error(fromClass.getName(), e);
+          return null;
+        }
+      }
+    });
   }
 
   public static Class<?> getClass(String className) {

@@ -69,7 +69,7 @@ class CommandDecoder extends IncomingPacketDecoder {
     try {
       var classes = Readers.getScriptClasses(CommandHandler.class, "incomingpacket.command");
       for (var clazz : classes) {
-        var classInstance = (CommandHandler) clazz.newInstance();
+        var classInstance = Readers.newInstance(clazz);
         commands.put(clazz.getSimpleName().replace("Command", "").toLowerCase(), classInstance);
       }
     } catch (Exception e) {

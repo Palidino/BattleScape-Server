@@ -84,7 +84,7 @@ class WidgetDecoder extends IncomingPacketDecoder {
     try {
       var classes = Readers.getScriptClasses(WidgetHandler.class, "incomingpacket.widget");
       for (var clazz : classes) {
-        var handler = (WidgetHandler) clazz.newInstance();
+        var handler = Readers.newInstance(clazz);
         var ids = WidgetHandler.getIds(handler);
         if (ids == null) {
           continue;
