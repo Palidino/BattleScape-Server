@@ -207,20 +207,20 @@ class AbyssalSireCombat extends NpcCombat {
     return Arrays.asList(combat1.build(), combat2.build(), combat3.build());
   }
 
-  public static Tile[][] RESPIRATORY_SYSTEMS =
-      {{new Tile(2964, 4844), new Tile(2992, 4843), new Tile(2967, 4834), new Tile(2995, 4833)},
-          {new Tile(3089, 4844), new Tile(3117, 4843), new Tile(3092, 4834), new Tile(3120, 4833)},
-          {new Tile(2954, 4780), new Tile(2982, 4779), new Tile(2957, 4770), new Tile(2985, 4769)},
-          {new Tile(3094, 4780), new Tile(3122, 4779), new Tile(3097, 4770), new Tile(3125, 4769)}};
+  public static Tile[][] RESPIRATORY_SYSTEMS = {
+      { new Tile(2964, 4844), new Tile(2992, 4843), new Tile(2967, 4834), new Tile(2995, 4833) },
+      { new Tile(3089, 4844), new Tile(3117, 4843), new Tile(3092, 4834), new Tile(3120, 4833) },
+      { new Tile(2954, 4780), new Tile(2982, 4779), new Tile(2957, 4770), new Tile(2985, 4769) },
+      { new Tile(3094, 4780), new Tile(3122, 4779), new Tile(3097, 4770), new Tile(3125, 4769) } };
   public static Tile[][] TENTACLES = {
-      {new Tile(2967, 4844), new Tile(2984, 4844), new Tile(2970, 4835), new Tile(2982, 4835),
-          new Tile(2968, 4826), new Tile(2985, 4826)},
-      {new Tile(3092, 4844), new Tile(3109, 4844), new Tile(3095, 4835), new Tile(3107, 4835),
-          new Tile(3093, 4826), new Tile(3110, 4826)},
-      {new Tile(2957, 4780), new Tile(2974, 4780), new Tile(2960, 4771), new Tile(2972, 4771),
-          new Tile(2958, 4762), new Tile(2975, 4762)},
-      {new Tile(3097, 4780), new Tile(3114, 4780), new Tile(3100, 4771), new Tile(3112, 4771),
-          new Tile(3098, 4762), new Tile(3115, 4762)}};
+      { new Tile(2967, 4844), new Tile(2984, 4844), new Tile(2970, 4835), new Tile(2982, 4835),
+          new Tile(2968, 4826), new Tile(2985, 4826) },
+      { new Tile(3092, 4844), new Tile(3109, 4844), new Tile(3095, 4835), new Tile(3107, 4835),
+          new Tile(3093, 4826), new Tile(3110, 4826) },
+      { new Tile(2957, 4780), new Tile(2974, 4780), new Tile(2960, 4771), new Tile(2972, 4771),
+          new Tile(2958, 4762), new Tile(2975, 4762) },
+      { new Tile(3097, 4780), new Tile(3114, 4780), new Tile(3100, 4771), new Tile(3112, 4771),
+          new Tile(3098, 4762), new Tile(3115, 4762) } };
 
   @Override
   public Object script(String name, Object... args) {

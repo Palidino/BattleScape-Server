@@ -82,8 +82,8 @@ public class RoundsState implements State {
 
   public void lobbyTick() {
     for (var player : tournament.getPlayers()) {
-      var brewIds = new int[] {ItemId.SARADOMIN_BREW_1, ItemId.SARADOMIN_BREW_2,
-          ItemId.SARADOMIN_BREW_3, ItemId.SARADOMIN_BREW_4};
+      var brewIds = new int[] { ItemId.SARADOMIN_BREW_1, ItemId.SARADOMIN_BREW_2,
+          ItemId.SARADOMIN_BREW_3, ItemId.SARADOMIN_BREW_4 };
       for (var brewDeleteId : brewIds) {
         if (!player.getInventory().hasItem(brewDeleteId)) {
           continue;

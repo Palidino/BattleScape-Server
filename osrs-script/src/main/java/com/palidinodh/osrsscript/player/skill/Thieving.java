@@ -129,9 +129,9 @@ class Thieving extends SkillContainer {
         .npc(new SkillModel(NpcId.MAN_2_3082, 2)).npc(new SkillModel(NpcId.WOMAN_2_3083, 2))
         .npc(new SkillModel(NpcId.WOMAN_2_3084, 2)).npc(new SkillModel(NpcId.WOMAN_2_3085, 2))
         .npc(new SkillModel(NpcId.MAN_2_3264, 2)).npc(new SkillModel(NpcId.MAN_2_3265, 2))
-        .npc(new SkillModel(NpcId.MAN_2_3266, 2))
-        .npc(new SkillModel(NpcId.WOMAN_2_3268, 2)).create(new RandomItem(ItemId.BRONZE_SCIMITAR))
-        .pet(new SkillPet(ItemId.ROCKY, 257211)).failedHit(new Hit(1)).build());
+        .npc(new SkillModel(NpcId.MAN_2_3266, 2)).npc(new SkillModel(NpcId.WOMAN_2_3268, 2))
+        .create(new RandomItem(ItemId.BRONZE_SCIMITAR)).pet(new SkillPet(ItemId.ROCKY, 257211))
+        .failedHit(new Hit(1)).build());
     entries.add(SkillEntry.builder().level(25).experience(26).animation(881).delay(2)
         .npc(new SkillModel(NpcId.WARRIOR_WOMAN_24, 2))
         .npc(new SkillModel(NpcId.AL_KHARID_WARRIOR_9, 2))

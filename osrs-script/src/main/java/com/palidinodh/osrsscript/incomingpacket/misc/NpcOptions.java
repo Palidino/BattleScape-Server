@@ -405,9 +405,9 @@ public class NpcOptions {
       npc.setForceMessage("Veniens! Sallakar! Rinnesset!");
       npc.setAnimation(1818);
       npc.setGraphic(343);
-      Tile[] tiles = new Tile[] {new Tile(3045, 4810), new Tile(3059, 4818), new Tile(3062, 4835),
+      Tile[] tiles = new Tile[] { new Tile(3045, 4810), new Tile(3059, 4818), new Tile(3062, 4835),
           new Tile(3054, 4850), new Tile(3043, 4854), new Tile(3027, 4851), new Tile(3017, 4840),
-          new Tile(3015, 4826), new Tile(3021, 4813), new Tile(3035, 4809)};
+          new Tile(3015, 4826), new Tile(3021, 4813), new Tile(3035, 4809) };
       player.getMovement().animatedTeleport(PRandom.arrayRandom(tiles), 1816, 715, new Graphic(342),
           null, 2);
       player.getController().stopWithTeleport();
@@ -656,7 +656,7 @@ public class NpcOptions {
 
   // Wyson the gardener
   public static void npc3253(Player player, int option, Npc npc) {
-    int[] moleItemIds = new int[] {7416, 7417, 7418, 7419};
+    int[] moleItemIds = new int[] { 7416, 7417, 7418, 7419 };
     for (int itemId : moleItemIds) {
       int count = Math.min(player.getInventory().getCount(itemId),
           player.getInventory().getRemainingSlots());

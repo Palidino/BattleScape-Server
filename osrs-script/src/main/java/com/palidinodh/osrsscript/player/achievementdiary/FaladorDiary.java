@@ -189,86 +189,47 @@ class FaladorDiary extends AchievementDiary {
 
 
 enum FaladorTask {
-  CLIMB_WALL(new AchievementDiaryTask("Climb over the western Falador wall.", EASY)), SARAHS_SHOP(
-      new AchievementDiaryTask("Browse Sarah's farm shop.", EASY)), FILL_BUCKET(
-          new AchievementDiaryTask("Fill a bucket from the pump north of Falador west bank.",
-              EASY)), KILL_DUCK(
-                  new AchievementDiaryTask("Kill a duck in Falador park.", EASY)), MIND_TIARA(
-                      new AchievementDiaryTask("Make a mind tiara.", EASY)), ENTRANA(
-                          new AchievementDiaryTask("Take the boat to Entrana.",
-                              EASY)), SECURITY_BOOK(
-                                  new AchievementDiaryTask(
-                                      "Claim a security book from the Security guard upstairs at Port Sarim jail.",
-                                      EASY)), BLURITE_LIMBS(
-                                          new AchievementDiaryTask(
-                                              "Smith some Blurite Limbs on Doric's Anvil.",
-                                              EASY)), BULLSEYE_LANTERN(
-                                                  new AchievementDiaryTask(
-                                                      "Light a Bullseye lantern at the Chemist's in Rimmington.",
-                                                      MEDIUM)), CRYSTAL_CHEST(
-                                                          new AchievementDiaryTask(
-                                                              "Unlock the Crystal chest in Taverley.",
-                                                              MEDIUM)), KILL_MOGRE(
-                                                                  new AchievementDiaryTask(
-                                                                      "Kill a Mogre at Mudskipper Point.",
-                                                                      MEDIUM)), PICKPOCKET_GUARD(
-                                                                          new AchievementDiaryTask(
-                                                                              "Pickpocket a Falador guard.",
-                                                                              MEDIUM)), GUTHIX_ALTAR(
-                                                                                  new AchievementDiaryTask(
-                                                                                      "Pray at the Altar of Guthix in Taverley whilst wearing full Initiate.",
-                                                                                      MEDIUM)), MINE_GOLD(
-                                                                                          new AchievementDiaryTask(
-                                                                                              "Mine some Gold ore at the Crafting Guild.",
-                                                                                              MEDIUM)), DWARVERN_CREVICE(
-                                                                                                  new AchievementDiaryTask(
-                                                                                                      "Squeeze through the crevice in the Dwarven mines.",
-                                                                                                      MEDIUM)), BURN_WILLOW(
-                                                                                                          new AchievementDiaryTask(
-                                                                                                              "Chop and burn some Willow logs in Taverley.",
-                                                                                                              MEDIUM)), FALADOR_TELEPORT(
-                                                                                                                  new AchievementDiaryTask(
-                                                                                                                      "Teleport to Falador.",
-                                                                                                                      MEDIUM)), CRAFT_MINDS(
-                                                                                                                          new AchievementDiaryTask(
-                                                                                                                              "Craft 140 Mind runes simultaneously.",
-                                                                                                                              HARD)), KILL_GIANT_MOLE(
-                                                                                                                                  new AchievementDiaryTask(
-                                                                                                                                      "Kill the Giant Mole beneath Falador park.",
-                                                                                                                                      HARD)), KILL_SKELETAL_WYVERN(
-                                                                                                                                          new AchievementDiaryTask(
-                                                                                                                                              "Kill a Skeletal Wyvern in the Asgarnia Ice Dungeon.",
-                                                                                                                                              HARD)), KILL_BLUE_DRAGON(
-                                                                                                                                                  new AchievementDiaryTask(
-                                                                                                                                                      "Kill the Blue Dragon under the Heroes' Guild.",
-                                                                                                                                                      HARD)), SARIM_ALTAR(
-                                                                                                                                                          new AchievementDiaryTask(
-                                                                                                                                                              "Recharge your prayer in Port Sarim church while wearing full Proselyte.",
-                                                                                                                                                              HARD)), WARRIORS_GUILD(
-                                                                                                                                                                  new AchievementDiaryTask(
-                                                                                                                                                                      "Enter the Warriors' Guild.",
-                                                                                                                                                                      HARD)), DWARVEN_HELMET(
-                                                                                                                                                                          new AchievementDiaryTask(
-                                                                                                                                                                              "Equip a dwarven helmet within the dwarven mines.",
-                                                                                                                                                                              HARD)), CRAFT_AIRS(
-                                                                                                                                                                                  new AchievementDiaryTask(
-                                                                                                                                                                                      "Craft 252 Air Runes simultaneously.",
-                                                                                                                                                                                      ELITE)), WHITE_2H(
-                                                                                                                                                                                          new AchievementDiaryTask(
-                                                                                                                                                                                              "Purchase a White 2h Sword from Sir Vyvin.",
-                                                                                                                                                                                              ELITE)), MAGIC_ROOTS(
-                                                                                                                                                                                                  new AchievementDiaryTask(
-                                                                                                                                                                                                      "Find at least 3 magic roots at once when digging up your magic tree in Falador.",
-                                                                                                                                                                                                      ELITE)), CAPE_EMOTE(
-                                                                                                                                                                                                          new AchievementDiaryTask(
-                                                                                                                                                                                                              "Perform a skillcape or quest cape emote at the top of Falador Castle.",
-                                                                                                                                                                                                              ELITE)), TAVERLEY_FLOOR(
-                                                                                                                                                                                                                  new AchievementDiaryTask(
-                                                                                                                                                                                                                      "Jump over the strange floor in Taverley dungeon.",
-                                                                                                                                                                                                                      ELITE)), SARADOMIN_BREW(
-                                                                                                                                                                                                                          new AchievementDiaryTask(
-                                                                                                                                                                                                                              "Mix a Saradomin brew in Falador east bank.",
-                                                                                                                                                                                                                              ELITE));
+  CLIMB_WALL(new AchievementDiaryTask("Climb over the western Falador wall.", EASY)),
+  SARAHS_SHOP(new AchievementDiaryTask("Browse Sarah's farm shop.", EASY)),
+  FILL_BUCKET(
+      new AchievementDiaryTask("Fill a bucket from the pump north of Falador west bank.", EASY)),
+  KILL_DUCK(new AchievementDiaryTask("Kill a duck in Falador park.", EASY)),
+  MIND_TIARA(new AchievementDiaryTask("Make a mind tiara.", EASY)),
+  ENTRANA(new AchievementDiaryTask("Take the boat to Entrana.", EASY)),
+  SECURITY_BOOK(new AchievementDiaryTask(
+      "Claim a security book from the Security guard upstairs at Port Sarim jail.", EASY)),
+  BLURITE_LIMBS(new AchievementDiaryTask("Smith some Blurite Limbs on Doric's Anvil.", EASY)),
+  BULLSEYE_LANTERN(
+      new AchievementDiaryTask("Light a Bullseye lantern at the Chemist's in Rimmington.", MEDIUM)),
+  CRYSTAL_CHEST(new AchievementDiaryTask("Unlock the Crystal chest in Taverley.", MEDIUM)),
+  KILL_MOGRE(new AchievementDiaryTask("Kill a Mogre at Mudskipper Point.", MEDIUM)),
+  PICKPOCKET_GUARD(new AchievementDiaryTask("Pickpocket a Falador guard.", MEDIUM)),
+  GUTHIX_ALTAR(new AchievementDiaryTask(
+      "Pray at the Altar of Guthix in Taverley whilst wearing full Initiate.", MEDIUM)),
+  MINE_GOLD(new AchievementDiaryTask("Mine some Gold ore at the Crafting Guild.", MEDIUM)),
+  DWARVERN_CREVICE(
+      new AchievementDiaryTask("Squeeze through the crevice in the Dwarven mines.", MEDIUM)),
+  BURN_WILLOW(new AchievementDiaryTask("Chop and burn some Willow logs in Taverley.", MEDIUM)),
+  FALADOR_TELEPORT(new AchievementDiaryTask("Teleport to Falador.", MEDIUM)),
+  CRAFT_MINDS(new AchievementDiaryTask("Craft 140 Mind runes simultaneously.", HARD)),
+  KILL_GIANT_MOLE(new AchievementDiaryTask("Kill the Giant Mole beneath Falador park.", HARD)),
+  KILL_SKELETAL_WYVERN(
+      new AchievementDiaryTask("Kill a Skeletal Wyvern in the Asgarnia Ice Dungeon.", HARD)),
+  KILL_BLUE_DRAGON(new AchievementDiaryTask("Kill the Blue Dragon under the Heroes' Guild.", HARD)),
+  SARIM_ALTAR(new AchievementDiaryTask(
+      "Recharge your prayer in Port Sarim church while wearing full Proselyte.", HARD)),
+  WARRIORS_GUILD(new AchievementDiaryTask("Enter the Warriors' Guild.", HARD)),
+  DWARVEN_HELMET(
+      new AchievementDiaryTask("Equip a dwarven helmet within the dwarven mines.", HARD)),
+  CRAFT_AIRS(new AchievementDiaryTask("Craft 252 Air Runes simultaneously.", ELITE)),
+  WHITE_2H(new AchievementDiaryTask("Purchase a White 2h Sword from Sir Vyvin.", ELITE)),
+  MAGIC_ROOTS(new AchievementDiaryTask(
+      "Find at least 3 magic roots at once when digging up your magic tree in Falador.", ELITE)),
+  CAPE_EMOTE(new AchievementDiaryTask(
+      "Perform a skillcape or quest cape emote at the top of Falador Castle.", ELITE)),
+  TAVERLEY_FLOOR(
+      new AchievementDiaryTask("Jump over the strange floor in Taverley dungeon.", ELITE)),
+  SARADOMIN_BREW(new AchievementDiaryTask("Mix a Saradomin brew in Falador east bank.", ELITE));
 
   private AchievementDiaryTask task;
 

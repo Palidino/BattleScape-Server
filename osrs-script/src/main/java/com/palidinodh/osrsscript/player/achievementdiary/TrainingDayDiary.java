@@ -161,67 +161,31 @@ class TrainingDayDiary extends AchievementDiary {
 
 
 enum TrainingDayTask {
-  TALK_CLAN_CHAT(new AchievementDiaryTask("Talk in a Clan Chat.", EASY)), BUY_SHOP_ITEM(
-      new AchievementDiaryTask("Buy an item from a shop.", EASY)), GET_SLAYER_TASK(
-          new AchievementDiaryTask("Get a Slayer task.", EASY)), VIEW_GRAND_EXCHANGE(
-              new AchievementDiaryTask("View the Grand Exchange.", EASY)), VISIT_CRABS(
-                  new AchievementDiaryTask("Visit rock crabs or sand crabs.",
-                      EASY)), VIEW_BOND_POUCH(
-                          new AchievementDiaryTask("View your bond pouch.",
-                              EASY)), SPEND_VOTE_TICKET(
-                                  new AchievementDiaryTask("Spend a vote ticket.",
-                                      EASY)), COMPLETE_SLAYER_TASK(
-                                          new AchievementDiaryTask("Complete a Slayer task.",
-                                              EASY)), CHOP_WILLOW(
-                                                  new AchievementDiaryTask("Chop a willow tree.",
-                                                      EASY)), FISH_SALMON(
-                                                          new AchievementDiaryTask("Fish a salmon.",
-                                                              EASY)), STEAL_FROM_STALL(
-                                                                  new AchievementDiaryTask(
-                                                                      "Steal from a stall.",
-                                                                      EASY)), TALK_LOYALTY_MANAGER(
-                                                                          new AchievementDiaryTask(
-                                                                              "Talk to the loyalty manager.",
-                                                                              EASY)), KILL_PC_MONSTER(
-                                                                                  new AchievementDiaryTask(
-                                                                                      "Kill a monster in Pest Control.",
-                                                                                      EASY)), FLETCH_BRONZE_CROSSBOW(
-                                                                                          new AchievementDiaryTask(
-                                                                                              "Fletch a bronze crossbow.",
-                                                                                              EASY)), MINE_COAL(
-                                                                                                  new AchievementDiaryTask(
-                                                                                                      "Mine some coal.",
-                                                                                                      EASY)), TAN_COWHIDE(
-                                                                                                          new AchievementDiaryTask(
-                                                                                                              "Pay a tanner to tan cowhide.",
-                                                                                                              EASY)), MIX_ATTACK_POTION(
-                                                                                                                  new AchievementDiaryTask(
-                                                                                                                      "Mix an attack potion.",
-                                                                                                                      EASY)), GROW_GUAM(
-                                                                                                                          new AchievementDiaryTask(
-                                                                                                                              "Grow a guam plant.",
-                                                                                                                              EASY)), CRAFT_SAPPHIRE_RING(
-                                                                                                                                  new AchievementDiaryTask(
-                                                                                                                                      "Craft a sapphire ring.",
-                                                                                                                                      EASY)), SMELT_STEEL_BAR(
-                                                                                                                                          new AchievementDiaryTask(
-                                                                                                                                              "Smelt a steel bar.",
-                                                                                                                                              EASY)), CRAFT_EARTH_RUNES(
-                                                                                                                                                  new AchievementDiaryTask(
-                                                                                                                                                      "Craft some earth runes.",
-                                                                                                                                                      EASY)), COOK_SARDINE(
-                                                                                                                                                          new AchievementDiaryTask(
-                                                                                                                                                              "Cook a sardine.",
-                                                                                                                                                              EASY)), START_FIRE(
-                                                                                                                                                                  new AchievementDiaryTask(
-                                                                                                                                                                      "Start a fire.",
-                                                                                                                                                                      EASY)), TOTAL_LEVEL_100(
-                                                                                                                                                                          new AchievementDiaryTask(
-                                                                                                                                                                              "Get a total level of 100.",
-                                                                                                                                                                              EASY)), TOTAL_LEVEL_500(
-                                                                                                                                                                                  new AchievementDiaryTask(
-                                                                                                                                                                                      "Get a total level of 500.",
-                                                                                                                                                                                      EASY));
+  TALK_CLAN_CHAT(new AchievementDiaryTask("Talk in a Clan Chat.", EASY)),
+  BUY_SHOP_ITEM(new AchievementDiaryTask("Buy an item from a shop.", EASY)),
+  GET_SLAYER_TASK(new AchievementDiaryTask("Get a Slayer task.", EASY)),
+  VIEW_GRAND_EXCHANGE(new AchievementDiaryTask("View the Grand Exchange.", EASY)),
+  VISIT_CRABS(new AchievementDiaryTask("Visit rock crabs or sand crabs.", EASY)),
+  VIEW_BOND_POUCH(new AchievementDiaryTask("View your bond pouch.", EASY)),
+  SPEND_VOTE_TICKET(new AchievementDiaryTask("Spend a vote ticket.", EASY)),
+  COMPLETE_SLAYER_TASK(new AchievementDiaryTask("Complete a Slayer task.", EASY)),
+  CHOP_WILLOW(new AchievementDiaryTask("Chop a willow tree.", EASY)),
+  FISH_SALMON(new AchievementDiaryTask("Fish a salmon.", EASY)),
+  STEAL_FROM_STALL(new AchievementDiaryTask("Steal from a stall.", EASY)),
+  TALK_LOYALTY_MANAGER(new AchievementDiaryTask("Talk to the loyalty manager.", EASY)),
+  KILL_PC_MONSTER(new AchievementDiaryTask("Kill a monster in Pest Control.", EASY)),
+  FLETCH_BRONZE_CROSSBOW(new AchievementDiaryTask("Fletch a bronze crossbow.", EASY)),
+  MINE_COAL(new AchievementDiaryTask("Mine some coal.", EASY)),
+  TAN_COWHIDE(new AchievementDiaryTask("Pay a tanner to tan cowhide.", EASY)),
+  MIX_ATTACK_POTION(new AchievementDiaryTask("Mix an attack potion.", EASY)),
+  GROW_GUAM(new AchievementDiaryTask("Grow a guam plant.", EASY)),
+  CRAFT_SAPPHIRE_RING(new AchievementDiaryTask("Craft a sapphire ring.", EASY)),
+  SMELT_STEEL_BAR(new AchievementDiaryTask("Smelt a steel bar.", EASY)),
+  CRAFT_EARTH_RUNES(new AchievementDiaryTask("Craft some earth runes.", EASY)),
+  COOK_SARDINE(new AchievementDiaryTask("Cook a sardine.", EASY)),
+  START_FIRE(new AchievementDiaryTask("Start a fire.", EASY)),
+  TOTAL_LEVEL_100(new AchievementDiaryTask("Get a total level of 100.", EASY)),
+  TOTAL_LEVEL_500(new AchievementDiaryTask("Get a total level of 500.", EASY));
 
   private AchievementDiaryTask task;
 

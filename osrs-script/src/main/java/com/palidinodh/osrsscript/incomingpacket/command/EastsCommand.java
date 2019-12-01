@@ -17,12 +17,10 @@ class EastsCommand implements CommandHandler {
       return;
     }
     player.openDialogue(new OptionsDialogue("Are you sure you want to teleport to the wilderness?",
-        new DialogueOption("Are you sure you want to teleport to the wilderness?",
-            (c, s) -> {
-              player.getMagic().standardTeleport(3342, 3664, 0);
-              player.getGameEncoder().sendMessage("You teleport to East dragons..");
-              player.getController().stopWithTeleport();
-            }),
-        new DialogueOption("No!")));
+        new DialogueOption("Are you sure you want to teleport to the wilderness?", (c, s) -> {
+          player.getMagic().standardTeleport(3342, 3664, 0);
+          player.getGameEncoder().sendMessage("You teleport to East dragons..");
+          player.getController().stopWithTeleport();
+        }), new DialogueOption("No!")));
   }
 }

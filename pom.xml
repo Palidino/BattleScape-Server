@@ -160,6 +160,8 @@
         <configuration>
           <source>${java.version}</source>
           <target>${java.version}</target>
+          <fork>true</fork>
+          <maxmem>1048m</maxmem>
         </configuration>
       </plugin>
       <plugin>

@@ -37,9 +37,9 @@ public class SlayerRingDialogue extends OptionsDialogue {
         player.getGameEncoder().sendMessage("Unable to locate your ring.");
         return;
       }
-      var ringIds = new int[] {ItemId.SLAYER_RING_8, ItemId.SLAYER_RING_7, ItemId.SLAYER_RING_6,
+      var ringIds = new int[] { ItemId.SLAYER_RING_8, ItemId.SLAYER_RING_7, ItemId.SLAYER_RING_6,
           ItemId.SLAYER_RING_5, ItemId.SLAYER_RING_4, ItemId.SLAYER_RING_3, ItemId.SLAYER_RING_2,
-          ItemId.SLAYER_RING_1, -1};
+          ItemId.SLAYER_RING_1, -1 };
       var newRingId = -2;
       for (var i = 0; i < ringIds.length; i++) {
         if (ringItem.getId() == ringIds[i]) {

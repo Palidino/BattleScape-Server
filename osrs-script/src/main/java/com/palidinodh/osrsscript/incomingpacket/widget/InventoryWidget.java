@@ -149,7 +149,7 @@ class InventoryWidget implements WidgetHandler {
           player.getGameEncoder().sendMessage("You can't do this here.");
           break;
         }
-        int[] flowerIds = new int[] {2980, 2981, 2982, 2983, 2984, 2985, 2986, 2987, 2988};
+        int[] flowerIds = new int[] { 2980, 2981, 2982, 2983, 2984, 2985, 2986, 2987, 2988 };
         int flowerId = flowerIds[PRandom.randomE(flowerIds.length)];
         player.getInventory().deleteItem(itemId, 1, slot);
         var flower = new MapObject(flowerId, player, 10, MapObject.getRandomDirection());
@@ -447,8 +447,8 @@ class InventoryWidget implements WidgetHandler {
         }
         break;
       case ItemId.RANDOM_PVP_WEAPON_32290:
-        items = new int[] {ItemId.VESTAS_LONGSWORD, ItemId.STATIUSS_WARHAMMER, ItemId.VESTAS_SPEAR,
-            ItemId.MORRIGANS_JAVELIN, ItemId.MORRIGANS_THROWING_AXE, ItemId.ZURIELS_STAFF};
+        items = new int[] { ItemId.VESTAS_LONGSWORD, ItemId.STATIUSS_WARHAMMER, ItemId.VESTAS_SPEAR,
+            ItemId.MORRIGANS_JAVELIN, ItemId.MORRIGANS_THROWING_AXE, ItemId.ZURIELS_STAFF };
         player.getInventory().deleteItem(itemId, 1, slot);
         anItem = new Item(items[PRandom.randomE(items.length)], 1);
         if (anItem.getId() == ItemId.MORRIGANS_JAVELIN
@@ -460,10 +460,10 @@ class InventoryWidget implements WidgetHandler {
             + anItem.getLogName() + " from a random pvp weapon box.");
         break;
       case ItemId.DARK_RELIC:
-        int[] raidsSkills = new int[] {Skills.ATTACK, Skills.DEFENCE, Skills.STRENGTH,
+        int[] raidsSkills = new int[] { Skills.ATTACK, Skills.DEFENCE, Skills.STRENGTH,
             Skills.HITPOINTS, Skills.RANGED, Skills.PRAYER, Skills.MAGIC, Skills.MINING,
             Skills.WOODCUTTING, Skills.HERBLORE, Skills.FARMING, Skills.HUNTER, Skills.COOKING,
-            Skills.FISHING, Skills.THIEVING, Skills.FIREMAKING, Skills.AGILITY};
+            Skills.FISHING, Skills.THIEVING, Skills.FIREMAKING, Skills.AGILITY };
         player.getWidgetManager().sendChooseAdvanceSkill(itemId, 0, 0.5, 0);
         player.getWidgetManager().setChooseAdvanceSkillLevelMultiplier(50);
         for (int raidsSkill : raidsSkills) {
@@ -483,7 +483,7 @@ class InventoryWidget implements WidgetHandler {
         player.getWidgetManager().sendChooseAdvanceSkill(itemId, 50000, 0.5, 70);
         break;
       case 5073: // Bird nest
-        randomItems = new RandomItem[] {new RandomItem(5312, 1).weight(200), // Acorn
+        randomItems = new RandomItem[] { new RandomItem(5312, 1).weight(200), // Acorn
             new RandomItem(5283, 1).weight(150), // Apple tree seed
             new RandomItem(5313, 1).weight(150), // Willow seed
             new RandomItem(5284, 1).weight(100), // Banana tree seed
@@ -503,7 +503,7 @@ class InventoryWidget implements WidgetHandler {
         player.getInventory().addOrDropItem(RandomItem.getItem(randomItems));
         break;
       case 7413: // Bird nest
-        randomItems = new RandomItem[] {new RandomItem(5323, 6).weight(125), // Strawberry
+        randomItems = new RandomItem[] { new RandomItem(5323, 6).weight(125), // Strawberry
             new RandomItem(5320, 6).weight(125), // Sweetcorn
             new RandomItem(5312, 1).weight(100), // Acorn
             new RandomItem(5100, 2).weight(100), // Limpwurt
@@ -583,27 +583,27 @@ class InventoryWidget implements WidgetHandler {
           player.getInventory().notEnoughSpace();
           break;
         }
-        randomItems = new RandomItem[] {new RandomItem(1522, 13, 148), new RandomItem(1520, 13, 20),
-            new RandomItem(1518, 10, 16), new RandomItem(6334, 14, 59),
-            new RandomItem(8836, 10, 48), new RandomItem(1516, 10, 49),
-            new RandomItem(1514, 10, 23), new RandomItem(1624, 1, 5), new RandomItem(1622, 1, 5),
-            new RandomItem(1618, 1, 5), new RandomItem(1620, 1, 5), new RandomItem(454, 3, 12),
-            new RandomItem(441, 3, 15), new RandomItem(443, 3, 12), new RandomItem(445, 3, 70),
-            new RandomItem(448, 2, 7), new RandomItem(450, 2, 15), new RandomItem(452, 1, 2),
-            new RandomItem(200, 3, 6), new RandomItem(202, 3, 6), new RandomItem(206, 7),
-            new RandomItem(208, 1, 3), new RandomItem(212, 2, 3), new RandomItem(214, 1, 4),
-            new RandomItem(216, 2, 3), new RandomItem(220, 1, 3), new RandomItem(5321, 1, 7),
-            new RandomItem(5293, 1, 3), new RandomItem(5294, 1, 3), new RandomItem(5295, 1, 3),
-            new RandomItem(5296, 1, 3), new RandomItem(5298, 1, 3), new RandomItem(5300, 1, 4),
-            new RandomItem(5303, 1, 3), new RandomItem(5312, 1), new RandomItem(5313, 1, 2),
-            new RandomItem(5284, 1, 3), new RandomItem(21486, 1, 3), new RandomItem(5314, 1, 3),
-            new RandomItem(21488, 1, 3), new RandomItem(5304, 1, 3), new RandomItem(5315, 1, 3),
-            new RandomItem(5316, 1, 3), new RandomItem(5317, 1), new RandomItem(322, 5, 12),
-            new RandomItem(336, 5, 12), new RandomItem(332, 5, 12), new RandomItem(378, 5, 11),
-            new RandomItem(360, 5, 12), new RandomItem(372, 5, 21), new RandomItem(384, 5, 21),
-            new RandomItem(ItemId.COINS, 2030, 9048), new RandomItem(13422, 3, 24),
-            new RandomItem(3212, 4, 7), new RandomItem(7937, 29, 391),
-            new RandomItem(13574, 3, 19)};
+        randomItems = new RandomItem[] { new RandomItem(1522, 13, 148),
+            new RandomItem(1520, 13, 20), new RandomItem(1518, 10, 16),
+            new RandomItem(6334, 14, 59), new RandomItem(8836, 10, 48),
+            new RandomItem(1516, 10, 49), new RandomItem(1514, 10, 23), new RandomItem(1624, 1, 5),
+            new RandomItem(1622, 1, 5), new RandomItem(1618, 1, 5), new RandomItem(1620, 1, 5),
+            new RandomItem(454, 3, 12), new RandomItem(441, 3, 15), new RandomItem(443, 3, 12),
+            new RandomItem(445, 3, 70), new RandomItem(448, 2, 7), new RandomItem(450, 2, 15),
+            new RandomItem(452, 1, 2), new RandomItem(200, 3, 6), new RandomItem(202, 3, 6),
+            new RandomItem(206, 7), new RandomItem(208, 1, 3), new RandomItem(212, 2, 3),
+            new RandomItem(214, 1, 4), new RandomItem(216, 2, 3), new RandomItem(220, 1, 3),
+            new RandomItem(5321, 1, 7), new RandomItem(5293, 1, 3), new RandomItem(5294, 1, 3),
+            new RandomItem(5295, 1, 3), new RandomItem(5296, 1, 3), new RandomItem(5298, 1, 3),
+            new RandomItem(5300, 1, 4), new RandomItem(5303, 1, 3), new RandomItem(5312, 1),
+            new RandomItem(5313, 1, 2), new RandomItem(5284, 1, 3), new RandomItem(21486, 1, 3),
+            new RandomItem(5314, 1, 3), new RandomItem(21488, 1, 3), new RandomItem(5304, 1, 3),
+            new RandomItem(5315, 1, 3), new RandomItem(5316, 1, 3), new RandomItem(5317, 1),
+            new RandomItem(322, 5, 12), new RandomItem(336, 5, 12), new RandomItem(332, 5, 12),
+            new RandomItem(378, 5, 11), new RandomItem(360, 5, 12), new RandomItem(372, 5, 21),
+            new RandomItem(384, 5, 21), new RandomItem(ItemId.COINS, 2030, 9048),
+            new RandomItem(13422, 3, 24), new RandomItem(3212, 4, 7), new RandomItem(7937, 29, 391),
+            new RandomItem(13574, 3, 19) };
         player.getInventory().deleteItem(itemId, 1, slot);
         int supplyCount = 2 + PRandom.randomI(2);
         for (int i = 0; i < supplyCount; i++) {
@@ -637,7 +637,7 @@ class InventoryWidget implements WidgetHandler {
         } else if (PRandom.inRange(player.getCombat().getDropRate(20718, 2.2))) {
           player.getInventory().addItem(20718, 5 + PRandom.randomE(26), slot);
         } else {
-          randomItems = new RandomItem[] {new RandomItem(1522, 13, 148),
+          randomItems = new RandomItem[] { new RandomItem(1522, 13, 148),
               new RandomItem(1520, 13, 20), new RandomItem(1518, 10, 16),
               new RandomItem(6334, 14, 59), new RandomItem(8836, 10, 48),
               new RandomItem(1516, 10, 49), new RandomItem(1514, 10, 23),
@@ -658,7 +658,7 @@ class InventoryWidget implements WidgetHandler {
               new RandomItem(372, 5, 21), new RandomItem(384, 5, 21),
               new RandomItem(ItemId.COINS, 2030, 9048), new RandomItem(13422, 3, 24),
               new RandomItem(3212, 4, 7), new RandomItem(7937, 29, 391),
-              new RandomItem(13574, 3, 19)};
+              new RandomItem(13574, 3, 19) };
           player.getInventory().addItem(RandomItem.getItem(randomItems), slot);
         }
         break;
@@ -754,7 +754,7 @@ class InventoryWidget implements WidgetHandler {
         break;
       case 12789: // Clue box
         player.getInventory().deleteItem(itemId, 1, slot);
-        randomItems = new RandomItem[] {new RandomItem(2677, 1).weight(8) /* Clue scroll (easy) */,
+        randomItems = new RandomItem[] { new RandomItem(2677, 1).weight(8) /* Clue scroll (easy) */,
             new RandomItem(2801, 1).weight(6) /* Clue scroll (medium) */,
             new RandomItem(2722, 1).weight(4) /* Clue scroll (hard) */,
             new RandomItem(12073, 1).weight(2) /* Clue scroll (elite) */,
@@ -826,7 +826,7 @@ class InventoryWidget implements WidgetHandler {
         break;
       case 11738: // Herb box
         player.getInventory().deleteItem(itemId, 1, slot);
-        randomItems = new RandomItem[] {new RandomItem(199, 1) /* Guam */,
+        randomItems = new RandomItem[] { new RandomItem(199, 1) /* Guam */,
             new RandomItem(201, 1) /* Marrentill */, new RandomItem(203, 1) /* Tarromin */,
             new RandomItem(205, 1) /* Harralander */, new RandomItem(207, 1) /* Ranaar */,
             new RandomItem(3049, 1) /* Toadflax */, new RandomItem(209, 1) /* Irit */,
@@ -842,7 +842,7 @@ class InventoryWidget implements WidgetHandler {
         break;
       case ItemId.BAR_BOX_32302:
         player.getInventory().deleteItem(itemId, 1, slot);
-        randomItems = new RandomItem[] {new RandomItem(2364, 1) /* Runite bar */,
+        randomItems = new RandomItem[] { new RandomItem(2364, 1) /* Runite bar */,
             new RandomItem(2362, 1) /* Adamantite bar */, new RandomItem(2360, 1) /* Mithril bar */,
             new RandomItem(2354, 1) /* Steel bar */, new RandomItem(2352, 1) /* Iron bar */,
             new RandomItem(2350, 1) /* Bronze bar */
@@ -854,7 +854,7 @@ class InventoryWidget implements WidgetHandler {
         break;
       case ItemId.BAG_FULL_OF_GEMS:
         player.getInventory().deleteItem(itemId, 1, slot);
-        randomItems = new RandomItem[] {new RandomItem(ItemId.UNCUT_OPAL, 1, 4).weight(1024),
+        randomItems = new RandomItem[] { new RandomItem(ItemId.UNCUT_OPAL, 1, 4).weight(1024),
             new RandomItem(ItemId.UNCUT_JADE, 1, 4).weight(1024),
             new RandomItem(ItemId.UNCUT_RED_TOPAZ, 1, 4).weight(1024),
             new RandomItem(ItemId.UNCUT_SAPPHIRE, 1, 4).weight(1024),
@@ -863,7 +863,7 @@ class InventoryWidget implements WidgetHandler {
             new RandomItem(ItemId.UNCUT_DIAMOND, 1, 4).weight(1024),
             new RandomItem(ItemId.UNCUT_DRAGONSTONE, 1).weight(32),
             new RandomItem(ItemId.UNCUT_ONYX, 1).weight(8),
-            new RandomItem(ItemId.ZENYTE_SHARD, 1).weight(1)};
+            new RandomItem(ItemId.ZENYTE_SHARD, 1).weight(1) };
         for (int i = 0; i < 20; i++) {
           Item gemItem = RandomItem.getItem(randomItems);
           player.getInventory().addOrDropItem(gemItem.getNotedId(), gemItem.getAmount());
@@ -1290,7 +1290,7 @@ class InventoryWidget implements WidgetHandler {
         break;
       case 11238: // Baby impling jar
         player.getInventory().deleteItem(itemId, 1, slot);
-        randomItems = new RandomItem[] {new RandomItem(1755, 1) /* Chisel */,
+        randomItems = new RandomItem[] { new RandomItem(1755, 1) /* Chisel */,
             new RandomItem(1734, 1) /* Thread */, new RandomItem(946, 1) /* Knife */,
             new RandomItem(1985, 1) /* Cheese */, new RandomItem(2347, 1) /* Hammer */,
             new RandomItem(1759, 1) /* Ball of wool */,
@@ -1306,7 +1306,7 @@ class InventoryWidget implements WidgetHandler {
         break;
       case 11240: // Young impling jar
         player.getInventory().deleteItem(itemId, 1, slot);
-        randomItems = new RandomItem[] {new RandomItem(1539, 5) /* Steel nails */,
+        randomItems = new RandomItem[] { new RandomItem(1539, 5) /* Steel nails */,
             new RandomItem(1901, 1) /* Chocolate slice */,
             new RandomItem(7936, 1) /* Pure essence */, new RandomItem(1523, 1) /* Lockpick */,
             new RandomItem(361, 1) /* Tuna */, new RandomItem(453, 1) /* Coal */,
@@ -1323,7 +1323,7 @@ class InventoryWidget implements WidgetHandler {
         break;
       case 11242: // Gourmet impling jar
         player.getInventory().deleteItem(itemId, 1, slot);
-        randomItems = new RandomItem[] {new RandomItem(365, 1) /* Bass */,
+        randomItems = new RandomItem[] { new RandomItem(365, 1) /* Bass */,
             new RandomItem(361, 1) /* Tuna */, new RandomItem(2011, 1) /* Curry */,
             new RandomItem(2327, 1) /* Meat pie */, new RandomItem(1897, 1) /* Chocolate cake */,
             new RandomItem(5004, 1) /* Frog spawn */, new RandomItem(2007, 1) /* Spice */,
@@ -1343,7 +1343,7 @@ class InventoryWidget implements WidgetHandler {
         break;
       case 11244: // Earth impling jar
         player.getInventory().deleteItem(itemId, 1, slot);
-        randomItems = new RandomItem[] {new RandomItem(1442, 1) /* Fire talisman */,
+        randomItems = new RandomItem[] { new RandomItem(1442, 1) /* Fire talisman */,
             new RandomItem(1440, 1) /* Earth talisman */, new RandomItem(5535, 1) /* Earth tiara */,
             new RandomItem(557, 32) /* Earth rune */,
             new RandomItem(448, 1, 3) /* Mithril ore (noted) */,
@@ -1364,7 +1364,7 @@ class InventoryWidget implements WidgetHandler {
         break;
       case 11246: // Essence impling jar
         player.getInventory().deleteItem(itemId, 1, slot);
-        randomItems = new RandomItem[] {new RandomItem(7937, 20, 35) /* Pure essence (noted) */,
+        randomItems = new RandomItem[] { new RandomItem(7937, 20, 35) /* Pure essence (noted) */,
             new RandomItem(555, 30) /* Water rune */, new RandomItem(556, 30) /* Air rune */,
             new RandomItem(554, 50) /* Fire rune */, new RandomItem(558, 25) /* Mind rune */,
             new RandomItem(559, 28) /* Body rune */, new RandomItem(562, 4) /* Chaos rune */,
@@ -1380,7 +1380,7 @@ class InventoryWidget implements WidgetHandler {
         break;
       case 11248: // Eclectic impling jar
         player.getInventory().deleteItem(itemId, 1, slot);
-        randomItems = new RandomItem[] {new RandomItem(1273, 1) /* Mithril pickaxe */,
+        randomItems = new RandomItem[] { new RandomItem(1273, 1) /* Mithril pickaxe */,
             new RandomItem(1199, 1) /* Adamant kiteshield */,
             new RandomItem(2493, 1) /* Blue d'hide chaps */,
             new RandomItem(10083, 1) /* Red spiky vambs */,
@@ -1401,7 +1401,7 @@ class InventoryWidget implements WidgetHandler {
         break;
       case 11250: // Nature impling jar
         player.getInventory().deleteItem(itemId, 1, slot);
-        randomItems = new RandomItem[] {new RandomItem(5100, 1) /* Limpwurt seed */,
+        randomItems = new RandomItem[] { new RandomItem(5100, 1) /* Limpwurt seed */,
             new RandomItem(5104, 1) /* Jangerberry seed */,
             new RandomItem(5281, 1) /* Belladonna seed */,
             new RandomItem(5294, 1) /* Harralander seed */,
@@ -1421,7 +1421,7 @@ class InventoryWidget implements WidgetHandler {
         break;
       case 11252: // Magpie impling jar
         player.getInventory().deleteItem(itemId, 1, slot);
-        randomItems = new RandomItem[] {new RandomItem(1701, 3) /* Diamond amulet (noted) */,
+        randomItems = new RandomItem[] { new RandomItem(1701, 3) /* Diamond amulet (noted) */,
             new RandomItem(1732, 3) /* Amulet of power (noted) */,
             new RandomItem(2569, 3) /* Ring of forging (noted) */,
             new RandomItem(3391, 1) /* Splitbark gauntlets */,
@@ -1443,7 +1443,7 @@ class InventoryWidget implements WidgetHandler {
         break;
       case 11254: // Ninja impling jar
         player.getInventory().deleteItem(itemId, 1, slot);
-        randomItems = new RandomItem[] {new RandomItem(6328, 1) /* Snakeskin boots */,
+        randomItems = new RandomItem[] { new RandomItem(6328, 1) /* Snakeskin boots */,
             new RandomItem(3391, 1) /* Splitbark gauntlets */,
             new RandomItem(4097, 1) /* Mystic boots */,
             new RandomItem(3385, 1) /* Splitbark helm */,
@@ -1466,7 +1466,7 @@ class InventoryWidget implements WidgetHandler {
         break;
       case 11256: // Dragon impling jar
         player.getInventory().deleteItem(itemId, 1, slot);
-        randomItems = new RandomItem[] {new RandomItem(11232, 100, 350) /* Dragon dart tip */,
+        randomItems = new RandomItem[] { new RandomItem(11232, 100, 350) /* Dragon dart tip */,
             new RandomItem(11237, 100, 500) /* Dragon arrowtips */,
             new RandomItem(9193, 10, 49) /* Dragon bolt tips */,
             new RandomItem(19582, 25, 35) /* Dragon javelin heads */,
@@ -1491,7 +1491,7 @@ class InventoryWidget implements WidgetHandler {
       case 19732: // Lucky impling jar
         player.getInventory().deleteItem(itemId, 1, slot);
         randomItems =
-            new RandomItem[] {new RandomItem(2677, 1, 1).weight(8) /* Clue scroll (easy) */,
+            new RandomItem[] { new RandomItem(2677, 1, 1).weight(8) /* Clue scroll (easy) */,
                 new RandomItem(2801, 1, 1).weight(6) /* Clue scroll (medium) */,
                 new RandomItem(2722, 1, 1).weight(4) /* Clue scroll (hard) */,
                 new RandomItem(12073, 1, 1).weight(2) /* Clue scroll (elite) */,
@@ -1921,8 +1921,9 @@ class InventoryWidget implements WidgetHandler {
       case 19707: // Amulet of eternal glory
         player.openDialogue("amuletofglory", 0);
         break;
-        case ItemId.BASILISK_JAW: // Basilisk Jaw
-        player.getGameEncoder().sendMessage("It's the jaw of a Basilisk Knight. Perhaps I should try to use it on a Helm of Neitiznot.");
+      case ItemId.BASILISK_JAW: // Basilisk Jaw
+        player.getGameEncoder().sendMessage(
+            "It's the jaw of a Basilisk Knight. Perhaps I should try to use it on a Helm of Neitiznot.");
         break;
       case 3853: // Games necklace
         player.openDialogue("gamesnecklace", 0);
@@ -1970,7 +1971,7 @@ class InventoryWidget implements WidgetHandler {
       case 10149: // Swamp lizard
         player.getInventory().deleteItem(itemId, 1, slot);
         break;
-        case ItemId.NEITIZNOT_FACEGUARD: // Toxic blowpipe (empty)
+      case ItemId.NEITIZNOT_FACEGUARD: // Toxic blowpipe (empty)
         player.getInventory().deleteItem(itemId, 1, slot);
         player.getInventory().addOrDropItem(ItemId.BASILISK_JAW);
         player.getInventory().addOrDropItem(ItemId.HELM_OF_NEITIZNOT);
@@ -1979,7 +1980,7 @@ class InventoryWidget implements WidgetHandler {
       case ItemId.CLUE_BOTTLE_EASY:
       case ItemId.CLUE_GEODE_EASY:
       case ItemId.CLUE_NEST_EASY:
-        ttLoot = new int[] {ItemId.HOLY_BLESSING, ItemId.UNHOLY_BLESSING, ItemId.PEACEFUL_BLESSING,
+        ttLoot = new int[] { ItemId.HOLY_BLESSING, ItemId.UNHOLY_BLESSING, ItemId.PEACEFUL_BLESSING,
             ItemId.HONOURABLE_BLESSING, ItemId.WAR_BLESSING, ItemId.ANCIENT_BLESSING,
             ItemId.WILLOW_COMP_BOW, ItemId.YEW_COMP_BOW, ItemId.MAGIC_COMP_BOW, ItemId.BEAR_FEET,
             ItemId.MOLE_SLIPPERS, ItemId.FROG_SLIPPERS, ItemId.DEMON_FEET, ItemId.SANDWICH_LADY_HAT,
@@ -1987,8 +1988,8 @@ class InventoryWidget implements WidgetHandler {
             ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_GUTHIX, ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_SARADOMIN,
             ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_ZAMORAK, ItemId.MONKS_ROBE_TOP_T, ItemId.MONKS_ROBE_T,
             ItemId.AMULET_OF_DEFENCE_T, ItemId.JESTER_CAPE, ItemId.SHOULDER_PARROT,
-            ItemId.PURPLE_SWEETS};
-        int[] ttEasy = new int[] {ItemId.BRONZE_FULL_HELM_T, ItemId.BRONZE_PLATEBODY_T,
+            ItemId.PURPLE_SWEETS };
+        int[] ttEasy = new int[] { ItemId.BRONZE_FULL_HELM_T, ItemId.BRONZE_PLATEBODY_T,
             ItemId.BRONZE_PLATELEGS_T, ItemId.BRONZE_PLATESKIRT_T, ItemId.BRONZE_KITESHIELD_T,
             ItemId.BRONZE_FULL_HELM_G, ItemId.BRONZE_PLATEBODY_G, ItemId.BRONZE_PLATELEGS_G,
             ItemId.BRONZE_PLATESKIRT_G, ItemId.BRONZE_KITESHIELD_G, ItemId.IRON_FULL_HELM_T,
@@ -2029,7 +2030,7 @@ class InventoryWidget implements WidgetHandler {
             ItemId.TEAM_CAPE_I, ItemId.TEAM_CAPE_X, ItemId.TEAM_CAPE_ZERO, ItemId.CAPE_OF_SKULLS,
             ItemId.WOODEN_SHIELD_G, ItemId.GOLDEN_CHEFS_HAT, ItemId.GOLDEN_APRON,
             ItemId.MONKS_ROBE_TOP_G, ItemId.MONKS_ROBE_G, ItemId.LARGE_SPADE, ItemId.LEATHER_BODY_G,
-            ItemId.LEATHER_CHAPS_G};
+            ItemId.LEATHER_CHAPS_G };
         player.getInventory().deleteItem(itemId, 1, slot);
         int easyItemId = ttEasy[PRandom.randomE(ttEasy.length)];
         player.getInventory().addItem(easyItemId, 1, slot);
@@ -2047,7 +2048,7 @@ class InventoryWidget implements WidgetHandler {
       case ItemId.CLUE_BOTTLE_MEDIUM:
       case ItemId.CLUE_GEODE_MEDIUM:
       case ItemId.CLUE_NEST_MEDIUM:
-        ttLoot = new int[] {ItemId.HOLY_BLESSING, ItemId.UNHOLY_BLESSING, ItemId.PEACEFUL_BLESSING,
+        ttLoot = new int[] { ItemId.HOLY_BLESSING, ItemId.UNHOLY_BLESSING, ItemId.PEACEFUL_BLESSING,
             ItemId.HONOURABLE_BLESSING, ItemId.WAR_BLESSING, ItemId.ANCIENT_BLESSING,
             ItemId.WILLOW_COMP_BOW, ItemId.YEW_COMP_BOW, ItemId.MAGIC_COMP_BOW, ItemId.BEAR_FEET,
             ItemId.MOLE_SLIPPERS, ItemId.FROG_SLIPPERS, ItemId.DEMON_FEET, ItemId.SANDWICH_LADY_HAT,
@@ -2055,8 +2056,8 @@ class InventoryWidget implements WidgetHandler {
             ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_GUTHIX, ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_SARADOMIN,
             ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_ZAMORAK, ItemId.MONKS_ROBE_TOP_T, ItemId.MONKS_ROBE_T,
             ItemId.AMULET_OF_DEFENCE_T, ItemId.JESTER_CAPE, ItemId.SHOULDER_PARROT,
-            ItemId.PURPLE_SWEETS};
-        int[] ttMedium = new int[] {ItemId.MITHRIL_FULL_HELM_T, ItemId.MITHRIL_PLATEBODY_T,
+            ItemId.PURPLE_SWEETS };
+        int[] ttMedium = new int[] { ItemId.MITHRIL_FULL_HELM_T, ItemId.MITHRIL_PLATEBODY_T,
             ItemId.MITHRIL_PLATELEGS_T, ItemId.MITHRIL_PLATESKIRT_T, ItemId.MITHRIL_KITESHIELD_T,
             ItemId.MITHRIL_FULL_HELM_G, ItemId.MITHRIL_PLATEBODY_G, ItemId.MITHRIL_PLATELEGS_G,
             ItemId.MITHRIL_PLATESKIRT_G, ItemId.MITHRIL_KITESHIELD_G, ItemId.ADAMANT_FULL_HELM_T,
@@ -2091,7 +2092,7 @@ class InventoryWidget implements WidgetHandler {
             ItemId.LEPRECHAUN_HAT, ItemId.BLACK_LEPRECHAUN_HAT, ItemId.BLACK_UNICORN_MASK,
             ItemId.WHITE_UNICORN_MASK, ItemId.ARCEUUS_BANNER, ItemId.HOSIDIUS_BANNER,
             ItemId.LOVAKENGJ_BANNER, ItemId.PISCARILIUS_BANNER, ItemId.SHAYZIEN_BANNER,
-            ItemId.CABBAGE_ROUND_SHIELD, ItemId.CLUELESS_SCROLL};
+            ItemId.CABBAGE_ROUND_SHIELD, ItemId.CLUELESS_SCROLL };
         player.getInventory().deleteItem(itemId, 1, slot);
         int mediumClueSlot = PRandom.randomE(ttMedium.length);
         int mediumItemId = ttMedium[mediumClueSlot];
@@ -2110,7 +2111,7 @@ class InventoryWidget implements WidgetHandler {
       case ItemId.CLUE_BOTTLE_HARD:
       case ItemId.CLUE_GEODE_HARD:
       case ItemId.CLUE_NEST_HARD:
-        ttLoot = new int[] {ItemId.HOLY_BLESSING, ItemId.UNHOLY_BLESSING, ItemId.PEACEFUL_BLESSING,
+        ttLoot = new int[] { ItemId.HOLY_BLESSING, ItemId.UNHOLY_BLESSING, ItemId.PEACEFUL_BLESSING,
             ItemId.HONOURABLE_BLESSING, ItemId.WAR_BLESSING, ItemId.ANCIENT_BLESSING,
             ItemId.WILLOW_COMP_BOW, ItemId.YEW_COMP_BOW, ItemId.MAGIC_COMP_BOW, ItemId.BEAR_FEET,
             ItemId.MOLE_SLIPPERS, ItemId.FROG_SLIPPERS, ItemId.DEMON_FEET, ItemId.SANDWICH_LADY_HAT,
@@ -2118,8 +2119,8 @@ class InventoryWidget implements WidgetHandler {
             ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_GUTHIX, ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_SARADOMIN,
             ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_ZAMORAK, ItemId.MONKS_ROBE_TOP_T, ItemId.MONKS_ROBE_T,
             ItemId.AMULET_OF_DEFENCE_T, ItemId.JESTER_CAPE, ItemId.SHOULDER_PARROT,
-            ItemId.PURPLE_SWEETS};
-        int[] ttHard = new int[] {ItemId.RUNE_FULL_HELM_T, ItemId.RUNE_PLATEBODY_T,
+            ItemId.PURPLE_SWEETS };
+        int[] ttHard = new int[] { ItemId.RUNE_FULL_HELM_T, ItemId.RUNE_PLATEBODY_T,
             ItemId.RUNE_PLATELEGS_T, ItemId.RUNE_PLATESKIRT_T, ItemId.RUNE_KITESHIELD_T,
             ItemId.RUNE_FULL_HELM_G, ItemId.RUNE_PLATEBODY_G, ItemId.RUNE_PLATELEGS_G,
             ItemId.RUNE_PLATESKIRT_G, ItemId.RUNE_KITESHIELD_G, ItemId.GUTHIX_FULL_HELM,
@@ -2160,16 +2161,16 @@ class InventoryWidget implements WidgetHandler {
             ItemId.EXPLORER_BACKPACK, ItemId.RUNE_CANE, ItemId.ZOMBIE_HEAD_19912,
             ItemId.CYCLOPS_HEAD, ItemId.NUNCHAKU, ItemId.DUAL_SAI, ItemId.THIEVING_BAG,
             ItemId.DRAGON_BOOTS_ORNAMENT_KIT, ItemId.RUNE_DEFENDER_ORNAMENT_KIT,
-            ItemId.TZHAAR_KET_OM_ORNAMENT_KIT, ItemId.BERSERKER_NECKLACE_ORNAMENT_KIT};
-        int[] gildedHard = new int[] {ItemId.GILDED_FULL_HELM, ItemId.GILDED_PLATEBODY,
+            ItemId.TZHAAR_KET_OM_ORNAMENT_KIT, ItemId.BERSERKER_NECKLACE_ORNAMENT_KIT };
+        int[] gildedHard = new int[] { ItemId.GILDED_FULL_HELM, ItemId.GILDED_PLATEBODY,
             ItemId.GILDED_PLATELEGS, ItemId.GILDED_PLATESKIRT, ItemId.GILDED_KITESHIELD,
             ItemId.GILDED_MED_HELM, ItemId.GILDED_CHAINBODY, ItemId.GILDED_SQ_SHIELD,
-            ItemId.GILDED_2H_SWORD, ItemId.GILDED_SPEAR, ItemId.GILDED_HASTA};
-        int[] thirdageHard = new int[] {ItemId._3RD_AGE_FULL_HELMET, ItemId._3RD_AGE_PLATEBODY,
+            ItemId.GILDED_2H_SWORD, ItemId.GILDED_SPEAR, ItemId.GILDED_HASTA };
+        int[] thirdageHard = new int[] { ItemId._3RD_AGE_FULL_HELMET, ItemId._3RD_AGE_PLATEBODY,
             ItemId._3RD_AGE_PLATELEGS, ItemId._3RD_AGE_KITESHIELD, ItemId._3RD_AGE_RANGE_COIF,
             ItemId._3RD_AGE_RANGE_TOP, ItemId._3RD_AGE_RANGE_LEGS, ItemId._3RD_AGE_VAMBRACES,
             ItemId._3RD_AGE_MAGE_HAT, ItemId._3RD_AGE_ROBE_TOP, ItemId._3RD_AGE_ROBE,
-            ItemId._3RD_AGE_AMULET, ItemId._3RD_AGE_PLATESKIRT};
+            ItemId._3RD_AGE_AMULET, ItemId._3RD_AGE_PLATESKIRT };
         player.getInventory().deleteItem(itemId, 1, slot);
         if (PRandom.inRange(0.1)) {
           int thirdAgeId = thirdageHard[PRandom.randomE(thirdageHard.length)];
@@ -2197,7 +2198,7 @@ class InventoryWidget implements WidgetHandler {
       case ItemId.CLUE_BOTTLE_ELITE:
       case ItemId.CLUE_GEODE_ELITE:
       case ItemId.CLUE_NEST_ELITE:
-        ttLoot = new int[] {ItemId.HOLY_BLESSING, ItemId.UNHOLY_BLESSING, ItemId.PEACEFUL_BLESSING,
+        ttLoot = new int[] { ItemId.HOLY_BLESSING, ItemId.UNHOLY_BLESSING, ItemId.PEACEFUL_BLESSING,
             ItemId.HONOURABLE_BLESSING, ItemId.WAR_BLESSING, ItemId.ANCIENT_BLESSING,
             ItemId.WILLOW_COMP_BOW, ItemId.YEW_COMP_BOW, ItemId.MAGIC_COMP_BOW, ItemId.BEAR_FEET,
             ItemId.MOLE_SLIPPERS, ItemId.FROG_SLIPPERS, ItemId.DEMON_FEET, ItemId.SANDWICH_LADY_HAT,
@@ -2205,8 +2206,8 @@ class InventoryWidget implements WidgetHandler {
             ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_GUTHIX, ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_SARADOMIN,
             ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_ZAMORAK, ItemId.MONKS_ROBE_TOP_T, ItemId.MONKS_ROBE_T,
             ItemId.AMULET_OF_DEFENCE_T, ItemId.JESTER_CAPE, ItemId.SHOULDER_PARROT,
-            ItemId.PURPLE_SWEETS};
-        int[] ttElite = new int[] {ItemId.DRAGON_FULL_HELM_ORNAMENT_KIT,
+            ItemId.PURPLE_SWEETS };
+        int[] ttElite = new int[] { ItemId.DRAGON_FULL_HELM_ORNAMENT_KIT,
             ItemId.DRAGON_CHAINBODY_ORNAMENT_KIT, ItemId.DRAGON_LEGS_SKIRT_ORNAMENT_KIT,
             ItemId.DRAGON_SQ_SHIELD_ORNAMENT_KIT, ItemId.DRAGON_SCIMITAR_ORNAMENT_KIT,
             ItemId.LIGHT_INFINITY_COLOUR_KIT, ItemId.DARK_INFINITY_COLOUR_KIT,
@@ -2226,17 +2227,17 @@ class InventoryWidget implements WidgetHandler {
             ItemId.DARK_TUXEDO_CUFFS, ItemId.DARK_TUXEDO_SHOES, ItemId.LIGHT_BOW_TIE,
             ItemId.LIGHT_TUXEDO_JACKET, ItemId.LIGHT_TROUSERS, ItemId.LIGHT_TUXEDO_CUFFS,
             ItemId.LIGHT_TUXEDO_SHOES, ItemId.RANGERS_TIGHTS, ItemId.URIS_HAT,
-            ItemId.FREMENNIK_KILT, ItemId.HEAVY_CASKET, ItemId.GIANT_BOOT};
-        int[] gildedElite = new int[] {ItemId.GILDED_BOOTS, ItemId.GILDED_SCIMITAR,
+            ItemId.FREMENNIK_KILT, ItemId.HEAVY_CASKET, ItemId.GIANT_BOOT };
+        int[] gildedElite = new int[] { ItemId.GILDED_BOOTS, ItemId.GILDED_SCIMITAR,
             ItemId.GILDED_DHIDE_VAMBS, ItemId.GILDED_DHIDE_BODY, ItemId.GILDED_DHIDE_CHAPS,
-            ItemId.GILDED_COIF, ItemId.GILDED_AXE, ItemId.GILDED_PICKAXE, ItemId.GILDED_SPADE};
-        int[] thirdageElite = new int[] {ItemId._3RD_AGE_FULL_HELMET, ItemId._3RD_AGE_PLATEBODY,
+            ItemId.GILDED_COIF, ItemId.GILDED_AXE, ItemId.GILDED_PICKAXE, ItemId.GILDED_SPADE };
+        int[] thirdageElite = new int[] { ItemId._3RD_AGE_FULL_HELMET, ItemId._3RD_AGE_PLATEBODY,
             ItemId._3RD_AGE_PLATELEGS, ItemId._3RD_AGE_KITESHIELD, ItemId._3RD_AGE_RANGE_COIF,
             ItemId._3RD_AGE_RANGE_TOP, ItemId._3RD_AGE_RANGE_LEGS, ItemId._3RD_AGE_VAMBRACES,
             ItemId._3RD_AGE_MAGE_HAT, ItemId._3RD_AGE_ROBE_TOP, ItemId._3RD_AGE_ROBE,
             ItemId._3RD_AGE_AMULET, ItemId._3RD_AGE_CLOAK, ItemId._3RD_AGE_WAND,
             ItemId._3RD_AGE_BOW, ItemId._3RD_AGE_LONGSWORD, ItemId.RING_OF_3RD_AGE,
-            ItemId._3RD_AGE_PLATESKIRT};
+            ItemId._3RD_AGE_PLATESKIRT };
         player.getInventory().deleteItem(itemId, 1, slot);
         if (PRandom.inRange(0.1)) {
           int thirdAgeId = thirdageElite[PRandom.randomE(thirdageElite.length)];
@@ -2261,7 +2262,7 @@ class InventoryWidget implements WidgetHandler {
         player.getSkills().increaseClueScrollCount(Skills.CLUE_SCROLL_ELITE);
         break;
       case ItemId.CLUE_SCROLL_MASTER:
-        ttLoot = new int[] {ItemId.HOLY_BLESSING, ItemId.UNHOLY_BLESSING, ItemId.PEACEFUL_BLESSING,
+        ttLoot = new int[] { ItemId.HOLY_BLESSING, ItemId.UNHOLY_BLESSING, ItemId.PEACEFUL_BLESSING,
             ItemId.HONOURABLE_BLESSING, ItemId.WAR_BLESSING, ItemId.ANCIENT_BLESSING,
             ItemId.WILLOW_COMP_BOW, ItemId.YEW_COMP_BOW, ItemId.MAGIC_COMP_BOW, ItemId.BEAR_FEET,
             ItemId.MOLE_SLIPPERS, ItemId.FROG_SLIPPERS, ItemId.DEMON_FEET, ItemId.SANDWICH_LADY_HAT,
@@ -2269,8 +2270,8 @@ class InventoryWidget implements WidgetHandler {
             ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_GUTHIX, ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_SARADOMIN,
             ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_ZAMORAK, ItemId.MONKS_ROBE_TOP_T, ItemId.MONKS_ROBE_T,
             ItemId.AMULET_OF_DEFENCE_T, ItemId.JESTER_CAPE, ItemId.SHOULDER_PARROT,
-            ItemId.PURPLE_SWEETS};
-        int[] ttMaster = new int[] {ItemId.DRAGON_PLATEBODY_ORNAMENT_KIT,
+            ItemId.PURPLE_SWEETS };
+        int[] ttMaster = new int[] { ItemId.DRAGON_PLATEBODY_ORNAMENT_KIT,
             ItemId.DRAGON_KITESHIELD_ORNAMENT_KIT, ItemId.DRAGON_DEFENDER_ORNAMENT_KIT,
             ItemId.ANGUISH_ORNAMENT_KIT, ItemId.TORTURE_ORNAMENT_KIT, ItemId.OCCULT_ORNAMENT_KIT,
             ItemId.ARMADYL_GODSWORD_ORNAMENT_KIT, ItemId.BANDOS_GODSWORD_ORNAMENT_KIT,
@@ -2287,15 +2288,15 @@ class InventoryWidget implements WidgetHandler {
             ItemId.ROBE_BOTTOM_OF_DARKNESS, ItemId.BOOTS_OF_DARKNESS, ItemId.RING_OF_COINS,
             ItemId.LEFT_EYE_PATCH, ItemId.OBSIDIAN_CAPE_R, ItemId.FANCY_TIARA,
             ItemId.HALF_MOON_SPECTACLES, ItemId.ALE_OF_THE_GODS, ItemId.BUCKET_HELM_G,
-            ItemId.BOWL_WIG, ItemId.SCROLL_SACK};
-        int[] gildedMaster = new int[] {ItemId.GILDED_FULL_HELM, ItemId.GILDED_PLATEBODY,
+            ItemId.BOWL_WIG, ItemId.SCROLL_SACK };
+        int[] gildedMaster = new int[] { ItemId.GILDED_FULL_HELM, ItemId.GILDED_PLATEBODY,
             ItemId.GILDED_PLATELEGS, ItemId.GILDED_PLATESKIRT, ItemId.GILDED_KITESHIELD,
             ItemId.GILDED_MED_HELM, ItemId.GILDED_CHAINBODY, ItemId.GILDED_SQ_SHIELD,
             ItemId.GILDED_2H_SWORD, ItemId.GILDED_SPEAR, ItemId.GILDED_HASTA, ItemId.GILDED_BOOTS,
             ItemId.GILDED_SCIMITAR, ItemId.GILDED_DHIDE_VAMBS, ItemId.GILDED_DHIDE_BODY,
             ItemId.GILDED_DHIDE_CHAPS, ItemId.GILDED_COIF, ItemId.GILDED_AXE, ItemId.GILDED_PICKAXE,
-            ItemId.GILDED_SPADE};
-        int[] thirdageMaster = new int[] {ItemId._3RD_AGE_FULL_HELMET, ItemId._3RD_AGE_PLATEBODY,
+            ItemId.GILDED_SPADE };
+        int[] thirdageMaster = new int[] { ItemId._3RD_AGE_FULL_HELMET, ItemId._3RD_AGE_PLATEBODY,
             ItemId._3RD_AGE_PLATELEGS, ItemId._3RD_AGE_KITESHIELD, ItemId._3RD_AGE_RANGE_COIF,
             ItemId._3RD_AGE_RANGE_TOP, ItemId._3RD_AGE_RANGE_LEGS, ItemId._3RD_AGE_VAMBRACES,
             ItemId._3RD_AGE_MAGE_HAT, ItemId._3RD_AGE_ROBE_TOP, ItemId._3RD_AGE_ROBE,
@@ -2303,7 +2304,7 @@ class InventoryWidget implements WidgetHandler {
             ItemId._3RD_AGE_BOW, ItemId._3RD_AGE_LONGSWORD, ItemId._3RD_AGE_AXE,
             ItemId._3RD_AGE_PICKAXE, ItemId._3RD_AGE_DRUIDIC_ROBE_TOP,
             ItemId._3RD_AGE_DRUIDIC_ROBE_BOTTOMS, ItemId._3RD_AGE_DRUIDIC_CLOAK,
-            ItemId._3RD_AGE_DRUIDIC_STAFF, ItemId.RING_OF_3RD_AGE, ItemId._3RD_AGE_PLATESKIRT};
+            ItemId._3RD_AGE_DRUIDIC_STAFF, ItemId.RING_OF_3RD_AGE, ItemId._3RD_AGE_PLATESKIRT };
         player.getInventory().deleteItem(itemId, 1, slot);
         if (PRandom.inRange(0.1)) {
           int thirdAgeId = thirdageMaster[PRandom.randomE(thirdageMaster.length)];

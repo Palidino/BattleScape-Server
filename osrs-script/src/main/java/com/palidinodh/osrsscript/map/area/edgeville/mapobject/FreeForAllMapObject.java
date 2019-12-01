@@ -13,12 +13,11 @@ import com.palidinodh.rs.ReferenceId;
 class FreeForAllMapObject implements MapObjectHandler {
   @Override
   public void execute(Player player, int option, MapObject mapObject) {
-    player.openDialogue(
-        new OptionsDialogue(new DialogueOption("Safe Free-For-All", (c, s) -> {
-          player.getMovement().teleport(3327, 4752);
-          player.setController(new ClanWarsFreeForAllPC());
-        }), new DialogueOption("Risk Zone", (c, s) -> {
-          player.getMovement().teleport(2655, 5471);
-        })));
+    player.openDialogue(new OptionsDialogue(new DialogueOption("Safe Free-For-All", (c, s) -> {
+      player.getMovement().teleport(3327, 4752);
+      player.setController(new ClanWarsFreeForAllPC());
+    }), new DialogueOption("Risk Zone", (c, s) -> {
+      player.getMovement().teleport(2655, 5471);
+    })));
   }
 }

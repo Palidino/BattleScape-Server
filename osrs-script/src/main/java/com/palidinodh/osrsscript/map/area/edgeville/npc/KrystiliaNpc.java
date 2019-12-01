@@ -21,8 +21,7 @@ class KrystiliaNpc implements NpcHandler {
           new DialogueOption("Get task",
               (c, s) -> plugin.getAssignment(SlayerMaster.WILDERNESS_MASTER)),
           new DialogueOption("Current task", (c, s) -> plugin.sendTask()),
-          new DialogueOption("Cancel task (30 points)",
-              (c, s) -> plugin.cancelWildernessTask())));
+          new DialogueOption("Cancel task (30 points)", (c, s) -> plugin.cancelWildernessTask())));
     } else if (option == 2) {
       plugin.getAssignment(SlayerMaster.WILDERNESS_MASTER);
     } else if (option == 3) {

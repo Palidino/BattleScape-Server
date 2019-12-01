@@ -3,7 +3,19 @@ package com.palidinodh.rs.adaptive;
 import com.palidinodh.util.PString;
 
 public enum RsClanRank {
-  NOT_IN_CLAN, ANYONE, ANY_FRIENDS, FRIEND, RECRUIT, CORPORAL, SERGEANT, LIEUTENANT, CAPTAIN, GENERAL, ONLY_ME, OWNER, STAFF;
+  NOT_IN_CLAN,
+  ANYONE,
+  ANY_FRIENDS,
+  FRIEND,
+  RECRUIT,
+  CORPORAL,
+  SERGEANT,
+  LIEUTENANT,
+  CAPTAIN,
+  GENERAL,
+  ONLY_ME,
+  OWNER,
+  STAFF;
 
   public String getFormattedName() {
     return PString.formatName(name().toLowerCase().replace("_", " "));

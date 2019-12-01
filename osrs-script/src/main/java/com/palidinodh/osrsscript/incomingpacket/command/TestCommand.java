@@ -41,8 +41,7 @@ class TestCommand implements CommandHandler {
         new NormalChatDialogue(NpcId.BOB, "Who?"),
         new OptionsDialogue(new DialogueOption("You know who!", DialogueChain.ACTION_NEXT),
             new DialogueOption("Nevermind",
-                (c, s) -> player
-                    .openDialogue(new NormalChatDialogue("Nevermind, I'll go.")))),
+                (c, s) -> player.openDialogue(new NormalChatDialogue("Nevermind, I'll go.")))),
         new NormalChatDialogue("You know who!"),
         new NormalChatDialogue(NpcId.BOB, "OH, YOU MEAN MIKASA!"),
         new NormalChatDialogue(

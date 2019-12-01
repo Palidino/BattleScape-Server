@@ -5,7 +5,7 @@ import com.palidinodh.osrscore.model.item.ItemDef;
 import lombok.var;
 
 public class DonatableItems {
-  private static final int[] IDS = {ItemId.COINS, ItemId.BOND_32318, ItemId.AHRIMS_HOOD,
+  private static final int[] IDS = { ItemId.COINS, ItemId.BOND_32318, ItemId.AHRIMS_HOOD,
       ItemId.AHRIMS_STAFF, ItemId.AHRIMS_ROBETOP, ItemId.AHRIMS_ROBESKIRT, ItemId.DHAROKS_HELM,
       ItemId.DHAROKS_GREATAXE, ItemId.DHAROKS_PLATEBODY, ItemId.DHAROKS_PLATELEGS,
       ItemId.GUTHANS_HELM, ItemId.GUTHANS_WARSPEAR, ItemId.GUTHANS_PLATEBODY,
@@ -68,7 +68,7 @@ public class DonatableItems {
       ItemId._3RD_AGE_DRUIDIC_ROBE_BOTTOMS, ItemId._3RD_AGE_DRUIDIC_STAFF,
       ItemId._3RD_AGE_DRUIDIC_CLOAK, ItemId.CRYSTAL_TOOL_SEED, ItemId.CRYSTAL_ARMOUR_SEED,
       ItemId.BLADE_OF_SAELDOR_INACTIVE, ItemId.DRAGONSTONE_FULL_HELM, ItemId.DRAGONSTONE_PLATEBODY,
-      ItemId.DRAGONSTONE_PLATELEGS, ItemId.DRAGONSTONE_BOOTS, ItemId.DRAGONSTONE_GAUNTLETS};
+      ItemId.DRAGONSTONE_PLATELEGS, ItemId.DRAGONSTONE_BOOTS, ItemId.DRAGONSTONE_GAUNTLETS };
 
   public static boolean isDonatable(int itemId) {
     if (itemId == -1) {

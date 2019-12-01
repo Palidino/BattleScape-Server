@@ -94,7 +94,7 @@ public class PRandom {
         percent = 1;
       }
     }
-    return new int[] {(int) percent, range};
+    return new int[] { (int) percent, range };
   }
 
   public static double chanceToPercent(int odds, int total) {

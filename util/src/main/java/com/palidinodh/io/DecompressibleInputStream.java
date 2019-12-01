@@ -77,12 +77,12 @@ public class DecompressibleInputStream extends ObjectInputStream {
       long depth = getObjectInputStreamFieldValue("depth");
       try {
         Object obj =
-            callObjectInputStreamMethod("readObject0", new Class<?>[] {boolean.class}, false);
+            callObjectInputStreamMethod("readObject0", new Class<?>[] { boolean.class }, false);
         Object handles = getObjectInputStreamFieldValue("handles");
         Object passHandle = getObjectInputStreamFieldValue("passHandle");
-        callMethod(handles, "markDependency", new Class<?>[] {int.class, int.class}, outerHandle,
+        callMethod(handles, "markDependency", new Class<?>[] { int.class, int.class }, outerHandle,
             passHandle);
-        callMethod(handles, "lookupException", new Class<?>[] {int.class}, passHandle);
+        callMethod(handles, "lookupException", new Class<?>[] { int.class }, passHandle);
         if (depth == 0) {
           callMethod(getObjectInputStreamFieldValue("vlist"), "doCallbacks", new Class<?>[] {});
         }

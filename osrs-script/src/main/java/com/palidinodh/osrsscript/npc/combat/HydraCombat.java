@@ -44,10 +44,10 @@ class HydraCombat extends NpcCombat {
       NpcCombatDropTable.builder().chance(NpcCombatDropTable.CHANCE_1_IN_5000).log(true)
           .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.HYDRA_LEATHER).weight(2)))
           .drop(NpcCombatDropTableDrop.items(new RandomItem(ItemId.HYDRAS_CLAW).weight(1))).build();
-  private static final int[] ANIMATIONS = {8261, 8262, 8263};
+  private static final int[] ANIMATIONS = { 8261, 8262, 8263 };
   private static final Graphic[] TILE_GRAPHICS =
-      {new Graphic(1654), new Graphic(1655), new Graphic(1656), new Graphic(1657),
-          new Graphic(1658), new Graphic(1659), new Graphic(1660), new Graphic(1661)};
+      { new Graphic(1654), new Graphic(1655), new Graphic(1656), new Graphic(1657),
+          new Graphic(1658), new Graphic(1659), new Graphic(1660), new Graphic(1661) };
   private static final NpcCombatStyle SPECIAL_ATTACK = NpcCombatStyle.builder()
       .type(NpcCombatStyleType.builder().hitType(HitType.MAGIC).subHitType(HitType.TYPELESS)
           .hitMark(HitMark.POISON).build())

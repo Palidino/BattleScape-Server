@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Xoroshiro128Plus extends Random {
   public static final long serialVersionUID = 20180505L;
-  private static final long[] JUMP_VALUES = {0xbeac0467eba5facbL, 0xd86b048b86aa9922L};
+  private static final long[] JUMP_VALUES = { 0xbeac0467eba5facbL, 0xd86b048b86aa9922L };
   private static final long DOUBLE_MASK = (1L << 53) - 1;
   private static final double NORM_53 = 1D / (1L << 53);
   private static final long FLOAT_MASK = (1L << 24) - 1;

@@ -8,14 +8,14 @@ import java.util.List;
 import com.palidinodh.util.PTime;
 
 public class Clan implements Serializable {
-  public static final Clan[] GLOBAL_CLANS = {new Clan("home", -2), new Clan("pvp", -3)};
+  public static final Clan[] GLOBAL_CLANS = { new Clan("home", -2), new Clan("pvp", -3) };
   public static final Clan HOME_CLAN = GLOBAL_CLANS[0];
   private static final long serialVersionUID = 8112016L;
   public static final int TIME_BETWEEN_UPDATES = 10000;
   public static final int MAX_SIZE = 200, MAX_DISPLAY_SIZE = 100;
   public static final String DISABLED_NAME = "Chat disabled";
   public static final int NAME = 0, DISABLE = 1, ENTER_LIMIT = 2, TALK_LIMIT = 3, KICK_LIMIT = 4;
-  public static final String LEAVE_CLAN = new String(new char[] {'y', (char) 2, 'M'});
+  public static final String LEAVE_CLAN = new String(new char[] { 'y', (char) 2, 'M' });
 
   private transient long lastUpdate;
   private String name;
