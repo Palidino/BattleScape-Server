@@ -1,7 +1,5 @@
 .idea
 .apt_*
-.git
-.github
 .factorypath
 .project
 .classpath
