@@ -7,7 +7,7 @@ import com.palidinodh.osrsscript.player.plugin.clanwars.ClanWarsPlugin;
 import com.palidinodh.rs.ReferenceId;
 
 @ReferenceId(WidgetId.TOURNAMENT_VIEWER)
-class ClanWarsOptionsWidget implements WidgetHandler {
+class TournamentViewerWidget implements WidgetHandler {
   @Override
   public void execute(Player player, int option, int widgetId, int childId, int slot, int itemId) {
     if (player.getMovement().getTeleporting() || player.getMovement().getTeleported()
