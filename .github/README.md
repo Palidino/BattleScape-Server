@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up on your local machine f
 
 [Visual Studio Code](https://code.visualstudio.com) is recommended, and will be the IDE used in the installation guide.
 [Git](https://git-scm.com), needed to clone the repo and also to fetch and push any changes.
-[Java 8 Development Kit](https://adoptopenjdk.net). In the setup, select/enable the "Set JAVA_HOME variable" option.
+[Java 8 Development Kit](https://adoptopenjdk.net). In the setup, select/enable the "Set JAVA_HOME variable" option. A computer reboot may be needed for VSCode to find the JDK.
 
 Required VSCode extensions:
 - Java Extension Pack
