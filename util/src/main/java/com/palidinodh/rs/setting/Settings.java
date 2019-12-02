@@ -121,7 +121,7 @@ public class Settings {
 
   public static void setSecure(SecureSettings settings) {
     if (secure != null) {
-      throw new IllegalStateException("Secure settings can't be overwritten!");
+      throw new IllegalStateException("Settings can't be overwritten!");
     }
     secure = settings;
   }
@@ -132,7 +132,7 @@ public class Settings {
 
   public static void setBeta(boolean _beta) {
     if (beta != null) {
-      throw new IllegalStateException("Secure settings can't be overwritten!");
+      throw new IllegalStateException("Settings can't be overwritten!");
     }
     beta = _beta;
   }

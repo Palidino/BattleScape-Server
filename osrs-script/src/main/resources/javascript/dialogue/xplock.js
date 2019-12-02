@@ -50,8 +50,7 @@ instance = new DialogueScript() {
                 player.getSkills().setXPLock(index, Skills.DISABLED_XP);
                 player.getGameEncoder().sendMessage(Skills.SKILL_NAMES[index] + " XP rate disabled.");
             } else if (slot == 3) {
-                if (player.getSkills().getXP(index) > Skills.XP_TABLE[10] && index != Skills.DEFENCE
-                        || player.getController().getLevelForXP(index) == 1) {
+                if (player.getController().getLevelForXP(index) == 1) {
                     player.getGameEncoder().sendMessage("You can't reset this stat.");
                     return;
                 } else if (player.getInventory().getCount(ItemId.COINS) < 500000) {
