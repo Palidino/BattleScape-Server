@@ -143,7 +143,7 @@ public class Readers {
   }
 
   public static InputStream getResourceAsStream(Class<?> fromClass, String filename) {
-    return fromClass.getResourceAsStream(filename);
+    return fromClass.getResourceAsStream(filename.replace("\\", "/"));
   }
 
   public static List<String> getResourceList(String pathName) {

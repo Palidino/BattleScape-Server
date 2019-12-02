@@ -42,7 +42,8 @@ public class ScriptManager {
         for (String polyfill : POLYFILLS) {
           contents += polyfill;
         }
-        contents += new String(Readers.readStream(ScriptManager.class.getResourceAsStream(file)));
+        contents += new String(
+            Readers.readStream(ScriptManager.class.getResourceAsStream(file.replace("\\", "/"))));
         script = COMPILABLE.compile(contents);
         SCRIPTS.put(file, script);
       }
