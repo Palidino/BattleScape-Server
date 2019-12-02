@@ -130,9 +130,7 @@ public class FileManager implements Runnable {
           throw new IllegalArgumentException("File path can't contain settings");
         }
         try (Reader reader = (file.exists() ? new FileReader(file)
-            : new InputStreamReader(
-                FileManager.class.getResourceAsStream(file.getPath().replace("\\", "/")),
-                "UTF-8"))) {
+            : new InputStreamReader(Readers.getResourceAsStream(file.getPath()), "UTF-8"))) {
           return gson.fromJson(reader, type);
         } catch (IOException e) {
           return null;
@@ -153,9 +151,7 @@ public class FileManager implements Runnable {
           throw new IllegalArgumentException("File path can't contain settings");
         }
         try (Reader reader = (file.exists() ? new FileReader(file)
-            : new InputStreamReader(
-                FileManager.class.getResourceAsStream(file.getPath().replace("\\", "/")),
-                "UTF-8"))) {
+            : new InputStreamReader(Readers.getResourceAsStream(file.getPath()), "UTF-8"))) {
           return gson.fromJson(reader, type.getType());
         } catch (IOException e) {
           return null;
@@ -165,11 +161,8 @@ public class FileManager implements Runnable {
   }
 
   public static <T> T fromJsonFile(File file, Class<T> type) {
-    try (
-        Reader reader = (file.exists() ? new FileReader(file)
-            : new InputStreamReader(
-                FileManager.class.getResourceAsStream(file.getPath().replace("\\", "/")),
-                "UTF-8"))) {
+    try (Reader reader = (file.exists() ? new FileReader(file)
+        : new InputStreamReader(Readers.getResourceAsStream(file.getPath()), "UTF-8"))) {
       return gson.fromJson(reader, type);
     } catch (IOException e) {
       return null;
@@ -177,11 +170,8 @@ public class FileManager implements Runnable {
   }
 
   public static <T> T fromJsonFile(File file, TypeToken<T> type) {
-    try (
-        Reader reader = (file.exists() ? new FileReader(file)
-            : new InputStreamReader(
-                FileManager.class.getResourceAsStream(file.getPath().replace("\\", "/")),
-                "UTF-8"))) {
+    try (Reader reader = (file.exists() ? new FileReader(file)
+        : new InputStreamReader(Readers.getResourceAsStream(file.getPath()), "UTF-8"))) {
       return gson.fromJson(reader, type.getType());
     } catch (IOException e) {
       return null;
@@ -221,9 +211,7 @@ public class FileManager implements Runnable {
           throw new IllegalArgumentException("File path can't go up levels");
         }
         try (Reader reader = (file.exists() ? new FileReader(file)
-            : new InputStreamReader(
-                FileManager.class.getResourceAsStream(file.getPath().replace("\\", "/")),
-                "UTF-8"))) {
+            : new InputStreamReader(Readers.getResourceAsStream(file.getPath()), "UTF-8"))) {
           return XSTREAM_IN.fromXML(reader);
         } catch (IOException e) {
           return null;
