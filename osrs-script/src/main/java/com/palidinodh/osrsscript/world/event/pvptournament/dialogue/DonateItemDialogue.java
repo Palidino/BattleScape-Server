@@ -1,6 +1,5 @@
 package com.palidinodh.osrsscript.world.event.pvptournament.dialogue;
 
-import com.palidinodh.osrscore.model.dialogue.DialogueAction;
 import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.item.Item;
 import com.palidinodh.osrscore.model.player.Player;
@@ -14,7 +13,7 @@ public class DonateItemDialogue extends OptionsDialogue {
   public DonateItemDialogue(Player player, Item item) {
     this.item = item;
     var tournament = player.getWorld().getWorldEvent(PvpTournament.class);
-    DialogueAction action = (c, s) -> {
+    action((c, s) -> {
       player.getWidgetManager().removeInteractiveWidgets();
       if (!tournament.donateItem(player, item.getId(), s)) {
         return;
@@ -23,11 +22,11 @@ public class DonateItemDialogue extends OptionsDialogue {
         return;
       }
       new ChooseModeDialogue(player);
-    };
-    addOption("Give to place #1", action);
-    addOption("Give to place #2", action);
-    addOption("Give to place #3", action);
-    addOption("Give to place #4", action);
+    });
+    addOption("Give to place #1");
+    addOption("Give to place #2");
+    addOption("Give to place #3");
+    addOption("Give to place #4");
   }
 
   @Override

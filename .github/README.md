@@ -8,13 +8,15 @@ These instructions will get you a copy of the project up on your local machine f
 
 ### Prerequisites
 
-[Visual Studio Code](https://code.visualstudio.com) is recommended, and will be the IDE used in the installation guide.
+- [Visual Studio Code](https://code.visualstudio.com) is recommended, and will be the IDE used in the installation guide.
+- [Git](https://git-scm.com), needed to clone the repo and also to pull and push any changes.
+- [Java 8 Development Kit](https://adoptopenjdk.net). In the setup, select/enable the "Set JAVA_HOME variable" option. A reboot may be needed for VSCode to find the JDK.
 
-Required extensions:
+Required VSCode extensions:
 - Java Extension Pack
 - Lombok Annotations Support for VS Code
 
-Recommended extensions:
+Recommended VSCode extensions:
 - Bracket Pair Colorizer
 - GitLens — Git supercharged
 - Trello Viewer (if you've been given access to BattleScape's Trello).
@@ -26,14 +28,15 @@ Creating your own fork:
 
 ### Installing
 
+- Install all of the software listed in prerequisites.
 - Create your own fork, as described in prerequisites.
 - Open Visual Studio Code.
 - Install the extensions mentioned in prerequisites through the sidebar.
 - Go to View -> Command Pallete...
 - Type in `Git: Clone` and select it.
 - Paste the url you copied earlier from `Clone or download` and hit enter.
-- Choose the location you'd like to create the repository at, such as your desktop. The directory that will be created can be renamed or moved later.
-- Select open when asked if you'd like to open the cloned repository.
+- Choose the location you'd like to create the repo at, such as your desktop. The directory that will be created can be renamed or moved later.
+- Select open when asked if you'd like to open the cloned repo.
 
 ## Running/Debugging
 
@@ -66,5 +69,7 @@ Once you've completed change(s), push them into your forked repo.
 - Enter a message briefly describing the changes.
 - Select the checkmark (`Commit`).
 - Select the `Synchronize Changes`, which saves your changes into your forked repo.
+
+You may need to configure your email with git. In the terminal, type in `git config --global user.email "email@example.com"` and hit enter.
 
 To request your changes to be added to the official repo, visit your forked repo on GitHub. Select `New pull request`, and then submit your changes from there.

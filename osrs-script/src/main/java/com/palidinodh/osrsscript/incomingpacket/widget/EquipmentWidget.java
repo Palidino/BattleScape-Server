@@ -4,7 +4,6 @@ import com.palidinodh.osrscore.io.incomingpacket.WidgetHandler;
 import com.palidinodh.osrscore.io.cache.id.ItemId;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.Tile;
-import com.palidinodh.osrscore.model.dialogue.DialogueAction;
 import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.player.Equipment;
 import com.palidinodh.osrscore.model.player.Magic;
@@ -226,7 +225,7 @@ class EquipmentWidget implements WidgetHandler {
   public static class MaxCapeDialogue {
     public static class FishDialogue extends OptionsDialogue {
       public FishDialogue(Player player) {
-        DialogueAction action = (c, s) -> {
+        action((c, s) -> {
           Tile maxCapeTele = null;
           if (s == 0) {
             maxCapeTele = new Tile(3093, 3495);
@@ -245,16 +244,16 @@ class EquipmentWidget implements WidgetHandler {
               Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
           player.getController().stopWithTeleport();
           player.clearHits();
-        };
-        addOption("Edgeville", action);
-        addOption("Chambers of Xeric", action);
-        addOption("Catacombs of Kourend", action);
+        });
+        addOption("Edgeville");
+        addOption("Chambers of Xeric");
+        addOption("Catacombs of Kourend");
       }
     }
 
     public static class OtherDialogue extends OptionsDialogue {
       public OtherDialogue(Player player) {
-        DialogueAction action = (c, s) -> {
+        action((c, s) -> {
           Tile maxCapeTele = null;
           if (s == 0) {
             maxCapeTele = new Tile(3093, 3495);
@@ -273,16 +272,16 @@ class EquipmentWidget implements WidgetHandler {
               Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
           player.getController().stopWithTeleport();
           player.clearHits();
-        };
-        addOption("Edgeville", action);
-        addOption("Chambers of Xeric", action);
-        addOption("Catacombs of Kourend", action);
+        });
+        addOption("Edgeville");
+        addOption("Chambers of Xeric");
+        addOption("Catacombs of Kourend");
       }
     }
 
     public static class PortalsDialogue extends OptionsDialogue {
       public PortalsDialogue(Player player) {
-        DialogueAction action = (c, s) -> {
+        action((c, s) -> {
           Tile maxCapeTele = null;
           if (s == 0) {
             maxCapeTele = new Tile(3093, 3495);
@@ -301,16 +300,16 @@ class EquipmentWidget implements WidgetHandler {
               Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
           player.getController().stopWithTeleport();
           player.clearHits();
-        };
-        addOption("Edgeville", action);
-        addOption("Chambers of Xeric", action);
-        addOption("Catacombs of Kourend", action);
+        });
+        addOption("Edgeville");
+        addOption("Chambers of Xeric");
+        addOption("Catacombs of Kourend");
       }
     }
 
     public static class TeleportsDialogue extends OptionsDialogue {
       public TeleportsDialogue(Player player) {
-        DialogueAction action = (c, s) -> {
+        action((c, s) -> {
           Tile maxCapeTele = null;
           if (s == 0) {
             maxCapeTele = new Tile(3093, 3495);
@@ -329,16 +328,16 @@ class EquipmentWidget implements WidgetHandler {
               Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
           player.getController().stopWithTeleport();
           player.clearHits();
-        };
-        addOption("Edgeville", action);
-        addOption("Chambers of Xeric", action);
-        addOption("Catacombs of Kourend", action);
+        });
+        addOption("Edgeville");
+        addOption("Chambers of Xeric");
+        addOption("Catacombs of Kourend");
       }
     }
 
     public static class FeaturesDialogue extends OptionsDialogue {
       public FeaturesDialogue(Player player) {
-        DialogueAction action = (c, s) -> {
+        action((c, s) -> {
           Tile maxCapeTele = null;
           if (s == 0) {
             maxCapeTele = new Tile(3093, 3495);
@@ -357,10 +356,10 @@ class EquipmentWidget implements WidgetHandler {
               Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
           player.getController().stopWithTeleport();
           player.clearHits();
-        };
-        addOption("Edgeville", action);
-        addOption("Chambers of Xeric", action);
-        addOption("Catacombs of Kourend", action);
+        });
+        addOption("Edgeville");
+        addOption("Chambers of Xeric");
+        addOption("Catacombs of Kourend");
       }
     }
   }

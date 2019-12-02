@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Git Log",
+            "type": "shell",
+            "command": "git log --pretty=format:\"%ad %s\" --date=short",
+            "problemMatcher": []
+        }
+    ]
+}
