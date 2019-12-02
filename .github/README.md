@@ -70,4 +70,6 @@ Once you've completed change(s), push them into your forked repo.
 - Select the checkmark (`Commit`).
 - Select the `Synchronize Changes`, which saves your changes into your forked repo.
 
+You may need to configure your email with git. In the terminal, type in `git config --global user.email "email@example.com"` and hit enter.
+
 To request your changes to be added to the official repo, visit your forked repo on GitHub. Select `New pull request`, and then submit your changes from there.
