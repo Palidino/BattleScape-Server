@@ -6,7 +6,6 @@ import com.palidinodh.osrscore.io.cache.id.NpcId;
 import com.palidinodh.osrscore.io.cache.id.WidgetId;
 import com.palidinodh.osrscore.model.Graphic;
 import com.palidinodh.osrscore.model.Tile;
-import com.palidinodh.osrscore.model.dialogue.DialogueAction;
 import com.palidinodh.osrscore.model.dialogue.OptionsDialogue;
 import com.palidinodh.osrscore.model.dialogue.old.DialogueOld;
 import com.palidinodh.osrscore.model.guide.Guide;
@@ -2334,7 +2333,7 @@ class InventoryWidget implements WidgetHandler {
 
   public static class MaxCapeDialogue extends OptionsDialogue {
     public MaxCapeDialogue(Player player) {
-      DialogueAction action = (c, s) -> {
+      action((c, s) -> {
         Tile maxCapeTele = null;
         if (s == 0) {
           maxCapeTele = new Tile(3093, 3495);
@@ -2353,10 +2352,10 @@ class InventoryWidget implements WidgetHandler {
             Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
         player.getController().stopWithTeleport();
         player.clearHits();
-      };
-      addOption("Edgeville", action);
-      addOption("Chambers of Xeric", action);
-      addOption("Catacombs of Kourend", action);
+      });
+      addOption("Edgeville");
+      addOption("Chambers of Xeric");
+      addOption("Catacombs of Kourend");
     }
   }
 }
