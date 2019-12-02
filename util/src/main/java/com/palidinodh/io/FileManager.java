@@ -122,8 +122,8 @@ public class FileManager implements Runnable {
     return AccessController.doPrivileged(new PrivilegedAction<T>() {
       @Override
       public T run() {
-        File file =
-            filename.startsWith(JSON_DIR) ? new File(filename) : new File(JSON_DIR, filename);
+        File file = filename.replace("\\", "/").startsWith(JSON_DIR) ? new File(filename)
+            : new File(JSON_DIR, filename);
         if (file.getPath().contains("..")) {
           throw new IllegalArgumentException("File path can't go up levels");
         } else if (file.getPath().contains("settings")) {
@@ -145,8 +145,8 @@ public class FileManager implements Runnable {
     return AccessController.doPrivileged(new PrivilegedAction<T>() {
       @Override
       public T run() {
-        File file =
-            filename.startsWith(JSON_DIR) ? new File(filename) : new File(JSON_DIR, filename);
+        File file = filename.replace("\\", "/").startsWith(JSON_DIR) ? new File(filename)
+            : new File(JSON_DIR, filename);
         if (file.getPath().contains("..")) {
           throw new IllegalArgumentException("File path can't go up levels");
         } else if (file.getPath().contains("settings")) {
@@ -215,7 +215,8 @@ public class FileManager implements Runnable {
     return AccessController.doPrivileged(new PrivilegedAction<Object>() {
       @Override
       public Object run() {
-        File file = filename.startsWith(XML_DIR) ? new File(filename) : new File(XML_DIR, filename);
+        File file = filename.replace("\\", "/").startsWith(XML_DIR) ? new File(filename)
+            : new File(XML_DIR, filename);
         if (file.getPath().contains("..")) {
           throw new IllegalArgumentException("File path can't go up levels");
         }
