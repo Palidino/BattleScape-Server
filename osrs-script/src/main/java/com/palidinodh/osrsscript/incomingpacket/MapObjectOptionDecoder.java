@@ -9,6 +9,7 @@ import com.palidinodh.io.Stream;
 import com.palidinodh.osrscore.io.cache.id.ObjectId;
 import com.palidinodh.osrscore.io.incomingpacket.InStreamKey;
 import com.palidinodh.osrscore.io.incomingpacket.IncomingPacketDecoder;
+import com.palidinodh.osrscore.io.incomingpacket.MapObjectHandler;
 import com.palidinodh.osrscore.model.map.MapObject;
 import com.palidinodh.osrscore.model.map.Region;
 import com.palidinodh.osrscore.model.player.AchievementDiary;
@@ -79,36 +80,44 @@ class MapObjectOptionDecoder extends IncomingPacketDecoder {
     var tileY = getInt(InStreamKey.TILE_Y);
     var mapObject =
         player.getController().getMapObject(mapObjectId, tileX, tileY, player.getClientHeight());
-    if (mapObject == null) {
+    if (mapObject == null || !mapObject.isVisible()) {
       return true;
-    }
-    if (!mapObject.isVisible()) {
-      return true;
-    }
-    var range = 1;
-    if (mapObject.getType() >= 4 && mapObject.getType() <= 8) {
-      range = 0;
-    }
-    if (mapObject.getId() == ObjectId.THE_INFERNO_30352) { // Entrance
-      range = 5;
-    } else if (mapObject.getId() == ObjectId.PILLAR_31561) { // Revenants
-      range = 2;
     }
     if (player.isLocked()) {
       return false;
     }
-    if (player.getMovement().isRouting() && mapObject.getOriginal() == null
-        && (player.getX() != mapObject.getX() || player.getY() != mapObject.getY())) {
+    var handler = player.getArea().getMapObjectHandler(mapObjectId);
+    var type = handler != null ? handler.canReach(player, mapObject) : null;
+    if (type == MapObjectHandler.ReachType.FALSE) {
       return false;
     }
-    if (!player.withinDistanceC(mapObject, range)) {
-      return false;
+    if (type == null || type == MapObjectHandler.ReachType.DEFAULT) {
+      var range = 1;
+      if (mapObject.getType() >= 4 && mapObject.getType() <= 8) {
+        range = 0;
+      }
+      if (mapObject.getId() == ObjectId.THE_INFERNO_30352) { // Entrance
+        range = 5;
+      } else if (mapObject.getId() == ObjectId.PILLAR_31561) { // Revenants
+        range = 2;
+      }
+      if (player.getMovement().isRouting() && mapObject.getOriginal() == null
+          && (player.getX() != mapObject.getX() || player.getY() != mapObject.getY())) {
+        return false;
+      }
+      if (!player.withinDistanceC(mapObject, range)) {
+        return false;
+      }
     }
     player.getMovement().clear();
     if (!player.matchesTile(mapObject)) {
       player.setFaceTile(mapObject);
     }
     AchievementDiary.mapObjectOptionUpdate(player, option, mapObject);
+    if (handler != null) {
+      handler.execute(player, option, mapObject);
+      return true;
+    }
     if (player.getController().mapObjectOptionHook(option, mapObject)) {
       return true;
     }
@@ -129,9 +138,6 @@ class MapObjectOptionDecoder extends IncomingPacketDecoder {
       return true;
     }
     if (player.getFarming().mapObjectOptionHook(option, mapObject)) {
-      return true;
-    }
-    if (player.getArea().mapObjectOptionHook(option, mapObject)) {
       return true;
     }
     if (!actionMethods.containsKey(mapObject.getId())) {
