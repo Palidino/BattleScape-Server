@@ -21,11 +21,11 @@
   <parent>
     <groupId>com.palidinodh</groupId>
     <artifactId>BattleScape-Server</artifactId>
-   <version>1.0.1</version>
+   <version>1.0.2</version>
   </parent>
   <artifactId>util</artifactId>
   <name>Util</name>
- <version>1.0.1</version>
+ <version>1.0.2</version>
   <dependencies>
     <dependency>
       <groupId>com.alex.store</groupId>
