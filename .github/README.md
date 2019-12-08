@@ -1,3 +1,8 @@
+# GitLab
+
+We have moved to gitlab!  
+https://gitlab.com/battlescape/server
+
 # BattleScape
 
 This is the open side of the BattleScape RSPS. Due to the private core, to fully test any changes, you'll need to request access to the beta server were you can freely deploy your changes as often as needed.
